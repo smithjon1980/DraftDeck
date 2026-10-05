@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,math,base64,html,shutil,importlib.util
-R=Path(__file__).resolve().parent;A=R/'assets'
-spec=importlib.util.spec_from_file_location('build',str(R.parent/'canva-layered-html-slides/scripts/build_slide.py'));b=importlib.util.module_from_spec(spec);spec.loader.exec_module(b)
+R=Path(__file__).resolve().parent;DECK=R.parent;A=DECK/'artwork';OUT=DECK/'output';OUT.mkdir(exist_ok=True)
+spec=importlib.util.spec_from_file_location('build',str(R.parents[2]/'skills/draftdeck/scripts/build_slide.py'));b=importlib.util.module_from_spec(spec);spec.loader.exec_module(b)
 BLACK='#1A1A1A';ORANGE='#B34700';GRAY='#DEDEDE'
 scenes=[]
 class Slide:
@@ -31,13 +31,13 @@ class Slide:
  def text(self,s,x,y,size=25,font='Arial',weight='normal',color=BLACK):self.layers.append(dict(type='text',text=s,x=x,y=y,size=size,font=font,weight=weight,color=color))
  def copy(self,rows,x=90,y=330,size=28,step=49):
   for i,s in enumerate(rows):self.text(s,x,y+i*step,size)
- def art(self,n,x=760,y=280,w=1040,h=585):self.layers.append(dict(type='image',path=f'assets/story-{n:02d}.webp',x=x,y=y,width=w,height=h,alt=f'Text-free story artwork for slide {self.n}'))
+ def art(self,n,x=760,y=280,w=1040,h=585):self.layers.append(dict(type='image',path=f'artwork/story-{n:02d}.webp',x=x,y=y,width=w,height=h,alt=f'Text-free story artwork for slide {self.n}'))
  def footer(self,s,s2=None):
   self.text(s,85,944,24)
   if s2:self.text(s2,85,980,23)
  def done(self):
   name=f'frame-{self.n:02d}.svg';(A/name).write_text('<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">'+''.join(self.paths)+'</svg>')
-  scene=dict(title=self.title.replace('\n',' '),width=1920,height=1080,background='white',layers=[dict(type='image',path='assets/'+name,x=0,y=0,width=1920,height=1080,alt='CAD drafting background and precision geometry')]+self.layers)
+  scene=dict(title=self.title.replace('\n',' '),width=1920,height=1080,background='white',layers=[dict(type='image',path='artwork/'+name,x=0,y=0,width=1920,height=1080,alt='CAD drafting background and precision geometry')]+self.layers)
   scenes.append(scene)
 # 01
 s=Slide(1,'2026 executive briefing - rev 4.0','AI Pilot Architecture & Interface QA:\nThe Canonical 2026 Developer Gate','QA IMPLEMENTATION GATE')
@@ -139,9 +139,9 @@ s=Slide(15,'doctrine footer rail','Consignee Release Latch:\nHuman Authority Alo
 s.art(15,145,270,1630,585);s.text('HELD / BLOCKED',95,292,25,'Courier New');s.text('OPEN / RELEASED',1440,292,25,'Courier New')
 s.footer('Epistemic control may classify, account, route, and hold.','Verification may compare and adjudicate. Human authority alone releases.');s.done()
 assert len(scenes)==15
-(R/'Scenes.json').write_text(json.dumps(scenes,indent=2))
+(OUT/'Scenes.json').write_text(json.dumps(scenes,indent=2))
 sections=[]
 for i,scene in enumerate(scenes):
- h=b.build(scene,R);start=h.index('<section');end=h.index('</section>')+len('</section>');sections.append(h[start:end]);(R/f'Slide-{i+1:02d}.html').write_text(h)
-(R/'AI_Pilot_15_Slides_Layered.html').write_text('<!doctype html><html><head><meta charset="utf-8"><title>AI Pilot - 15 Layered CAD Slides</title><style>html,body{margin:0;padding:0;background:white}*{box-sizing:border-box}section{page-break-after:always}</style></head><body>'+''.join(sections)+'</body></html>')
+ h=b.build(scene,DECK);start=h.index('<section');end=h.index('</section>')+len('</section>');sections.append(h[start:end]);(OUT/f'Slide-{i+1:02d}.html').write_text(h)
+(OUT/'AI_Pilot_15_Slides_Layered.html').write_text('<!doctype html><html><head><meta charset="utf-8"><title>AI Pilot - 15 Layered CAD Slides</title><style>html,body{margin:0;padding:0;background:white}*{box-sizing:border-box}section{page-break-after:always}</style></head><body>'+''.join(sections)+'</body></html>')
 print('15 pages;',sum(sum(l['type']=='text' for l in s['layers']) for s in scenes),'live text elements')

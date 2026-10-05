@@ -6,7 +6,7 @@
   "layers": [
     {
       "type": "image",
-      "path": "assets/s13-Drafting_Background.svg",
+      "path": "artwork/s13-Drafting_Background.svg",
       "x": 0,
       "y": 0,
       "width": 1920,
@@ -14,7 +14,7 @@
     },
     {
       "type": "image",
-      "path": "assets/s13-Story_Layer.webp",
+      "path": "artwork/s13-Story_Layer.webp",
       "x": 330,
       "y": 190,
       "width": 1300,

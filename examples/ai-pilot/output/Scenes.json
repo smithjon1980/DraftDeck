@@ -7,7 +7,7 @@
     "layers": [
       {
         "type": "image",
-        "path": "assets/frame-01.svg",
+        "path": "artwork/frame-01.svg",
         "x": 0,
         "y": 0,
         "width": 1920,
@@ -366,7 +366,7 @@
       },
       {
         "type": "image",
-        "path": "assets/story-05.webp",
+        "path": "artwork/story-05.webp",
         "x": 220,
         "y": 230,
         "width": 1480,
@@ -423,7 +423,7 @@
     "layers": [
       {
         "type": "image",
-        "path": "assets/frame-02.svg",
+        "path": "artwork/frame-02.svg",
         "x": 0,
         "y": 0,
         "width": 1920,
@@ -842,7 +842,7 @@
       },
       {
         "type": "image",
-        "path": "assets/story-02.webp",
+        "path": "artwork/story-02.webp",
         "x": 760,
         "y": 280,
         "width": 1040,
@@ -879,7 +879,7 @@
     "layers": [
       {
         "type": "image",
-        "path": "assets/frame-03.svg",
+        "path": "artwork/frame-03.svg",
         "x": 0,
         "y": 0,
         "width": 1920,
@@ -1308,7 +1308,7 @@
       },
       {
         "type": "image",
-        "path": "assets/story-03.webp",
+        "path": "artwork/story-03.webp",
         "x": 760,
         "y": 280,
         "width": 1040,
@@ -1345,7 +1345,7 @@
     "layers": [
       {
         "type": "image",
-        "path": "assets/frame-04.svg",
+        "path": "artwork/frame-04.svg",
         "x": 0,
         "y": 0,
         "width": 1920,
@@ -1882,7 +1882,7 @@
     "layers": [
       {
         "type": "image",
-        "path": "assets/frame-05.svg",
+        "path": "artwork/frame-05.svg",
         "x": 0,
         "y": 0,
         "width": 1920,
@@ -2241,7 +2241,7 @@
       },
       {
         "type": "image",
-        "path": "assets/story-05.webp",
+        "path": "artwork/story-05.webp",
         "x": 390,
         "y": 265,
         "width": 1140,
@@ -2318,7 +2318,7 @@
     "layers": [
       {
         "type": "image",
-        "path": "assets/frame-06.svg",
+        "path": "artwork/frame-06.svg",
         "x": 0,
         "y": 0,
         "width": 1920,
@@ -2797,7 +2797,7 @@
       },
       {
         "type": "image",
-        "path": "assets/story-06.webp",
+        "path": "artwork/story-06.webp",
         "x": 890,
         "y": 270,
         "width": 880,
@@ -2834,7 +2834,7 @@
     "layers": [
       {
         "type": "image",
-        "path": "assets/frame-07.svg",
+        "path": "artwork/frame-07.svg",
         "x": 0,
         "y": 0,
         "width": 1920,
@@ -3351,7 +3351,7 @@
     "layers": [
       {
         "type": "image",
-        "path": "assets/frame-08.svg",
+        "path": "artwork/frame-08.svg",
         "x": 0,
         "y": 0,
         "width": 1920,
@@ -3800,7 +3800,7 @@
       },
       {
         "type": "image",
-        "path": "assets/story-08.webp",
+        "path": "artwork/story-08.webp",
         "x": 850,
         "y": 280,
         "width": 900,
@@ -3837,7 +3837,7 @@
     "layers": [
       {
         "type": "image",
-        "path": "assets/frame-09.svg",
+        "path": "artwork/frame-09.svg",
         "x": 0,
         "y": 0,
         "width": 1920,
@@ -4304,7 +4304,7 @@
     "layers": [
       {
         "type": "image",
-        "path": "assets/frame-10.svg",
+        "path": "artwork/frame-10.svg",
         "x": 0,
         "y": 0,
         "width": 1920,
@@ -4811,7 +4811,7 @@
     "layers": [
       {
         "type": "image",
-        "path": "assets/frame-11.svg",
+        "path": "artwork/frame-11.svg",
         "x": 0,
         "y": 0,
         "width": 1920,
@@ -5248,7 +5248,7 @@
     "layers": [
       {
         "type": "image",
-        "path": "assets/frame-12.svg",
+        "path": "artwork/frame-12.svg",
         "x": 0,
         "y": 0,
         "width": 1920,
@@ -5607,7 +5607,7 @@
       },
       {
         "type": "image",
-        "path": "assets/story-12.webp",
+        "path": "artwork/story-12.webp",
         "x": 115,
         "y": 265,
         "width": 1690,
@@ -5684,7 +5684,7 @@
     "layers": [
       {
         "type": "image",
-        "path": "assets/s13-Drafting_Background.svg",
+        "path": "artwork/s13-Drafting_Background.svg",
         "x": 0,
         "y": 0,
         "width": 1920,
@@ -5692,7 +5692,7 @@
       },
       {
         "type": "image",
-        "path": "assets/s13-Story_Layer.webp",
+        "path": "artwork/s13-Story_Layer.webp",
         "x": 330,
         "y": 190,
         "width": 1300,
@@ -6198,7 +6198,7 @@
     "layers": [
       {
         "type": "image",
-        "path": "assets/frame-14.svg",
+        "path": "artwork/frame-14.svg",
         "x": 0,
         "y": 0,
         "width": 1920,
@@ -7025,7 +7025,7 @@
     "layers": [
       {
         "type": "image",
-        "path": "assets/frame-15.svg",
+        "path": "artwork/frame-15.svg",
         "x": 0,
         "y": 0,
         "width": 1920,
@@ -7384,7 +7384,7 @@
       },
       {
         "type": "image",
-        "path": "assets/story-15.webp",
+        "path": "artwork/story-15.webp",
         "x": 145,
         "y": 270,
         "width": 1630,
