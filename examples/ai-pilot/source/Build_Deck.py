@@ -40,7 +40,7 @@ class Slide:
   scene=dict(title=self.title.replace('\n',' '),width=1920,height=1080,background='white',layers=[dict(type='image',path='artwork/'+name,x=0,y=0,width=1920,height=1080,alt='CAD drafting background and precision geometry')]+self.layers)
   scenes.append(scene)
 # 01
-s=Slide(1,'2026 executive briefing - rev 4.0','AI Pilot Architecture & Interface QA:\nThe Canonical 2026 Developer Gate','QA IMPLEMENTATION GATE')
+s=Slide(1,'2026 logistics framework - rev 4.0','Logistics Framework Architecture & Interface QA:\nThe Canonical 2026 Developer Gate','QA IMPLEMENTATION GATE')
 s.art(5,220,230,1480,680);s.text('INTERFACE / IMPLEMENTATION REVIEW',100,294,23,'Courier New')
 s.text('APPROVED FOR INGESTION',98,817,36,'Arial','bold',ORANGE)
 s.footer('Approval wording reproduced from the reference.', 'Candidate rebuild: approval is not newly conferred.');s.done()
@@ -49,12 +49,16 @@ s=Slide(2,'root doctrine - logistics architecture','Stop Managing Magic and\nSta
 s.copy(['Data = cargo','Information payloads','Agents = couriers','Proxy handlers','Models = transport','Freight services'],90,340,30,60);s.art(2)
 s.footer('Data is cargo. Agents are couriers. Models are freight.','Verification is proof of delivery.');s.done()
 # 03
-s=Slide(3,'operational command - layer 1','The FAA Client Tower Secures\nNon-Delegable Human Intent','LAYER 1 COMMAND')
-s.copy(['The Client owns intent, objective,','and liability. The Server only','calculates proximity and','executes vectors.','','Liability cannot be delegated to a','dormant mathematical system.'],90,350,28,48);s.art(3)
-s.text('WORK FLOWS DOWN',800,850,23,'Courier New');s.text('AUTHORITY / VERIFICATION FLOWS UP',1120,850,22,'Courier New');s.done()
+s=Slide(3,'shipping and receiving authority','The Shipping & Receiving Control Desk\nSecures Non-Delegable Human Intent','HUMAN CONTROL DESK')
+s.copy(['The sender owns intent and objective.','The receiver / consignee owns the','release context. Systems may route,','transform, and report within declared','handling constraints.','','Final release authority remains human.'],90,335,27,47)
+s.rect(1000,340,630,380,2);s.text('SHIPPING & RECEIVING',1080,382,28,'Courier New','bold');s.text('CONTROL DESK',1170,426,34,'Arial','bold')
+for y in [505,575,645]:s.rect(1080,y,470,42,1)
+s.text('INBOUND CARGO',1110,514,20,'Courier New');s.text('ROUTE / HANDLE / HOLD',1110,584,20,'Courier New');s.text('RELEASE AUTHORITY',1110,654,20,'Courier New')
+s.arrow(860,530,995,530);s.arrow(1635,650,1770,650);s.text('DISPATCH / ROUTING',720,485,20,'Courier New');s.text('PROOF / RELEASE',1630,610,20,'Courier New')
+s.done()
 # 04 precise ledger
 s=Slide(4,'claim control - epistemic layer','Classify, Sever, Account,\nRoute, and Adjudicate','EPISTEMIC GEOGRAPHY')
-for i,(a,z) in enumerate([('LOCATION','Triage Gate'),('ACCOUNTING','Claim Ledger'),('ADJUDICATION','Ground Truth Fixture'),('AUTHORITY','Client Tower')]):
+for i,(a,z) in enumerate([('LOCATION','Triage Gate'),('ACCOUNTING','Claim Ledger'),('ADJUDICATION','Ground Truth Fixture'),('AUTHORITY','Control Desk')]):
  x=95+i*445;s.rect(x,310,380,98,2);s.text(a,x+20,330,28,'Courier New','bold');s.text(z,x+20,371,22)
  if i<3:s.arrow(x+383,359,x+436,359)
 s.text('GENERATED OUTPUT',95,469,25,'Courier New','bold');s.rect(95,510,280,320,1.5)
@@ -68,8 +72,8 @@ s.art(5,390,265,1140,585)
 s.copy(['D — DIRECT: objective / format','A — ANCHOR: pinned source','T — THROTTLE: time / cost limits','A — AUDIT: append-only trace'],95,300,24,42)
 s.footer('Lock model version and source before execution.','Record the run; constrain time, cost, and compute cadence.');s.done()
 # 06
-s=Slide(6,'baggage claim protocol','The Canonical 6-Field Verification Tag\nSchema Serves as Proof of Delivery','6-FIELD SCHEMA')
-fields=[('RUN_ID','Unique run identifier'),('AIRSPACE_CLASS','Security / governance handling class'),('QUALIFICATION_ID','Qualified model / environment'),('FLIGHT_PLAN_ID','Approved mission boundaries'),('STATUS','HELD / VERIFIED / RELEASED / BLOCKED'),('ELAPSED_TIME','Execution duration')]
+s=Slide(6,'proof-of-delivery protocol','The Canonical 6-Field Verification Tag\nSchema Serves as Proof of Delivery','6-FIELD SCHEMA')
+fields=[('RUN_ID','Unique run identifier'),('CARGO_CLASS','Security / governance handling class'),('QUALIFICATION_ID','Qualified model / environment'),('ROUTE_PLAN_ID','Approved shipment / route boundaries'),('STATUS','HELD / VERIFIED / RELEASED / BLOCKED'),('ELAPSED_TIME','Execution duration')]
 for i,(a,z) in enumerate(fields):
  y=325+i*80;s.line(90,y+70,840,y+70,.8);s.text(a,90,y,25,'Courier New','bold');s.text(z,90,y+34,22)
 s.art(6,890,270,880,600);s.footer('UI state is not Verification Tag status.','Fluent delivery is not verified delivery. Check the tag.');s.done()
@@ -84,9 +88,9 @@ s.copy(['Visual ambiguity masks split-signal errors.','Uncontrolled inheritance 
 #08
 s=Slide(8,'semantic sourcing','External Libraries Supply\nSemantics, Not Native Styling','SEMANTIC SOURCING')
 s.copy(['LUCIDE','Technical UI, workflow, routing,','databases, tools.','','MATERIAL SYMBOLS OUTLINED','Operational status and control panels.','','PHOSPHOR ICONS','Specialized logistics, transport, roles.'],90,315,25,45);s.art(8,850,280,900,580)
-s.footer('Select by meaning. External libraries are semantic search tiers','feeding one unified AI Pilot visual grammar.');s.done()
+s.footer('Select by meaning. External libraries are semantic search tiers','feeding one unified Logistics Framework visual grammar.');s.done()
 #09
-s=Slide(9,'canonical glyph reconstruction','Normalize by Geometry Using\nthe Canonical AI Pilot Glyph','GLYPH RECONSTRUCTION')
+s=Slide(9,'canonical glyph reconstruction','Normalize by Geometry Using\nthe Canonical Logistics Framework Glyph','GLYPH RECONSTRUCTION')
 def gear(cx,cy,r):
  pts=[]
  for i in range(64):
@@ -97,7 +101,7 @@ s.copy(['Linecap: butt','Linejoin: miter','Stroke: 1.5 / 2.0px','Fill: none','No
 s.footer('Never inherit a library’s native style blindly.','Maintain structural vector integrity like CAD drawings.');s.done()
 #10
 s=Slide(10,'controlled aesthetics - token registry','The Absolute Zero-Fill Palette\nand Structural Line Hierarchy','TOKEN REGISTRY')
-for i,(name,code) in enumerate([('Near-Black Ink','#1A1A1A'),('Pure White Ground','#FFFFFF'),('Parchment Ivory','#FAF0EA'),('Burnt Orange','#B34700')]):
+for i,(name,code) in enumerate([('Near-Black Ink','#1A1A1A'),('Pure White Ground','#FFFFFF'),('Drafting Gray','#DEDEDE'),('Burnt Orange','#B34700')]):
  x=95+i*250;s.rect(x,380,195,225,3,code if code!='#FFFFFF' else BLACK);s.text(name,x,637,21);s.text(code,x,672,23,'Courier New')
 s.text('STRUCTURAL STROKE HIERARCHY',1140,331,26,'Courier New','bold')
 for i,(w,a,z) in enumerate([(3,'1.0pt','Outer frames / major dividers'),(1.5,'0.5pt','Controls / connector housings'),(.75,'0.25pt','Grid / hatch / detail lines')]):
@@ -120,9 +124,19 @@ for i,a in enumerate(['DEFAULT','ROUTED','HELD','BLOCKED','VERIFIED']):
 s.footer('Hatching communicates state without relying exclusively on color.','Visual texture preserves situational awareness.');s.done()
 #12
 s=Slide(12,'layer 0 governance - custom exceptions','Authorized Project-Specific\nNative Component Geometry','CUSTOM EXCEPTIONS')
-s.art(12,115,265,1690,590)
-for a,x in [('CLIENT TOWER',105),('VERIFICATION TAG',550),('D.A.T.A. CONNECTOR',990),('CLAIM COMPARATOR',1430)]:s.text(a,x,847,23,'Courier New','bold')
-s.footer('Layer 0 governs the Client Tower. Layer 0 is not the Client Tower.','Register custom native components; do not improvise exceptions.');s.done()
+items=[('CONTROL DESK',105),('VERIFICATION TAG',550),('D.A.T.A. CONNECTOR',990),('CLAIM COMPARATOR',1430)]
+for label,x in items:
+ s.rect(x,330,350,360,1.5);s.text(label,x+18,715,22,'Courier New','bold')
+ if label=='CONTROL DESK':
+  s.rect(x+65,430,220,120,2);s.line(x+105,390,x+105,430,2);s.line(x+245,390,x+245,430,2);s.line(x+105,390,x+245,390,2);s.text('IN',x+30,474,18,'Courier New');s.text('OUT',x+292,474,18,'Courier New')
+ elif label=='VERIFICATION TAG':
+  s.rect(x+70,390,210,210,2);s.circle(x+105,425,12,2);s.line(x+105,437,x+105,470,1.5);s.line(x+95,505,x+255,505,1);s.line(x+95,545,x+255,545,1)
+ elif label=='D.A.T.A. CONNECTOR':
+  s.circle(x+175,495,95,2);s.circle(x+175,495,45,2)
+  for dx,dy in [(0,-70),(70,0),(0,70),(-70,0)]:s.circle(x+175+dx,495+dy,9,1.5)
+ else:
+  s.rect(x+55,400,240,70,1.5);s.rect(x+55,535,240,70,1.5);s.line(x+175,470,x+175,535,1.5);s.text('A',x+165,423,18,'Courier New');s.text('B',x+165,558,18,'Courier New')
+s.footer('Layer 0 governs the Shipping & Receiving Control Desk.','Register custom native components; do not improvise exceptions.');s.done()
 #13 reuse the bundled validated CAD scene
 cad=json.loads((R/'Slide13_Seed.json').read_text())
 scenes.append(cad)
@@ -143,5 +157,5 @@ assert len(scenes)==15
 sections=[]
 for i,scene in enumerate(scenes):
  h=b.build(scene,DECK);start=h.index('<section');end=h.index('</section>')+len('</section>');sections.append(h[start:end]);(OUT/f'Slide-{i+1:02d}.html').write_text(h)
-(OUT/'AI_Pilot_15_Slides_Layered.html').write_text('<!doctype html><html><head><meta charset="utf-8"><title>AI Pilot - 15 Layered CAD Slides</title><style>html,body{margin:0;padding:0;background:white}*{box-sizing:border-box}section{page-break-after:always}</style></head><body>'+''.join(sections)+'</body></html>')
+(OUT/'Logistics_Framework_15_Slides_Layered.html').write_text('<!doctype html><html><head><meta charset="utf-8"><title>Logistics Framework - 15 Layered CAD Slides</title><style>html,body{margin:0;padding:0;background:white}*{box-sizing:border-box}section{page-break-after:always}</style></head><body>'+''.join(sections)+'</body></html>')
 print('15 pages;',sum(sum(l['type']=='text' for l in s['layers']) for s in scenes),'live text elements')
