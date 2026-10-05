@@ -1,7 +1,7 @@
 # Archive
 
-Historical records from the original Canva-pipeline archive (2026-10-05 import).
+This directory retains only evidence that remains compatible with the current DraftDeck architecture and terminology.
 
-- `ARCHIVE_NOTES.md` — the original archive notes, preserved as written. Paths in it refer to the pre-restructure layout (`canva-layered-html-slides/`, `experiment/`, `reference/`); see the repository README for the current layout.
-- `Archive_Manifest.json` — SHA-256 manifest of the original archive files, with original paths.
-- `reference/` — the original AI Pilot Interface QA Specification PDF (split into parts, with `Restore_Reference.py` to reassemble).
+Deprecated predecessor reference bundles, generated previews, and manifests that preserved the retired travel/aviation framing are intentionally excluded from the current tree. Git history remains the provenance record for those removed materials.
+
+- `ARCHIVE_NOTES.md` — current archival policy and rebuild-history notes.
