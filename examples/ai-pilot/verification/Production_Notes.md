@@ -1,10 +1,17 @@
-# Full layered CAD deck
+# Full layered logistics deck
 
-15 reference-based sheets rebuilt through the canva-layered-html-slides skill using static HTML/CSS and real independent text. CAD drafting sheets are text-free SVG assets. Illustrated story layers are separate generated PNG assets, with quality-95 WebP export copies for Canva. Precise workflows, geometry, hatching, and table structures are code-authored; their labels are live HTML text. Slide 13 carries forward CAD V2.
+The 15 reference-based sheets are built through the DraftDeck skill using static HTML/CSS and independent live text. CAD drafting sheets are text-free SVG assets. Story layers are separate raster assets where used; precision workflows, geometry, hatching, and table structures are code-authored.
 
-The new story imagery and condensed source copy follow the user-approved creative-seed method. This is not a verbatim or exact-dimensional reconstruction. No engineering measurements were inferred from generated geometry. Checklist statuses remain PENDING; reference approval text is identified as reproduced wording.
+The current flagship is governed by `doctrine/logistics-framework.md`. Shipping-and-receiving semantics replace the retired travel/aviation framing. Current source and generated output use cargo, courier, freight, route, handling, proof-of-delivery, control-desk, consignee, and release terminology.
 
-Canva: https://www.canva.com/d/N-H3FN_UIeBZheP
-15 editable pages at 1920 x 1080; 707 text records; 24 separate image records. All 15 page previews inspected. The source includes 710 text elements; three blank spacer elements are omitted by import. Text edit/save/reopen remains untested. Background SVG vector preservation in Canva is not verified.
+The build is not a verbatim or exact-dimensional reconstruction of any prior reference artifact. No engineering measurements are inferred from generated geometry.
 
-HTML file contains all 15 nonnested page sections. No PowerPoint intermediary. Each per-slide HTML is also included. Rebuild script uses the installed Canva skill builder; paths may need adjustment outside this environment. Artwork prompts and source/export copies are included. Built-in image generation was used for seven new story assets; the existing slide 13 artwork was reused.
+## Adapter status
+
+The HTML → Canva route previously demonstrated editable pages, separate rich-text records, separate image records, and visual-review capability. That baseline proves the adapter route, not the current flagship content.
+
+The logistics-migrated build requires a fresh Canva import and review before current counts or level-3 edit/save/reopen status are claimed.
+
+## Build contract
+
+The combined HTML contains 15 nonnested page sections. No PowerPoint intermediary is used. Authored source lives in `source/`; generated HTML and scene JSON live in `output/` and must not be edited as canonical source.
