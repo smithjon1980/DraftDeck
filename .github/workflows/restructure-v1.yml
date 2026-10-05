@@ -1,0 +1,30 @@
+name: restructure-v1
+on:
+  push:
+    branches: [architecture/draftdeck-v1]
+permissions:
+  contents: write
+jobs:
+  move:
+    if: ${{ github.event.head_commit.message != 'chore: apply v1 directory restructure' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Move binaries, regenerate output, self-delete
+        run: |
+          set -euo pipefail
+          if [ ! -d experiment ]; then echo "Already applied."; exit 0; fi
+          mkdir -p examples/ai-pilot/previews archive
+          git mv experiment/assets/* examples/ai-pilot/artwork/
+          git mv experiment/Contact-1.png experiment/Contact-2.png experiment/Contact-3.png examples/ai-pilot/artwork/
+          git mv experiment/previews/* examples/ai-pilot/previews/
+          git rm -rq experiment
+          git mv reference archive/reference
+          git mv Archive_Manifest.json archive/Archive_Manifest.json
+          python3 examples/ai-pilot/source/Build_Deck.py
+          rm .github/workflows/restructure-v1.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: apply v1 directory restructure"
+          git push
