@@ -1,0 +1,14 @@
+interface:
+  display_name: DraftDeck — Layered HTML Slides
+  short_description: Build reference-based slides with editable text and separate artwork layers
+  default_prompt: Use $draftdeck to rebuild this reference as a 16:9 HTML slide with
+    editable text and separate artwork layers.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
