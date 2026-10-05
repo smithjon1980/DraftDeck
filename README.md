@@ -9,18 +9,30 @@ DraftDeck is a production engine that transforms visual references into layered,
 | Path | Role |
 |---|---|
 | `skills/draftdeck/` | Operating instructions for the engine (agent-facing skill) |
-| `doctrine/` | Production contract, reference-render protocol, composition standard, release QA |
+| `doctrine/` | Production contract, reference-render protocol, composition standard, logistics framework, release QA |
 | `renderer/` | Scene schema and HTML/CSS build pipeline (roadmap; builder currently lives in the skill) |
 | `design-system/` | Tokens, frames, hatches, icons, components (roadmap) |
 | `adapters/` | Import targets, each with its own verification status |
-| `examples/ai-pilot/` | Flagship reference implementation: 15-slide layered CAD deck |
-| `archive/` | Original archive notes, manifest, and the source reference PDF |
+| `examples/logistics-framework/` | Flagship reference implementation: 15-slide logistics and proof-of-delivery deck |
+| `archive/` | Current archive notes for retained non-deprecated evidence |
+
+## Flagship doctrine
+
+The flagship implementation uses a logistics model:
+
+> **Data is cargo. Humans are senders and receivers. Agents are couriers. Models are freight. Verification is proof of delivery.**
+
+Its control spine is:
+
+> **LOCATION → ACCOUNTING → ADJUDICATION → AUTHORITY**
+
+The repository must not reintroduce deprecated travel/aviation metaphors into source, generated output, design-system components, or user-facing documentation.
 
 ## Adapter verification status
 
 | Adapter | Status | Evidence |
 |---|---|---|
-| Canva | **Verified** (2026-10-05) | 15 pages at exactly 1920×1080, 707 richtext records, 24 image records; all pages visually reviewed. See `examples/ai-pilot/verification/`. |
+| Canva | **Verified route; current flagship re-verification pending** | The HTML → Canva route has verified editable text/image records. The logistics-migrated flagship must receive a fresh adapter review before its own verification record is upgraded. |
 | Adobe Express | Unverified | Do not claim compatibility until independently tested. |
 | Figma | Unverified | No import test completed. |
 | Floot | Exploratory | No import test completed. |
@@ -30,7 +42,7 @@ DraftDeck is a production engine that transforms visual references into layered,
 Rebuild the flagship deck offline (Python standard library only):
 
 ```sh
-python3 examples/ai-pilot/source/Build_Deck.py
+python3 examples/logistics-framework/source/Build_Deck.py
 ```
 
-See `doctrine/production-contract.md` before editing anything: generated output is overwritten on rebuild, so authored changes belong in the source, never in the generated HTML.
+See `doctrine/production-contract.md` before editing anything: generated output is overwritten on rebuild, so authored changes belong in the source, never in generated HTML.
