@@ -256,5 +256,8 @@
     "Text edit/save/reopen roundtrip has not been tested; editable page and independent richtext records were verified.",
     "Grouped precision geometry is part of a separate background asset, not individually editable elements.",
     "Reference approval text reproduced; checklist statuses pending implementation review."
-  ]
+  ],
+  "record_scope": "baseline adapter-route evidence",
+  "current_flagship_verified": false,
+  "reverification_required": "Fresh import, visual review, and edit/save/reopen test required after Logistics Framework migration."
 }
