@@ -12,12 +12,15 @@ An earlier run produced 99 verified live text elements and still failed, because
 
 ## Token palette
 
+The core standard is pure-white-only. There is one ground.
+
 | Token | Value | Use |
 |---|---|---|
-| Pure White Ground | `#FFFFFF` | Infographic-branch ground |
+| Pure White Ground | `#FFFFFF` | The ground. No alternates in the core standard. |
 | Near-Black Ink | `#1A1A1A` | Primary ink |
 | Burnt Orange | `#B34700` | Restricted accent (stamps, key marks) |
-| Parchment Ivory | `#FAF0EA` | Flight-manual branch only — never substituted silently for the infographic branch |
+
+**Visual profiles.** DraftDeck the engine can host named optional profiles (alternate grounds, typography, accent rules), but a profile is only valid when explicitly declared for a build and documented under `design-system/`. The parchment-ivory flight-manual look is a retired profile, not part of the core standard; it must never be substituted silently for the pure-white core. Historical references to it survive only in archived run records.
 
 ## Typography
 
