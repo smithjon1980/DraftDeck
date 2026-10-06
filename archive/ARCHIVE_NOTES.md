@@ -6,7 +6,7 @@ This archive includes the existing Canva skill and the complete 15-slide experim
 
 - `canva-layered-html-slides/`: skill instructions, agent metadata, builder, sample scene, icon, and verified pipeline notes.
 - `experiment/`: complete and individual HTML slides, scene definitions, portable build script, original PNG and compressed WebP story artwork, SVG drafting backgrounds, previews, artwork subject notes, production notes, and Canva verification results.
-- `reference/`: original AI Pilot Interface QA Specification PDF.
+- `reference/`: original retired aviation-era reference package.
 
 ## Rebuild
 
