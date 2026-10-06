@@ -18,7 +18,7 @@ Never report a lower level as if it were a higher one. The 2026-10-05 Canva run 
 - Artwork exists as separately movable assets; no unverified claims of native vector preservation.
 - No missing artwork, clipping, collisions, or unreadable required text.
 - No PowerPoint intermediate; no per-slide reconstruction service required.
-- Verification record saved with the build (see `examples/ai-pilot/verification/` for the format).
+- Verification record saved with the build (see `examples/logistics-framework/verification/` for the format).
 - Remaining limitations stated explicitly, including raster artwork and untested edit cycles.
 
 ## Adapter claims
