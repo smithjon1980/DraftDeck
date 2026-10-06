@@ -65,7 +65,7 @@ BOUNDARY
 prevents unauthorized escape
 ```
 
-Inside the envelope, the handler should not need to ask. Outside the envelope, it should not be able to act.
+Inside the envelope, the handler should not need repeated infrastructure permission for actions already authorized by the envelope. The envelope does not eliminate escalation for ambiguity, authority-bearing decisions, irreversible consequences, or release. Outside the envelope, the handler should not be able to act.
 
 ---
 
@@ -123,13 +123,13 @@ An unattended package must never arrive as an anonymous instruction. It arrives 
 ```text
 TASK_ID
 PACKAGE_ID
-BRANCH
+CHANGE_SET_ID
 HANDLER_ID
 ```
 
-> **Autonomous work must remain attributable to a durable package, task, branch, and handler identity.**
+> **Autonomous work must remain attributable to a durable package, task, work surface or change set, and handler identity.**
 
-This is the L2 Attachment rule — *Identity must precede delegation* — made concrete for unattended execution. The durable backlog itself is an L5 Exchange concern: the work object must survive the disappearance of any handler, session, or terminal. The backlog's implementation (issues, database tasks, Prime packages, protocol tasks, a queue) is replaceable; durable identity is not.
+This is the L2 Attachment rule — *Identity must precede delegation* — made concrete for unattended execution. `CHANGE_SET_ID` may be implemented as a source-control branch, worktree, document revision, artifact version, workspace, or equivalent bounded modification surface. The durable backlog itself is an L5 Exchange concern: the work object must survive the disappearance of any handler, session, or terminal. The backlog's implementation (issues, database tasks, Prime packages, protocol tasks, a queue) is replaceable; durable identity is not.
 
 ---
 
@@ -171,9 +171,9 @@ which separates what simpler primitives conflate: HANDLER, ENVIRONMENT, and INST
 Parallel unattended execution follows a concrete pattern:
 
 ```text
-              ┌→ PACKAGE A → ENVELOPE A → BRANCH A ┐
-MANIFEST → PLAN ─→ PACKAGE B → ENVELOPE B → BRANCH B ├→ REVIEW → CONSOLIDATE
-              └→ PACKAGE C → ENVELOPE C → BRANCH C ┘
+              ┌→ PACKAGE A → ENVELOPE A → CHANGE SET A ┐
+MANIFEST → PLAN ─→ PACKAGE B → ENVELOPE B → CHANGE SET B ├→ REVIEW → CONSOLIDATE
+              └→ PACKAGE C → ENVELOPE C → CHANGE SET C ┘
 ```
 
 But lane count is downstream of the dependency graph, not of available compute:
@@ -198,7 +198,7 @@ PARALLELIZE
 
 ### Movement semantics belong to Carriage
 
-Concurrent execution raises L4 questions that must be answered by policy, not left to chance: What happens when two branches touch the same file? What happens if a worker dies? Can a task retry, and could duplicate execution occur? Can a task be cancelled? How is partial completion handled?
+Concurrent execution raises L4 questions that must be answered by policy, not left to chance: What happens when two change sets touch the same governed surface? What happens if a worker dies? Can a task retry, and could duplicate execution occur? Can a task be cancelled? How is partial completion handled?
 
 Autonomous execution envelopes should eventually declare:
 
@@ -226,7 +226,7 @@ The Merger receives:
 ```text
 PARENT_MANIFEST
 CHILD_PACKAGES
-BRANCHES
+CHANGE SETS
 PACKAGE OBJECTIVES
 REVIEW RESULTS
 CONFLICTS
@@ -281,7 +281,7 @@ The observed external pattern that motivated this doctrine — backlog, eligibil
 | Layer | Observed concern |
 |---|---|
 | L1 Platform | Sandbox substrate: filesystem boundary, runtime, tools, credentials |
-| L2 Attachment | Task, issue, branch, and handler identity bound to the work |
+| L2 Attachment | Task, package, change-set, and handler identity bound to the work |
 | L3 Routing | Label-based admission control; dependency-aware eligibility |
 | L4 Carriage | Retry, idempotency, cancellation, conflict semantics |
 | L5 Exchange | Durable backlog; work survives handler disappearance |
@@ -290,7 +290,7 @@ The observed external pattern that motivated this doctrine — backlog, eligibil
 
 Two observations strengthen the architecture:
 
-1. **Every layer was needed.** No concern was homeless; no layer was idle. This is structural validation of the kind the anti-bloat clause demands.
+1. **This specimen exercised all seven layers without requiring a new layer or collapsing an existing one.** Within this specimen, no observed concern was structurally homeless and no PARCELS layer lacked a corresponding concern. This is specimen-level structural validation of the kind the anti-bloat clause demands.
 2. **The observed pattern's weakest region was Carriage.** Its retry, idempotency, and cancellation semantics were left implicit — which is exactly the failure surface Carriage exists to govern, and evidence that L4 earns its separation.
 
 ---
@@ -357,7 +357,7 @@ This doctrine was sharpened by studying an external autonomous-execution tool ("
 
 > **Execution environments should expose the minimum substrate required for the package.**
 
-> **Autonomous work must remain attributable to a durable package, task, branch, and handler identity.**
+> **Autonomous work must remain attributable to a durable package, task, work surface or change set, and handler identity.**
 
 > **Role must not be coupled to provider identity.**
 
