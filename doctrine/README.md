@@ -20,6 +20,8 @@ PRIME PROCESS
         ↓
 PRIME ALIGNMENT, DECOMPOSITION & FEEDBACK
         ↓
+PRIME SHIPPING LABEL & CLASSIFICATION
+        ↓
 PRIME PROCESS ORCHESTRATION
         ↓
 PRIME HANDOFF & CONTEXT ROUTING
@@ -40,6 +42,7 @@ Each layer answers a different class of question.
 | Ontology | `logistics-framework.md` | What conceptual model governs the system? | Establishes shipping-and-receiving logistics as canonical and defines the control spine: LOCATION → ACCOUNTING → ADJUDICATION → AUTHORITY. |
 | Process | `prime-process.md` | How does work move through the system? | Defines PRIME: Package → Route → Inspect → Move → Establish Delivery. |
 | Alignment / Decomposition / Feedback | `prime-alignment-decomposition-feedback.md` | What must be aligned, decomposed, and instrumented before and during execution? | Defines alignment before packaging, destination vs journey artifacts, dependency graphs, vertical slices, route instrumentation, feedback quality, review proportionality, and stale-context handling. |
+| Shipping Label / Classification | `prime-shipping-label-classification.md` | What metadata must accompany a package before routing, and how may classifiers influence route selection without acquiring authority? | Defines the Prime Shipping Label, declared/derived/classified fields, scan validation, declared-vs-observed comparison, route classes, classifier boundaries, handler capability mapping, label versioning, and separation from the Verification Tag. |
 | Orchestration | `prime-process-orchestration.md` | How does PRIME become an executable multi-step work system? | Defines bounded work packages, routing, inspection, orchestration, delivery verification, feedback, and reusable learning. |
 | Routing / Handoff | `prime-handoff-context-routing.md` | How should context and side-work move between handlers or sessions? | Defines task severance, Prime Handoff Packages, return handoffs, transit artifacts, evidence-producing detours, and context routing. |
 | Release | `release-qa.md` | What must be true before an artifact is considered releasable? | Defines release gates and verification expectations. |
@@ -55,9 +58,10 @@ A new contributor, agent, or adapter should read doctrine in this order:
 3. `logistics-framework.md`
 4. `prime-process.md`
 5. `prime-alignment-decomposition-feedback.md`
-6. `prime-process-orchestration.md`
-7. `prime-handoff-context-routing.md`
-8. `release-qa.md`
+6. `prime-shipping-label-classification.md`
+7. `prime-process-orchestration.md`
+8. `prime-handoff-context-routing.md`
+9. `release-qa.md`
 
 The order matters.
 
@@ -91,13 +95,19 @@ Alignment precedes packaging.
 
 Instrument the route before sending the package; a package that moves without acceptance signals is cargo without a manifest.
 
-### Rule 5 — Orchestration does not replace authority
+### Rule 5 — Labels and classifiers do not replace authority
+
+A label declares. A classifier interprets. A routing policy assigns.
+
+Classification informs routing; classification does not grant release authority.
+
+### Rule 6 — Orchestration does not replace authority
 
 An orchestrator may classify, schedule, route, hold, compare, and report.
 
 Human release authority remains human where the workflow requires human authorization.
 
-### Rule 6 — Context is cargo
+### Rule 7 — Context is cargo
 
 Context should be routed, not accumulated.
 
@@ -105,7 +115,7 @@ Out-of-scope work should become a new package rather than contaminating the pare
 
 Stale context is active contamination: in an agentic system, obsolete documentation is retrieved and acted upon as if it were current authority.
 
-### Rule 7 — Release requires evidence
+### Rule 8 — Release requires evidence
 
 A build, test pass, commit, or deployment may be necessary but is not automatically sufficient to establish delivery or release.
 
@@ -142,6 +152,14 @@ The following statements summarize the active doctrine stack:
 > **The orchestrator is a control surface, not final authority.**
 
 > **A reliable courier network requires both observable routes and trustworthy manifests.**
+
+> **A label declares. A classifier interprets. A routing policy assigns. A handler executes. Verification establishes delivery. Human authority releases where required.**
+
+> **ENCODED ≠ PROTECTED.**
+
+> **PACKAGE = what is being shipped. LABEL = how it should be interpreted and handled. VERIFICATION TAG = what actually happened to it.**
+
+> **Classification informs routing. Classification does not grant release authority.**
 
 > **Context should be routed, not accumulated.**
 
@@ -283,6 +301,8 @@ For visual-production work, also read `composition-standard.md` before implement
 
 For planning, decomposition, or feedback design, read `prime-alignment-decomposition-feedback.md`.
 
+For package labeling, scan classification, or pre-routing handler selection, read `prime-shipping-label-classification.md`.
+
 For orchestration work, read `prime-process-orchestration.md`.
 
 For cross-session delegation or context transfer, read `prime-handoff-context-routing.md`.
@@ -313,6 +333,9 @@ defines how work moves
 ALIGNMENT / DECOMPOSITION / FEEDBACK
 defines what must be true before and during movement
 
+SHIPPING LABEL / CLASSIFICATION
+defines what metadata accompanies cargo and how pre-routing interpretation is governed
+
 ORCHESTRATION
 defines how work scales
 
@@ -323,4 +346,4 @@ RELEASE
 defines when delivery is established
 ```
 
-> **The doctrine stack should be readable as one system, not eight unrelated documents.**
+> **The doctrine stack should be readable as one system, not nine unrelated documents.**
