@@ -1,70 +1,82 @@
-# D0-A04 — Authority & Handling Boundaries
+# D0-A04 — Admission Before Capability
 
-**Status:** Candidate NotebookLM Source Script  
-**Target:** 9–13 minute audio overview  
-**Purpose:** Establish permission, handling state, HOLD, and restricted-cargo orientation.
+**Target:** 12–16 minute NotebookLM audio overview
 
-## Opening
+A familiar mistake in AI work sounds reasonable:
 
-A system that knows how to move information still needs to answer a harder question:
+“Use the most capable model.”
 
-Should this information move at all?
+But there is a question that comes before capability.
 
-BOSS separates ability from permission.
+May this information go there?
 
-Two canonical statements anchor this orientation:
+At a shipping counter, the carrier does not begin with the truck.
 
-**CAPABILITY ≠ PERMISSION.**
+The carrier begins with admission.
+
+Is the shipment sufficiently declared?
+
+Are the handling requirements known?
+
+Is the package eligible to be accepted?
+
+Is the destination permitted?
+
+That gives us the first inspection in BOSS:
+
+**Admission Inspection.**
+
+Its question is:
+
+> **May this package enter controlled movement?**
+
+The possible outcomes are:
+
+**ACCEPT.**
+
+**HOLD.**
+
+**REFUSE.**
+
+HOLD matters because uncertainty is not permission.
+
+A canonical rule is:
+
+> **Unknown handling requirements produce HOLD, not guessed routing.**
+
+Now consider an information example.
+
+An external AI service may be excellent at summarizing documents.
+
+Technically, it can process a confidential file.
+
+But suppose the file is not permitted to leave the approved environment.
+
+The service's capability does not authorize the transfer.
+
+That is why:
+
+> **CAPABILITY ≠ PERMISSION.**
 
 And:
 
-**CAN PROCESS ≠ MAY RECEIVE.**
+> **CAN PROCESS ≠ MAY RECEIVE.**
 
-## The Case
+The sequence is crucial.
 
-It is easy to assume that the strongest available handler should receive the work.
+First classify the cargo.
 
-A model may have excellent reasoning.
+Then determine eligibility.
 
-A tool may support the required file type.
+Then select among eligible handlers.
 
-A service may return the result faster.
+> **Cargo classification precedes handler selection.**
 
-Those are capability facts.
+That leads to another important consequence:
 
-They do not establish permission.
+> **Capability is downstream from admissibility.**
 
-## A Simple Scenario
-
-Suppose an external service can summarize a confidential document perfectly.
-
-Technically, it can process the file.
-
-But the document owner has not authorized external transfer.
-
-The service's capability does not erase the boundary.
-
-The correct route is not “send it because it works.”
-
-The package must remain within its permitted handling environment.
-
-## Classification Before Handler Selection
-
-A core rule is:
-
-**Cargo classification precedes handler selection.**
-
-First determine what kind of handling the cargo requires.
-
-Then determine which handlers are eligible.
-
-Not the other way around.
-
-If you begin with a favorite tool and then stretch the package rules to justify using it, the system has reversed its authority.
-
-## Five Handling States
-
-At Day Zero depth, know these five states:
+At orientation depth, BOSS uses five handling states:
 
 **STANDARD.**
 
@@ -76,64 +88,28 @@ At Day Zero depth, know these five states:
 
 **PROHIBITED.**
 
-These are handling states.
+These labels do not tell you whether the information is true, valuable, good, or bad.
 
-They are not quality ratings.
+They tell you how its movement must be governed.
 
-They do not tell you whether the content is good, bad, true, false, important, or unimportant.
+This is why the shipping counter is such a useful analogy.
 
-They tell you how movement must be governed.
+A carrier does not say, “We own equipment capable of carrying this, therefore we are authorized to accept it.”
 
-## HOLD Is Valid
+Ability does not create permission.
 
-One of the most important behaviors in BOSS is refusing to guess when required handling information is missing.
+And the same is true in information systems.
 
-The rule is:
+A model's context window does not create authorization.
 
-**Unknown handling requirements produce HOLD, not guessed routing.**
+An agent's file access does not create authorization.
 
-HOLD is not a punishment.
+An API's technical compatibility does not create authorization.
 
-HOLD is not indecision.
+Admission comes first.
 
-HOLD is a governed state that protects the network while missing information is resolved.
+Classification comes before handler choice.
 
-## Sanitization
+Capability is evaluated only after eligibility has been established.
 
-Sometimes a package contains more information than the destination needs.
-
-Removing sensitive material may create a new, safer package.
-
-But the sanitized extract is a new package with its own identity and handling state.
-
-Sanitization does not retroactively authorize the original package.
-
-That distinction prevents the system from pretending that a later transformation made an earlier unauthorized movement acceptable.
-
-## Authorization Across Handoffs
-
-Permission does not disappear when a package changes hands.
-
-Authorization follows the cargo across every handoff.
-
-A second handler does not gain broader authority merely because the first handler sent the package.
-
-## Bottom Line
-
-The network does not ask only:
-
-“Can this be processed?”
-
-It asks:
-
-“May this package be received here, under these conditions, by this handler?”
-
-Capability tells us what is possible.
-
-Permission tells us what is allowed.
-
-When required information is missing, HOLD.
-
-In the next audio overview, we put these ideas into the five-stage movement protocol: PRIME.
-
-**Next Route: PRIME — Package, Route, Inspect, Move, Establish Delivery.**
+In the next overview, we go behind that admission boundary and look at PRIME—the protocol that governs movement once a package is eligible to move.
