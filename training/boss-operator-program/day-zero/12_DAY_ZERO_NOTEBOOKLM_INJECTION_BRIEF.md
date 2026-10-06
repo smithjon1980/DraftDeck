@@ -1,52 +1,98 @@
 # Day Zero NotebookLM Injection Brief
 
-**Status:** Candidate Pre-Production Brief  
-**Role:** Inspiration and synthesis only.
+**Status:** Candidate Pre-Production Brief
 
 > **NotebookLM inspires. BOSS adjudicates.**
 
-## Source set
+## Mandatory framing
 
-When producing Day Zero pre-production material, supply only approved source documents needed for orientation:
+Generated Day Zero media must begin from this truth:
 
-1. Day Zero Control
-2. Day Zero Orientation Source
-3. Plan of Instruction
-4. relevant compiled doctrine excerpts
-5. visual/terminology standard
-6. Day Zero visual brief
-7. Day Zero orientation deck brief
+> Every day you already move information between people, systems, models, files, and applications. Most failures happen because we pay attention to the work being performed and not enough attention to what was actually sent, where it was allowed to go, what it needed to arrive with, and how we know it arrived correctly. BOSS gives us a logistics model for seeing those movements clearly.
 
-Do not ask NotebookLM to infer authority from file order.
+## Two-plane constraint
 
-## Requested exploratory outputs
+The Instructional Control Plane remains backstage.
 
-NotebookLM may be used to generate:
-- orientation slide concepts;
-- visual/infographic concepts;
-- alternate explanations;
-- short orientation audio prototype if useful;
-- FAQ ideas;
-- misconception prompts.
+Do not narrate:
+- learner state;
+- diagnostic routing;
+- remediation;
+- instructional sequencing;
+- qualification mechanics
 
-## Output status
+as though they are parcel logistics.
 
-All generated material enters WIP.
+Learner-facing narration uses the Operational Teaching Model.
 
-No NotebookLM output is canonical merely because it is fluent or visually strong.
+## Metaphor discipline
 
-## Required adjudication
+The shipping-counter analogy is structural correspondence.
 
-Before reuse:
-- doctrine audit;
-- terminology audit;
-- scope audit;
-- authority audit;
-- visual normalization;
-- cross-media consistency check.
+Never generate:
+- “welcome to the network”;
+- learner as cargo/package/freight;
+- fictional BOSS Shipping Company;
+- a story in which the learner becomes a courier/operator inside a parcel world;
+- consumer-fulfillment framing as the central model.
 
-## Day Zero audio rule
+Prefer:
+- familiar generic shipping-counter experience;
+- explicit comparison to real information movement;
+- short return-to-reality statements after each analogy.
 
-Any exploratory audio is supplemental and does not consume one of the seven locked Deep-Dive Podcasts.
+## Canonical frontstage sequence
 
-If released audio is later produced, the final script must be controlled and exact.
+```text
+REQUEST
+→ PACKAGE PREPARATION
+→ SHIPPING LABEL
+→ ADMISSION INSPECTION
+→ CLASSIFICATION
+→ ACCEPT / HOLD / REFUSE
+→ ROUTE
+→ CONTROLLED MOVEMENT
+→ VERIFY
+→ RELEASE
+```
+
+## Two inspections
+
+Admission Inspection:
+**May this package enter controlled movement?**
+
+PRIME INSPECT:
+**Are the conditions for this particular movement satisfied?**
+
+Do not merge them.
+
+## Required canonical statements
+
+Use exactly:
+- **CAPABILITY ≠ PERMISSION.**
+- **CAN PROCESS ≠ MAY RECEIVE.**
+- **Cargo classification precedes handler selection.**
+- **Unknown handling requirements produce HOLD, not guessed routing.**
+- **Capability is downstream from admissibility.**
+- **PACKAGE → ROUTE → INSPECT → MOVE → ESTABLISH DELIVERY**
+
+## Audio-generation instruction
+
+The seven Day Zero audio overviews must sound like intelligent explanatory conversations about responsible information movement.
+
+They must not sound like employee onboarding for a fictional shipping company.
+
+Each audio should:
+1. begin with a real information-work problem;
+2. use the counter analogy only to illuminate the structure;
+3. return explicitly to information systems;
+4. preserve canonical rules;
+5. end by connecting the concept to responsible system use.
+
+## Audit failure mode
+
+Any output that promotes the teaching metaphor into literal ontology is marked:
+
+**FAIL — METAPHOR LITERALIZATION**
+
+and must return to BOSS REFINEMENT before reuse.
