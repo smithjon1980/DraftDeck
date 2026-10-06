@@ -1,6 +1,6 @@
-# AI Pilot — flagship reference implementation
+# Logistics Framework — flagship reference implementation
 
-The complete 15-slide layered CAD deck, rebuilt from the AI Pilot Interface QA Specification through the DraftDeck skill (`skills/draftdeck/`). This is DraftDeck's flagship test case: it exercises the full reference-render protocol, the production contract, and the verified Canva adapter.
+The complete 15-slide layered CAD deck, rebuilt from the Logistics Framework specification through the DraftDeck skill (`skills/draftdeck/`). This is DraftDeck's flagship test case: it exercises the full reference-render protocol, the production contract, and the verified Canva adapter.
 
 ## Layout
 
@@ -8,7 +8,7 @@ The complete 15-slide layered CAD deck, rebuilt from the AI Pilot Interface QA S
 |---|---|
 | `source/` | **Authored source of truth** — `Build_Deck.py` (slide copy and geometry) and `Slide13_Seed.json` (validated seed scene) |
 | `artwork/` | Text-free story artwork (PNG masters, quality-95 WebP for Canva import), generated drafting-frame SVGs, contact sheets, and `Artwork_Prompts.json` provenance |
-| `output/` | **Generated** — `Scenes.json`, `Slide-01.html` … `Slide-15.html`, combined `AI_Pilot_15_Slides_Layered.html`. Do not edit directly; rebuild overwrites it |
+| `output/` | **Generated** — `Scenes.json`, `Slide-01.html` … `Slide-15.html`, combined `Logistics_Framework_15_Slides_Layered.html`. Do not edit directly; rebuild overwrites it |
 | `verification/` | `Canva_Verification.json` (707 richtext records, 24 image records, per-page dimensions) and `Production_Notes.md` |
 | `previews/` | Rendered per-slide previews |
 
