@@ -1,15 +1,15 @@
-# Prime Shipping Label & Classification Doctrine
+# Bioscillate PRIME Shipping Label & Classification Doctrine
 
 **Status:** Candidate Canonical Doctrine  
-**Framework:** Logistics Framework → Prime Process  
+**Framework:** Bioscillate Logistics Framework → Bioscillate PRIME Protocol  
 **Repository Role:** Operating doctrine / training doctrine / pre-routing metadata and classification reference  
-**Purpose:** Define the machine-readable shipment label that sits between a bounded Prime package and route assignment, and define the separation between declared metadata, semantic classification, routing policy, movement, verification, and release authority.
+**Purpose:** Define the machine-readable shipment label that sits between a bounded PRIME package and route assignment, including execution, placement, escalation, and verification requirements, while preserving separation between declared metadata, semantic classification, routing policy, movement, verification, and release authority.
 
 ---
 
 ## 1. Doctrine Upgrade
 
-Prime Process establishes:
+The Bioscillate PRIME Protocol establishes:
 
 > **PRIME = Package → Route → Inspect → Move → Establish Delivery**
 
@@ -17,7 +17,7 @@ The existing doctrine defines how work is bounded, aligned, decomposed, routed, 
 
 This document defines the missing pre-routing object between **Package** and **Route**:
 
-> **The Prime Shipping Label**
+> **The PRIME Shipping Label**
 
 The Prime Shipping Label is a machine-readable declaration attached to a package before routing.
 
@@ -67,7 +67,7 @@ The useful architectural distinction is:
 
 The source explicitly distinguishes Base64 from encryption and recommends secure transport such as HTTPS when sensitive data is transmitted.
 
-Prime Process generalizes that lesson.
+The Bioscillate PRIME Protocol generalizes that lesson.
 
 ### Encoding Rule
 
@@ -97,7 +97,7 @@ Security and authorization must be represented and enforced independently.
 
 The source transcript notes that an encoded payload may require a MIME type or equivalent content-type declaration so the receiving system can determine whether the cargo is a PDF, CSV, document, label, or other object.
 
-Prime Process adopts the broader rule:
+The Bioscillate PRIME Protocol adopts the broader rule:
 
 > **Opaque cargo requires explicit type metadata.**
 
@@ -123,7 +123,7 @@ Those are different dimensions.
 
 ## 4. The Three-Object Model
 
-Prime Process now distinguishes three separate objects.
+The Bioscillate PRIME Protocol distinguishes three separate objects.
 
 ### 4.1 Package
 
@@ -218,9 +218,29 @@ REQUIRED_TOOLS
 DEPENDENCIES
 PROHIBITED_HANDLERS
 
-INSPECTION
+EXECUTION / PLACEMENT
+EXECUTION_CLASS
+EXECUTION_ENVELOPE_REQUIRED
+SANDBOX_REQUIRED
+CAPABILITY_CLASS
+LOCALITY_REQUIREMENT
+DATA_BOUNDARY
+RUNTIME_REQUIREMENT
+NETWORK_POLICY
+FILESYSTEM_POLICY
+CREDENTIAL_PROFILE
+COST_BUDGET
+TIME_LIMIT
+LATENCY_TOLERANCE
+PARALLEL_SAFE
+IDEMPOTENCY_CLASS
+ESCALATION_POLICY
+
+INSPECTION / VERIFICATION
 ACCEPTANCE_PROFILE
 INSPECTION_PROFILE
+VERIFICATION_PROFILE
+REVIEW_INDEPENDENCE
 POD_REQUIREMENT
 HUMAN_REVIEW_REQUIREMENT
 
@@ -548,6 +568,138 @@ This prevents vendor and model lock-in.
 
 ---
 
+## 13A. Execution, Placement & Verification Requirements
+
+A durable Shipping Label should describe not only *what capability is required* but also *under what execution and verification conditions the package may move*.
+
+The routing system therefore evaluates five distinct dimensions:
+
+```text
+HANDLING
+PLACEMENT
+CAPABILITY
+VERIFICATION
+AUTHORITY
+```
+
+These dimensions must not be collapsed into a single model or provider choice.
+
+### Placement
+
+Placement describes where execution may occur.
+
+Examples include:
+
+```text
+LOCAL
+HOSTED
+HYBRID
+```
+
+These are implementation placements, not capability classes.
+
+> **Placement follows requirements.**
+
+> **PLACEMENT ≠ CAPABILITY.**
+
+Locality may affect privacy, data movement, latency, cost, tool availability, and runtime control. It does not by itself establish how capable a handler is.
+
+Hosted execution may provide different capability or service guarantees. It does not by itself grant greater authority.
+
+### Capability Class
+
+`CAPABILITY_CLASS` expresses the class of capability required by the package.
+
+It must remain abstract enough that adapters may map it to current handlers without changing doctrine.
+
+The label should not canonize implementation terms such as specific model tiers where a stable capability description is available.
+
+### Execution Envelope
+
+The Shipping Label may require an Execution Envelope through fields such as:
+
+```text
+EXECUTION_CLASS
+EXECUTION_ENVELOPE_REQUIRED
+SANDBOX_REQUIRED
+NETWORK_POLICY
+FILESYSTEM_POLICY
+CREDENTIAL_PROFILE
+TIME_LIMIT
+COST_BUDGET
+PARALLEL_SAFE
+IDEMPOTENCY_CLASS
+```
+
+These fields carry the pre-routing requirements established by Bounded Autonomy & Execution Envelopes.
+
+The label declares the requirement. The selected execution environment must satisfy it.
+
+### Escalation
+
+`ESCALATION_POLICY` declares when the current route may no longer be sufficient.
+
+> **Escalation occurs because package requirements exceed the current handler's demonstrated capability or risk budget, not because a more prestigious handler exists.**
+
+Escalation may be triggered by:
+
+- insufficient demonstrated capability;
+- risk exceeding route policy;
+- unresolved ambiguity;
+- consequence requiring stronger inspection;
+- unavailable required tools;
+- exceeded cost, time, or latency budget;
+- failed verification;
+- authority-bearing decision points.
+
+### Verification Profile
+
+`VERIFICATION_PROFILE` identifies the evidence obligations that travel with the package.
+
+It may reference:
+
+```text
+DETERMINISTIC_CHECKS
+REFERENCE_COMPARATOR
+INDEPENDENT_REVIEW
+NEGATIVE_CONTROLS
+HUMAN_ACCEPTANCE
+REQUIRED_EVIDENCE
+RELEASE_THRESHOLD
+```
+
+The Shipping Label declares the required profile. Evidence & Verification Architecture governs how that profile is satisfied.
+
+> **Execution routing and verification routing are independent decisions.**
+
+A package may be produced by one handler and verified through a different route.
+
+### Review Independence
+
+`REVIEW_INDEPENDENCE` expresses whether verification must be independent of the producing handler or context.
+
+This may range from same-handler self-checks to fresh-context review, different-handler review, deterministic comparator, or human acceptance depending on consequence.
+
+> **Capability to produce does not establish capability to verify.**
+
+```text
+BUILD_CAPABILITY
+        ≠
+REVIEW_CAPABILITY
+        ≠
+RELEASE_AUTHORITY
+```
+
+### Package Scope
+
+Large destination scope does not require large package scope.
+
+> **Handler limitations can be managed by reducing package scope without reducing destination scope.**
+
+A route may decompose or repackage work when the current package exceeds the safe or effective handling envelope of an available handler.
+
+---
+
 ## 14. Sensitivity, Risk, and Urgency Are Independent Axes
 
 A package may be urgent but low risk.
@@ -791,8 +943,13 @@ The routing policy receives:
 - classifier outputs;
 - current handler availability;
 - capability registry;
+- execution-envelope requirements;
+- locality and data-boundary requirements;
 - cost constraints;
 - latency constraints;
+- verification profile;
+- review-independence requirements;
+- escalation policy;
 - security constraints;
 - organizational policy.
 
@@ -806,8 +963,14 @@ CLASSIFICATION
 POLICY
        +
 CAPABILITY REGISTRY
+       +
+EXECUTION REQUIREMENTS
+       +
+VERIFICATION PROFILE
        ↓
-ROUTE ASSIGNMENT
+EXECUTION ROUTE
+       +
+VERIFICATION ROUTE
 ~~~
 
 ### Policy Rule
@@ -857,15 +1020,17 @@ A complete flow may look like:
 5. PACKAGE SCANNED
 6. SEMANTIC CLASSIFIER RUNS
 7. DECLARED vs OBSERVED COMPARED
-8. POLICY EVALUATES RISK / CAPABILITY / URGENCY
-9. ROUTE CLASS ASSIGNED
-10. HANDLER SELECTED
-11. PACKAGE MOVES
-12. INSPECTION SIGNALS COLLECTED
-13. DELIVERY COMPARED TO ACCEPTANCE PROFILE
-14. VERIFICATION TAG WRITTEN
-15. POD GENERATED IF REQUIRED
-16. HUMAN RELEASE APPLIED WHERE REQUIRED
+8. POLICY EVALUATES RISK / CAPABILITY / URGENCY / PLACEMENT
+9. EXECUTION REQUIREMENTS VALIDATED
+10. EXECUTION ROUTE ASSIGNED
+11. VERIFICATION ROUTE ASSIGNED
+12. HANDLER + EXECUTION ENVELOPE SELECTED
+13. PACKAGE MOVES
+14. INSPECTION SIGNALS COLLECTED
+15. DELIVERY COMPARED TO ACCEPTANCE + VERIFICATION PROFILE
+16. VERIFICATION TAG WRITTEN
+17. POD GENERATED IF REQUIRED
+18. HUMAN RELEASE APPLIED WHERE REQUIRED
 ~~~
 
 This flow preserves separation of concerns at every stage.
@@ -882,7 +1047,7 @@ The Shipping Label participates in:
 
 It supplies structured accounting and routing evidence before adjudication and authority.
 
-### Prime Process
+### Bioscillate PRIME Protocol
 
 The label sits between **Package** and **Route**.
 
@@ -914,9 +1079,19 @@ A handoff package may carry its own Shipping Label.
 
 The handoff document is cargo; the label describes how the next system should handle it.
 
+### Evidence & Verification Architecture
+
+The Shipping Label declares the required `VERIFICATION_PROFILE`, `REVIEW_INDEPENDENCE`, and execution/placement requirements before movement.
+
+Evidence & Verification Architecture governs how those requirements are satisfied and how execution routing remains distinct from verification routing.
+
+### Bounded Autonomy & Execution Envelopes
+
+Execution-envelope fields on the Shipping Label carry pre-routing requirements derived from Bounded Autonomy doctrine. The label does not itself create containment; it declares the containment profile that the selected environment must satisfy.
+
 ### Release QA
 
-A successful classification or route assignment does not satisfy release QA.
+A successful classification, route assignment, build, or verification sub-check does not satisfy release QA.
 
 Release remains downstream.
 
@@ -950,6 +1125,20 @@ Release remains downstream.
 
 > **Canonical labels describe required capabilities. Adapters map capabilities to current handlers.**
 
+> **Placement follows requirements.**
+
+> **PLACEMENT ≠ CAPABILITY.**
+
+> **Execution routing and verification routing are independent decisions.**
+
+> **Capability to produce does not establish capability to verify.**
+
+> **BUILD_CAPABILITY ≠ REVIEW_CAPABILITY ≠ RELEASE_AUTHORITY.**
+
+> **Escalation occurs because package requirements exceed the current handler's demonstrated capability or risk budget, not because a more prestigious handler exists.**
+
+> **Handler limitations can be managed by reducing package scope without reducing destination scope.**
+
 > **Urgency, complexity, risk, sensitivity, and context load are separate routing dimensions.**
 
 > **A classifier should not repair a structurally invalid label by inventing missing authority-bearing fields.**
@@ -976,14 +1165,16 @@ Release remains downstream.
 
 This doctrine was synthesized from:
 
-- existing DraftDeck Logistics Framework doctrine;
-- existing Prime Process doctrine;
+- existing BOSS Logistics Framework doctrine;
+- existing Bioscillate PRIME Protocol doctrine;
 - existing Prime Alignment, Decomposition & Feedback doctrine;
-- existing Prime Process Orchestration doctrine;
+- existing PRIME Protocol Orchestration doctrine;
 - existing Prime Handoff & Context Routing doctrine;
 - a user-supplied transcript explaining Base64 encoding, MIME type declaration, API payload transport, proof-of-delivery documents, carrier-label payloads, and the distinction between encoding and encryption;
-- the ongoing Prime Process design discussion about scanning package labels to classify work and select an appropriate handling route.
+- Bounded Autonomy & Execution Envelopes doctrine;
+- Evidence & Verification Architecture doctrine;
+- the ongoing Bioscillate PRIME Protocol design discussion about scanning package labels to classify work and select an appropriate handling, placement, execution, escalation, and verification route.
 
 The source transcript is treated as a technical reference for representation, content typing, and logistics API structure.
 
-This document is an original Prime Process synthesis. It does not make Base64 mandatory, does not grant classifiers release authority, and does not revive predecessor ontology as an AI-routing metaphor.
+This document is an original BOSS / Bioscillate PRIME Protocol synthesis. It does not make Base64 mandatory, does not grant classifiers release authority, and does not revive predecessor ontology as an AI-routing metaphor.
