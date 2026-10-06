@@ -56,7 +56,8 @@ Each layer answers a different class of question.
 | Protocol | `prime-process.md` | How does bounded work move through the system? | Defines the Bioscillate PRIME Protocol: Package → Route → Inspect → Move → Establish Delivery. The existing filename is retained pending any dedicated path migration. |
 | Alignment / Decomposition / Feedback | `prime-alignment-decomposition-feedback.md` | What must be aligned, decomposed, and instrumented before and during execution? | Defines alignment before packaging, destination vs journey artifacts, dependency graphs, vertical slices, route instrumentation, feedback quality, review proportionality, and stale-context handling. |
 | Aligned Instruction / Learning Envelopes | `aligned-instruction-learning-envelope.md` | What limits govern instruction before teaching begins? | Specializes alignment doctrine into the instructional domain: defines the Learning Envelope, mission vs. curriculum vs. lesson, declared vs. observed learner state, the learning loop, Day Zero's constitutional responsibility, and CONTENT DELIVERED ≠ LEARNING ESTABLISHED. |
-| Shipping Label / Classification | `prime-shipping-label-classification.md` | What metadata must accompany a package before routing, and how may classifiers influence execution, placement, escalation, and verification policy without acquiring authority? | Defines the canonical PRIME Shipping Label, declared/derived/classified fields, scan validation, declared-vs-observed comparison, execution-envelope requirements, capability and locality requirements, structured Verification Profiles, review independence, escalation policy, route selection, label versioning, and separation from the Verification Tag. |
+| Shipping Label / Classification | `prime-shipping-label-classification.md` | What metadata must accompany a package before routing, and how may classifiers influence execution, placement, escalation, verification, and restricted-cargo policy without acquiring authority? | Defines the canonical PRIME Shipping Label, declared/derived/classified fields, scan validation, declared-vs-observed comparison, execution-envelope requirements, capability and locality requirements, structured Verification Profiles, restricted-cargo label fields, review independence, escalation policy, route selection, label versioning, and separation from the Verification Tag. |
+| Restricted Cargo Handling | `restricted-cargo-handling.md` | When may a package move, when must it be held, sanitized, or refused, and how do authorization constraints survive handoffs? | Defines STANDARD / SENSITIVE / RESTRICTED / QUARANTINED / PROHIBITED handling states; ROUTE / HOLD / REFUSE / SANITIZE→RECLASSIFY dispositions; minimum-necessary cargo; authorization persistence; and the hard gate between classification and routing. |
 | Orchestration | `prime-process-orchestration.md` | How does PRIME become an executable multi-step work system? | Defines bounded work packages, routing, inspection, orchestration, delivery verification, feedback, and reusable learning. |
 | Routing / Handoff | `prime-handoff-context-routing.md` | How should context and side-work move between handlers or sessions? | Defines task severance, Prime Handoff Packages, return handoffs, transit artifacts, evidence-producing detours, and context routing. |
 | Control Plane Reference Architecture | `prime-control-plane-reference-architecture.md` | How should PRIME doctrine map into an operator-facing web application without surrendering domain authority to implementation tools? | Defines server-authoritative state, domain-first interfaces, replaceable adapters, typed server-rendered presentation, lightweight hypermedia interaction, PocketBase as a candidate adapter, and doctrine-to-code traceability. |
@@ -79,13 +80,14 @@ A new contributor, agent, or adapter should read doctrine in this order:
 6. `prime-alignment-decomposition-feedback.md`
 7. `aligned-instruction-learning-envelope.md`
 8. `prime-shipping-label-classification.md`
-9. `prime-process-orchestration.md`
-10. `prime-handoff-context-routing.md`
-11. `prime-control-plane-reference-architecture.md`
-12. `evidence-verification-architecture.md`
-13. `production-contract.md`
-14. `composition-standard.md`
-15. `release-qa.md`
+9. `restricted-cargo-handling.md`
+10. `prime-process-orchestration.md`
+11. `prime-handoff-context-routing.md`
+12. `prime-control-plane-reference-architecture.md`
+13. `evidence-verification-architecture.md`
+14. `production-contract.md`
+15. `composition-standard.md`
+16. `release-qa.md`
 
 The order matters.
 
@@ -426,7 +428,9 @@ For planning, decomposition, or feedback design, read `prime-alignment-decomposi
 
 For curriculum design, instructional systems, learner routing, or Day Zero work, read `aligned-instruction-learning-envelope.md`.
 
-For package labeling, scan classification, execution/placement requirements, capability routing, escalation policy, or verification-profile selection, read `prime-shipping-label-classification.md`.
+For package labeling, scan classification, execution/placement requirements, capability routing, escalation policy, verification-profile selection, or restricted-cargo metadata, read `prime-shipping-label-classification.md`.
+
+For cargo handling states, quarantine, unauthorized disclosure boundaries, permitted/prohibited destinations or handlers, minimum-necessary scope, sanitization, or refusal decisions, read `restricted-cargo-handling.md`.
 
 For orchestration work, read `prime-process-orchestration.md`.
 
@@ -471,6 +475,9 @@ defines what limits govern teaching
 SHIPPING LABEL / CLASSIFICATION
 defines what metadata accompanies cargo and how pre-routing interpretation is governed
 
+RESTRICTED CARGO HANDLING
+defines whether cargo may route, must hold, requires sanitization and reclassification, or must be refused
+
 ORCHESTRATION
 defines how work scales
 
@@ -493,4 +500,4 @@ RELEASE
 defines when delivery is established
 ```
 
-> **The doctrine stack should be readable as one system, not fifteen unrelated documents.**
+> **The doctrine stack should be readable as one system, not sixteen unrelated documents.**
