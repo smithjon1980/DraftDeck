@@ -1,87 +1,86 @@
 # Day Zero Instructor Guide
 
-**Status:** Candidate Instructor Treatment  
-**Purpose:** Facilitate orientation without turning Day Zero into Module 01.
+**Status:** Candidate Instructor Treatment
 
-## Delivery principle
+## Instructor responsibility
 
-Day Zero is orientation and calibration. Do not overteach downstream mechanisms.
+Keep the two planes separate.
 
-The instructor's job is to establish:
-- system identity;
-- learner expectations;
-- authority boundaries;
-- valid HOLD behavior;
-- training-state distinctions;
-- learner-state inputs;
-- initial route.
+The Instructional Control Plane is backstage. You may use the Learning Envelope, diagnostic, learner-state record, remediation, and assessment to govern instruction. Do not narrate those mechanics as though the learner were a package traveling through the BOSS logistics model.
 
-## Suggested sequence
+The learner-facing subject is information movement.
 
-### 1. Entry State
-Ask: “What does acceptance into training establish?”
+## Required opening
 
-Expected distinction:
-- establishes eligibility to begin;
-- does not establish qualification or authorization.
+Begin from the learner's existing experience:
 
-### 2. System Identity
-Have learners reconstruct:
-BOSS → Logistics Framework → PARCELS → PRIME → specialization → product.
+> Every day you already move information between people, systems, models, files, and applications.
 
-Correct any product-first framing.
+Then establish the problem:
 
-### 3. Information Logistics
-Use one simple specimen:
-“Create a 10-slide orientation deck from an approved source.”
+People often focus on what a tool can do while ignoring what exactly is being sent, whether it may move, where it is allowed to go, what it must arrive with, and how delivery is established.
 
-Ask learners to identify:
-- sender;
-- package;
-- destination;
-- possible handler;
-- proof of delivery.
+## Anchor demonstration — the shipping counter
 
-Do not require full Shipping Label construction yet.
+Use a generic parcel-carrier counter.
 
-### 4. Authority & Handling
-Present three short cases:
-- ordinary public source;
-- clearly restricted source;
-- unknown handling state.
+Ask learners what happens before a physical package is accepted:
+- destination is declared;
+- package information is supplied;
+- handling requirements are identified;
+- acceptance conditions are checked;
+- the carrier can ACCEPT, HOLD, or REFUSE.
 
-Expected responses:
-ROUTE / HOLD or restricted handling / HOLD.
+Then explicitly state:
 
-### 5. PRIME
-Have learners put the five stages in order and explain one sentence for each.
+The correspondence is structural. Information systems are not literally parcel networks.
 
-### 6. Training Journey
-Review Modules 01–07.
-Emphasize:
-TRAINED ≠ QUALIFIED ≠ CERTIFIED ≠ CREDENTIALED ≠ AUTHORIZED.
+## Required distinctions
 
-### 7. Learning Envelope and Diagnostic
-Complete the learner inputs before administering the diagnostic.
+Teach:
+- package preparation before movement;
+- shipping label as explicit declaration;
+- Admission Inspection before PRIME;
+- classification before handler selection;
+- capability downstream from admissibility;
+- HOLD as a valid state;
+- PRIME behind the admission boundary.
 
-## Common misconceptions
+Do not teach:
+- learner as cargo;
+- “welcome to the network” fictional narration;
+- learner-state routing as information logistics;
+- consumer-fulfillment imagery as the main anchor;
+- handler selection before classification.
 
-- “I was accepted, so I am already an operator.”
-- “The most capable model should get the work.”
-- “If a tool can open the file, it may receive the file.”
-- “Passing a quiz means I am qualified.”
-- “HOLD means the system failed.”
-- “Day Zero should teach all of PRIME in depth.”
+## Two-inspection check
 
-## Correction rules
+Ask:
 
-Correct the smallest demonstrated misconception. Do not restart the full orientation unless gaps are systemic.
+“What question does Admission Inspection answer?”
 
-## Clearance decision
+Expected:
+**May this package enter controlled movement?**
 
-Use only:
-- CLEARED FOR MODULE 01
-- CLEARED WITH REMEDIATION
-- HOLD — ORIENTATION REQUIREMENT UNRESOLVED
+Ask:
 
-Record evidence and remediation in the learner record.
+“What question does PRIME INSPECT answer?”
+
+Expected:
+**Are the conditions for this particular movement satisfied?**
+
+## Misconception checks
+
+Correct these immediately:
+- “The strongest model should get the work.”
+- “If the tool can open the file, it may receive the file.”
+- “HOLD means failure.”
+- “The shipping metaphor is literal.”
+- “PRIME starts before admission.”
+- “Classification happens after selecting a tool.”
+
+## Day Zero close
+
+Learners should leave with the operating model, not the instructional machinery.
+
+Administrative readiness decisions are recorded backstage and should be communicated plainly without logistics role-play.
