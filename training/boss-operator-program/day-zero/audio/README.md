@@ -1,33 +1,30 @@
-# Day Zero Audio Overview Series
+# Day Zero Audio Overview Series — Revision 2
 
-**Status:** Candidate Pre-Production Source  
-**Series:** BOSS Operator Program — Day Zero  
-**Count:** Seven audio overviews  
-**Production environment:** NotebookLM exploratory audio  
-**Authority:** Doctrine > POI > Day Zero Control > Day Zero Orientation Source > Audio Overview Script
+**Status:** Candidate Pre-Production Source
 
-These seven audio overviews provide an on-the-go orientation path through Day Zero. They are separate from the seven formal module Deep-Dive Podcasts.
+These seven audio overviews teach responsible information movement using the shipping-counter analogy as structural correspondence.
 
-NotebookLM may use these scripts as source material and conversation scaffolds. NotebookLM output remains WIP and is not expected to reproduce the script word-for-word.
+They are not stories about a fictional carrier. The learner is not cargo and does not “enter the network.”
 
-## Series sequence
+## Series
 
-1. D0-A01 — Entry State: You Are Here
-2. D0-A02 — System Identity: What BOSS Is
-3. D0-A03 — Information Logistics: What Moves Through the Network
-4. D0-A04 — Authority & Handling Boundaries
-5. D0-A05 — PRIME: The Movement Protocol
-6. D0-A06 — The Training Journey
-7. D0-A07 — Your Learning Envelope, Diagnostic, and Clearance
+1. **D0-A01 — You Already Move Information**
+2. **D0-A02 — Seeing Information Through BOSS**
+3. **D0-A03 — Before Anything Moves: Build the Package**
+4. **D0-A04 — Admission Before Capability**
+5. **D0-A05 — PRIME Behind the Counter**
+6. **D0-A06 — From One Package to a Whole Network**
+7. **D0-A07 — Ready for Module 01**
 
-## Series rule
+## Episode grammar
 
-Each episode must:
-- begin by locating the listener in Day Zero;
-- teach one bounded orientation responsibility;
-- use canonical statements exactly when quoted;
-- avoid teaching downstream mechanisms beyond orientation depth;
-- end with a bridge to the next episode;
-- preserve unknowns and HOLD rather than inventing completeness.
+REAL INFORMATION PROBLEM  
+→ FAMILIAR COUNTER ANALOGY  
+→ STRUCTURAL CORRESPONDENCE  
+→ BOSS RULE  
+→ REAL INFORMATION EXAMPLE  
+→ RESPONSIBLE OPERATOR CONSEQUENCE
 
-The seven episodes form one continuous orientation arc.
+## Hard prohibition
+
+Any episode that treats the metaphor as literal fails refinement.
