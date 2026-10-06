@@ -50,4 +50,4 @@ Discover tool names and schemas at execution time. The demonstrated sequence was
 
 ## Logistics Framework style route
 
-Follow the selected reference and current project standard together. Infographic branch: pure white #FFFFFF; near-black technical ink; burnt orange #B34700; heavy serif action title; uppercase monospace kicker; line-built diagrams/hatching and drafting rails. The distinct flight-manual branch uses parchment. Do not silently substitute one branch for the other. Use the actual source copy and record ambiguities; illustrations do not substantiate engineering dimensions or an approval state.
+Follow the selected reference and current project standard together. Infographic branch: pure white #FFFFFF; near-black technical ink; burnt orange #B34700; heavy serif action title; uppercase monospace kicker; line-built diagrams/hatching and drafting rails. Use the actual source copy and record ambiguities; illustrations do not substantiate engineering dimensions or an approval state.
