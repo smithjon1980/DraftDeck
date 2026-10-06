@@ -1,6 +1,6 @@
 # Bounded Autonomy & Execution Envelopes
 
-**Status:** Candidate Canonical Doctrine
+**Status:** Canonical Doctrine
 **Placement:** Between Structure and Process in the doctrine stack — `LOGISTICS FRAMEWORK → PARCELS → BOUNDED AUTONOMY & EXECUTION ENVELOPES → PRIME PROCESS`.
 **Purpose:** Constrain delegation before unattended execution. Define the constitutional limit on handler autonomy and the Execution Envelope as its enforcement shape.
 
