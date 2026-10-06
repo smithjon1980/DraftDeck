@@ -20,7 +20,7 @@ The core standard is pure-white-only. There is one ground.
 | Near-Black Ink | `#1A1A1A` | Primary ink |
 | Burnt Orange | `#B34700` | Restricted accent (stamps, key marks) |
 
-**Visual profiles.** DraftDeck the engine can host named optional profiles (alternate grounds, typography, accent rules), but a profile is only valid when explicitly declared for a build and documented under `design-system/`. The parchment-ivory flight-manual look is a retired profile, not part of the core standard; it must never be substituted silently for the pure-white core. Historical references to it survive only in archived run records.
+**Visual profiles.** DraftDeck the engine can host named optional profiles (alternate grounds, typography, accent rules), but a profile is only valid when explicitly declared for a build and documented under `design-system/`. The retired parchment-era alternate look is not part of the core standard; it must never be substituted for the pure-white core. Historical references survive only in archived run records.
 
 ## Typography
 
