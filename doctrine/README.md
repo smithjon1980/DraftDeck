@@ -26,6 +26,8 @@ PRIME PROCESS ORCHESTRATION
         ↓
 PRIME HANDOFF & CONTEXT ROUTING
         ↓
+PRIME CONTROL PLANE REFERENCE ARCHITECTURE
+        ↓
 RELEASE QA
 ```
 
@@ -45,6 +47,7 @@ Each layer answers a different class of question.
 | Shipping Label / Classification | `prime-shipping-label-classification.md` | What metadata must accompany a package before routing, and how may classifiers influence route selection without acquiring authority? | Defines the Prime Shipping Label, declared/derived/classified fields, scan validation, declared-vs-observed comparison, route classes, classifier boundaries, handler capability mapping, label versioning, and separation from the Verification Tag. |
 | Orchestration | `prime-process-orchestration.md` | How does PRIME become an executable multi-step work system? | Defines bounded work packages, routing, inspection, orchestration, delivery verification, feedback, and reusable learning. |
 | Routing / Handoff | `prime-handoff-context-routing.md` | How should context and side-work move between handlers or sessions? | Defines task severance, Prime Handoff Packages, return handoffs, transit artifacts, evidence-producing detours, and context routing. |
+| Control Plane Reference Architecture | `prime-control-plane-reference-architecture.md` | How should Prime doctrine map into an operator-facing web application without surrendering domain authority to implementation tools? | Defines server-authoritative state, domain-first interfaces, replaceable adapters, typed server-rendered presentation, lightweight hypermedia interaction, PocketBase as a candidate adapter, and doctrine-to-code traceability. |
 | Release | `release-qa.md` | What must be true before an artifact is considered releasable? | Defines release gates and verification expectations. |
 
 ---
@@ -61,7 +64,8 @@ A new contributor, agent, or adapter should read doctrine in this order:
 6. `prime-shipping-label-classification.md`
 7. `prime-process-orchestration.md`
 8. `prime-handoff-context-routing.md`
-9. `release-qa.md`
+9. `prime-control-plane-reference-architecture.md`
+10. `release-qa.md`
 
 The order matters.
 
@@ -115,7 +119,13 @@ Out-of-scope work should become a new package rather than contaminating the pare
 
 Stale context is active contamination: in an agentic system, obsolete documentation is retrieved and acted upon as if it were current authority.
 
-### Rule 8 — Release requires evidence
+### Rule 8 — Implementation serves doctrine
+
+The domain defines the interfaces. Frameworks and services implement them.
+
+Implementation candidates may change without changing the doctrine they implement.
+
+### Rule 9 — Release requires evidence
 
 A build, test pass, commit, or deployment may be necessary but is not automatically sufficient to establish delivery or release.
 
@@ -160,6 +170,12 @@ The following statements summarize the active doctrine stack:
 > **PACKAGE = what is being shipped. LABEL = how it should be interpreted and handled. VERIFICATION TAG = what actually happened to it.**
 
 > **Classification informs routing. Classification does not grant release authority.**
+
+> **The UI displays governed state. It does not become the source of governed state.**
+
+> **Keep the system small enough to understand, but modular enough to govern.**
+
+> **The domain defines the interfaces. Frameworks and services implement them.**
 
 > **Context should be routed, not accumulated.**
 
@@ -307,6 +323,8 @@ For orchestration work, read `prime-process-orchestration.md`.
 
 For cross-session delegation or context transfer, read `prime-handoff-context-routing.md`.
 
+For operator-console, web-control-plane, persistence-adapter, or HTMX/templ implementation work, read `prime-control-plane-reference-architecture.md`.
+
 For release decisions, read `release-qa.md`.
 
 ---
@@ -342,8 +360,11 @@ defines how work scales
 ROUTING
 defines how context and sub-work move
 
+CONTROL PLANE REFERENCE ARCHITECTURE
+defines how doctrine maps into replaceable implementation boundaries
+
 RELEASE
 defines when delivery is established
 ```
 
-> **The doctrine stack should be readable as one system, not nine unrelated documents.**
+> **The doctrine stack should be readable as one system, not ten unrelated documents.**
