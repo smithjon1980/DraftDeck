@@ -24,7 +24,7 @@ The flagship implementation uses a logistics model governed by `doctrine/logisti
 
 Its control spine is:
 
-The executable orchestration extension is defined in `doctrine/prime-process-orchestration.md`.
+The executable orchestration extension is defined in `doctrine/prime-process-orchestration.md`. Context severance, cross-session handoff, and return-routing are defined in `doctrine/prime-handoff-context-routing.md`.
 
 
 
