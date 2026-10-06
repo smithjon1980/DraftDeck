@@ -3,7 +3,7 @@
 > **Editability is necessary but not sufficient.**
 > A technically editable slide that destroys the reference composition is a failed DraftDeck build.
 
-An earlier run produced 99 verified live text elements and still failed, because it recreated a boxes-and-lines composition instead of the reference. Layer counts prove structure; they do not prove fidelity. Both are required.
+An earlier run produced verified live text elements and still failed because it recreated a generic boxes-and-lines composition instead of the reference. Layer counts prove structure; they do not prove fidelity. Both are required.
 
 ## Canvas
 
@@ -18,9 +18,10 @@ The core standard is pure-white-only. There is one ground.
 |---|---|---|
 | Pure White Ground | `#FFFFFF` | The ground. No alternates in the core standard. |
 | Near-Black Ink | `#1A1A1A` | Primary ink |
-| Burnt Orange | `#B34700` | Restricted accent (stamps, key marks) |
+| Burnt Orange | `#B34700` | Restricted accent (status, key marks, controlled emphasis) |
+| Drafting Gray | `#DEDEDE` | Grid, construction lines, low-priority technical substrate |
 
-**Visual profiles.** DraftDeck the engine can host named optional profiles (alternate grounds, typography, accent rules), but a profile is only valid when explicitly declared for a build and documented under `design-system/`. The parchment-ivory flight-manual look is a retired profile, not part of the core standard; it must never be substituted silently for the pure-white core. Historical references to it survive only in archived run records.
+**Visual profiles.** DraftDeck can host named optional profiles, but a profile is valid only when explicitly declared for a build and documented under `design-system/`. The core profile remains pure white.
 
 ## Typography
 
@@ -34,6 +35,10 @@ The core standard is pure-white-only. There is one ground.
 - 0.5pt (≈1.5–2px) — controls and connector housings.
 - 0.25pt (≈0.75px) — grid, hatch, and detail lines.
 
+## Semantic constraint
+
+The flagship Logistics Framework uses shipping, receiving, cargo, routing, proof-of-delivery, consignee, dispatch, handling, and release language. Deprecated travel/aviation metaphors are prohibited in current source, generated output, component names, and user-facing documentation.
+
 ## Prohibited
 
-Solid pictogram fills, UI red, gradients, glows, ambient occlusion, glossy 3D, soft pill shapes. State is communicated through architectural hatching and line texture, not color alone.
+Solid pictogram fills, UI red, gradients, glows, ambient occlusion, glossy 3D, soft pill shapes, and silent substitution of a non-core visual profile. State is communicated through architectural hatching and line texture, not color alone.

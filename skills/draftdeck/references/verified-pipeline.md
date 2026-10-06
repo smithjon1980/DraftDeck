@@ -1,37 +1,32 @@
 # Verified HTML → Canva pipeline
 
-## Successful run: 2026-10-05
+## Demonstrated route: 2026-10-05
 
-Reference: page 1 of AI_Pilot_Interface_QA_Specification.pdf, a raster 15-page document supplied by the user. First page: large male connector at left, socket cutaway at right, enlarged pin cutaway below, bold two-line serif title, dimension callouts, drafting frame, angled orange approval stamp, lower-right title block.
+A 15-page raster reference document was used to validate the layered import method. The test established a stable workflow for converting a visual reference into static HTML/CSS with live text and separate artwork layers.
 
-1. Render the PDF page with Poppler and inspect it visually.
-2. Use image editing to remove every title, dimension label, margin coordinate, stamp, and title-block word. Preserve connector/cutaway artwork and drafting linework. Use pure white ground for the infographic branch.
-3. Save that output as a separate PNG artwork asset. It is a generated reference-derived raster reconstruction, not an exact trace or engineering drawing.
-4. Compose the page in HTML/CSS: separate text divs, embedded PNG, CSS-bordered rotated stamp with live wording, explicit page dimensions and `data-document-role="page"`.
-5. Import the local HTML directly through Canva's `design_file` route with intended type `presentation`.
-6. Inspect Canva's imported page and layer records and its rendered thumbnail.
+1. Render the source page and inspect it visually.
+2. Separate artwork from titles, dimensions, annotations, stamps, and title-block wording.
+3. Save the artwork as an independent asset.
+4. Compose the page in HTML/CSS with separate live text elements and explicit page dimensions.
+5. Import the local HTML through Canva's file-import route.
+6. Inspect the imported page, layer records, and rendered thumbnail.
 
 ## Evidence
 
-Final Canva design ID: `DAHXHgS0qB0`.
-Edit link: https://www.canva.com/d/lIp8Rg_NsECfxTA
-Verified page dimensions: 1920 × 1080.
-Verified richtext elements: 36.
-Verified image assets on the page: 1.
-Page reported editable. Titles, dimension annotations, margin coordinates, stamp words and title-block metadata appeared as separate text elements. CSS stamp rotation and border appeared in the preview. Connector/cutaway asset remained separate.
+The demonstrated route verified:
+- 1920 × 1080 page dimensions;
+- independent rich-text elements;
+- separate image assets;
+- adapter-side editability flags;
+- preserved rotation/border behavior in the rendered preview.
 
-User-facing saved artifacts:
-- AI_Pilot_Interface_QA_Layered.html
-- AI_Pilot_Connector_Artwork.png
-- AI_Pilot_Interface_QA_Canva_Final_Preview.png
-
-Resolve these by filename through Library if needed; do not assume original scratch paths persist.
+The current Logistics Framework flagship is a semantic and artwork migration of the reference implementation and must be re-verified in Canva before its own adapter status is marked current.
 
 ## Boundaries of verification
 
-The run verified the native layer records and rendered composition. It did not perform a saved text-edit round trip or establish font-perfect equivalence. The user said the result was very close; it was not approved as exact or canonical. Artwork remained raster and its internal content was not independently editable. No SVG preservation test or Adobe Express import test was completed.
+The earlier route did not establish font-perfect equivalence, native SVG preservation, or a full edit/save/reopen round trip. A technically editable import can still fail visual intent.
 
-An earlier 2400 × 1350 run verified 99 live text elements but merely repeated a boxes-and-lines SVG composition. It passed layer inspection and failed the user's visual intent. Do not repeat that as the default design method.
+An earlier test with many live text elements failed because the design became a generic boxes-and-lines composition. Do not treat layer count as proof of fidelity.
 
 ## Stable import pattern
 
@@ -46,8 +41,8 @@ An earlier 2400 × 1350 run verified 99 live text elements but merely repeated a
 </section>
 ```
 
-Discover tool names and schemas at execution time. The demonstrated sequence was import → start editing transaction → inspect richtexts/fills/pages → get thumbnail → show and inspect preview → cancel inspection transaction. Do not retain transaction IDs or expiring image URLs for reuse.
+## Logistics Framework style route
 
-## AI Pilot style route
+Follow the selected reference together with the current project standard: pure white `#FFFFFF`, near-black technical ink, burnt orange `#B34700`, heavy serif action titles, uppercase monospace metadata, line-built diagrams/hatching, and logistics-native component semantics.
 
-Follow the selected reference and current project standard together. Infographic branch: pure white #FFFFFF; near-black technical ink; burnt orange #B34700; heavy serif action title; uppercase monospace kicker; line-built diagrams/hatching and drafting rails. The distinct flight-manual branch uses parchment. Do not silently substitute one branch for the other. Use the actual source copy and record ambiguities; illustrations do not substantiate engineering dimensions or an approval state.
+The active semantic model is documented in `doctrine/logistics-framework.md`. Do not reintroduce predecessor travel/aviation metaphors.
