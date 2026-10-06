@@ -430,7 +430,7 @@ SPECIAL_HANDLING
 HUMAN_HOLD
 ~~~
 
-A real-world training lesson may explain that physical logistics networks can use vans, trucks, aircraft, maritime transport, rail, or local contractors.
+A real-world training lesson may explain that physical logistics networks can use vans, trucks, air freight, maritime transport, rail, or local contractors.
 
 Those are literal logistics modes.
 
