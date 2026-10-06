@@ -1,31 +1,21 @@
-# Canva layered CAD pipeline archive
+# DraftDeck legacy archive notes
 
-This archive includes the existing Canva skill and the complete 15-slide experiment, with the original reference PDF.
+This directory preserves provenance from the original layered-CAD experiment while the repository itself now uses the canonical Logistics Framework vocabulary.
 
-## Contents
+The retired aviation-era reference package was intentionally removed when the logistics model became canonical. Historical binary material that would reintroduce deprecated terminology or imagery is not carried forward.
 
-- `canva-layered-html-slides/`: skill instructions, agent metadata, builder, sample scene, icon, and verified pipeline notes.
-- `experiment/`: complete and individual HTML slides, scene definitions, portable build script, original PNG and compressed WebP story artwork, SVG drafting backgrounds, previews, artwork subject notes, production notes, and Canva verification results.
-- `reference/`: original retired aviation-era reference package.
+The current flagship implementation lives at `examples/logistics-framework/`. Its authored source, artwork, generated output, and verification records are governed by the repository production contract.
 
 ## Rebuild
 
-Keep the folders together. From the extracted archive run:
+From the repository root:
 
 ```sh
-python3 experiment/Build_Deck.py
+python3 examples/logistics-framework/source/Build_Deck.py
 ```
 
-The rebuild uses only the Python standard library and bundled artwork. It requires no API key, PowerPoint, or image generation service. It regenerates the scene definitions, drafting frames, individual HTML slides, and combined HTML deck. The packaged rebuild was checked to reproduce the combined HTML byte for byte.
+The rebuild uses only the Python standard library and bundled assets. Generated HTML and `Scenes.json` are disposable build products; authored changes belong in source or artwork.
 
-The builder contains the authored slide copy and geometry. Edit it to change most slides; slide 13 uses `Slide13_Seed.json`. Change assets to replace the story layer. Rebuilding overwrites generated HTML and `Scenes.json`; direct changes to those files should be retained separately or transferred into the builder.
+## Evidence boundary
 
-## Layer contract and evidence
-
-16:9 pages use a drafting background, a separate story image where applicable, and independent text elements. The successful Canva import had 15 pages, 707 rich-text records, and 24 image fills. Inspect `Canva_Verification.json` and `Production_Notes.md` for evidence and limits. Editable text presence was verified; a manual edit/save/reopen cycle and native SVG preservation were not independently verified.
-
-HTML/CSS is the source; Canva import requires the connected Canva importer described in the skill. The archive can rebuild offline, but importing into Canva requires access to Canva. This is the Canva pipeline; Adobe Express is a separate workflow.
-
-Artwork_Prompts.json preserves artwork subjects, not a complete provider-specific image generation replay. Saved artwork is included for faithful rebuilding.
-
-The skill instructions are preserved as installed. The experiment build script was adjusted to use relative paths so the archive is portable. No credentials are included.
+The historical Canva verification record remains evidence for the import mechanism: editable text, separate image records, exact 1920 × 1080 pages, and visual review. It does not authorize deprecated terminology or visuals for current builds.
