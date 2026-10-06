@@ -1,13 +1,13 @@
 # Canva adapter — VERIFIED
 
-**Status:** Verified 2026-10-05 against the AI Pilot 15-slide build.
+**Status:** Verified 2026-10-05 against the Logistics Framework 15-slide build.
 
 ## Evidence
 
 - 15 pages at exactly 1920×1080.
 - 707 separate richtext records; 24 separate image records.
 - All 15 pages reported editable and were visually reviewed from adapter-side previews.
-- Full record: `examples/ai-pilot/verification/` and `skills/draftdeck/references/verified-pipeline.md`.
+- Full record: `examples/logistics-framework/verification/` and `skills/draftdeck/references/verified-pipeline.md`.
 
 ## Route
 
