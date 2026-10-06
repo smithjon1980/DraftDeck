@@ -1,80 +1,101 @@
 # Day Zero Orientation Source
 
 **Status:** Candidate Source  
-**Audience:** New BOSS Operator Program entrants  
-**Purpose:** Canonical source for Day Zero learner-facing treatments.
+**Audience:** New BOSS Operator Program learners  
+**Purpose:** Canonical learner-facing source for Day Zero.
 
-# Welcome to the Network
+# Why Information Logistics?
 
-You are here because you completed the entry process and were accepted into training. Acceptance means you are eligible to begin. It does not mean you are already qualified to operate independently.
+Every day you already move information between people, systems, models, files, and applications.
 
-> **ACCEPTED ≠ QUALIFIED.**
+You send a document to a colleague. You upload a file to a model. You pass work from one agent to another. You move a draft into a production tool. You send an output for review.
 
-Day Zero gives you the map before asking you to move packages through it.
+Most failures are not caused by movement alone. They happen because we pay attention to the work being performed and not enough attention to what was actually sent, where it was allowed to go, what it needed to arrive with, and how we know it arrived correctly.
 
-## Block 1 — Entry State
+BOSS gives us a logistics model for seeing those movements clearly.
 
-Today begins your instructional route.
+The model is not literal. You are not cargo. An AI system is not a warehouse. A file does not become a physical box. The correspondence is structural: packages have boundaries, destinations, handling requirements, routes, custody changes, and delivery evidence. Information work does too.
 
-Your current state is not inferred from confidence, résumé language, or familiarity with AI tools. Self-report helps with routing, but demonstrated performance provides the primary evidence for instructional state.
+## The Shipping Counter
 
-Day Zero records:
-- your learning mission;
-- your current experience;
-- your available time;
-- your constraints;
-- your observed baseline;
-- your initial route.
+A familiar parcel-shipping counter gives us a useful starting point.
 
-## Block 2 — What BOSS Is
+Imagine that you need to send an important package.
 
-BOSS is **Bioscillate Operating System by Seven**.
+You do not throw it into the back of a truck and hope the carrier determines everything later.
 
-The hierarchy is:
+Before the carrier accepts it, you identify what is being sent, where it is going, what handling it requires, and what successful receipt should look like.
 
-```text
-BOSS
-↓
-BIOSCILLATE LOGISTICS FRAMEWORK
-↓
-PARCELS
-↓
-BIOSCILLATE PRIME PROTOCOL
-↓
-DOMAIN SPECIALIZATIONS
-↓
-PRODUCTS
-```
+You complete a shipping label.
 
-BOSS owns the doctrine. Products implement specializations of that doctrine.
+The carrier inspects the declaration and the package conditions.
 
-## Block 3 — Information Logistics
+The result can be:
 
-The core model is:
+**ACCEPT.**
 
-> **Data is cargo. Humans are senders and receivers. Agents are couriers. Models are freight. Verification is proof of delivery.**
+**HOLD.**
 
-The system moves governed information packages.
+Or:
 
-A package is not simply “whatever is in the conversation.” A package is bounded work with identity, destination, requirements, constraints, and acceptance conditions.
+**REFUSE.**
 
-A route determines where the package belongs and under what conditions it may move.
+Only an accepted package is eligible for the carrier's internal movement system.
 
-A handler may be capable of processing a package without being permitted to receive it.
+That same structure is useful for information work.
 
-> **CAPABILITY ≠ PERMISSION.**
+## Information Packages
 
-## Block 4 — Authority & Handling Boundaries
+A request such as “make this better” may express intent, but it may not yet define a package that can responsibly move.
 
-Not every package that can move is authorized to move.
+A governed information package needs enough definition to establish:
+- what work is being committed;
+- where the result belongs;
+- what inputs are required;
+- what constraints apply;
+- what handling is permitted;
+- what would count as successful delivery.
 
-> **CAN PROCESS ≠ MAY RECEIVE.**
+The package is the unit of operational commitment and accountability.
 
-If handling requirements are unknown, the correct state is not a guess.
+## The Shipping Label
+
+The shipping-label idea makes hidden assumptions visible.
+
+For information work, the label asks questions such as:
+
+- What is being sent?
+- Who or what is sending it?
+- What is the destination?
+- What handling requirements apply?
+- What capabilities are required?
+- What destinations or handlers are prohibited?
+- What conditions must be satisfied before movement?
+- What establishes successful receipt?
+
+The label is not paperwork for its own sake. It is a control surface.
+
+## Admission Inspection
+
+Before movement begins, BOSS asks an admission question:
+
+> **May this package enter controlled movement?**
+
+That is the first inspection.
+
+The system checks whether required information is present, whether handling requirements are known, whether movement is permitted, and whether the package is eligible to proceed.
+
+If something required is unresolved:
 
 > **Unknown handling requirements produce HOLD, not guessed routing.**
 
-Day Zero introduces five handling states:
+HOLD is a governed stop state. It protects the system from converting uncertainty into unauthorized movement.
+
+## Classification Before Capability
+
+At admission, the package is classified according to its handling requirements.
+
+At orientation depth, the handling states are:
 
 ```text
 STANDARD
@@ -84,69 +105,68 @@ QUARANTINED
 PROHIBITED
 ```
 
-These are handling states, not judgments about the value or truth of the cargo.
+These states describe how movement must be governed. They are not judgments about truth, importance, quality, or value.
 
-## Block 5 — PRIME Orientation
+A central rule follows:
 
-PRIME is the governed movement protocol:
+> **Cargo classification precedes handler selection.**
+
+And therefore:
+
+> **Capability is downstream from admissibility.**
+
+A tool may be technically capable of processing a file and still be ineligible to receive it.
+
+> **CAPABILITY ≠ PERMISSION.**
+
+> **CAN PROCESS ≠ MAY RECEIVE.**
+
+## PRIME
+
+Once a package is admitted, governed movement is handled through the Bioscillate PRIME Protocol:
 
 > **PACKAGE → ROUTE → INSPECT → MOVE → ESTABLISH DELIVERY**
 
-At orientation depth:
+At Day Zero depth:
 
-- **Package** — define what is moving.
-- **Route** — determine where it belongs and under what requirements.
-- **Inspect** — check whether required conditions are satisfied.
-- **Move** — execute the bounded movement.
-- **Establish Delivery** — produce evidence that delivery occurred as required.
+- **PACKAGE** — identify the bounded work.
+- **ROUTE** — determine where it should go under the applicable requirements.
+- **INSPECT** — check whether conditions for this particular movement are satisfied.
+- **MOVE** — execute the bounded action or transfer.
+- **ESTABLISH DELIVERY** — produce evidence that the required result arrived as intended.
 
-Movement alone is not delivery.
+This inspection is different from Admission Inspection.
 
-## Block 6 — The Training Journey
+Admission asks:
 
-The seven training modules are:
+> **May this package enter controlled movement?**
 
-1. Package Operations
-2. Route Operations
-3. Facility Operations
-4. Transfer Operations
-5. Transport Coordination
-6. High-Control Operations
-7. Network Orchestration
+PRIME INSPECT asks:
 
-The states after training remain distinct:
+> **Are the conditions for this particular movement satisfied?**
 
-> **TRAINED ≠ QUALIFIED ≠ CERTIFIED ≠ CREDENTIALED ≠ AUTHORIZED.**
+## The Seven-Module Progression
 
-A quiz score alone does not establish operator qualification.
+The course follows the natural progression of the operational model:
 
-## Block 7 — Learning Envelope & Clearance
+1. **Package Operations** — prepare and admit the package.
+2. **Route Operations** — decide where an accepted package should go.
+3. **Facility Operations** — manage many packages in one operating environment.
+4. **Transfer Operations** — preserve identity, authority, and context across handoffs.
+5. **Transport Coordination** — select handling capability and placement from requirements.
+6. **High-Control Operations** — apply stronger controls when consequence increases.
+7. **Network Orchestration** — coordinate many packages, routes, handlers, and dependencies without losing accountability.
 
-Instruction begins with alignment, not content.
+## Bottom Line
 
-Your Learning Envelope records the destination, current state, constraints, available attention, and success condition that govern your route.
+BOSS is not asking you to pretend that information systems are shipping companies.
 
-The initial diagnostic then gathers observable evidence about your starting state.
+It is asking you to notice that responsible information movement has structure.
 
-Day Zero ends with one of three training-entry states:
+Before movement:
+define the package, complete the declaration, inspect admission, classify the handling requirements, and decide whether movement is allowed.
 
-```text
-CLEARED FOR MODULE 01
-CLEARED WITH REMEDIATION
-HOLD — ORIENTATION REQUIREMENT UNRESOLVED
-```
+During movement:
+route, inspect, move, and establish delivery.
 
-A HOLD state is not failure. It means the missing requirement must be resolved before movement continues.
-
-# Bottom Line
-
-You do not need to know the entire system on Day Zero.
-
-You do need to know:
-- what kind of system you are entering;
-- what authority you do and do not have;
-- why packages require boundaries and routes;
-- why HOLD is legitimate;
-- how your learning route will be established.
-
-Your next destination is **Module 01 — Package Operations**.
+That is the operating perspective Day Zero establishes before Module 01 begins.
