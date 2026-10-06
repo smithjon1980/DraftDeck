@@ -16,6 +16,10 @@ DraftDeck is a production engine that transforms visual references into layered,
 | `examples/logistics-framework/` | Flagship reference implementation: 15-slide logistics and proof-of-delivery deck |
 | `archive/` | Current archive notes for retained non-deprecated evidence |
 
+## Doctrine map
+
+Start with `doctrine/README.md` for the canonical doctrine stack, reading order, and fresh-agent boot sequence.
+
 ## Flagship doctrine
 
 The flagship implementation uses a logistics model governed by `doctrine/logistics-framework.md` and the operational spine in `doctrine/prime-process.md`:
