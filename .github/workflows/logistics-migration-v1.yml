@@ -20,22 +20,20 @@ jobs:
 
           # Preserve only still-used neutral source assets from the predecessor folder.
           if [ -d examples/ai-pilot/artwork ]; then
-            for f in               story-05.png story-05.webp               s13-Story_Layer.png s13-Story_Layer.webp               s13-Drafting_Background.svg
-            do
+            for f in story-05.png story-05.webp s13-Story_Layer.png s13-Story_Layer.webp s13-Drafting_Background.svg; do
               if [ -f "examples/ai-pilot/artwork/$f" ] && [ ! -f "examples/logistics-framework/artwork/$f" ]; then
                 git mv "examples/ai-pilot/artwork/$f" "examples/logistics-framework/artwork/$f"
               fi
             done
           fi
 
-          # Remove the retired predecessor tree; current authored source already lives
-          # in examples/logistics-framework.
+          # Remove the retired predecessor tree.
           if [ -d examples/ai-pilot ]; then
-            git rm -r examples/ai-pilot
+            git rm -rq examples/ai-pilot
           fi
 
           rm -rf examples/logistics-framework/previews
-          rm -f examples/logistics-framework/artwork/story-03.png                 examples/logistics-framework/artwork/story-03.webp                 examples/logistics-framework/artwork/story-06.png                 examples/logistics-framework/artwork/story-06.webp                 examples/logistics-framework/artwork/story-12.png                 examples/logistics-framework/artwork/story-12.webp                 examples/logistics-framework/artwork/Contact-1.png                 examples/logistics-framework/artwork/Contact-2.png                 examples/logistics-framework/artwork/Contact-3.png
+          rm -f examples/logistics-framework/artwork/story-03.png examples/logistics-framework/artwork/story-03.webp examples/logistics-framework/artwork/story-06.png examples/logistics-framework/artwork/story-06.webp examples/logistics-framework/artwork/story-12.png examples/logistics-framework/artwork/story-12.webp examples/logistics-framework/artwork/Contact-1.png examples/logistics-framework/artwork/Contact-2.png examples/logistics-framework/artwork/Contact-3.png
 
           rm -rf archive/reference
           rm -f archive/Archive_Manifest.json
@@ -46,13 +44,19 @@ jobs:
 
           git add -A
 
+          # Filename gate: no aviation-era names in tracked paths.
           if git ls-files | grep -Eiq 'ai[-_]?pilot|(^|[/_.-])pilot([/_.-]|$)|flight|airspace'; then
             echo "Deprecated terminology remains in tracked filenames:"
             git ls-files | grep -Ei 'ai[-_]?pilot|(^|[/_.-])pilot([/_.-]|$)|flight|airspace'
             exit 1
           fi
 
-          if git grep -n -I -Ei 'AI[ _-]?Pilot|FAA|AIRSPACE_CLASS|FLIGHT_PLAN_ID|Client Tower|flight-manual|air traffic|cockpit|runway|aircraft' -- .; then
+          # Content gate. Single tokens use word boundaries so base64 image
+          # payloads in generated HTML cannot false-positive. Excluded: this
+          # workflow (contains the pattern itself) and the doctrine file that
+          # defines the prose prohibition list.
+          PAT='AI[ _-]?Pilot|\bFAA\b|\bAIRSPACE_CLASS\b|\bFLIGHT_PLAN_ID\b|Client Tower|flight-manual|air traffic|\bcockpit\b|\brunway\b|\baircraft\b'
+          if git grep -n -I -Ei "$PAT" -- . ':(exclude).github' ':(exclude)doctrine/logistics-framework.md'; then
             echo "Deprecated aviation-era terminology remains in tracked text."
             exit 1
           fi
