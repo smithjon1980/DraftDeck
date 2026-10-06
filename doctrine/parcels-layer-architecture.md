@@ -1,6 +1,6 @@
 # PARCELS Layer Architecture
 
-**Status:** Candidate Canonical Doctrine
+**Status:** Canonical Doctrine
 **Placement:** Between Ontology and Process in the doctrine stack — `ONTOLOGY → PARCELS LAYER ARCHITECTURE → PRIME PROCESS`.
 **Purpose:** Define where a concern lives in the system, so that doctrine, defects, and design decisions can be located precisely instead of argued about globally.
 
