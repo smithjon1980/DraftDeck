@@ -1,6 +1,6 @@
 # Bioscillate PRIME Shipping Label & Classification Doctrine
 
-**Status:** Candidate Canonical Doctrine  
+**Status:** Canonical Doctrine  
 **Framework:** Bioscillate Logistics Framework → Bioscillate PRIME Protocol  
 **Repository Role:** Operating doctrine / training doctrine / pre-routing metadata and classification reference  
 **Purpose:** Define the machine-readable shipment label that sits between a bounded Prime package and route assignment, and define the separation between declared metadata, semantic classification, routing policy, movement, verification, and release authority.
@@ -672,7 +672,7 @@ It is:
 
 ---
 
-## 16. Sensitivity, Risk, and Urgency Are Independent Axes
+## 15. Sensitivity, Risk, and Urgency Are Independent Axes
 
 A package may be urgent but low risk.
 
@@ -996,7 +996,7 @@ This flow preserves separation of concerns at every stage.
 
 ---
 
-## 25. Relationship to Existing Doctrine
+## 26. Relationship to Existing Doctrine
 
 ### Logistics Framework
 
@@ -1046,7 +1046,7 @@ Release remains downstream.
 
 ---
 
-## 26. Canonical Statements
+## 27. Canonical Statements
 
 > **A label declares. A classifier interprets. A routing policy assigns. A handler executes. Verification establishes delivery. Human authority releases where required.**
 
@@ -1096,7 +1096,7 @@ Release remains downstream.
 
 ---
 
-## 27. Source and Provenance
+## 28. Source and Provenance
 
 This doctrine was synthesized from:
 
