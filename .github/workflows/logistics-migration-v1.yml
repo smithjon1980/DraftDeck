@@ -2,8 +2,6 @@ name: logistics-framework-migration-v1
 on:
   push:
     branches: [refactor/logistics-framework-v1]
-  pull_request:
-    branches: [main]
 
 permissions:
   contents: write
@@ -18,22 +16,34 @@ jobs:
         run: |
           set -euo pipefail
 
-          git mv examples/ai-pilot examples/logistics-framework
+          mkdir -p examples/logistics-framework/artwork
 
-          if [ -f examples/logistics-framework/verification/Canva_Verification.json ]; then
-            git mv examples/logistics-framework/verification/Canva_Verification.json               examples/logistics-framework/verification/Canva_Baseline_Verification.json
+          # Preserve only still-used neutral source assets from the predecessor folder.
+          if [ -d examples/ai-pilot/artwork ]; then
+            for f in               story-05.png story-05.webp               s13-Story_Layer.png s13-Story_Layer.webp               s13-Drafting_Background.svg
+            do
+              if [ -f "examples/ai-pilot/artwork/$f" ] && [ ! -f "examples/logistics-framework/artwork/$f" ]; then
+                git mv "examples/ai-pilot/artwork/$f" "examples/logistics-framework/artwork/$f"
+              fi
+            done
+          fi
+
+          # Remove the retired predecessor tree; current authored source already lives
+          # in examples/logistics-framework.
+          if [ -d examples/ai-pilot ]; then
+            git rm -r examples/ai-pilot
           fi
 
           rm -rf examples/logistics-framework/previews
-          rm -f examples/logistics-framework/artwork/story-03.png                 examples/logistics-framework/artwork/story-03.webp                 examples/logistics-framework/artwork/story-12.png                 examples/logistics-framework/artwork/story-12.webp                 examples/logistics-framework/artwork/Contact-1.png                 examples/logistics-framework/artwork/Contact-2.png                 examples/logistics-framework/artwork/Contact-3.png
+          rm -f examples/logistics-framework/artwork/story-03.png                 examples/logistics-framework/artwork/story-03.webp                 examples/logistics-framework/artwork/story-06.png                 examples/logistics-framework/artwork/story-06.webp                 examples/logistics-framework/artwork/story-12.png                 examples/logistics-framework/artwork/story-12.webp                 examples/logistics-framework/artwork/Contact-1.png                 examples/logistics-framework/artwork/Contact-2.png                 examples/logistics-framework/artwork/Contact-3.png
 
           rm -rf archive/reference
           rm -f archive/Archive_Manifest.json
 
-          rm -rf examples/logistics-framework/output/*
+          rm -rf examples/logistics-framework/output
+          mkdir -p examples/logistics-framework/output
           python3 examples/logistics-framework/source/Build_Deck.py
 
-          rm .github/workflows/logistics-migration-v1.yml
           git add -A
 
           if git ls-files | grep -Eiq 'ai[-_]?pilot|(^|[/_.-])pilot([/_.-]|$)|flight|airspace'; then
@@ -42,13 +52,16 @@ jobs:
             exit 1
           fi
 
-          if git grep -n -I -E 'AI[ _-]?Pilot|FAA|AIRSPACE_CLASS|FLIGHT_PLAN_ID|Client Tower|flight-manual|air traffic' -- .; then
-            echo "Deprecated terminology remains in tracked text."
+          if git grep -n -I -Ei 'AI[ _-]?Pilot|FAA|AIRSPACE_CLASS|FLIGHT_PLAN_ID|Client Tower|flight-manual|air traffic|cockpit|runway|aircraft' -- .; then
+            echo "Deprecated aviation-era terminology remains in tracked text."
             exit 1
           fi
 
           test -f examples/logistics-framework/output/Logistics_Framework_15_Slides_Layered.html
           test -f examples/logistics-framework/output/Scenes.json
+
+          rm .github/workflows/logistics-migration-v1.yml
+          git add -A
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
