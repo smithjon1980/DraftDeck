@@ -1,6 +1,6 @@
 # Bioscillate PRIME Shipping Label & Classification Doctrine
 
-**Status:** Candidate Canonical Doctrine  
+**Status:** Canonical Doctrine  
 **Framework:** Bioscillate Logistics Framework → Bioscillate PRIME Protocol  
 **Repository Role:** Operating doctrine / training doctrine / pre-routing metadata and classification reference  
 **Purpose:** Define the machine-readable shipment label that sits between a bounded PRIME package and route assignment, including execution, placement, escalation, and verification requirements, while preserving separation between declared metadata, semantic classification, routing policy, movement, verification, and release authority.
@@ -19,7 +19,7 @@ This document defines the missing pre-routing object between **Package** and **R
 
 > **The PRIME Shipping Label**
 
-The Prime Shipping Label is a machine-readable declaration attached to a package before routing.
+The PRIME Shipping Label is a machine-readable declaration attached to a package before routing.
 
 It exists so the routing system does not need to rediscover the entire identity, type, provenance, handling requirements, and destination of every package from raw cargo alone.
 
@@ -173,9 +173,9 @@ The Verification Tag must not be overloaded with pre-routing declarations.
 
 ---
 
-## 5. Prime Shipping Label — Core Schema
+## 5. PRIME Shipping Label — Core Schema
 
-A first-generation Prime Shipping Label should support at least the following fields.
+A first-generation PRIME Shipping Label should support at least the following fields.
 
 ~~~text
 PRIME SHIPPING LABEL
@@ -242,7 +242,6 @@ INSPECTION_PROFILE
 VERIFICATION_PROFILE
 REVIEW_INDEPENDENCE
 POD_REQUIREMENT
-HUMAN_REVIEW_REQUIREMENT
 
 ROUTING
 ROUTE_CLASS
@@ -499,7 +498,8 @@ COMPLEXITY_CLASS = HIGH
 RISK_CLASS = HIGH
 DEPENDENCIES = MANY
 REQUIRED_TOOLS = WEB, FILES, CODE
-HUMAN_REVIEW_REQUIREMENT = REQUIRED
+VERIFICATION_PROFILE = HIGH_CONSEQUENCE_REVIEW
+REVIEW_INDEPENDENCE = REQUIRED
 ~~~
 
 The routing policy may select an orchestrated high-capability workflow.
@@ -568,7 +568,7 @@ This prevents vendor and model lock-in.
 
 ---
 
-## 13A. Execution, Placement & Verification Requirements
+## 14. Execution, Placement & Verification Requirements
 
 A durable Shipping Label should describe not only *what capability is required* but also *under what execution and verification conditions the package may move*.
 
@@ -700,7 +700,7 @@ A route may decompose or repackage work when the current package exceeds the saf
 
 ---
 
-## 14. Sensitivity, Risk, and Urgency Are Independent Axes
+## 15. Sensitivity, Risk, and Urgency Are Independent Axes
 
 A package may be urgent but low risk.
 
@@ -736,7 +736,7 @@ This prevents an urgent package from being mistaken for a high-risk package or a
 
 ---
 
-## 15. Label Validation
+## 16. Label Validation
 
 A label should be validated before semantic routing.
 
@@ -771,7 +771,7 @@ Missing critical fields should become a hold or escalation condition.
 
 ---
 
-## 16. Label Versioning
+## 17. Label Versioning
 
 Labels are part of the operating contract.
 
@@ -793,7 +793,7 @@ Silent schema drift is prohibited.
 
 ---
 
-## 17. Provenance and Checksums
+## 18. Provenance and Checksums
 
 The label should make package provenance inspectable.
 
@@ -825,7 +825,7 @@ and:
 
 ---
 
-## 18. Base64 as an Implementation Example
+## 19. Base64 as an Implementation Example
 
 The source transcript presents Base64 as a way to carry binary or otherwise transport-sensitive content inside an API payload and gives examples involving proof-of-delivery documents and printer-label content.
 
@@ -849,7 +849,7 @@ The doctrine survives changes in API transport.
 
 ---
 
-## 19. Proof of Delivery Is Downstream
+## 20. Proof of Delivery Is Downstream
 
 The source transcript uses proof-of-delivery as a logistics example.
 
@@ -871,7 +871,7 @@ It is produced downstream by the delivery and verification process.
 
 ---
 
-## 20. Label State vs. Verification State
+## 21. Label State vs. Verification State
 
 The label may contain a pre-routing status such as:
 
@@ -905,7 +905,7 @@ A package being CLASSIFIED does not mean it is released.
 
 ---
 
-## 21. The Classifier's Contract
+## 22. The Classifier's Contract
 
 A classifier's job is bounded.
 
@@ -935,7 +935,7 @@ A classifier may not, by classification alone:
 
 ---
 
-## 22. The Routing Policy's Contract
+## 23. The Routing Policy's Contract
 
 The routing policy receives:
 
@@ -981,7 +981,7 @@ This prevents the classifier from becoming an ungoverned dispatcher.
 
 ---
 
-## 23. Escalation and Human Hold
+## 24. Escalation and Human Hold
 
 Some packages should not route automatically.
 
@@ -1008,7 +1008,7 @@ HUMAN_HOLD
 
 ---
 
-## 24. Prime-Native Label Scan Flow
+## 25. Prime-Native Label Scan Flow
 
 A complete flow may look like:
 
@@ -1037,7 +1037,7 @@ This flow preserves separation of concerns at every stage.
 
 ---
 
-## 25. Relationship to Existing Doctrine
+## 26. Relationship to Existing Doctrine
 
 ### Logistics Framework
 
@@ -1097,7 +1097,7 @@ Release remains downstream.
 
 ---
 
-## 26. Canonical Statements
+## 27. Canonical Statements
 
 > **A label declares. A classifier interprets. A routing policy assigns. A handler executes. Verification establishes delivery. Human authority releases where required.**
 
@@ -1161,7 +1161,7 @@ Release remains downstream.
 
 ---
 
-## 27. Source and Provenance
+## 28. Source and Provenance
 
 This doctrine was synthesized from:
 
