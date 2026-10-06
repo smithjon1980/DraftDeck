@@ -19,7 +19,7 @@ This document defines the missing pre-routing object between **Package** and **R
 
 > **The PRIME Shipping Label**
 
-The Prime Shipping Label is a machine-readable declaration attached to a package before routing.
+The PRIME Shipping Label is a machine-readable declaration attached to a package before routing.
 
 It exists so the routing system does not need to rediscover the entire identity, type, provenance, handling requirements, and destination of every package from raw cargo alone.
 
@@ -173,9 +173,9 @@ The Verification Tag must not be overloaded with pre-routing declarations.
 
 ---
 
-## 5. Prime Shipping Label — Core Schema
+## 5. PRIME Shipping Label — Core Schema
 
-A first-generation Prime Shipping Label should support at least the following fields.
+A first-generation PRIME Shipping Label should support at least the following fields.
 
 ~~~text
 PRIME SHIPPING LABEL
