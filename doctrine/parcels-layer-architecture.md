@@ -1,6 +1,6 @@
 # PARCELS Layer Architecture
 
-**Status:** Canonical Doctrine
+**Status:** Candidate Canonical Doctrine
 **Placement:** Between Ontology and Process in the doctrine stack — `ONTOLOGY → PARCELS LAYER ARCHITECTURE → PRIME PROCESS`.
 **Purpose:** Define where a concern lives in the system, so that doctrine, defects, and design decisions can be located precisely instead of argued about globally.
 
@@ -210,7 +210,7 @@ Seven is a scaffold, not a sacred number. A layer that cannot state its distinct
 Agent-to-agent protocols fit *inside* PARCELS rather than competing with it.
 
 - A2A-style message and task primitives map primarily onto **L5 Exchange** (durable task identity) and **L6 Language** (declared schemas for artifacts and messages), with transport concerns at **L4 Carriage**.
-- PARCELS' largest additions beyond an A2A-style model are **L4 Carriage** (explicit delivery semantics) and **L1 Platform** (the substrate and its capability limits) — the two layers most often left implicit in protocol specifications and most often responsible for production defects.
+- PARCELS' largest additions beyond an A2A-style model are **L4 Carriage** (explicit delivery semantics) and **L1 Platform** (the substrate and its capability limits) — the two layers that protocol specifications often leave beneath their primary abstraction boundary.
 
 External protocol adoption is an implementation choice; layer ownership is doctrine. (See the index: *Doctrine vs. Implementation*.)
 
