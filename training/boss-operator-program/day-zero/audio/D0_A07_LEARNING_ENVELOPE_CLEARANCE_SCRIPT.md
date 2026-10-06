@@ -1,173 +1,71 @@
-# D0-A07 — Your Learning Envelope, Diagnostic, and Clearance
+# D0-A07 — Ready for Module 01
 
-**Status:** Candidate NotebookLM Source Script  
-**Target:** 10–14 minute audio overview  
-**Purpose:** Complete Day Zero by establishing learner state and the Module 01 entry decision.
+**Target:** 10–14 minute NotebookLM audio overview
 
-## Opening
+Day Zero is not supposed to make you an expert in the entire BOSS system.
 
-You now have the system map.
+It is supposed to give you the operating perspective needed to begin.
 
-You know what information logistics means at orientation depth.
+You should now be able to see ordinary information work differently.
 
-You have seen authority boundaries.
+A request is not automatically a complete package.
 
-You know PRIME.
+A capable destination is not automatically an authorized destination.
 
-And you know where the seven modules are headed.
+A missing handling requirement should not be guessed.
 
-The final Day Zero responsibility is to establish your learning route.
+Classification comes before handler selection.
 
-The governing rule is:
+Admission and PRIME inspection are different controls.
 
-**Instruction begins with alignment, not content.**
+Movement does not establish delivery.
 
-## The Learning Envelope
+And the logistics model is a structural way to reason about information movement—not a fictional world.
 
-A Learning Envelope is the bounded record that tells the program how instruction should be routed.
+The core sequence before movement is:
 
-It asks:
+prepare the package;
 
-What are you trying to become able to do?
+complete the declaration;
 
-Why does that outcome matter?
+inspect admission;
 
-What experience do you already have?
+classify the handling requirements;
 
-How much time is realistically available?
+decide ACCEPT, HOLD, or REFUSE.
 
-What constraints affect the route?
+Then, for admitted movement, PRIME applies:
 
-What tools can you actually access?
+> **PACKAGE → ROUTE → INSPECT → MOVE → ESTABLISH DELIVERY**
 
-What would successful completion look like?
+The two questions to remember are:
 
-These questions prevent the program from treating every learner as though they have the same destination and the same starting point.
+Admission Inspection:
 
-## Mission Before Curriculum
+> **May this package enter controlled movement?**
 
-Your mission governs the destination.
+PRIME INSPECT:
 
-The curriculum is the implementation.
+> **Are the conditions for this particular movement satisfied?**
 
-Two learners may complete the same seven modules for different reasons.
+And the authority rules remain:
 
-One may want to design governed AI workflows.
+> **CAPABILITY ≠ PERMISSION.**
 
-Another may need to supervise a production system.
+> **CAN PROCESS ≠ MAY RECEIVE.**
 
-Another may need to review and verify outputs.
+> **Cargo classification precedes handler selection.**
 
-The route can respect those differences without changing the underlying doctrine.
+> **Unknown handling requirements produce HOLD, not guessed routing.**
 
-## Declared State and Observed State
+> **Capability is downstream from admissibility.**
 
-The Learning Envelope records what you report.
+If those distinctions make sense, you have the conceptual foundation for Module 01.
 
-The diagnostic adds observable evidence.
+Module 01 begins with the first operational responsibility:
 
-These are not the same thing.
+Someone says, “I need to send this.”
 
-You may report strong experience in automation.
+Your job is to determine what “this” actually is.
 
-The diagnostic may confirm it.
-
-Or it may show that your automation experience did not include bounded authority, evidence states, or handling controls.
-
-That is useful information.
-
-It tells the system what to teach.
-
-## The Initial Diagnostic
-
-The diagnostic is not designed to embarrass you or rank you.
-
-It checks a small set of starting behaviors.
-
-Can you distinguish capability from permission?
-
-Do you know what to do when handling requirements are unknown?
-
-Can you put PRIME in sequence?
-
-Can you separate training completion from qualification?
-
-When a request is vague, do you invent missing requirements or identify the need for alignment?
-
-These observations create the initial learner state.
-
-## No Single Ability Score
-
-BOSS does not collapse every observation into one vague number and pretend that number explains the learner.
-
-The diagnostic records:
-
-**DECLARED_STATE.**
-
-**OBSERVED_STATE.**
-
-**GAPS.**
-
-**STARTING_ROUTE.**
-
-**REMEDIATION_REQUIRED.**
-
-That is more useful than a generic label such as beginner or expert.
-
-## Clearance
-
-Day Zero ends with an explicit decision.
-
-There are three possible states.
-
-**CLEARED FOR MODULE 01.**
-
-The minimum orientation requirements are established.
-
-**CLEARED WITH REMEDIATION.**
-
-You may proceed, but a bounded gap should be corrected.
-
-Or:
-
-**HOLD — ORIENTATION REQUIREMENT UNRESOLVED.**
-
-Something required for movement into Module 01 is still missing.
-
-The system does not guess.
-
-## What Clearance Does Not Mean
-
-Orientation clearance means you may begin formal training.
-
-It does not establish operator qualification.
-
-It does not certify you.
-
-It does not credential you.
-
-It does not authorize you to handle every package.
-
-It establishes the next valid instructional movement.
-
-## Closing
-
-Day Zero began with a simple question:
-
-Where are you?
-
-It ends with a better answer.
-
-You know the system you are entering.
-
-You know the basic rules that govern movement.
-
-You know the training path ahead.
-
-And the program has enough evidence to route your next instructional package.
-
-Your next destination is:
-
-**Module 01 — Package Operations.**
-
-That is where orientation ends and formal operator training begins.
+That is where Package Operations begins.
