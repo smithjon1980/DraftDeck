@@ -13,14 +13,14 @@ DraftDeck is a production engine that transforms visual references into layered,
 | `renderer/` | Scene schema and HTML/CSS build pipeline (roadmap; builder currently lives in the skill) |
 | `design-system/` | Tokens, frames, hatches, icons, components (roadmap) |
 | `adapters/` | Import targets, each with its own verification status |
-| `examples/ai-pilot/` | Flagship reference implementation: 15-slide layered CAD deck |
+| `examples/logistics-framework/` | Flagship reference implementation: 15-slide layered CAD deck |
 | `archive/` | Original archive notes, manifest, and the source reference PDF |
 
 ## Adapter verification status
 
 | Adapter | Status | Evidence |
 |---|---|---|
-| Canva | **Verified** (2026-10-05) | 15 pages at exactly 1920×1080, 707 richtext records, 24 image records; all pages visually reviewed. See `examples/ai-pilot/verification/`. |
+| Canva | **Verified** (2026-10-05) | 15 pages at exactly 1920×1080, 707 richtext records, 24 image records; all pages visually reviewed. See `examples/logistics-framework/verification/`. |
 | Adobe Express | Unverified | Do not claim compatibility until independently tested. |
 | Figma | Unverified | No import test completed. |
 | Floot | Exploratory | No import test completed. |
@@ -30,7 +30,7 @@ DraftDeck is a production engine that transforms visual references into layered,
 Rebuild the flagship deck offline (Python standard library only):
 
 ```sh
-python3 examples/ai-pilot/source/Build_Deck.py
+python3 examples/logistics-framework/source/Build_Deck.py
 ```
 
 See `doctrine/production-contract.md` before editing anything: generated output is overwritten on rebuild, so authored changes belong in the source, never in the generated HTML.
