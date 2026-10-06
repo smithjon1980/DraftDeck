@@ -1,57 +1,68 @@
 # Day Zero Visual & Infographic Brief
 
-**Status:** Candidate Production Brief  
-**Purpose:** Define orientation visuals without consuming the seven module infographic families.
+**Status:** Candidate Production Brief
 
-## Required Day Zero visuals
+## Visual objective
 
-### V01 — You Are Here: Program Journey
+Make information movement visible without building a fictional shipping world.
+
+The visual system may borrow structural cues from a generic parcel-carrier counter, label, sort flow, and proof-of-delivery process. Every composition must make clear that these are correspondences for reasoning about real information work.
+
+## Required visuals
+
+### V01 — Information Already Moves
+Person / file / model / app / reviewer connections showing ordinary information movement.
+
+Caption:
+**BOSS gives us a logistics model for seeing those movements clearly.**
+
+### V02 — Structural Correspondence, Not Literal Identity
+Two-column comparison:
+parcel-shipping structure ↔ information-work structure.
+Include an explicit boundary note:
+**The correspondence is structural, not literal.**
+
+### V03 — The Shipping Counter
 ```text
-PRE-ENTRY
-→ DAY ZERO
-→ MODULES 01–07
-→ FINAL INTEGRATED SIMULATION
-→ QUALIFICATION
-→ CERTIFICATION
-→ CREDENTIAL
-→ CONTEXT-SPECIFIC AUTHORIZATION
+REQUEST
+→ PACKAGE PREPARATION
+→ SHIPPING LABEL
+→ ADMISSION INSPECTION
+→ ACCEPT / HOLD / REFUSE
 ```
 
-### V02 — BOSS System Hierarchy
-BOSS → Logistics Framework → PARCELS → PRIME → Specializations → Products.
+### V04 — What the Label Makes Explicit
+What is being sent / destination / required inputs / handling / permissions / acceptance conditions.
 
-### V03 — Information Logistics Map
-Sender → Package → Route → Handler → Verification → Receiver / Release.
+### V05 — Classification Before Capability
+```text
+CLASSIFY
+→ DETERMINE ELIGIBILITY
+→ SELECT HANDLER
+```
+with:
+**Capability is downstream from admissibility.**
 
-### V04 — PRIME Orientation
-Package → Route → Inspect → Move → Establish Delivery.
+### V06 — Two Inspections
+Side-by-side:
+- Admission Inspection — May this package enter controlled movement?
+- PRIME INSPECT — Are the conditions for this particular movement satisfied?
 
-### V05 — Authority Distinctions
-CAPABILITY ≠ PERMISSION  
-CAN PROCESS ≠ MAY RECEIVE
+### V07 — PRIME Behind the Counter
+PACKAGE → ROUTE → INSPECT → MOVE → ESTABLISH DELIVERY
 
-### V06 — Handling-State Introduction
-STANDARD / SENSITIVE / RESTRICTED / QUARANTINED / PROHIBITED.
+### V08 — Seven-Module Operational Progression
+Counter → routing → sort facility → custody transfer → transport selection → high-control handling → network orchestration.
 
-### V07 — Training-State Distinctions
-TRAINED ≠ QUALIFIED ≠ CERTIFIED ≠ CREDENTIALED ≠ AUTHORIZED.
+## Prohibited visual treatments
 
-### V08 — Learning Envelope
-MISSION / CURRENT STATE / CONSTRAINTS / ATTENTION / SUCCESS CONDITION / ROUTE.
+- learner depicted as package/cargo;
+- BOSS employees in fictional carrier uniforms;
+- “welcome to the network” world-building;
+- consumer-shopping/cart/doorstep fulfillment as primary anchor;
+- visual implication that AI models are literally trucks or warehouses;
+- backstage learner-state mechanics rendered as parcel flow.
 
-## Format requirements
+## Required audit
 
-Produce orientation concepts in:
-- landscape for deck;
-- portrait for handbook/reference;
-- square only where a compact recall asset is useful.
-
-Do not create a decorative visual where a diagram is required.
-
-Every visual must distinguish:
-- established rule;
-- example;
-- learner state;
-- unresolved state.
-
-Day Zero visuals are orientation assets and do not count toward the locked 21 primary module infographics.
+Every generated visual receives a **METAPHOR LITERALIZATION** check during BOSS REFINEMENT.
