@@ -40,7 +40,7 @@ class Slide:
   scene=dict(title=self.title.replace('\n',' '),width=1920,height=1080,background='white',layers=[dict(type='image',path='artwork/'+name,x=0,y=0,width=1920,height=1080,alt='CAD drafting background and precision geometry')]+self.layers)
   scenes.append(scene)
 # 01
-s=Slide(1,'2026 executive briefing - rev 4.0','AI Pilot Architecture & Interface QA:\nThe Canonical 2026 Developer Gate','QA IMPLEMENTATION GATE')
+s=Slide(1,'2026 executive briefing - rev 4.0','Logistics Framework Architecture & Interface QA:\nThe Canonical 2026 Developer Gate','QA IMPLEMENTATION GATE')
 s.art(5,220,230,1480,680);s.text('INTERFACE / IMPLEMENTATION REVIEW',100,294,23,'Courier New')
 s.text('APPROVED FOR INGESTION',98,817,36,'Arial','bold',ORANGE)
 s.footer('Approval wording reproduced from the reference.', 'Candidate rebuild: approval is not newly conferred.');s.done()
@@ -49,12 +49,18 @@ s=Slide(2,'root doctrine - logistics architecture','Stop Managing Magic and\nSta
 s.copy(['Data = cargo','Information payloads','Agents = couriers','Proxy handlers','Models = transport','Freight services'],90,340,30,60);s.art(2)
 s.footer('Data is cargo. Agents are couriers. Models are freight.','Verification is proof of delivery.');s.done()
 # 03
-s=Slide(3,'operational command - layer 1','The FAA Client Tower Secures\nNon-Delegable Human Intent','LAYER 1 COMMAND')
-s.copy(['The Client owns intent, objective,','and liability. The Server only','calculates proximity and','executes vectors.','','Liability cannot be delegated to a','dormant mathematical system.'],90,350,28,48);s.art(3)
-s.text('WORK FLOWS DOWN',800,850,23,'Courier New');s.text('AUTHORITY / VERIFICATION FLOWS UP',1120,850,22,'Courier New');s.done()
+s=Slide(3,'operational command - layer 1','The Human Dispatch Authority Secures\nNon-Delegable Shipping Intent','LAYER 1 COMMAND')
+s.copy(['Humans are senders and receivers.','They own intent, destination,','acceptance criteria, and release.','','Agents may route cargo packages;','models may process freight;','authority remains human.'],90,350,28,48)
+# Native logistics control geometry: receiving dock, routing hub, outbound dock.
+s.rect(820,330,240,300,2);s.text('RECEIVING',855,360,24,'Courier New','bold');s.text('DOCK',895,397,24,'Courier New','bold')
+s.rect(1185,300,300,360,2);s.text('ROUTING HUB',1230,336,24,'Courier New','bold')
+for yy in [395,455,515,575]:s.line(1215,yy,1455,yy,1)
+s.rect(1600,330,220,300,2);s.text('OUTBOUND',1632,360,24,'Courier New','bold');s.text('DOCK',1670,397,24,'Courier New','bold')
+s.arrow(1065,480,1170,480,ORANGE);s.arrow(1495,480,1585,480,ORANGE)
+s.text('CARGO ROUTES FORWARD',800,850,23,'Courier New');s.text('AUTHORITY / VERIFICATION RETURNS TO HUMAN',1130,850,21,'Courier New');s.done()
 # 04 precise ledger
 s=Slide(4,'claim control - epistemic layer','Classify, Sever, Account,\nRoute, and Adjudicate','EPISTEMIC GEOGRAPHY')
-for i,(a,z) in enumerate([('LOCATION','Triage Gate'),('ACCOUNTING','Claim Ledger'),('ADJUDICATION','Ground Truth Fixture'),('AUTHORITY','Client Tower')]):
+for i,(a,z) in enumerate([('LOCATION','Triage Gate'),('ACCOUNTING','Claim Ledger'),('ADJUDICATION','Ground Truth Fixture'),('AUTHORITY','Dispatch Authority')]):
  x=95+i*445;s.rect(x,310,380,98,2);s.text(a,x+20,330,28,'Courier New','bold');s.text(z,x+20,371,22)
  if i<3:s.arrow(x+383,359,x+436,359)
 s.text('GENERATED OUTPUT',95,469,25,'Courier New','bold');s.rect(95,510,280,320,1.5)
@@ -68,11 +74,18 @@ s.art(5,390,265,1140,585)
 s.copy(['D — DIRECT: objective / format','A — ANCHOR: pinned source','T — THROTTLE: time / cost limits','A — AUDIT: append-only trace'],95,300,24,42)
 s.footer('Lock model version and source before execution.','Record the run; constrain time, cost, and compute cadence.');s.done()
 # 06
-s=Slide(6,'baggage claim protocol','The Canonical 6-Field Verification Tag\nSchema Serves as Proof of Delivery','6-FIELD SCHEMA')
-fields=[('RUN_ID','Unique run identifier'),('AIRSPACE_CLASS','Security / governance handling class'),('QUALIFICATION_ID','Qualified model / environment'),('FLIGHT_PLAN_ID','Approved mission boundaries'),('STATUS','HELD / VERIFIED / RELEASED / BLOCKED'),('ELAPSED_TIME','Execution duration')]
+s=Slide(6,'proof-of-delivery protocol','The Canonical 6-Field Verification Tag\nSchema Serves as Proof of Delivery','6-FIELD SCHEMA')
+fields=[('RUN_ID','Unique shipment/run identifier'),('CARGO_CLASS','Security / governance handling class'),('QUALIFICATION_ID','Qualified model / environment'),('ROUTE_MANIFEST_ID','Approved route and handling boundaries'),('STATUS','HELD / VERIFIED / RELEASED / BLOCKED'),('ELAPSED_TIME','Execution duration')]
 for i,(a,z) in enumerate(fields):
  y=325+i*80;s.line(90,y+70,840,y+70,.8);s.text(a,90,y,25,'Courier New','bold');s.text(z,90,y+34,22)
-s.art(6,890,270,880,600);s.footer('UI state is not Verification Tag status.','Fluent delivery is not verified delivery. Check the tag.');s.done()
+# Native parcel + waybill / proof-of-delivery tag.
+s.rect(1010,325,650,430,2);s.text('DATA PACKAGE',1045,360,29,'Courier New','bold')
+s.line(1010,415,1660,415,1);s.line(1335,415,1335,755,1)
+for y in [470,525,580,635,690]:s.line(1045,y,1295,y,.8)
+s.rect(1390,455,210,230,1.5);s.text('POD TAG',1430,485,23,'Courier New','bold')
+for y in [535,575,615,655]:s.line(1420,y,1570,y,.8)
+s.circle(1495,720,16,2,ORANGE);s.line(1495,704,1495,685,2,ORANGE)
+s.footer('UI state is not Verification Tag status.','Fluent delivery is not verified delivery. Check the package tag.');s.done()
 #07
 s=Slide(7,'UI/UX doctrine - system invariant','Interface Rendering Is an Operational\nControl Surface, Not a Cosmetic Overlay','UI/UX DOCTRINE')
 steps=[('External','Primitive'),('Grammar','Normalization'),('Canonical','Glyph'),('Compound','Component'),('Operational','State'),('Rendered','Interface')]
@@ -84,9 +97,9 @@ s.copy(['Visual ambiguity masks split-signal errors.','Uncontrolled inheritance 
 #08
 s=Slide(8,'semantic sourcing','External Libraries Supply\nSemantics, Not Native Styling','SEMANTIC SOURCING')
 s.copy(['LUCIDE','Technical UI, workflow, routing,','databases, tools.','','MATERIAL SYMBOLS OUTLINED','Operational status and control panels.','','PHOSPHOR ICONS','Specialized logistics, transport, roles.'],90,315,25,45);s.art(8,850,280,900,580)
-s.footer('Select by meaning. External libraries are semantic search tiers','feeding one unified AI Pilot visual grammar.');s.done()
+s.footer('Select by meaning. External libraries are semantic search tiers','feeding one unified Logistics Framework visual grammar.');s.done()
 #09
-s=Slide(9,'canonical glyph reconstruction','Normalize by Geometry Using\nthe Canonical AI Pilot Glyph','GLYPH RECONSTRUCTION')
+s=Slide(9,'canonical glyph reconstruction','Normalize by Geometry Using\nthe Canonical Logistics Framework Glyph','GLYPH RECONSTRUCTION')
 def gear(cx,cy,r):
  pts=[]
  for i in range(64):
@@ -97,7 +110,7 @@ s.copy(['Linecap: butt','Linejoin: miter','Stroke: 1.5 / 2.0px','Fill: none','No
 s.footer('Never inherit a library’s native style blindly.','Maintain structural vector integrity like CAD drawings.');s.done()
 #10
 s=Slide(10,'controlled aesthetics - token registry','The Absolute Zero-Fill Palette\nand Structural Line Hierarchy','TOKEN REGISTRY')
-for i,(name,code) in enumerate([('Near-Black Ink','#1A1A1A'),('Pure White Ground','#FFFFFF'),('Parchment Ivory','#FAF0EA'),('Burnt Orange','#B34700')]):
+for i,(name,code) in enumerate([('Near-Black Ink','#1A1A1A'),('Pure White Ground','#FFFFFF'),('Burnt Orange','#B34700')]):
  x=95+i*250;s.rect(x,380,195,225,3,code if code!='#FFFFFF' else BLACK);s.text(name,x,637,21);s.text(code,x,672,23,'Courier New')
 s.text('STRUCTURAL STROKE HIERARCHY',1140,331,26,'Courier New','bold')
 for i,(w,a,z) in enumerate([(3,'1.0pt','Outer frames / major dividers'),(1.5,'0.5pt','Controls / connector housings'),(.75,'0.25pt','Grid / hatch / detail lines')]):
@@ -120,9 +133,20 @@ for i,a in enumerate(['DEFAULT','ROUTED','HELD','BLOCKED','VERIFIED']):
 s.footer('Hatching communicates state without relying exclusively on color.','Visual texture preserves situational awareness.');s.done()
 #12
 s=Slide(12,'layer 0 governance - custom exceptions','Authorized Project-Specific\nNative Component Geometry','CUSTOM EXCEPTIONS')
-s.art(12,115,265,1690,590)
-for a,x in [('CLIENT TOWER',105),('VERIFICATION TAG',550),('D.A.T.A. CONNECTOR',990),('CLAIM COMPARATOR',1430)]:s.text(a,x,847,23,'Courier New','bold')
-s.footer('Layer 0 governs the Client Tower. Layer 0 is not the Client Tower.','Register custom native components; do not improvise exceptions.');s.done()
+# Four native logistics/governance specimens.
+xs=[115,545,975,1405]
+labels=['DISPATCH AUTHORITY','VERIFICATION TAG','D.A.T.A. CONNECTOR','CLAIM COMPARATOR']
+for x,label in zip(xs,labels):
+ s.rect(x,330,330,380,2);s.text(label,x+20,735,21,'Courier New','bold')
+# Dispatch authority: shipping/receiving desk + route lanes.
+s.rect(170,405,220,120,1.5);s.text('HUMAN',235,435,23,'Courier New','bold');s.text('RELEASE',220,474,23,'Courier New','bold');s.line(205,570,355,570,2,ORANGE)
+# Verification tag.
+s.rect(610,390,190,250,1.5);s.circle(705,425,14,1.5);s.line(640,480,770,480,.8);s.line(640,525,770,525,.8);s.line(640,570,770,570,.8)
+# D.A.T.A. connector.
+s.circle(1135,505,105,2);s.circle(1135,505,48,1.5);s.line(1030,505,980,505,2,ORANGE);s.line(1240,505,1290,505,2,ORANGE)
+# Comparator.
+s.rect(1470,400,200,105,1.5);s.rect(1470,555,200,105,1.5);s.line(1570,505,1570,555,2);s.text('A',1510,430,25,'Courier New','bold');s.text('B',1510,585,25,'Courier New','bold')
+s.footer('Layer 0 governs dispatch authority; it is not the human authority itself.','Register custom native components; do not improvise exceptions.');s.done()
 #13 reuse the bundled validated CAD scene
 cad=json.loads((R/'Slide13_Seed.json').read_text())
 scenes.append(cad)
@@ -143,5 +167,5 @@ assert len(scenes)==15
 sections=[]
 for i,scene in enumerate(scenes):
  h=b.build(scene,DECK);start=h.index('<section');end=h.index('</section>')+len('</section>');sections.append(h[start:end]);(OUT/f'Slide-{i+1:02d}.html').write_text(h)
-(OUT/'AI_Pilot_15_Slides_Layered.html').write_text('<!doctype html><html><head><meta charset="utf-8"><title>AI Pilot - 15 Layered CAD Slides</title><style>html,body{margin:0;padding:0;background:white}*{box-sizing:border-box}section{page-break-after:always}</style></head><body>'+''.join(sections)+'</body></html>')
+(OUT/'Logistics_Framework_15_Slides_Layered.html').write_text('<!doctype html><html><head><meta charset="utf-8"><title>Logistics Framework - 15 Layered CAD Slides</title><style>html,body{margin:0;padding:0;background:white}*{box-sizing:border-box}section{page-break-after:always}</style></head><body>'+''.join(sections)+'</body></html>')
 print('15 pages;',sum(sum(l['type']=='text' for l in s['layers']) for s in scenes),'live text elements')
