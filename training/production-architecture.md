@@ -43,6 +43,16 @@ FINAL RELEASE
 
 ---
 
+## Two-Plane Architecture (Pointer)
+
+The learner-facing operational model and the instructional machinery are governed as two separate planes by `training/instructional-architecture.md`:
+
+> **Instructional design governs how BOSS is taught. It is not the subject being taught.**
+
+All module source packages, NotebookLM briefs, and generated media in this architecture are bound by that document's metaphor discipline, the shipping-counter frontstage anchor, and the Admission Inspection / PRIME INSPECT distinction. During BOSS REFINEMENT, metaphor literalization is a named audit failure mode alongside doctrine, terminology, and scope audits.
+
+---
+
 ## 1. Program-Wide Controlled Files
 
 The FEMA-inspired instructional control documents. These are **controlled source material — not NotebookLM outputs**:
