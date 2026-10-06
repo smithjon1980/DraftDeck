@@ -9,7 +9,7 @@ DraftDeck is a production engine that transforms visual references into layered,
 | Path | Role |
 |---|---|
 | `skills/draftdeck/` | Operating instructions for the engine (agent-facing skill) |
-| `doctrine/` | Production contract, reference-render protocol, composition standard, logistics framework, release QA |
+| `doctrine/` | Production contract, reference-render protocol, composition standard, Logistics Framework, Prime Process, release QA |
 | `renderer/` | Scene schema and HTML/CSS build pipeline (roadmap; builder currently lives in the skill) |
 | `design-system/` | Tokens, frames, hatches, icons, components (roadmap) |
 | `adapters/` | Import targets, each with its own verification status |
@@ -18,7 +18,7 @@ DraftDeck is a production engine that transforms visual references into layered,
 
 ## Flagship doctrine
 
-The flagship implementation uses a logistics model:
+The flagship implementation uses a logistics model governed by `doctrine/logistics-framework.md` and the operational spine in `doctrine/prime-process.md`:
 
 > **Data is cargo. Humans are senders and receivers. Agents are couriers. Models are freight. Verification is proof of delivery.**
 
