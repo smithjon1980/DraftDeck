@@ -1,7 +1,9 @@
 # Archive
 
-Historical records from the original Canva-pipeline archive (2026-10-05 import).
+Historical evidence retained after the Logistics Framework became canonical.
 
-- `ARCHIVE_NOTES.md` — the original archive notes, preserved as written. Paths in it refer to the pre-restructure layout (`canva-layered-html-slides/`, `experiment/`, `reference/`); see the repository README for the current layout.
-- `Archive_Manifest.json` — SHA-256 manifest of the original archive files, with original paths.
-- `reference/` — the original retired aviation-era reference package was removed when the logistics framework became canonical.
+- `ARCHIVE_NOTES.md` — provenance and migration notes.
+- The retired aviation-era binary reference package was intentionally removed rather than carried into the canonical repository.
+- Historical verification records that remain useful are stored with the flagship implementation under `examples/logistics-framework/verification/`.
+
+The archive is evidence, not production authority. Current doctrine and source live elsewhere in the repository.
