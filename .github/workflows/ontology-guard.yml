@@ -1,0 +1,43 @@
+name: ontology-guard
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Repository invariant: the Logistics Framework ontology is canonical.
+      # Predecessor aviation-era material must not re-enter tracked source,
+      # generated output, or user-facing documentation.
+      - name: Reject deprecated predecessor ontology
+        run: |
+          set -euo pipefail
+
+          # Filename gate: no aviation-era names in tracked paths.
+          if git ls-files | grep -Eiq 'ai[-_]?pilot|(^|[/_.-])pilot([/_.-]|$)|flight|airspace'; then
+            echo "::error::Deprecated predecessor terminology in tracked filenames:"
+            git ls-files | grep -Ei 'ai[-_]?pilot|(^|[/_.-])pilot([/_.-]|$)|flight|airspace'
+            exit 1
+          fi
+
+          # Content gate. Single tokens use word boundaries so base64 image
+          # payloads in generated HTML cannot false-positive.
+          # Excluded meta files, which name the ban rather than violate it:
+          #   .github/                         (this guard contains the pattern)
+          #   doctrine/logistics-framework.md  (defines the prose prohibition list)
+          PAT='AI[ _-]?Pilot|\bFAA\b|\bAIRSPACE_CLASS\b|\bFLIGHT_PLAN_ID\b|Client Tower|flight-manual|air traffic|\bcockpit\b|\brunway\b|\baircraft\b'
+          if git grep -n -I -Ei "$PAT" -- . ':(exclude).github' ':(exclude)doctrine/logistics-framework.md'; then
+            echo "::error::Deprecated aviation-era terminology in tracked text (see matches above)."
+            exit 1
+          fi
+
+          echo "Ontology guard passed: Logistics Framework canonical, no predecessor material tracked."
