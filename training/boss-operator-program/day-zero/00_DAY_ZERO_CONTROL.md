@@ -2,77 +2,101 @@
 
 **Status:** Candidate Controlled Training Material  
 **Program:** BOSS Operator Program  
-**Function:** Day Zero curriculum control  
-**Authority boundary:** Doctrine > POI > Day Zero control > Day Zero artifacts.
+**Function:** Day Zero orientation and calibration control  
+**Authority:** Doctrine > POI > Instructional Architecture > Day Zero Control > Day Zero learner-facing artifacts.
 
-## 1. Purpose
+## Purpose
 
-Day Zero converts an accepted entrant into a learner with an explicit starting state, orientation baseline, learning route, and clearance decision.
+Day Zero prepares the learner to understand the BOSS information-logistics model before formal Module 01 training begins.
 
-It does not qualify the learner to operate independently.
+Day Zero must preserve the two-plane architecture:
 
-> **ACCEPTED ≠ CLEARED TO TRAIN ≠ QUALIFIED ≠ AUTHORIZED.**
+- **Instructional Control Plane — backstage.** POI, Learning Envelope, diagnostics, learner state, assessment, remediation, and qualification govern how instruction is designed.
+- **Operational Teaching Model — frontstage.** Sender, request, package, shipping label, admission inspection, classification, route, facility, transfer, transport, high-control handling, orchestration, proof of delivery, and release are what the learner is taught.
 
-## 2. Entry condition
+> **Instructional design governs how BOSS is taught. It is not the subject being taught.**
 
-Day Zero begins only after the pre-entry chain has completed:
+## Canonical learner-facing frame
 
-```text
-OPPORTUNITY
-→ APPLICATION
-→ SCREENING
-→ SELECTION
-→ OFFER
-→ ACCEPTANCE
-→ PRE-BOARDING
-→ DAY ZERO
-```
+> Every day you already move information between people, systems, models, files, and applications. Most failures happen because we pay attention to the work being performed and not enough attention to what was actually sent, where it was allowed to go, what it needed to arrive with, and how we know it arrived correctly. BOSS gives us a logistics model for seeing those movements clearly.
 
-The human is never treated as cargo. Records about the learner are governed information objects.
+## Metaphor discipline
 
-## 3. Day Zero terminal objective
+The logistics model is structural correspondence, not a fictional setting.
 
-At the conclusion of Day Zero, the learner can accurately describe the BOSS information-logistics model, identify the limits of learner authority, recognize when HOLD is the correct state, explain the seven-module training path, and complete a Learning Envelope and baseline diagnostic sufficient to assign the initial instructional route.
-
-## 4. Day Zero enabling objectives
-
-The learner can:
-
-1. name BOSS and distinguish system, framework, architecture, protocol, and product;
-2. explain the core logistics ontology at orientation depth;
-3. distinguish package, route, handler, verification, and release;
-4. explain CAPABILITY ≠ PERMISSION;
-5. recognize that unknown handling requirements produce HOLD, not guessed routing;
-6. recite PRIME in sequence;
-7. explain why delivery must be established rather than assumed;
-8. distinguish training completion from qualification, certification, credentialing, and authorization;
-9. provide learner-state inputs through the Learning Envelope;
-10. complete the initial diagnostic;
-11. satisfy orientation-clearance criteria.
-
-## 5. Day Zero artifact family
+Prohibited:
+- learner as cargo, package, freight, courier, or shipment;
+- learner "entering the network";
+- fictional BOSS Shipping Company narration;
+- learner-state mechanics narrated as logistics operations;
+- consumer-fulfillment framing as the primary anchor.
 
 Required:
-- orientation source;
-- instructor guide;
-- student handbook;
-- Learning Envelope;
-- initial diagnostic;
-- orientation clearance;
-- workbook;
-- visual/infographic brief;
-- orientation deck brief;
-- learner training record;
-- release ledger;
-- NotebookLM injection brief.
+- real information movement remains the subject;
+- generic parcel-carrier counter operations may be used as an explanatory analogy;
+- the learner remains a person observing and governing information work;
+- logistics vocabulary names structures of reasoning, not literal identities.
 
-Optional media may be produced, but Day Zero does not consume one of the seven Deep-Dive Podcasts or seven primary module decks.
+## Frontstage anchor
 
-## 6. Release rule
+The first teaching image is a familiar shipping counter:
 
-Day Zero is complete only when:
-- learner state is recorded;
-- orientation clearance is established;
-- unresolved items are explicit;
-- initial route is assigned;
-- no artifact conflicts with doctrine or the POI.
+```text
+NEED / REQUEST
+↓
+PACKAGE PREPARATION
+↓
+SHIPPING LABEL
+↓
+ADMISSION INSPECTION
+↓
+ACCEPT / HOLD / REFUSE
+↓
+CLASSIFY
+↓
+ROUTE
+↓
+CONTROLLED MOVEMENT
+↓
+VERIFY
+↓
+RELEASE
+```
+
+The package in the model is information work.
+
+## Two inspections
+
+**Admission Inspection:** *May this package enter controlled movement?*
+
+**PRIME INSPECT:** *Are the conditions for this particular movement satisfied?*
+
+PRIME remains unchanged:
+
+> **PACKAGE → ROUTE → INSPECT → MOVE → ESTABLISH DELIVERY**
+
+Admission is the gate before governed movement.
+
+## Day Zero terminal objective
+
+At the conclusion of Day Zero, the learner can explain how BOSS uses logistics as a reasoning model for information movement; distinguish package admission from operational inspection; explain why classification precedes handler selection; state PRIME in sequence; recognize HOLD as a valid control state; and distinguish training from qualification and authorization.
+
+## Day Zero orientation blocks
+
+1. The work you already do: information moves.
+2. BOSS as a model for seeing movement clearly.
+3. The shipping counter: package declaration before movement.
+4. Admission, classification, permission, and HOLD.
+5. PRIME behind the counter.
+6. The seven-module operating progression.
+7. Readiness for Module 01.
+
+## Release rule
+
+No Day Zero learner-facing artifact may ship if it:
+- literalizes the logistics metaphor;
+- exposes backstage instructional mechanics as the subject;
+- puts capability before admissibility;
+- collapses Admission Inspection into PRIME INSPECT;
+- moves classification after handler selection;
+- changes PRIME.
