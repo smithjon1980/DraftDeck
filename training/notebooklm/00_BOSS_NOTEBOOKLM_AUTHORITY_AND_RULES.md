@@ -30,7 +30,7 @@ When sources disagree, resolve in this order:
 - **PRIME** is uppercase whenever it refers to the named protocol: Package → Route → Inspect → Move → Establish Delivery.
 - **PARCELS** is the seven-layer structural architecture, not the system and not the protocol.
 - **DraftDeck** is a product (the visual-production engine), never a synonym for BOSS.
-- **Prohibited vocabulary:** aircraft, cockpit, runway, airspace, aviation-control imagery, travel-through-meaning-space metaphors, and any predecessor product name tied to that theme. Never use these in generated artifacts.
+- **Prohibited vocabulary:** no aviation-domain terms, no aviation-control imagery, no travel-through-meaning-space metaphors, and no predecessor product names tied to that theme. The full banned-term list is enforced by the repository ontology guard; every term on that list is prohibited in generated artifacts.
 
 ## 4. Canonical Identity Lines (use verbatim where identity is stated)
 

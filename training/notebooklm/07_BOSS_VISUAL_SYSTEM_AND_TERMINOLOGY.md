@@ -44,7 +44,7 @@
 
 ## 3. Prohibited Vocabulary (Hard Rule)
 
-Never in any artifact: aircraft, cockpit, runway, airspace, aviation-control imagery, travel-through-meaning-space metaphors, predecessor product names tied to that theme.
+Never use aviation-domain terminology, aviation-control imagery, or travel-through-meaning-space metaphors in any artifact, and never use predecessor product names tied to that theme. The full banned-term list is enforced by the repository ontology guard.
 
 ## 4. Visual Identity (from doctrine/composition-standard.md)
 
