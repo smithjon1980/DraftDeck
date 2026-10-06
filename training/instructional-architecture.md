@@ -95,7 +95,7 @@ The logistics model is a **structural correspondence**, not a fictional setting.
 ### Required (structural correspondence)
 
 - The learner is a person who already moves information every day — between people, systems, models, files, and applications.
-- BOSS provides a logistics model for **seeing those movements clearly**: what was actually sent, where it was allowed to go, what it needed to arrive with, and how arrival is established.
+- BOSS provides a logistics model for **seeing those movements clearly**: what was actually sent, where it was allowed to go, what it needed to arrive with, and how we know it arrived correctly.
 - Logistics vocabulary names **structures of reasoning about information work**. Correspondences may be drawn to familiar parcel-shipping experience because the structure genuinely matches — not because a fictional world is being built.
 
 ### Canonical Day Zero framing
@@ -134,7 +134,7 @@ SHIPPING LABEL
    Who/what is sending?
    What is being sent?
    Where is it going?
-   What handling it requires?
+   What handling does it require?
    What conditions matter?
    What establishes successful receipt?
 
