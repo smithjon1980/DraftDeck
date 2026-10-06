@@ -1,0 +1,54 @@
+name: logistics-framework-migration
+on:
+  push:
+    branches: [refactor/logistics-framework]
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply canonical logistics migration
+        run: |
+          set -euo pipefail
+
+          if [ -d examples/ai-pilot ]; then
+            git mv examples/ai-pilot examples/logistics-framework
+          fi
+
+          rm -rf examples/logistics-framework/output
+          mkdir -p examples/logistics-framework/output
+
+          rm -rf examples/logistics-framework/previews
+          rm -f examples/logistics-framework/artwork/Contact-*.png
+          rm -f examples/logistics-framework/artwork/story-03.png examples/logistics-framework/artwork/story-03.webp
+          rm -f examples/logistics-framework/artwork/story-06.png examples/logistics-framework/artwork/story-06.webp
+          rm -f examples/logistics-framework/artwork/story-12.png examples/logistics-framework/artwork/story-12.webp
+
+          rm -rf archive/reference
+          rm -f archive/Archive_Manifest.json
+
+          python3 examples/logistics-framework/source/Build_Deck.py
+
+          echo "Checking for deprecated names and aviation-era terminology..."
+          if git ls-files | grep -Eqi 'ai[-_ ]?pilot'; then
+            echo "Deprecated path/name remains:"
+            git ls-files | grep -Ei 'ai[-_ ]?pilot'
+            exit 1
+          fi
+
+          if git grep -n -I -Ei 'AI[ _-]?Pilot|FAA|airspace|flight[_ -]?plan|baggage claim|air traffic|Client Tower|flight-manual' -- .; then
+            echo "Deprecated aviation-era content remains."
+            exit 1
+          fi
+
+          rm .github/workflows/logistics-framework-migration.yml
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: make logistics framework canonical"
+          git push
