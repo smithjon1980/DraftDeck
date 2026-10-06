@@ -1,26 +1,24 @@
-# DraftDeck Doctrine Index
+# BOSS Doctrine Index
 
 **Status:** Canonical Index
-**Purpose:** Provide a one-page map of DraftDeck's doctrine stack so a fresh human or agent can understand the order, authority, and relationship of the governing files.
+**Purpose:** Provide a one-page map of the BOSS doctrine stack so a fresh human or agent can understand the order, authority, ownership, and relationship of the governing files.
 
 ---
 
 ## 1. Doctrine Stack
 
-DraftDeck doctrine is intentionally layered.
+BOSS doctrine is intentionally layered.
 
 ```text
-PRODUCTION CONTRACT
+NAMING ARCHITECTURE
         ↓
-COMPOSITION STANDARD
-        ↓
-LOGISTICS FRAMEWORK
+BIOSCILLATE LOGISTICS FRAMEWORK
         ↓
 PARCELS LAYER ARCHITECTURE
         ↓
 BOUNDED AUTONOMY & EXECUTION ENVELOPES
         ↓
-PRIME PROCESS
+BIOSCILLATE PRIME PROTOCOL
         ↓
 PRIME ALIGNMENT, DECOMPOSITION & FEEDBACK
         ↓
@@ -28,11 +26,15 @@ ALIGNED INSTRUCTION & LEARNING ENVELOPES
         ↓
 PRIME SHIPPING LABEL & CLASSIFICATION
         ↓
-PRIME PROCESS ORCHESTRATION
+PRIME PROTOCOL ORCHESTRATION
         ↓
 PRIME HANDOFF & CONTEXT ROUTING
         ↓
 PRIME CONTROL PLANE REFERENCE ARCHITECTURE
+        ↓
+DRAFTDECK PRODUCTION CONTRACT
+        ↓
+DRAFTDECK COMPOSITION STANDARD
         ↓
 RELEASE QA
 ```
@@ -45,18 +47,19 @@ Each layer answers a different class of question.
 
 | Layer | File | Governing Question | Primary Role |
 |---|---|---|---|
-| Contract | `production-contract.md` | What is authoritative, what is generated, and what may be edited? | Defines source → compiler/renderer → generated output ownership. |
-| Composition | `composition-standard.md` | What visual grammar governs DraftDeck output? | Defines the pure-white drafting standard, typography, line hierarchy, accent discipline, and prohibited visual treatments. |
+| Naming | `naming-architecture.md` | What is the system, and what do framework, architecture, protocol, specialization, and product mean? | Establishes BOSS ownership, the Bioscillate naming hierarchy, PRIME typography, and DraftDeck's role as a productized production specialization. |
 | Ontology | `logistics-framework.md` | What conceptual model governs the system? | Establishes shipping-and-receiving logistics as canonical and defines the control spine: LOCATION → ACCOUNTING → ADJUDICATION → AUTHORITY. |
 | Structure (Canonical) | `parcels-layer-architecture.md` | Where does a concern, rule, or failure live in the system? | Defines the seven PARCELS layers (Platform, Attachment, Routing, Carriage, Exchange, Language, Service), canonical ownership by dominant failure mode, governance as a vertical plane, and the three-axis model: CONSTITUTION × PARCELS × PRIME. |
 | Delegation Limits | `bounded-autonomy-execution-envelope.md` | What limits govern delegation before unattended execution? | Defines bounded autonomy, the Execution Envelope, envelope-scoped permission, roles vs. handlers vs. providers, the parallelism gate, the consolidation boundary, and MERGE ≠ RELEASE. |
-| Process | `prime-process.md` | How does work move through the system? | Defines PRIME: Package → Route → Inspect → Move → Establish Delivery. |
+| Protocol | `prime-process.md` | How does bounded work move through the system? | Defines the Bioscillate PRIME Protocol: Package → Route → Inspect → Move → Establish Delivery. The existing filename is retained pending any dedicated path migration. |
 | Alignment / Decomposition / Feedback | `prime-alignment-decomposition-feedback.md` | What must be aligned, decomposed, and instrumented before and during execution? | Defines alignment before packaging, destination vs journey artifacts, dependency graphs, vertical slices, route instrumentation, feedback quality, review proportionality, and stale-context handling. |
 | Aligned Instruction / Learning Envelopes | `aligned-instruction-learning-envelope.md` | What limits govern instruction before teaching begins? | Specializes alignment doctrine into the instructional domain: defines the Learning Envelope, mission vs. curriculum vs. lesson, declared vs. observed learner state, the learning loop, Day Zero's constitutional responsibility, and CONTENT DELIVERED ≠ LEARNING ESTABLISHED. |
 | Shipping Label / Classification | `prime-shipping-label-classification.md` | What metadata must accompany a package before routing, and how may classifiers influence routing policy without acquiring authority? | Defines the Prime Shipping Label, declared/derived/classified fields, scan validation, declared-vs-observed comparison, route classes, classifier boundaries, handler capability mapping, label versioning, and separation from the Verification Tag. |
 | Orchestration | `prime-process-orchestration.md` | How does PRIME become an executable multi-step work system? | Defines bounded work packages, routing, inspection, orchestration, delivery verification, feedback, and reusable learning. |
 | Routing / Handoff | `prime-handoff-context-routing.md` | How should context and side-work move between handlers or sessions? | Defines task severance, Prime Handoff Packages, return handoffs, transit artifacts, evidence-producing detours, and context routing. |
 | Control Plane Reference Architecture | `prime-control-plane-reference-architecture.md` | How should Prime doctrine map into an operator-facing web application without surrendering domain authority to implementation tools? | Defines server-authoritative state, domain-first interfaces, replaceable adapters, typed server-rendered presentation, lightweight hypermedia interaction, PocketBase as a candidate adapter, and doctrine-to-code traceability. |
+| DraftDeck Product Contract | `production-contract.md` | What is authoritative, what is generated, and what may be edited in the DraftDeck product? | Defines source → compiler/renderer → generated output ownership for DraftDeck. |
+| DraftDeck Composition | `composition-standard.md` | What visual grammar governs DraftDeck output? | Defines the pure-white drafting standard, typography, line hierarchy, accent discipline, and prohibited visual treatments. |
 | Release | `release-qa.md` | What must be true before an artifact is considered releasable? | Defines release gates and verification expectations. |
 
 ---
@@ -65,19 +68,20 @@ Each layer answers a different class of question.
 
 A new contributor, agent, or adapter should read doctrine in this order:
 
-1. `production-contract.md`
-2. `composition-standard.md`
-3. `logistics-framework.md`
-4. `parcels-layer-architecture.md`
-5. `bounded-autonomy-execution-envelope.md`
-6. `prime-process.md`
-7. `prime-alignment-decomposition-feedback.md`
-8. `aligned-instruction-learning-envelope.md`
-9. `prime-shipping-label-classification.md`
-10. `prime-process-orchestration.md`
-11. `prime-handoff-context-routing.md`
-12. `prime-control-plane-reference-architecture.md`
-13. `release-qa.md`
+1. `naming-architecture.md`
+2. `logistics-framework.md`
+3. `parcels-layer-architecture.md`
+4. `bounded-autonomy-execution-envelope.md`
+5. `prime-process.md`
+6. `prime-alignment-decomposition-feedback.md`
+7. `aligned-instruction-learning-envelope.md`
+8. `prime-shipping-label-classification.md`
+9. `prime-process-orchestration.md`
+10. `prime-handoff-context-routing.md`
+11. `prime-control-plane-reference-architecture.md`
+12. `production-contract.md`
+13. `composition-standard.md`
+14. `release-qa.md`
 
 The order matters.
 
@@ -157,7 +161,17 @@ A build, test pass, commit, merge, or deployment may be necessary but is not aut
 
 ## 5. Canonical Statements
 
-The following statements summarize the active doctrine stack:
+The following statements summarize the active BOSS doctrine stack:
+
+> **BOSS — Bioscillate Operating System by Seven — is the governing system.**
+
+> **BOSS owns the doctrine. DraftDeck implements a production specialization of that doctrine.**
+
+> **The Bioscillate Logistics Framework is the governing conceptual model.**
+
+> **PARCELS is the seven-layer structural architecture.**
+
+> **The Bioscillate PRIME Protocol governs Package → Route → Inspect → Move → Establish Delivery.**
 
 > **GitHub is the canonical source of truth.**
 
@@ -327,7 +341,7 @@ If a training example introduces a new rule that deserves permanence, that rule 
 
 ## 9. Doctrine vs. External References
 
-DraftDeck may study external systems such as:
+BOSS may study external systems such as:
 
 - Amazon logistics;
 - ECC;
@@ -338,7 +352,7 @@ DraftDeck may study external systems such as:
 
 These sources may influence implementation patterns.
 
-They do not become DraftDeck's ontology by default.
+They do not become BOSS ontology by default.
 
 > **Study the mechanics. Preserve our doctrine.**
 
@@ -358,21 +372,22 @@ Doctrine growth must therefore remain compatible with the same invariant that pr
 
 ## 11. Fresh-Agent Boot Sequence
 
-A fresh agent entering DraftDeck should use this order:
+A fresh agent entering BOSS should use this order:
 
 ```text
 1. Read this index.
-2. Read production-contract.md.
+2. Read naming-architecture.md.
 3. Read logistics-framework.md.
 4. Read parcels-layer-architecture.md.
 5. Read bounded-autonomy-execution-envelope.md.
-6. Read prime-process.md.
+6. Read prime-process.md as the Bioscillate PRIME Protocol.
 7. Read the most relevant downstream doctrine for the task.
-8. Inspect the active repository state.
-9. Package the requested work.
-10. Route it.
-11. Inspect before movement.
-12. Establish delivery before declaring completion.
+8. For DraftDeck work, read production-contract.md and composition-standard.md.
+9. Inspect the active repository state.
+10. Package the requested work.
+11. Route it.
+12. Inspect before movement.
+13. Establish delivery before declaring completion.
 ```
 
 For visual-production work, also read `composition-standard.md` before implementation.
@@ -399,19 +414,16 @@ For release decisions, read `release-qa.md`.
 
 ## 12. Canonical Summary
 
-DraftDeck doctrine is not a pile of independent Markdown files.
+BOSS doctrine is not a pile of independent Markdown files.
 
 It is a layered operating system:
 
 ```text
-CONTRACT
-defines authority
-
-COMPOSITION
-defines visual grammar
+NAMING ARCHITECTURE
+defines system identity and the naming hierarchy
 
 ONTOLOGY
-defines what the system is
+defines the governing conceptual model
 
 PARCELS
 defines where concerns live
@@ -419,8 +431,8 @@ defines where concerns live
 BOUNDED AUTONOMY
 defines what limits govern delegation
 
-PROCESS
-defines how work moves
+BIOSCILLATE PRIME PROTOCOL
+defines how bounded work moves
 
 ALIGNMENT / DECOMPOSITION / FEEDBACK
 defines what must be true before and during movement
@@ -440,8 +452,14 @@ defines how context and sub-work move
 CONTROL PLANE REFERENCE ARCHITECTURE
 defines how doctrine maps into replaceable implementation boundaries
 
+DRAFTDECK PRODUCT CONTRACT
+defines source and generated-output authority for the DraftDeck product
+
+DRAFTDECK COMPOSITION
+defines the DraftDeck visual grammar
+
 RELEASE
 defines when delivery is established
 ```
 
-> **The doctrine stack should be readable as one system, not thirteen unrelated documents.**
+> **The doctrine stack should be readable as one system, not fourteen unrelated documents.**
