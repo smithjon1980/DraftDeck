@@ -114,7 +114,7 @@ PRACTICE
 EVIDENCE
 ```
 
-A fixed schedule is an *implementation* of a learning route. It must be changeable when learner state changes. This is *Implementation serves doctrine* applied to curriculum: the mission is authority; the schedule is not.
+A fixed schedule is an *implementation* of a learning route. It must be changeable when learner state changes. This is *Implementation serves doctrine* applied to curriculum: the mission governs destination; the schedule is implementation.
 
 ### Observable capability
 
@@ -134,7 +134,7 @@ This doctrine inherits the Shipping Label rule — *declared metadata is evidenc
 - **DECLARED LEARNER STATE** — what the learner reports: goals, self-assessed level, preferences, available time.
 - **OBSERVED LEARNER STATE** — what performance demonstrates: diagnostic results, recall, error patterns, demonstrated capability.
 
-> **Self-reported proficiency informs routing; demonstrated proficiency establishes instructional state.**
+> **Self-reported proficiency informs routing; demonstrated performance provides the primary evidence for instructional state.**
 
 A learner who reports "intermediate" may demonstrate beginner performance in one subdomain and advanced performance in another. The system routes from evidence, not from identity labels.
 
@@ -282,7 +282,7 @@ This doctrine was sharpened by studying an external language-instruction transcr
 1. **Instruction begins with alignment, not content.**
 2. **The amount, sequence, and form of instruction should be governed by the learner's destination, current state, constraints, and available attention.**
 3. **A learning goal should be expressed as an observable capability whenever practical.**
-4. **Self-reported proficiency informs routing; demonstrated proficiency establishes instructional state.**
+4. **Self-reported proficiency informs routing; demonstrated performance provides the primary evidence for instructional state.**
 5. **Learning continuity should depend on durable learner state, not conversational memory.**
 6. **CONTENT DELIVERED ≠ LEARNING ESTABLISHED.**
 
@@ -296,11 +296,11 @@ This doctrine was sharpened by studying an external language-instruction transcr
 
 > **The first artifact of instruction is the learning mission, not the lesson.**
 
-> **Mission is authority; curriculum is implementation.**
+> **Mission governs destination; curriculum is implementation.**
 
 > **A learning goal should be expressed as an observable capability whenever practical.**
 
-> **Self-reported proficiency informs routing; demonstrated proficiency establishes instructional state.**
+> **Self-reported proficiency informs routing; demonstrated performance provides the primary evidence for instructional state.**
 
 > **Learning continuity should depend on durable learner state, not conversational memory.**
 
