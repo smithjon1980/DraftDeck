@@ -2,61 +2,93 @@
 
 **Status:** Candidate Learner Reference
 
-## Where You Are
+## What BOSS Helps You See
 
-You have completed entry and pre-boarding. Today is your first day inside the BOSS Information Logistics training system.
+Every day you move information between people, systems, models, files, and applications.
 
-Day Zero is not a test of whether you already know everything. It establishes where instruction should begin.
+BOSS gives you a logistics model for seeing those movements clearly.
 
-## What You Should Be Able to Do by the End
+The model is structural, not literal. You are not cargo, and an information system is not a parcel carrier. The value of the comparison is that both situations require clear boundaries, destinations, handling rules, controlled movement, and evidence of delivery.
 
-You should be able to:
-- identify the BOSS system hierarchy;
-- explain the basic information-logistics model;
-- recognize authority boundaries;
-- state PRIME in sequence;
-- distinguish training from qualification and authorization;
-- complete your Learning Envelope and initial diagnostic.
+## The Shipping-Counter Question
 
-## Key Terms
+Before a physical carrier accepts an important package, the sender has to specify enough information for the carrier to decide whether it can be accepted.
 
-**BOSS** — Bioscillate Operating System by Seven.  
-**Package** — bounded accountable work.  
-**Route** — governed handling path.  
-**Handler** — entity that performs bounded work.  
-**Verification** — evidence that required conditions were satisfied.  
-**Release** — authorized acceptance after the required checks.  
-**HOLD** — governed stop state when movement should not continue.  
-**Learning Envelope** — the learner-state and constraint record used to govern instruction.
+BOSS applies the same reasoning to information work.
 
-## Five Rules to Remember
+Before movement, ask:
 
-> **Instruction begins with alignment, not content.**
+- What exactly is being sent?
+- Where is it going?
+- What must travel with it?
+- What handling rules apply?
+- Is movement permitted?
+- What would establish successful receipt?
+
+## Admission Comes First
+
+The admission question is:
+
+> **May this package enter controlled movement?**
+
+Possible states:
+
+**ACCEPT / HOLD / REFUSE**
+
+If a required handling condition is unknown:
+
+> **Unknown handling requirements produce HOLD, not guessed routing.**
+
+## Classification Before Tool Choice
+
+At orientation depth:
+
+**STANDARD / SENSITIVE / RESTRICTED / QUARANTINED / PROHIBITED**
+
+Classification happens before handler selection.
 
 > **CAPABILITY ≠ PERMISSION.**
 
 > **CAN PROCESS ≠ MAY RECEIVE.**
 
-> **Unknown handling requirements produce HOLD, not guessed routing.**
-
-> **TRAINED ≠ QUALIFIED ≠ CERTIFIED ≠ CREDENTIALED ≠ AUTHORIZED.**
+A system may be technically capable of processing information without being eligible to receive it.
 
 ## PRIME
 
-```text
-PACKAGE
-→ ROUTE
-→ INSPECT
-→ MOVE
-→ ESTABLISH DELIVERY
-```
+After admission, PRIME governs movement:
 
-You will learn each part more deeply later.
+> **PACKAGE → ROUTE → INSPECT → MOVE → ESTABLISH DELIVERY**
 
-## Your Route
+Remember that Admission Inspection and PRIME INSPECT are different.
 
-Day Zero ends by assigning your initial route into Module 01.
+Admission:
+**May this package enter controlled movement?**
 
-The goal is not to prove how advanced you are.
+PRIME INSPECT:
+**Are the conditions for this particular movement satisfied?**
 
-The goal is to establish enough evidence to start in the right place.
+## Seven Modules
+
+1. Package Operations
+2. Route Operations
+3. Facility Operations
+4. Transfer Operations
+5. Transport Coordination
+6. High-Control Operations
+7. Network Orchestration
+
+The sequence moves from one well-defined package to the coordination of many packages, routes, handlers, and dependencies.
+
+## Five Rules to Carry Forward
+
+> **The logistics model describes information movement. It does not assert that information systems are literally parcel networks.**
+
+> **Cargo classification precedes handler selection.**
+
+> **Capability is downstream from admissibility.**
+
+> **CAPABILITY ≠ PERMISSION.**
+
+> **Unknown handling requirements produce HOLD, not guessed routing.**
+
+Your next formal training unit is **Module 01 — Package Operations**.
