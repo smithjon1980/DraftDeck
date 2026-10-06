@@ -1,141 +1,91 @@
-# D0-A03 — Information Logistics: What Moves Through the Network
+# D0-A03 — Before Anything Moves: Build the Package
 
-**Status:** Candidate NotebookLM Source Script  
-**Target:** 9–13 minute audio overview  
-**Purpose:** Introduce the logistics ontology and the package as a bounded unit of accountability.
+**Target:** 10–14 minute NotebookLM audio overview
 
-## Opening
+Imagine walking into a parcel-carrier location with something important to send.
 
-BOSS uses a logistics model because information work becomes easier to govern when movement, custody, destination, handling, and proof of delivery are explicit.
+You do not begin by asking which truck is fastest.
 
-The core ontology is:
+You begin by establishing the shipment.
 
-**Data is cargo. Humans are senders and receivers. Agents are couriers. Models are freight. Verification is proof of delivery.**
+What are you sending?
 
-This is a structural model for governing information work.
+Where is it going?
 
-The human is never cargo.
+What information must accompany it?
 
-## The Question
+Does it require special handling?
 
-What exactly moves through an information-logistics network?
+What would count as successful receipt?
 
-Not a person.
+That sequence gives us a powerful way to think about information work.
 
-Not an entire conversation by default.
+Suppose the request is:
 
-Not every file in sight.
+“Make this document better.”
 
-What moves is governed information packaged for a defined purpose.
+That is intent, but it is not necessarily a complete package.
 
-## From Request to Package
+Who is the audience?
 
-A request can be vague.
+What source is authoritative?
 
-“Make this better.”
+What output is expected?
 
-“Research this.”
+What content must remain unchanged?
 
-“Turn this into something useful.”
-
-Those statements may express intent, but they may not yet define a routable package.
-
-A governed package needs boundaries.
-
-At minimum, the system must know enough to establish what work is being committed, where it is supposed to end, and what conditions matter.
-
-That is why BOSS distinguishes the mission from the package.
-
-The mission can be broad.
-
-The package is the bounded unit of operational commitment and accountability.
-
-## Example
-
-Imagine someone says:
-
-“Create a training presentation.”
-
-That is not necessarily a complete package.
-
-Which audience?
-
-What source material?
-
-How many slides?
-
-What output format?
-
-What visual standard?
+What information is permitted to leave the current environment?
 
 What counts as acceptable delivery?
 
-What information is allowed to leave the local environment?
+If those questions matter and the answers are missing, moving immediately is not efficiency.
 
-If those operands matter and are missing, the system should not invent them.
+It is uncontrolled assumption.
 
-## Package Identity
+BOSS treats the package as the unit of operational commitment and accountability.
 
-A package needs identity because multiple pieces of work may exist at the same time.
+The shipping-label idea then makes the package's requirements explicit.
 
-Without package identity, context starts to blur.
+For information work, a label can expose:
 
-Instructions from one task can leak into another.
+what is being sent;
 
-A result can appear complete even though nobody can prove which request it satisfies.
+who or what is sending it;
 
-Package identity gives us a stable unit to route, inspect, verify, hold, and deliver.
+the destination;
 
-## Destination
+required inputs;
 
-A package also needs a destination.
+handling requirements;
 
-Destination is more than a folder or tool.
+required capabilities;
 
-It means the state the package is supposed to reach.
+prohibited destinations;
 
-For a document task, the destination could include format, audience, content requirements, and acceptance conditions.
+acceptance conditions;
 
-Without a destination, movement can occur without meaningful delivery.
+and the evidence that will establish delivery.
 
-## Minimum Necessary Cargo
+The label does not exist because BOSS likes forms.
 
-Another Day Zero concept is simple but powerful:
+It exists because hidden assumptions are dangerous.
 
-**The minimum necessary cargo should travel.**
+A missing physical address is obvious at a shipping counter.
 
-If a handler needs three pages, that does not automatically justify sending the entire archive.
+A missing information destination can be much harder to notice because a model may happily produce something anyway.
 
-If a sanitized extract can perform the legitimate task, that may change what routing becomes eligible.
+That is why package preparation happens before movement.
 
-More information is not automatically better logistics.
+Another useful rule is minimum necessary cargo.
 
-## Verification as Proof of Delivery
+If a task requires three pages, that does not automatically justify moving the entire archive.
 
-A package being produced is not the same as delivery being established.
+If a sanitized extract is sufficient, that may change what movement becomes eligible.
 
-Did the right file arrive?
+Again, this is not about pretending data is a box.
 
-Did it satisfy the acceptance conditions?
+It is about making scope visible.
 
-Did it preserve required constraints?
+Before you move information, define the package.
 
-Was the correct version delivered?
-
-Verification provides the evidence.
-
-## Bottom Line
-
-Information work becomes governable when requests become bounded packages.
-
-Packages have identity.
-
-Packages have destinations.
-
-Packages carry only what is needed.
-
-And delivery requires evidence.
-
-In the next overview, we add the most important constraint on movement: a capable handler is not automatically an authorized handler.
-
-**Next Route: Authority and Handling Boundaries.**
+In the next overview, we reach the acceptance counter itself: the point where BOSS separates what is technically possible from what is actually permitted.
