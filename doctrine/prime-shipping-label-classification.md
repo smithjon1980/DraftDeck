@@ -743,10 +743,6 @@ COMPLEXITY_CLASS = MEDIUM
 
 > **Urgency, complexity, risk, sensitivity, and context load are separate routing dimensions.**
 
-> **Cargo classification precedes handler selection.**
-
-> **CAN PROCESS ≠ MAY RECEIVE.**
-
 This prevents an urgent package from being mistaken for a high-risk package or a large package from being mistaken for a difficult one.
 
 ### Restricted-Cargo Contract
