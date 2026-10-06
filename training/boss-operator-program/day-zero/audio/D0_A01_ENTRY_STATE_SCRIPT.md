@@ -1,123 +1,71 @@
-# D0-A01 — Entry State: You Are Here
+# D0-A01 — You Already Move Information
 
-**Status:** Candidate NotebookLM Source Script  
-**Target:** 8–12 minute audio overview  
-**Purpose:** Establish what acceptance into training means and does not mean.
+**Target:** 10–14 minute NotebookLM audio overview
 
-## Opening
+Every day, without calling it logistics, you move information.
 
-Welcome to Day Zero of the BOSS Operator Program.
+You send a file to a coworker. You upload a document to an AI model. You copy data from one system into another. You hand a draft to a reviewer. You move an approved asset into production.
 
-Before we talk about packages, routes, handlers, verification, or any of the tools you will eventually use, we need to establish one thing first: your current state.
+The interesting question is not whether information moves.
 
-You are here because you completed the entry process and were accepted into training. That matters. But acceptance establishes only that you may begin the instructional route. It does not establish that you are already qualified to operate independently.
+It does.
 
-The distinction is simple:
+The question is whether we can account for that movement responsibly.
 
-**ACCEPTED ≠ QUALIFIED.**
+What exactly did we send?
 
-And as you move through the program, that distinction expands:
+Where did it go?
 
-**TRAINED ≠ QUALIFIED ≠ CERTIFIED ≠ CREDENTIALED ≠ AUTHORIZED.**
+Was it allowed to go there?
 
-Those words may sound similar at first. They are not interchangeable.
+What had to travel with it?
 
-## The Question
+What changed during the handoff?
 
-What does being accepted into a program actually prove?
+How do we know the intended result actually arrived?
 
-It proves that you met the conditions required to enter. It may establish identity, eligibility, or other entry conditions. It does not prove that you can perform every task the program will eventually teach.
+BOSS gives us a logistics model for seeing those questions clearly.
 
-Think about any serious training environment. Entry is the beginning of evidence collection, not the end.
+That does not mean an AI system is literally a shipping company. It does not mean a file is literally a cardboard box. The comparison is useful because the structure matches.
 
-## Why Day Zero Exists
+Think about sending something important through a parcel carrier.
 
-Day Zero gives us a clean starting point.
+Before the carrier takes responsibility for the package, you have to specify enough about the shipment for the carrier to make a decision.
 
-Instead of assuming that every learner begins in the same place, BOSS records what matters for instruction:
+There is a sender.
 
-- your mission;
-- your prior experience;
-- your available time;
-- your constraints;
-- your observable starting capability;
-- the gaps that still need instruction.
+There is something being sent.
 
-Your confidence matters as information. It does not become proof merely because you feel strongly about it.
+There is a destination.
 
-A core instructional rule is:
+There are handling requirements.
 
-**Self-reported proficiency informs routing; demonstrated performance provides the primary evidence for instructional state.**
+There are conditions under which the carrier may accept or refuse the shipment.
 
-That means we will listen to what you say you know. Then we will also ask you to show what you can do.
+Information work contains the same kinds of control problems.
 
-## A Simple Example
+Suppose someone tells you, “Send this customer file to whatever AI can summarize it best.”
 
-Imagine two learners.
+That request focuses on capability.
 
-Learner One has used AI tools every day for three years. Learner Two has used them for three weeks.
+But capability is not the first question.
 
-If we route instruction only from the résumé, we might assume Learner One should skip ahead.
+The first question is what information is actually being sent and whether it may move to that destination at all.
 
-But suppose the first learner routinely sends sensitive data to any capable tool without checking authorization, while the second learner consistently stops when handling requirements are unclear.
+This is the perspective Day Zero establishes.
 
-Who has the stronger starting behavior for governed information logistics?
+We are going to learn how to see information work as governed movement.
 
-Time using a tool is not the same thing as demonstrated operational judgment.
+Not because the metaphor is cute.
 
-That is why Day Zero records declared state and observed state separately.
+Because movement creates responsibilities.
 
-## The Operator Mindset
+Before something moves, define it.
 
-The goal is not to impress the system.
+Before selecting a destination, understand the handling requirements.
 
-The goal is to establish the truth of the starting condition.
+Before assuming success, establish evidence.
 
-If something is unknown, record it as unknown.
+That discipline is the foundation for every module that follows.
 
-If you need clarification, ask.
-
-If a required condition is unresolved, HOLD is a legitimate state.
-
-This same discipline will later govern packages and routes. On Day Zero, we apply it to learning itself.
-
-## What Happens Today
-
-During Day Zero you will:
-
-- learn what BOSS is;
-- learn the information-logistics model;
-- see the basic authority boundaries;
-- meet PRIME at orientation depth;
-- understand the seven-module training journey;
-- complete a Learning Envelope;
-- complete an initial diagnostic;
-- receive an orientation-clearance state.
-
-The possible clearance states are:
-
-**CLEARED FOR MODULE 01.**
-
-**CLEARED WITH REMEDIATION.**
-
-Or:
-
-**HOLD — ORIENTATION REQUIREMENT UNRESOLVED.**
-
-None of those states should be guessed.
-
-## Bottom Line
-
-Acceptance opens the door.
-
-Day Zero establishes your starting state.
-
-Training develops capability.
-
-Qualification requires demonstrated performance.
-
-Authorization remains a separate grant of permission.
-
-In the next audio overview, we move from your position in the program to the system itself: BOSS, the Bioscillate Logistics Framework, PARCELS, PRIME, and the relationship between them.
-
-**Next Route: System Identity — What BOSS Is.**
+In the next overview, we look at the BOSS system itself—not as a fictional world, but as the framework that gives us a consistent language for governing these real movements.
