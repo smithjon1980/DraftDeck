@@ -1,151 +1,77 @@
-# D0-A05 — PRIME: The Movement Protocol
+# D0-A05 — PRIME Behind the Counter
 
-**Status:** Candidate NotebookLM Source Script  
-**Target:** 10–14 minute audio overview  
-**Purpose:** Orient the learner to the complete PRIME sequence without teaching module-level depth.
+**Target:** 12–16 minute NotebookLM audio overview
 
-## Opening
+By this point, the package has been prepared.
 
-You now know what a package is and why movement is bounded by permission.
+Its declaration has been inspected.
 
-The next question is:
+Its handling requirements are known.
 
-How does governed work actually move?
+Its eligibility has been decided.
 
-BOSS uses the Bioscillate PRIME Protocol.
+Only now do we move into governed movement.
 
-PRIME means:
+That is where the Bioscillate PRIME Protocol operates.
 
-**PACKAGE → ROUTE → INSPECT → MOVE → ESTABLISH DELIVERY.**
+PRIME is:
 
-Five stages. One governed movement loop.
+> **PACKAGE → ROUTE → INSPECT → MOVE → ESTABLISH DELIVERY**
 
-## P — Package
+There is an important distinction here.
 
-Before work moves, define what is moving.
+Admission Inspection happened before PRIME.
 
-What is the bounded unit of work?
+It asked:
 
-What is its destination?
+> **May this package enter controlled movement?**
 
-What inputs belong to it?
+PRIME INSPECT asks something different:
 
-What constraints apply?
+> **Are the conditions for this particular movement satisfied?**
 
-What would count as acceptable delivery?
+Two inspections.
 
-If the package is not bounded, downstream movement becomes harder to govern.
+Two different control questions.
 
-## R — Route
+PACKAGE means the bounded work is identified.
 
-Once a package exists, determine where it belongs and under what conditions it may move.
+ROUTE means the system determines where that package should go under its actual requirements.
 
-Routing considers requirements.
+INSPECT means the proposed movement is checked before execution.
 
-It may include capability, locality, data boundaries, tools, cost, time, verification needs, and prohibited handlers.
+MOVE is the bounded action or transfer.
 
-The key idea is:
+ESTABLISH DELIVERY means success is demonstrated with evidence rather than assumed from activity.
 
-**Placement follows requirements.**
+Suppose an approved source document needs to become an editable presentation.
 
-Not prestige.
+The package defines the source, destination, scope, visual requirements, and acceptance conditions.
 
-Not habit.
+The route selects an eligible production environment.
 
-Not whatever tool happens to be open.
+Inspection checks that the correct source, tools, destination, and constraints are in place.
 
-## I — Inspect
+Move performs the transformation.
 
-Before movement, check the conditions that matter.
+Establish Delivery verifies the resulting presentation against the requirements.
 
-Is the package complete enough to move?
+Notice what PRIME prevents.
 
-Is the handler eligible?
+It prevents us from treating “the model returned something” as proof that the job is done.
 
-Are required permissions established?
+Movement is not delivery.
 
-Is cargo classification known?
+Output existence is not acceptance.
 
-Are dependencies satisfied?
+A generated artifact still has to correspond to the right package and satisfy the right conditions.
 
-If not, the inspection result may be HOLD.
+This is also where verification becomes part of movement rather than an afterthought.
 
-Inspection is not a ceremonial checkbox. It is a decision boundary.
+PRIME does not replace the admission boundary.
 
-## M — Move
+Admission determines whether the package may enter controlled movement.
 
-Only after the preceding conditions are sufficiently established does movement occur.
+PRIME governs what happens after that decision.
 
-Move is execution.
-
-A handler performs the bounded work.
-
-A transfer occurs.
-
-A file changes custody.
-
-A process runs.
-
-But movement itself does not prove success.
-
-## E — Establish Delivery
-
-This is where many informal workflows stop too early.
-
-A tool produced an answer, so people say the task is done.
-
-BOSS asks for evidence.
-
-Did the correct output arrive?
-
-Does it correspond to the correct package?
-
-Does it satisfy the acceptance conditions?
-
-Did required constraints survive execution?
-
-That is why the final stage is not merely “finish.”
-
-It is **Establish Delivery**.
-
-## One Example
-
-Mission: create an editable learner-facing orientation deck.
-
-Package: a bounded deck build with specified source, audience, slide count, format, and visual standard.
-
-Route: assign to an eligible slide-production workflow.
-
-Inspect: verify source authority, handling requirements, required capabilities, and destination.
-
-Move: generate and build the editable deck.
-
-Establish Delivery: inspect the actual output against the requirements and record evidence.
-
-PRIME keeps each step visible.
-
-## PRIME Is Not the Curriculum Sequence
-
-Do not confuse the five PRIME stages with the seven training modules.
-
-The modules teach operating responsibilities.
-
-PRIME governs movement inside those responsibilities.
-
-You will encounter the full protocol repeatedly at increasing levels of complexity.
-
-## Bottom Line
-
-Package defines.
-
-Route places.
-
-Inspect checks.
-
-Move executes.
-
-Establish Delivery proves.
-
-In the next audio overview, we zoom back out and look at the complete learning journey—seven modules that gradually expand your operating responsibility.
-
-**Next Route: The Training Journey.**
+In the next overview, we use this same operational logic to see how the seven formal modules expand from one package to an entire accountable network.
