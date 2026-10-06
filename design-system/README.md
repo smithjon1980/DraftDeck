@@ -6,6 +6,6 @@ Roadmap home of reusable DraftDeck design assets:
 - `frames/` — drafting frames, margin rails, title blocks.
 - `hatches/` — state textures (DEFAULT / ROUTED / HELD / BLOCKED / VERIFIED).
 - `icons/` — semantic icon selections.
-- `components/` — registered native components (Client Tower, Verification Tag, D.A.T.A. Connector, Claim Comparator).
+- `components/` — registered native components (Dispatch Authority, Verification Tag, D.A.T.A. Connector, Claim Comparator).
 
 Custom components are registered here, not improvised per build.
