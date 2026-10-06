@@ -1,6 +1,6 @@
 # DraftDeck Doctrine Index
 
-**Status:** Candidate Canonical Index  
+**Status:** Canonical Index
 **Purpose:** Provide a one-page map of DraftDeck's doctrine stack so a fresh human or agent can understand the order, authority, and relationship of the governing files.
 
 ---
@@ -17,6 +17,8 @@ COMPOSITION STANDARD
 LOGISTICS FRAMEWORK
         ↓
 PRIME PROCESS
+        ↓
+PRIME ALIGNMENT, DECOMPOSITION & FEEDBACK
         ↓
 PRIME PROCESS ORCHESTRATION
         ↓
@@ -37,6 +39,7 @@ Each layer answers a different class of question.
 | Composition | `composition-standard.md` | What visual grammar governs DraftDeck output? | Defines the pure-white drafting standard, typography, line hierarchy, accent discipline, and prohibited visual treatments. |
 | Ontology | `logistics-framework.md` | What conceptual model governs the system? | Establishes shipping-and-receiving logistics as canonical and defines the control spine: LOCATION → ACCOUNTING → ADJUDICATION → AUTHORITY. |
 | Process | `prime-process.md` | How does work move through the system? | Defines PRIME: Package → Route → Inspect → Move → Establish Delivery. |
+| Alignment / Decomposition / Feedback | `prime-alignment-decomposition-feedback.md` | What must be aligned, decomposed, and instrumented before and during execution? | Defines alignment before packaging, destination vs journey artifacts, dependency graphs, vertical slices, route instrumentation, feedback quality, review proportionality, and stale-context handling. |
 | Orchestration | `prime-process-orchestration.md` | How does PRIME become an executable multi-step work system? | Defines bounded work packages, routing, inspection, orchestration, delivery verification, feedback, and reusable learning. |
 | Routing / Handoff | `prime-handoff-context-routing.md` | How should context and side-work move between handlers or sessions? | Defines task severance, Prime Handoff Packages, return handoffs, transit artifacts, evidence-producing detours, and context routing. |
 | Release | `release-qa.md` | What must be true before an artifact is considered releasable? | Defines release gates and verification expectations. |
@@ -51,9 +54,10 @@ A new contributor, agent, or adapter should read doctrine in this order:
 2. `composition-standard.md`
 3. `logistics-framework.md`
 4. `prime-process.md`
-5. `prime-process-orchestration.md`
-6. `prime-handoff-context-routing.md`
-7. `release-qa.md`
+5. `prime-alignment-decomposition-feedback.md`
+6. `prime-process-orchestration.md`
+7. `prime-handoff-context-routing.md`
+8. `release-qa.md`
 
 The order matters.
 
@@ -81,19 +85,27 @@ Work should be packaged, routed, inspected, moved, and have delivery established
 
 Execution alone is not completion.
 
-### Rule 4 — Orchestration does not replace authority
+### Rule 4 — Alignment before packaging
+
+Alignment precedes packaging.
+
+Instrument the route before sending the package; a package that moves without acceptance signals is cargo without a manifest.
+
+### Rule 5 — Orchestration does not replace authority
 
 An orchestrator may classify, schedule, route, hold, compare, and report.
 
 Human release authority remains human where the workflow requires human authorization.
 
-### Rule 5 — Context is cargo
+### Rule 6 — Context is cargo
 
 Context should be routed, not accumulated.
 
 Out-of-scope work should become a new package rather than contaminating the parent workstream.
 
-### Rule 6 — Release requires evidence
+Stale context is active contamination: in an agentic system, obsolete documentation is retrieved and acted upon as if it were current authority.
+
+### Rule 7 — Release requires evidence
 
 A build, test pass, commit, or deployment may be necessary but is not automatically sufficient to establish delivery or release.
 
@@ -117,11 +129,19 @@ The following statements summarize the active doctrine stack:
 
 > **Speed of execution increases the value of restraint before execution.**
 
+> **Alignment precedes packaging.**
+
+> **Instrument the route before sending the package.**
+
+> **Stale context is active contamination.**
+
 > **Movement never substitutes for inspection.**
 
 > **TEST PASS ≠ DELIVERY ESTABLISHED.**
 
 > **The orchestrator is a control surface, not final authority.**
+
+> **A reliable courier network requires both observable routes and trustworthy manifests.**
 
 > **Context should be routed, not accumulated.**
 
@@ -152,7 +172,7 @@ BRANCH
         ↓
 ONTOLOGY GUARD
         ↓
-REVIEW
+REVIEW (INCLUDING INDEX UPDATE)
         ↓
 MERGE TO MAIN
 ```
@@ -160,6 +180,12 @@ MERGE TO MAIN
 A useful idea is not automatically doctrine.
 
 A repeated successful behavior becomes a doctrine candidate only after inspection.
+
+### Doctrine Index Invariant
+
+> **Every PR that adds, renames, supersedes, or materially changes a canonical doctrine file must update `doctrine/README.md` in the same change set. A doctrine change is incomplete until the index reflects the new canonical state.**
+
+The index is a maintained registry of the canon, not a passive table of contents.
 
 ---
 
@@ -255,6 +281,8 @@ A fresh agent entering DraftDeck should use this order:
 
 For visual-production work, also read `composition-standard.md` before implementation.
 
+For planning, decomposition, or feedback design, read `prime-alignment-decomposition-feedback.md`.
+
 For orchestration work, read `prime-process-orchestration.md`.
 
 For cross-session delegation or context transfer, read `prime-handoff-context-routing.md`.
@@ -282,6 +310,9 @@ defines what the system is
 PROCESS
 defines how work moves
 
+ALIGNMENT / DECOMPOSITION / FEEDBACK
+defines what must be true before and during movement
+
 ORCHESTRATION
 defines how work scales
 
@@ -292,4 +323,4 @@ RELEASE
 defines when delivery is established
 ```
 
-> **The doctrine stack should be readable as one system, not seven unrelated documents.**
+> **The doctrine stack should be readable as one system, not eight unrelated documents.**
