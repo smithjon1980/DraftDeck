@@ -213,10 +213,21 @@ RISK_CLASS
 URGENCY_CLASS
 COMPLEXITY_CLASS
 CONTEXT_LOAD_CLASS
+CARGO_HANDLING_CLASS
+DATA_OWNER
+DATA_CLASSIFICATION
+PERMITTED_DESTINATIONS
+PROHIBITED_DESTINATIONS
+PERMITTED_HANDLERS
+PROHIBITED_HANDLERS
+EXTERNAL_TRANSFER_ALLOWED
+RETENTION_CONSTRAINT
+TRAINING_USE_ALLOWED
+SANITIZATION_REQUIRED
+MINIMUM_NECESSARY_SCOPE
 REQUIRED_CAPABILITIES
 REQUIRED_TOOLS
 DEPENDENCIES
-PROHIBITED_HANDLERS
 
 EXECUTION / PLACEMENT
 EXECUTION_CLASS
@@ -732,7 +743,21 @@ COMPLEXITY_CLASS = MEDIUM
 
 > **Urgency, complexity, risk, sensitivity, and context load are separate routing dimensions.**
 
+> **Cargo classification precedes handler selection.**
+
+> **CAN PROCESS ≠ MAY RECEIVE.**
+
 This prevents an urgent package from being mistaken for a high-risk package or a large package from being mistaken for a difficult one.
+
+### Restricted-Cargo Contract
+
+Sensitivity alone does not determine whether cargo may move. The label also carries the ownership, authorization, destination, handler, transfer, retention, training-use, sanitization, and minimum-necessary-scope fields required by **Restricted Cargo Handling**.
+
+The Shipping Label declares those requirements. `restricted-cargo-handling.md` defines the handling states and dispositions that act on them.
+
+> **Cargo classification precedes handler selection.**
+
+> **CAN PROCESS ≠ MAY RECEIVE.**
 
 ---
 
@@ -1068,6 +1093,12 @@ ESTABLISH DELIVERY
 ### Alignment / Decomposition / Feedback
 
 A label should be created only after the package is sufficiently bounded to declare destination, requirements, and acceptance.
+
+### Restricted Cargo Handling
+
+The Shipping Label carries the ownership, authorization, boundary, destination, handler, retention, training-use, sanitization, and minimum-necessary requirements consumed by `restricted-cargo-handling.md`.
+
+The label declares. Restricted Cargo Handling determines whether the package may ROUTE, must HOLD, must be REFUSED, or requires SANITIZE → RECLASSIFY before a new package can move.
 
 ### Orchestration
 
