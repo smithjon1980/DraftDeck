@@ -26,6 +26,8 @@ ALIGNED INSTRUCTION & LEARNING ENVELOPES
         ↓
 PRIME SHIPPING LABEL & CLASSIFICATION
         ↓
+RESTRICTED CARGO HANDLING
+        ↓
 PRIME PROTOCOL ORCHESTRATION
         ↓
 PRIME HANDOFF & CONTEXT ROUTING
@@ -272,6 +274,24 @@ The following statements summarize the active BOSS doctrine stack:
 > **Capability to produce does not establish capability to verify.**
 
 > **Handler limitations can be managed by reducing package scope without reducing destination scope.**
+
+> **Not every package that can be moved is authorized for movement.**
+
+> **CAN PROCESS ≠ MAY RECEIVE.**
+
+> **Cargo classification precedes handler selection.**
+
+> **Sensitive cargo must not cross a boundary merely because a capable handler exists beyond it.**
+
+> **Unknown handling requirements produce HOLD, not guessed routing.**
+
+> **Sanitization may change routing eligibility; it does not retroactively authorize the original package.**
+
+> **The minimum necessary cargo should travel.**
+
+> **Authorization follows the cargo across every handoff.**
+
+> **The network must protect against unauthorized disclosure even when the requested work itself is legitimate.**
 
 > **The UI displays governed state. It does not become the source of governed state.**
 
