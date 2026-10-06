@@ -203,7 +203,7 @@ The following statements summarize the active doctrine stack:
 
 > **A learner's destination, current state, constraints, and available attention govern the route.**
 
-> **Self-reported proficiency informs routing; demonstrated proficiency establishes instructional state.**
+> **Self-reported proficiency informs routing; demonstrated performance provides the primary evidence for instructional state.**
 
 > **Learning continuity should depend on durable learner state, not conversational memory.**
 
