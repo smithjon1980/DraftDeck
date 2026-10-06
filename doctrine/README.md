@@ -32,6 +32,8 @@ PRIME HANDOFF & CONTEXT ROUTING
         ↓
 PRIME CONTROL PLANE REFERENCE ARCHITECTURE
         ↓
+EVIDENCE & VERIFICATION ARCHITECTURE
+        ↓
 DRAFTDECK PRODUCTION CONTRACT
         ↓
 DRAFTDECK COMPOSITION STANDARD
@@ -57,7 +59,8 @@ Each layer answers a different class of question.
 | Shipping Label / Classification | `prime-shipping-label-classification.md` | What metadata must accompany a package before routing, and how may classifiers influence routing policy without acquiring authority? | Defines the Prime Shipping Label, declared/derived/classified fields, scan validation, declared-vs-observed comparison, route classes, classifier boundaries, handler capability mapping, label versioning, and separation from the Verification Tag. |
 | Orchestration | `prime-process-orchestration.md` | How does PRIME become an executable multi-step work system? | Defines bounded work packages, routing, inspection, orchestration, delivery verification, feedback, and reusable learning. |
 | Routing / Handoff | `prime-handoff-context-routing.md` | How should context and side-work move between handlers or sessions? | Defines task severance, Prime Handoff Packages, return handoffs, transit artifacts, evidence-producing detours, and context routing. |
-| Control Plane Reference Architecture | `prime-control-plane-reference-architecture.md` | How should Prime doctrine map into an operator-facing web application without surrendering domain authority to implementation tools? | Defines server-authoritative state, domain-first interfaces, replaceable adapters, typed server-rendered presentation, lightweight hypermedia interaction, PocketBase as a candidate adapter, and doctrine-to-code traceability. |
+| Control Plane Reference Architecture | `prime-control-plane-reference-architecture.md` | How should PRIME doctrine map into an operator-facing web application without surrendering domain authority to implementation tools? | Defines server-authoritative state, domain-first interfaces, replaceable adapters, typed server-rendered presentation, lightweight hypermedia interaction, PocketBase as a candidate adapter, and doctrine-to-code traceability. |
+| Evidence & Verification | `evidence-verification-architecture.md` | How does BOSS know whether a state, claim, evaluation, or release condition is warranted? | Defines structural evidence vs. interpretation, observability/evaluation/verification/release separation, evaluator competence, denominator integrity, dual execution/verification routing, Verification Profiles, consequence-sensitive inspection, Change Radius, explicit uncertainty, and candidate EVIDENCE axis language. |
 | DraftDeck Product Contract | `production-contract.md` | What is authoritative, what is generated, and what may be edited in the DraftDeck product? | Defines source → compiler/renderer → generated output ownership for DraftDeck. |
 | DraftDeck Composition | `composition-standard.md` | What visual grammar governs DraftDeck output? | Defines the pure-white drafting standard, typography, line hierarchy, accent discipline, and prohibited visual treatments. |
 | Release | `release-qa.md` | What must be true before an artifact is considered releasable? | Defines release gates and verification expectations. |
@@ -79,9 +82,10 @@ A new contributor, agent, or adapter should read doctrine in this order:
 9. `prime-process-orchestration.md`
 10. `prime-handoff-context-routing.md`
 11. `prime-control-plane-reference-architecture.md`
-12. `production-contract.md`
-13. `composition-standard.md`
-14. `release-qa.md`
+12. `evidence-verification-architecture.md`
+13. `production-contract.md`
+14. `composition-standard.md`
+15. `release-qa.md`
 
 The order matters.
 
@@ -172,6 +176,18 @@ The following statements summarize the active BOSS doctrine stack:
 > **PARCELS is the seven-layer structural architecture.**
 
 > **The Bioscillate PRIME Protocol governs Package → Route → Inspect → Move → Establish Delivery.**
+
+> **Where deterministic evidence exists, generative interpretation must remain subordinate to it.**
+
+> **TRACE ≠ TRUTH.**
+
+> **EVAL PASS ≠ RELEASE.**
+
+> **Execution routing and verification routing are independent decisions.**
+
+> **BUILD_CAPABILITY ≠ REVIEW_CAPABILITY ≠ RELEASE_AUTHORITY.**
+
+> **Automation that increases production throughput without increasing verification throughput creates governance debt.**
 
 > **GitHub is the canonical source of truth.**
 
@@ -408,6 +424,8 @@ For cross-session delegation or context transfer, read `prime-handoff-context-ro
 
 For operator-console, web-control-plane, persistence-adapter, or HTMX/templ implementation work, read `prime-control-plane-reference-architecture.md`.
 
+For evidence design, evaluation, verifier competence, Change Radius, consequence-sensitive inspection, or Verification Profiles, read `evidence-verification-architecture.md`.
+
 For release decisions, read `release-qa.md`.
 
 ---
@@ -452,6 +470,9 @@ defines how context and sub-work move
 CONTROL PLANE REFERENCE ARCHITECTURE
 defines how doctrine maps into replaceable implementation boundaries
 
+EVIDENCE & VERIFICATION ARCHITECTURE
+defines how BOSS establishes warranted state before release
+
 DRAFTDECK PRODUCT CONTRACT
 defines source and generated-output authority for the DraftDeck product
 
@@ -462,4 +483,4 @@ RELEASE
 defines when delivery is established
 ```
 
-> **The doctrine stack should be readable as one system, not fourteen unrelated documents.**
+> **The doctrine stack should be readable as one system, not fifteen unrelated documents.**
