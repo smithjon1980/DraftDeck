@@ -1,43 +1,47 @@
 # Day Zero Orientation Deck Brief
 
 **Status:** Candidate Production Brief  
-**Artifact:** Supplemental orientation deck; not one of the seven companion module decks.
+**Artifact:** Supplemental Day Zero orientation deck
 
-## Purpose
+## Narrative objective
 
-Give the learner a visual map of the system and training journey before Module 01.
+Teach the learner to see information movement as governed logistics without turning the metaphor into a fictional setting.
 
-## Recommended 24-slide arc
+## 24-slide arc
 
-1. BOSS — Day Zero
-2. Welcome to the Network
-3. How You Arrived Here
-4. Accepted ≠ Qualified
-5. What Day Zero Does
-6. BOSS System Hierarchy
-7. What the Network Moves
-8. Data as Cargo
-9. What a Package Is
-10. Package ≠ Conversation
-11. What a Route Is
-12. What a Handler Is
-13. Capability ≠ Permission
-14. Can Process ≠ May Receive
-15. HOLD Is a Valid State
-16. Five Handling States
-17. PRIME Overview
-18. Movement ≠ Delivery
-19. Verification & Release
-20. Seven-Module Training Journey
-21. Trained ≠ Qualified ≠ Certified ≠ Credentialed ≠ Authorized
-22. Your Learning Envelope
-23. Initial Diagnostic & Starting Route
-24. Next Route: Module 01 — Package Operations
+1. Day Zero — Seeing Information Movement Clearly
+2. You Already Move Information Every Day
+3. Where Information Moves
+4. Why “The Tool Can Do It” Is Not Enough
+5. The Logistics Model — Structural, Not Literal
+6. A Familiar Anchor: The Shipping Counter
+7. Before a Carrier Accepts a Package
+8. Information Work Has the Same Control Problem
+9. Bound the Package
+10. Declare the Destination
+11. What Must Travel With It?
+12. Complete the Shipping Label
+13. Admission Inspection
+14. ACCEPT / HOLD / REFUSE
+15. Unknown Handling Requirements → HOLD
+16. Classification Before Handler Selection
+17. Capability Is Downstream From Admissibility
+18. CAPABILITY ≠ PERMISSION
+19. CAN PROCESS ≠ MAY RECEIVE
+20. Two Inspections, Two Questions
+21. PRIME Behind the Counter
+22. Movement ≠ Established Delivery
+23. The Seven-Module Operational Progression
+24. Next: Module 01 — Package Operations
 
-## Visual rule
+## Copy boundary
 
-Slides visualize relationships and distinctions. They do not become paragraph pages.
+Never tell the learner:
+- they are entering a logistics network;
+- they are cargo;
+- they are joining a shipping company;
+- their learner state is being routed.
 
-## Copy rule
+## Visual boundary
 
-Use canonical statements verbatim where presented as doctrine. Explanatory copy must remain clearly subordinate.
+Use counter/label/sort/handoff imagery only when it clarifies structure. Keep real information work visible in the same frame or immediately adjacent frame.
