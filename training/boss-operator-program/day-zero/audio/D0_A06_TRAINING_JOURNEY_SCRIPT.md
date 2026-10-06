@@ -1,96 +1,54 @@
-# D0-A06 — The Training Journey
+# D0-A06 — From One Package to a Whole Network
 
-**Status:** Candidate NotebookLM Source Script  
-**Target:** 10–14 minute audio overview  
-**Purpose:** Show how the seven modules build one cumulative operator capability.
+**Target:** 12–16 minute NotebookLM audio overview
 
-## Opening
+The seven modules of the BOSS Operator Program follow a simple progression.
 
-Day Zero gives you the map.
+Responsibility expands.
 
-The formal BOSS Operator Program contains seven training modules.
+Module 01 begins at the counter.
 
-They are not seven disconnected topics.
+Someone needs to send something.
 
-Each module expands the scale of responsibility while carrying forward the competencies that came before it.
+The learner has to determine what the package actually is, where it is going, what must travel with it, how the shipping label is completed, and whether admission results in ACCEPT, HOLD, or REFUSE.
 
-## Module 01 — Package Operations
+That is **Package Operations**.
 
-The first responsibility is bounding work.
-
-The central question is:
-
-What exactly is being handled?
-
-You learn to turn vague requests into accountable packages with destinations, requirements, constraints, and acceptance conditions.
-
-Everything downstream depends on this.
-
-Bad packaging creates bad routing.
-
-## Module 02 — Route Operations
-
-Once the package exists:
-
-Where should it go, and under what conditions may it move?
-
-You learn to work with route requirements, dependencies, stop conditions, HOLD, escalation, and the separation between execution routing and verification routing.
-
-## Module 03 — Facility Operations
-
-Now the system gets busier.
-
-Instead of one package, you manage multiple packages entering an operational environment.
-
-You learn receiving, classification, staging, queues, holds, restricted cargo, and dispatch.
+Module 02 starts after acceptance.
 
 The question becomes:
 
-How do multiple packages move safely through one environment?
+Where should this accepted package go?
 
-## Module 04 — Transfer Operations
+That is **Route Operations**.
 
-Work changes custody.
+Module 03 introduces volume.
 
-Contexts change.
+Many packages are now moving through one environment.
 
-Handlers change.
+They have to be received, classified, staged, held, prioritized, and dispatched without losing control.
 
-Sessions change.
+That is **Facility Operations**.
 
-You learn how to preserve package identity, authority, required context, evidence, dependencies, and return conditions across handoffs.
+Module 04 focuses on custody changes.
 
-The question is:
+When information passes from one handler, system, session, or team to another, identity, authority, context, and evidence have to survive the handoff.
 
-How does work change custody without losing what governs it?
+That is **Transfer Operations**.
 
-## Module 05 — Transport Coordination
+Module 05 asks what kind of handling capability the package actually requires.
 
-Now you choose among capabilities and placements.
+This is where placement, locality, capability, tools, cost, latency, and verification requirements are coordinated.
 
-What kind of handling does this package actually require?
+That is **Transport Coordination**.
 
-You learn to distinguish capability, placement, locality, cost, latency, permission, and verification requirements.
+Module 06 deals with higher consequence.
 
-You do not route by prestige.
+Some information movement requires stronger controls, stronger evidence, more restricted execution, or more independent review.
 
-You route by package requirements.
+That is **High-Control Operations**.
 
-## Module 06 — High-Control Operations
-
-Some packages carry greater consequence.
-
-The question changes:
-
-What additional controls are required when consequence increases?
-
-You learn execution envelopes, stronger verification, observability, review independence, negative controls, and authority boundaries.
-
-The larger the consequence, the stronger the evidence burden may become.
-
-## Module 07 — Network Orchestration
-
-Finally, the scope expands to the network.
+Module 07 coordinates the whole system.
 
 Many packages.
 
@@ -100,59 +58,23 @@ Many handlers.
 
 Dependencies.
 
-Queues.
-
-Resource states.
-
 Capacity.
+
+Queues.
 
 Verification.
 
 Release.
 
-You learn to coordinate the whole system without losing package-level accountability.
+That is **Network Orchestration**.
 
-## Why the Sequence Matters
+The important thing is that the metaphor does not drive the curriculum.
 
-The program moves from bounded responsibility to network responsibility.
+The operational responsibilities do.
 
-You do not begin by orchestrating fifty packages.
+The familiar shipping progression simply gives us a way to see those responsibilities clearly.
 
-You begin by learning what one valid package is.
-
-Then you learn movement.
-
-Then flow.
-
-Then handoff.
-
-Then resource selection.
-
-Then high-control work.
-
-Then orchestration.
-
-The system expands as your demonstrated capability expands.
-
-## Qualification Comes After Instruction
-
-Completing the seven modules means you are trained.
-
-It does not automatically mean you are qualified.
-
-The program rule is:
-
-**QUIZ PASS ≠ OPERATOR QUALIFICATION.**
-
-Final qualification requires demonstrated performance in an integrated scenario.
-
-And even qualification does not grant universal authorization.
-
-## Bottom Line
-
-The course is one cumulative operating journey:
-
-Package.
+Counter.
 
 Route.
 
@@ -160,12 +82,12 @@ Facility.
 
 Transfer.
 
-Transport coordination.
+Transport selection.
 
-High-control operations.
+High-control handling.
 
 Network orchestration.
 
-In the final Day Zero overview, we turn the system toward you: your mission, constraints, baseline evidence, and the clearance decision that sends you into Module 01.
+The course moves from one bounded package to many coordinated movements without losing package-level accountability.
 
-**Next Route: Your Learning Envelope, Diagnostic, and Clearance.**
+In the final Day Zero overview, we close the orientation and establish what you should understand before beginning Module 01.
