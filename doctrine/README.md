@@ -24,6 +24,8 @@ PRIME PROCESS
         ↓
 PRIME ALIGNMENT, DECOMPOSITION & FEEDBACK
         ↓
+ALIGNED INSTRUCTION & LEARNING ENVELOPES
+        ↓
 PRIME SHIPPING LABEL & CLASSIFICATION
         ↓
 PRIME PROCESS ORCHESTRATION
@@ -50,6 +52,7 @@ Each layer answers a different class of question.
 | Delegation Limits | `bounded-autonomy-execution-envelope.md` | What limits govern delegation before unattended execution? | Defines bounded autonomy, the Execution Envelope, envelope-scoped permission, roles vs. handlers vs. providers, the parallelism gate, the consolidation boundary, and MERGE ≠ RELEASE. |
 | Process | `prime-process.md` | How does work move through the system? | Defines PRIME: Package → Route → Inspect → Move → Establish Delivery. |
 | Alignment / Decomposition / Feedback | `prime-alignment-decomposition-feedback.md` | What must be aligned, decomposed, and instrumented before and during execution? | Defines alignment before packaging, destination vs journey artifacts, dependency graphs, vertical slices, route instrumentation, feedback quality, review proportionality, and stale-context handling. |
+| Aligned Instruction / Learning Envelopes | `aligned-instruction-learning-envelope.md` | What limits govern instruction before teaching begins? | Specializes alignment doctrine into the instructional domain: defines the Learning Envelope, mission vs. curriculum vs. lesson, declared vs. observed learner state, the learning loop, Day Zero's constitutional responsibility, and CONTENT DELIVERED ≠ LEARNING ESTABLISHED. |
 | Shipping Label / Classification | `prime-shipping-label-classification.md` | What metadata must accompany a package before routing, and how may classifiers influence routing policy without acquiring authority? | Defines the Prime Shipping Label, declared/derived/classified fields, scan validation, declared-vs-observed comparison, route classes, classifier boundaries, handler capability mapping, label versioning, and separation from the Verification Tag. |
 | Orchestration | `prime-process-orchestration.md` | How does PRIME become an executable multi-step work system? | Defines bounded work packages, routing, inspection, orchestration, delivery verification, feedback, and reusable learning. |
 | Routing / Handoff | `prime-handoff-context-routing.md` | How should context and side-work move between handlers or sessions? | Defines task severance, Prime Handoff Packages, return handoffs, transit artifacts, evidence-producing detours, and context routing. |
@@ -69,11 +72,12 @@ A new contributor, agent, or adapter should read doctrine in this order:
 5. `bounded-autonomy-execution-envelope.md`
 6. `prime-process.md`
 7. `prime-alignment-decomposition-feedback.md`
-8. `prime-shipping-label-classification.md`
-9. `prime-process-orchestration.md`
-10. `prime-handoff-context-routing.md`
-11. `prime-control-plane-reference-architecture.md`
-12. `release-qa.md`
+8. `aligned-instruction-learning-envelope.md`
+9. `prime-shipping-label-classification.md`
+10. `prime-process-orchestration.md`
+11. `prime-handoff-context-routing.md`
+12. `prime-control-plane-reference-architecture.md`
+13. `release-qa.md`
 
 The order matters.
 
@@ -194,6 +198,18 @@ The following statements summarize the active doctrine stack:
 > **Speed of execution increases the value of restraint before execution.**
 
 > **Alignment precedes packaging.**
+
+> **Instruction begins with alignment, not content.**
+
+> **A learner's destination, current state, constraints, and available attention govern the route.**
+
+> **Self-reported proficiency informs routing; demonstrated performance provides the primary evidence for instructional state.**
+
+> **Learning continuity should depend on durable learner state, not conversational memory.**
+
+> **CONTENT DELIVERED ≠ LEARNING ESTABLISHED.**
+
+> **Day Zero establishes the learner's initial routing state before curriculum movement begins.**
 
 > **Instrument the route before sending the package.**
 
@@ -367,6 +383,8 @@ For unattended execution, sandboxing, parallelism, or delegation limits, read `b
 
 For planning, decomposition, or feedback design, read `prime-alignment-decomposition-feedback.md`.
 
+For curriculum design, instructional systems, learner routing, or Day Zero work, read `aligned-instruction-learning-envelope.md`.
+
 For package labeling, scan classification, or pre-routing handler selection, read `prime-shipping-label-classification.md`.
 
 For orchestration work, read `prime-process-orchestration.md`.
@@ -407,6 +425,9 @@ defines how work moves
 ALIGNMENT / DECOMPOSITION / FEEDBACK
 defines what must be true before and during movement
 
+ALIGNED INSTRUCTION
+defines what limits govern teaching
+
 SHIPPING LABEL / CLASSIFICATION
 defines what metadata accompanies cargo and how pre-routing interpretation is governed
 
@@ -423,4 +444,4 @@ RELEASE
 defines when delivery is established
 ```
 
-> **The doctrine stack should be readable as one system, not twelve unrelated documents.**
+> **The doctrine stack should be readable as one system, not thirteen unrelated documents.**
