@@ -16,6 +16,8 @@ COMPOSITION STANDARD
         ↓
 LOGISTICS FRAMEWORK
         ↓
+PARCELS LAYER ARCHITECTURE
+        ↓
 PRIME PROCESS
         ↓
 PRIME ALIGNMENT, DECOMPOSITION & FEEDBACK
@@ -42,6 +44,7 @@ Each layer answers a different class of question.
 | Contract | `production-contract.md` | What is authoritative, what is generated, and what may be edited? | Defines source → compiler/renderer → generated output ownership. |
 | Composition | `composition-standard.md` | What visual grammar governs DraftDeck output? | Defines the pure-white drafting standard, typography, line hierarchy, accent discipline, and prohibited visual treatments. |
 | Ontology | `logistics-framework.md` | What conceptual model governs the system? | Establishes shipping-and-receiving logistics as canonical and defines the control spine: LOCATION → ACCOUNTING → ADJUDICATION → AUTHORITY. |
+| Structure | `parcels-layer-architecture.md` | Where does a concern, rule, or failure live in the system? | Defines the seven PARCELS layers (Platform, Attachment, Routing, Carriage, Exchange, Language, Service), canonical ownership by dominant failure mode, governance as a vertical plane, and the three-axis model: CONSTITUTION × PARCELS × PRIME. |
 | Process | `prime-process.md` | How does work move through the system? | Defines PRIME: Package → Route → Inspect → Move → Establish Delivery. |
 | Alignment / Decomposition / Feedback | `prime-alignment-decomposition-feedback.md` | What must be aligned, decomposed, and instrumented before and during execution? | Defines alignment before packaging, destination vs journey artifacts, dependency graphs, vertical slices, route instrumentation, feedback quality, review proportionality, and stale-context handling. |
 | Shipping Label / Classification | `prime-shipping-label-classification.md` | What metadata must accompany a package before routing, and how may classifiers influence route selection without acquiring authority? | Defines the Prime Shipping Label, declared/derived/classified fields, scan validation, declared-vs-observed comparison, route classes, classifier boundaries, handler capability mapping, label versioning, and separation from the Verification Tag. |
@@ -59,13 +62,14 @@ A new contributor, agent, or adapter should read doctrine in this order:
 1. `production-contract.md`
 2. `composition-standard.md`
 3. `logistics-framework.md`
-4. `prime-process.md`
-5. `prime-alignment-decomposition-feedback.md`
-6. `prime-shipping-label-classification.md`
-7. `prime-process-orchestration.md`
-8. `prime-handoff-context-routing.md`
-9. `prime-control-plane-reference-architecture.md`
-10. `release-qa.md`
+4. `parcels-layer-architecture.md`
+5. `prime-process.md`
+6. `prime-alignment-decomposition-feedback.md`
+7. `prime-shipping-label-classification.md`
+8. `prime-process-orchestration.md`
+9. `prime-handoff-context-routing.md`
+10. `prime-control-plane-reference-architecture.md`
+11. `release-qa.md`
 
 The order matters.
 
@@ -87,31 +91,37 @@ The Logistics Framework is canonical.
 
 Predecessor aviation-era ontology is prohibited in current production source, generated output, user-facing documentation, and active training doctrine except where a meta-doctrine file explicitly names the prohibition.
 
-### Rule 3 — PRIME before execution
+### Rule 3 — Structure before argument
+
+Locate a concern before debating it.
+
+PARCELS assigns every concern a canonical home by dominant failure mode; detection location does not determine layer ownership.
+
+### Rule 4 — PRIME before execution
 
 Work should be packaged, routed, inspected, moved, and have delivery established.
 
 Execution alone is not completion.
 
-### Rule 4 — Alignment before packaging
+### Rule 5 — Alignment before packaging
 
 Alignment precedes packaging.
 
 Instrument the route before sending the package; a package that moves without acceptance signals is cargo without a manifest.
 
-### Rule 5 — Labels and classifiers do not replace authority
+### Rule 6 — Labels and classifiers do not replace authority
 
 A label declares. A classifier interprets. A routing policy assigns.
 
 Classification informs routing; classification does not grant release authority.
 
-### Rule 6 — Orchestration does not replace authority
+### Rule 7 — Orchestration does not replace authority
 
 An orchestrator may classify, schedule, route, hold, compare, and report.
 
 Human release authority remains human where the workflow requires human authorization.
 
-### Rule 7 — Context is cargo
+### Rule 8 — Context is cargo
 
 Context should be routed, not accumulated.
 
@@ -119,13 +129,13 @@ Out-of-scope work should become a new package rather than contaminating the pare
 
 Stale context is active contamination: in an agentic system, obsolete documentation is retrieved and acted upon as if it were current authority.
 
-### Rule 8 — Implementation serves doctrine
+### Rule 9 — Implementation serves doctrine
 
 The domain defines the interfaces. Frameworks and services implement them.
 
 Implementation candidates may change without changing the doctrine they implement.
 
-### Rule 9 — Release requires evidence
+### Rule 10 — Release requires evidence
 
 A build, test pass, commit, or deployment may be necessary but is not automatically sufficient to establish delivery or release.
 
@@ -142,6 +152,14 @@ The following statements summarize the active doctrine stack:
 > **Data is cargo. Humans are senders and receivers. Agents are couriers. Models are freight. Verification is proof of delivery.**
 
 > **LOCATION → ACCOUNTING → ADJUDICATION → AUTHORITY**
+
+> **CONSTITUTION = why/limits × PARCELS = where × PRIME = how.**
+
+> **Layer ownership ≠ layer exclusivity.**
+
+> **Detection location does not determine layer ownership.**
+
+> **Governance is a vertical plane across all seven layers; there is no L8.**
 
 > **PRIME = Package → Route → Inspect → Move → Establish Delivery.**
 
@@ -304,16 +322,19 @@ A fresh agent entering DraftDeck should use this order:
 1. Read this index.
 2. Read production-contract.md.
 3. Read logistics-framework.md.
-4. Read prime-process.md.
-5. Read the most relevant downstream doctrine for the task.
-6. Inspect the active repository state.
-7. Package the requested work.
-8. Route it.
-9. Inspect before movement.
-10. Establish delivery before declaring completion.
+4. Read parcels-layer-architecture.md.
+5. Read prime-process.md.
+6. Read the most relevant downstream doctrine for the task.
+7. Inspect the active repository state.
+8. Package the requested work.
+9. Route it.
+10. Inspect before movement.
+11. Establish delivery before declaring completion.
 ```
 
 For visual-production work, also read `composition-standard.md` before implementation.
+
+For locating a defect, doctrine, or design decision within the system, read `parcels-layer-architecture.md`.
 
 For planning, decomposition, or feedback design, read `prime-alignment-decomposition-feedback.md`.
 
@@ -345,6 +366,9 @@ defines visual grammar
 ONTOLOGY
 defines what the system is
 
+PARCELS
+defines where concerns live
+
 PROCESS
 defines how work moves
 
@@ -367,4 +391,4 @@ RELEASE
 defines when delivery is established
 ```
 
-> **The doctrine stack should be readable as one system, not ten unrelated documents.**
+> **The doctrine stack should be readable as one system, not eleven unrelated documents.**
