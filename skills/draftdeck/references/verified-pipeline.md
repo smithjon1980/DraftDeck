@@ -2,7 +2,7 @@
 
 ## Successful run: 2026-10-05
 
-Reference: page 1 of AI_Pilot_Interface_QA_Specification.pdf, a raster 15-page document supplied by the user. First page: large male connector at left, socket cutaway at right, enlarged pin cutaway below, bold two-line serif title, dimension callouts, drafting frame, angled orange approval stamp, lower-right title block.
+Reference: page 1 of retired aviation-era reference PDF, a raster 15-page document supplied by the user. First page: large male connector at left, socket cutaway at right, enlarged pin cutaway below, bold two-line serif title, dimension callouts, drafting frame, angled orange approval stamp, lower-right title block.
 
 1. Render the PDF page with Poppler and inspect it visually.
 2. Use image editing to remove every title, dimension label, margin coordinate, stamp, and title-block word. Preserve connector/cutaway artwork and drafting linework. Use pure white ground for the infographic branch.
@@ -21,9 +21,9 @@ Verified image assets on the page: 1.
 Page reported editable. Titles, dimension annotations, margin coordinates, stamp words and title-block metadata appeared as separate text elements. CSS stamp rotation and border appeared in the preview. Connector/cutaway asset remained separate.
 
 User-facing saved artifacts:
-- AI_Pilot_Interface_QA_Layered.html
-- AI_Pilot_Connector_Artwork.png
-- AI_Pilot_Interface_QA_Canva_Final_Preview.png
+- Logistics_Framework_Layered.html
+- Logistics_Framework_Connector_Artwork.png
+- Logistics_Framework_Canva_Final_Preview.png
 
 Resolve these by filename through Library if needed; do not assume original scratch paths persist.
 
@@ -48,6 +48,6 @@ An earlier 2400 × 1350 run verified 99 live text elements but merely repeated a
 
 Discover tool names and schemas at execution time. The demonstrated sequence was import → start editing transaction → inspect richtexts/fills/pages → get thumbnail → show and inspect preview → cancel inspection transaction. Do not retain transaction IDs or expiring image URLs for reuse.
 
-## AI Pilot style route
+## Logistics Framework style route
 
 Follow the selected reference and current project standard together. Infographic branch: pure white #FFFFFF; near-black technical ink; burnt orange #B34700; heavy serif action title; uppercase monospace kicker; line-built diagrams/hatching and drafting rails. The distinct flight-manual branch uses parchment. Do not silently substitute one branch for the other. Use the actual source copy and record ambiguities; illustrations do not substantiate engineering dimensions or an approval state.
