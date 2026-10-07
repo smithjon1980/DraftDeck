@@ -140,7 +140,7 @@ Production status note: NotebookLM Deep Dives and generated visuals are pre-prod
 
 | Program competency | Built in | Evidenced by |
 |---|---|---|
-| Bound operational requests into packages | M01 | Workbook M01; Quiz 01 (applied) |
+| Bound operational requests into packages | M01 | Workbook M01; Quiz 01 (applied); M01-P01 staged package task and unfamiliar alternate/transfer cases, with criterion evidence recorded |
 | Select and authorize routes | M02 | Workbook M02; Quiz 02 (applied) |
 | Control multi-package environments | M03 | Workbook M03; facility scenario |
 | Execute custody-preserving transfers | M04 | Workbook M04; handoff exercise |
@@ -183,6 +183,23 @@ QUALIFICATION DECISION
 > **QUIZ PASS ≠ OPERATOR QUALIFICATION.**
 
 > **Self-reported proficiency informs routing; demonstrated performance provides the primary evidence for instructional state.**
+
+## 10.1 Module 01 performance-assessment pilot
+
+Candidate instruments are in `training/boss-operator-program/module-01/assessment/`.
+
+M01-P01 operationalizes the locked Module 01 objective and seven enabling objectives through a staged request, targeted clarification, bounded package declaration and candidate-evidence explanation. Two additional candidate-reframing criteria check permitted admission and the separation of generation, evidence and release authority.
+
+- The alignment index maps every objective to a task response and rubric criterion.
+- The rubric uses anchored levels 0–3. Its provisional task decision requires all nine criteria at least 2 and no critical error; averaging cannot erase a required failure.
+- Critical errors include fabricated permission, prohibited execution, stale/invented source facts and fabricated verification/release evidence.
+- The instructor guide separates supported practice from independent performance and declares allowed AI assistance and access accommodations.
+- Constructed specimens support assessor calibration; unfamiliar alternate and delayed-transfer cases test conditional judgment beyond the logistics analogy.
+- The pilot records independent assessor ratings before reconciliation, per-criterion performance, critical-error counts, administration deviations and intended-use limits.
+
+These are proposed pilot rules, not validated qualification cut scores. MEETS THIS TASK provides evidence for one performance sample; Module 01 completion still requires its other planned evidence, and operator qualification still requires the full program and integrated simulation.
+
+The pilot must be reviewed before using this instrument for consequential qualification decisions. Reconcile the earlier Module 01 source's legacy role mapping with the requested candidate architecture before compiling a controlled media release. Creating the instruments does not establish pilot results or constitutional promotion.
 
 ## 11. Qualification Requirements
 
