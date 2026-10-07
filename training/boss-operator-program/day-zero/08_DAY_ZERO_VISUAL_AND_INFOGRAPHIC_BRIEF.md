@@ -1,68 +1,50 @@
-# Day Zero Visual & Infographic Brief
+# Day Zero Visual and Infographic Brief
 
-**Status:** Candidate Production Brief
+**Revision:** v2.0 — Reframed Day Zero
+**Status:** Candidate training material; not a controlled release.
 
-## Visual objective
+## Purpose
+Show the complete governed interaction without confusing people, payloads and capabilities. Facts come from Orientation Source v2.0.
 
-Make information movement visible without building a fictional shipping world.
+## Visual system
+Pure white #FFFFFF canvas. CAD/ISO drafting aesthetic, open rails and fine linework.
+Zero solid fills or gradients. Burnt Orange #B34700 only for active conditions or alerts.
+Wireframe icons, square caps, miter joins and non-scaling strokes.
+Separate background, story/artwork and live editable text layers.
+Keep logistics structural; exclude aviation-domain imagery and vocabulary.
 
-The visual system may borrow structural cues from a generic parcel-carrier counter, label, sort flow, and proof-of-delivery process. Every composition must make clear that these are correspondences for reasoning about real information work.
+## Role card
+Human: sender/receiver.
+Data + task: payload.
+Package: bounded accountability.
+Agent: service counter/admission/routing.
+Model: processing capability.
+Tool: specialized capability.
+Runtime: handling environment.
+Verifier: evidence evaluation.
+Release authority: contextual permission.
 
-## Required visuals
+## Two-boundary plate
+Entry: declaration, classification, permission, ACCEPT/HOLD/REFUSE.
+Center: eligible route, execution, generated candidate.
+Exit: conditions, evidence, ACCEPT/REVISE/REJECT/ESCALATE, applicable release authority.
+No generated-to-final bypass.
 
-### V01 — Information Already Moves
-Person / file / model / app / reviewer connections showing ordinary information movement.
+## Infographic family
+Square: two boundaries and governing statement.
+Portrait: package fields, three control questions and dispositions.
+Landscape: full interaction and roles.
+Each format has a distinct reference job.
 
-Caption:
-**BOSS gives us a logistics model for seeing those movements clearly.**
+## Required copy
+REQUEST ≠ PACKAGE.
+CAPABILITY ≠ PERMISSION.
+GENERATED ≠ ESTABLISHED.
+EVAL PASS ≠ RELEASE.
+Admission governs input. Adjudication governs output. Capability governs neither by itself.
+PACKAGE → ROUTE → INSPECT → MOVE → ESTABLISH DELIVERY.
 
-### V02 — Structural Correspondence, Not Literal Identity
-Two-column comparison:
-parcel-shipping structure ↔ information-work structure.
-Include an explicit boundary note:
-**The correspondence is structural, not literal.**
-
-### V03 — The Shipping Counter
-```text
-REQUEST
-→ PACKAGE PREPARATION
-→ SHIPPING LABEL
-→ ADMISSION INSPECTION
-→ ACCEPT / HOLD / REFUSE
-```
-
-### V04 — What the Label Makes Explicit
-What is being sent / destination / required inputs / handling / permissions / acceptance conditions.
-
-### V05 — Classification Before Capability
-```text
-CLASSIFY
-→ DETERMINE ELIGIBILITY
-→ SELECT HANDLER
-```
-with:
-**Capability is downstream from admissibility.**
-
-### V06 — Two Inspections
-Side-by-side:
-- Admission Inspection — May this package enter controlled movement?
-- PRIME INSPECT — Are the conditions for this particular movement satisfied?
-
-### V07 — PRIME Behind the Counter
-PACKAGE → ROUTE → INSPECT → MOVE → ESTABLISH DELIVERY
-
-### V08 — Seven-Module Operational Progression
-Counter → routing → sort facility → custody transfer → transport selection → high-control handling → network orchestration.
-
-## Prohibited visual treatments
-
-- learner depicted as package/cargo;
-- BOSS employees in fictional carrier uniforms;
-- “welcome to the network” world-building;
-- consumer-shopping/cart/doorstep fulfillment as primary anchor;
-- visual implication that AI models are literally trucks or warehouses;
-- backstage learner-state mechanics rendered as parcel flow.
-
-## Required audit
-
-Every generated visual receives a **METAPHOR LITERALIZATION** check during BOSS REFINEMENT.
+## QA
+Verify roles, sequence, distinct gates, readable text and consequence-sensitive review.
+Check visual fidelity, live text, layers and actual import editability.
+The brief is a candidate production specification; artwork and imported layers are not established by it.

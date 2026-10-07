@@ -1,86 +1,57 @@
 # Day Zero Instructor Guide
 
-**Status:** Candidate Instructor Treatment
+**Revision:** v2.0 — Reframed Day Zero
+**Status:** Candidate training material; not a controlled release.
 
-## Instructor responsibility
+## Facilitation responsibility
+Teach real information work. Use logistics briefly to expose structure and return to the actual file, request, system and result. Keep diagnostics, instructional routing and learner records backstage.
 
-Keep the two planes separate.
+Use Day Zero Control and Orientation Source v2.0. The architecture remains candidate; do not announce a constitutional promotion.
 
-The Instructional Control Plane is backstage. You may use the Learning Envelope, diagnostic, learner-state record, remediation, and assessment to govern instruction. Do not narrate those mechanics as though the learner were a package traveling through the BOSS logistics model.
+## Opening demonstration
+Present: “Make this document better.”
+Ask the learner to identify what is known, what required conditions are missing, and what decisions the agent may make within its granted envelope.
+Then present a generated result that looks polished but drops a required source qualification.
+Ask what generation established and what still needs evidence.
 
-The learner-facing subject is information movement.
+The two examples make admission and output adjudication visible from the beginning.
 
-## Required opening
+## Seven-block treatment
+1. Information movement: connect to familiar real work.
+2. System identity: distinguish BOSS, framework, PARCELS, PRIME and DraftDeck.
+3. Service counter: demonstrate sender purpose and agent package construction.
+4. Admission: classify before handler selection; contrast ACCEPT, HOLD and REFUSE.
+5. Execution and output: preserve PRIME, identify candidate state and consequence-appropriate adjudication.
+6. Modules: show expanding operational responsibility without teaching downstream mechanisms in full.
+7. Readiness: collect explanations and scenario responses; communicate administrative outcomes plainly.
 
-Begin from the learner's existing experience:
+## Three-question check
+Admission: May this package enter controlled movement?
+PRIME INSPECT: Are the conditions for this particular movement satisfied?
+Output adjudication: What does the evidence establish about the candidate for its intended use?
 
-> Every day you already move information between people, systems, models, files, and applications.
+## Misconceptions to correct
+A request already contains every required decision.
+The agent is simply a courier and the model is what is shipped.
+The strongest model is automatically an eligible handler.
+A successful tool call establishes correct delivery.
+An evaluator pass automatically authorizes release.
+Every output needs a manual human approval.
+The same review burden applies to every consequence.
+Orientation clearance grants operational permission.
 
-Then establish the problem:
+## Worked assessment guidance
+For a five-bullet summary of an approved memo, look for source-faithfulness checks, coverage and intended-use conditions. Do not infer permission from “approved memo” alone when the destination or handler is unresolved.
+For a deck, look for browser candidate inspection and editable-layer verification after import. Rendering alone is insufficient.
+For work that may trigger a consequential decision, look for stronger evidence, independence and applicable authority; do not substitute confident narration.
 
-People often focus on what a tool can do while ignoring what exactly is being sent, whether it may move, where it is allowed to go, what it must arrive with, and how delivery is established.
+## Backstage use
+The Learning Envelope captures mission, constraints and observable success.
+The diagnostic separates self-report from observed evidence.
+Clearance requires all mandatory orientation conditions; remediation is bounded and explicit.
+The learner record preserves evidence and concerns.
+No form is filled by inference, and no learner is role-played as cargo.
 
-## Anchor demonstration — the shipping counter
-
-Use a generic parcel-carrier counter.
-
-Ask learners what happens before a physical package is accepted:
-- destination is declared;
-- package information is supplied;
-- handling requirements are identified;
-- acceptance conditions are checked;
-- the carrier can ACCEPT, HOLD, or REFUSE.
-
-Then explicitly state:
-
-The correspondence is structural. Information systems are not literally parcel networks.
-
-## Required distinctions
-
-Teach:
-- package preparation before movement;
-- shipping label as explicit declaration;
-- Admission Inspection before PRIME;
-- classification before handler selection;
-- capability downstream from admissibility;
-- HOLD as a valid state;
-- PRIME behind the admission boundary.
-
-Do not teach:
-- learner as cargo;
-- “welcome to the network” fictional narration;
-- learner-state routing as information logistics;
-- consumer-fulfillment imagery as the main anchor;
-- handler selection before classification.
-
-## Two-inspection check
-
-Ask:
-
-“What question does Admission Inspection answer?”
-
-Expected:
-**May this package enter controlled movement?**
-
-Ask:
-
-“What question does PRIME INSPECT answer?”
-
-Expected:
-**Are the conditions for this particular movement satisfied?**
-
-## Misconception checks
-
-Correct these immediately:
-- “The strongest model should get the work.”
-- “If the tool can open the file, it may receive the file.”
-- “HOLD means failure.”
-- “The shipping metaphor is literal.”
-- “PRIME starts before admission.”
-- “Classification happens after selecting a tool.”
-
-## Day Zero close
-
-Learners should leave with the operating model, not the instructional machinery.
-
-Administrative readiness decisions are recorded backstage and should be communicated plainly without logistics role-play.
+## Answer guidance and handoff
+Workbook answers should explain both boundaries. Accept different valid routes when requirements and evidence support them. Record observed understanding, not a fabricated global ability score.
+Handoff only the instructional information Module 01 needs. Completing Day Zero is orientation progress, not qualification or release authority.

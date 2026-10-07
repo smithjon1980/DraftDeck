@@ -1,6 +1,9 @@
-# D0-A06 — From One Package to a Whole Network
+# D0-A06 — From One Package to Network Accountability
 
-**Target:** 12–16 minute NotebookLM audio overview
+**Revision:** v2.0 — Reframed Day Zero
+**Status:** Candidate training material; not a controlled release.
+
+**Production duration target (not rendered audio):** 12–16 minute NotebookLM audio overview
 
 The seven modules of the BOSS Operator Program follow a simple progression.
 
@@ -89,5 +92,13 @@ High-control handling.
 Network orchestration.
 
 The course moves from one bounded package to many coordinated movements without losing package-level accountability.
+
+
+## Both boundaries at every scale
+The agent's admission responsibility and the candidate-output boundary remain visible throughout the progression.
+A single package needs requirements and evidence. Many packages additionally need identity, dependency and custody continuity.
+High-Control Operations increases adjudication burden as consequence increases; it does not replace evidence with confidence or universally require manual review of every low-consequence result.
+Network Orchestration must account for each candidate's source, checked properties, unresolved conditions and release context.
+Training, qualification, certification, credentialing and authorization remain distinct. A module quiz produces evidence, not universal permission.
 
 In the final Day Zero overview, we close the orientation and establish what you should understand before beginning Module 01.

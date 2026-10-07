@@ -1,6 +1,9 @@
-# D0-A05 — PRIME Behind the Counter
+# D0-A05 — PRIME, Candidate Output and Release
 
-**Target:** 12–16 minute NotebookLM audio overview
+**Revision:** v2.0 — Reframed Day Zero
+**Status:** Candidate training material; not a controlled release.
+
+**Production duration target (not rendered audio):** 12–16 minute NotebookLM audio overview
 
 By this point, the package has been prepared.
 
@@ -73,5 +76,21 @@ PRIME does not replace the admission boundary.
 Admission determines whether the package may enter controlled movement.
 
 PRIME governs what happens after that decision.
+
+
+## After execution: candidate state
+The tool has produced an artifact. That establishes existence, not fitness.
+GENERATED ≠ ESTABLISHED.
+OUTPUT ≠ VERIFIED RESULT.
+Adjudication compares the candidate with the package's acceptance conditions using evidence appropriate to intended use.
+For the editable deck, check source-faithfulness, required visual geometry, live text, browser fidelity and editable layers after import. A browser render cannot establish every Canva property.
+Candidate dispositions are ACCEPT / REVISE / REJECT / ESCALATE.
+Review can combine deterministic checks, source comparison, tests, independent evaluation, policy checks or human review.
+The burden scales with consequence, not confidence. Manual human approval is not mandatory for every output. Higher-consequence uses may require stronger independence or explicit human authority.
+A verifier's pass does not automatically confer release authority.
+EVAL PASS ≠ RELEASE.
+BUILD_CAPABILITY ≠ REVIEW_CAPABILITY ≠ RELEASE_AUTHORITY.
+PRIME remains five stages. Output adjudication and applicable release authority support ESTABLISH DELIVERY; they do not add a new letter.
+Admission asks whether work may enter. PRIME INSPECT asks whether a particular movement's conditions are satisfied. Output adjudication asks what evidence establishes about the candidate.
 
 In the next overview, we use this same operational logic to see how the seven formal modules expand from one package to an entire accountable network.

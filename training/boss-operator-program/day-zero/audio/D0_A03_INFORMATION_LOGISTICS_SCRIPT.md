@@ -1,6 +1,9 @@
-# D0-A03 — Before Anything Moves: Build the Package
+# D0-A03 — From Request to Accountable Package
 
-**Target:** 10–14 minute NotebookLM audio overview
+**Revision:** v2.0 — Reframed Day Zero
+**Status:** Candidate training material; not a controlled release.
+
+**Production duration target (not rendered audio):** 10–14 minute NotebookLM audio overview
 
 Imagine walking into a parcel-carrier location with something important to send.
 
@@ -87,5 +90,14 @@ Again, this is not about pretending data is a box.
 It is about making scope visible.
 
 Before you move information, define the package.
+
+
+## Sender and admission agent
+REQUEST ≠ PACKAGE.
+The sender states the need and supplies necessary truth. The agent performs intake, package construction, admission control, classification, routing and delivery establishment.
+The model is a processing capability, not the payload being shipped.
+A required missing decision outside the agent's envelope produces HOLD and clarification or escalation. Within-scope routine choices do not require needless confirmation.
+Acceptance conditions must address the result as well as its destination. For a handout, define source coverage and protected qualifications, not just page count.
+Execution will create a candidate. The package must say what evidence will establish its fitness and what authority permits use.
 
 In the next overview, we reach the acceptance counter itself: the point where BOSS separates what is technically possible from what is actually permitted.

@@ -1,33 +1,36 @@
-# Metaphor Literalization — Worked Failure Specimen
+# Day Zero QA Worked Example
 
-**Status:** WIP QA specimen  
-**Source artifact:** `Why_Capability_Does_Not_Equal_Permission_Voiceover_Script_v1.md`  
-**Purpose:** Preserve the first NotebookLM Day Zero output as evidence of a named refinement failure mode.
+**Revision:** v2.0 — Reframed Day Zero
+**Status:** Candidate training material; not a controlled release.
 
-## Failure mode
+## Preserved failure specimen
+The original Why_Capability_Does_Not_Equal_Permission_Voiceover_Script_v1.md is historical WIP evidence. Preserve its wording unchanged in the transcript archive. It is not a v2.0 learner source.
 
-**FAIL — METAPHOR LITERALIZATION**
+## Named failure
+FAIL — METAPHOR LITERALIZATION: explanatory parcel language became a fictional setting and backstage instructional machinery became the learner-facing subject.
 
-The generated audio promoted the parcel/logistics teaching metaphor into the ontology and allowed backstage instructional-design machinery to become learner-facing subject matter.
+## Reframing checks
+Required: real information movement; people remain people; agent as service counter; model as processing capability; request/package distinction; classification before handler selection; admission before execution; candidate output after execution; consequence-appropriate adjudication before authorized release.
+Required: PRIME unchanged; entry inspection and particular-movement inspection distinct.
+Required: no universal manual-human-review requirement.
+Check all derivatives, not just the opening paragraph.
 
-## Correction standard
+## Pipeline specimen
+A generic downstream presentation generator substituted for required HTML/CSS/SVG.
+FAIL — PIPELINE ROUTE MISMATCH / TEMPLATE COLLAPSE.
+Correction returns to the last valid upstream source and browser-native compile. Inspect fidelity and layers before Canva handoff; inspect editability after import.
+Do not polish an invalid substituted route and call it DraftDeck.
 
-The corrected Day Zero source set is governed by `training/instructional-architecture.md`.
-
-Required corrections:
-
-- real information movement remains the subject;
-- shipping-counter language is structural correspondence only;
-- the learner is never cargo and never “enters the network”;
-- the Instructional Control Plane remains backstage;
-- Admission Inspection precedes PRIME;
-- classification precedes handler selection;
-- capability is downstream from admissibility.
+## Review record
+Artifact/revision:
+Observed failure:
+Source requirement:
+Correction:
+Evidence:
+Disposition:
+Unresolved conditions:
+Applicable release authority:
+These entries are unfilled. The existence of this checklist does not establish PASS.
 
 ## Archive rule
-
-The original transcript remains preserved unchanged as WIP evidence. It is not deleted or silently rewritten.
-
-The corrected scripts are new controlled source revisions.
-
-> **A failed generated artifact can remain valuable as verification evidence when its failure mode is explicitly classified and preserved.**
+Original failed artifacts retain historical identity. Revised controlled sources use new revisions. A failed specimen can provide valuable evidence without becoming an ingestion source.

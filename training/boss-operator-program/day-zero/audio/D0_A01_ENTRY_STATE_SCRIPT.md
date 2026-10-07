@@ -1,6 +1,9 @@
 # D0-A01 — You Already Move Information
 
-**Target:** 10–14 minute NotebookLM audio overview
+**Revision:** v2.0 — Reframed Day Zero
+**Status:** Candidate training material; not a controlled release.
+
+**Production duration target (not rendered audio):** 10–14 minute NotebookLM audio overview
 
 Every day, without calling it logistics, you move information.
 
@@ -67,5 +70,13 @@ Before selecting a destination, understand the handling requirements.
 Before assuming success, establish evidence.
 
 That discipline is the foundation for every module that follows.
+
+
+## Both boundaries in the opening example
+A request reaches an agent/interface, not an ungoverned entitlement to raw capability. The agent helps make the work accountable before it selects an eligible route.
+After execution, a result exists as a candidate. We must establish what evidence supports its intended use and what authority permits release.
+Admission governs input. Adjudication governs output. Capability governs neither by itself.
+For the customer-file example, even an eligible summarizer can produce a misleading summary. Admission permission and source-faithfulness evidence are separate requirements.
+A polished answer does not erase either responsibility.
 
 In the next overview, we look at the BOSS system itself—not as a fictional world, but as the framework that gives us a consistent language for governing these real movements.

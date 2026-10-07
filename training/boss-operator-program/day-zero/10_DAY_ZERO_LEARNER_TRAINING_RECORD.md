@@ -1,11 +1,12 @@
 # Day Zero Learner Training Record
 
-**Status:** Candidate Record Schema  
-**Purpose:** Preserve durable learner state from entry through Module 01 handoff.
+**Revision:** v2.0 — Reframed Day Zero
+**Status:** Candidate training material; not a controlled release.
 
-## Required fields
+## Purpose
+Unfilled schema for instructional continuity, excluded from learner-media ingestion.
 
-```text
+## Fields
 LEARNER_ID
 ENTRY_STATUS
 PREBOARDING_STATUS
@@ -16,26 +17,30 @@ LEARNING_CONSTRAINTS
 AVAILABLE_TOOLS
 DECLARED_EXPERIENCE
 OBSERVED_BASELINE
+REQUEST_PACKAGE_UNDERSTANDING
+ADMISSION_HANDLING_UNDERSTANDING
+PRIME_INSPECTION_UNDERSTANDING
+CANDIDATE_ADJUDICATION_UNDERSTANDING
+CONSEQUENCE_REVIEW_UNDERSTANDING
+RELEASE_AUTHORITY_UNDERSTANDING
+EVIDENCE_REFERENCES
 KNOWN_GAPS
 REMEDIATION_ITEMS
 ORIENTATION_CLEARANCE
-INITIAL_ROUTE
+INITIAL_INSTRUCTIONAL_ROUTE
+ROUTING_CONCERN
 MODULE_01_ENTRY_STATE
 RECORD_VERSION
 UPDATED_AT
 UPDATED_BY
-```
 
-## State rules
+## Rules
+Separate self-report from evidence. Keep unknowns explicit.
+Training acceptance does not establish clearance; clearance does not establish qualification.
+Authorization is not inferred from training.
+Do not infer assessment results from document completion or conversational familiarity.
+No learner values are populated.
 
-- Self-report and demonstrated evidence remain separate fields.
-- Unknowns remain unknown; do not fill them by inference.
-- A learner can be accepted while Day Zero remains on HOLD.
-- A learner can be cleared with remediation without being qualified.
-- Authorization is not recorded as implied by training status.
-
-## Handoff to Module 01
-
-The record passed into Module 01 should contain only what Module 01 needs for instructional routing.
-
-Learning continuity depends on durable learner state, not conversational memory.
+## Handoff
+Pass only mission, relevant constraints, observed baseline, gaps, remediation and evidence needed by Module 01.
+Durable records support continuity; conversational memory alone does not.

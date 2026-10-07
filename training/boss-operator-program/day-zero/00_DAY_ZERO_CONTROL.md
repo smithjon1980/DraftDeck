@@ -1,102 +1,61 @@
-# Day Zero Control Document
+# Day Zero Control
 
-**Status:** Candidate Controlled Training Material  
-**Program:** BOSS Operator Program  
-**Function:** Day Zero orientation and calibration control  
-**Authority:** Doctrine > POI > Instructional Architecture > Day Zero Control > Day Zero learner-facing artifacts.
+**Revision:** v2.0 — Reframed Day Zero
+**Status:** Candidate training material; not a controlled release.
 
-## Purpose
+## Purpose and authority
+Day Zero introduces responsible information work before Module 01. It is orientation and calibration, not an eighth module and not operator qualification.
 
-Day Zero prepares the learner to understand the BOSS information-logistics model before formal Module 01 training begins.
+BOSS — Bioscillate Operating System by Seven owns the doctrine. Doctrine and the Plan of Instruction govern the course; instructional architecture governs delivery; this document governs Day Zero derivatives. The agent-mediated service and candidate-state note is a candidate architecture, pending formal promotion. This revision applies that note to Day Zero under the requested reframing. A conflict with higher authority must be surfaced, not silently harmonized or called a doctrine change.
 
-Day Zero must preserve the two-plane architecture:
+## Terminal objective
+Given an ordinary AI-work scenario, the learner can distinguish request from package; identify the admission agent's responsibilities; explain handling eligibility before capability selection; state PRIME; distinguish candidate output, verification and authorized release; and choose an evidence burden appropriate to the consequence.
 
-- **Instructional Control Plane — backstage.** POI, Learning Envelope, diagnostics, learner state, assessment, remediation, and qualification govern how instruction is designed.
-- **Operational Teaching Model — frontstage.** Sender, request, package, shipping label, admission inspection, classification, route, facility, transfer, transport, high-control handling, orchestration, proof of delivery, and release are what the learner is taught.
+## Two boundaries
+Admission governs input. Adjudication governs output. Capability governs neither by itself.
 
-> **Instructional design governs how BOSS is taught. It is not the subject being taught.**
+Before execution: intake, alignment, package construction, declaration, handling classification and permission checks support ACCEPT / HOLD / REFUSE. Classification is completed before handler selection. If required information is unresolved, HOLD and clarify within the authorized scope.
 
-## Canonical learner-facing frame
+After execution: generated work remains candidate state. Adjudication compares evidence with intended-use conditions and may ACCEPT / REVISE / REJECT / ESCALATE. Release requires the applicable authority. Review strength follows consequence; a manual human approval is not mandatory for every output.
 
-> Every day you already move information between people, systems, models, files, and applications. Most failures happen because we pay attention to the work being performed and not enough attention to what was actually sent, where it was allowed to go, what it needed to arrive with, and how we know it arrived correctly. BOSS gives us a logistics model for seeing those movements clearly.
+## Roles
+Human: sender or receiver, supplying purpose and necessary truth.
+Request: expression of need.
+Data and task: payload.
+Package: bounded unit of accountability.
+Agent: service counter, admission agent and routing coordinator within a granted envelope.
+Model: processing capability.
+Tool: specialized handling capability.
+Runtime: handling environment.
+Verifier: evaluates evidence within its remit.
+Release authority: permits use in a specified context; generation does not confer it.
 
-## Metaphor discipline
+## PRIME and inspections
+PACKAGE → ROUTE → INSPECT → MOVE → ESTABLISH DELIVERY
 
-The logistics model is structural correspondence, not a fictional setting.
+Admission Inspection asks: May this package enter controlled movement?
+PRIME INSPECT asks: Are the conditions for this particular movement satisfied?
+Output adjudication asks: What does the evidence establish about this candidate for its intended use?
 
-Prohibited:
-- learner as cargo, package, freight, courier, or shipment;
-- learner "entering the network";
-- fictional BOSS Shipping Company narration;
-- learner-state mechanics narrated as logistics operations;
-- consumer-fulfillment framing as the primary anchor.
+These are distinct control questions. Do not change PRIME or insert a sixth letter. Admission constrains entry; candidate evaluation and release support ESTABLISH DELIVERY.
 
-Required:
-- real information movement remains the subject;
-- generic parcel-carrier counter operations may be used as an explanatory analogy;
-- the learner remains a person observing and governing information work;
-- logistics vocabulary names structures of reasoning, not literal identities.
-
-## Frontstage anchor
-
-The first teaching image is a familiar shipping counter:
-
-```text
-NEED / REQUEST
-↓
-PACKAGE PREPARATION
-↓
-SHIPPING LABEL
-↓
-ADMISSION INSPECTION
-↓
-ACCEPT / HOLD / REFUSE
-↓
-CLASSIFY
-↓
-ROUTE
-↓
-CONTROLLED MOVEMENT
-↓
-VERIFY
-↓
-RELEASE
-```
-
-The package in the model is information work.
-
-## Two inspections
-
-**Admission Inspection:** *May this package enter controlled movement?*
-
-**PRIME INSPECT:** *Are the conditions for this particular movement satisfied?*
-
-PRIME remains unchanged:
-
-> **PACKAGE → ROUTE → INSPECT → MOVE → ESTABLISH DELIVERY**
-
-Admission is the gate before governed movement.
-
-## Day Zero terminal objective
-
-At the conclusion of Day Zero, the learner can explain how BOSS uses logistics as a reasoning model for information movement; distinguish package admission from operational inspection; explain why classification precedes handler selection; state PRIME in sequence; recognize HOLD as a valid control state; and distinguish training from qualification and authorization.
-
-## Day Zero orientation blocks
-
-1. The work you already do: information moves.
-2. BOSS as a model for seeing movement clearly.
-3. The shipping counter: package declaration before movement.
-4. Admission, classification, permission, and HOLD.
-5. PRIME behind the counter.
-6. The seven-module operating progression.
+## Seven orientation blocks
+1. The information work you already do.
+2. BOSS and the two governed boundaries.
+3. Request, agent and accountable package.
+4. Admission, classification, permission and HOLD.
+5. PRIME, candidate output, adjudication and release.
+6. Seven-module progression and expanding consequence.
 7. Readiness for Module 01.
 
-## Release rule
+## Teaching boundary
+Instructional Control Plane: POI, Learning Envelope, diagnostics, remediation, learner records and qualification stay backstage.
+Operational Teaching Model: responsible information work stays frontstage.
+Logistics is structural correspondence. People are never cargo. Do not create a fictional shipping employer or narrate learner-state routing as information movement.
 
-No Day Zero learner-facing artifact may ship if it:
-- literalizes the logistics metaphor;
-- exposes backstage instructional mechanics as the subject;
-- puts capability before admissibility;
-- collapses Admission Inspection into PRIME INSPECT;
-- moves classification after handler selection;
-- changes PRIME.
+## Cross-artifact release conditions
+Every derivative must preserve REQUEST ≠ PACKAGE, CAPABILITY ≠ PERMISSION, CAN PROCESS ≠ MAY RECEIVE, GENERATED ≠ ESTABLISHED, EVAL PASS ≠ RELEASE, and BUILD_CAPABILITY ≠ REVIEW_CAPABILITY ≠ RELEASE_AUTHORITY.
+Reject role mappings that make models the shipped payload or agents merely couriers.
+Reject claims that every powerful system has permission, every evaluator has release authority, or every output requires manual approval.
+DraftDeck uses HTML/CSS/SVG → browser QA → Canva layered import → release QA. No PowerPoint intermediary.
+Generated media remains WIP until evidence and appropriate release authorization establish its use.

@@ -1,47 +1,59 @@
 # Day Zero Orientation Deck Brief
 
-**Status:** Candidate Production Brief  
-**Artifact:** Supplemental Day Zero orientation deck
+**Revision:** v2.0 — Reframed Day Zero
+**Status:** Candidate training material; not a controlled release.
 
-## Narrative objective
+## Purpose
+Supplemental 24-slide Day Zero deck, separate from seven formal module decks. This is a production brief, not a rendered deck.
 
-Teach the learner to see information movement as governed logistics without turning the metaphor into a fictional setting.
+## Slide arc
+01 — Governed Information Work.
+02 — You Already Move Information.
+03 — From Need to Established Result.
+04 — Logistics as Structural Correspondence.
+05 — BOSS, Framework, PARCELS, PRIME and Products.
+06 — REQUEST ≠ PACKAGE.
+07 — Agent as Service Counter.
+08 — Sender and Agent Responsibilities.
+09 — Construct the Package.
+10 — Declare Acceptance Evidence Before Execution.
+11 — Classify Handling Before Selecting Capability.
+12 — Admission Inspection.
+13 — ACCEPT / HOLD / REFUSE.
+14 — CAPABILITY ≠ PERMISSION; CAN PROCESS ≠ MAY RECEIVE.
+15 — Eligible Models, Tools and Runtime.
+16 — PRIME's Five Stages.
+17 — Admission, Movement Inspection and Output Adjudication.
+18 — Execution Produces a Candidate.
+19 — GENERATED ≠ ESTABLISHED.
+20 — Adjudication Scales with Consequence.
+21 — ACCEPT / REVISE / REJECT / ESCALATE.
+22 — EVAL PASS ≠ RELEASE; Build, Review and Authority.
+23 — DraftDeck Applies the Same Controls.
+24 — Seven Modules; Next, Package Operations.
 
-## 24-slide arc
+Every slide uses a real information example, sourced rule or meaningful relationship rather than repeated generic containers.
 
-1. Day Zero — Seeing Information Movement Clearly
-2. You Already Move Information Every Day
-3. Where Information Moves
-4. Why “The Tool Can Do It” Is Not Enough
-5. The Logistics Model — Structural, Not Literal
-6. A Familiar Anchor: The Shipping Counter
-7. Before a Carrier Accepts a Package
-8. Information Work Has the Same Control Problem
-9. Bound the Package
-10. Declare the Destination
-11. What Must Travel With It?
-12. Complete the Shipping Label
-13. Admission Inspection
-14. ACCEPT / HOLD / REFUSE
-15. Unknown Handling Requirements → HOLD
-16. Classification Before Handler Selection
-17. Capability Is Downstream From Admissibility
-18. CAPABILITY ≠ PERMISSION
-19. CAN PROCESS ≠ MAY RECEIVE
-20. Two Inspections, Two Questions
-21. PRIME Behind the Counter
-22. Movement ≠ Established Delivery
-23. The Seven-Module Operational Progression
-24. Next: Module 01 — Package Operations
+## Boundaries
+People remain people, never cargo. No fictional shipping employer.
+Backstage diagnostics are not the subject.
+Do not claim every AI interface implements the controls.
+Do not mandate manual review of every output.
+Use white canvas, zero fills/gradients, wireframes and editable text.
 
-## Copy boundary
+## Production route
+Controlled source/visual specimen → HTML/CSS/SVG → browser QA → Canva layered import → release QA.
+No PowerPoint intermediary and no generic downstream replacement.
+Declare source/version, slide count, design rules, editability, layer policy, tools and acceptance evidence.
+Before handoff prove HTML, CSS, vectors, live text, rendered pages and visual inspection.
+After import verify layer fidelity and editability.
 
-Never tell the learner:
-- they are entering a logistics network;
-- they are cargo;
-- they are joining a shipping company;
-- their learner state is being routed.
-
-## Visual boundary
-
-Use counter/label/sort/handoff imagery only when it clarifies structure. Keep real information work visible in the same frame or immediately adjacent frame.
+## Slide manifest
+SLIDE_ID
+SOURCE_REFERENCE
+VISUAL_MOTIF
+RETAINED_GEOMETRIC_IDEA
+INTENTIONAL_CHANGES
+PROHIBITED_SIMPLIFICATIONS
+QA_EVIDENCE
+Generation and browser rendering do not establish controlled release.

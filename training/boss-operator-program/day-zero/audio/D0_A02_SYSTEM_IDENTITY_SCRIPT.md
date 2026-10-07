@@ -1,6 +1,9 @@
-# D0-A02 — Seeing Information Through BOSS
+# D0-A02 — BOSS and the Two Governed Boundaries
 
-**Target:** 10–14 minute NotebookLM audio overview
+**Revision:** v2.0 — Reframed Day Zero
+**Status:** Candidate training material; not a controlled release.
+
+**Production duration target (not rendered audio):** 10–14 minute NotebookLM audio overview
 
 BOSS stands for **Bioscillate Operating System by Seven**.
 
@@ -69,5 +72,16 @@ That distinction matters because a good analogy should clarify structure without
 The point of BOSS is not to make technology sound like shipping.
 
 The point is to expose responsibilities that are easy to miss when all we see is a prompt box, an upload button, or an API call.
+
+
+## The current role map
+The human supplies purpose and necessary truth as sender or receiver.
+Data and task form the payload; a package bounds accountability.
+The agent is a service counter, admission agent and routing coordinator within its granted envelope.
+The model is processing capability. A tool is specialized handling capability. Runtime is the handling environment.
+The verifier evaluates evidence. Release authority permits the result's use in a particular context.
+BUILD_CAPABILITY ≠ REVIEW_CAPABILITY ≠ RELEASE_AUTHORITY.
+Generated output is candidate state. Review strength follows consequence, not fluent presentation.
+This reframing is a Candidate Architecture Note being applied to training; it has not been formally promoted into the constitutional layer.
 
 In the next overview, we go to the most useful frontstage anchor in the course: the shipping counter, where a package must be specified before anybody is allowed to move it.
