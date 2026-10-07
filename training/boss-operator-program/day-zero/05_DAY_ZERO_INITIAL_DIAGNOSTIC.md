@@ -1,87 +1,78 @@
 # Day Zero Initial Diagnostic
 
-**Status:** Candidate Assessment Instrument  
-**Purpose:** Establish baseline evidence for instructional routing.
+**Revision:** v2.0 — Reframed Day Zero
+**Status:** Candidate training material; not a controlled release.
 
-The diagnostic is not a qualification exam.
+## Purpose
+Establish baseline evidence for instructional planning, not qualification. Keep the instructor key out of the first learner presentation.
 
-## Part A — Declared Experience
+## Declared familiarity
+Rate 0 none / 1 exposure / 2 working familiarity / 3 frequent use.
+AI assistants:
+Task decomposition:
+File/version management:
+Source verification:
+Visual production:
+Automation:
+Package requirements:
+Candidate evaluation:
+These are self-reports.
 
-Rate familiarity from 0–3:
-0 = none
-1 = limited exposure
-2 = working familiarity
-3 = frequent practical use
+## Recognition
+1. “Improve this document” is:
+A. Always a complete package.
+B. An initial request that may need required conditions established.
+C. Permission to send it anywhere.
+D. A released result.
 
-- AI assistants
-- structured prompting
-- file/version management
-- source verification
-- visual production
-- workflow automation
-- multi-step task decomposition
+2. A handler can process a file but is not approved to receive it:
+A. Capability establishes eligibility.
+B. Skip classification.
+C. Do not send it to that handler.
+D. Send first, check later.
 
-These ratings are routing inputs only.
+3. Required handling information is unknown:
+A. Guess.
+B. Use the strongest model.
+C. HOLD and resolve it.
+D. Ignore it.
 
-## Part B — Recognition
+4. A candidate passes a schema check:
+A. Every claim is established.
+B. It is released for every use.
+C. Only the checked property is established; intended-use evidence and authority still matter.
+D. Review and release authority are identical.
 
-### 1. Which statement is correct?
-A. The most capable handler should always receive the package.  
-B. Capability and permission are separate.  
-C. Any package can move if the task is legitimate.  
-D. A completed output is automatically released.
+5. Review strength follows:
+A. Fluency.
+B. Model prestige.
+C. Consequence and intended use.
+D. Mandatory manual approval for every output.
 
-Expected: B.
+6. State PRIME; distinguish Admission Inspection and PRIME INSPECT.
+7. Explain why orientation clearance does not establish operator authorization.
 
-### 2. If handling requirements are unknown, what is the correct next state?
-A. Guess the safest route  
-B. Use the strongest available model  
-C. HOLD  
-D. Skip classification
+## Admission micro-task
+Request: “Make this better.” Source: 40-page training document. Audience, destination, protected content and acceptance conditions are absent.
+List knowns, required unknowns, decisions within scope, next state and necessary clarification.
+Seek bounded scope, no invented permission and HOLD when required conditions remain unresolved.
 
-Expected: C.
+## Output micro-task
+A polished handout opens and meets its page limit, but omits a source qualification.
+What do those checks establish? What remains unestablished? Choose a disposition and evidence needed before release.
+Seek source comparison, correction, appropriate review and applicable authority.
 
-### 3. Put PRIME in order.
-PACKAGE / ROUTE / INSPECT / MOVE / ESTABLISH DELIVERY
+## Instructor key
+1 B; 2 C; 3 C; 4 C; 5 C.
+6 PACKAGE → ROUTE → INSPECT → MOVE → ESTABLISH DELIVERY. Entry permission differs from conditions for a particular movement.
+7 Training progress does not grant context-specific permission.
 
-### 4. Which statement is correct?
-A. Training completion equals qualification.  
-B. Qualification equals authorization.  
-C. Credentialing grants universal authority.  
-D. These states remain distinct.
-
-Expected: D.
-
-## Part C — Demonstrated Micro-Task
-
-Prompt:
-
-“You receive a request: ‘Make this better.’ The source is a 40-page training document. No destination format, audience, deadline, or acceptance condition is provided.”
-
-Ask the learner to write:
-1. what is known;
-2. what is unknown;
-3. whether the work is ready to route;
-4. the next action they would take.
-
-### Evidence sought
-
-Strong response:
-- separates known from unknown;
-- refuses to invent destination/acceptance;
-- identifies need for alignment;
-- uses HOLD or equivalent bounded stop if routing requirements are insufficient.
-
-## Diagnostic Output
-
-Record:
-
-```text
-DECLARED_STATE
-OBSERVED_STATE
-GAPS
-STARTING_ROUTE
-REMEDIATION_REQUIRED
-```
-
-Do not compute a single “ability score” from these fields.
+## Evidence record
+DECLARED_STATE:
+OBSERVED_STATE:
+ADMISSION_GAPS:
+OUTPUT_ADJUDICATION_GAPS:
+STARTING_ROUTE:
+REMEDIATION_REQUIRED:
+EVIDENCE_REFERENCE:
+Do not fabricate an overall ability score.

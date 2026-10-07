@@ -1,30 +1,27 @@
-# Day Zero Audio Overview Series — Revision 2
+# Day Zero Audio Series Index
 
-**Status:** Candidate Pre-Production Source
+**Revision:** v2.0 — Reframed Day Zero
+**Status:** Candidate training material; not a controlled release.
 
-These seven audio overviews teach responsible information movement using the shipping-counter analogy as structural correspondence.
+## Candidate episode treatments
+Seven Day Zero overviews are orientation supplements, separate from the seven formal module podcasts.
+These source treatments guide generation and verification. Duration targets are not evidence of completed timed audio.
 
-They are not stories about a fictional carrier. The learner is not cargo and does not “enter the network.”
-
-## Series
-
-1. **D0-A01 — You Already Move Information**
-2. **D0-A02 — Seeing Information Through BOSS**
-3. **D0-A03 — Before Anything Moves: Build the Package**
-4. **D0-A04 — Admission Before Capability**
-5. **D0-A05 — PRIME Behind the Counter**
-6. **D0-A06 — From One Package to a Whole Network**
-7. **D0-A07 — Ready for Module 01**
+## Episodes
+D0-A01 — You Already Move Information: real work and both boundaries.
+D0-A02 — BOSS and the Two Governed Boundaries: identity, roles and candidate architecture.
+D0-A03 — From Request to Accountable Package: sender-agent alignment and declaration.
+D0-A04 — Admission Before Capability: handling, permission and HOLD.
+D0-A05 — PRIME, Candidate Output and Release: evidence, dispositions and authority.
+D0-A06 — From One Package to Network Accountability: seven-module progression.
+D0-A07 — Ready for Module 01: integrated lifecycle and readiness.
 
 ## Episode grammar
+Real information problem → brief familiar counter analogy → structural correspondence → sourced BOSS distinction → real example → responsible operational consequence.
+The agent is service-counter/admission/routing responsibility. The model is processing capability.
 
-REAL INFORMATION PROBLEM  
-→ FAMILIAR COUNTER ANALOGY  
-→ STRUCTURAL CORRESPONDENCE  
-→ BOSS RULE  
-→ REAL INFORMATION EXAMPLE  
-→ RESPONSIBLE OPERATOR CONSEQUENCE
-
-## Hard prohibition
-
-Any episode that treats the metaphor as literal fails refinement.
+## Generation and review
+Select the core source and matching script. Explain rather than read slides.
+Check admission and adjudication, exact PRIME, consequence-sensitive evidence, separate release authority and metaphor discipline.
+Keep administrative mechanics backstage.
+Archive generated audio and verbatim transcripts as WIP in the established dual-archive workflow. Original failed transcripts stay unchanged as historical evidence.

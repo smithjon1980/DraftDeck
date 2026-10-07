@@ -1,85 +1,44 @@
 # Day Zero Learning Envelope
 
-**Status:** Candidate Controlled Form  
-**Purpose:** Establish the learner's instructional routing constraints before formal teaching.
+**Revision:** v2.0 — Reframed Day Zero
+**Status:** Candidate training material; not a controlled release.
 
-> **Instruction begins with alignment, not content.**
+## Function
+Unfilled form for instructional alignment before formal teaching. Excluded from learner-media ingestion. Instruction begins with alignment, not content.
 
-## Learner Mission
+## Mission and success
+What do you want to be able to do at the end of this program?
+What practical outcome makes training worthwhile?
+Complete: I will consider the program successful when I can demonstrably ...
 
-**What do you want to be able to do at the end of this program?**
+## Experience
+Describe prior AI, workflow, file/version, verification, visual-production and automation experience.
+Describe experience constructing bounded work and evaluating generated outputs.
+Self-report informs instruction; observed performance provides evidence.
 
----
+## Time and constraints
+Hours per week:
+Preferred session length:
+Target completion window:
+Schedule constraints:
+Accessibility/device needs:
+Reading/audio preferences:
+Available tools:
+Prerequisite gaps:
+Collect only information necessary for instruction.
 
-## Why This Matters
+## Instructor alignment
+Declared state:
+Observed baseline:
+Known gaps:
+Initial instructional route:
+Remediation before or alongside Module 01:
+Evidence sought:
+Learner routing concern:
+Do not narrate instructional routing as a learner moving as cargo.
 
-**What practical outcome makes this training worth completing?**
-
----
-
-## Current Experience
-
-Describe prior experience with:
-- AI systems;
-- structured workflows;
-- file handling;
-- verification/review;
-- visual production;
-- automation or orchestration.
-
-Self-report informs routing; it does not establish qualification.
-
----
-
-## Time Envelope
-
-- Hours available per week:
-- Preferred session length:
-- Target completion window:
-- Known schedule constraints:
-
----
-
-## Learning Constraints
-
-Record anything that materially affects the instructional route:
-- accessibility needs;
-- tool-access constraints;
-- device constraints;
-- reading/audio preferences;
-- pacing needs;
-- prerequisite gaps.
-
-Do not collect information that is unnecessary for instruction.
-
----
-
-## Available Tools
-
-List the tools/environments the learner can actually access.
-
----
-
-## Success Condition
-
-Complete this sentence:
-
-**I will consider this program successful when I can demonstrably...**
-
----
-
-## Initial Route Notes
-
-Instructor/program use:
-
-- declared state:
-- observed state:
-- gaps:
-- initial route:
-- remediation before Module 01, if any:
-
----
-
-## Learner Confirmation
-
-I understand that this Learning Envelope governs instructional routing and does not itself establish qualification, certification, credentialing, or operational authorization.
+## Confirmation
+Learner confirmation:
+Instructor confirmation:
+Unresolved items:
+This form does not establish qualification, certification, credentialing or operational permission.

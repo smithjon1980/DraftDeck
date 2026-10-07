@@ -1,79 +1,47 @@
 # Day Zero Workbook
 
-**Status:** Candidate Workbook Set
+**Revision:** v2.0 — Reframed Day Zero
+**Status:** Candidate training material; not a controlled release.
 
-## Exercise 1 — Map the System
+## 1 — Locate the system
+Complete BOSS → __________ → __________ → __________ → DOMAIN SPECIALIZATIONS → PRODUCTS.
+Explain each level and where DraftDeck belongs.
 
-Fill the hierarchy:
+## 2 — Construct accountable work
+Request: “Improve this presentation.”
+Declare purpose, source/version, audience, scope, output, protected content, handling requirements, permitted destination and acceptance evidence.
+Mark KNOWN / REQUIRED UNKNOWN / DECISION WITHIN GRANTED SCOPE.
+What may the agent decide? What requires clarification? Explain REQUEST ≠ PACKAGE.
 
-BOSS → __________ → __________ → __________ → DOMAIN SPECIALIZATIONS → PRODUCTS
+## 3 — Admission
+A capable external handler can process a sensitive file. Approved destinations are not established.
+Choose ACCEPT / HOLD / REFUSE for the proposed movement and explain why.
+What resolves it? What could a minimum necessary extract change? What permission still needs checking?
 
-Then answer:
-What does each level govern?
+## 4 — PRIME and inspection
+Write one sentence per stage: PACKAGE / ROUTE / INSPECT / MOVE / ESTABLISH DELIVERY.
+Answer the admission, particular-movement and output-adjudication questions separately.
 
-## Exercise 2 — Package or Not Yet?
+## 5 — Candidate or established?
+A five-bullet summary passes a length check but omits a source qualification.
+List what is established and unestablished. Choose a candidate disposition.
+Specify evidence and release conditions. Explain EVAL PASS ≠ RELEASE.
 
-For each request, classify:
-- READY TO PACKAGE;
-- NEEDS ALIGNMENT;
-- HOLD.
+## 6 — Scale review
+A: a personal draft study checklist with no external action.
+B: output supporting a consequential organizational decision.
+Propose evidence appropriate to each intended use. Identify deterministic checks, possible independence/human review and applicable authority.
+Do not invent domain rules. Explain why confidence is not the criterion and manual approval is not universal.
 
-A. “Summarize this approved 3-page memo into five bullets for the executive team by 4 PM.”  
-B. “Make this better.”  
-C. “Send this sensitive file somewhere that can process it fastest.”  
-D. “Convert this approved text into a 1-page learner handout using the supplied template.”
+## 7 — DraftDeck
+A browser deck renders; the package requires live editable text and separate artwork in Canva.
+What did rendering establish? What remains to verify after import?
+What happens if a generic generator replaces HTML/CSS/SVG?
+State a bounded correction route and release conditions.
 
-Explain each choice.
+## 8 — Readiness
+Explain one intake distinction, one output distinction and one remaining question.
+Why does training completion not grant authorization?
+Name an observable skill to demonstrate in Module 01.
 
-## Exercise 3 — Capability vs Permission
-
-A handler can technically read a confidential file but is not approved to receive it.
-
-Answer:
-- Can it process the file?
-- May it receive the file?
-- What state should the package enter?
-
-## Exercise 4 — PRIME Sequence
-
-Write one sentence for each stage:
-
-PACKAGE  
-ROUTE  
-INSPECT  
-MOVE  
-ESTABLISH DELIVERY
-
-Then identify which stage answers:
-- What exactly is moving?
-- Where should it go?
-- Are conditions satisfied?
-- Did the work actually move?
-- What evidence establishes delivery?
-
-## Exercise 5 — Training-State Ladder
-
-Write one sentence distinguishing:
-
-TRAINED  
-QUALIFIED  
-CERTIFIED  
-CREDENTIALED  
-AUTHORIZED
-
-## Exercise 6 — Your Learning Mission
-
-Complete:
-- I am here to become able to...
-- My strongest current capability is...
-- My largest known gap is...
-- The evidence that would convince me I can do this is...
-
-## Exercise 7 — Before Module 01
-
-Write:
-1. one concept you can already explain;
-2. one concept that remains unclear;
-3. one question you want Module 01 to answer.
-
-These responses update learner state; they are not scored as qualification evidence.
+Practice evidence is not a qualification certificate. Instructor guidance is held separately.

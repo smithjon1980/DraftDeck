@@ -1,94 +1,63 @@
 # Day Zero Student Handbook
 
-**Status:** Candidate Learner Reference
+**Revision:** v2.0 — Reframed Day Zero
+**Status:** Candidate training material; not a controlled release.
 
-## What BOSS Helps You See
+## Your operating perspective
+BOSS — Bioscillate Operating System by Seven helps you govern information work. You remain the sender, receiver or person responsible for decisions. Logistics describes corresponding control structures.
 
-Every day you move information between people, systems, models, files, and applications.
+## Before execution
+A request states a need; a package makes accountable work explicit. Identify purpose, source, scope, output, constraints, handling requirements, destination and acceptance evidence.
+The agent acts as a service counter: intake, package construction, admission, classification, routing and delivery establishment.
+Models process information. Tools provide specialized capabilities. Runtime is the handling environment.
 
-BOSS gives you a logistics model for seeing those movements clearly.
+REQUEST ≠ PACKAGE.
+CAPABILITY ≠ PERMISSION.
+CAN PROCESS ≠ MAY RECEIVE.
 
-The model is structural, not literal. You are not cargo, and an information system is not a parcel carrier. The value of the comparison is that both situations require clear boundaries, destinations, handling rules, controlled movement, and evidence of delivery.
+Admission asks whether the package may enter controlled movement. Outcomes are ACCEPT / HOLD / REFUSE. Classify handling before selecting a handler. Required unresolved conditions produce HOLD and clarification within scope.
 
-## The Shipping-Counter Question
+## During execution
+PACKAGE → ROUTE → INSPECT → MOVE → ESTABLISH DELIVERY
 
-Before a physical carrier accepts an important package, the sender has to specify enough information for the carrier to decide whether it can be accepted.
+Admission Inspection asks whether work may enter.
+PRIME INSPECT asks whether this particular movement's conditions are satisfied.
 
-BOSS applies the same reasoning to information work.
+## After execution
+Treat the result as a candidate.
+Compare it with its acceptance conditions using evidence appropriate to its consequence.
+Decide ACCEPT / REVISE / REJECT / ESCALATE.
+Use applicable release authority before establishing it for the intended use.
 
-Before movement, ask:
+GENERATED ≠ ESTABLISHED.
+OUTPUT ≠ VERIFIED RESULT.
+EVAL PASS ≠ RELEASE.
+BUILD_CAPABILITY ≠ REVIEW_CAPABILITY ≠ RELEASE_AUTHORITY.
 
-- What exactly is being sent?
-- Where is it going?
-- What must travel with it?
-- What handling rules apply?
-- Is movement permitted?
-- What would establish successful receipt?
+Review may use deterministic checks, sources, testing, independent evaluators or human review. Manual approval is not required for every output. Higher consequence requires a stronger basis; fluency does not reduce that burden.
 
-## Admission Comes First
+## Five questions for real work
+What may enter?
+What may handle it?
+What was produced?
+What evidence supports it?
+What authority establishes its use?
 
-The admission question is:
+## Your reference hierarchy
+BOSS owns doctrine.
+The Bioscillate Logistics Framework provides the conceptual model.
+PARCELS provides structural architecture.
+Bioscillate PRIME Protocol governs movement.
+Domain specializations apply the system.
+Products such as DraftDeck implement specializations.
 
-> **May this package enter controlled movement?**
+## Seven modules
+01 Package Operations
+02 Route Operations
+03 Facility Operations
+04 Transfer Operations
+05 Transport Coordination
+06 High-Control Operations
+07 Network Orchestration
 
-Possible states:
-
-**ACCEPT / HOLD / REFUSE**
-
-If a required handling condition is unknown:
-
-> **Unknown handling requirements produce HOLD, not guessed routing.**
-
-## Classification Before Tool Choice
-
-At orientation depth:
-
-**STANDARD / SENSITIVE / RESTRICTED / QUARANTINED / PROHIBITED**
-
-Classification happens before handler selection.
-
-> **CAPABILITY ≠ PERMISSION.**
-
-> **CAN PROCESS ≠ MAY RECEIVE.**
-
-A system may be technically capable of processing information without being eligible to receive it.
-
-## PRIME
-
-After admission, PRIME governs movement:
-
-> **PACKAGE → ROUTE → INSPECT → MOVE → ESTABLISH DELIVERY**
-
-Remember that Admission Inspection and PRIME INSPECT are different.
-
-Admission:
-**May this package enter controlled movement?**
-
-PRIME INSPECT:
-**Are the conditions for this particular movement satisfied?**
-
-## Seven Modules
-
-1. Package Operations
-2. Route Operations
-3. Facility Operations
-4. Transfer Operations
-5. Transport Coordination
-6. High-Control Operations
-7. Network Orchestration
-
-The sequence moves from one well-defined package to the coordination of many packages, routes, handlers, and dependencies.
-
-## Five Rules to Carry Forward
-
-> **The logistics model describes information movement. It does not assert that information systems are literally parcel networks.**
-
-> **Cargo classification precedes handler selection.**
-
-> **Capability is downstream from admissibility.**
-
-> **CAPABILITY ≠ PERMISSION.**
-
-> **Unknown handling requirements produce HOLD, not guessed routing.**
-
-Your next formal training unit is **Module 01 — Package Operations**.
+Day Zero is orientation. TRAINED ≠ QUALIFIED ≠ CERTIFIED ≠ CREDENTIALED ≠ AUTHORIZED. Your next formal unit is Module 01 — Package Operations.

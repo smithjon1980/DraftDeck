@@ -1,6 +1,9 @@
 # D0-A04 — Admission Before Capability
 
-**Target:** 12–16 minute NotebookLM audio overview
+**Revision:** v2.0 — Reframed Day Zero
+**Status:** Candidate training material; not a controlled release.
+
+**Production duration target (not rendered audio):** 12–16 minute NotebookLM audio overview
 
 A familiar mistake in AI work sounds reasonable:
 
@@ -111,5 +114,12 @@ Admission comes first.
 Classification comes before handler choice.
 
 Capability is evaluated only after eligibility has been established.
+
+
+## The service boundary
+The agent acts as the admission counter. It determines handling requirements before selecting an eligible model, tool or runtime. Model capability does not turn a request into permission.
+Admission may ACCEPT, HOLD or REFUSE. Classify the handling requirements before handler selection; never use classification after a transfer to justify that transfer.
+Admission only establishes eligibility under entry conditions. It does not establish that a future generated result is correct or released.
+That second boundary still requires candidate adjudication, evidence and applicable release authority.
 
 In the next overview, we go behind that admission boundary and look at PRIME—the protocol that governs movement once a package is eligible to move.

@@ -1,98 +1,52 @@
-# Day Zero NotebookLM Injection Brief
+# Day Zero NotebookLM Ingestion Brief
 
-**Status:** Candidate Pre-Production Brief
+**Revision:** v2.0 — Reframed Day Zero
+**Status:** Candidate training material; not a controlled release.
 
-> **NotebookLM inspires. BOSS adjudicates.**
+## Use
+Generate candidate media from v2.0. NotebookLM inspires. BOSS adjudicates.
+The reframing note is a candidate training baseline, not a constitutional promotion.
 
-## Mandatory framing
+## Sources
+Use v2.0 authority guide, control, orientation source, handbook, workbook, visual/deck briefs, audio index and requested script, with the candidate architecture note.
+Keep Instructor Guide, Learning Envelope, diagnostic/key, clearance, learner record, ledger and failure specimen in the backstage folder.
+Do not import obsolete v1.0/v1.1 sources alongside this set.
 
-Generated Day Zero media must begin from this truth:
+## Narrative
+Real information work → request → agent package construction → admission and classification → eligible route → execution → candidate → consequence-appropriate adjudication → release authority → established delivery.
+Classification precedes handler selection.
+Admission governs input. Adjudication governs output. Capability governs neither by itself.
 
-> Every day you already move information between people, systems, models, files, and applications. Most failures happen because we pay attention to the work being performed and not enough attention to what was actually sent, where it was allowed to go, what it needed to arrive with, and how we know it arrived correctly. BOSS gives us a logistics model for seeing those movements clearly.
+## Preserve
+BOSS — Bioscillate Operating System by Seven.
+PACKAGE → ROUTE → INSPECT → MOVE → ESTABLISH DELIVERY.
+REQUEST ≠ PACKAGE.
+CAPABILITY ≠ PERMISSION.
+CAN PROCESS ≠ MAY RECEIVE.
+GENERATED ≠ ESTABLISHED.
+OUTPUT ≠ VERIFIED RESULT.
+EVAL PASS ≠ RELEASE.
+BUILD_CAPABILITY ≠ REVIEW_CAPABILITY ≠ RELEASE_AUTHORITY.
 
-## Two-plane constraint
+Agent: service-counter/admission/routing responsibility.
+Model: processing capability.
+Payload: data and task.
+No old “models are freight” identity line or courier-only agent definition.
+No fictional logistics employer, learner as cargo, aviation framing or backstage leakage.
+Do not invent doctrine or claim universal implementation by products.
+Do not require manual approval for every output; evidence follows consequence and applicable authority.
 
-The Instructional Control Plane remains backstage.
+## Audio
+Generate each overview separately, using the common core and matching script. Disable unrelated episode scripts if they contaminate the requested episode.
+Explain with a real problem, brief structural analogy, applicable distinction, real example and practical consequence.
+Durations are targets. Scripts are episode treatments, not completed timed audio.
+Archive audio and verbatim transcripts as WIP; successful ASR does not establish final status.
 
-Do not narrate:
-- learner state;
-- diagnostic routing;
-- remediation;
-- instructional sequencing;
-- qualification mechanics
+## Other media
+Deck shows relationships. Workbook requires performance. Infographic compresses.
+NotebookLM visuals are specimens/candidates for DraftDeck, not replacements for HTML/CSS/SVG reconstruction.
 
-as though they are parcel logistics.
-
-Learner-facing narration uses the Operational Teaching Model.
-
-## Metaphor discipline
-
-The shipping-counter analogy is structural correspondence.
-
-Never generate:
-- “welcome to the network”;
-- learner as cargo/package/freight;
-- fictional BOSS Shipping Company;
-- a story in which the learner becomes a courier/operator inside a parcel world;
-- consumer-fulfillment framing as the central model.
-
-Prefer:
-- familiar generic shipping-counter experience;
-- explicit comparison to real information movement;
-- short return-to-reality statements after each analogy.
-
-## Canonical frontstage sequence
-
-```text
-REQUEST
-→ PACKAGE PREPARATION
-→ SHIPPING LABEL
-→ ADMISSION INSPECTION
-→ CLASSIFICATION
-→ ACCEPT / HOLD / REFUSE
-→ ROUTE
-→ CONTROLLED MOVEMENT
-→ VERIFY
-→ RELEASE
-```
-
-## Two inspections
-
-Admission Inspection:
-**May this package enter controlled movement?**
-
-PRIME INSPECT:
-**Are the conditions for this particular movement satisfied?**
-
-Do not merge them.
-
-## Required canonical statements
-
-Use exactly:
-- **CAPABILITY ≠ PERMISSION.**
-- **CAN PROCESS ≠ MAY RECEIVE.**
-- **Cargo classification precedes handler selection.**
-- **Unknown handling requirements produce HOLD, not guessed routing.**
-- **Capability is downstream from admissibility.**
-- **PACKAGE → ROUTE → INSPECT → MOVE → ESTABLISH DELIVERY**
-
-## Audio-generation instruction
-
-The seven Day Zero audio overviews must sound like intelligent explanatory conversations about responsible information movement.
-
-They must not sound like employee onboarding for a fictional shipping company.
-
-Each audio should:
-1. begin with a real information-work problem;
-2. use the counter analogy only to illuminate the structure;
-3. return explicitly to information systems;
-4. preserve canonical rules;
-5. end by connecting the concept to responsible system use.
-
-## Audit failure mode
-
-Any output that promotes the teaching metaphor into literal ontology is marked:
-
-**FAIL — METAPHOR LITERALIZATION**
-
-and must return to BOSS REFINEMENT before reuse.
+## Review prompt
+Identify selected source revision and supporting sources.
+Check both boundaries, roles, PRIME, metaphor discipline, review burden and release.
+List unresolved conditions rather than fabricating completeness.
