@@ -14,7 +14,7 @@ Module source and assessment context: training/notebooklm/03_MODULE_01_PACKAGE_O
 Reframing: training/architecture/agent-mediated-service-model.md.
 Day Zero: v2.0 candidate sources.
 
-The earlier Module 01 source contains a legacy role mapping. This package uses the requested candidate reframing: agent as service counter; model as processing capability. It does not promote the architecture into constitutional doctrine. Reconciliation of the old Module 01 media sources remains a release dependency; do not mix them into a new generation set as though they agree.
+Role mapping is reconciled for this candidate training build in training/boss-operator-program/module-01/reconciled-sources/. Use that full source set with the revised opening: agent as service-counter/admission/routing responsibility; model as processing capability; data and task as payload. Historical PR 22 versions remain provenance, not current generation authority. Seven objectives and the nine-criterion assessment remain unchanged. Controlled doctrine promotion and produced-media review are separate from this source reconciliation.
 
 ## Objective-to-evidence map
 EO1 — Distinguish mission from package. Evidence: separates improving delay management from the one-page update. Rubric C1.
@@ -36,7 +36,7 @@ Reframing overlay — Candidate and authority. Evidence: generation, checked pro
 06_PERFORMANCE_EVIDENCE_RECORD.md: unfilled learner/assessor evidence form.
 
 ## Teaching sequence
-Instructor worked example → supported practice → targeted feedback → revision → unfamiliar independent performance.
+Explain the AI relationship through the revised opening → explicit mapping and analogy limits → instructor worked example → supported practice → targeted feedback → revision → unfamiliar independent performance.
 Use the main exercise as supported practice if its key or rubric anchors have been taught. It cannot then also count as unseen final evidence for that learner.
 Use alternate forms for independent demonstration. Protect instructor keys and clarification replies until the relevant stage.
 
