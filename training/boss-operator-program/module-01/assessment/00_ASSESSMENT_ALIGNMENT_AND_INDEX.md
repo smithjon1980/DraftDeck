@@ -56,3 +56,6 @@ The specific cases, score anchors and pilot decision rules are BOSS proposals, n
 
 ## Editorial alignment
 Learner teaching passages follow BOSS Guided Reasoning Format (GRF), Candidate v1, from training/editorial/boss-guided-reasoning-format.md at commit 9d144b13f7da37570ba46dfe200f29e4a8722709 (PR 24). The format uses short reasoning steps, plain-before-technical definitions, reader-facing questions, worked cases, operator moves and explicit boundaries. It governs editorial form, not doctrine, scoring or qualification. Teaching scaffolds are omitted from independent task packets so the pilot does not mistake prompted answers for independent performance. No claim is made that the candidate editorial standard has been promoted to Controlled.
+
+## Compiled section for review
+07_MODULE_01_REVIEW_SECTION.md brings together guided learner reading, shipper–clerk correspondence, the existing M01-P01 task, instructor key and full rubric. Its proposed cross-media map assigns complementary jobs to the podcast, slide companion and workbook. The complete review contains instructor answers; do not use it as a learner-facing generation source or independent task packet. The seven source instruments remain available separately.
