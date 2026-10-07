@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "title": "BOSS Daily Briefing",
+  "timezone": "America/Chicago",
+  "local_time": "20:00",
+  "first_local_date": "2026-10-07",
+  "cadence": "daily",
+  "status": "pending_creation",
+  "automation_id": null,
+  "read_only": true,
+  "source_repository": "smithjon1980/DraftDeck",
+  "source_branch": "training/module-01-assessment-rigor-v1",
+  "source_pull_request": 32
+}

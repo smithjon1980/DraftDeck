@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "repository",
+    "work_branch",
+    "milestones"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "repository": {
+      "type": "string"
+    },
+    "work_branch": {
+      "type": "string"
+    },
+    "milestones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "state",
+          "next_gate",
+          "gates",
+          "next_action"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "state": {
+            "enum": [
+              "not_started",
+              "drafted",
+              "tested",
+              "independently_reviewed"
+            ]
+          },
+          "next_gate": {
+            "enum": [
+              "drafted",
+              "tested",
+              "independently_reviewed",
+              "none"
+            ]
+          },
+          "gates": {
+            "type": "object",
+            "required": [
+              "drafted",
+              "tested",
+              "independently_reviewed"
+            ],
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "requirement",
+                  "status",
+                  "evidence_refs"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "requirement": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "pending",
+                      "verified",
+                      "challenged"
+                    ]
+                  },
+                  "evidence_refs": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "next_action": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

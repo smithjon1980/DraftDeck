@@ -59,3 +59,9 @@ Learner teaching passages follow BOSS Guided Reasoning Format (GRF), Candidate v
 
 ## Compiled section for review
 07_MODULE_01_REVIEW_SECTION.md brings together guided learner reading, shipper–clerk correspondence, the existing M01-P01 task, instructor key and full rubric. Its proposed cross-media map assigns complementary jobs to the podcast, slide companion and workbook. The complete review contains instructor answers; do not use it as a learner-facing generation source or independent task packet. The seven source instruments remain available separately.
+
+## Author development and research layer
+The backstage plan at training/research/boss-development-and-evidence-plan.md places design rationale, literature/claim review, media correspondence, prospective study planning, analysis/revision and independent critique beside the existing work. It tracks the author's development through evidence-backed milestones. It changes neither learner objectives nor assessment thresholds and is not a learner-facing generation source.
+
+## Collaboration and daily briefing
+Use training/research/collaboration-protocol.md and milestone-state.json to track author-development evidence, next-gate checks and bounded next actions. Scheduled briefings remain read-only. The corresponding skills are versioned under training/research/skills/.

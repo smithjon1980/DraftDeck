@@ -1,0 +1,13 @@
+interface:
+  display_name: BOSS Milestone Briefing
+  short_description: Review evidence, milestones and the next BOSS action
+  default_prompt: Use $boss-milestone-briefing to prepare my BOSS progress briefing.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
