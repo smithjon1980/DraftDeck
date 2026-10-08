@@ -12,6 +12,25 @@ Use these contracts for current DraftDeck slides, Markdown, and web lesson compo
 - Set typography roles: display heading, reading body, operational label. Use legible sans-serif for narrative and monospace for fields/code. Store exact fonts, sizes, line-height, spacing, stroke widths, breakpoints and semantic color roles in tokens rather than scattered literal overrides.
 - Use an approved spacing scale (8, 16, 24, 32, 48, 64 CSS pixels). Check optical alignment and readable line lengths; do not treat token compliance as visual acceptance.
 
+## Operational language
+
+Apply the Human Accountability Rule in `doctrine/logistics-framework.md` to every component: **software capability does not transfer human accountability.** Describe the operation, identify the evidence, and name the accountable human.
+
+AI, model, and system are permitted subjects of observable operations: “the model returned,” “the system executed,” and “the AI classified.” Avoid human mental states, anatomy, intention, and moral agency. Describe a failure by its observed form, such as an unsupported claim, fabricated citation, source mismatch, or unverified action report. Preserve the distinction between reported and verified operations. Computation, inference, and reasoning as functional operations do not establish human understanding or release authority.
+
+The left column below documents prohibited wording; it is not approved teaching copy. The terminology guard exempts only these four exact comparison rows in the two maintained contract copies. It checks the rest of each file normally.
+
+| Prohibited wording | Operational wording |
+|---|---|
+| “The AI hallucinated.” | “The output contains an unsupported claim.” |
+| “The AI brain.” | “The model” or “processing system.” |
+| “The AI understood the assignment.” | “The output satisfied the stated requirements.” |
+| “The AI decided to release it.” | “The system applied a release rule,” or “the authorized person approved release.” |
+
+Choose the final row's replacement from the evidence: a recorded rule application and a human approval are different events. Name the rule or approving human when known; retain UNKNOWN where evidence is missing. For Evidence Window, identify the evidence source and scope. For Choose the Route, state the routing condition and authority. For Carry Forward, name the next human responsibility or already authorized operation.
+
+Acceptance: review component copy against this rule, preserve evidence classifications, and run `python3 .github/scripts/check_operational_language.py` from the repository root. The guard catches common constructions and is not a complete semantic review.
+
 ## Component registry
 
 Each component requires an identifier, required fields, allowed variants, media behavior and acceptance checks. Use only components needed by a section; do not insert all ten into every page.

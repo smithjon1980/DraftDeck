@@ -4,7 +4,6 @@ on:
   push:
     branches: [main]
   pull_request:
-    branches: [main]
 
 permissions:
   contents: read
@@ -14,6 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Test operational language guard
+        run: python3 -m unittest discover -s .github/scripts -p 'test_*.py'
+
+      - name: Enforce human accountability language
+        run: python3 .github/scripts/check_operational_language.py
 
       # Repository invariant: the Logistics Framework ontology is canonical.
       # Predecessor aviation-era material must not re-enter tracked source,

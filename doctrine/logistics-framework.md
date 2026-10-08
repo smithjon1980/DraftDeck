@@ -24,6 +24,16 @@ Compare the delivered package against the relevant warrant, evidence, comparator
 ### 4. Authority
 Release occurs only under valid human authority. Agents, models, routing layers, and transport systems may classify, account, route, hold, compare, and report; they do not possess final release authority.
 
+## Human accountability rule
+
+> **Software capability does not transfer human accountability.**
+
+Operational form: **describe the operation, identify the evidence, name the accountable human.** Apply this rule to doctrine, teaching copy, component labels, generated output, and release records.
+
+Describe software through observable operations such as computation, inference, generation, classification, routing, and execution. Do not attribute human anatomy, mental states, intentions, or moral agency to software. Naming AI or a model as the subject of an operation is permitted. A system may apply a declared rule within an authorized execution envelope; record the rule, resulting evidence, and accountable human. Human responsibility and release authority persist across delegation.
+
+The [editorial component contracts](../design-system/editorial-components.md#operational-language) provide wording substitutions. The terminology guard checks common prohibited constructions; passing it does not replace human copy review.
+
 ## Logistics roles
 
 - **Sender** — originates a package or request.

@@ -52,7 +52,7 @@ Each layer answers a different class of question.
 | Layer | File | Governing Question | Primary Role |
 |---|---|---|---|
 | Naming | `naming-architecture.md` | What is the system, and what do framework, architecture, protocol, specialization, and product mean? | Establishes BOSS ownership, the Bioscillate naming hierarchy, PRIME typography, and DraftDeck's role as a productized production specialization. |
-| Ontology | `logistics-framework.md` | What conceptual model governs the system? | Establishes shipping-and-receiving logistics as canonical and defines the control spine: LOCATION → ACCOUNTING → ADJUDICATION → AUTHORITY. |
+| Ontology | `logistics-framework.md` | What conceptual model governs the system? | Establishes shipping-and-receiving logistics as canonical, defines the control spine: LOCATION → ACCOUNTING → ADJUDICATION → AUTHORITY, and governs operational language through the Human Accountability Rule. |
 | Structure (Canonical) | `parcels-layer-architecture.md` | Where does a concern, rule, or failure live in the system? | Defines the seven PARCELS layers (Platform, Attachment, Routing, Carriage, Exchange, Language, Service), canonical ownership by dominant failure mode, governance as a vertical plane, and the three-axis model: CONSTITUTION × PARCELS × PRIME. |
 | Delegation Limits | `bounded-autonomy-execution-envelope.md` | What limits govern delegation before unattended execution? | Defines bounded autonomy, the Execution Envelope, envelope-scoped permission, roles vs. handlers vs. providers, the parallelism gate, the consolidation boundary, and MERGE ≠ RELEASE. |
 | Protocol | `prime-process.md` | How does bounded work move through the system? | Defines the Bioscillate PRIME Protocol: Package → Route → Inspect → Move → Establish Delivery. The existing filename is retained pending any dedicated path migration. |
@@ -170,6 +170,10 @@ A build, test pass, commit, merge, or deployment may be necessary but is not aut
 ## 5. Canonical Statements
 
 The following statements summarize the active BOSS doctrine stack:
+
+> **Software capability does not transfer human accountability.**
+
+> **Describe the operation, identify the evidence, name the accountable human.**
 
 > **BOSS — Bioscillate Operating System by Seven — is the governing system.**
 
