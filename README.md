@@ -1,6 +1,6 @@
 # DraftDeck
 
-DraftDeck is a production engine that transforms visual references into layered, editable 16:9 presentations built from static HTML and CSS. It combines CAD-inspired precision, replaceable story artwork, and live editable text — with no PowerPoint intermediate.
+DraftDeck is a production engine that transforms visual references into layered, editable presentations with declared canvas dimensions built from static HTML and CSS. It combines CAD-inspired precision, replaceable story artwork, and live editable text — with no PowerPoint intermediate.
 
 **Core rule:** Editability is necessary but not sufficient. A technically editable slide that destroys the reference composition is a failed DraftDeck build.
 
@@ -54,3 +54,7 @@ python3 examples/logistics-framework/source/Build_Deck.py
 ```
 
 See `doctrine/production-contract.md` before editing anything: generated output is overwritten on rebuild, so authored changes belong in the source, never in generated HTML.
+
+## Day Zero editorial companion
+
+See [the 15-slide deck and Markdown example](examples/day-zero-editorial/README.md) and [BOSS editorial component contracts](design-system/editorial-components.md). The current companion is 17 × 11 landscape; the existing flagship remains 16:9.

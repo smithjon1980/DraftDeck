@@ -1,0 +1,1 @@
+BOSS editorial companion v0.3. Ten recurring features are editorial teaching devices, not additions to canonical shared-frame fields. Original prose, existing BOSS visuals and explicit evidence limitations preserved. Image paths are relative to this folder. One screenshot placeholder remains intentionally unfilled.

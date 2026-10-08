@@ -1,0 +1,152 @@
+[
+  {
+    "slide": 1,
+    "title": "CONFIDENCE IS NOT A RECEIPT.",
+    "density": "low",
+    "editorialFeature": "AT THE LOADING DOCK",
+    "copyWords": 97,
+    "audioAnchor": "00:00\u201302:15",
+    "pattern": "visual opener",
+    "diagramArrows": "reading order only, not operational authorization"
+  },
+  {
+    "slide": 2,
+    "title": "MAKE THE WORK VISIBLE.",
+    "density": "medium",
+    "editorialFeature": "PAUSE & CONSIDER",
+    "copyWords": 284,
+    "audioAnchor": "00:35\u201302:24",
+    "pattern": "integrated editorial",
+    "diagramArrows": "reading order only, not operational authorization"
+  },
+  {
+    "slide": 3,
+    "title": "A SHARED FRAME TRAVELS WITH THE TASK.",
+    "density": "low",
+    "editorialFeature": "CARRY FORWARD",
+    "copyWords": 87,
+    "audioAnchor": "02:15\u201303:06",
+    "pattern": "integrated editorial",
+    "diagramArrows": "reading order only, not operational authorization"
+  },
+  {
+    "slide": 4,
+    "title": "TEN FIELDS. ONE WORKING AGREEMENT.",
+    "density": "high",
+    "editorialFeature": "THE WORKING AGREEMENT",
+    "copyWords": 458,
+    "audioAnchor": "03:10\u201306:18",
+    "pattern": "reference",
+    "diagramArrows": "reading order only, not operational authorization"
+  },
+  {
+    "slide": 5,
+    "title": "SCOPE STATES THE WORK. LIMITS BOUND IT.",
+    "density": "medium",
+    "editorialFeature": "CHOOSE THE ROUTE",
+    "copyWords": 260,
+    "audioAnchor": "04:31\u201305:41",
+    "pattern": "integrated editorial",
+    "diagramArrows": "reading order only, not operational authorization"
+  },
+  {
+    "slide": 6,
+    "title": "THE ROOM NUMBER IS UNKNOWN.",
+    "density": "medium",
+    "editorialFeature": "INSPECT THE PAYLOAD",
+    "copyWords": 264,
+    "audioAnchor": "07:16\u201309:40",
+    "pattern": "integrated editorial",
+    "diagramArrows": "reading order only, not operational authorization"
+  },
+  {
+    "slide": 7,
+    "title": "TWO CHATS. ONE HUMAN RELAY.",
+    "density": "low",
+    "editorialFeature": "TRY THE HANDOFF",
+    "copyWords": 94,
+    "audioAnchor": "09:40\u201311:33",
+    "pattern": "integrated editorial",
+    "diagramArrows": "reading order only, not operational authorization"
+  },
+  {
+    "slide": 8,
+    "title": "ARRIVAL DOES NOT OPEN THE PACKAGE.",
+    "density": "high",
+    "editorialFeature": "EVIDENCE WINDOW",
+    "copyWords": 430,
+    "audioAnchor": "11:39\u201313:37",
+    "pattern": "reference",
+    "diagramArrows": "reading order only, not operational authorization"
+  },
+  {
+    "slide": 9,
+    "title": "OMIT THE SOURCE. OBSERVE THE RESULT.",
+    "density": "low",
+    "editorialFeature": "RECOVERY RECORD",
+    "copyWords": 89,
+    "audioAnchor": "13:37\u201315:17",
+    "pattern": "integrated editorial",
+    "diagramArrows": "reading order only, not operational authorization"
+  },
+  {
+    "slide": 10,
+    "title": "CHANGE THE DELIVERY. KEEP THE CLAIM PRECISE.",
+    "density": "medium",
+    "editorialFeature": "EVIDENCE WINDOW",
+    "copyWords": 294,
+    "audioAnchor": "15:17\u201317:18",
+    "pattern": "integrated editorial",
+    "diagramArrows": "reading order only, not operational authorization"
+  },
+  {
+    "slide": 11,
+    "title": "UNSUPPORTED IS A ROUTING DECISION.",
+    "density": "low",
+    "editorialFeature": "CHOOSE THE ROUTE",
+    "copyWords": 94,
+    "audioAnchor": "production amendment",
+    "pattern": "integrated editorial",
+    "diagramArrows": "reading order only, not operational authorization"
+  },
+  {
+    "slide": 12,
+    "title": "AUTOMATE THE LOGISTICS. PRESERVE THE FRAME.",
+    "density": "medium",
+    "editorialFeature": "CARRY FORWARD",
+    "copyWords": 303,
+    "audioAnchor": "17:31\u201319:42",
+    "pattern": "integrated editorial",
+    "diagramArrows": "reading order only, not operational authorization"
+  },
+  {
+    "slide": 13,
+    "title": "CHOOSE THE MECHANISM FOR THE STEP.",
+    "density": "medium",
+    "editorialFeature": "PAUSE & CONSIDER",
+    "copyWords": 316,
+    "audioAnchor": "18:34\u201319:42 + amendment",
+    "pattern": "integrated editorial",
+    "diagramArrows": "reading order only, not operational authorization"
+  },
+  {
+    "slide": 14,
+    "title": "VERIFY CONTENT. CHECK RELEASE SCOPE.",
+    "density": "low",
+    "editorialFeature": "BEFORE YOU RELEASE",
+    "copyWords": 97,
+    "audioAnchor": "19:28\u201321:10 + amendment",
+    "pattern": "integrated editorial",
+    "diagramArrows": "reading order only, not operational authorization"
+  },
+  {
+    "slide": 15,
+    "title": "SUBMIT EVIDENCE. KEEP THE UNKNOWNS.",
+    "density": "high",
+    "editorialFeature": "TRY THE HANDOFF",
+    "copyWords": 401,
+    "audioAnchor": "19:47\u201322:00",
+    "pattern": "reference",
+    "diagramArrows": "reading order only, not operational authorization"
+  }
+]
