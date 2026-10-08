@@ -4,7 +4,7 @@
 
 - `slides/`: static HTML/CSS, separate SVG geometry, preview, manifests and diagram source. The PDF review rendition is regenerated locally with `python editorial-deck/build.py` (run from `source/`).
 - `article/`: Markdown and relative PNG/SVG images. One actual-relay screenshot placeholder remains intentionally unfilled.
-- `source/`: build inputs and dependencies. Run from this directory: `python editorial-deck/build.py`. Requires Python ReportLab and DejaVu Sans fonts. Output appears in `source/editorial-deck/`; copy reviewed output to `slides/` after inspection.
+- `source/`: build inputs and dependencies. Run from this directory: `python editorial-deck/build.py`. Requires Python ReportLab, svglib and DejaVu Sans fonts. HTML is generated into both `source/editorial-deck/` and `slides/`, with the opener image path adjusted for each location. Other output appears in `source/editorial-deck/`; copy reviewed output to `slides/` after inspection. HTML uses the adjacent `styles.css` and repository artwork; retain those dependencies when downloading it.
 
 ## What changed in v0.4
 
@@ -21,5 +21,7 @@ Revised against the editorial review of v0.3 (USWDS token and component practice
 ## Verification
 
 Browser rendering verified with headless Chromium at 1632 x 1056 (slide canvas) and 800 px width (reflow) against the generated HTML; slides 3, 6, 7, 9, 11, 12, 13, 14 and 15 inspected visually, including all seven consulting exhibits and the PDF appendix page. Build check: 15 slides, 15 `h1`, 0 inline style attributes. The PDF uses ReportLab with matching coordinates; it is not a browser export. Accessibility conformance audit and current Canva compatibility remain untested. Rendered PDF pages were reviewed and five Markdown image references resolve.
+
+Artifact refresh, 2026-10-08: both checked-in HTML copies are regenerated with all seven exhibits. Their only content difference is the opener image path required by each directory. SVG text is XML-escaped. Fresh Chromium checks confirmed both copies load their opener artwork, all 15 slide bodies avoid text collisions with the editorial components, and the lesson edition has no horizontal page overflow at 800px or 320px. Slide 6 acceptance text spans both columns to avoid its comparison component; narrow-screen headings, indices and field strips reflow. Browser print and full accessibility conformance remain untested.
 
 The supplied 22-minute script anchors these artifacts; they do not represent a regenerated 60-minute audio overview. NotebookLM examples are reported with limited evidence; sampled excerpts do not establish exhaustive fidelity. Preserve source requests, responses, comparisons, recovery records and unknowns. No release authority follows from VERIFIED alone.

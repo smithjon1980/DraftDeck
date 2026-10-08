@@ -92,6 +92,7 @@ body{margin:0;background:var(--boss-color-ground);color:var(--boss-color-ink);
 /* layout variants — one arrangement per teaching purpose */
 .layout-opener .slide-body{grid-template-columns:1fr 1fr;top:640px;bottom:200px}
 .layout-duo .slide-body,.layout-compare .slide-body,.layout-inspect .slide-body{grid-template-columns:1fr 1fr;grid-auto-rows:min-content}
+.layout-inspect .block:last-child{grid-column:1/-1}
 .layout-payload-flow .slide-body,.layout-steps .slide-body,.layout-recovery .slide-body{grid-template-columns:repeat(3,1fr);grid-auto-rows:min-content}
 .layout-quad .slide-body{grid-template-columns:1fr 1fr}
 .layout-case .slide-body,.layout-route .slide-body{grid-template-columns:1fr;grid-auto-rows:min-content;max-width:1100px}
@@ -139,6 +140,10 @@ a:focus-visible,.cmp:focus-visible{outline:var(--boss-focus-ring);outline-offset
 /* ---------- reflow: lesson layout below the declared breakpoint ---------- */
 @media (max-width:1100px){
   .slide{width:auto;height:auto;overflow:visible;padding:var(--boss-space-3) var(--boss-space-2)}
+  .slide{overflow-wrap:anywhere}
+  .slide-title{font-size:clamp(1.75rem,5vw,var(--boss-text-display))}
+  .slide-index{position:static;text-align:right}
+  .cmp-fields{flex-wrap:wrap}
   .slide-head,.slide-body,.cmp,.slide-foot,.story{position:static;width:auto;right:auto;left:auto}
   .slide-body{display:block;margin:var(--boss-space-3) 0}
   .block{margin-bottom:var(--boss-space-3)}

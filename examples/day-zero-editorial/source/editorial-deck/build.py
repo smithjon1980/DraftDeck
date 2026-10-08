@@ -161,7 +161,7 @@ def _t(x, y, s, size=15, bold=False, col=INK, anchor='start', mono=False):
     ff = "Courier New" if mono else "Arial"
     fw = ' font-weight="700"' if bold else ''
     return (f'<text x="{x}" y="{y}" font-family="{ff}" font-size="{size}"'
-            f' fill="{col}" text-anchor="{anchor}"{fw}>{s}</text>')
+            f' fill="{col}" text-anchor="{anchor}"{fw}>{htmllib.escape(str(s))}</text>')
 
 def _box(x, y, w, h, stroke=INK, sw=1.5, fill='white'):
     return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"/>'
@@ -549,7 +549,7 @@ for n in range(1, 16):
     s = slides[n]; level = levels[n]
     opener = ''
     if n == 1:
-        opener = (f'<figure class="story"><img src="../source/podcast-deck/logistics-art.png" '
+        opener = (f'<figure class="story"><img src="../podcast-deck/logistics-art.png" '
                   f'alt="Logistics dock scene illustrating arrival, inspection, and release"></figure>')
     slides_html.append(
         f'<article class="slide layout-{LAYOUT[n]}" data-density="{level}" id="slide-{n:02d}" aria-labelledby="s{n:02d}-title">'
@@ -607,6 +607,7 @@ body{margin:0;background:var(--boss-color-ground);color:var(--boss-color-ink);
 /* layout variants — one arrangement per teaching purpose */
 .layout-opener .slide-body{grid-template-columns:1fr 1fr;top:640px;bottom:200px}
 .layout-duo .slide-body,.layout-compare .slide-body,.layout-inspect .slide-body{grid-template-columns:1fr 1fr;grid-auto-rows:min-content}
+.layout-inspect .block:last-child{grid-column:1/-1}
 .layout-payload-flow .slide-body,.layout-steps .slide-body,.layout-recovery .slide-body{grid-template-columns:repeat(3,1fr);grid-auto-rows:min-content}
 .layout-quad .slide-body{grid-template-columns:1fr 1fr}
 .layout-case .slide-body,.layout-route .slide-body{grid-template-columns:1fr;grid-auto-rows:min-content;max-width:1100px}
@@ -654,6 +655,10 @@ a:focus-visible,.cmp:focus-visible{outline:var(--boss-focus-ring);outline-offset
 /* ---------- reflow: lesson layout below the declared breakpoint ---------- */
 @media (max-width:1100px){
   .slide{width:auto;height:auto;overflow:visible;padding:var(--boss-space-3) var(--boss-space-2)}
+  .slide{overflow-wrap:anywhere}
+  .slide-title{font-size:clamp(1.75rem,5vw,var(--boss-text-display))}
+  .slide-index{position:static;text-align:right}
+  .cmp-fields{flex-wrap:wrap}
   .slide-head,.slide-body,.cmp,.slide-foot,.story{position:static;width:auto;right:auto;left:auto}
   .slide-body{display:block;margin:var(--boss-space-3) 0}
   .block{margin-bottom:var(--boss-space-3)}
@@ -663,13 +668,20 @@ a:focus-visible,.cmp:focus-visible{outline:var(--boss-focus-ring);outline-offset
 }
 """
 (P/'styles.css').write_text(CSS)
+(HERE.parent.parent/'slides'/'styles.css').write_text(CSS)
 doc = ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
        '<meta name="viewport" content="width=device-width, initial-scale=1">'
        '<title>BOSS Day Zero editorial companion v0.4</title>'
        '<link rel="stylesheet" href="styles.css"></head><body><main>'
        + ''.join(slides_html) + '</main></body></html>')
 (P/'BOSS_Day_Zero_Editorial_v0.4.html').write_text(doc)
-(P/'density-manifest.json').write_text(json.dumps(manifest, indent=2))
+# Publish the same generated slides with paths relative to the reviewed output.
+output_dir = HERE.parent.parent/'slides'
+output_dir.mkdir(exist_ok=True)
+(output_dir/'BOSS_Day_Zero_Editorial_v0.4.html').write_text(
+    doc.replace('src="../podcast-deck/logistics-art.png"',
+                'src="../source/podcast-deck/logistics-art.png"'))
+(P/'density-manifest.json').write_text(json.dumps(manifest, indent=2, ensure_ascii=False))
 (P/'density-map.md').write_text('|Slide|Copy level|Layout|Words|Title|\n|---|---|---|---|---|\n' +
     '\n'.join(f'|{m["slide"]}|{m["density"]}|{m["layout"]}|{m["copyWords"]}|{m["title"]}|' for m in manifest))
 (P/'reading-order.mmd').write_text('flowchart TB\n A["Arrival: record receipt"] -->|Next topic| B["Verification: compare evidence"]\n B -->|Next topic| C["Release: check authorization scope"]\n')
