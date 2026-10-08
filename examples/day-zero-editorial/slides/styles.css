@@ -84,17 +84,34 @@ body{margin:0;background:var(--boss-color-ground);color:var(--boss-color-ink);
   border-top:var(--boss-stroke-detail) solid var(--boss-color-rail);padding-top:var(--boss-space-1)}
 .prompt{font-size:var(--boss-text-body);margin:0}
 .nav{font-family:var(--boss-font-label);font-size:.75rem;color:var(--boss-color-muted);margin:var(--boss-space-1) 0 0}
+/* ---------- consulting visuals (one exhibit per teaching point) ---------- */
+.visual{margin:0}
+.visual svg{width:100%;height:auto;display:block}
+/* full-width band exhibits sit above the blocks */
+.visual-chevron,.visual-staircase{grid-column:1/-1}
 /* layout variants — one arrangement per teaching purpose */
 .layout-opener .slide-body{grid-template-columns:1fr 1fr;top:640px;bottom:200px}
 .layout-duo .slide-body,.layout-compare .slide-body,.layout-inspect .slide-body{grid-template-columns:1fr 1fr;grid-auto-rows:min-content}
 .layout-payload-flow .slide-body,.layout-steps .slide-body,.layout-recovery .slide-body{grid-template-columns:repeat(3,1fr);grid-auto-rows:min-content}
 .layout-quad .slide-body{grid-template-columns:1fr 1fr}
-.layout-case .slide-body,.layout-map .slide-body,.layout-route .slide-body{grid-template-columns:1fr;grid-auto-rows:min-content;max-width:1100px}
+.layout-case .slide-body,.layout-route .slide-body{grid-template-columns:1fr;grid-auto-rows:min-content;max-width:1100px}
 .layout-checkpoints .slide-body{grid-template-columns:1fr;max-width:1100px}
 .layout-reference-ten .slide-body{grid-template-columns:repeat(4,1fr);gap:var(--boss-space-3)}
 .layout-reference-seven .slide-body,.layout-checklist .slide-body{grid-template-columns:repeat(3,1fr);gap:var(--boss-space-3)}
 .layout-reference-ten .block-ref,.layout-reference-seven .block-ref,.layout-checklist .block-ref{
   border-top:var(--boss-stroke-detail) solid var(--boss-color-rail);padding-top:var(--boss-space-1)}
+/* visual placement overrides (must follow the layout variants) */
+.layout-payload-flow .slide-body{grid-template-columns:1fr 640px}
+.layout-recovery .slide-body{grid-template-columns:1fr 520px}
+.layout-quad .slide-body{grid-template-columns:1fr 520px}
+.layout-route .slide-body{grid-template-columns:1fr 560px;max-width:none}
+.layout-map .slide-body{grid-template-columns:1fr 1fr;grid-auto-rows:min-content;max-width:none}
+.layout-checklist .slide-body{grid-template-columns:1fr 1fr 440px}
+.layout-payload-flow .visual,.layout-recovery .visual,.layout-quad .visual,.layout-route .visual{
+  grid-column:2;grid-row:1/span 10;align-self:start}
+.layout-checklist .visual{grid-column:3;grid-row:1/span 10;align-self:start}
+.layout-checklist .slide-body{gap:var(--boss-space-3)}
+.layout-checklist .block-ref p{font-size:var(--boss-text-small)}
 /* ---------- editorial components (ten distinct contracts) ---------- */
 .cmp{position:absolute;left:var(--boss-space-5);right:var(--boss-space-5);bottom:96px;
   border-top:var(--boss-stroke-control) solid var(--boss-color-ink);padding-top:var(--boss-space-1)}
@@ -127,4 +144,5 @@ a:focus-visible,.cmp:focus-visible{outline:var(--boss-focus-ring);outline-offset
   .block{margin-bottom:var(--boss-space-3)}
   .cmp-cols,.cmp-release .cmp-cols,.cmp-evidence dl,.cmp-branches{grid-template-columns:1fr}
   .story img{height:auto}
+  .visual svg{max-width:640px;margin:0 auto}
 }
