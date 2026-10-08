@@ -9,3 +9,7 @@ Roadmap home of reusable DraftDeck design assets:
 - `components/` — registered native components (Shipping & Receiving Control Desk, Verification Tag, D.A.T.A. Connector, Claim Comparator, Consignee Release Latch).
 
 Custom components are registered here, not improvised per build. Component naming and geometry must remain logistics-native and must not reintroduce deprecated travel/aviation metaphors.
+
+## Editorial components
+
+[Editorial component contracts](editorial-components.md) define ten reusable teaching features, mixed-copy layouts, USWDS implementation practices, and a WCAG 2.2 AA web accessibility target. These specifications do not establish tested conformance.

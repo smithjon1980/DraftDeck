@@ -1,0 +1,62 @@
+{
+  "1": [
+    "AT THE LOADING DOCK",
+    "A parcel arrives sealed. What evidence establishes arrival, readability, and correct contents?"
+  ],
+  "2": [
+    "PAUSE & CONSIDER",
+    "Which part of your last AI response came from the source, and which part was inferred?"
+  ],
+  "3": [
+    "CARRY FORWARD",
+    "Principle: context must travel. Next action: attach the source and frame to the receiving request."
+  ],
+  "4": [
+    "THE WORKING AGREEMENT",
+    "Before transfer, identify the actual source version and exact receiver. Keep all ten fields inspectable."
+  ],
+  "5": [
+    "CHOOSE THE ROUTE",
+    "A tool is available, but destination authorization is unclear. Hold the affected action and resolve its scope."
+  ],
+  "6": [
+    "INSPECT THE PAYLOAD",
+    "Source: room number not supplied. Candidate: Room 204. Finding: unsupported addition; preserve UNKNOWN."
+  ],
+  "7": [
+    "TRY THE HANDOFF",
+    "Carry the complete workshop source and frame to a second chat. Save the exact request and response."
+  ],
+  "8": [
+    "EVIDENCE WINDOW",
+    "Claim: VERIFIED. Required support: named acceptance checks, observed results, verifier, and verification limits."
+  ],
+  "9": [
+    "RECOVERY RECORD",
+    "Observed problem: source omitted. Action: supply source. Evidence: compare the new response and retain both attempts."
+  ],
+  "10": [
+    "EVIDENCE WINDOW",
+    "Reported relay: filenames visible; contents inaccessible. Scope: metadata access, not established readability."
+  ],
+  "11": [
+    "CHOOSE THE ROUTE",
+    "Unsupported capability: select a supported route only within authorization. Earlier capability checking is proposed."
+  ],
+  "12": [
+    "CARRY FORWARD",
+    "Principle: automate transport and preserve acceptance checks. Next action: identify the check each transfer must carry."
+  ],
+  "13": [
+    "PAUSE & CONSIDER",
+    "Does this step need interpretation, a rule, an interface, or configured execution? What evidence tests the result?"
+  ],
+  "14": [
+    "BEFORE YOU RELEASE",
+    "Check 1: content and visual acceptance. Check 2: authorization covers this artifact, action, and exact destination."
+  ],
+  "15": [
+    "TRY THE HANDOFF",
+    "Submit frame, request, response, comparison, recovery record, and unresolved questions. Identify the next bounded trial."
+  ]
+}
