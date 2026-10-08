@@ -47,7 +47,7 @@ low = {
 1: [('FRAME', 'A bounded task travels with its source.', 'Identify what enters the workflow, who may act, where the result belongs, and what evidence establishes completion. A confident answer is not a receipt. The shared frame makes those requirements explicit before you inspect a returned result.'),
     ('EVIDENCE', 'Keep three claims separate.', 'Arrival records delivery. Inspection compares content with criteria. Release requires authorization covering the artifact, action, and destination. Begin manually so each boundary is visible; automate suitable steps after the process is understood.')],
 3: [('SENDER', 'Prepare the agreement.', 'Supply the source, identified version, objective, permitted actions, constraints, and return format.'),
-    ('PAYLOAD', 'Carry actual context.', 'A second chat does not inherit the first chat’s memory. The frame and source must travel together.'),
+    ('PAYLOAD', 'Carry actual context.', 'A second chat does not inherit the first chat\u2019s memory. The frame and source must travel together.'),
     ('RECEIVER', 'Confirm the boundary.', 'The frame does not create access or capability. Confirm readability and authorization for the affected task. Missing required source pauses dependent work; independent authorized work can continue.')],
 7: [('PREPARE', 'Draft in Chat A.', 'Create a read-only inventory request using the shared frame and practice source.'),
     ('TRANSFER', 'Carry to Chat B.', 'Paste the complete frame and source. Save the exact request you sent. Do not assume context transfers automatically.'),
@@ -64,12 +64,12 @@ low = {
 }
 # Medium-copy sections: one explicit teaching relationship per slide.
 extra = {
-2: ('BOUNDARY', 'Trace one handoff', 'Suppose a receiving system returns a clean workshop summary. The title and materials match, but the room number was supplied without a source. The response may look useful while failing the preservation rule. The governor identifies the deviation using the frame, not the model’s tone. Keep known facts separate from interpretations and unknowns. Decide which action can continue, which needs recovery, and what evidence would resolve the gap. This is the difference between getting an answer and establishing an inspectable result.'),
+2: ('BOUNDARY', 'Trace one handoff', 'Suppose a receiving system returns a clean workshop summary. The title and materials match, but the room number was supplied without a source. The response may look useful while failing the preservation rule. The governor identifies the deviation using the frame, not the model\u2019s tone. Keep known facts separate from interpretations and unknowns. Decide which action can continue, which needs recovery, and what evidence would resolve the gap. This is the difference between getting an answer and establishing an inspectable result.'),
 5: ('ENFORCEMENT', 'Separate instructions from controls', 'Written permissions describe what the executor is allowed to do. Active access controls can enforce limits in a connected system. Neither guarantees correct content. An executor might have a tool available but lack authorization for the requested destination. Another might be authorized yet unable to access the required source. Inspect these conditions independently. Before changing a document, sending a payload, or publishing a result, check scope for that specific action. Keep the returned evidence tied to the same objective and source version used in the request.'),
 6: ('ACCEPTANCE', 'Use the source as the comparator', 'The missing room value is not the same as a missing source document. The supplied document contains enough evidence to inventory the known details and explicitly report the absent field. If the document itself is missing, the executor cannot extract its facts. Pause that dependent action and request the payload. Define completion as the required inventory and explicit unknown, not a fully populated schedule. Do not invent a calendar date from Saturday. Preserve source wording where the request requires exact extraction, and save the comparison that establishes acceptance.'),
 10: ('CLAIM', 'Match the receipt to its scope', 'The locked-package analogy explains access, not proof of correctness. Receiving a package establishes arrival. Reading its label establishes metadata visibility. Opening it establishes some access to contents. Inspection must still compare those contents with the expected source. A record that one document was accepted does not establish that every document was imported. Name which source was checked, what was visible, and what remains unknown. Preserve recovery details so later automation can handle the same format boundary without repeating already completed work.'),
 12: ('IMPLEMENTATION', 'Keep acceptance checks attached', 'Automating transfer changes the transport mechanism, not the required evidence. A destination selection becomes a tool or API route. Copying becomes payload transport. Permission statements define scope; access controls may enforce it. Comparison becomes a validation check. Run identifiers, duplicate detection, bounded retries, and logs require implementation rather than appearing automatically. A retry should address the affected operation without repeating successful writes. Keep the source version and returned result associated with the same run. When evidence is incomplete, report the limit instead of silently upgrading the status.'),
-13: ('SELECTION', 'Assign the step deliberately', 'A workflow may combine all four mechanisms or use only the ones required. Choose interpretation when the task needs reasoning about supplied content. Choose explicit rules when a condition has a defined test. Use an interface when an authorized system must communicate or act. Use configured execution when prescribed interactions fit the application. Then inspect the result against the same acceptance criteria. Model output is not an external action, and successful execution is not proof of source fidelity. The learner continues to govern objective, scope, and evidence.')
+13: ('SELECTION', 'Assign the step deliberately', 'A workflow may combine all four mechanisms or use only the ones required. Inspect the result against the same acceptance criteria in every case. Model output is not an external action; successful execution is not proof of source fidelity.')
 }
 # Dense reference pages: explicit entries, not a wall of undifferentiated text.
 fields = [('Run ID', 'Give each execution a unique reference so the request, source, returned result, and recovery record can be associated. The identifier supports traceability; it does not prove correctness.'),
@@ -89,12 +89,12 @@ states = [('RECEIVED', 'The payload arrived at the destination. A receipt suppor
 ('PARTIAL', 'Required work remains. Interruption, unsupported capability, unfinished extraction, or incomplete verification may leave a task partial without an attempted operation failure. Identify completed work and affected work separately, then recover only the portion that still requires attention.'),
 ('FAILED', 'An attempted operation failed. Record which action was attempted, what failure was observed, and what evidence supports that description. Do not label missing information as an execution failure. Recovery may reroute the operation within existing authorization or require expanded scope.'),
 ('UNKNOWN', 'Evidence is insufficient to establish the claim. This may describe an absent room number or unverified destination content. It is distinct from FAILED. Do not substitute fluency or agreement between models for missing facts.')]
-evidence = [('Shared frame', 'Submit the actual ten-field agreement used for the run. Preserve the objective, source identifiers, destination, permitted actions, constraints, unknowns, acceptance checks, and return format. This is the comparator for the handoff, not a retrospective statement that everything went well.'),
-('Sent request', 'Keep the exact request carried to the receiving system, including the source payload actually supplied. A planned request is not evidence of delivery. If a missing-input attempt was intentional, identify it separately so the complete request and the failure exercise remain distinguishable.'),
-('Returned response', 'Save the exact response returned by the receiving executor. Do not replace it with a polished summary before inspection. Identify claims that came from the source, interpretations introduced by the model, and missing information. Confident wording does not establish factual preservation.'),
-('Source comparison', 'Record the checks performed against the identified source version. Name the verifier, the acceptance criteria, and the observed results. Separate visual acceptance from content acceptance. A clean diagram or well-formatted inventory can still omit required content or include fabricated details.'),
-('Recovery record', 'Describe the missing input, unreadable format, unsupported capability, or failed operation actually observed. Record what changed and what was rechecked. Recover affected steps without repeating successful work. Confirm that authorization covers any alternative tool, action, and destination before proceeding.'),
-('Unresolved questions', 'List what remains unknown and what evidence could resolve it. A manual rehearsal establishes observations within the tested environment; it does not prove production behavior. Future integrations need their own capability, authorization, transport, and acceptance checks. Agreement between models remains insufficient proof of correctness.')]
+evidence = [('Shared frame', 'Submit the actual ten-field agreement used for the run: objective, source identifiers, destination, permitted actions, constraints, unknowns, acceptance checks, and return format. This is the comparator for the handoff, not a retrospective claim that everything went well.'),
+('Sent request', 'Keep the exact request carried to the receiving system, including the source payload actually supplied. A planned request is not evidence of delivery. Identify intentional missing-input attempts separately.'),
+('Returned response', 'Save the exact response returned by the receiving executor. Do not replace it with a polished summary. Identify claims from the source, interpretations added by the model, and missing information.'),
+('Source comparison', 'Record the checks performed against the identified source version: verifier, acceptance criteria, observed results. Separate visual acceptance from content acceptance.'),
+('Recovery record', 'Describe the missing input, unsupported capability, or failed operation actually observed. Record what changed and what was rechecked. Recover affected steps without repeating successful work.'),
+('Unresolved questions', 'List what remains unknown and what evidence could resolve it. A manual rehearsal does not prove production behavior; future integrations need their own checks. Agreement between models is not proof of correctness.')]
 
 # Slide 6: exact workshop source, kept separate from commentary (v0.4 fix).
 WORKSHOP_SOURCE = ('Title: Community Workshop\n'
@@ -135,16 +135,215 @@ def slide_blocks(n):
         return [(a, '', b) for a, b in entries]
     blocks = slides[n]['blocks'][:2]
     if n == 12:
-        blocks = [('ROUTE', 'Select the receiver', 'Choosing a receiving chat corresponds to selecting the destination and tool route. Carry source text as an identified payload. The frame defines the objective and permitted actions; it does not create access, shared memory, or functional capability. Check what the receiving executor can actually use before the affected task proceeds.'),
-                  ('CHECK', 'Preserve scope and acceptance', 'Stating permitted actions corresponds to defining authorization scope. Active controls may enforce those limits. Comparing returned output with the source corresponds to validation against named criteria. Automated transport must preserve the same distinctions between receipt, readability, acceptance, and verification. None of those events alone grants release permission.')]
+        return [('ROUTE', 'Select the receiver', 'Choosing a receiving chat selects the destination and tool route. Carry the source as an identified payload. The frame defines objective and permitted actions; it does not create access, memory, or capability. Check what the receiver can actually use first.'),
+                ('CHECK', 'Preserve scope and acceptance', 'Stating permitted actions defines authorization scope; access controls may enforce it. Comparing returned output with the source is validation against named criteria. Automated transport must preserve the same distinctions between receipt, readability, acceptance, and verification.')]
     if n == 13:
-        blocks = [('REASON', 'AI and explicit rules', 'AI can support interpretation and probabilistic reasoning about supplied content. Rules evaluate explicit conditions and deterministic logic. These mechanisms may work together within one activity, but the acceptance checks must remain inspectable. Do not treat fluent model output as evidence that a system action occurred. Missing facts remain missing even when a plausible explanation is available.'),
-                  ('ACT', 'APIs and configured execution', 'APIs provide interfaces through which authorized tools or systems may act. RPA executes configured interactions. Choose the mechanism that fits the task and application. Availability does not grant authority, and successful execution does not prove source fidelity. Record the action performed, the destination, and the returned evidence before assigning a stronger status.')]
+        blocks = [('REASON', 'AI and explicit rules', 'AI supports interpretation and probabilistic reasoning about supplied content. Rules evaluate explicit conditions. Both may work within one activity, but acceptance checks must remain inspectable. Fluent output is not evidence that a system action occurred.'),
+                  ('ACT', 'APIs and configured execution', 'APIs let authorized systems act; RPA executes configured interactions. Choose the mechanism that fits the task. Availability does not grant authority. Record the action, destination, and returned evidence before assigning a stronger status.')]
     if n == 6:
         # Exact source stays verbatim and unmixed; commentary is a separate block.
         blocks = [('SOURCE', 'Community Workshop — exact source', WORKSHOP_SOURCE),
                   ('RETURN', 'Inventory the source', 'Extract the known title, schedule, and materials. Report the room number as UNKNOWN. Do not infer it from prior workshops. An UNKNOWN label makes missing evidence explicit; it does not guarantee model behavior.')]
     return blocks[:2] + [extra[n]]
+
+# ---------- Consulting visuals (executive exhibits; token colors only) ----------
+# One decision-grade exhibit per slide where it aids the teaching point.
+# These break up the sequence diagrams and give the deck standard
+# consulting visual grammar: MECE tree, chevron flow, loop, decision tree,
+# staircase, 2x2 matrix, evidence funnel.
+INK = '#20252A'; ACC = '#B34700'; RAIL = '#B9BFC4'; MUT = '#697177'; GRID = '#DEDEDE'
+
+def _svg(w, h, body):
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" '
+            f'viewBox="0 0 {w} {h}" role="img">{body}</svg>')
+
+def _t(x, y, s, size=15, bold=False, col=INK, anchor='start', mono=False):
+    ff = "Courier New" if mono else "Arial"
+    fw = ' font-weight="700"' if bold else ''
+    return (f'<text x="{x}" y="{y}" font-family="{ff}" font-size="{size}"'
+            f' fill="{col}" text-anchor="{anchor}"{fw}>{s}</text>')
+
+def _box(x, y, w, h, stroke=INK, sw=1.5, fill='white'):
+    return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"/>'
+
+def _ln(x1, y1, x2, y2, col=INK, sw=1.5, dash=''):
+    d = f' stroke-dasharray="{dash}"' if dash else ''
+    return f'<path d="M{x1},{y1} L{x2},{y2}" fill="none" stroke="{col}" stroke-width="{sw}"{d}/>'
+
+def _ah(x, y, col=INK, angle=0):
+    # small filled arrowhead pointing right, rotated by angle deg around (x,y)
+    return (f'<path d="M{x},{y} l-11,-5 l0,10 Z" fill="{col}" '
+            f'transform="rotate({angle} {x} {y})"/>')
+
+def visual_mece():
+    # Slide 3: MECE decomposition of the ten-field working agreement.
+    b = [_t(350, 34, 'THE WORKING AGREEMENT', 17, True, INK, 'middle'),
+         _t(350, 56, 'ten fields / three branches', 12, False, MUT, 'middle', True),
+         _box(230, 70, 240, 46), _t(350, 99, 'EVERY FIELD, EXACTLY ONE BRANCH', 12, True, ACC, 'middle', True)]
+    branches = [
+        ('01 IDENTIFY THE RUN', ['01 / Run ID', '02 / Observable objective', '03 / Actual inputs & versions']),
+        ('02 BOUND THE WORK', ['04 / Exact destination', '05 / Necessary definitions', '06 / Permitted actions', '07 / Constraints']),
+        ('03 CLOSE THE LOOP', ['08 / Unknowns', '09 / Completion criteria', '10 / Return format'])]
+    for i, (title, leaves) in enumerate(branches):
+        x = 20 + i * 230
+        b.append(_ln(350, 116, 350, 150) if i == 1 else _ln(350, 150, x + 105, 150))
+        b.append(_ln(x + 105, 150, x + 105, 168))
+        b.append(_ln(x + 105, 208, x + 105, 224 + (len(leaves) - 1) * 52))  # trunk behind leaves
+        b.append(_box(x, 168, 210, 40, ACC))
+        b.append(_t(x + 105, 194, title, 13, True, ACC, 'middle', True))
+        for j, leaf in enumerate(leaves):
+            y = 224 + j * 52
+            b.append(_box(x, y, 210, 40, RAIL))
+            b.append(_t(x + 12, y + 26, leaf, 13))
+    b.append(_t(350, 486, 'MECE: branches do not overlap; together they cover the agreement.', 13, False, MUT, 'middle'))
+    return _svg(700, 500, ''.join(b))
+
+def visual_chevron():
+    # Slide 7: handoff as a chevron flow (replaces plain sequence).
+    steps = [('01', 'PREPARE', 'Draft the bounded request in Chat A'),
+             ('02', 'TRANSFER', 'Carry frame and source to Chat B'),
+             ('03', 'COMPARE', 'Inspect the returned response')]
+    b = []
+    for i, (num, name, sub) in enumerate(steps):
+        x = 20 + i * 500
+        pts = f'{x},30 {x+400},30 {x+460},90 {x+400},150 {x},150 {x+60},90'
+        b.append(f'<polygon points="{pts}" fill="white" stroke="{INK}" stroke-width="1.5"/>')
+        b.append(_t(x + 90, 70, num, 16, True, ACC, 'start', True))
+        b.append(_t(x + 90, 100, name, 19, True))
+        b.append(_t(x + 90, 126, sub, 14, False, MUT))
+    b.append(_t(740, 190, 'Evidence moves with the payload at every stage; no stage is skipped.', 13, False, MUT, 'middle'))
+    return _svg(1480, 210, ''.join(b))
+
+def visual_loop():
+    # Slide 9: recovery as a closed loop, not a straight line.
+    b = [_t(350, 60, 'RECOVERY LOOP', 17, True, INK, 'middle'),
+         _t(350, 82, 'run until the comparison passes', 12, False, MUT, 'middle', True)]
+    nodes = [('OMIT', 'frame without source', 350, 190),
+             ('RECOVER', 'supply the payload', 560, 400),
+             ('RECHECK', 'compare against source', 140, 400)]
+    for name, sub, cx, cy in nodes:
+        b.append(f'<circle cx="{cx}" cy="{cy}" r="72" fill="white" stroke="{INK}" stroke-width="1.5"/>')
+        b.append(_t(cx, cy - 4, name, 16, True, ACC, 'middle', True))
+        b.append(_t(cx, cy + 20, sub, 11, False, MUT, 'middle'))
+    arcs = [(405, 241, 505, 349, 45), (499, 451, 201, 451, 180), (195, 349, 299, 241, 315)]
+    for x1, y1, x2, y2, a in arcs:
+        b.append(_ln(x1, y1, x2, y2, ACC))
+        b.append(_ah(x2, y2, ACC, a))
+    b.append(_t(350, 330, 'each pass is', 13, False, MUT, 'middle'))
+    b.append(_t(350, 350, 'recorded', 13, True, INK, 'middle'))
+    return _svg(700, 500, ''.join(b))
+
+def visual_decision():
+    # Slide 11: routing decision tree (consulting decision grammar).
+    b = [_t(350, 40, 'ROUTING DECISION', 17, True, INK, 'middle')]
+    b.append(f'<polygon points="350,70 500,140 350,210 200,140" fill="white" stroke="{INK}" stroke-width="1.5"/>')
+    b.append(_t(350, 132, 'CAPABILITY', 15, True, INK, 'middle', True))
+    b.append(_t(350, 154, 'supported?', 14, False, INK, 'middle'))
+    b.append(_ln(500, 140, 600, 140)); b.append(_ah(600, 140))
+    b.append(_t(545, 128, 'YES', 13, True, INK, 'middle'))
+    b.append(_box(610, 105, 300, 70)); b.append(_t(625, 135, 'PROCEED', 14, True, INK, 'start', True))
+    b.append(_t(625, 158, 'within stated scope', 13, False, MUT))
+    b.append(_ln(350, 210, 350, 270, ACC)); b.append(_ah(350, 270, ACC, 90))
+    b.append(_t(365, 250, 'NO', 13, True, ACC))
+    b.append(f'<polygon points="350,270 520,340 350,410 180,340" fill="white" stroke="{ACC}" stroke-width="1.5"/>')
+    b.append(_t(350, 332, 'WITHIN EXISTING', 14, True, ACC, 'middle', True))
+    b.append(_t(350, 352, 'authorization?', 13, False, INK, 'middle'))
+    b.append(_ln(520, 340, 600, 340)); b.append(_ah(600, 340))
+    b.append(_t(555, 328, 'YES', 13, True, INK, 'middle'))
+    b.append(_box(610, 305, 320, 70)); b.append(_t(625, 335, 'REROUTE', 14, True, INK, 'start', True))
+    b.append(_t(625, 358, 'use the supported interface', 13, False, MUT))
+    b.append(_ln(350, 410, 350, 460, ACC)); b.append(_ah(350, 460, ACC, 90))
+    b.append(_t(180, 442, 'NO / SCOPE EXPANDS', 13, True, ACC, 'middle'))
+    b.append(_box(180, 460, 520, 60, ACC))
+    b.append(_t(350, 497, 'OBTAIN ADDITIONAL AUTHORIZATION FIRST', 14, True, ACC, 'middle', True))
+    return _svg(960, 560, ''.join(b))
+
+def visual_staircase():
+    # Slide 12: automation maturity ascent.
+    steps = [('01 MANUAL RELAY', 'every boundary visible; slow but inspectable'),
+             ('02 ASSISTED TRANSFER', 'tools carry the payload; checks still manual'),
+             ('03 AUTOMATED PIPELINE', 'acceptance checks attached to every transfer')]
+    b = []
+    for i, (name, sub) in enumerate(steps):
+        x = 40 + i * 500; y = 260 - i * 80; h = 80 + i * 80
+        b.append(_box(x, y, 440, h))
+        b.append(_t(x + 20, y + 32, name, 16, True, ACC if i == 2 else INK, 'start', True))
+        b.append(_t(x + 20, y + 56, sub, 13, False, MUT))
+    b.append(_ln(60, 250, 1440, 60, ACC, 1.5, '6 5'))
+    b.append(_ah(1440, 60, ACC, -14))
+    b.append(_t(1420, 44, 'automation rises; the frame does not change', 13, False, ACC, 'end'))
+    return _svg(1480, 352, ''.join(b))
+
+def visual_matrix():
+    # Slide 13: 2x2 mechanism selection matrix.
+    b = [_t(330, 36, 'MECHANISM SELECTION', 16, True, INK, 'middle'),
+         _ln(80, 440, 620, 440), _ah(620, 440),
+         _ln(80, 440, 80, 70), _ah(80, 70, INK, -90),
+         _t(350, 468, 'TASK LOGIC:  DETERMINISTIC  \u2192  JUDGMENT', 12, True, MUT, 'middle', True),
+         f'<text x="34" y="260" font-family="Courier New" font-size="12" font-weight="700" fill="{MUT}" text-anchor="middle" transform="rotate(-90 34 260)">ACTS ON EXTERNAL SYSTEMS</text>',
+         _ln(350, 70, 350, 440, RAIL, 1, '4 4'), _ln(80, 255, 620, 255, RAIL, 1, '4 4')]
+    quads = [('EXPLICIT RULES', 'condition has a defined test', 215, 170),
+             ('AI INTERPRETATION', 'reasoning over supplied content', 485, 170),
+             ('API / INTERFACE', 'authorized system communicates or acts', 215, 355),
+             ('CONFIGURED EXECUTION', 'prescribed interactions in the application', 485, 355)]
+    for name, sub, cx, cy in quads:
+        b.append(_t(cx, cy - 8, name, 14, True, INK, 'middle'))
+        b.append(_t(cx, cy + 14, sub, 12, False, MUT, 'middle'))
+    b.append(_t(330, 520, 'Choose per step; the acceptance check stays the same in every quadrant.', 13, False, MUT, 'middle'))
+    return _svg(660, 540, ''.join(b))
+
+def visual_funnel():
+    # Slide 15: evidence package narrows to one release decision.
+    lv = [('06 EVIDENCE ITEMS', 'frame \u00b7 request \u00b7 response \u00b7 comparison \u00b7 recovery \u00b7 unknowns', 620),
+          ('03 VERIFIED CLAIMS', 'arrival \u00b7 content fidelity \u00b7 authorization scope', 420),
+          ('01 RELEASE DECISION', '', 300)]
+    b = []
+    for i, (name, sub, w) in enumerate(lv):
+        y = 30 + i * 140; x = 350 - w / 2
+        w2 = lv[i + 1][2] if i < 2 else 180
+        pts = f'{x},{y} {x + w},{y} {350 + w2 / 2},{y + 110} {350 - w2 / 2},{y + 110}'
+        b.append(f'<polygon points="{pts}" fill="white" stroke="{INK}" stroke-width="1.5"/>')
+        b.append(_t(350, y + 55, name, 15, True, ACC if i == 2 else INK, 'middle', True))
+        if sub:
+            b.append(_t(350, y + 80, sub, 12, False, MUT, 'middle'))
+    b.append(_ln(350, 450, 350, 484, ACC)); b.append(_ah(350, 484, ACC, 90))
+    b.append(_t(350, 512, 'Nothing advances without its record.', 13, True, ACC, 'middle'))
+    return _svg(700, 530, ''.join(b))
+
+VISUALS = {3: ('mece', 'Working agreement decomposed MECE into three branches covering ten fields', visual_mece),
+           7: ('chevron', 'Handoff chevron flow: prepare, transfer, compare', visual_chevron),
+           9: ('loop', 'Recovery loop: omit, recover, recheck until comparison passes', visual_loop),
+           11: ('decision', 'Routing decision tree with authorization branches', visual_decision),
+           12: ('staircase', 'Automation maturity staircase: manual, assisted, automated', visual_staircase),
+           13: ('matrix', 'Two-by-two mechanism selection matrix', visual_matrix),
+           15: ('funnel', 'Evidence funnel: six items to three claims to one decision', visual_funnel)}
+
+def visual_html(n):
+    if n not in VISUALS: return ''
+    kind, label, fn = VISUALS[n]
+    return (f'<figure class="visual visual-{kind}" role="img" aria-label="{E(label)}">{fn()}</figure>')
+
+def appendix_pdf():
+    """Final PDF page: all consulting exhibits in one index (review rendition)."""
+    from svglib.svglib import svg2rlg
+    from reportlab.graphics import renderPDF as _rpdf
+    import io
+    c.scale(.75, .75)
+    line(50, 40, 1582, 40); text(50, 53, 'BOSS / BIOSCILLATE OPERATING SYSTEM BY SEVEN', 13)
+    text(1200, 53, 'APPENDIX', 13)
+    text(50, 102, 'CONSULTING EXHIBITS.', 44, True)
+    text(50, 171, 'Decision-grade visuals referenced by the deck: one exhibit per teaching point.', 22, width=1490)
+    cellw, cellh = 730, 205
+    for i, n in enumerate(sorted(VISUALS)):
+        kind, label, fn = VISUALS[n]
+        drawing = svg2rlg(io.BytesIO(fn().encode()))
+        sc = min(cellw / drawing.width, (cellh - 26) / drawing.height)
+        x = 76 + (i % 2) * 770; y = 240 + (i // 2) * cellh
+        c.saveState(); c.translate(x, H - y - drawing.height * sc); c.scale(sc, sc)
+        _rpdf.draw(drawing, c, 0, 0)
+        c.restoreState()
+        text(x, y + cellh - 18, f'SLIDE {n:02d} / {kind.upper()}', 12, True, col='#B34700')
+    c.showPage()
 
 # ---------- PDF + geometry renderer (coordinate-composed review rendition) ----------
 pages_html = []; manifest = []
@@ -262,10 +461,12 @@ for n in range(1, 16):
         blocks = [('CONTEXT', '', intro)] + [(a, '', b) for a, b in entries]
     count = wordcount(blocks) + len(s['title'].split()) + len(s['lead'].split())
     manifest.append({'slide': n, 'title': s['title'], 'density': level, 'layout': LAYOUT[n],
-                     'editorialFeature': features[n][0], 'copyWords': count, 'audioAnchor': s['time'],
+                     'editorialFeature': features[n][0], 'consultingVisual': VISUALS.get(n, (None,))[0],
+                     'copyWords': count, 'audioAnchor': s['time'],
                      'pattern': 'visual opener' if n == 1 else 'reference' if level == 'high' else 'integrated editorial',
                      'diagramArrows': 'reading order only, not operational authorization'})
     finish_pdf(n)
+appendix_pdf()  # consulting exhibits index page (page 16)
 c.save()
 
 # ---------- Semantic HTML renderer (token-based, responsive) ----------
@@ -358,7 +559,7 @@ for n in range(1, 16):
         f'<h1 class="slide-title" id="s{n:02d}-title">{E(s["title"])}</h1>'
         f'<p class="lead">{E(s["lead"])}</p></header>'
         + opener +
-        f'<div class="slide-body">{block_html(n)}</div>'
+        f'<div class="slide-body">{visual_html(n)}{block_html(n)}</div>'
         + component_html(n) +
         f'<footer class="slide-foot"><p class="prompt"><strong>Your turn:</strong> {E(prompts[n])}</p>'
         f'<p class="nav">BOSS / Day Zero / {level} copy / {n:02d} of 15 / review candidate</p></footer>'
@@ -398,17 +599,34 @@ body{margin:0;background:var(--boss-color-ground);color:var(--boss-color-ink);
   border-top:var(--boss-stroke-detail) solid var(--boss-color-rail);padding-top:var(--boss-space-1)}
 .prompt{font-size:var(--boss-text-body);margin:0}
 .nav{font-family:var(--boss-font-label);font-size:.75rem;color:var(--boss-color-muted);margin:var(--boss-space-1) 0 0}
+/* ---------- consulting visuals (one exhibit per teaching point) ---------- */
+.visual{margin:0}
+.visual svg{width:100%;height:auto;display:block}
+/* full-width band exhibits sit above the blocks */
+.visual-chevron,.visual-staircase{grid-column:1/-1}
 /* layout variants — one arrangement per teaching purpose */
 .layout-opener .slide-body{grid-template-columns:1fr 1fr;top:640px;bottom:200px}
 .layout-duo .slide-body,.layout-compare .slide-body,.layout-inspect .slide-body{grid-template-columns:1fr 1fr;grid-auto-rows:min-content}
 .layout-payload-flow .slide-body,.layout-steps .slide-body,.layout-recovery .slide-body{grid-template-columns:repeat(3,1fr);grid-auto-rows:min-content}
 .layout-quad .slide-body{grid-template-columns:1fr 1fr}
-.layout-case .slide-body,.layout-map .slide-body,.layout-route .slide-body{grid-template-columns:1fr;grid-auto-rows:min-content;max-width:1100px}
+.layout-case .slide-body,.layout-route .slide-body{grid-template-columns:1fr;grid-auto-rows:min-content;max-width:1100px}
 .layout-checkpoints .slide-body{grid-template-columns:1fr;max-width:1100px}
 .layout-reference-ten .slide-body{grid-template-columns:repeat(4,1fr);gap:var(--boss-space-3)}
 .layout-reference-seven .slide-body,.layout-checklist .slide-body{grid-template-columns:repeat(3,1fr);gap:var(--boss-space-3)}
 .layout-reference-ten .block-ref,.layout-reference-seven .block-ref,.layout-checklist .block-ref{
   border-top:var(--boss-stroke-detail) solid var(--boss-color-rail);padding-top:var(--boss-space-1)}
+/* visual placement overrides (must follow the layout variants) */
+.layout-payload-flow .slide-body{grid-template-columns:1fr 640px}
+.layout-recovery .slide-body{grid-template-columns:1fr 520px}
+.layout-quad .slide-body{grid-template-columns:1fr 520px}
+.layout-route .slide-body{grid-template-columns:1fr 560px;max-width:none}
+.layout-map .slide-body{grid-template-columns:1fr 1fr;grid-auto-rows:min-content;max-width:none}
+.layout-checklist .slide-body{grid-template-columns:1fr 1fr 440px}
+.layout-payload-flow .visual,.layout-recovery .visual,.layout-quad .visual,.layout-route .visual{
+  grid-column:2;grid-row:1/span 10;align-self:start}
+.layout-checklist .visual{grid-column:3;grid-row:1/span 10;align-self:start}
+.layout-checklist .slide-body{gap:var(--boss-space-3)}
+.layout-checklist .block-ref p{font-size:var(--boss-text-small)}
 /* ---------- editorial components (ten distinct contracts) ---------- */
 .cmp{position:absolute;left:var(--boss-space-5);right:var(--boss-space-5);bottom:96px;
   border-top:var(--boss-stroke-control) solid var(--boss-color-ink);padding-top:var(--boss-space-1)}
@@ -441,6 +659,7 @@ a:focus-visible,.cmp:focus-visible{outline:var(--boss-focus-ring);outline-offset
   .block{margin-bottom:var(--boss-space-3)}
   .cmp-cols,.cmp-release .cmp-cols,.cmp-evidence dl,.cmp-branches{grid-template-columns:1fr}
   .story img{height:auto}
+  .visual svg{max-width:640px;margin:0 auto}
 }
 """
 (P/'styles.css').write_text(CSS)
@@ -461,6 +680,10 @@ shutil.copy(SRC/'draftdeck-standards/process.svg', P/'handoff.svg')
  'Slide 6 SOURCE block now carries the exact workshop source only; acceptance commentary is a separate block. '
  'Repeated filler paragraphs removed from medium pages 2, 5, 10, 12, 13; each medium page carries one explicit teaching relationship. '
  'All ten editorial features render through distinct components per design-system/editorial-components.md; shared tokens in design-system/tokens/tokens.css replace inline style literals. '
+ 'Seven consulting exhibits break up the sequence diagrams, one per teaching point: '
+ 'MECE tree (slide 3), chevron flow (7), recovery loop (9), routing decision tree (11), '
+ 'automation maturity staircase (12), two-by-two mechanism matrix (13), evidence funnel (15). '
+ 'The PDF carries a sixteenth appendix page indexing all seven. '
  'Slide 4 fields are numbered 01-10 as a consistent reading order across formats. Slides 7 and 9 use stepped practice/recovery layouts with record space; slide 8 and 10 use the Evidence Window component; slide 11 uses explicit conditional routing branches; slide 14 presents acceptance and authorization as two distinct checkpoints; slide 15 uses the submission checklist layout. '
  'HTML is semantic (h1 per slide, h2 per block, landmarks, labeled record space) and reflows to a single-column lesson layout below the 1100px breakpoint; the fixed canvas is preserved for the 17x11 slide format. '
  'Word counts include page headline, lead, diagram labels and teaching body; recurring navigation and writing prompt excluded. '
