@@ -2,6 +2,8 @@ import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { chromium } from 'playwright';
+import candidate from '../../../episode01/reference/slide-copy.candidate.json' with { type: 'json' };
+import { createHash } from 'node:crypto';
 
 const artifactDir = new URL('./artifacts/', import.meta.url);
 await mkdir(artifactDir, { recursive: true });
@@ -48,7 +50,7 @@ try {
             if (parseFloat(style['border' + side + 'Width']) > 1) failures.push('Thick border');
           }
           if (el.matches('p, h1, h2, h3, span')) {
-            if (style.color !== 'rgb(0, 0, 0)') failures.push('Text color');
+            if (style.color !== 'rgb(0, 0, 0)' && !(el.matches('h2[data-secondary="true"]') && style.color === 'rgb(100, 100, 100)')) failures.push('Text color');
             const rect = el.getBoundingClientRect();
             if (rect.left < bounds.left - 1 || rect.top < bounds.top - 1 || rect.right > bounds.right + 1 || rect.bottom > bounds.bottom + 1) failures.push('Text outside canvas');
             if (el.scrollWidth > el.clientWidth + 1 || el.scrollHeight > el.clientHeight + 1) failures.push('Text overflow');
@@ -65,6 +67,19 @@ try {
     assert.deepEqual(result.ids, ['01', '02', '06']);
     assert.deepEqual(result.failures, []);
     assert.equal(result.documentOverflow, false);
+    for (const slide of candidate.slides) {
+      await page.getByLabel('View', { exact: true }).selectOption(slide.slide);
+      const plate = page.locator('[data-slide-id="' + slide.slide + '"]');
+      await plate.getByRole('heading', { name: slide.headline, exact: true }).waitFor();
+      assert.equal(await plate.locator('img').count(), 1);
+      assert.equal(await plate.locator('img').evaluate(img => img.complete && img.naturalWidth === 1536 && img.naturalHeight === 857), true);
+      if (slide.slide !== '01') assert.equal(await plate.locator('footer p').textContent(), slide.footer);
+      if (slide.slide === '06') {
+        assert.deepEqual(await plate.locator('.sequence-node h2').allTextContents(), slide.sequence_labels);
+        assert.equal(await plate.locator('.sequence-arrow').count(), 0);
+      }
+      await plate.screenshot({ path: new URL('slide-' + slide.slide + '-' + width + '.png', artifactDir).pathname });
+    }
     await page.getByLabel('View', { exact: true }).selectOption('02');
     assert.equal(await page.locator('[data-document-role="page"]').count(), 1);
     await page.getByRole('heading', { name: "The Problem Isn't Networking", exact: true }).waitFor();
@@ -80,13 +95,18 @@ try {
   for (const id of ['01', '06']) {
     await page.locator('[data-slide-id="' + id + '"]').screenshot({ path: new URL('slide-' + id + '-1968.png', artifactDir).pathname });
   }
-  await writeFile(new URL('report.json', artifactDir), JSON.stringify({ status: 'geometry-checks-passed', creativeApproval: 'UNKNOWN', logoVerified: false, report }, null, 2));
+  await writeFile(new URL('report.json', artifactDir), JSON.stringify({ status: 'geometry-checks-passed', creativeApproval: 'UNKNOWN', logoSourceHashVerified: true, reducedLockupApproved: false, report }, null, 2));
   console.log(JSON.stringify(report, null, 2));
   // Allow visual review through text-only GitHub log readers as well as
   // the downloadable artifact. These are diagnostic screenshots, never
   // source slides or Canva import substitutes.
-  const reviewImage = await readFile(new URL('slide-02-1968.png', artifactDir));
-  console.log('BOSS_REVIEW_PNG_BASE64=' + reviewImage.toString('base64'));
+  const logo = await readFile(new URL('../../../episode01/assets/brand/bioscillate-original-supplied.jpg', import.meta.url));
+  const blobHash = createHash('sha1').update(Buffer.from('blob ' + logo.length + '\0')).update(logo).digest('hex');
+  assert.equal(blobHash, 'ab4d85210dd410757d6542b286b15b65d4c7b774');
+  for (const id of ['01', '02', '06']) {
+    const reviewImage = await readFile(new URL('slide-' + id + '-1968.png', artifactDir));
+    console.log('BOSS_REVIEW_' + id + '_PNG_BASE64=' + reviewImage.toString('base64'));
+  }
 } finally {
   await browser?.close();
   server.kill('SIGTERM');

@@ -1,62 +1,50 @@
-# BOSS · Episode 01 · Candidate preview
+# BOSS Episode 01 — composition candidate
 
-Separate React/Tailwind implementation for requested Slides **01, 02, and 06**.
-The Logistics Framework deck and original ZIP are unchanged.
+Separate React/Tailwind preview for Slides 01, 02, 06. Inputs: textual
+Visual Authority Spec v1.0 and exact candidate JSON at main b96b358,
+read after GEMINI_RECONCILIATION.md. No approved rendered reference was
+supplied. Jonathan Smith's visual approval remains pending.
 
-```sh
-cd examples/boss-episode-01
-npm install
-npm run dev
-# Production browser-preview assets, not discrete Canva export:
-npm run build
-npx playwright install chromium
-npm run check:browser
-```
+Run npm install, npm run dev; npm run build compiles preview assets.
+Run npx playwright install chromium, then npm run check:browser.
+CI checks all three slides at four viewport widths and captures screenshots.
 
-## Evidence and unresolved content
+## Layer plan and proposed measurements
 
-Slide 02 uses exact wording recovered in the user's handoff from a Canva
-diagnostic; approval remains unknown. Slides 01/06 show `[UNKNOWN]`, rather
-than borrowing content from the conflicting 01–03 ZIP. The original logo is
-not present; its slot shows `[UNKNOWN]`. No logo is redrawn. There is no
-invented production footer. Preview status labels stay outside slide pages.
+All slides: fixed 1920×1080 native DOM, proportional CSS transform,
+white ground, black text, 1px rules. Fonts: proposed Arial and
+Consolas/Courier New. Preview controls and missing-field notes stay outside pages.
 
-The ZIP at `episode01/reference/BOSS_Episode01_React_Tailwind_Candidate_0.2.zip`
-has verified Git blob hash `ab9b9e78d288a0fa0286d10a5079ec9b639ab728`.
-It contains Vite/React/Tailwind source with candidate Slides 01–03:
-THE SEQUENCE, PRECEDENCE, GROUPING. Its README explicitly says it is
-code-only and unapproved. Its shadows, rounding, orange/gray styling,
-and viewport-constrained canvas conflict with the current root AGENTS.md.
+01: separate original logo image, 1240px wide at x340/y28; exact native
+headline in a 1472×222px hairline frame at x224/y746. Title 64px centered.
+Unknown footer omitted and flagged in preview UI.
 
-## Layer plan and candidate choices
+02: 144px metadata rail; full original image scaled to 256px width;
+160px title band; 662px main/sidebar region at 67%/33%; 112px exact-copy
+footer. Main inset 64px, comparison gutter 40px. Left column heading is
+#646464 as requested by supplied candidate; other text is #000000.
+Native body 28–32px, headings 34–52px. Comparison labels and sidebar
+copy are read directly from the supplied JSON.
 
-Each slide is a native HTML page section, fixed at 1920×1080. The preview
-wrapper scales the whole page through a CSS transform; internal geometry
-does not depend on viewport units. Text uses native HTML elements.
+06: same rail/title/footer regions; five exact ordered labels in independent
+native boxes, 248px high, 28px gaps. No arrows, participants, messages,
+or decision gates invented. This is an ordered-step composition, not a
+participant/message protocol.
 
-Slide 02 layers: original logo slot; diagnostic metadata; title;
-two comparison columns with hairline separators; operational-distinction
-sidebar. No full-slide image, SVG, canvas, PDF, or decorative fill.
+## Logo and unresolved fields
 
-Proposed measurements: 112px metadata rail, 204px title band,
-64px left margin, 67%/33% main/sidebar split, 40px comparison gutter.
-Proposed fonts: Arial for copy, Consolas/Courier New for metadata.
-Ink is #000000; ground is #FFFFFF; borders are 1px.
-These measurements and fonts are implementation proposals, not recovered
-approved specifications.
+The recovered JPEG is used unchanged: no crop, recoloring, signature
+removal, or replacement wordmark. Git blob hash:
+ab4d85210dd410757d6542b286b15b65d4c7b774.
+Its cyan/black/magenta identity was visually inspected. Byte equivalence
+to Gemini's differently named asset remains unknown.
 
-`SequenceDiagram` is reusable and data-driven, but not assigned to a slide.
-No participants, messages, or gates are invented.
+Reduced lockup unavailable: internal rails use the scaled full original
+as a candidate treatment. Internal metadata, Slide 01 footer, and Slide 06
+protocol fields remain unresolved. No additional illustration was supplied.
+CSS rules, panels, and sequence boxes supply the proposed composition.
 
-## Validation and approval
-
-Browser checks verify dimensions, viewport scaling, page structure,
-native typography, black/white colors, hairline borders, clipping,
-copy, and selector behavior at desktop/tablet/mobile widths.
-Screenshots and a JSON report are emitted to `verification/artifacts/`.
-The CI workflow also builds the extracted original reference separately.
-
-Passing geometry checks does not establish reference fidelity or creative
-approval. Jonathan Smith must reconcile copy, provide the canonical logo
-and governing visual reference, and approve the composition before
-discrete static HTML generation and Canva import.
+The original orientation ZIP and Logistics Framework are preserved.
+Rejected first screenshot is not visual authority. Passing checks establish
+rendering behavior, not creative approval. Discrete static HTML and Canva
+import verification remain pending author approval.

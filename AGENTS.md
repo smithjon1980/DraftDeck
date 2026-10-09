@@ -36,10 +36,13 @@ This project uses a precise, information-dense technical operating interface aes
 *   Prove the CAD/ISO geometry and pure-white/black aesthetic without generating the remaining 9 slides.
 *   Await human visual approval before expanding the slide deck.
 
-## 6. Episode 01 Evidence & Creative Authority
-*   Jonathan Smith is the creative director and final approver.
-*   `episode01/reference/BOSS_Episode01_React_Tailwind_Candidate_0.2.zip` is an unapproved source reference containing Slides 01–03: THE SEQUENCE, PRECEDENCE, and GROUPING. It is not the governing copy for the requested Slides 01, 02, and 06.
-*   Slide 02 wording recovered from a separate Canva diagnostic is titled "The Problem Isn't Networking"; its approval status remains `[UNKNOWN]`.
-*   Approved content for Slides 01 and 06, production metadata/footer, canonical logo asset, and full Visual Authority Spec v1.0 remain `[UNKNOWN]`. Never substitute Slide 03 for Slide 06.
-*   Implement the requested preview separately from the Logistics Framework deck and the original ZIP. Record proposed typography and measurements as candidate choices.
-*   Prepare and inspect the React preview first. After author approval, compile discrete static HTML and perform Canva import verification. A Vite build for browser-preview assets is not a Canva export or approval.
+## 6. Current Composition Candidate Inputs
+* Jonathan Smith is creative director and final approver. The first logo-free candidate was rejected.
+* Read `episode01/reference/GEMINI_RECONCILIATION.md`, then `Visual_Authority_Spec_v1.0.md` and `slide-copy.candidate.json`, supplied at main commit b96b358.
+* Use exact candidate wording for Slides 01, 02, and 06. This supersedes the previously unresolved copy fields. No rendered slide approval is established.
+* Use `episode01/assets/brand/bioscillate-original-supplied.jpg` unchanged. A reduced lockup is not supplied; scaled full-logo rail usage is a documented candidate proposal.
+* No governing rendered reference or additional illustration was supplied. Compose from the textual spec and label geometry/fonts as proposed; do not claim reproduction of an approved image.
+* Root black-text rule remains the default; the supplied Slide 02 candidate specifically requests a gray Network-Driven Opportunity header. Apply grayscale only to that header.
+* Slide 01 footer and internal metadata remain unknown. Slide 06 participants, message labels, arrow directions, and decision gates remain unknown; use the five exact ordered labels without inventing protocol semantics.
+* The Sequence/Precedence/Grouping ZIP is an unapproved orientation reference, not the Pitch copy source.
+* Show actual browser renders before requesting creative approval. Discrete static HTML and Canva verification follow author approval.
