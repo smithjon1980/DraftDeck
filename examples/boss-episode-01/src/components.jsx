@@ -46,22 +46,12 @@ export function SplitPanelLayout({ main, sidebar }) {
   );
 }
 
-// Data-driven component only. No invented participant/message specification.
-// This component remains unassigned until the governing slide is supplied.
+// Exact supplied labels only. Direction and messages remain unknown.
 export function SequenceDiagram({ steps = [] }) {
   if (!steps.length) return <p>[UNKNOWN]</p>;
-  return (
-    <ol className="sequence-diagram" aria-label="Sequence">
-      {steps.map((step, index) => (
-        <li key={step.id}>
-          <div className="sequence-node border border-black">
-            <p className="small-label">{step.label}</p>
-            <h3>{step.title}</h3>
-            <p>{step.detail}</p>
-          </div>
-          {index < steps.length - 1 && <span className="sequence-arrow" aria-hidden="true" />}
-        </li>
-      ))}
-    </ol>
-  );
+  return <ol className="sequence-diagram" aria-label="Operating sequence">
+    {steps.map(step => <li className="sequence-node border border-black" key={step.id}>
+      <h2>{step.label}</h2>
+    </li>)}
+  </ol>;
 }
