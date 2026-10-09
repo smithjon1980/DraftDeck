@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive Business Readiness Checklist</title>
+  <style>
+    :root { color-scheme: light; font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 2rem 1rem; background: #fff; color: #171717; }
+    .checklist { max-width: 700px; margin: auto; padding: clamp(1rem, 4vw, 2rem); border: 1px solid #d4d4d4; border-radius: 16px; }
+    h1 { margin: 0 0 .4rem; font-size: clamp(1.4rem, 3vw, 2rem); }
+    p { color: #525252; line-height: 1.5; margin: 0 0 1.5rem; }
+    .progress-label { font-size: .9rem; color: #525252; margin: 1rem 0 .5rem; }
+    progress { width: 100%; height: 9px; accent-color: #b34700; }
+    fieldset { border: 0; border-top: 1px solid #d4d4d4; padding: 1rem 0; margin: 1rem 0 0; min-width: 0; }
+    legend { padding: 0 .5rem 0 0; font-weight: 700; }
+    label { display: flex; align-items: flex-start; gap: .7rem; padding: .55rem 0; line-height: 1.45; cursor: pointer; }
+    input[type="checkbox"] { flex: 0 0 auto; width: 18px; height: 18px; margin-top: 2px; accent-color: #b34700; }
+    input:checked + span { text-decoration: line-through; color: #626262; }
+    .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1rem; }
+    button { background: #171717; color: #fff; border: 1px solid #171717; border-radius: 9px; padding: .75rem 1rem; font: inherit; cursor: pointer; }
+    button.secondary { background: white; color: #171717; }
+    button:focus-visible, input:focus-visible { outline: 3px solid #b34700; outline-offset: 3px; }
+    #status { min-height: 1.4rem; font-size: .9rem; margin-top: .75rem; }
+    @media print { body { padding: 0; } .actions, #status { display: none; } .checklist { border: 0; } }
+  </style>
+</head>
+<body>
+  <main class="checklist" aria-labelledby="title">
+    <h1 id="title">Business Readiness Checklist</h1>
+    <p>Track preparation for an independent education platform. Select completed steps, then copy the list as plain text.</p>
+    <div id="progress-label" class="progress-label" aria-live="polite">0 of 0 complete</div>
+    <progress id="progress" value="0" max="1" aria-labelledby="progress-label"></progress>
+    <form id="checklist-form"></form>
+    <div class="actions">
+      <button type="button" id="copy">Copy checklist</button>
+      <button type="button" id="reset" class="secondary">Clear selections</button>
+    </div>
+    <div id="status" role="status" aria-live="polite"></div>
+  </main>
+  <script>
+    // Edit these groups to reuse the component for other lessons or workflows.
+    const groups = [
+      { title: "Stage 1 — Explore without forming a company", items: [
+        "Choose a working brand name for the educational platform",
+        "Set up a professional contact email",
+        "Prepare a one-page explanation of the Day Zero–Day Seven curriculum",
+        "Apply for reseller information as an individual",
+        "Request requirements, licensing fees, and compensation in writing"
+      ]},
+      { title: "Stage 2 — Prepare to accept payments", items: [
+        "Determine whether to operate initially as a sole proprietor",
+        "Check state and local DBA, tax, and licensing requirements",
+        "Prepare required identity and tax information",
+        "Establish an appropriate bank account",
+        "Set up a payment processor and learner-facing business policies"
+      ]},
+      { title: "Stage 3 — Prepare for a larger launch", items: [
+        "Evaluate whether forming an LLC is financially justified",
+        "Review partnership and intellectual-property agreements",
+        "Establish learner privacy, refund, and data-handling procedures",
+        "Confirm LMS integration and external AI hosting rights"
+      ]}
+    ];
+    const form = document.getElementById("checklist-form");
+    const progress = document.getElementById("progress");
+    const progressLabel = document.getElementById("progress-label");
+    const status = document.getElementById("status");
+    groups.forEach((group, groupIndex) => {
+      const fieldset = document.createElement("fieldset");
+      const legend = document.createElement("legend");
+      legend.textContent = group.title;
+      fieldset.append(legend);
+      group.items.forEach((item, itemIndex) => {
+        const label = document.createElement("label");
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.name = "step";
+        checkbox.value = groupIndex + "-" + itemIndex;
+        const span = document.createElement("span");
+        span.textContent = item;
+        label.append(checkbox, span);
+        fieldset.append(label);
+      });
+      form.append(fieldset);
+    });
+    const boxes = [...form.querySelectorAll('input[type="checkbox"]')];
+    function updateProgress() {
+      const complete = boxes.filter(box => box.checked).length;
+      progress.max = boxes.length;
+      progress.value = complete;
+      progressLabel.textContent = complete + " of " + boxes.length + " complete";
+    }
+    form.addEventListener("change", () => { updateProgress(); status.textContent = ""; });
+    function checklistText() {
+      return groups.map((group, gi) => group.title + "\n" + group.items.map((item, ii) => {
+        const checked = form.elements.namedItem("step");
+        const matching = boxes.find(box => box.value === gi + "-" + ii);
+        return (matching.checked ? "[x] " : "[ ] ") + item;
+      }).join("\n")).join("\n\n");
+    }
+    document.getElementById("copy").addEventListener("click", async () => {
+      const output = checklistText();
+      try {
+        await navigator.clipboard.writeText(output);
+        status.textContent = "Checklist copied.";
+      } catch {
+        // Older browsers and file:// contexts can block Clipboard API.
+        const textarea = document.createElement("textarea");
+        textarea.value = output;
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.append(textarea);
+        textarea.select();
+        const succeeded = document.execCommand("copy");
+        textarea.remove();
+        status.textContent = succeeded ? "Checklist copied." : "Clipboard unavailable. Select and copy the checklist manually.";
+        if (!succeeded) {
+          const pre = document.createElement("pre");
+          pre.textContent = output;
+          pre.style.whiteSpace = "pre-wrap";
+          status.append(pre);
+        }
+      }
+    });
+    document.getElementById("reset").addEventListener("click", () => {
+      boxes.forEach(box => box.checked = false);
+      updateProgress();
+      status.textContent = "Selections cleared.";
+    });
+    updateProgress();
+  </script>
+</body>
+</html>
