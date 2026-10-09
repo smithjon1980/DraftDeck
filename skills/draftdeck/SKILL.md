@@ -19,6 +19,8 @@ For the flagship example, obey `doctrine/logistics-framework.md`. The semantic m
 
 ## Workflow
 
+For BOSS lesson production, require the upstream sequence: approved sources → long-form podcast → actual-audio transcript → transcript/source review → reviewed video script and visual outline. Read [audio-first workflow](references/audio-first-workflow.md) before composing downstream lesson content. Use the reviewed script/outline as the content parent for video, slides, and infographics; record parent versions and transcript/source mappings. A transcript documents speech and does not establish truth. Keep a pre-audio storyboard provisional. If a prerequisite is absent, report it and hold only the dependent generation or acceptance step. Continue independently authorized component drafting or exact reference reconstruction with its actual scope, and honor explicit author exceptions without claiming omitted evidence. Keep order of operations in Day Zero; a new production round is not another course day.
+
 1. Inspect the actual reference. For PDF, render the selected page. Do not infer its composition from extracted text.
 2. Write a layer plan: artwork, title, annotations, body copy, drafting lines, stamp, metadata. Record exact copy separately from illustration content.
 3. Prepare a text-free artwork layer. Reuse supplied clean artwork when possible. For removing text from a raster reference or generating artwork, use the proper image-editing/generation path and inspect the result before use.

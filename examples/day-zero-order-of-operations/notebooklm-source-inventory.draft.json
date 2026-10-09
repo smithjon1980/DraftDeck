@@ -1,5 +1,5 @@
 {
-  "inventory_version": "0.3",
+  "inventory_version": "0.4",
   "status": "DRAFT_CANDIDATE",
   "source_commit_base": "460596b8d30a89cf8e092adaa05e6d33160e368f",
   "notebook_membership": "UNKNOWN",
@@ -12,7 +12,7 @@
       "sha256": "cdd86cf19dccd8653560914432d3ba37c079fb6e48b3424b2876c78e56d881ef",
       "size_bytes": 15543,
       "review_status": "Author directed Day Zero placement; prior narrative and frame sequence retained",
-      "source_role": "Day Zero order-of-operations instructional script"
+      "source_role": "Day Zero pre-audio lesson outline; downstream script awaits reviewed transcript"
     }
   ],
   "external_contract": {
@@ -23,11 +23,14 @@
     "repository_membership": "Not included by this change"
   },
   "required_before_generation": [
-    "Confirm the corrected Day Zero v0.2.1 source is selected",
+    "Confirm the corrected Day Zero v0.2.1 outline and reviewed production brief are selected",
     "Inventory every actual notebook source and its version",
     "Resolve superseded active sources while preserving history",
-    "Record actual prompt and settings",
-    "Confirm the ingested script hash matches this record"
+    "Record actual audio prompt and supported settings",
+    "Generate and obtain the actual long-form podcast",
+    "Transcribe actual audio; verify coverage and wording",
+    "Review transcript claims against approved sources; retain corrections separately",
+    "Derive and review the video script and visual outline before downstream media generation"
   ],
   "corrections": [
     {
@@ -44,7 +47,28 @@
       "previous_sha256": "c140548dca7a95cfbd85d5a235f7239a764b5cdb3a4a18a596c976f3f47f00a6",
       "current_sha256": "cdd86cf19dccd8653560914432d3ba37c079fb6e48b3424b2876c78e56d881ef",
       "narrative_changed": false
+    },
+    {
+      "change": "Apply author-directed audio-first production sequence; pre-audio storyboard is provisional",
+      "curriculum_placement": "Day Zero",
+      "new_execution_claims": false
     }
   ],
-  "curriculum_placement": "Day Zero"
+  "curriculum_placement": "Day Zero",
+  "production_sequence": [
+    "approved_sources",
+    "long_form_audio",
+    "actual_audio_transcript",
+    "transcript_and_source_review",
+    "reviewed_video_script_and_visual_outline",
+    "downstream_media",
+    "cross_media_inspection"
+  ],
+  "production_evidence": {
+    "audio": "UNKNOWN",
+    "transcript": "UNKNOWN",
+    "transcript_review": "NOT_RECORDED",
+    "reviewed_video_script": "NOT_RECORDED",
+    "next_required_operation": "long-form audio generation after actual source selection is checked"
+  }
 }
