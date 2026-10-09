@@ -48,3 +48,18 @@ The original orientation ZIP and Logistics Framework are preserved.
 Rejected first screenshot is not visual authority. Passing checks establish
 rendering behavior, not creative approval. Discrete static HTML and Canva
 import verification remain pending author approval.
+
+## Visual revision after composition rejection
+
+Slide 02 now uses Tailwind layout/type utilities: one 200px masthead with
+54px headline and separate 300px-wide unchanged logo; 790px content region
+with a 440px sidebar and 64px panel gutter. Comparison columns use an
+85:115 proportion, 56px separation, and one structural vertical divider.
+Left copy is 32px regular; capability copy is 44px semibold. Lists use
+spacing without repeated row rules or invented numeric markers. Outcomes
+sit under a single divider per column; footer is 88px high, type 17px.
+The sidebar body is 25px/1.55, heading 18px monospace. Metadata remains
+unknown, shown discreetly at the logo edge. These remain proposed choices.
+Slide 01 title now breaks after Downline. so Skill. is never stranded.
+Only Slide 02 is presented first for visual review. Browser selection is
+checked explicitly; passing that test does not imply visual approval.

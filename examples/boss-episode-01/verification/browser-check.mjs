@@ -87,6 +87,12 @@ try {
       assert.equal(await page.getByText(text, { exact: true }).count(), 1);
     }
     await page.locator('[data-slide-id="02"]').screenshot({ path: new URL('slide-02-' + width + '.png', artifactDir).pathname });
+    const selectedText = await page.locator('[data-slide-id="02"] h1').evaluate(el => {
+      const range = document.createRange(); range.selectNodeContents(el);
+      const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range);
+      const text = selection.toString(); selection.removeAllRanges(); return text;
+    });
+    assert.equal(selectedText, "The Problem Isn't Networking");
     report.push({ viewportWidth: width, ...result, passed: true });
   }
   assert.deepEqual(errors, []);
@@ -103,7 +109,7 @@ try {
   const logo = await readFile(new URL('../../../episode01/assets/brand/bioscillate-original-supplied.jpg', import.meta.url));
   const blobHash = createHash('sha1').update(Buffer.from('blob ' + logo.length + '\0')).update(logo).digest('hex');
   assert.equal(blobHash, 'ab4d85210dd410757d6542b286b15b65d4c7b774');
-  for (const id of ['01', '02', '06']) {
+  for (const id of ['02']) {
     const reviewImage = await readFile(new URL('slide-' + id + '-1968.png', artifactDir));
     console.log('BOSS_REVIEW_' + id + '_PNG_BASE64=' + reviewImage.toString('base64'));
   }
