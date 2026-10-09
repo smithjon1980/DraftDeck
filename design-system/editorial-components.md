@@ -31,6 +31,19 @@ Choose the final row's replacement from the evidence: a recorded rule applicatio
 
 Acceptance: review component copy against this rule, preserve evidence classifications, and run `python3 .github/scripts/check_operational_language.py` from the repository root. The guard catches common constructions and is not a complete semantic review.
 
+### Visual application of human accountability
+
+Apply the rule to artwork, diagrams, icons, screenshots, badges, and video frames as well as copy.
+
+- Do not use human anatomy to represent software computation, inference, verification, or agency. Use processing components, evidence records, comparators, or routing symbols. Depict a human hand only when it represents an actual or explicitly illustrative human action, such as operating a release control.
+- Do not use pseudo-text, malformed code, or invented measurements as teaching records. Supply exact readable content with source and evidence classification, or use text-free artwork. Label templates and illustrative examples; they are not execution receipts.
+- Do not display numeric authority, liability, or certainty claims without the governing rule, evidence or adjudication reference, applicable scope, and accountable human. A status badge or approval stamp does not itself establish verification or authorization. Label reproduced and illustrative stamps accordingly.
+- Check the schema name, version, field meanings, role labels, and status namespace against the current governing source. A source plate labeled canonical does not establish current validity. The ten shared-frame fields, the six-field flagship Verification Tag, and Day Zero's operational statuses serve different contracts; do not substitute one for another.
+
+Visual acceptance: inspect the actual rendered artwork and embedded text; for video, record inspected timestamps and sampling limits. Record content findings separately from layout findings, and verification separately from release. Text guards do not inspect pixels or verify spoken narration. Do not mark visual or audio checks as passed because the copy guard passed.
+
+Before regeneration from a notebook or reference collection, record each included source's identity, version, and readable contents, plus the prompt and settings actually used. Identify and remove superseded sources from the active generation set while preserving their historical record. Inspect image plates as well as extracted text. Keep source membership unresolved where evidence is missing; do not attribute an output defect to a particular input without traceable support.
+
 ## Component registry
 
 Each component requires an identifier, required fields, allowed variants, media behavior and acceptance checks. Use only components needed by a section; do not insert all ten into every page.
