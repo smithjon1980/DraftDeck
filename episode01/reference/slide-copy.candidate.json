@@ -1,0 +1,67 @@
+{
+  "provenance": "Gemini response relayed by Jonathan Smith, 2026-10-09",
+  "status": "CANDIDATE (Awaiting visual implementation)",
+  "visual_approval": "[UNKNOWN]",
+  "slides": [
+    {
+      "slide": "01",
+      "type": "Title Slide (Full Logo)",
+      "headline": "You Don't Need a Downline. You Need a Skill.",
+      "brand_elements": {
+        "logo": "Full bioscillate logo (Cyan waveform left, Magenta fragmented waveform right, black central diamond).",
+        "wordmark": "bioscillate",
+        "tagline": "Operating System by Seven"
+      },
+      "layout_annotations": "High-contrast, unadorned title slide. Hairline border framing the core text.",
+      "footer": "[UNKNOWN]",
+      "footer_note": "None specified for Slide 01."
+    },
+    {
+      "slide": "02",
+      "type": "Split Panel / Technical Compare",
+      "headline": "The Problem Isn't Networking",
+      "comparison_columns": [
+        {
+          "header": "Network-Driven Opportunity",
+          "header_treatment": "Grayed out",
+          "items": [
+            "Recruit",
+            "Sell",
+            "Expand the network",
+            "Growth through distribution"
+          ]
+        },
+        {
+          "header": "Capability Commerce",
+          "header_treatment": "Black text",
+          "items": [
+            "Learn",
+            "Build",
+            "Verify, Deploy, Support",
+            "Value through delivered work"
+          ]
+        }
+      ],
+      "sidebar_title": "Operational Distinction",
+      "sidebar_body": "Networking itself isn't the problem. Building professional relationships, sharing knowledge, collaborating, and referring customers are legitimate activities. The difference is what the network exists to produce. In BOSS, a practitioner network coordinates expertise and projects, not recruitment commissions.",
+      "footer": "BOSS · EPISODE 01 · SLIDE 02 | VISUAL MASTER CANDIDATE"
+    },
+    {
+      "slide": "06",
+      "type": "Sequence Diagram",
+      "headline": "A different operating sequence.",
+      "sequence_labels": [
+        "01 LEARN",
+        "02 BUILD",
+        "03 VERIFY",
+        "04 DEPLOY",
+        "05 SUPPORT"
+      ],
+      "footer": "VALUE FOLLOWS DEMONSTRATED CAPABILITY. NOT RECRUITMENT.",
+      "participants": "[UNKNOWN]",
+      "message_labels": "[UNKNOWN]",
+      "arrow_directions": "[UNKNOWN]",
+      "decision_gates": "[UNKNOWN]"
+    }
+  ]
+}

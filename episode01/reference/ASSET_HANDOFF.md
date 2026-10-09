@@ -1,6 +1,8 @@
 # Episode 01 governing asset handoff
 Date: 2026-10-09
-Status: PARTIAL RECOVERY — NOT VISUALLY APPROVED
+Status: HISTORICAL PARTIAL RECOVERY — NOT VISUALLY APPROVED
+
+Update: See `GEMINI_RECONCILIATION.md`, `Visual_Authority_Spec_v1.0.md`, and `slide-copy.candidate.json`. The 2026-10-09 Gemini handoff supplies the spec text and candidate Pitch copy; earlier unknown entries below are historical.
 
 ## Authority
 Jonathan Smith is the final creative and release authority.
