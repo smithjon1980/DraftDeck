@@ -1,39 +1,17 @@
-# BOSS / DraftDeck Agentic Operations Manual
-**Target:** Autonomous Code Agents (Codex, etc.) operating in this repository.
-**Project:** BOSS · Episode 01 — The Pitch
-**Status:** Canonical Directives — Strict Compliance Required
+---
+name: draftdeck-art-director
+description: Develop and inspect complete slide concepts and separate artwork for DraftDeck comps. Use for external image-service creative exploration, story layers, visual direction, artwork generation, and pre-layout review.
+---
 
-## 1. Master Design Standards & Visual Authority
-This project uses a precise, information-dense technical operating interface aesthetic. It is inspired by the Tesla Model Y center touchscreen UI combined with CAD/ISO technical drafting. 
-*   **Canvas:** Fixed `1920x1080` (16:9) logical canvas. Must scale dynamically via CSS transforms to fit the viewport. Do not use `h-screen` or `vw/vh` as structural constraints for the internal slide grid.
-*   **Background:** Pure White (`#FFFFFF`).
-*   **Geometry:** 1px hairline borders (`border-black`), measured padding, strict grid alignments. No rounded corners, drop shadows, or thick decorative borders.
-*   **Typography:** Black native HTML text (`h1`, `h2`, `p`, `span`). No canvas drawing for text. No SVG text.
-*   **Brand Colors:** Cyan (`#00BCEB`) and Magenta (`#E30074`) reserved exclusively for the canonical bioscillate logo and highly selective emphasis. No generic Tailwind colors (e.g., `cyan-500`) without verifying hex matches. 
-*   **Prohibited Metaphors:** No sparse marketing website aesthetics, giant empty hero sections, or generic SaaS feature cards.
+# DraftDeck Art Director
 
-## 2. The Production Workflow
-1.  **Code Generation:** Agents develop React/Tailwind components in this repository.
-2.  **Static HTML/CSS:** The React output must be capable of rendering as clean, discrete HTML/CSS static files.
-3.  **Hosting:** Static files and image assets (logos) are hosted on a public HTTPS endpoint (e.g., Vercel, GitHub Pages).
-4.  **Canva Import:** The public URL is imported into Canva to generate an editable design.
+Read the creative brief. Classify source as native objects or flattened pixels; preserve the reference as reference. Distinguish a complete slide concept from an artwork asset intended for final composition. For the user's two-spark route, use NotebookLM material as the first creative reference and an external image service such as Ideogram as the second. Request a complete slide PNG, including artwork, generated text, and proposed layout; do not impose a text-free requirement on this concept stage. Provide a self-contained prompt with story, reference material, required copy, format, and applicable branding. Use the requested provider when available; check callable capabilities and report a connection gap rather than substituting silently or claiming execution.
 
-## 3. Canva Integration Test Results & Limits
-*   **Requirement:** Canva's import engine requires a public HTTPS URL. Local file uploads of HTML/CSS are currently unsupported for automated agentic integration.
-*   **Fidelity:** Native HTML text elements (`<h1>`, `<div>` text) and `<img>` tags successfully import as editable, movable Canva elements. 
-*   **Structural Conversion:** CSS borders and flexbox grids convert into absolute-positioned shapes and lines. They lose responsive CSS properties but remain editable.
-*   **Strict Prohibition:** Do NOT use full-slide SVGs, PNGs, JPEGs, or PDFs as workarounds to force visual fidelity. The layout must rely on native DOM elements to ensure downstream editability.
+Inspect the complete PNG for story, hierarchy, wording, geometry, color, and usable space. Explain additions and changes as deltas for human adjudication; absence from the prior script alone is not a defect. Treat generated wording as candidate copy, not new source evidence. Preserve the complete concept before preparing separate final assets. Hand the concept and selected story/layout to DraftDeck for improvement in HTML/CSS: rebuild approved text as live text and extract, recreate, or generate supporting artwork as needed. A text-free artwork asset may be needed at this later production stage; it is not a prerequisite for the second creative spark. Do not claim to recover native layers from flattened pixels.
 
-## 4. Known Failures to Avoid
-*   **Failure:** Generating a single SVG that looks like a slide. *Correction:* Use HTML/Tailwind `div` structures.
-*   **Failure:** Using `h-screen` which causes layout clipping on different monitors. *Correction:* Use a fixed `1920px` by `1080px` wrapper with a `transform: scale()` CSS hook.
-*   **Failure:** Inventing placeholder data. *Correction:* Preserve missing values explicitly as `[UNKNOWN]`, `null`, or use the exact provided instructional text.
+For standalone original artwork, use the imagegen skill unless the user specifies another provider. Keep instructional copy out of final artwork assets and reserve explicit copy zones. Apply the approved project palette and visual constraints; the established BOSS default is a white background, black drafting linework, and sparse burnt orange #B34700 accents, without gradients. Do not adopt a proposed brand palette as approved. Avoid PowerPoint or SVG stand-ins for detailed raster concept artwork. Deliver asset, prompt, dimensions, status, and designer notes. A returned image remains a candidate until reviewed within the user's authorized workflow.
 
-## 5. Current Milestone
-**Deliverable:** Build the React/Tailwind browser preview for **Slides 01, 02, and 06** only.
-*   Construct the `SlideCanvas`, `TopMetadataRail` (with canonical logo), `SplitPanelLayout`, and `SequenceDiagram` components.
-*   Prove the CAD/ISO geometry and pure-white/black aesthetic without generating the remaining 9 slides.
-*   Await human visual approval before expanding the slide deck.
+## Shared production contract
 
 ## Two-bridge transformation contract — 2026-10-09
 
@@ -53,5 +31,5 @@ After both bridges, produce four meaningfully different composition candidates f
 
 Evaluate each actual render using a comparison matrix: source/story correspondence; Bridge 1 preservation and creative deltas; Bridge 2 theme fidelity; exact-copy accuracy; original logo/artwork provenance; layer/editability integrity; hierarchy/readability; geometry/clipping. Record PASS/FAIL/NOT TESTED plus concrete evidence. Treat invented facts, missing required copy, substituted logo, or flattened production text as hard failures. Recommend the strongest eligible candidate and explain tradeoffs; keep selection and approval distinct. Human selection governs the final visual master. Do not silently promote the evaluator's recommendation to approval. If none passes, repair the concrete failures rather than selecting a failed candidate by relative score.
 
-## Import evidence correction
-Discover the current Canva import schema. A local HTML design_file route has been observed; public HTTPS is not a universal requirement. Treat the earlier section 3 claims as historical reported evidence, not a guarantee. Verify destination editability and visual fidelity separately before claiming success.
+Label AI deliverables as concept artwork, working copy, or comps. Support brainstorming, positioning and storytelling. Keep final editorial, design and production approval with humans. Use advertising terms: brief, copy, artwork, layout, comp, traffic, production. Distinguish attempted, verified and approved states. Never infer approval from silence. Preserve existing authorization and continue independent work.
+ 

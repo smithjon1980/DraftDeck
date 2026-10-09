@@ -1,0 +1,98 @@
+---
+name: canva-layered-html-slides
+description: Build DraftDeck HTML/CSS slides, printable infographics, and Markdown companions from story and visual references using reusable BOSS editorial components and separate artwork. Use for NotebookLM/Gemini inspiration, component contracts, bounded design patterns, and Canva-editable presentations without PowerPoint. Import into Canva only within the requested scope; verify each destination separately.
+---
+
+# DraftDeck - Layered HTML and Editorial Components
+
+## Contract
+
+Deliver the requested artifacts: static HTML/CSS slides, a corresponding Markdown companion, and a Canva design only when handoff is authorized. For current BOSS editorial companions use 17 × 11 landscape (1632 × 1056 CSS pixels); an explicit reference or requested format overrides this project default. Use 1920 × 1080 only when 16:9 is requested or established for that task. Keep titles, body copy, labels, annotations, stamp wording and metadata as live HTML text. Keep unique illustrations as separate SVG or PNG assets; internal illustration editing is optional. PNG is raster, SVG is vector. Never describe PNG as vector or a flattened image as an editable presentation.
+
+Treat NotebookLM/Gemini slides and infographics as story and design inspiration by default. Extract the teaching purpose, narrative, useful visual relationships, and evidence boundaries; rebuild them through DraftDeck components and tokens. Do not use the full generated image or raster PDF page as the printable artifact. Preserve exact composition only when the user requests faithful reconstruction; otherwise apply current BOSS standards and the requested print format. Read current project files for required copy and constraints. Do not ask the user to retype a prompt already available in their files. A successful import is not proof of visual fidelity.
+
+## Inspiration to printable artifact
+
+Support the user's two-spark route: NotebookLM supplies the first story/design reference; an external image service such as Ideogram supplies a second creative reference as a complete slide PNG with artwork and generated text. Do not require that concept PNG to be text-free. Use $draftdeck-art-director for the provider prompt and concept inspection. Preserve both references and interpret the second composition before improving it in HTML/CSS. Explain creative deltas for human selection; treat generated wording as candidate copy and retain source-grounded constraints. Separate final text and artwork during DraftDeck reconstruction, not as a mandatory condition of the concept request.
+
+Separate reference inspection from final production. Map the reference story to a content outline and layer plan; carry forward additions the human chooses to retain. Explain differences from the script as deltas, with factual inaccuracies and doctrine conflicts distinguished from creative additions and stylistic choices. Do not require a NotebookLM regeneration merely to repair typography, pseudo-text, or layout that DraftDeck will reconstruct.
+
+Build the printable master in HTML/CSS with live text, intentional readable records, exact required code, and separate artwork. Author process diagrams in Mermaid or PlantUML source. Do not use hand-authored SVG or an SVG editor as the diagram-authoring workflow. Preserve the diagram source, validate syntax, and inspect its rendered export; SVG may be an output format from the selected renderer. Keep actual Lucide SVG icon imports separate from diagrams. Preserve square, landscape, or portrait intent and declare the actual page size; do not force an infographic into a slide ratio. Export a print PDF from the master, then inspect the actual PDF for page geometry, margins, clipping, legibility, extractable text, and preserved diagram meaning. Report a reference raster PDF as reference evidence; assess final print acceptance on the rebuilt export. Deliver the editable source, assets, matching Markdown where requested, and verified printable PDF. Keep Canva or Adobe Express import optional and separately verified.
+
+## Bounded design system
+
+For consulting-style story planning, use $draftdeck-consulting-storyline before composition to map supported takeaway titles, evidence, implications, and functional layouts. Preserve teaching progression and unanswered practice cases; use that plan with this skill's existing components and print workflow.
+
+Before composing BOSS assets, read [editorial component contracts](references/editorial-components.md). Use the approved component registry, tokens, and low/medium/high layout patterns. Treat USWDS token/component practices as an implementation foundation and WCAG 2.2 AA as the web accessibility target; neither establishes that an artifact has passed accessibility review. Preserve BOSS branding rather than reproducing government identity. Do not claim formal USWDS implementation unless its actual components are used and documented.
+
+Use the shipping-logistics frame for current Day Zero. Do not restore airport towers, aviation vocabulary, legacy acronyms, or old schemas merely because a historical reference or the word pilot appears. A specifically requested historical reconstruction may reproduce its supplied content in isolation; label it as such.
+
+Select only approved component variants and templates. If content does not fit, adjust within defined copy/layout bounds or report the fit issue; do not silently shrink required text, delete evidence limitations, invent new visual patterns, or rasterize the text layer. Keep the ten editorial features separate from the ten canonical shared-frame fields.
+
+## React, Tailwind, and icon contract
+
+Use React components and Tailwind CSS as the default authoring system for new slide families and facelifts. Use Node.js for build tooling. Preserve existing deterministic HTML workflows for maintenance; do not rewrite accepted artifacts merely to change frameworks. Compile Tailwind styles and render React into self-contained static HTML/CSS before handoff; require no browser-side React runtime, development server, remote stylesheet, or CDN asset at import time. Preserve explicit page geometry and live text under the existing layer contract.
+
+Map the approved editorial registry into reusable React components. Bind Tailwind utilities to the shared typography, spacing, color, and stroke tokens; do not invent a competing theme. Preserve pure white canvases, intentional whitespace, and the established burnt-orange accent unless the user selects another palette. Use a shared lesson map with stable content IDs to align the article, slides, student workbook, and instructor guide; adapt presentation per medium without silently changing approved wording or evidence boundaries.
+
+Import actual Lucide SVG paths as the primary icon library. Record each icon name and package version. Use Material Symbols Outlined only when Lucide lacks a suitable approved symbol, then Phosphor as fallback; record substitutions and avoid mixing styles without a reason. Never ask image generation to redraw library icons. Apply the approved 24/32-pixel grids and stroke tokens. Keep custom story artwork separate from interface icons.
+
+Retain static HTML as the documented Canva handoff route when the available connector supports it. Do not assume Canva imports React or Tailwind source. Treat live-text PDF as a separately verified alternative only when requested or the destination supports it; never silently switch formats when HTML import is unavailable. Extractable PDF text alone does not prove Canva text editability. Verify destination text records, artwork separation, dimensions, and rendered fidelity before claiming an editable result. Keep source build, browser render, PDF export, and destination import acceptance distinct.
+
+## SVG drawing constraints
+
+Use SVG for actual imported library icons and separate approved story artwork. Do not use an SVG editor or hand-authored SVG as the default slide-layout engine. Never compose a whole slide as one SVG, put required teaching text inside SVG, or substitute repeated boxes, circles, and connector grids for an editorial composition. Author diagrams in Mermaid or PlantUML and preserve their source; an SVG emitted by their renderer is an export, not permission to switch authoring methods. Keep headings, narrative, evidence labels, and operational metadata as live HTML text. Use typography, whitespace, and approved layout variants to lead composition. Inspect varied reference renders rather than accepting visual uniformity from token compliance alone.
+
+## Workflow
+
+1. Inspect the actual reference. For PDF, load the PDF skill and render the selected page. Do not infer its composition from extracted text. Start with one page unless more are explicitly requested. For full decks, create a story map and copy-density manifest before composition; for matching Markdown, use the same approved content and evidence limits.
+2. Write a layer plan: artwork, title, annotations, body copy, drafting lines, stamp, metadata. Record exact copy separately from illustration content. Flag unreadable values rather than inventing engineering measurements. Treat reference approval stamps as reproduced wording, not new authorization.
+3. Prepare separate artwork for final HTML composition after inspecting the complete concept. A reference PNG may contain both text and artwork; preserve that full concept and rebuild its selected wording as live HTML text. Reuse supplied clean artwork when possible; obtain a text-free supporting asset only where needed to prevent duplicate baked text in the final layout. For image editing or generation, load the imagegen skill and use its tool unless the user explicitly specifies an alternative provider. Inspect actual output before use. Do not use Python pixel editing as a substitute for the required image-editing tool. Do not claim generated geometry is exact engineering reconstruction or that flattened source pixels yielded native editable layers.
+4. Author the composition in static HTML/CSS. Use one top-level `section data-document-role="page"` per slide; never nest pages. Set explicit pixel width/height. Place live text in separate positioned HTML elements, not inside a full-page screenshot or SVG text layer. Embed image bytes as data URIs for self-contained import. Use CSS for typography, hierarchy, borders and rotations. Start with one image layer if matching a reference; use multiple asset groups when independent movement is needed. Author new component families with React and Tailwind under the contract above, then export static HTML for import.
+5. Use `scripts/build_slide.py` with a scene JSON for simple deterministic layouts. The script embeds assets and emits live text. For rich layouts, author HTML directly while preserving the same layer contract. See `assets/example_scene.json` for structure. The example is a syntax fixture, not the user's visual reference.
+6. When Canva handoff is requested and within existing authorization, import through Canva's current import tool. Discover the available schema, then call the local-file route `design_file=<absolute HTML path>`, `intended_design_type="presentation"`, a descriptive `name`, and `user_intent`. Do not use Canva AI design generation for this route: it may reinterpret composition. Do not use PowerPoint as an intermediate or send a local/private file as a public URL. If the local HTML route is unavailable, state that concrete limitation instead of silently flattening or switching formats.
+7. Verify inside Canva. Open an inspection transaction using the returned design ID. Check exact page dimensions, `is_editable`, separate richtext records, preserved wording, positions, and separate fill/image records. Count layers, but do not treat count alone as fidelity. Retrieve a transaction thumbnail and always show it to the user. Visually inspect the Canva render for font substitutions, missing images, clipping, overlaps, rotations and text drift.
+8. Close inspection-only transactions by cancelling; the imported design already exists and cancellation only discards transaction changes. For corrections, prefer revising the HTML and importing a clearly named candidate. For transaction edits, follow Canva's current preview/explicit-approval-before-commit requirement. Never cancel an actual edited transaction without preserving or explaining the changes.
+9. Save HTML, final consumed artwork, preview and a verification record using the Library skill. Reuse existing identities when replacing files. Return the actual Canva edit link and HTML source. Report verified dimensions/layers and remaining limitations, including raster artwork and hands-on editing not yet tested. Do not claim Adobe Express compatibility until independently tested.
+
+## Release checks
+
+## Two-bridge transformation contract — 2026-10-09
+
+Apply this sequence before composing a NotebookLM-inspired DraftDeck slide:
+
+1. Inspect the actual NotebookLM output visually. Record the source file/page, teaching point, story/metaphor, artwork, relationships, copy provenance, and unknowns. Treat it as the first creative spark, not automatically as approved copy or an exact-composition mandate. Do not substitute a logo, diagnostic, conflicting deck, or rejected candidate for this source.
+2. Bridge 1 — NotebookLM to reimagined story: write a source-grounded creative brief that reimagines how the teaching point is communicated. Document what is preserved, what changes, and why. Preserve exact required copy; label proposed copy and new artwork as candidates. Derive the creative prompt from this story, rather than merely arranging extracted text.
+3. Bridge 2 — reimagined story to target visual system: translate that concept into the project's approved interface theme. For Episode 01, use the information-dense Tesla Model Y center touchscreen influence, CAD/ISO geometry, and original cyan/magenta/black bioscillate artwork. Do not import another BOSS palette or erase story artwork merely to simplify implementation.
+4. Write every image/concept prompt bottom-to-top: background/art foundation; story artwork; structural geometry; original brand assets; primary live-text plan; annotations/supporting text; footer/metadata. Describe each layer's purpose, placement, dependencies, and provenance. Adapt the stack explicitly when the story requires it. Name applicable standards precisely (e.g. ISO 128-2:2022-informed line conventions, W3C CSS Grid, WCAG 2.2 AA contrast). Distinguish project/design tokens from standards requirements; never claim compliance from a prompt or raster render.
+5. Hand off both bridge records, exact-copy manifest, ordered layer plan, original assets, candidate status, and acceptance checks. Ideogram is optional creative exploration; Codex can implement the bridged concept directly. Provider choice does not remove either bridge.
+6. Build the selected concept in React/Tailwind, compile static HTML/CSS, and retain editorial text as native selectable HTML. Keep logo and story artwork separate. Never flatten the whole production slide or use SVG text as its editorial layer.
+7. Inspect actual rendered output for story correspondence, exact copy, original asset preservation, hierarchy, geometry, clipping, and readability. Keep build/text-selection checks separate from visual acceptance. Present proposed deltas for human selection without treating silence as approval. Missing NotebookLM source blocks source-grounded completion, but does not block infrastructure, evidence inventory, or handoff preparation; mark it [UNKNOWN] and do not invent it.
+
+## Four-candidate comparison
+
+After both bridges, produce four meaningfully different composition candidates from the same source-grounded story and exact-copy manifest. Vary visual storytelling, hierarchy, and arrangement within the approved frame; do not vary facts, required wording, brand identity, or evidence limits. Use A–D identifiers. Codex may render four candidates sequentially; this instruction does not require parallel agents or four external image-generation calls.
+
+Evaluate each actual render using a comparison matrix: source/story correspondence; Bridge 1 preservation and creative deltas; Bridge 2 theme fidelity; exact-copy accuracy; original logo/artwork provenance; layer/editability integrity; hierarchy/readability; geometry/clipping. Record PASS/FAIL/NOT TESTED plus concrete evidence. Treat invented facts, missing required copy, substituted logo, or flattened production text as hard failures. Recommend the strongest eligible candidate and explain tradeoffs; keep selection and approval distinct. Human selection governs the final visual master. Do not silently promote the evaluator's recommendation to approval. If none passes, repair the concrete failures rather than selecting a failed candidate by relative score.
+
+
+- Exact declared canvas and orientation; do not revert 17 × 11 editorial work to 16:9 automatically.
+- Reference story and required relationships retained in inspiration-based work; exact composition retained only for requested reconstruction.
+- Required copy exists as separate editable Canva text, not baked into artwork.
+- Artwork exists as a separately movable asset; do not promise native vector preservation merely from SVG input.
+- No missing artwork, clipping, collisions or unreadable required text.
+- Distinguish import/layer inspection, visual review, and the user's hands-on edit test.
+- No PowerPoint dependency or per-slide reconstruction service is required by this workflow. Do not promise zero cost; connected services may have quotas or charges.
+
+Read [the verified pipeline record](references/verified-pipeline.md) for the successful AI Pilot run and known limits. Use its evidence as a baseline, not as permission to reuse stale paths, transactions or signed preview URLs.
+
+## Cross-format verification
+
+- Render actual HTML in a browser when available. Inspect representative opener, medium-copy, process, and dense-reference pages plus all pages for clipping. Test mobile reflow for website work; fixed slide canvases are not responsive lesson pages.
+- Identify export provenance. A PDF composed independently with a drawing library is a review rendition, not proof that browser HTML or browser print matches it. Never describe Python-drawn shapes as HTML/CSS execution. Do not use PowerPoint intermediates.
+- Validate diagram syntax with Mermaid/PlantUML when those sources are used; inspect the rendered output separately. Preserve source and version. Do not call a native SVG schematic a Mermaid/PlantUML render. Label reading-order connectors separately from operational decision branches.
+- Match deck and Markdown coverage: ten shared-frame fields, status distinctions, missing-source recovery, missing room as UNKNOWN, mechanism roles, verification versus release, and six evidence-package items. Keep actual source runtime distinct from requested future audio duration.
+- Verify Markdown image paths and captions; distinguish supplied evidence, reported cases, proposed logic, illustrative candidates, and unsupplied placeholders. Never fabricate receipts or screenshots.
+- Record content, visual, browser, print, accessibility, and destination-layer checks separately as PASS, FAIL, or NOT TESTED with scope. Code generation and generation dispatch alone establish no rendered acceptance.
+- Keep release separate from verification. Confirm existing authorization for artifact, action, tool, and destination; obtain additional authorization only where scope expands. Human review before Canva remains required when specified by the user.
+ 
