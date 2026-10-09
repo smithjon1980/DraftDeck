@@ -1,0 +1,32 @@
+{
+  "inventory_version": "0.1",
+  "status": "DRAFT_CANDIDATE",
+  "source_commit_base": "460596b8d30a89cf8e092adaa05e6d33160e368f",
+  "notebook_membership": "UNKNOWN",
+  "generation_approval": "NOT_RECORDED",
+  "generation_performed": false,
+  "source_records": [
+    {
+      "path": "examples/day-one-order-of-operations/BOSS_Order_of_Operations_Storyboard_v0.2.md",
+      "artifact_version": "0.2",
+      "sha256": "05d77416989a589da81064c184613181f7a3ed3f303d08960a9012c888c29433",
+      "size_bytes": 15362,
+      "review_status": "v0.1 reviewed by user; v0.2 incorporates two review notes and remains draft",
+      "source_role": "proposed Day One teaching script"
+    }
+  ],
+  "external_contract": {
+    "archive": "BOSS_Research_Candidate_Protocol_v0.2.zip",
+    "protocol": "boss-handoff/0.1-candidate",
+    "path": "message_contract/CONTRACT.md",
+    "sha256": "41ae3276ed7839b79c39eef875a0405188de72ffc556ad56b2202317bfc0bcfc",
+    "repository_membership": "Not included by this change"
+  },
+  "required_before_generation": [
+    "Confirm v0.2 source approval",
+    "Inventory every actual notebook source and its version",
+    "Resolve superseded active sources while preserving history",
+    "Record actual prompt and settings",
+    "Confirm the ingested script hash matches this record"
+  ]
+}
