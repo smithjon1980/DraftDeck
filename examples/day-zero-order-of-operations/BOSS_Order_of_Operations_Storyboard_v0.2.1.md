@@ -2,9 +2,9 @@
 
 ## The right work in the right order
 
-**Version:** 0.2 — Day One candidate instructional script and frame sequence, 9 October 2026.
+**Version:** 0.2.1 — Day Zero instructional script and frame sequence, 9 October 2026.
 
-**Purpose:** Teach learners to identify a prerequisite, recognize the consequence of skipping it, and recover a bounded operation. Placement: Day One candidate, applying the PRIME introduction from Day Zero. This draft retains the shared-frame contract; it does not report a rebuilt slide deck.
+**Purpose:** Teach learners to identify a prerequisite, recognize the consequence of skipping it, and recover a bounded operation. Placement: Day Zero foundation, introducing and applying prerequisite ordering within PRIME. This draft retains the shared-frame contract; it does not report a rebuilt slide deck.
 
 **Learning evidence:** Given a workshop source and a proposed announcement, the learner identifies an unsupported room number, records it as unknown, completes work that does not depend on it, and names the evidence and authorization needed for the affected release.
 
@@ -96,7 +96,7 @@ Contract pointer: `boss-handoff/0.1-candidate`, in the frozen review archive `BO
 
 ## Revision record
 
-Version 0.2 makes dependency ordering explicit in narration and frame 05, points to the frozen candidate response contract, and labels the lesson as a Day One candidate. The supplied review accepted v0.1; v0.2 remains a draft for review. Record the final script SHA-256 in the actual NotebookLM source inventory before generation. A draft inventory entry does not establish notebook ingestion or generation approval.
+Version 0.2 makes dependency ordering explicit in narration and frame 05, points to the frozen candidate response contract, and supplies the lesson placement metadata. The supplied review accepted v0.1; v0.2 remains a draft for review. Version 0.2.1 corrects placement to Day Zero at the author's direction; order of operations is foundational to Day Zero. Narration and the twelve-frame sequence are retained. Record the final script SHA-256 in the actual NotebookLM source inventory before generation. A draft inventory entry does not establish notebook ingestion or generation approval.
 
 ## Author and production notes
 

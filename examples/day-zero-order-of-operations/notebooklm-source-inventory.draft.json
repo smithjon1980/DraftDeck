@@ -1,5 +1,5 @@
 {
-  "inventory_version": "0.2",
+  "inventory_version": "0.3",
   "status": "DRAFT_CANDIDATE",
   "source_commit_base": "460596b8d30a89cf8e092adaa05e6d33160e368f",
   "notebook_membership": "UNKNOWN",
@@ -7,13 +7,12 @@
   "generation_performed": false,
   "source_records": [
     {
-      "path": "examples/day-one-order-of-operations/BOSS_Order_of_Operations_Storyboard_v0.2.md",
-      "artifact_version": "0.2",
-      "sha256": "c140548dca7a95cfbd85d5a235f7239a764b5cdb3a4a18a596c976f3f47f00a6",
-      "size_bytes": 15361,
-      "review_status": "v0.1 reviewed by user; v0.2 incorporates two review notes and remains draft",
-      "source_role": "proposed Day One teaching script",
-      "verified_at_commit": "38cd09427c3aa9108d57176bc450b701509ad24d"
+      "path": "examples/day-zero-order-of-operations/BOSS_Order_of_Operations_Storyboard_v0.2.1.md",
+      "artifact_version": "0.2.1",
+      "sha256": "cdd86cf19dccd8653560914432d3ba37c079fb6e48b3424b2876c78e56d881ef",
+      "size_bytes": 15543,
+      "review_status": "Author directed Day Zero placement; prior narrative and frame sequence retained",
+      "source_role": "Day Zero order-of-operations instructional script"
     }
   ],
   "external_contract": {
@@ -24,7 +23,7 @@
     "repository_membership": "Not included by this change"
   },
   "required_before_generation": [
-    "Confirm v0.2 source approval",
+    "Confirm the corrected Day Zero v0.2.1 source is selected",
     "Inventory every actual notebook source and its version",
     "Resolve superseded active sources while preserving history",
     "Record actual prompt and settings",
@@ -38,6 +37,14 @@
       "cause": "Previous hash describes the same UTF-8 text with one additional trailing newline",
       "current_sha256": "c140548dca7a95cfbd85d5a235f7239a764b5cdb3a4a18a596c976f3f47f00a6",
       "current_size_bytes": 15361
+    },
+    {
+      "change": "Correct curriculum placement to Day Zero at author direction; move active source into the Day Zero example directory",
+      "previous_source_path": "examples/day-one-order-of-operations/BOSS_Order_of_Operations_Storyboard_v0.2.md",
+      "previous_sha256": "c140548dca7a95cfbd85d5a235f7239a764b5cdb3a4a18a596c976f3f47f00a6",
+      "current_sha256": "cdd86cf19dccd8653560914432d3ba37c079fb6e48b3424b2876c78e56d881ef",
+      "narrative_changed": false
     }
-  ]
+  ],
+  "curriculum_placement": "Day Zero"
 }
