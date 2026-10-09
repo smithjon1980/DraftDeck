@@ -47,12 +47,13 @@ function App() {
     <main className="preview-shell">
       <div className="preview-controls border-b border-black">
         <div><h1>BOSS · Episode 01</h1><p>Candidate geometry · creative approval pending</p></div>
-        <label>View
-          <select value={selected} onChange={event => setSelected(event.target.value)}>
+        <div className="preview-selector">
+          <label htmlFor="slide-selector">View</label>
+          <select id="slide-selector" value={selected} onChange={event => setSelected(event.target.value)}>
             <option value="all">All three slides</option>
             {slides.map(slide => <option key={slide.id} value={slide.id}>Slide {slide.id}</option>)}
           </select>
-        </label>
+        </div>
       </div>
       <p className="preview-notice">
         Slides 01 and 06: content unresolved. Slide 02: recovered diagnostic wording, approval unknown.

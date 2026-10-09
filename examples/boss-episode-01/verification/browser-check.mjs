@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { chromium } from 'playwright';
 
 const artifactDir = new URL('./artifacts/', import.meta.url);
@@ -82,6 +82,11 @@ try {
   }
   await writeFile(new URL('report.json', artifactDir), JSON.stringify({ status: 'geometry-checks-passed', creativeApproval: 'UNKNOWN', logoVerified: false, report }, null, 2));
   console.log(JSON.stringify(report, null, 2));
+  // Allow visual review through text-only GitHub log readers as well as
+  // the downloadable artifact. These are diagnostic screenshots, never
+  // source slides or Canva import substitutes.
+  const reviewImage = await readFile(new URL('slide-02-1968.png', artifactDir));
+  console.log('BOSS_REVIEW_PNG_BASE64=' + reviewImage.toString('base64'));
 } finally {
   await browser?.close();
   server.kill('SIGTERM');
