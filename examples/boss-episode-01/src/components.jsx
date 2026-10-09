@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 
-export function SlideCanvas({ children, slideId }) {
+export function SlideCanvas({ children, slideId, candidateId }) {
   const viewportRef = useRef(null);
   const [scale, setScale] = useState(1);
   useLayoutEffect(() => {
@@ -17,6 +17,7 @@ export function SlideCanvas({ children, slideId }) {
         className="slide-canvas bg-white text-black"
         data-document-role="page"
         data-slide-id={slideId}
+        data-candidate-id={candidateId}
         aria-label={`Slide ${slideId}`}
         style={{ transform: `scale(${scale})` }}
       >{children}</section>

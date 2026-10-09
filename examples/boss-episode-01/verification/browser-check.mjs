@@ -109,10 +109,73 @@ try {
   const logo = await readFile(new URL('../../../episode01/assets/brand/bioscillate-original-supplied.jpg', import.meta.url));
   const blobHash = createHash('sha1').update(Buffer.from('blob ' + logo.length + '\0')).update(logo).digest('hex');
   assert.equal(blobHash, 'ab4d85210dd410757d6542b286b15b65d4c7b774');
-  for (const id of ['02']) {
-    const reviewImage = await readFile(new URL('slide-' + id + '-1968.png', artifactDir));
-    console.log('BOSS_REVIEW_' + id + '_PNG_BASE64=' + reviewImage.toString('base64'));
+  const slide02 = candidate.slides.find(slide => slide.slide === '02');
+  const expectedCopy = [slide02.headline, ...slide02.comparison_columns.flatMap(column => [column.header, ...column.items]), slide02.sidebar_title, slide02.sidebar_body, slide02.footer].sort();
+  const candidateReport = [];
+  for (const width of [1968, 1440, 768, 390]) {
+    await page.setViewportSize({ width, height: 1200 });
+    await page.goto('http://127.0.0.1:4173/?review=slide02');
+    await page.locator('[data-candidate-id="D"]').waitFor();
+    for (const id of ['A', 'B', 'C', 'D']) {
+      await page.getByLabel('Candidate', { exact: true }).selectOption(id);
+      const plate = page.locator('[data-candidate-id="' + id + '"]');
+      await page.waitForFunction(() => [...document.images].every(img => img.complete && img.naturalWidth > 0));
+      await page.waitForFunction(() => {
+        const viewport = document.querySelector('.slide-viewport');
+        const slide = document.querySelector('.slide-canvas');
+        return Math.abs(slide.getBoundingClientRect().width - Math.min(viewport.clientWidth, 1920)) < 1;
+      });
+      const actualCopy = (await plate.locator('h1, h2, p').allTextContents()).sort();
+      assert.deepEqual(actualCopy, expectedCopy, 'Exact copy candidate ' + id);
+      assert.equal(await plate.locator('[data-brand-logo]').count(), 1);
+      assert.equal(await plate.locator('[data-brand-logo]').evaluate(img => img.complete && img.naturalWidth === 1536 && img.naturalHeight === 857), true);
+      assert.equal(await plate.locator('.story-art').count() > 0, true);
+      const geometry = await plate.evaluate(slide => {
+        const failures = [];
+        const bounds = slide.getBoundingClientRect();
+        const css = getComputedStyle(slide);
+        if (css.width !== '1920px' || css.height !== '1080px') failures.push('Logical dimensions');
+        if (css.backgroundColor !== 'rgb(255, 255, 255)') failures.push('Canvas background');
+        if (Math.abs(bounds.width / bounds.height - 16 / 9) > 0.001) failures.push('Aspect ratio');
+        if (slide.querySelector('canvas, svg, iframe, [data-document-role="page"]')) failures.push('Non-native/nested layer');
+        for (const el of slide.querySelectorAll('h1, h2, p')) {
+          const rect = el.getBoundingClientRect();
+          if (rect.left < bounds.left - 1 || rect.top < bounds.top - 1 || rect.right > bounds.right + 1 || rect.bottom > bounds.bottom + 1) failures.push('Text outside canvas');
+          if (el.scrollWidth > el.clientWidth + 1 || el.scrollHeight > el.clientHeight + 1) failures.push('Text overflow: ' + el.textContent);
+          const style = getComputedStyle(el);
+          if (style.color !== 'rgb(0, 0, 0)' && !(el.matches('h2[data-secondary="true"]') && style.color === 'rgb(100, 100, 100)')) failures.push('Text color');
+        }
+        for (const el of slide.querySelectorAll('*')) {
+          const style = getComputedStyle(el);
+          if (style.boxShadow !== 'none' || style.borderRadius !== '0px') failures.push('Shadow/rounding');
+          for (const side of ['Top', 'Bottom', 'Left', 'Right']) if (parseFloat(style['border' + side + 'Width']) > 1) failures.push('Thick border');
+        }
+        const texts = [...slide.querySelectorAll('h1,h2,p')].map(el => ({ text: el.textContent, rect: el.getBoundingClientRect() }));
+        for (let a = 0; a < texts.length; a++) for (let b = a + 1; b < texts.length; b++) {
+          const x = texts[a].rect, y = texts[b].rect;
+          if (Math.min(x.right, y.right) - Math.max(x.left, y.left) > 1 && Math.min(x.bottom, y.bottom) - Math.max(x.top, y.top) > 1) failures.push('Overlapping text: ' + texts[a].text + ' / ' + texts[b].text);
+        }
+        return { failures, documentOverflow: document.documentElement.scrollWidth > innerWidth };
+      });
+      assert.deepEqual(geometry.failures, [], 'Geometry candidate ' + id + ' at ' + width);
+      assert.equal(geometry.documentOverflow, false);
+      const selectedText = await plate.locator('h1').evaluate(el => {
+        const range = document.createRange(); range.selectNodeContents(el);
+        const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range);
+        const text = selection.toString(); selection.removeAllRanges(); return text;
+      });
+      assert.equal(selectedText, slide02.headline);
+      await plate.screenshot({ path: new URL('slide-02-candidate-' + id + '-' + width + '.png', artifactDir).pathname });
+      if (width === 1968) {
+        const reviewImage = await plate.screenshot({ type: 'jpeg', quality: 85, path: new URL('slide-02-candidate-' + id + '.jpg', artifactDir).pathname });
+        console.log('BOSS_CANDIDATE_' + id + '_JPEG_BASE64=' + reviewImage.toString('base64'));
+      }
+      candidateReport.push({ candidate: id, viewportWidth: width, exactCopy: true, originalLogo: true, nativeTextSelection: true, storyArtworkSeparate: true, geometry, visualApproval: 'UNCONFIRMED' });
+    }
   }
+  assert.deepEqual(errors, []);
+  await writeFile(new URL('four-candidate-browser-report.json', artifactDir), JSON.stringify({ status: 'browser-checks-passed', sourceDesignation: 'UNCONFIRMED', humanSelection: 'NOT_REQUESTED', visualMaster: 'NOT_APPROVED', candidateReport }, null, 2));
+  console.log('BOSS_FOUR_CANDIDATE_REPORT=' + JSON.stringify(candidateReport));
 } finally {
   await browser?.close();
   server.kill('SIGTERM');

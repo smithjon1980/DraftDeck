@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { slides, brand } from './content';
 import { SlideCanvas, TopMetadataRail, SequenceDiagram } from './components';
 import './styles.css';
+import { Slide02Review } from './Slide02Candidates';
 
 function Footer({ text }) {
   return <footer className="slide-footer border-t border-black"><p>{text}</p></footer>;
@@ -83,4 +84,4 @@ function App() {
   </main>;
 }
 
-createRoot(document.getElementById('root')).render(<App />);
+createRoot(document.getElementById('root')).render(new URLSearchParams(location.search).get('review') === 'slide02' ? <Slide02Review /> : <App />);

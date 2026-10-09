@@ -4,12 +4,16 @@ on:
     paths:
       - "examples/boss-episode-01/**"
       - "episode01/reference/**"
+      - "episode01/assets/**"
+      - "episode01/production/**"
       - ".github/workflows/boss-episode-01-preview.yml"
   push:
     branches: ["codex/boss-episode-01-preview"]
     paths:
       - "examples/boss-episode-01/**"
       - "episode01/reference/**"
+      - "episode01/assets/**"
+      - "episode01/production/**"
       - ".github/workflows/boss-episode-01-preview.yml"
   workflow_dispatch:
 permissions:
