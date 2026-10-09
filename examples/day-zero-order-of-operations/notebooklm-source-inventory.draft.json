@@ -1,0 +1,74 @@
+{
+  "inventory_version": "0.4",
+  "status": "DRAFT_CANDIDATE",
+  "source_commit_base": "460596b8d30a89cf8e092adaa05e6d33160e368f",
+  "notebook_membership": "UNKNOWN",
+  "generation_approval": "NOT_RECORDED",
+  "generation_performed": false,
+  "source_records": [
+    {
+      "path": "examples/day-zero-order-of-operations/BOSS_Order_of_Operations_Storyboard_v0.2.1.md",
+      "artifact_version": "0.2.1",
+      "sha256": "cdd86cf19dccd8653560914432d3ba37c079fb6e48b3424b2876c78e56d881ef",
+      "size_bytes": 15543,
+      "review_status": "Author directed Day Zero placement; prior narrative and frame sequence retained",
+      "source_role": "Day Zero pre-audio lesson outline; downstream script awaits reviewed transcript"
+    }
+  ],
+  "external_contract": {
+    "archive": "BOSS_Research_Candidate_Protocol_v0.2.zip",
+    "protocol": "boss-handoff/0.1-candidate",
+    "path": "message_contract/CONTRACT.md",
+    "sha256": "41ae3276ed7839b79c39eef875a0405188de72ffc556ad56b2202317bfc0bcfc",
+    "repository_membership": "Not included by this change"
+  },
+  "required_before_generation": [
+    "Confirm the corrected Day Zero v0.2.1 outline and reviewed production brief are selected",
+    "Inventory every actual notebook source and its version",
+    "Resolve superseded active sources while preserving history",
+    "Record actual audio prompt and supported settings",
+    "Generate and obtain the actual long-form podcast",
+    "Transcribe actual audio; verify coverage and wording",
+    "Review transcript claims against approved sources; retain corrections separately",
+    "Derive and review the video script and visual outline before downstream media generation"
+  ],
+  "corrections": [
+    {
+      "change": "Correct source hash and byte count to the actual committed storyboard; lesson content unchanged",
+      "previous_sha256": "05d77416989a589da81064c184613181f7a3ed3f303d08960a9012c888c29433",
+      "previous_size_bytes": 15362,
+      "cause": "Previous hash describes the same UTF-8 text with one additional trailing newline",
+      "current_sha256": "c140548dca7a95cfbd85d5a235f7239a764b5cdb3a4a18a596c976f3f47f00a6",
+      "current_size_bytes": 15361
+    },
+    {
+      "change": "Correct curriculum placement to Day Zero at author direction; move active source into the Day Zero example directory",
+      "previous_source_path": "examples/day-one-order-of-operations/BOSS_Order_of_Operations_Storyboard_v0.2.md",
+      "previous_sha256": "c140548dca7a95cfbd85d5a235f7239a764b5cdb3a4a18a596c976f3f47f00a6",
+      "current_sha256": "cdd86cf19dccd8653560914432d3ba37c079fb6e48b3424b2876c78e56d881ef",
+      "narrative_changed": false
+    },
+    {
+      "change": "Apply author-directed audio-first production sequence; pre-audio storyboard is provisional",
+      "curriculum_placement": "Day Zero",
+      "new_execution_claims": false
+    }
+  ],
+  "curriculum_placement": "Day Zero",
+  "production_sequence": [
+    "approved_sources",
+    "long_form_audio",
+    "actual_audio_transcript",
+    "transcript_and_source_review",
+    "reviewed_video_script_and_visual_outline",
+    "downstream_media",
+    "cross_media_inspection"
+  ],
+  "production_evidence": {
+    "audio": "UNKNOWN",
+    "transcript": "UNKNOWN",
+    "transcript_review": "NOT_RECORDED",
+    "reviewed_video_script": "NOT_RECORDED",
+    "next_required_operation": "long-form audio generation after actual source selection is checked"
+  }
+}
