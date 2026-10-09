@@ -521,3 +521,7 @@ defines when delivery is established
 ```
 
 > **The doctrine stack should be readable as one system, not sixteen unrelated documents.**
+
+## Brand migration — 2026-10-09 candidate amendment
+
+The composition standard on this review branch now records the author's cyan/magenta/black palette and supplied-logo requirement. Burnt orange is superseded for new BOSS builds. Exact tokens, logo identification, dependent-source migration and rendered acceptance remain pending. This branch amendment does not establish promotion or release. See composition-standard.md for required landscape visual review before Canva.

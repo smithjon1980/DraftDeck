@@ -1,5 +1,9 @@
 # Composition Standard
 
+**Revision:** 2026-10-09 brand migration candidate, author-directed.
+**Status:** Reviewable branch update; not merged or released.
+**Brand authority:** Cyan, magenta and black supersede the former orange accent for current BOSS work. Exact cyan/magenta values and the supplied logo must be verified before branded release.
+
 > **Editability is necessary but not sufficient.**
 > A technically editable slide that destroys the reference composition is a failed DraftDeck build.
 
@@ -18,7 +22,9 @@ The core standard is pure-white-only. There is one ground.
 |---|---|---|
 | Pure White Ground | `#FFFFFF` | The ground. No alternates in the core standard. |
 | Near-Black Ink | `#1A1A1A` | Primary ink |
-| Burnt Orange | `#B34700` | Restricted accent (status, key marks, controlled emphasis) |
+| Brand Cyan | Pending verified token | Controlled brand and diagram accent |
+| Brand Magenta | Pending verified token | Controlled brand and diagram accent |
+| Brand Black | Pending verified token | Primary brand ink; existing near-black remains provisional |
 | Drafting Gray | `#DEDEDE` | Grid, construction lines, low-priority technical substrate |
 
 **Visual profiles.** DraftDeck can host named optional profiles, but a profile is valid only when explicitly declared for a build and documented under `design-system/`. The core profile remains pure white.
@@ -42,3 +48,12 @@ The flagship Logistics Framework uses shipping, receiving, cargo, routing, proof
 ## Prohibited
 
 Solid pictogram fills, UI red, gradients, glows, ambient occlusion, glossy 3D, soft pill shapes, and silent substitution of a non-core visual profile. State is communicated through architectural hatching and line texture, not color alone.
+
+## Brand and preview acceptance
+
+- Use the author-supplied Bioscillate logo; preserve its proportions and wording. Do not substitute a text wordmark or fabricated logo.
+- No new build may silently fall back to burnt orange. Hold branded release until exact tokens and the correct logo are established.
+- Keep pure-white ground, outlined geometry and existing typography unless separately revised by the author.
+- Before Canva handoff, show the actual landscape slide composition with meaningful artwork or diagrams and obtain the author's design selection. Responsive text-only panels do not demonstrate slide composition.
+- Preview approval does not establish destination fidelity: separately inspect the Canva render and editable layers after import.
+- Retain historical files as historical evidence; enumerate current source, components and generated outputs requiring migration.
