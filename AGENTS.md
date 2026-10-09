@@ -15,13 +15,14 @@ This project uses a precise, information-dense technical operating interface aes
 ## 2. The Production Workflow
 1.  **Code Generation:** Agents develop React/Tailwind components in this repository.
 2.  **Static HTML/CSS:** The React output must be capable of rendering as clean, discrete HTML/CSS static files.
-3.  **Hosting:** Static files and image assets (logos) are hosted on a public HTTPS endpoint (e.g., Vercel, GitHub Pages).
-4.  **Canva Import:** The public URL is imported into Canva to generate an editable design.
+3.  **Hosting:** Public HTTPS hosting is an optional preview/import route (e.g., Vercel, GitHub Pages); an approved hosting destination is currently unknown.
+4.  **Canva Import:** After creative approval, use the available connector's supported source argument. The reported connector schema accepts either an absolute local artifact path in `design_file` or a public HTTPS `url`, never both. Verify actual connector availability and behavior before importing.
 
 ## 3. Canva Integration Test Results & Limits
-*   **Requirement:** Canva's import engine requires a public HTTPS URL. Local file uploads of HTML/CSS are currently unsupported for automated agentic integration.
-*   **Fidelity:** Native HTML text elements (`<h1>`, `<div>` text) and `<img>` tags successfully import as editable, movable Canva elements. 
-*   **Structural Conversion:** CSS borders and flexbox grids convert into absolute-positioned shapes and lines. They lose responsive CSS properties but remain editable.
+*   **Evidence correction:** A prior session reports a successful local HTML import at 1920×1080 with sixteen accessible text-containing elements. This session has not independently reproduced that result. Public HTTPS is not a universal requirement for the reported local-file route.
+*   **Fidelity:** Text editability, image independence, logo fidelity, and visual placement must be checked on the actual imported design. Historical import success is not creative approval.
+*   **Structural Conversion:** Conversion of CSS borders, grids, and flex layouts to independently editable Canva shapes is unverified. Do not claim it without inspecting the result.
+*   **Page structure:** Static HTML imports require top-level `section[data-document-role="page"]` elements with no nested page containers.
 *   **Strict Prohibition:** Do NOT use full-slide SVGs, PNGs, JPEGs, or PDFs as workarounds to force visual fidelity. The layout must rely on native DOM elements to ensure downstream editability.
 
 ## 4. Known Failures to Avoid
@@ -34,3 +35,11 @@ This project uses a precise, information-dense technical operating interface aes
 *   Construct the `SlideCanvas`, `TopMetadataRail` (with canonical logo), `SplitPanelLayout`, and `SequenceDiagram` components.
 *   Prove the CAD/ISO geometry and pure-white/black aesthetic without generating the remaining 9 slides.
 *   Await human visual approval before expanding the slide deck.
+
+## 6. Episode 01 Evidence & Creative Authority
+*   Jonathan Smith is the creative director and final approver.
+*   `episode01/reference/BOSS_Episode01_React_Tailwind_Candidate_0.2.zip` is an unapproved source reference containing Slides 01–03: THE SEQUENCE, PRECEDENCE, and GROUPING. It is not the governing copy for the requested Slides 01, 02, and 06.
+*   Slide 02 wording recovered from a separate Canva diagnostic is titled "The Problem Isn't Networking"; its approval status remains `[UNKNOWN]`.
+*   Approved content for Slides 01 and 06, production metadata/footer, canonical logo asset, and full Visual Authority Spec v1.0 remain `[UNKNOWN]`. Never substitute Slide 03 for Slide 06.
+*   Implement the requested preview separately from the Logistics Framework deck and the original ZIP. Record proposed typography and measurements as candidate choices.
+*   Prepare and inspect the React preview first. After author approval, compile discrete static HTML and perform Canva import verification. A Vite build for browser-preview assets is not a Canva export or approval.

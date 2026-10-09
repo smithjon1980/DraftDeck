@@ -1,0 +1,52 @@
+name: BOSS Episode 01 preview checks
+on:
+  pull_request:
+    paths:
+      - "examples/boss-episode-01/**"
+      - "episode01/reference/**"
+      - ".github/workflows/boss-episode-01-preview.yml"
+  push:
+    branches: ["codex/boss-episode-01-preview"]
+    paths:
+      - "examples/boss-episode-01/**"
+      - "episode01/reference/**"
+      - ".github/workflows/boss-episode-01-preview.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Build original ZIP as an unapproved reference
+        run: |
+          unzip -q episode01/reference/BOSS_Episode01_React_Tailwind_Candidate_0.2.zip -d /tmp/boss-reference
+          cd /tmp/boss-reference/BOSS_React_Tailwind_DesignMaster
+          npm install --no-audit --no-fund
+          npm run build
+      - name: Install candidate dependencies
+        working-directory: examples/boss-episode-01
+        run: npm install --no-audit --no-fund
+      - name: Compile React and Tailwind browser preview
+        working-directory: examples/boss-episode-01
+        run: npm run build
+      - name: Install Chromium
+        working-directory: examples/boss-episode-01
+        run: npx playwright install --with-deps chromium
+      - name: Check browser geometry and capture screenshots
+        working-directory: examples/boss-episode-01
+        run: npm run check:browser
+      - name: Preserve preview and review evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: boss-episode-01-preview
+          path: |
+            examples/boss-episode-01/dist/
+            examples/boss-episode-01/verification/artifacts/
+          if-no-files-found: error

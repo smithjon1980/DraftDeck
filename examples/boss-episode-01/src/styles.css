@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root { font-family: Arial, sans-serif; color: #000000; background: #FFFFFF; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+h1, h2, h3, p { margin: 0; }
+button, select { font: inherit; }
+.preview-shell { padding: 24px; max-width: 1968px; margin: 0 auto; }
+.preview-controls { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-bottom: 20px; }
+.preview-controls h1 { font-size: 24px; font-weight: 700; }
+.preview-controls p, .preview-notice { font-size: 14px; line-height: 1.5; }
+.preview-controls label { display: flex; align-items: center; gap: 12px; }
+.preview-controls select { border: 1px solid #000000; border-radius: 0; background: #FFFFFF; padding: 8px; }
+.preview-notice { padding: 16px 0; }
+.slide-list { display: grid; gap: 32px; }
+.entry-label { font-size: 12px; margin-bottom: 8px; }
+.slide-viewport { width: 100%; max-width: 1920px; position: relative; }
+.slide-canvas { width: 1920px; height: 1080px; transform-origin: top left; position: absolute; top: 0; left: 0; border: 1px solid #000000; }
+.metadata-rail { height: 112px; padding: 24px 64px; display: flex; justify-content: space-between; align-items: center; }
+.brand-slot { width: 300px; height: 64px; display: flex; align-items: center; }
+.canonical-logo { display: block; max-width: 300px; max-height: 64px; object-fit: contain; }
+.brand-slot span, .metadata-value, .small-label { font-family: Consolas, "Courier New", monospace; font-size: 20px; letter-spacing: 1px; }
+.slide-heading { height: 204px; padding: 56px 64px; display: flex; align-items: center; }
+.slide-heading h1 { font-size: 64px; font-weight: 700; line-height: 1.08; }
+.split-panel-layout { display: grid; grid-template-columns: 67fr 33fr; height: 762px; }
+.main-panel { padding: 48px 48px 48px 64px; }
+.sidebar { padding: 48px; }
+.sidebar h2 { font-weight: 700; margin-bottom: 40px; }
+.sidebar p { font-size: 28px; line-height: 1.45; margin-bottom: 32px; }
+.comparison-grid { display: grid; grid-template-columns: 1fr 1fr; height: 100%; gap: 40px; }
+.comparison-column { min-width: 0; }
+.comparison-column h2 { min-height: 112px; font-size: 36px; font-weight: 700; line-height: 1.15; padding-bottom: 24px; }
+.comparison-column ol { list-style: none; padding: 0; margin: 0; }
+.comparison-column li { min-height: 128px; display: grid; grid-template-columns: 44px 1fr; align-items: center; gap: 20px; padding: 20px 0; }
+.step-index { font-family: Consolas, "Courier New", monospace; font-size: 18px; }
+.comparison-column li p { font-size: 34px; line-height: 1.25; }
+.comparison-outcome { margin-top: 40px; font-size: 28px; line-height: 1.35; font-weight: 700; }
+.unresolved-layout { padding: 64px; font-size: 28px; }
+.sequence-diagram { display: flex; padding: 0; margin: 0; list-style: none; }
+.sequence-diagram li { display: flex; align-items: center; flex: 1; }
+.sequence-node { padding: 24px; flex: 1; }
+.sequence-node h3 { font-size: 32px; }
+.sequence-node > p:last-child { font-size: 24px; margin-top: 16px; }
+.sequence-arrow { width: 40px; height: 1px; background: #000000; position: relative; margin: 0 16px; }
+.sequence-arrow::after { content: ""; position: absolute; right: 0; top: -4px; width: 8px; height: 8px; border-top: 1px solid #000000; border-right: 1px solid #000000; transform: rotate(45deg); }
+@media (max-width: 600px) {
+  .preview-shell { padding: 12px; }
+  .preview-controls { align-items: flex-start; flex-direction: column; }
+}
