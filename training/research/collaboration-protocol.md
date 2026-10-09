@@ -1,6 +1,6 @@
 # BOSS Collaboration and Milestone Protocol
 
-Version: v1.0 candidate protocol.
+Version: v1.1 candidate protocol.
 Goal: develop research practice in learning design and governed information work while improving BOSS.
 
 ## Shared responsibilities
@@ -43,3 +43,36 @@ Keep this protocol, boss-development-and-evidence-plan.md, milestone-state.json,
 
 ## Release boundaries
 The Module 01 review is candidate material. Audio/PDF correspondence and learner outcomes remain to be checked. Existing task scoring rules remain provisional. Original research contribution and degree-equivalent competence are not established by artifact completion.
+
+## Daily research-design scorecard — added 2026-10-09
+
+Author-selected scope: one paper, one hypothesis. Process-first AI education may improve beginners' transfer to unfamiliar AI tools compared with product-first instruction. Treat this as untested. Workflow reliability is not a separate study track in this paper.
+
+Include this scorecard in each daily brief alongside existing milestone gates:
+
+| Category | Maximum points |
+|---|---:|
+| Alignment with the educational purpose | 20 |
+| Focused, bounded research question | 15 |
+| Fair comparison | 25 |
+| Measurable transfer assessment | 25 |
+| Reproducibility and claim discipline | 15 |
+| Total | 100 |
+
+This is a project-specific proposed design rubric, not a validated academic instrument, publication probability, learner grade or measure of effectiveness. The earlier conversational 7/10 and 9/10 judgments were not calculated from it; do not convert them into 70/100 and 90/100 baselines.
+
+Before awarding numerical points, define and version item-level criteria, point allocations and acceptable evidence. Until then report each category as unassessed; no current numerical total is established. Do not infer points from file count, effort or an assistant's completion report.
+
+Each brief reports:
+- Rubric version and exact inspected source revisions.
+- Earned/max points by category, linked evidence and the reason for each awarded item; unassessed points separately.
+- Total verified points out of 100 only once all categories have been assessed. Before full assessment report verified points, assessed maximum and unassessed maximum without extrapolating a total.
+- Change from the prior evidence-backed assessment, or no comparable baseline.
+- Largest remaining gap and one bounded action, with the artifact or check needed to close it.
+- Reopened criteria when a revision invalidates previous evidence; preserve assessment history.
+
+Keep design readiness distinct from learner outcomes. A fully met rubric would mean the defined design criteria are satisfied, not that BOSS works better, that a paper will be accepted, or that independent methods review is unnecessary.
+
+Initial gap to close: draft a versioned, item-level scoring rubric and define the primary transfer outcome, recommended as independently verified task completion on an unfamiliar tool. Specify fair lesson time and practice, prior-experience handling, assessment tasks neither group rehearses, scoring, sampling and analysis before outcome collection. Do not claim these study-design tasks are completed by adding this briefing requirement.
+
+The existing 8 PM America/Chicago schedule is unchanged. This protocol amendment does not create, update or verify an automation.
