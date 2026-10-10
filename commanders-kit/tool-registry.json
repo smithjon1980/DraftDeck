@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "kit": "DraftDeck Commander's Kit",
+  "status": "registered_not_installed",
+  "global_visual_layers": [
+    "background_geometry",
+    "art_story",
+    "editable_typography"
+  ],
+  "text_policy": "Instructional text must remain a separate editable typography layer; never claim OCR/vectorization restores native text.",
+  "tools": [
+    {
+      "id": "vtracer",
+      "upstream": "https://github.com/visioncortex/vtracer",
+      "purpose": "raster_to_color_vector",
+      "interface": "CLI",
+      "binary": "vtracer",
+      "verified": false
+    },
+    {
+      "id": "opencv",
+      "upstream": "https://github.com/opencv/opencv",
+      "purpose": "image_and_geometry_analysis",
+      "interface": "Python cv2",
+      "python_module": "cv2",
+      "verified": false
+    },
+    {
+      "id": "sam2",
+      "upstream": "https://github.com/facebookresearch/sam2",
+      "purpose": "object_segmentation",
+      "interface": "Python sam2",
+      "python_module": "sam2",
+      "verified": false
+    },
+    {
+      "id": "tesseract",
+      "upstream": "https://github.com/tesseract-ocr/tesseract",
+      "purpose": "ocr_audit_not_editable_text_recovery",
+      "interface": "CLI",
+      "binary": "tesseract",
+      "verified": false
+    },
+    {
+      "id": "potrace",
+      "upstream": "https://potrace.sourceforge.net/",
+      "purpose": "monochrome_bitmap_vector_trace",
+      "interface": "CLI",
+      "binary": "potrace",
+      "verified": false
+    },
+    {
+      "id": "imagemagick",
+      "upstream": "https://imagemagick.org/",
+      "purpose": "raster_preparation",
+      "interface": "CLI",
+      "binary": "magick",
+      "verified": false
+    },
+    {
+      "id": "resvg",
+      "upstream": "https://github.com/linebender/resvg",
+      "purpose": "svg_render_validation",
+      "interface": "CLI",
+      "binary": "resvg",
+      "verified": false
+    }
+  ],
+  "security": {
+    "default_execution": "disabled",
+    "network_downloads": "prohibited_by_default",
+    "shell_interpolation": "prohibited",
+    "untrusted_uploads": "sandbox_required",
+    "max_input_bytes": 25000000
+  },
+  "required_checks": [
+    "tool_present",
+    "license_review",
+    "version_pin",
+    "authorized_operation",
+    "input_provenance",
+    "layer_manifest",
+    "editability_test",
+    "visual_diff",
+    "output_integrity"
+  ]
+}
