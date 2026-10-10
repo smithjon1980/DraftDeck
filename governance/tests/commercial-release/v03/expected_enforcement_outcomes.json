@@ -1,0 +1,56 @@
+{
+  "manifest_version": "boss-assignment-06/1.0",
+  "authority": "Independent expectation manifest; requirements established before test execution",
+  "release_marker_policy": "No marker may be written by blocked fixtures; eligible fixture must pause before any marker",
+  "scenarios": [
+    {
+      "file": "01_golden_path.json",
+      "workflow_id": "WF-001",
+      "expected_policy": "RELEASE_ELIGIBLE_FOR_TRUSTED_AUTHORIZATION_CHECK",
+      "expected_terminal": "NODE_SUSPENDED_APPROVAL",
+      "release_marker": false
+    },
+    {
+      "file": "02a_evidence_deficit.json",
+      "workflow_id": "WF-002a",
+      "expected_policy": "RELEASE_BLOCKED_EVIDENCE_DEFICIT",
+      "expected_terminal": "NODE_TERMINATED_EVIDENCE_DEFICIT",
+      "release_marker": false
+    },
+    {
+      "file": "02b_split_signal_error.json",
+      "workflow_id": "WF-002b",
+      "expected_policy": "RELEASE_BLOCKED_SPLIT_SIGNAL",
+      "expected_terminal": "NODE_TERMINATED_SPLIT_SIGNAL",
+      "release_marker": false
+    },
+    {
+      "file": "03_unsigned_handoff.json",
+      "workflow_id": "WF-003",
+      "expected_policy": "RELEASE_BLOCKED_PENDING_SPECIALIST",
+      "expected_terminal": "NODE_TERMINATED_PENDING_SPECIALIST",
+      "release_marker": false
+    },
+    {
+      "file": "04_privacy_deficit.json",
+      "workflow_id": "WF-004",
+      "expected_policy": "RELEASE_BLOCKED_PRIVACY_VIOLATION",
+      "expected_terminal": "NODE_TERMINATED_PRIVACY_VIOLATION",
+      "release_marker": false
+    },
+    {
+      "file": "06_schema_rejection.json",
+      "workflow_id": "WF-006",
+      "expected_policy": "RELEASE_BLOCKED_SCHEMA",
+      "expected_terminal": "NODE_TERMINATED_SCHEMA",
+      "release_marker": false
+    },
+    {
+      "file": "07_incident_route_failure.json",
+      "workflow_id": "WF-007",
+      "expected_policy": "RELEASE_BLOCKED_CONTROL",
+      "expected_terminal": "NODE_TERMINATED_INCIDENT_ROUTE",
+      "release_marker": false
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "workflow_id": "WF-002a",
+  "risk_tier": 1,
+  "evidence_chain": {
+    "status": "INCOMPLETE",
+    "ipos_trace_verified": false,
+    "missing_nodes": [
+      "storage_write_log"
+    ],
+    "split_signal_detected": false
+  },
+  "privacy_controls": {
+    "retention_schedule_defined": true,
+    "minimization_tags_applied": true
+  },
+  "authorization": {
+    "human_approval_recorded": true,
+    "engineering_signoff_required": false
+  }
+}
