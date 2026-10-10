@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BOSS release gate v0.3 candidate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "workflow_id",
+    "risk_tier",
+    "ipos",
+    "claim",
+    "controls",
+    "authorization"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "boss-gate/0.3-candidate"
+    },
+    "workflow_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "risk_tier": {
+      "enum": [
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+      ]
+    },
+    "ipos": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "input",
+        "process",
+        "output",
+        "storage"
+      ],
+      "properties": {
+        "input": {
+          "type": "string",
+          "minLength": 1
+        },
+        "process": {
+          "type": "string",
+          "minLength": 1
+        },
+        "output": {
+          "type": "string",
+          "minLength": 1
+        },
+        "storage": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "asserted_outcome",
+        "execution_receipt_id"
+      ],
+      "properties": {
+        "asserted_outcome": {
+          "enum": [
+            "SUCCESS",
+            "FAILURE"
+          ]
+        },
+        "execution_receipt_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "controls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "retention",
+        "minimization",
+        "incident_route",
+        "specialist"
+      ],
+      "properties": {
+        "retention": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "required",
+            "evidence_id"
+          ],
+          "properties": {
+            "required": {
+              "type": "boolean"
+            },
+            "evidence_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "minimization": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "required",
+            "evidence_id"
+          ],
+          "properties": {
+            "required": {
+              "type": "boolean"
+            },
+            "evidence_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "incident_route": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "required",
+            "evidence_id"
+          ],
+          "properties": {
+            "required": {
+              "type": "boolean"
+            },
+            "evidence_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "specialist": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "required",
+            "evidence_id"
+          ],
+          "properties": {
+            "required": {
+              "type": "boolean"
+            },
+            "evidence_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "authorization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "approval_request_id"
+      ],
+      "properties": {
+        "approval_request_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}
