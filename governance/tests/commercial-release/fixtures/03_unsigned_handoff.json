@@ -1,0 +1,63 @@
+{
+  "schema_version": "boss-release/0.1-candidate",
+  "run_id": "FIXTURE-003",
+  "system_id": "boss-fixture",
+  "input": {
+    "state": "OBSERVED",
+    "evidence_refs": [
+      "fixture://evidence/input"
+    ]
+  },
+  "process": {
+    "state": "OBSERVED",
+    "evidence_refs": [
+      "fixture://evidence/process"
+    ]
+  },
+  "output": {
+    "state": "OBSERVED",
+    "evidence_refs": [
+      "fixture://evidence/output"
+    ]
+  },
+  "storage": {
+    "state": "OBSERVED",
+    "evidence_refs": [
+      "fixture://evidence/storage"
+    ]
+  },
+  "risk": {
+    "tier": "T3",
+    "reviewer": "fixture-human",
+    "assessment_ref": "fixture://risk/assessment"
+  },
+  "controls": {
+    "privacy": {
+      "status": "PASS",
+      "evidence_refs": [
+        "fixture://control/privacy"
+      ]
+    },
+    "evidence": {
+      "status": "PASS",
+      "evidence_refs": [
+        "fixture://control/evidence"
+      ]
+    },
+    "specialist_referral": {
+      "status": "UNKNOWN",
+      "evidence_refs": []
+    },
+    "incident_route": {
+      "status": "PASS",
+      "evidence_refs": [
+        "fixture://control/incident_route"
+      ]
+    }
+  },
+  "authorization": {
+    "human_approver": "fixture-human",
+    "approval_ref": "fixture://auth/approved"
+  },
+  "disposition": "APPROVED"
+}
