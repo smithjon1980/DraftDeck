@@ -1,0 +1,84 @@
+{
+  "name": "BOSS-D0-WF-001 — Source Admission + Receipt (PoC INACTIVE)",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "b012cc71-a35a-4f62-bd03-b10000000001",
+      "name": "Manual Test Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        240,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "13DEHx7la7LrgAZ3vHLm46sTXiqV1f7nC",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "id": "b012cc71-a35a-4f62-bd03-b10000000002",
+      "name": "Get Authorized Drive Audio",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        480,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "Bind viewer-only Drive OAuth credential in n8n. Requires runtime validation of node parameters and Drive permissions."
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Candidate: requires self-hosted n8n with N8N_NODE_FUNCTION_ALLOW_BUILTIN=crypto.\n// Until credentials and compatibility are tested, do not activate or execute.\nconst crypto = require('crypto');\nconst input = $input.first();\nconst expected = 'c03ab480fbfd836e5db6670440f9734220e3edb842a7e7379bf87905f7dc8544';\nconst fileId = '13DEHx7la7LrgAZ3vHLm46sTXiqV1f7nC';\nconst bytes = await this.helpers.getBinaryDataBuffer(0, 'data');\nconst actual = crypto.createHash('sha256').update(bytes).digest('hex');\nconst verified = actual === expected && bytes.length > 0;\nreturn [{ json: {\n  schema_version:'0.1', run_id:'BOSS-D0-WF-001', source_file_id:fileId,\n  expected_sha256:expected, observed_sha256:actual, bytes:bytes.length,\n  source_integrity:verified ? 'PASS' : 'FAIL',\n  execution_status:verified ? 'SOURCE_ADMITTED_ONLY' : 'HOLD',\n  transcription_executed:false, release_authorized:false,\n  receipt_type:'SOURCE_ADMISSION_CANDIDATE'\n}}];"
+      },
+      "id": "b012cc71-a35a-4f62-bd03-b10000000003",
+      "name": "Verify SHA256 + Emit HOLD Receipt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        720,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "Candidate only: requires crypto builtin allowlist, this.helpers binary buffer support, and audited sandbox test. No transcription performed."
+    }
+  ],
+  "connections": {
+    "Manual Test Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get Authorized Drive Audio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Authorized Drive Audio": {
+      "main": [
+        [
+          {
+            "node": "Verify SHA256 + Emit HOLD Receipt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false,
+  "pinData": {},
+  "tags": []
+}
