@@ -82,5 +82,7 @@
   "notebooklm_generation_authorized": false,
   "notebooklm_import_execution_status": "NOT_EXECUTED",
   "research_claims": "NO LEARNER EMPIRICAL EVIDENCE",
-  "notes": "Whitelisted texts are candidate theory sources; hash equality alone does not promote content to controlled release. Import requires explicit approval after reviewing actual seven-source packet."
+  "notes": "Whitelisted texts are candidate theory sources; hash equality alone does not promote content to controlled release. Import requires explicit approval after reviewing actual seven-source packet.",
+  "source_snapshot_commit": "d34ab04805cb4b0085bbdbaa0ab7d73e97075de4",
+  "source_snapshot_commit_note": "Seven A-tier texts and integrity-manifest.json existed at this commit; use immutable commit to fetch source bytes, not the moving branch tip."
 }
