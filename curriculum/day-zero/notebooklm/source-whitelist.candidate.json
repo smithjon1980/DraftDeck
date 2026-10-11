@@ -1,0 +1,86 @@
+{
+  "order": "BOSS-D0-NLM-005",
+  "status": "PREPARED_NOT_IMPORTED",
+  "edition": "Day Zero v2.0 candidate theory only",
+  "source_of_truth": "github",
+  "repository": "smithjon1980/DraftDeck",
+  "branch": "feature/boss-day-zero-seven-episode-transition",
+  "requires_pinned_commit_before_import": true,
+  "sha256_manifest": "curriculum/day-zero/integrity-manifest.json",
+  "allowlisted_sources": [
+    {
+      "episode": "EP01",
+      "title": "You Already Move Information",
+      "repository_path": "curriculum/day-zero/episodes/EP01/EP01_A_Theory_Master.md",
+      "sha256_utf8": "18df3681125487bde61f59953669c43b788453f656f4809813e93d9aefeb3feb",
+      "bytes": 3243,
+      "github_blob_sha1": "6059463f0fc24d880ef890731e8d1ba010d44aa0",
+      "origin_drive_file_id": "1rXB18l10eOpxMGM4xhnXr5nYFGbZ1odKggQJwlA_g6g"
+    },
+    {
+      "episode": "EP02",
+      "title": "BOSS and the Two Governed Boundaries",
+      "repository_path": "curriculum/day-zero/episodes/EP02/EP02_A_Theory_Master.md",
+      "sha256_utf8": "b18013afdfada98a7e20bbfac12a3e3f6f1371b331df60a69095ecac2b88f4f1",
+      "bytes": 3190,
+      "github_blob_sha1": "9b386e6c9a2bd1c4a1575c22c5b0fb4a40844a54",
+      "origin_drive_file_id": "1mPj_lvsRzEggQHu1va8umCDgjd9UFW65N-JWKT4PDCw"
+    },
+    {
+      "episode": "EP03",
+      "title": "From Request to Accountable Package",
+      "repository_path": "curriculum/day-zero/episodes/EP03/EP03_A_Theory_Master.md",
+      "sha256_utf8": "fcf02124b23064c6a9d6b9cae2aa8155e18210cf107cab2eb6e02546bcf00f95",
+      "bytes": 3365,
+      "github_blob_sha1": "aab10ce7986be4b0e6bb7d653806cb97ba0bc333",
+      "origin_drive_file_id": "1Wo5O5ppafAmLsCpo_yB0EKqxIkpzkt1ZZT8zgUPlw4g"
+    },
+    {
+      "episode": "EP04",
+      "title": "Admission Before Capability",
+      "repository_path": "curriculum/day-zero/episodes/EP04/EP04_A_Theory_Master.md",
+      "sha256_utf8": "00db96d4a94466ebbadd0a5ad91bb052a4da0b66b467ea56d9937f2805d2de38",
+      "bytes": 3457,
+      "github_blob_sha1": "aacd6263b14de98a0865be8a5c1986e80450e6d0",
+      "origin_drive_file_id": "1BQBV2DVkF9IrQra3j_obSThg0jgjvhEnAyPpP_Wv6-A"
+    },
+    {
+      "episode": "EP05",
+      "title": "PRIME, Candidate Output and Release",
+      "repository_path": "curriculum/day-zero/episodes/EP05/EP05_A_Theory_Master.md",
+      "sha256_utf8": "f2c0ce94cf856697d801d11aefd74148a26d142974ec747917cde249456b8d11",
+      "bytes": 3879,
+      "github_blob_sha1": "6054ed00d38295588125b64ab998ada9a83e2059",
+      "origin_drive_file_id": "1S6FwhYKIkIKzlxwSwPy_QFsW35KLnthZRbFBRbfP5RQ"
+    },
+    {
+      "episode": "EP06",
+      "title": "From One Package to Network Accountability",
+      "repository_path": "curriculum/day-zero/episodes/EP06/EP06_A_Theory_Master.md",
+      "sha256_utf8": "9738a0bf1766594bb863493ae5f4b5fcefa63cc05761c7331e7362fb0d712081",
+      "bytes": 3335,
+      "github_blob_sha1": "679a7d32f14a42270f30ff4bd2c5d889c27f29ab",
+      "origin_drive_file_id": "1vmQ4rVODt7zAQzJO9rhIqrGR44X2m3ybFAjqBMv1A_k"
+    },
+    {
+      "episode": "EP07",
+      "title": "Ready for Module 01",
+      "repository_path": "curriculum/day-zero/episodes/EP07/EP07_A_Theory_Master.md",
+      "sha256_utf8": "10788e35dcd6a9ccaeac71cb2def68f1b84903790a16e557f50d800bbcdda3b4",
+      "bytes": 3034,
+      "github_blob_sha1": "6a82fb7a497e0f6a5aa84af0fec7981e22c00957",
+      "origin_drive_file_id": "124hi9tX3fLhvfO_gzQvaVUFpoUyYGAuJQFW-rgPBRr0"
+    }
+  ],
+  "exclude": [
+    "curriculum/day-zero/episodes/**/EP*_B_Practical_Lab.md",
+    "curriculum/day-zero/episodes/**/EP*_C_Simulated_Case_Study.md",
+    "historic S01-S04 source collection",
+    "administrative manifests, notebooks, receipts, prompts and failed transcripts"
+  ],
+  "notebooklm_source_count_expected": 7,
+  "notebooklm_generation_authorized": false,
+  "notebooklm_import_execution_status": "NOT_EXECUTED",
+  "research_claims": "NO LEARNER EMPIRICAL EVIDENCE",
+  "notes": "Whitelisted texts are candidate theory sources; hash equality alone does not promote content to controlled release. Import requires explicit approval after reviewing actual seven-source packet."
+}
