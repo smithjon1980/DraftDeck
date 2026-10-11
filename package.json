@@ -1,0 +1,10 @@
+{
+  "name": "draftdeck-monorepo",
+  "private": true,
+  "packageManager": "pnpm@9.15.9",
+  "scripts": {
+    "dev": "pnpm --filter @draftdeck/studio dev",
+    "build": "pnpm --filter @draftdeck/studio build",
+    "check": "pnpm --filter @draftdeck/studio typecheck"
+  }
+}
