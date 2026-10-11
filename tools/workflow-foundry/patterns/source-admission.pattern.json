@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1",
+  "id": "source-admission",
+  "status": "CANDIDATE",
+  "kind": "governance-pattern",
+  "description": "Verify authorized source locator and expected SHA-256 before any execution; actual bytes must be inspected by authenticated ingress.",
+  "inputs": [
+    "drive_file_id",
+    "expected_sha256",
+    "source_manifest"
+  ],
+  "outputs": [
+    "admission_receipt"
+  ],
+  "required_checks": [
+    "authenticated_source_access",
+    "streaming_sha256_equals_manifest",
+    "record_source_bytes",
+    "fail_closed"
+  ],
+  "upstream_reference": "https://github.com/Zie619/n8n-workflows",
+  "upstream_revision": "UNPINNED_NOT_ADMITTED",
+  "execution_authorized": false
+}
