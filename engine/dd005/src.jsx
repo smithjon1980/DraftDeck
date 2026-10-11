@@ -1,0 +1,5 @@
+import React from 'react';
+import {createRoot} from 'react-dom/client';
+import './style.css';
+export function Slide01(){return <section className="slide" data-document-role="page" aria-label="You Already Move Information"><div className="art-layer" aria-hidden="true"><div className="rail top"/><div className="rail bottom"/><div className="seam"/></div><div className="text-layer"><div className="eyebrow">DAY ZERO / EPISODE 01</div><div className="accent"/><h1>YOU ALREADY<br/>MOVE INFORMATION</h1><div className="divider"/><h2>What makes an ordinary information transfer accountable?</h2></div><div className="story-layer"><img src="/assets/ep01-workstation.png" alt="Original NotebookLM workstation scene with four distinct endpoints: document, cloud, person, network"/></div><div className="footer"><span>BIOSCILLATE · OPERATING SYSTEM BY SEVEN</span><span>01 / 12</span></div></section>}
+createRoot(document.getElementById('root')).render(<main><header>DraftDeck / Episode 01</header><Slide01/></main>);
