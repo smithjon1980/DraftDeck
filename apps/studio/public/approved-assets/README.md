@@ -1,0 +1,1 @@
+The authenticated text-free NotebookLM Slide 01 workstation scene must be placed here as `ep01-workstation.png` only after source admission, provenance and text-removal verification. This folder deliberately contains no fabricated substitute.
