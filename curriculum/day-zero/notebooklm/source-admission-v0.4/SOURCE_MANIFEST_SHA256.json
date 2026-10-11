@@ -1,0 +1,42 @@
+{
+  "package": "BOSS Day Zero NotebookLM Source Admission v0.4",
+  "release_state": "NOT AUTHORIZED FOR NOTEBOOKLM INGESTION",
+  "required_authority": "individual human approval of exact source hashes",
+  "records": [
+    {
+      "file": "S01_Constitutional_Charter_REFERENCE_v0_1_HOLD.md",
+      "bytes": 10055,
+      "sha256": "bc02f06e3da2f45710367bafb6cd0ac3781816010941ed5a50e3b849fbe76658",
+      "admission": "HOLD",
+      "origin": "Library file BOSS_Constitutional_Charter_v0.1_DRAFT.md; exact text retained"
+    },
+    {
+      "file": "S02_Day_Zero_From_Prompting_to_Command_CANDIDATE.md",
+      "bytes": 13304,
+      "sha256": "87d5f5533e6268fb1fbb57f5714a8044cc5a84cd786c4e730c76a574622c6e93",
+      "admission": "HOLD",
+      "origin": "Compiled instructional candidate from prior BOSS project material and current user-authorized doctrine"
+    },
+    {
+      "file": "S03_Tunnel_Protocol_Doctrine_RECONSTRUCTION_HOLD.md",
+      "bytes": 5369,
+      "sha256": "414d82a1c06325898190d5ac38d08605bcd0d4247ee4445d482bb1a7e8be8082",
+      "admission": "HOLD",
+      "origin": "Compiled instructional candidate from prior BOSS project material and current user-authorized doctrine"
+    },
+    {
+      "file": "S04_D0_INF_01_Manual_First_Automated_Second_Governed_Always_CANDIDATE.md",
+      "bytes": 3439,
+      "sha256": "a8b00bb7aeaf8815de687bccbc4a75bbe57d7fe04d731ed6b28dc9ab3a504110",
+      "admission": "HOLD",
+      "origin": "Compiled instructional candidate from prior BOSS project material and current user-authorized doctrine"
+    }
+  ],
+  "unresolved": [
+    "S01: requested v1.0 Clean Statutory Draft not available as authenticated content; supplied v0.1 reference only",
+    "S02: curriculum newly compiled; not user ratified as final lesson",
+    "S03: six-stage reconstruction not compared line-by-line to original Tunnel Protocol PDFs",
+    "S04: doctrine candidate not formally ratified as complete standalone source",
+    "NotebookLM import, audio generation, PDF generation, and Assignment 06 execution not performed"
+  ]
+}
