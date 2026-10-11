@@ -1,0 +1,144 @@
+{
+  "registry_version": "1.0.0",
+  "status": "CANDIDATE_PROFILE_PENDING_RECONCILIATION",
+  "authoritative_source": "BOSS Day Zero v2.0",
+  "profile_id": "boss-day-zero-ep01",
+  "design_tokens": {
+    "canvas": {
+      "width_px": 1920,
+      "height_px": 1080,
+      "aspect_ratio": "16:9",
+      "safe_margin_px": 48
+    },
+    "grid": {
+      "columns": 12,
+      "gutter_px": 24,
+      "behavior": "fluid-constrained"
+    },
+    "colors": {
+      "background": "#FFFFFF",
+      "text_primary": "#000000",
+      "brand_cyan": "#00FFFF",
+      "brand_magenta": "#FF00FF"
+    },
+    "typography": {
+      "font_family_primary": "Inter, sans-serif",
+      "font_family_mono": "Fira Code, monospace",
+      "scale": {
+        "title_h1": {
+          "size_px": 72,
+          "weight": 700,
+          "line_height": 1.1
+        },
+        "question_h2": {
+          "size_px": 48,
+          "weight": 500,
+          "line_height": 1.2
+        },
+        "body": {
+          "size_px": 24,
+          "weight": 400,
+          "line_height": 1.5
+        }
+      }
+    }
+  },
+  "drafting_standards": {
+    "reference_framework": "ISO 5457 / ASME Y14.2 (Adapted for Digital Instruction)",
+    "linework": {
+      "primary_stroke_px": 2,
+      "secondary_stroke_px": 1,
+      "construction_stroke_px": 0.5
+    },
+    "layer_separation": {
+      "ART": "HTML/CSS Grid Structure and Bounding Boxes",
+      "STORY": "Vector/Raster Graphic Asset (Text-Free)",
+      "TEXT": "Native HTML Typography (DOM Layer)"
+    }
+  },
+  "component_contracts": [
+    {
+      "element_id": "EP01.S01.ART.CANVAS",
+      "layer": "ART",
+      "governing_standard": "ISO 5457 (Adapted Geometry)",
+      "design_token": "design_tokens.canvas",
+      "source_reference": "NotebookLM Episode 01, Slide 01 Master Frame",
+      "salvage_classification": "KEEP",
+      "mandatory_relationships": [
+        "Strict 16:9 ratio",
+        "Left typography region",
+        "Right graphic region"
+      ],
+      "forbidden": [
+        "Bleeding text past margins",
+        "Overlaying text on the STORY graphic"
+      ],
+      "acceptance_test": "Canvas measures exactly 1920x1080; components observe the 48px safe margin."
+    },
+    {
+      "element_id": "EP01.S01.STORY.WORKSTATION",
+      "layer": "STORY",
+      "governing_standard": "BOSS technical/isometric illustration family",
+      "design_token": "drafting_standards.linework",
+      "source_reference": "NotebookLM Episode 01, Slide 01",
+      "salvage_classification": "REIMAGINE",
+      "mandatory_relationships": [
+        "Central workstation present",
+        "Connected to document node",
+        "Connected to human node",
+        "Connected to cloud node",
+        "Connected to network node"
+      ],
+      "forbidden": [
+        "Generic clip-art substitution",
+        "Missing destination nodes",
+        "Invented unconnected nodes",
+        "Typography embedded in the artwork file"
+      ],
+      "acceptance_test": "Four original endpoint relationships remain visually distinct and instructionally intelligible."
+    },
+    {
+      "element_id": "EP01.S01.TEXT.TITLE",
+      "layer": "TEXT",
+      "governing_standard": "DraftDeck Editorial Authority",
+      "design_token": "design_tokens.typography.scale.title_h1",
+      "source_reference": "EP01 Theory Master Script",
+      "salvage_classification": "DISCARD_AND_REBUILD",
+      "mandatory_relationships": [
+        "Exact string: 'YOU ALREADY MOVE INFORMATION'",
+        "Positioned in upper-left grid zone"
+      ],
+      "forbidden": [
+        "Duplicated words ('MOVE MOVE')",
+        "Rasterized text rendering"
+      ],
+      "acceptance_test": "Text is a selectable HTML element; string matches exact approved copy; zero collision with surrounding elements."
+    }
+  ],
+  "reconciliation_required": [
+    {
+      "id": "PALETTE",
+      "existing": "doctrine/composition-standard.md: #1A1A1A / #B34700 / #DEDEDE",
+      "candidate": "black / cyan / magenta; authentic brand colors require asset sampling",
+      "resolution": "Declare scoped visual profile; no silent override"
+    },
+    {
+      "id": "TYPOGRAPHY",
+      "existing": "doctrine/composition-standard.md: Georgia/Courier New/Arial",
+      "candidate": "Inter/Fira Code",
+      "resolution": "Explicit approval of profile-specific typography"
+    },
+    {
+      "id": "LINEWORK",
+      "existing": "doctrine/composition-standard.md: 1pt/0.5pt/0.25pt",
+      "candidate": "2px/1px/0.5px",
+      "resolution": "Reconcile unit conversion and profile hierarchy"
+    },
+    {
+      "id": "COMPLIANCE",
+      "existing": "Standards are adapted visual conventions",
+      "candidate": "ISO 5457 / ASME Y14.2",
+      "resolution": "No certification or strict conformance claim"
+    }
+  ]
+}
