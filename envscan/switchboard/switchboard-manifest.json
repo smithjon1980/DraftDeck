@@ -1,0 +1,89 @@
+{
+  "switchboard_version": "1.0.0",
+  "system": "BOSS_ENVSCAN_FOUR_NODE_HANDSHAKE",
+  "status": "PLANNED_NOT_PROVISIONED",
+  "security_notice": "Never store credentials in this manifest; secret_ref identifies a secret manager key, not its value.",
+  "circuits": {
+    "NODE_A_N8N": {
+      "role": "COMMUNICATION_AND_ROUTING",
+      "ingress_webhook": "PENDING_PROVISIONING",
+      "notification_webhook": "PENDING_PROVISIONING",
+      "auth_strategy": "BEARER_TOKEN",
+      "secret_ref": "ENVSCAN_N8N_TOKEN",
+      "status": "OFFLINE"
+    },
+    "NODE_B_WINDMILL": {
+      "role": "DIAGNOSTIC_ORCHESTRATION",
+      "api_endpoint": "PENDING_PROVISIONING",
+      "auth_strategy": "WINDMILL_API_KEY",
+      "secret_ref": "ENVSCAN_WINDMILL_TOKEN",
+      "status": "OFFLINE"
+    },
+    "NODE_C_RAILWAY": {
+      "role": "ISOLATED_EXECUTION",
+      "worker_endpoint": "PENDING_PROVISIONING",
+      "auth_strategy": "INTERNAL_SERVICE_TOKEN",
+      "secret_ref": "ENVSCAN_RAILWAY_SERVICE_TOKEN",
+      "status": "OFFLINE"
+    },
+    "NODE_D_BLUEHOST": {
+      "role": "ARTIFACT_DISTRIBUTION",
+      "sftp_host": "PENDING_PROVISIONING",
+      "public_url_root": "PENDING_PROVISIONING",
+      "auth_strategy": "SSH_KEY",
+      "secret_ref": "ENVSCAN_BLUEHOST_SFTP_KEY",
+      "status": "OFFLINE"
+    }
+  },
+  "authorized_routes": [
+    {
+      "id": "R01",
+      "from": "NODE_A_N8N",
+      "to": "NODE_B_WINDMILL",
+      "purpose": "Trigger Diagnostic",
+      "contract": "diagnostic-request.v1"
+    },
+    {
+      "id": "R02",
+      "from": "NODE_B_WINDMILL",
+      "to": "NODE_C_RAILWAY",
+      "purpose": "Execute Probe",
+      "contract": "probe-request.v1"
+    },
+    {
+      "id": "R03",
+      "from": "NODE_C_RAILWAY",
+      "to": "NODE_B_WINDMILL",
+      "purpose": "Return Execution Receipt",
+      "contract": "execution-receipt.v1"
+    },
+    {
+      "id": "R04",
+      "from": "NODE_B_WINDMILL",
+      "to": "NODE_D_BLUEHOST",
+      "purpose": "Deposit Approved Artifact",
+      "contract": "artifact-manifest.v1"
+    },
+    {
+      "id": "R05",
+      "from": "NODE_B_WINDMILL",
+      "to": "NODE_A_N8N",
+      "purpose": "Return Verification Notification",
+      "contract": "diagnostic-outcome.v1"
+    }
+  ],
+  "provisioning_gates": {
+    "secrets_in_external_vault": "NOT_ESTABLISHED",
+    "service_authentication": "NOT_ESTABLISHED",
+    "endpoint_reachability": "NOT_ESTABLISHED",
+    "artifact_readback_hash": "NOT_ESTABLISHED",
+    "evidence_verifier": "NOT_ESTABLISHED"
+  },
+  "test_case": {
+    "scan_id": "ENV-T001-BETA",
+    "mode": "SIMULATED_FAILURE",
+    "synthetic_code": "E9999",
+    "expected_result": "EXPECTED_FAILURE_OBSERVED",
+    "delivery_requirement": "Independent read-back and content hash comparison required"
+  }
+}
