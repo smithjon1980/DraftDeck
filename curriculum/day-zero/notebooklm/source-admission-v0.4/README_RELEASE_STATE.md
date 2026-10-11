@@ -1,0 +1,5 @@
+# Source-admission review record
+
+All four files are prepared as separate clean text-readable Markdown documents, but **none is yet authorized for NotebookLM ingestion**. The S01 source is an authentic available v0.1 draft, not the requested v1.0 charter. See `SOURCE_MANIFEST_SHA256.json` for exact content digests and unresolved statuses. Human approval must identify each exact file hash and clear the specific HOLD. Gemini must not infer acceptance from file availability.
+
+Files S02–S04 are new authored candidate syntheses, not archival transcriptions. The 21-topic / 63-core-slide matrix is planning scope, not a verified media deliverable. The Gemini handoff gives staged instructions plus a post-approval NotebookLM audio customization prompt. No upload, external execution, or release is represented as completed.
