@@ -22,7 +22,7 @@ Existing `doctrine/production-contract.md`, `doctrine/composition-standard.md`, 
 ## 5. Reconciliation before promotion
 | Item | Existing core doctrine | Candidate values | Gate |
 |---|---|---|---|
-| Palette | #FFFFFF, #1A1A1A, #B34700, #DEDEDE | #FFFFFF, #000000, #00FFFF, #FF00FF | Verify logo asset and authorize scoped palette |
+| Palette | #FFFFFF, #1A1A1A, #B34700, #DEDEDE | #FFFFFF, #000000, #00FFFF, #FF00FF | Hierarchy resolved: BOSS cyan/magenta/black; sampled hex values pending |
 | Typography | Georgia, Courier New, Arial | Inter, Fira Code | Approve the Episode 01 type profile |
 | Line weights | 1pt, 0.5pt, 0.25pt | 2px, 1px, 0.5px | Normalize units at 1920×1080 |
 | Standard references | Adapted CAD/ISO vocabulary | ISO 5457 / ASME Y14.2 | Define applicable clauses; don't claim certification |
@@ -33,3 +33,6 @@ Existing `doctrine/production-contract.md`, `doctrine/composition-standard.md`, 
 **ADMIT** source/reference → **EXTRACT** ART/STORY/TEXT → **CLASSIFY** each element → **ASSEMBLE** using native editable layout → **COMPARE** reference and render → **VERIFY** text collisions, story fidelity, and adapter edits → **AUTHORIZE** release.
 
 Current status: `COMMITTED_CANDIDATE` does **not** mean `RENDER_VERIFIED` or `RELEASED`.
+
+## 7. BOSS brand identity directive (BOSS-D0-DD-004)
+Brand precedence is ratified: original BOSS cyan/magenta/black logo governs the surrounding interface. Historic burnt orange is excluded from the current BOSS Day Zero profile. `#00FFFF` and `#FF00FF` are provisional only until actual master-asset inspection. The GLOBAL.ART.BRAND_IDENTITY contract applies to all slides. Preserve logo geometry, color, and isolation zone; do not fabricate or recolor it. No claim of exact color match or authentic asset placement is permitted before inspection.
