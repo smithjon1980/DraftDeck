@@ -19,7 +19,12 @@
       "background": "#FFFFFF",
       "text_primary": "#000000",
       "brand_cyan": "#00FFFF",
-      "brand_magenta": "#FF00FF"
+      "brand_magenta": "#FF00FF",
+      "brand_provisional": {
+        "cyan": "#00FFFF",
+        "magenta": "#FF00FF",
+        "status": "PENDING_MASTER_ASSET_VERIFICATION"
+      }
     },
     "typography": {
       "font_family_primary": "Inter, sans-serif",
@@ -113,6 +118,25 @@
         "Rasterized text rendering"
       ],
       "acceptance_test": "Text is a selectable HTML element; string matches exact approved copy; zero collision with surrounding elements."
+    },
+    {
+      "element_id": "GLOBAL.ART.BRAND_IDENTITY",
+      "layer": "ART",
+      "governing_standard": "BOSS Brand Authority",
+      "design_token": "design_tokens.colors.brand_provisional",
+      "source_reference": "Master BOSS Cyan/Magenta/Black Logo Asset",
+      "salvage_classification": "KEEP",
+      "mandatory_relationships": [
+        "Unmodified color values",
+        "Fixed spatial positioning within defined grid zone",
+        "Highest visual precedence in layout hierarchy"
+      ],
+      "forbidden": [
+        "Application of historical palette overrides (e.g., burnt orange)",
+        "Generative approximations of the logo",
+        "Recoloring the logo to match interface themes"
+      ],
+      "acceptance_test": "Authentic logo is present; exact RGB/Hex values match the master asset; surrounding grid and typography do not crowd the designated isolation zone."
     }
   ],
   "reconciliation_required": [
@@ -120,7 +144,8 @@
       "id": "PALETTE",
       "existing": "doctrine/composition-standard.md: #1A1A1A / #B34700 / #DEDEDE",
       "candidate": "black / cyan / magenta; authentic brand colors require asset sampling",
-      "resolution": "Declare scoped visual profile; no silent override"
+      "resolution": "RESOLVED: updated BOSS brand palette has priority over historical burnt orange; precise hex values remain provisional pending logo asset sampling",
+      "status": "HIERARCHY_RESOLVED_COLOR_VALUES_PENDING"
     },
     {
       "id": "TYPOGRAPHY",
@@ -140,5 +165,12 @@
       "candidate": "ISO 5457 / ASME Y14.2",
       "resolution": "No certification or strict conformance claim"
     }
-  ]
+  ],
+  "brand_authority": {
+    "status": "RATIFIED_HIERARCHY",
+    "identity": "Authentic BOSS cyan/magenta/black logo",
+    "historical_burnt_orange": "EXCLUDED_FROM_BOSS_DAY_ZERO_PROFILE",
+    "master_asset_verification": "NOT_ESTABLISHED",
+    "directive": "The interface is designed around the original brand identity; never redraw or recolor the logo."
+  }
 }
