@@ -3,7 +3,7 @@
 from pathlib import Path
 import hashlib, json, sys
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[2]
 MANIFEST = ROOT / "curriculum/day-zero/integrity-manifest.json"
 
 def main():
