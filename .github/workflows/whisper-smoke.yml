@@ -1,0 +1,45 @@
+name: Whisper transcription smoke test
+on:
+  pull_request:
+    paths:
+      - 'tools/transcription/**'
+      - '.github/workflows/whisper-smoke.yml'
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg cmake g++ espeak-ng
+      - name: Bootstrap pinned Whisper and base English model
+        run: bash tools/transcription/bootstrap-whisper.sh v1.8.2 base.en
+      - name: Generate synthetic spoken excerpt
+        run: |
+          mkdir -p /tmp/whisper-test
+          espeak-ng -w /tmp/whisper-test/speech.wav 'This is a transcription smoke test for the BOSS command kit.'
+          ffmpeg -y -i /tmp/whisper-test/speech.wav -c:a aac /tmp/whisper-test/speech.m4a
+      - name: Execute ASR and validate evidence
+        run: |
+          python3 tools/transcription/transcribe.py --input /tmp/whisper-test/speech.m4a --model base.en --out-dir /tmp/whisper-test/output
+          python3 - <<'PY'
+          import json, pathlib
+          p=pathlib.Path('/tmp/whisper-test/output/speech.asr-receipt.json')
+          r=json.loads(p.read_text())
+          assert r['content_verification']=='HOLD'
+          assert r['diarization']=='NOT_ESTABLISHED'
+          assert pathlib.Path(r['raw_text']).read_text().strip()
+          assert pathlib.Path(r['timestamped_srt']).read_text().strip()
+          print('ASR EXECUTED; human fidelity and diarization review outstanding')
+          PY
+      - name: Upload smoke-test receipt and raw ASR
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: whisper-smoke-evidence
+          path: /tmp/whisper-test/output/
+          if-no-files-found: warn
