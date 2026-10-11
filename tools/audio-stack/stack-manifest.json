@@ -1,0 +1,64 @@
+{
+  "name": "BOSS AudioWorks",
+  "status": "candidate_execution_paused",
+  "schema_version": "0.1",
+  "components": [
+    {
+      "id": "ffmpeg",
+      "role": "media",
+      "upstream": "https://github.com/FFmpeg/FFmpeg",
+      "primary": true
+    },
+    {
+      "id": "audacity",
+      "role": "manual_media_editor",
+      "upstream": "https://github.com/audacity/audacity",
+      "primary": false
+    },
+    {
+      "id": "silero-vad",
+      "role": "vad",
+      "upstream": "https://github.com/snakers4/silero-vad",
+      "primary": true
+    },
+    {
+      "id": "whisper.cpp",
+      "role": "asr",
+      "upstream": "https://github.com/ggml-org/whisper.cpp",
+      "primary": true,
+      "execution": "synthetic_smoke_pass"
+    },
+    {
+      "id": "faster-whisper",
+      "role": "asr",
+      "upstream": "https://github.com/SYSTRAN/faster-whisper",
+      "primary": false
+    },
+    {
+      "id": "whisperx",
+      "role": "alignment_asr",
+      "upstream": "https://github.com/m-bain/whisperX",
+      "primary": true
+    },
+    {
+      "id": "pyannote.audio",
+      "role": "acoustic_diarization",
+      "upstream": "https://github.com/pyannote/pyannote-audio",
+      "primary": true
+    },
+    {
+      "id": "subtitle-edit",
+      "role": "human_review",
+      "upstream": "https://github.com/SubtitleEdit/subtitleedit",
+      "primary": true
+    }
+  ],
+  "policy": {
+    "no_unverified_transcript": true,
+    "source_audio_immutable": true,
+    "manual_first_instruction": true,
+    "pins_required_before_runtime_admission": true,
+    "models_not_vendored": true,
+    "licenses_must_be_reviewed": true
+  }
+}
