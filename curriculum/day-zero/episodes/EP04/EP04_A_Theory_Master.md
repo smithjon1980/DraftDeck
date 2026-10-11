@@ -1,15 +1,185 @@
-# EP04 — MCP: The Server Side
+﻿D0-A04 — Admission Before Capability
 
-ARTIFACT_ROLE: THEORY_MASTER
-SOURCE_STATUS: SOURCE_REFERENCE_ONLY — EXACT APPROVED AUDIO SCRIPT NOT YET AUTHENTICATED
-CONTENT_CUSTODY: DO NOT RECONSTRUCT, PARAPHRASE, OR SUBSTITUTE THE ORIGINAL SCRIPT.
 
-## Preserve existing theory
-The original EP04 theory audio/source remains authoritative **only after its exact approved text, version and provenance are confirmed**. This file is a custody placeholder, not audio text and not an approved NotebookLM source.
+Revision: v2.0 — Reframed Day Zero
+Status: Candidate training material; not a controlled release.
 
-## Companion pointers
-- Practical lab: `EP04_B_Practical_Lab.md`
-- Simulated case: `EP04_C_Simulated_Case_Study.md`
 
-## Production instruction
-On authentication, insert or link the exact theory script without changing its conceptual structure. Add only a separately reviewed, clearly marked reference to the companion lab and *hypothetical* case study. Never imply the simulated lab was carried out.
+Production duration target (not rendered audio): 12–16 minute NotebookLM audio overview
+
+
+A familiar mistake in AI work sounds reasonable:
+
+
+“Use the most capable model.”
+
+
+But there is a question that comes before capability.
+
+
+May this information go there?
+
+
+At a shipping counter, the carrier does not begin with the truck.
+
+
+The carrier begins with admission.
+
+
+Is the shipment sufficiently declared?
+
+
+Are the handling requirements known?
+
+
+Is the package eligible to be accepted?
+
+
+Is the destination permitted?
+
+
+That gives us the first inspection in BOSS:
+
+
+Admission Inspection.
+
+
+Its question is:
+
+
+May this package enter controlled movement?
+
+
+The possible outcomes are:
+
+
+ACCEPT.
+
+
+HOLD.
+
+
+REFUSE.
+
+
+HOLD matters because uncertainty is not permission.
+
+
+A canonical rule is:
+
+
+Unknown handling requirements produce HOLD, not guessed routing.
+
+
+Now consider an information example.
+
+
+An external AI service may be excellent at summarizing documents.
+
+
+Technically, it can process a confidential file.
+
+
+But suppose the file is not permitted to leave the approved environment.
+
+
+The service's capability does not authorize the transfer.
+
+
+That is why:
+
+
+CAPABILITY ≠ PERMISSION.
+
+
+And:
+
+
+CAN PROCESS ≠ MAY RECEIVE.
+
+
+The sequence is crucial.
+
+
+First classify the cargo.
+
+
+Then determine eligibility.
+
+
+Then select among eligible handlers.
+
+
+Cargo classification precedes handler selection.
+
+
+That leads to another important consequence:
+
+
+Capability is downstream from admissibility.
+
+
+At orientation depth, BOSS uses five handling states:
+
+
+STANDARD.
+
+
+SENSITIVE.
+
+
+RESTRICTED.
+
+
+QUARANTINED.
+
+
+PROHIBITED.
+
+
+These labels do not tell you whether the information is true, valuable, good, or bad.
+
+
+They tell you how its movement must be governed.
+
+
+This is why the shipping counter is such a useful analogy.
+
+
+A carrier does not say, “We own equipment capable of carrying this, therefore we are authorized to accept it.”
+
+
+Ability does not create permission.
+
+
+And the same is true in information systems.
+
+
+A model's context window does not create authorization.
+
+
+An agent's file access does not create authorization.
+
+
+An API's technical compatibility does not create authorization.
+
+
+Admission comes first.
+
+
+Classification comes before handler choice.
+
+
+Capability is evaluated only after eligibility has been established.
+
+
+
+
+The service boundary
+The agent acts as the admission counter. It determines handling requirements before selecting an eligible model, tool or runtime. Model capability does not turn a request into permission.
+Admission may ACCEPT, HOLD or REFUSE. Classify the handling requirements before handler selection; never use classification after a transfer to justify that transfer.
+Admission only establishes eligibility under entry conditions. It does not establish that a future generated result is correct or released.
+That second boundary still requires candidate adjudication, evidence and applicable release authority.
+
+
+In the next overview, we go behind that admission boundary and look at PRIME—the protocol that governs movement once a package is eligible to move.
