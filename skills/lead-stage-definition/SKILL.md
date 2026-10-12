@@ -10,6 +10,9 @@ qualification_status: SPECIFIED_CANDIDATE
 test_status: NOT_TESTED
 authority_scope: RESEARCH_ONLY
 evidence_refs: []
+human_dependency: "Human supplies evidence and business context for Define distinct lifecycle states and denominators for a small-business acquisition funnel. and explicitly reviews any proposed external action"
+agent_deliverable: "Human-readable lead-stage-definition decision workpaper: facts, assumptions, evidence references, conflicts, suggested action, rejected alternatives, and review diff"
+correction_vector: "Authenticated human correction/REJECT channel: record HUMAN_OVERRIDE with exact authorized correction, invalidate affected semantic cache (proposed SEAM-B01), derive new L1 digest preserving history, hold stale envelopes pending confirmation"
 ---
 
 # Lead Stage Definition
@@ -46,3 +49,9 @@ For the proposed small-office prototype, PocketBase is the **selected candidate 
 An LLM-generated sentiment score, classifier label or persuasive message is NEVER sufficient to advance the authoritative stage. PocketBase persistence must not be considered an independent cryptographic receipt merely because an event row exists. Conflicting replay or duplicate keys are refused or routed to reconciliation; uncertain side effects follow `UNCERTAIN → REQUIRES_RECONCILIATION`, never blind retry.
 
 **Current status:** schema requirement only; PocketBase transaction hooks, atomic idempotency and independent evidence sink remain **NOT_IMPLEMENTED / NOT_TESTED**. No live customer identities or automated funnel execution are authorized.
+
+## Human–Agent interface candidate
+Human dependency: Human supplies evidence and business context for Define distinct lifecycle states and denominators for a small-business acquisition funnel. and explicitly reviews any proposed external action.
+Agent deliverable: Human-readable lead-stage-definition decision workpaper: facts, assumptions, evidence references, conflicts, suggested action, rejected alternatives, and review diff.
+Correction: Authenticated human correction/REJECT channel: record HUMAN_OVERRIDE with exact authorized correction, invalidate affected semantic cache (proposed SEAM-B01), derive new L1 digest preserving history, hold stale envelopes pending confirmation.
+When requested action exceeds the explicit Equivalence Set or financial authority, require `ZONE_C_ESCALATION_REQUIRED` and no dispatch. Documentation only; NOT_IMPLEMENTED / NOT_TESTED.

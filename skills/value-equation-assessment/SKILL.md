@@ -10,6 +10,9 @@ qualification_status: SPECIFIED_CANDIDATE
 test_status: NOT_TESTED
 authority_scope: RESEARCH_ONLY
 evidence_refs: []
+human_dependency: "Human supplies evidence and business context for Evaluate offer desirability with four explicitly separate buyer perceptions. and explicitly reviews any proposed external action"
+agent_deliverable: "Human-readable value-equation-assessment decision workpaper: facts, assumptions, evidence references, conflicts, suggested action, rejected alternatives, and review diff"
+correction_vector: "Authenticated human correction/REJECT channel: record HUMAN_OVERRIDE with exact authorized correction, invalidate affected semantic cache (proposed SEAM-B01), derive new L1 digest preserving history, hold stale envelopes pending confirmation"
 ---
 
 # Value Equation Assessment
@@ -46,3 +49,9 @@ pages 49–58; HORMOZI-100M-OFFERS-2021-UK-001. Source content is an author's co
 
 ## Falsification specimen
 A proposal containing a material unproven commercial claim, missing necessary operand, or unauthorized execution attempt must be flagged HOLD / NOT_ESTABLISHED rather than promoted to an approved deliverable.
+
+## Human–Agent interface candidate
+Human dependency: Human supplies evidence and business context for Evaluate offer desirability with four explicitly separate buyer perceptions. and explicitly reviews any proposed external action.
+Agent deliverable: Human-readable value-equation-assessment decision workpaper: facts, assumptions, evidence references, conflicts, suggested action, rejected alternatives, and review diff.
+Correction: Authenticated human correction/REJECT channel: record HUMAN_OVERRIDE with exact authorized correction, invalidate affected semantic cache (proposed SEAM-B01), derive new L1 digest preserving history, hold stale envelopes pending confirmation.
+When requested action exceeds the explicit Equivalence Set or financial authority, require `ZONE_C_ESCALATION_REQUIRED` and no dispatch. Documentation only; NOT_IMPLEMENTED / NOT_TESTED.

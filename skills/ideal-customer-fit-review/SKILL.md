@@ -10,6 +10,9 @@ qualification_status: SPECIFIED_CANDIDATE
 test_status: NOT_TESTED
 authority_scope: RESEARCH_ONLY
 evidence_refs: []
+human_dependency: "Human supplies evidence and business context for Identify a serviceable buyer group using relevant behavior and business need, not protected characteristics. and explicitly reviews any proposed external action"
+agent_deliverable: "Human-readable ideal-customer-fit-review decision workpaper: facts, assumptions, evidence references, conflicts, suggested action, rejected alternatives, and review diff"
+correction_vector: "Authenticated human correction/REJECT channel: record HUMAN_OVERRIDE with exact authorized correction, invalidate affected semantic cache (proposed SEAM-B01), derive new L1 digest preserving history, hold stale envelopes pending confirmation"
 ---
 
 # Ideal Customer Fit Review
@@ -48,3 +51,9 @@ The permissible automated input is a purpose-limited, consented, business-releva
 **Runtime state:** data minimization and model-gateway filtering are **SPECIFIED / NOT_IMPLEMENTED**. No live customer segmentation.
 
 **Falsification:** A classification can be influenced by protected/sensitive fields or covert proxies outside the explicit input allowlist → FAIL.
+
+## Human–Agent interface candidate
+Human dependency: Human supplies evidence and business context for Identify a serviceable buyer group using relevant behavior and business need, not protected characteristics. and explicitly reviews any proposed external action.
+Agent deliverable: Human-readable ideal-customer-fit-review decision workpaper: facts, assumptions, evidence references, conflicts, suggested action, rejected alternatives, and review diff.
+Correction: Authenticated human correction/REJECT channel: record HUMAN_OVERRIDE with exact authorized correction, invalidate affected semantic cache (proposed SEAM-B01), derive new L1 digest preserving history, hold stale envelopes pending confirmation.
+When requested action exceeds the explicit Equivalence Set or financial authority, require `ZONE_C_ESCALATION_REQUIRED` and no dispatch. Documentation only; NOT_IMPLEMENTED / NOT_TESTED.

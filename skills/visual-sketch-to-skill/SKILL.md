@@ -10,6 +10,9 @@ qualification_status: SPECIFIED_CANDIDATE
 test_status: NOT_TESTED
 authority_scope: RESEARCH_ONLY
 evidence_refs: []
+human_dependency: "Human supplies evidence and business context for Translate exploratory sketches into original instructions with inspectable provenance and falsifiable tests. and explicitly reviews any proposed external action"
+agent_deliverable: "Human-readable visual-sketch-to-skill decision workpaper: facts, assumptions, evidence references, conflicts, suggested action, rejected alternatives, and review diff"
+correction_vector: "Authenticated human correction/REJECT channel: record HUMAN_OVERRIDE with exact authorized correction, invalidate affected semantic cache (proposed SEAM-B01), derive new L1 digest preserving history, hold stale envelopes pending confirmation"
 ---
 
 # Visual Sketch to Skill Specification
@@ -40,3 +43,9 @@ HORMOZI-100M-JOURNAL-2023-001; journal pp. 25–49 and pp. 78–81 (visual draft
 
 ## Falsification
 A proposed capability with ungrounded labels, missing denominators, unsupported profit claims or omitted authority boundaries is rejected/HOLD instead of promoted.
+
+## Human–Agent interface candidate
+Human dependency: Human supplies evidence and business context for Translate exploratory sketches into original instructions with inspectable provenance and falsifiable tests. and explicitly reviews any proposed external action.
+Agent deliverable: Human-readable visual-sketch-to-skill decision workpaper: facts, assumptions, evidence references, conflicts, suggested action, rejected alternatives, and review diff.
+Correction: Authenticated human correction/REJECT channel: record HUMAN_OVERRIDE with exact authorized correction, invalidate affected semantic cache (proposed SEAM-B01), derive new L1 digest preserving history, hold stale envelopes pending confirmation.
+When requested action exceeds the explicit Equivalence Set or financial authority, require `ZONE_C_ESCALATION_REQUIRED` and no dispatch. Documentation only; NOT_IMPLEMENTED / NOT_TESTED.

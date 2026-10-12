@@ -10,6 +10,9 @@ qualification_status: SPECIFIED_CANDIDATE
 test_status: NOT_TESTED
 authority_scope: RESEARCH_ONLY
 evidence_refs: []
+human_dependency: "Human supplies evidence and business context for Assess whether an offer is realistically deliverable at its proposed price and buyer effort. and explicitly reviews any proposed external action"
+agent_deliverable: "Human-readable offer-fulfillment-tradeoff decision workpaper: facts, assumptions, evidence references, conflicts, suggested action, rejected alternatives, and review diff"
+correction_vector: "Authenticated human correction/REJECT channel: record HUMAN_OVERRIDE with exact authorized correction, invalidate affected semantic cache (proposed SEAM-B01), derive new L1 digest preserving history, hold stale envelopes pending confirmation"
 ---
 
 # Offer Fulfillment Tradeoff Review
@@ -50,3 +53,9 @@ Before any external/public routing recommendation or handoff to `honest-offer-pr
 If comparable measurements establish `Incremental_Fulfillment_Burden > Gross_Margin_Available`, the candidate **must propose** `UNPROFITABLE_FULFILLMENT_TRIP`, `AUTOMATION_REJECTED / MANUAL_OPTIMIZATION_RECOMMENDED`, and a public-pool routing block. If the baseline, definition of margin, amortization window, or inputs are missing or incomparable, return `HOLD / NOT_ESTABLISHED`, not a fabricated pass or trip. This threshold is a *candidate supervisory requirement* requiring reconciliation with the authenticated VALUE contract; it must not silently supersede governing accounting rules.
 
 Do not confuse `CAPACITY_RECOVERED` with `CASH_YIELD_VERIFIED`. No execution broker has been changed: trip emission and public-pool enforcement remain **UNIMPLEMENTED / NOT_TESTED** pending separate authorization.
+
+## Human–Agent interface candidate
+Human dependency: Human supplies evidence and business context for Assess whether an offer is realistically deliverable at its proposed price and buyer effort. and explicitly reviews any proposed external action.
+Agent deliverable: Human-readable offer-fulfillment-tradeoff decision workpaper: facts, assumptions, evidence references, conflicts, suggested action, rejected alternatives, and review diff.
+Correction: Authenticated human correction/REJECT channel: record HUMAN_OVERRIDE with exact authorized correction, invalidate affected semantic cache (proposed SEAM-B01), derive new L1 digest preserving history, hold stale envelopes pending confirmation.
+When requested action exceeds the explicit Equivalence Set or financial authority, require `ZONE_C_ESCALATION_REQUIRED` and no dispatch. Documentation only; NOT_IMPLEMENTED / NOT_TESTED.
