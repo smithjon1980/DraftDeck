@@ -1,0 +1,41 @@
+---
+name: market-demand-screen
+description: Candidate market demand screening procedure abstracted independently from a user-supplied Ukrainian translation of Alex Hormozi's $100M Offers.
+version: 0.1.0-candidate
+source_ids: [HORMOZI-100M-OFFERS-2021-UK-001]
+operational_phase_tags: [DISCOVERY]
+enforcement_tags: [G1]
+trust_class: UNVERIFIED_COMMERCIAL_METHOD
+qualification_status: SPECIFIED_CANDIDATE
+test_status: NOT_TESTED
+authority_scope: RESEARCH_ONLY
+evidence_refs: []
+---
+
+# Market Demand Screening
+
+## Goal
+Find a demonstrably reachable buyer segment experiencing an urgent problem.
+
+## Proof
+Offer only where demand signals, buyer access, ability to pay and identifiable need have evidence.
+
+## Steps
+1. Survey: define buyer.
+2. gather dated buyer signals and alternative offers.
+3. separate willingness to pay from actual orders.
+4. reject unsupported market rankings.
+5. register a testable segment hypothesis..
+
+## Boundary
+Do not assume the most affluent or largest market is viable; if buyer evidence missing, HOLD.
+
+## Inputs and outputs
+Input: documented business context, source-bound discovery notes, and authorized scope.
+Output: an independently authored candidate workpaper with source references, assumptions and unresolved items.
+
+## Source location
+pages 29–37; HORMOZI-100M-OFFERS-2021-UK-001. Source content is an author's commercial methodology, **not** independently verified BOSS evidence. The operational procedure here is an original BOSS adaptation, not reproduced book text.
+
+## Falsification specimen
+A proposal containing a material unproven commercial claim, missing necessary operand, or unauthorized execution attempt must be flagged HOLD / NOT_ESTABLISHED rather than promoted to an approved deliverable.
