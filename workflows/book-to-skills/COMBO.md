@@ -4,9 +4,11 @@ Status: SPECIFIED_CANDIDATE / NOT_TESTED
 ## Routing map
 ```text
 SOURCE RECEIVED
-  ↓ source integrity / rights / readable content
+  ↓ fingerprint + identity claim
 SOURCE MANIFEST (PENDING AUTHENTICATION)
-  ↓ preserve page/line/time anchors
+  ↓ content congruence inspection: opening / middle / ending / visuals
+CONTENT_GATE PASS? — NO → HOLD / QUARANTINE / NO EXTRACTION
+  ↓ YES: preserve page/line/time anchors
 ATOMIC SKILL EXTRACTION
   ↓ unique responsibilities and falsification conditions
 SKILL.md + references.md (one per skill)
@@ -23,7 +25,7 @@ HUMAN REVIEW → CANDIDATE ARTIFACTS
 - Inspect → Review: candidate inventory, gaps, claims requiring verification; no automated promotion.
 
 ## Rejection and rollback
-If source is unverified, continue in research-only mode, not governing L0. If source text is incomplete, use HOLD for affected skills. If instructions conflict, preserve both with contradiction record and request authoritative resolution before implementation. Never overwrite a separately authored skill by name collision.
+If source is coherent but not authenticated, continue in research-only mode, not governing L0. If claimed authorship and actual content are incongruent, immediately reject extraction and quarantine the source identification. If source text is incomplete, use HOLD for affected skills. If instructions conflict, preserve both with contradiction record and request authoritative resolution before implementation. Never overwrite a separately authored skill by name collision.
 
 ## Acceptance criteria
-Every skill has Goal/Proof/Steps/Boundary and explicit trust/status. Every COMBO step targets an existing declared skill. Every nontrivial extracted claim has a source anchor or DESIGN_INFERENCE label. No production release or GitHub mutation is implied by chat activation.
+Only CONTENT_GATE PASS documents proceed to extraction. Every skill has Goal/Proof/Steps/Boundary and explicit trust/status. Every COMBO step targets an existing declared skill. Every nontrivial extracted claim has a source anchor or DESIGN_INFERENCE label. No production release or GitHub mutation is implied by chat activation.
