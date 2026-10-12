@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "runtime_enforcement",
+    "skills"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "social-interface-candidate-v1"
+    },
+    "status": {
+      "const": "SPECIFIED_CANDIDATE"
+    },
+    "runtime_enforcement": {
+      "const": "NOT_IMPLEMENTED"
+    },
+    "skills": {
+      "type": "array",
+      "minItems": 26,
+      "maxItems": 26,
+      "items": {
+        "type": "object",
+        "required": [
+          "skill_id",
+          "path",
+          "human_dependency",
+          "agent_deliverable",
+          "correction_vector",
+          "qualification_status",
+          "test_status",
+          "execution_authority"
+        ],
+        "properties": {
+          "skill_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "human_dependency": {
+            "type": "string",
+            "minLength": 1
+          },
+          "agent_deliverable": {
+            "type": "string",
+            "minLength": 1
+          },
+          "correction_vector": {
+            "type": "string",
+            "minLength": 1
+          },
+          "qualification_status": {
+            "const": "SPECIFIED_CANDIDATE"
+          },
+          "test_status": {
+            "const": "NOT_TESTED"
+          },
+          "execution_authority": {
+            "const": "NONE"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

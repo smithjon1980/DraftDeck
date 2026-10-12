@@ -9,6 +9,9 @@ qualification_status: SPECIFIED_CANDIDATE
 test_status: NOT_TESTED
 authority_scope: RESEARCH_ONLY
 evidence_refs: []
+human_dependency: "<human context and authorization>"
+agent_deliverable: "<reviewable human-readable output>"
+correction_vector: "<authenticated correction, HUMAN_OVERRIDE, cache invalidation, new L1 digest and HOLD>"
 ---
 
 # <Skill Name>

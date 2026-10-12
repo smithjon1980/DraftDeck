@@ -1,0 +1,268 @@
+{
+  "schema_version": "social-interface-candidate-v1",
+  "status": "SPECIFIED_CANDIDATE",
+  "runtime_enforcement": "NOT_IMPLEMENTED",
+  "seam_B01": "SUPERVISORY_PROPOSAL_UNAUTHENTICATED",
+  "skills": [
+    {
+      "skill_id": "bottleneck-priority-review",
+      "path": "skills/bottleneck-priority-review/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "business-stage-evidence-classifier",
+      "path": "skills/business-stage-evidence-classifier/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "cash-payback-stress-screen",
+      "path": "skills/cash-payback-stress-screen/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "channel-experiment-ladder",
+      "path": "skills/channel-experiment-ladder/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "continuity-promise-liability",
+      "path": "skills/continuity-promise-liability/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "customer-unit-economics-ledger",
+      "path": "skills/customer-unit-economics-ledger/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "ethical-risk-reversal",
+      "path": "skills/ethical-risk-reversal/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "first-free-to-paid-proof",
+      "path": "skills/first-free-to-paid-proof/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "framework-evolution-lineage",
+      "path": "skills/framework-evolution-lineage/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "honest-offer-presentation",
+      "path": "skills/honest-offer-presentation/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "human-agent-correspondence",
+      "path": "skills/human-agent-correspondence/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "ideal-customer-fit-review",
+      "path": "skills/ideal-customer-fit-review/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "lead-stage-definition",
+      "path": "skills/lead-stage-definition/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "market-demand-screen",
+      "path": "skills/market-demand-screen/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "offer-fulfillment-tradeoff",
+      "path": "skills/offer-fulfillment-tradeoff/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "offer-scope-package",
+      "path": "skills/offer-scope-package/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "offer-sequence-eligibility",
+      "path": "skills/offer-sequence-eligibility/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "owner-operator-role-boundary",
+      "path": "skills/owner-operator-role-boundary/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "owner-to-trainer-handoff",
+      "path": "skills/owner-to-trainer-handoff/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "problem-solution-map",
+      "path": "skills/problem-solution-map/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "progressive-scale-portability",
+      "path": "skills/progressive-scale-portability/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "promotion-mode-suitability",
+      "path": "skills/promotion-mode-suitability/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "single-channel-demand-stabilization",
+      "path": "skills/single-channel-demand-stabilization/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "stage-transition-readiness",
+      "path": "skills/stage-transition-readiness/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "value-equation-assessment",
+      "path": "skills/value-equation-assessment/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    },
+    {
+      "skill_id": "visual-sketch-to-skill",
+      "path": "skills/visual-sketch-to-skill/SKILL.md",
+      "human_dependency": "Required human-provided context and authorization detailed in this SKILL.md",
+      "agent_deliverable": "Required human-readable evidence workpaper and review diff detailed in this SKILL.md",
+      "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE"
+    }
+  ]
+}
