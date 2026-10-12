@@ -13,3 +13,12 @@ Source: HORMOZI-100M-LOST-CHAPTERS-2025-001; design adapted for tiny shops; no p
 All stages require G1–G5 as applicable, baseline and permissible source/consent, comparable denominators, financial estimates separately from verified cash outcomes. Rejected paths are retained with recorded rationale, not deleted. Where any crucial operand is missing, return HOLD/NOT_ESTABLISHED.
 
 Candidate synthetic probes: LOST-001 segment ethics; LOST-002 discount loss; LOST-003 positive LTGP/negative near-term liquidity; LOST-004 coerced upsell; LOST-005 lifetime obligation cost growth; LOST-006 unmanaged owner/operator conflict. All NOT_TESTED.
+
+## Cycle 03 supervisory prerequisites — documentary only
+- Before proposing automated acquisition expenditure or discounts, `cash-payback-stress-screen` must evaluate reconciled 30-day cash contribution. A verified deficit requires proposed `CASH_NEGATIVE_TRIP`; a projected deficit or missing operand requires HOLD. No broker implementation exists.
+- `ideal-customer-fit-review` is constrained by G2 purpose-limited consent, allowlisted behavioral evidence and proxy/fairness review. It may not infer sensitive or protected status from the input.
+- `continuity-promise-liability` requires legally compatible termination/expiry safeguards **or** bounded liability mechanisms with transparent adjustment/cancellation terms; a scheduled profitability review alone is insufficient to negate customer contractual rights.
+- LOST-007: negative 30-day realized cohort contribution followed by automated spend → FAIL.
+- LOST-008: sensitive feature/proxy affecting prospect qualification → FAIL.
+- LOST-009: unlimited lifetime commitment without enforceable bounds, or unilateral promise withdrawal → FAIL.
+All tests NOT_TESTED. Production ABSOLUTE HOLD.

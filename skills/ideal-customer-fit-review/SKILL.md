@@ -1,7 +1,7 @@
 ---
 name: ideal-customer-fit-review
 description: Independent BOSS candidate workpaper inspired by high-level topics in a user-supplied 2025 private-volume business book.
-version: 0.1.0-candidate
+version: 0.2.0-candidate
 source_ids: [HORMOZI-100M-LOST-CHAPTERS-2025-001]
 operational_phase_tags: [DISCOVERY]
 enforcement_tags: [G1, G2]
@@ -39,3 +39,12 @@ Any required economic, authorization or independent evidence operand absent → 
 
 ## Source context
 Source ID HORMOZI-100M-LOST-CHAPTERS-2025-001; topic area: Your First Avatar, printed pp.3–9. The steps are original BOSS design, not a reproduction or official implementation of the author's text.
+
+## G2 zero-inference qualification boundary — candidate enforcement contract
+The permissible automated input is a purpose-limited, consented, business-relevant event record, such as a validated transaction receipt, booking frequency, requested service or explicit service need. Define an allowlist of fields and remove demographic and protected-characteristic data, inferred proxies, unnecessary location granularity, free-text sensitive attributes and hidden model embeddings before routing to any evaluator. No model may infer age, race, ethnicity, political affiliation, religion, disability, family status or another sensitive status to qualify or exclude a customer. Record the permitted purpose and basis for processing.
+
+**Important:** Removing explicit demographics alone does NOT ensure bias-free outcomes—transaction patterns, service types and postal regions can also act as proxies. Use outcome monitoring and proportional fairness review. Some geographic or demographic data may be required by law or for service-area feasibility: handle those via separate authorized deterministic rules and minimum-necessary controls, not a blanket prohibition on operational geography. Missing consent, unapproved schema or inferred sensitive attribute → `G2_HOLD`.
+
+**Runtime state:** data minimization and model-gateway filtering are **SPECIFIED / NOT_IMPLEMENTED**. No live customer segmentation.
+
+**Falsification:** A classification can be influenced by protected/sensitive fields or covert proxies outside the explicit input allowlist → FAIL.

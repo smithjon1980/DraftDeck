@@ -1,10 +1,10 @@
 ---
 name: continuity-promise-liability
 description: Independent BOSS candidate workpaper inspired by high-level topics in a user-supplied 2025 private-volume business book.
-version: 0.1.0-candidate
+version: 0.2.0-candidate
 source_ids: [HORMOZI-100M-LOST-CHAPTERS-2025-001]
 operational_phase_tags: [EVALUATION]
-enforcement_tags: [G2, G5]
+enforcement_tags: [G2, G5, SEAM-D01]
 trust_class: RESTRICTED_SOURCE_RESEARCH
 qualification_status: SPECIFIED_CANDIDATE
 test_status: NOT_TESTED
@@ -39,3 +39,12 @@ Any required economic, authorization or independent evidence operand absent → 
 
 ## Source context
 Source ID HORMOZI-100M-LOST-CHAPTERS-2025-001; topic area: Section C, printed pp.109–128. The steps are original BOSS design, not a reproduction or official implementation of the author's text.
+
+## Continuity liability boundary — candidate enforcement contract
+Every recurring, prepaid, discounted or lifetime offer must state transparent renewal terms, bounded financial exposure, the authorized termination/cancellation pathway, refund/service-remedy rights and review cadence. A design must select at least one enforceable protective mechanism appropriate to the actual promise: a defined expiration or price-protection term; a clearly disclosed lawful break/termination clause; or an approved scheduled profitability review paired with a contractual adjustment/cancellation mechanism that respects customer rights. A *profitability review alone* cannot rewrite an irrevocable lifetime entitlement.
+
+Before external routing, run the `offer-fulfillment-tradeoff` economics screen using cost inflation, utilization, churn, support load and adverse scenario; verify scope and material change disclosures. Absent valid exit/renewal controls or financially supportable lifetime reserves, output `CONTINUITY_LIABILITY_HOLD` and refuse an automated offer recommendation.
+
+**Runtime state:** broker rejection and scheduled review actions remain **NOT_IMPLEMENTED / NOT_TESTED**; this is a candidate skill requirement.
+
+**Falsification:** A customer-facing lifetime entitlement is deployed without reserve modeling or enforceable contractual safeguards; or an operator changes customer terms unilaterally based on internal profitability → FAIL.
