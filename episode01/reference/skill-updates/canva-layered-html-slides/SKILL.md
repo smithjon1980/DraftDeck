@@ -84,7 +84,7 @@ Evaluate each actual render using a comparison matrix: source/story corresponden
 - Distinguish import/layer inspection, visual review, and the user's hands-on edit test.
 - No PowerPoint dependency or per-slide reconstruction service is required by this workflow. Do not promise zero cost; connected services may have quotas or charges.
 
-Read [the verified pipeline record](references/verified-pipeline.md) for the successful AI Pilot run and known limits. Use its evidence as a baseline, not as permission to reuse stale paths, transactions or signed preview URLs.
+Read [the verified pipeline record](references/verified-pipeline.md) for the previously verified capability execution and known limits. Use its evidence as a baseline, not as permission to reuse stale paths, transactions or signed preview URLs.
 
 ## Cross-format verification
 
