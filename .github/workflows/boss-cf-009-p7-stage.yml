@@ -1,0 +1,85 @@
+name: BOSS CF-009 P7 Stage Verified P6 Runtime
+on:
+  push:
+    branches: [boss-cf-009-p7-vercel-preview]
+    paths: ['.github/workflows/boss-cf-009-p7-stage.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  stage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Retrieve existing verified P3 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: boss-cf-009-p3-vtracer-offline-bundle
+          run-id: 38205817234
+          github-token: ${{ github.token }}
+          path: /tmp/boss-p3
+      - name: Verify P3 ZIP and stage exact P6 runtime files
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib, pathlib, zipfile
+          outer=pathlib.Path('/tmp/boss-p3/vtracer_offline_bundle.zip')
+          if not outer.exists():
+              raise RuntimeError('Missing inner P3 ZIP; artifact transport failed')
+          expected='a1d89949587e2d3aa11e4fc09b15e1705c99ca710243503e0f5c510dc4107d3a'
+          assert hashlib.sha256(outer.read_bytes()).hexdigest()==expected, 'P3 ZIP hash mismatch'
+          expected_files={
+             'node_modules/@visioncortex/vtracer/index.js':'efd6b937a73acc53705ec04fc8a8a0cddeb10fc3503018640587bf2377cb050f',
+             'node_modules/@visioncortex/vtracer/pkg/vtracer_wasm.js':'e1855e9bb29d785344f672abdc692ca90ffa7ed863b9186b51c4e95a2a7dc17d',
+             'node_modules/@visioncortex/vtracer/pkg/vtracer_wasm_bg.wasm':'63716b70497b7468ef97545b50f5f34b8bbb7acde2d7b00deb4eb40781446d45',
+             'test_shape.png':'e2fced54d21303aa208aebd862ea3dda03982c7b51aad836d16045f7d940177c',
+          }
+          root=pathlib.Path('vtracer-bundle')
+          with zipfile.ZipFile(outer) as z:
+              names=z.namelist()
+              for name,sha in expected_files.items():
+                  matches=[x for x in names if x==name or x.endswith('/'+name)]
+                  if len(matches)!=1: raise RuntimeError(f'File mapping ambiguous/missing: {name}: {matches}')
+                  contents=z.read(matches[0])
+                  if hashlib.sha256(contents).hexdigest()!=sha: raise RuntimeError(f'P6 runtime hash mismatch: {name}')
+                  path=root/name
+                  path.parent.mkdir(parents=True,exist_ok=True)
+                  path.write_bytes(contents)
+                  print(name,len(contents),sha)
+          PY
+      - name: Verify VTracer executes offline without package installation
+        shell: bash
+        run: |
+          set -euo pipefail
+          node - <<'JS'
+          const fs=require('node:fs');
+          const crypto=require('node:crypto');
+          const vendor=require('./vtracer-bundle/node_modules/@visioncortex/vtracer/index.js');
+          const input=fs.readFileSync('./vtracer-bundle/test_shape.png');
+          const output=vendor.convertBuffer(input,{preset:'poster'});
+          const svg=typeof output==='string'?output:Buffer.from(output).toString('utf8');
+          const sha=crypto.createHash('sha256').update(svg,'utf8').digest('hex');
+          if(!svg.includes('<svg')||!svg.includes('</svg>')||sha!=='04859fc64b2ad845a266c15c8850d3206c3082f0e557193a2eec5da7e0d906ae') throw new Error('SVG output deviates from P6');
+          console.log(JSON.stringify({status:'PASS',svg_bytes:Buffer.byteLength(svg),sha256:sha}));
+          JS
+      - name: Commit verified P6 runtime only to feature branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f vtracer-bundle/node_modules/@visioncortex/vtracer/index.js
+          git add -f vtracer-bundle/node_modules/@visioncortex/vtracer/pkg/vtracer_wasm.js
+          git add -f vtracer-bundle/node_modules/@visioncortex/vtracer/pkg/vtracer_wasm_bg.wasm
+          git add -f vtracer-bundle/test_shape.png
+          git diff --cached --quiet || { git commit -m 'build: stage hash-verified P6 VTracer runtime [skip ci]'; git push origin HEAD:boss-cf-009-p7-vercel-preview; }
