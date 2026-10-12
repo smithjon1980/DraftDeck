@@ -1,7 +1,7 @@
 ---
 name: lead-stage-definition
 description: Research-only BOSS adaptation of sketches in Alex Hormozi's $100M Journal.
-version: 0.1.0-candidate
+version: 0.2.0-candidate
 source_ids: [HORMOZI-100M-JOURNAL-2023-001]
 operational_phase_tags: [DISCOVERY]
 enforcement_tags: [G1]
@@ -39,3 +39,10 @@ HORMOZI-100M-JOURNAL-2023-001; journal pp. 67–78 and pp. 125–131 (qualificat
 
 ## Falsification
 A proposed capability with ungrounded labels, missing denominators, unsupported profit claims or omitted authority boundaries is rejected/HOLD instead of promoted.
+
+## Mandatory authoritative transition contract
+For the proposed small-office prototype, PocketBase is the **selected candidate Authoritative State Service**, not yet a verified running production state service. A state transition from `ENGAGED_PROSPECT` to `QUALIFIED_LEAD` requires a deterministic eligible event (e.g., verified intake-form submission or a booking receipt), stable `event_id`, `idempotency_key`, `source_id`, `actor_id`, `from_state`, `to_state`, `event_time`, `receipt_digest`, `qualification_rule_version`, and an explicit authorization decision. Events must be authenticated and validated against the declared rule; mere existence of a form submission does not prove suitability, consent or a sale.
+
+An LLM-generated sentiment score, classifier label or persuasive message is NEVER sufficient to advance the authoritative stage. PocketBase persistence must not be considered an independent cryptographic receipt merely because an event row exists. Conflicting replay or duplicate keys are refused or routed to reconciliation; uncertain side effects follow `UNCERTAIN → REQUIRES_RECONCILIATION`, never blind retry.
+
+**Current status:** schema requirement only; PocketBase transaction hooks, atomic idempotency and independent evidence sink remain **NOT_IMPLEMENTED / NOT_TESTED**. No live customer identities or automated funnel execution are authorized.

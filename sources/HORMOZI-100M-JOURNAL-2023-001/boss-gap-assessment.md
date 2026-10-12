@@ -24,3 +24,6 @@ All NOT_TESTED. No business success, ROI or causal claim is verified by diagrams
 
 ## Avoid duplicates
 Prior *$100M Offers* skills cover market-screening, value perception, problems/solutions, offer packaging, guarantees and presentation. This journal supplements those with version lineage, service economics, lead-state accounting, channel experiments and diagram parsing. No previous skill overwritten.
+
+## Zone C supervisory review of Cycle 02
+Directive received: extraction accepted; add (1) rejected-hypothesis and superseded-candidate state with linked L0–L3 digest provenance; (2) Automation Suitability Gate and VALUE margin screening prior to any public offer presentation; (3) PocketBase candidate Authoritative State Service with deterministic, idempotent lead transitions. These are **BOSS-added control requirements**, not claims that Hormozi's journal prescribes PocketBase or BOSS runtime gates. Documentation now specifies them; runtime enforcement remains NOT_IMPLEMENTED / NOT_TESTED. The uploaded SHA identifies source bytes, but authentication of admission remains a separate human action.

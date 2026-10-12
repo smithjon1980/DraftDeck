@@ -23,3 +23,6 @@ OFFER-003: expensive solution bundled despite negative cost-benefit => REJECT.
 OFFER-004: impossible guarantee or false scarcity => REFUSE publication.
 OFFER-005: composite step lacks source or output contract => HOLD.
 All NOT_TESTED.
+
+## Cycle 02 supervisory prerequisite (candidate, not executed)
+Before Step 6, execute a design-only review through `skills/offer-fulfillment-tradeoff`; an unprofitable or unknown fulfillment result blocks *authorization to publish or route* an offer. An exploratory presentation draft must stay internal and labeled UNAPPROVED. No broker trip or public routing integration has been implemented.
