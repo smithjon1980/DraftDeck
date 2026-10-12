@@ -1,0 +1,115 @@
+name: BOSS-CF-009-P3 VTracer Offline Bundle Builder
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Initialize Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Acquire official distribution and inspect
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p vtracer-bundle
+          cd vtracer-bundle
+          npm init -y
+          npm install --save-exact --ignore-scripts @visioncortex/vtracer@1.0.0-alpha.4
+          npm ls --all > dependency-tree.txt
+          find node_modules/@visioncortex/vtracer -type f -print | sort > vendor-file-inventory.txt
+          find node_modules -type f \( -name '*.wasm' -o -name '*.node' \) -print | sort > binary-inventory.txt
+          node -e "const p=require('./node_modules/@visioncortex/vtracer/package.json'); console.log(JSON.stringify({name:p.name,version:p.version,main:p.main,exports:p.exports,dependencies:p.dependencies},null,2))" > vendor-package-metadata.json
+          cat vendor-file-inventory.txt
+          cat binary-inventory.txt
+
+      - name: Generate deterministic 100px PNG and offline runner
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd vtracer-bundle
+          python3 - <<'PY'
+          import struct, zlib
+          def chunk(tag,data):
+              return struct.pack('>I',len(data))+tag+data+struct.pack('>I',zlib.crc32(tag+data)&0xffffffff)
+          w=h=100
+          scanlines=b''.join(b'\x00'+b''.join(bytes((0,0,0)) if 20<=x<80 and 20<=y<80 else bytes((255,255,255)) for x in range(w)) for y in range(h))
+          png=b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>2I5B',w,h,8,2,0,0,0))+chunk(b'IDAT',zlib.compress(scanlines,9))+chunk(b'IEND',b'')
+          open('test_shape.png','wb').write(png)
+          PY
+          cat > runner.js <<'JS'
+          'use strict';
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const crypto = require('node:crypto');
+          const vendor = require(path.join(__dirname, 'node_modules', '@visioncortex', 'vtracer'));
+          const input = fs.readFileSync(path.join(__dirname,'test_shape.png'));
+          const start = process.hrtime.bigint();
+          const svg = vendor.convertBuffer(input, { preset: 'poster' });
+          const elapsedMs = Number(process.hrtime.bigint() - start)/1e6;
+          const result = typeof svg === 'string' ? svg : Buffer.from(svg).toString('utf8');
+          if (!result.includes('<svg') || !result.includes('</svg>')) throw new Error('Invalid SVG result');
+          fs.writeFileSync(path.join(__dirname,'output_artifact.svg'), result, 'utf8');
+          const receipt = {
+            status:'EXECUTED',
+            node:process.version,
+            source_sha256:crypto.createHash('sha256').update(input).digest('hex'),
+            output_sha256:crypto.createHash('sha256').update(result).digest('hex'),
+            svg_bytes:Buffer.byteLength(result),
+            svg_paths:(result.match(/<path\b/g)||[]).length,
+            elapsed_ms:elapsedMs
+          };
+          fs.writeFileSync(path.join(__dirname,'execution_receipt.json'),JSON.stringify(receipt,null,2)+'\n');
+          console.log(JSON.stringify(receipt,null,2));
+          JS
+
+      - name: Verify execution without package manager or network
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/boss-cf-009-offline
+          cp -a vtracer-bundle/node_modules vtracer-bundle/runner.js vtracer-bundle/test_shape.png /tmp/boss-cf-009-offline/
+          cd /tmp/boss-cf-009-offline
+          npm_config_offline=true NODE_OPTIONS= node runner.js | tee offline-execution.log
+          python3 - <<'PY'
+          import json, pathlib, xml.etree.ElementTree as ET
+          r=json.loads(pathlib.Path('execution_receipt.json').read_text())
+          assert r['status']=='EXECUTED' and r['svg_bytes']>0
+          ET.parse('output_artifact.svg')
+          print('PASS: Valid SVG and execution receipt')
+          PY
+          cp output_artifact.svg execution_receipt.json offline-execution.log "${GITHUB_WORKSPACE}/vtracer-bundle/"
+
+      - name: Build self-contained bundle and hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib, json, pathlib, zipfile
+          root=pathlib.Path('vtracer-bundle')
+          keep=['node_modules','runner.js','test_shape.png','output_artifact.svg','execution_receipt.json','offline-execution.log','dependency-tree.txt','vendor-file-inventory.txt','binary-inventory.txt','vendor-package-metadata.json','package-lock.json']
+          files=sorted(p for item in keep for p in ([root/item] if (root/item).is_file() else (root/item).rglob('*')) if p.is_file())
+          manifest={'status':'OFFLINE_EXECUTION_VERIFIED','files':{p.relative_to(root).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files}}
+          (root/'sha256-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
+          with zipfile.ZipFile('vtracer_offline_bundle.zip','w',compression=zipfile.ZIP_DEFLATED) as z:
+              for p in files+[root/'sha256-manifest.json']:
+                  z.write(p,p.relative_to(root).as_posix())
+          print('Packaged',len(files)+1,'files')
+          PY
+          sha256sum vtracer_offline_bundle.zip
+
+      - name: Upload verified bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: boss-cf-009-p3-vtracer-offline-bundle
+          path: vtracer_offline_bundle.zip
+          if-no-files-found: error
+          retention-days: 5
