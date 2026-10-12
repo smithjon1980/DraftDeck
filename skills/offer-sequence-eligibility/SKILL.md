@@ -49,3 +49,9 @@ Human dependency: Human provides context and authorization for Determine whether
 Agent deliverable: Human-readable offer-sequence-eligibility review workpaper with evidence, assumptions, alternatives, unresolved questions, proposed result and corrections diff.
 Correction: Authenticated human REJECT/correction: persist HUMAN_OVERRIDE with exact permitted correction, invalidate relevant semantic cache (SEAM-B01 proposed), append a new source-linked L1 derivative/digest, block stale active envelope until revalidation.
 If operation exceeds the explicitly approved Equivalence Set or financial limit, require `ZONE_C_ESCALATION_REQUIRED` and prevent dispatch. No runtime implementation or probe qualification is claimed.
+
+## Three-Quadrant Conformity (Candidate)
+A: Human entitlement and competence NOT_ESTABLISHED; agent is DESIGN_ASSISTANT_ONLY; this versioned skill and authorized tools must be matched at workflow assignment. Existing human_dependency, agent_deliverable, correction_vector remain mandatory.
+B: Compare manual/no-change, SCRIPT, PROGRAM, NARROW_AI, GENERAL_AI before selecting minimum sufficient method; record cost and rejected alternatives. Selected class NOT_ESTABLISHED until scoped.
+C: SOP CANDIDATE; KPI metric, baseline, denominator and window NOT_ESTABLISHED; OKR optional; CAPA requires discrepancy, correction authority and retest evidence.
+No absent evidence or authority may be inferred. HOLD on missing operands. NOT_TESTED; no production permission.
