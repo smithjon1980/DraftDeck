@@ -521,3 +521,16 @@ defines when delivery is established
 ```
 
 > **The doctrine stack should be readable as one system, not sixteen unrelated documents.**
+
+---
+
+## Environment Qualification Contract — Candidate Specialization
+
+- **File:** `environment-qualification-contract.md`
+- **Placement:** Subordinate to `bounded-autonomy-execution-envelope.md`, cross-referenced by the PRIME Control Plane, Orchestration, Shipping Label, and Evidence & Verification doctrines.
+- **Question:** How is an execution environment's suitability for a specific bounded package established with inspectable evidence?
+- **Status:** Candidate, pending governed review; not independently ratified as new constitutional doctrine.
+- **Invariant:** The Execution Envelope declares necessary limits; qualification tests whether a particular environment satisfies them; an execution receipt records observed outcomes; release remains separately authorized.
+
+When auditing unattended execution or choosing a runtime, read `bounded-autonomy-execution-envelope.md` first, followed by `environment-qualification-contract.md`. This addition preserves the existing PARCELS ownership and does not introduce another layer.
+
