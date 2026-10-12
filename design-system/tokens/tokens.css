@@ -1,0 +1,52 @@
+/* BOSS / DraftDeck design tokens — canonical named choices.
+   Implements doctrine/composition-standard.md and
+   design-system/editorial-components.md (Foundations).
+   Usage rule: reference var(--boss-*); never restate raw values. */
+
+:root {
+  /* Color — core profile: pure white ground, no alternates */
+  --boss-color-ground: #FFFFFF;
+  --boss-color-ink: #20252A;
+  --boss-color-accent: #B34700;        /* active / unresolved / alert cues; meaning never carried by color alone */
+  --boss-color-rail: #B9BFC4;          /* hairlines, separators */
+  --boss-color-muted: #697177;         /* reading guides, secondary metadata */
+  --boss-color-grid: #DEDEDE;          /* drafting substrate */
+
+  /* Typography roles */
+  --boss-font-display: "Arial", "Helvetica", sans-serif;   /* display headings, heavy weight */
+  --boss-font-reading: "Arial", "Helvetica", sans-serif;   /* narrative body */
+  --boss-font-label: "Courier New", monospace;             /* operational labels, fields, code */
+
+  --boss-text-display: 2.75rem;   /* 44px slide titles */
+  --boss-text-lead: 1.375rem;     /* 22px leads */
+  --boss-text-body: 1.125rem;     /* 18px teaching body */
+  --boss-text-small: 0.9375rem;   /* 15px reference entries */
+  --boss-text-label: 0.8125rem;   /* 13px operational labels */
+  --boss-leading-body: 1.3;
+  --boss-leading-tight: 1.15;
+
+  /* Spacing scale (8px base; approved steps) */
+  --boss-space-1: 0.5rem;   /* 8 */
+  --boss-space-2: 1rem;     /* 16 */
+  --boss-space-3: 1.5rem;   /* 24 */
+  --boss-space-4: 2rem;     /* 32 */
+  --boss-space-5: 3rem;     /* 48 */
+  --boss-space-6: 4rem;     /* 64 */
+
+  /* Stroke hierarchy (composition standard) */
+  --boss-stroke-frame: 3px;       /* outer frames, major dividers (1.0pt class) */
+  --boss-stroke-control: 1.5px;   /* controls, connector housings (0.5pt class) */
+  --boss-stroke-detail: 0.75px;   /* grid, hatch, detail (0.25pt class) */
+
+  /* Canvas */
+  --boss-canvas-w: 1632px;   /* 17 x 11 in landscape at 96dpi */
+  --boss-canvas-h: 1056px;
+
+  /* Breakpoint: below this the fixed slide canvas reflows to a
+     single-column lesson layout (WCAG 2.2 reflow support) */
+  --boss-break-reflow: 1100px;
+
+  /* Focus */
+  --boss-focus-ring: 3px solid var(--boss-color-accent);
+  --boss-focus-offset: 2px;
+}

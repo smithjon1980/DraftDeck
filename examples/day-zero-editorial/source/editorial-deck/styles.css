@@ -1,0 +1,153 @@
+/* BOSS / DraftDeck design tokens — canonical named choices.
+   Implements doctrine/composition-standard.md and
+   design-system/editorial-components.md (Foundations).
+   Usage rule: reference var(--boss-*); never restate raw values. */
+
+:root {
+  /* Color — core profile: pure white ground, no alternates */
+  --boss-color-ground: #FFFFFF;
+  --boss-color-ink: #20252A;
+  --boss-color-accent: #B34700;        /* active / unresolved / alert cues; meaning never carried by color alone */
+  --boss-color-rail: #B9BFC4;          /* hairlines, separators */
+  --boss-color-muted: #697177;         /* reading guides, secondary metadata */
+  --boss-color-grid: #DEDEDE;          /* drafting substrate */
+
+  /* Typography roles */
+  --boss-font-display: "Arial", "Helvetica", sans-serif;   /* display headings, heavy weight */
+  --boss-font-reading: "Arial", "Helvetica", sans-serif;   /* narrative body */
+  --boss-font-label: "Courier New", monospace;             /* operational labels, fields, code */
+
+  --boss-text-display: 2.75rem;   /* 44px slide titles */
+  --boss-text-lead: 1.375rem;     /* 22px leads */
+  --boss-text-body: 1.125rem;     /* 18px teaching body */
+  --boss-text-small: 0.9375rem;   /* 15px reference entries */
+  --boss-text-label: 0.8125rem;   /* 13px operational labels */
+  --boss-leading-body: 1.3;
+  --boss-leading-tight: 1.15;
+
+  /* Spacing scale (8px base; approved steps) */
+  --boss-space-1: 0.5rem;   /* 8 */
+  --boss-space-2: 1rem;     /* 16 */
+  --boss-space-3: 1.5rem;   /* 24 */
+  --boss-space-4: 2rem;     /* 32 */
+  --boss-space-5: 3rem;     /* 48 */
+  --boss-space-6: 4rem;     /* 64 */
+
+  /* Stroke hierarchy (composition standard) */
+  --boss-stroke-frame: 3px;       /* outer frames, major dividers (1.0pt class) */
+  --boss-stroke-control: 1.5px;   /* controls, connector housings (0.5pt class) */
+  --boss-stroke-detail: 0.75px;   /* grid, hatch, detail (0.25pt class) */
+
+  /* Canvas */
+  --boss-canvas-w: 1632px;   /* 17 x 11 in landscape at 96dpi */
+  --boss-canvas-h: 1056px;
+
+  /* Breakpoint: below this the fixed slide canvas reflows to a
+     single-column lesson layout (WCAG 2.2 reflow support) */
+  --boss-break-reflow: 1100px;
+
+  /* Focus */
+  --boss-focus-ring: 3px solid var(--boss-color-accent);
+  --boss-focus-offset: 2px;
+}
+
+/* ---------- deck shell ---------- */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--boss-color-ground);color:var(--boss-color-ink);
+  font-family:var(--boss-font-reading);line-height:var(--boss-leading-body)}
+.slide{position:relative;width:var(--boss-canvas-w);height:var(--boss-canvas-h);
+  margin:0 auto var(--boss-space-4);background:var(--boss-color-ground);
+  overflow:hidden;break-after:page;border-top:var(--boss-stroke-control) solid var(--boss-color-ink)}
+.slide-head{position:absolute;left:var(--boss-space-5);top:var(--boss-space-4);right:var(--boss-space-5)}
+.kicker{font-family:var(--boss-font-label);font-size:var(--boss-text-label);letter-spacing:.04em;
+  text-transform:uppercase;margin:0;padding-top:var(--boss-space-1);
+  border-top:var(--boss-stroke-control) solid var(--boss-color-ink)}
+.slide-index{position:absolute;right:0;top:var(--boss-space-1);margin:0;
+  font-family:var(--boss-font-label);font-size:var(--boss-text-label);text-transform:uppercase}
+.slide-title{font-family:var(--boss-font-display);font-weight:700;font-size:var(--boss-text-display);
+  line-height:var(--boss-leading-tight);margin:var(--boss-space-3) 0 var(--boss-space-2)}
+.lead{font-size:var(--boss-text-lead);margin:0;max-width:66em}
+.slide-body{position:absolute;left:var(--boss-space-5);right:var(--boss-space-5);top:260px;bottom:230px;
+  display:grid;gap:var(--boss-space-4)}
+.story{position:absolute;left:60px;top:265px;width:1512px;height:395px;margin:0}
+.story img{width:100%;height:100%;object-fit:contain}
+.block h2{font-size:var(--boss-text-lead);margin:0 0 var(--boss-space-1)}
+.block-kicker{display:block;font-family:var(--boss-font-label);font-size:var(--boss-text-small);
+  color:var(--boss-color-accent);text-transform:uppercase}
+.block p{font-size:var(--boss-text-body);margin:0}
+.block-ref h2{font-size:var(--boss-text-body)}
+.block-ref p{font-size:var(--boss-text-small)}
+.block-source .exact-source,.cmp-source blockquote{font-family:var(--boss-font-label);
+  font-size:var(--boss-text-body);margin:0;padding:var(--boss-space-2);
+  border-left:var(--boss-stroke-frame) solid var(--boss-color-ink);background:var(--boss-color-ground)}
+.slide-foot{position:absolute;left:var(--boss-space-5);right:var(--boss-space-5);bottom:var(--boss-space-3);
+  border-top:var(--boss-stroke-detail) solid var(--boss-color-rail);padding-top:var(--boss-space-1)}
+.prompt{font-size:var(--boss-text-body);margin:0}
+.nav{font-family:var(--boss-font-label);font-size:.75rem;color:var(--boss-color-muted);margin:var(--boss-space-1) 0 0}
+/* ---------- consulting visuals (one exhibit per teaching point) ---------- */
+.visual{margin:0}
+.visual svg{width:100%;height:auto;display:block}
+/* full-width band exhibits sit above the blocks */
+.visual-chevron,.visual-staircase{grid-column:1/-1}
+/* layout variants — one arrangement per teaching purpose */
+.layout-opener .slide-body{grid-template-columns:1fr 1fr;top:640px;bottom:200px}
+.layout-duo .slide-body,.layout-compare .slide-body,.layout-inspect .slide-body{grid-template-columns:1fr 1fr;grid-auto-rows:min-content}
+.layout-inspect .block:last-child{grid-column:1/-1}
+.layout-payload-flow .slide-body,.layout-steps .slide-body,.layout-recovery .slide-body{grid-template-columns:repeat(3,1fr);grid-auto-rows:min-content}
+.layout-quad .slide-body{grid-template-columns:1fr 1fr}
+.layout-case .slide-body,.layout-route .slide-body{grid-template-columns:1fr;grid-auto-rows:min-content;max-width:1100px}
+.layout-checkpoints .slide-body{grid-template-columns:1fr;max-width:1100px}
+.layout-reference-ten .slide-body{grid-template-columns:repeat(4,1fr);gap:var(--boss-space-3)}
+.layout-reference-seven .slide-body,.layout-checklist .slide-body{grid-template-columns:repeat(3,1fr);gap:var(--boss-space-3)}
+.layout-reference-ten .block-ref,.layout-reference-seven .block-ref,.layout-checklist .block-ref{
+  border-top:var(--boss-stroke-detail) solid var(--boss-color-rail);padding-top:var(--boss-space-1)}
+/* visual placement overrides (must follow the layout variants) */
+.layout-payload-flow .slide-body{grid-template-columns:1fr 640px}
+.layout-recovery .slide-body{grid-template-columns:1fr 520px}
+.layout-quad .slide-body{grid-template-columns:1fr 520px}
+.layout-route .slide-body{grid-template-columns:1fr 560px;max-width:none}
+.layout-map .slide-body{grid-template-columns:1fr 1fr;grid-auto-rows:min-content;max-width:none}
+.layout-checklist .slide-body{grid-template-columns:1fr 1fr 440px}
+.layout-payload-flow .visual,.layout-recovery .visual,.layout-quad .visual,.layout-route .visual{
+  grid-column:2;grid-row:1/span 10;align-self:start}
+.layout-checklist .visual{grid-column:3;grid-row:1/span 10;align-self:start}
+.layout-checklist .slide-body{gap:var(--boss-space-3)}
+.layout-checklist .block-ref p{font-size:var(--boss-text-small)}
+/* ---------- editorial components (ten distinct contracts) ---------- */
+.cmp{position:absolute;left:var(--boss-space-5);right:var(--boss-space-5);bottom:96px;
+  border-top:var(--boss-stroke-control) solid var(--boss-color-ink);padding-top:var(--boss-space-1)}
+.cmp h2{font-family:var(--boss-font-label);font-size:var(--boss-text-small);letter-spacing:.04em;
+  text-transform:uppercase;color:var(--boss-color-accent);margin:0 0 var(--boss-space-1)}
+.cmp h3{font-size:var(--boss-text-small);margin:0 0 var(--boss-space-1);text-transform:uppercase}
+.cmp p{margin:0;font-size:var(--boss-text-body)}
+.cmp-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--boss-space-4)}
+.cmp-pause .cmp-question{font-size:var(--boss-text-lead)}
+.cmp-fields{display:flex;gap:var(--boss-space-4);list-style:none;margin:0 0 var(--boss-space-1);padding:0}
+.cmp-fields code{font-family:var(--boss-font-label);font-size:var(--boss-text-body)}
+.cmp-note{font-size:var(--boss-text-small);color:var(--boss-color-muted)}
+.cmp-branches{list-style:none;margin:var(--boss-space-1) 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:var(--boss-space-3)}
+.cmp-branches li{border-left:var(--boss-stroke-frame) solid var(--boss-color-accent);padding-left:var(--boss-space-2)}
+.cmp-outcome{display:block}
+.cmp-record{list-style:none;margin:var(--boss-space-1) 0 0;padding:0}
+.record-line{border-bottom:var(--boss-stroke-detail) solid var(--boss-color-rail);height:var(--boss-space-4)}
+.cmp-evidence dl{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--boss-space-3);margin:0}
+.cmp-evidence dt{font-family:var(--boss-font-label);font-size:var(--boss-text-label);text-transform:uppercase}
+.cmp-evidence dd{margin:0;font-size:var(--boss-text-small)}
+.cmp-release .cmp-cols{grid-template-columns:1fr 1fr}
+.cmp-checkpoint{border:var(--boss-stroke-control) solid var(--boss-color-ink);padding:var(--boss-space-2)}
+a:focus-visible,.cmp:focus-visible{outline:var(--boss-focus-ring);outline-offset:var(--boss-focus-offset)}
+@page{size:17in 11in;margin:0}
+/* ---------- reflow: lesson layout below the declared breakpoint ---------- */
+@media (max-width:1100px){
+  .slide{width:auto;height:auto;overflow:visible;padding:var(--boss-space-3) var(--boss-space-2)}
+  .slide{overflow-wrap:anywhere}
+  .slide-title{font-size:clamp(1.75rem,5vw,var(--boss-text-display))}
+  .slide-index{position:static;text-align:right}
+  .cmp-fields{flex-wrap:wrap}
+  .slide-head,.slide-body,.cmp,.slide-foot,.story{position:static;width:auto;right:auto;left:auto}
+  .slide-body{display:block;margin:var(--boss-space-3) 0}
+  .block{margin-bottom:var(--boss-space-3)}
+  .cmp-cols,.cmp-release .cmp-cols,.cmp-evidence dl,.cmp-branches{grid-template-columns:1fr}
+  .story img{height:auto}
+  .visual svg{max-width:640px;margin:0 auto}
+}

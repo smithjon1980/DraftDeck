@@ -1,0 +1,2 @@
+# PDF object streams are binary assets, including ASCII85-encoded streams.
+*.pdf binary

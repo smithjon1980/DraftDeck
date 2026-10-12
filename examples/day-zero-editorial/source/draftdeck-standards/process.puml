@@ -1,0 +1,34 @@
+@startuml
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam defaultFontName DejaVu Sans
+skinparam ArrowColor #20252A
+skinparam activityBackgroundColor white
+skinparam activityBorderColor #20252A
+skinparam activityDiamondBackgroundColor white
+skinparam activityDiamondBorderColor #20252A
+|Sender|
+start
+:Define shared frame;
+:Transfer frame and source;
+|Executor|
+:Record arrival receipt;
+while (Required source readable?) is (no / unknown)
+:Pause dependent action;
+:Request or supply source within scope;
+endwhile (yes)
+:Run authorized inventory;
+:Return evidence; preserve missing values as UNKNOWN;
+|Reviewer|
+if (Named evidence checks passed?) then (yes)
+:Record VERIFIED and limitations;
+if (Release scope authorized?) then (yes)
+:Dispatch to authorized destination;
+else (no / unknown)
+:Hold release;
+endif
+else (no / unknown)
+:Hold for review;
+endif
+stop
+@enduml
