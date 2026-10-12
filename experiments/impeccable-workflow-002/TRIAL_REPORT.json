@@ -1,0 +1,13 @@
+{
+  "engine": "DraftDeck local smoke checks (not Impeccable)",
+  "status": "PASS",
+  "checks": 8,
+  "failed": 0,
+  "viewport_widths": [
+    1920,
+    390
+  ],
+  "impeccable_engine": "NOT_RUN",
+  "adapter_editability": "NOT_TESTED",
+  "visual_fidelity": "NOT_ESTABLISHED"
+}
