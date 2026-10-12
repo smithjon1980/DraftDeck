@@ -588,3 +588,18 @@ Per *Doctrine vs. External References*: the mechanics were studied; the doctrine
 > **As generative throughput increases, verification capacity must increase with it.**
 
 > **Automation that increases production throughput without increasing verification throughput creates governance debt.**
+
+---
+
+## Candidate Specialization — Runtime Qualification Evidence (BOSS-ARCH-BRANCH-001)
+
+A successful CI job demonstrates that the named job completed under its own criteria. It does **not** alone establish source authenticity, dependency suitability, offline portability, transcription accuracy, independent verification, or release permission.
+
+Environment qualification receipts must identify the package and attempt, source commit, runtime/image identity, architecture, dependency manifest, execution envelope and Shipping Label requirements, acquisition/build/test phases, observed resource limits, checksums, log/artifact locations, independent verifier, result, uncertainties, and explicit release status. Separate **ACQUIRED**, **BUILT**, **EXECUTED**, **TESTED**, **INDEPENDENTLY VERIFIED**, and **RELEASE AUTHORIZED** dispositions; never infer later stages from earlier ones.
+
+Measure both individual execution traces and governed outcomes over multiple packages: completion, retries, timeouts, blocked routes, environment mismatch, independent verification throughput, accepted delivery, resource utilization, and cost where relevant. Preserve denominators and distinguish operational telemetry from economic or learner outcomes.
+
+For BOSS-SOURCE-ACQ-001, GitHub Actions run `38239098210` supports a successful bounded public Whisper configuration transport test and uploaded artifact; it does not establish speech recognition. The subsequent Whisper CPU-bundle workflow requires its own evidence disposition. The governing [Environment Qualification Contract](environment-qualification-contract.md) is subordinate to existing Verification Profiles and release authority.
+
+**Invariant:** RUN SUCCESS ≠ CAPABILITY ADMISSION; VERIFIED TEST ≠ PRODUCTION RELEASE.
+
