@@ -786,3 +786,16 @@ The external stacks are treated as implementation references.
 This document is an original Prime Process synthesis.
 
 No named framework, database, template engine, or interaction library is granted canonical authority over the Prime domain.
+
+---
+
+## Candidate Specialization — Isolated Execution Workers (BOSS-ARCH-BRANCH-001)
+
+The existing operator-facing server-authoritative architecture governs decisions and transitions. For risky or resource-intensive workloads, introduce a replaceable **execution broker** behind domain interfaces that provisions task-appropriate workers as a separate **execution/data plane**. No named vendor, image engine, or orchestration system becomes doctrine.
+
+The control plane retains authoritative package state, policy checks, approval boundaries, and durable evidence pointers. Workers receive only envelope-scoped tasks and minimum-necessary cargo. A worker crash, timeout, or corruption must be recorded as an execution outcome—not silently erase or mutate authoritative control-plane state. State transitions must be idempotent or explicitly reconciled when retries occur.
+
+Privileged external operations must pass through a deterministic authorization boundary that validates actor, package, destination, action, and expiration before any credential is attached. Merely hiding a token behind a proxy does not establish safe delegation. Logs and task payloads must not carry reusable secrets.
+
+An execution broker must report environment identity, build and dependency revision, capabilities, runtime limits, task ID, and receipt location. Acceptance follows the [Environment Qualification Contract](environment-qualification-contract.md) and existing independent verification rules. This is a **candidate implementation specialization** of existing authority, not a replacement for the Prime control-plane reference stack.
+

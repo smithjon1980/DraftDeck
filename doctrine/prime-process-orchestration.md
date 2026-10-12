@@ -771,3 +771,18 @@ GitHub: https://github.com/affaan-m/ECC
 License: MIT
 
 This document is an original Prime Process doctrine synthesis. ECC terminology and implementation details are treated as reference material, not as DraftDeck's canonical ontology.
+
+---
+
+## Candidate Specialization — Jobs, Sessions, and Recovery (BOSS-ARCH-BRANCH-001)
+
+A **job** is a bounded execution attempt with a defined input, terminal outcome, and reproducible evidence; a rerun is a new attempt and must not silently inherit the prior attempt's authority. A **session** is an ongoing work relationship that may suspend, accept human feedback, and resume across different disposable runtime instances. The session's authoritative state must outlive any individual worker.
+
+When session continuity is required, preserve versioned checkpoints for files, task state, evidence pointers, and authorized pending actions. Resume must validate checkpoint identity, provenance, source revision, environment compatibility, elapsed authorization, and possible concurrent changes. A stale or incompatible checkpoint transitions to **HOLD / RECONCILE**; it must not be presented as successful uninterrupted execution.
+
+Treat the snapshot as evidence and restorable working material, not as an independent source of governing authority. Reconcile each resumed worker against the current package manifest and permission envelope. Retry and cancellation policies must be bounded, observable, and nonduplicating for consequential side effects.
+
+Environment construction is a supply-chain activity: define dependency manifests alongside source, pin source and package revisions when feasible, cache qualified builds without treating cache hits as proof, measure startup latency and drift, and prefer prebuilt compatible environments only when they satisfy the active envelope. See [Environment Qualification Contract](environment-qualification-contract.md).
+
+**Invariant:** JOB COMPLETED ≠ SESSION CONTINUITY ESTABLISHED; CHECKPOINT RESTORED ≠ AUTHORIZATION RENEWED.
+
