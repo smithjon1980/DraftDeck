@@ -368,3 +368,18 @@ This doctrine was sharpened by studying an external autonomous-execution tool ("
 > **MERGE ≠ RELEASE. CONSOLIDATED ≠ RELEASED.**
 
 > **Machine-to-machine delegation should prefer declared schemas over interpretive prose where reliable parsing matters.**
+
+---
+
+## Environment Qualification — Candidate Operational Specialization (BOSS-ARCH-BRANCH-001)
+
+The existing Execution Envelope remains the authoritative declaration of permitted autonomy, substrate, credentials, recovery, and verification conditions. **An envelope declaration is not proof of environment readiness.**
+
+Before unattended movement, the selected environment must have an independently inspectable qualification record that compares its observed capabilities with the package's declared requirements. Qualify the **specific package × environment × revision** combination, not merely a named platform or tool.
+
+Minimum assessment: substrate and architecture; executable and dependency versions; filesystem and network boundaries; credential exposure and authorization broker; compute/memory/time limits; tool, port, and optional GPU availability; artifact persistence; termination/recovery behavior; reproducible build provenance; and actual task-representative test results. Unobserved or incompatible requirements cause **HOLD**, reduced scope, or rerouting—not inferred capability.
+
+The subordinate [Environment Qualification Contract](environment-qualification-contract.md) prescribes evidence fields and acceptance criteria. It does not expand the permission granted by the Execution Envelope or Shipping Label. Credential injection and privileged calls must be enforced by a policy-controlled boundary external to untrusted execution, with destination/action scopes checked independently of agent instructions.
+
+**Invariant:** CAPABILITY DECLARED ≠ ENVIRONMENT QUALIFIED ≠ EXECUTION VERIFIED ≠ RELEASE AUTHORIZED.
+
