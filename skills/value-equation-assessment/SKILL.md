@@ -1,10 +1,10 @@
 ---
 name: value-equation-assessment
 description: Candidate value equation assessment procedure abstracted independently from a user-supplied Ukrainian translation of Alex Hormozi's $100M Offers.
-version: 0.1.0-candidate
+version: 0.2.0-candidate
 source_ids: [HORMOZI-100M-OFFERS-2021-UK-001]
 operational_phase_tags: [EVALUATION]
-enforcement_tags: [G5]
+enforcement_tags: [G1, G5]
 trust_class: UNVERIFIED_COMMERCIAL_METHOD
 qualification_status: SPECIFIED_CANDIDATE
 test_status: NOT_TESTED
@@ -25,7 +25,14 @@ Record desired outcome, perceived likelihood, expected delay and required effort
 2. score four perceptions qualitatively.
 3. identify high-friction factors.
 4. propose small experiments.
-5. compare changes with initial baseline..
+5. compare changes with initial baseline.
+
+## Foundry-aligned likelihood and time/effort evidence
+The source-derived **Value Equation** is a perceived-value heuristic, not an observed statistical law. The BOSS-adapted operational-likelihood field MUST reference the Capability Foundry Dual Evidence Profile (DEP), if admitted and available. A Lens B probe pass rate may be reported as `passes / eligible_trials` ONLY with declared test suite, version, environment, selection/exclusion criteria, sample size, failures, confidence limitations and scope. It is **not a general probability of customer success** or a substitute for customer-perceived confidence. If DEP is absent, set `OPERATIONAL_LIKELIHOOD=NOT_ESTABLISHED`; do not insert a marketing percentage. Lens A research is separate.
+
+For the DFW barbershop/loctician hybrid scheduling **candidate**, measure `on_site_wait_minutes`, `remote_queue_minutes`, `total_elapsed_minutes`, `arrival_variance`, and `customer_interaction_steps` from timestamped actual or synthetic test events. Compare against a declared manual/appointment baseline under comparable conditions. Dynamic wait estimates alone do not establish that physical waiting, total delay or effort decreased; customer travel, missed slots and queue estimation errors remain in the denominator. Label synthetic results SIMULATED and unsupported comparisons HOLD.
+
+**Falsification:** A zero-failure probe sample is advertised as 100% customer success, or a revised ETA is claimed as saved minutes without measured arrival/service events → `G5_HOLD`.
 
 ## Boundary
 This is perceived-value reasoning, not a validated economic ROI formula; never convert it into CASH_YIELD_VERIFIED.

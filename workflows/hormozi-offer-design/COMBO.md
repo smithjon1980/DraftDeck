@@ -26,3 +26,13 @@ All NOT_TESTED.
 
 ## Cycle 02 supervisory prerequisite (candidate, not executed)
 Before Step 6, execute a design-only review through `skills/offer-fulfillment-tradeoff`; an unprofitable or unknown fulfillment result blocks *authorization to publish or route* an offer. An exploratory presentation draft must stay internal and labeled UNAPPROVED. No broker trip or public routing integration has been implemented.
+
+## Cycle 01 supervisory integration — evidence and recovery gates
+- Step 2 requires `value-equation-assessment`'s distinct fields for perceived buyer value and DEP-scoped operational fitness. Missing Lens B evidence remains NOT_ESTABLISHED, never zero-risk or guaranteed success.
+- For the DFW hybrid barbershop, compare measured on-site wait and total customer effort to an explicit baseline; an estimated queue countdown is not measured time saved.
+- Step 5 requires `ethical-risk-reversal` mapping to SEAM-D01 and an approved, idempotent and reconcilable remedy. Unsafe or unapproved compensation → HOLD, not automatic refund.
+- Step 6 requires `honest-offer-presentation` G5 claim review **and** the existing fulfillment VALUE gate; externally presented performance claims require qualified outcome evidence.
+- OFFER-006: small Lens B sample treated as proven customer success → G5_HOLD.
+- OFFER-007: ambiguous paid booking triggers duplicate compensating refund → COMPENSATION_HOLD.
+- OFFER-008: UNVERIFIED_PROJECTION presented as verified revenue → G5_HOLD.
+All candidate tests NOT_TESTED; this document does not implement runtime enforcement.
