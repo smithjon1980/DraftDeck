@@ -1,0 +1,42 @@
+---
+name: progressive-scale-portability
+description: Original BOSS candidate procedure informed by user-supplied $100M Scaling Roadmap.
+version: 0.1.0-candidate
+source_ids: [HORMOZI-SCALING-ROADMAP-COMBINED-001]
+operational_phase_tags: [DESIGN]
+enforcement_tags: [G2, G5]
+trust_class: UNVERIFIED_COMMERCIAL_METHOD
+qualification_status: SPECIFIED_CANDIDATE
+test_status: NOT_TESTED
+authority_scope: RESEARCH_ONLY
+evidence_refs: []
+---
+
+# Progressive Scale Portability
+
+## Goal
+Introduce training, standardization, monitoring and infrastructure only in response to an observed scaling constraint.
+
+## Proof
+Record cost of added complexity, baseline operation, measurable gain and rollback strategy before increasing dependencies.
+
+## Steps
+1. Inventory current workflow.
+2. choose simplest valid tool.
+3. verify locally.
+4. identify real failure or throughput limit.
+5. evaluate extension.
+6. test and document portability.
+
+## Boundary
+No forced SaaS architecture; maturity taxonomy is not a replacement for SEVEN; advanced stages 5–9 are contextual options.
+
+## Inputs and outputs
+Input: relevant, authorized small-business observations or synthetic lab records.
+Output: a bounded, source-linked candidate workpaper with evidence status and HOLD conditions.
+
+## Falsification
+If the workpaper advances a stage or promotes execution without the stated proof, or converts illustrative estimates into verified sales, income or success, return `G5_HOLD / NOT_ESTABLISHED`.
+
+## Source
+HORMOZI-SCALING-ROADMAP-COMBINED-001; Stages 5–9 PDF pp.106–230. Stage-specific claims outside the inspected parts must be checked against the PDF before use.
