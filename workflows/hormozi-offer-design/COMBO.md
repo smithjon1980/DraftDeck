@@ -36,3 +36,6 @@ Before Step 6, execute a design-only review through `skills/offer-fulfillment-tr
 - OFFER-007: ambiguous paid booking triggers duplicate compensating refund → COMPENSATION_HOLD.
 - OFFER-008: UNVERIFIED_PROJECTION presented as verified revenue → G5_HOLD.
 All candidate tests NOT_TESTED; this document does not implement runtime enforcement.
+
+## Three-quadrant workflow handoff (candidate)
+At each step, resolve A (human ability/entitlement, bounded agent role, skill version, authorized tool); B (manual baseline and minimum sufficient intervention class with rejected alternatives); C (SOP responsibility, KPI metric with numerator/denominator/window where relevant, optional OKR, CAPA trigger/retest). Resolve all from the participating `SKILL.md` and `skills/metadata.json`, not by inferring credentials or outcomes. Missing operand → HOLD. Record `human_dependency`, `agent_deliverable`, `correction_vector`, evidence refs and human checkpoint at each handoff. All steps research-only, NOT_TESTED, without production authority.

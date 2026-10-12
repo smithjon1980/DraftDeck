@@ -29,3 +29,6 @@ If source is coherent but not authenticated, continue in research-only mode, not
 
 ## Acceptance criteria
 Only CONTENT_GATE PASS documents proceed to extraction. Every skill has Goal/Proof/Steps/Boundary and explicit trust/status. Every COMBO step targets an existing declared skill. Every nontrivial extracted claim has a source anchor or DESIGN_INFERENCE label. No production release or GitHub mutation is implied by chat activation.
+
+## Three-quadrant workflow handoff (candidate)
+At each step, resolve A (human ability/entitlement, bounded agent role, skill version, authorized tool); B (manual baseline and minimum sufficient intervention class with rejected alternatives); C (SOP responsibility, KPI metric with numerator/denominator/window where relevant, optional OKR, CAPA trigger/retest). Resolve all from the participating `SKILL.md` and `skills/metadata.json`, not by inferring credentials or outcomes. Missing operand → HOLD. Record `human_dependency`, `agent_deliverable`, `correction_vector`, evidence refs and human checkpoint at each handoff. All steps research-only, NOT_TESTED, without production authority.

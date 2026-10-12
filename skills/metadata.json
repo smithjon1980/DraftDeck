@@ -1,5 +1,5 @@
 {
-  "schema_version": "social-interface-candidate-v1",
+  "schema_version": "social-capability-conformity-v2",
   "status": "SPECIFIED_CANDIDATE",
   "runtime_enforcement": "NOT_IMPLEMENTED",
   "seam_B01": "SUPERVISORY_PROPOSAL_UNAUTHENTICATED",
@@ -12,7 +12,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "bottleneck-priority-review",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "business-stage-evidence-classifier",
@@ -22,7 +41,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "business-stage-evidence-classifier",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "cash-payback-stress-screen",
@@ -32,7 +70,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "cash-payback-stress-screen",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "channel-experiment-ladder",
@@ -42,7 +99,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "channel-experiment-ladder",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "continuity-promise-liability",
@@ -52,7 +128,55 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "continuity-promise-liability",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
+    },
+    {
+      "skill_id": "customer-journey-microevent-audit",
+      "path": "skills/customer-journey-microevent-audit/SKILL.md",
+      "human_dependency": "Required explicit business context and human authorization, per SKILL.md",
+      "agent_deliverable": "Human-readable evidence and comparison workpaper, per SKILL.md",
+      "correction_vector": "Authenticated correction/REJECT; event, evidence revision and HOLD, per SKILL.md",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "customer-journey-microevent-audit",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "customer-unit-economics-ledger",
@@ -62,7 +186,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "customer-unit-economics-ledger",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "ethical-risk-reversal",
@@ -72,7 +215,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "ethical-risk-reversal",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "first-free-to-paid-proof",
@@ -82,7 +244,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "first-free-to-paid-proof",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "framework-evolution-lineage",
@@ -92,7 +273,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "framework-evolution-lineage",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "honest-offer-presentation",
@@ -102,7 +302,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "honest-offer-presentation",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "human-agent-correspondence",
@@ -112,7 +331,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "human-agent-correspondence",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "ideal-customer-fit-review",
@@ -122,7 +360,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "ideal-customer-fit-review",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "lead-stage-definition",
@@ -132,7 +389,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "lead-stage-definition",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "market-demand-screen",
@@ -142,7 +418,55 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "market-demand-screen",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
+    },
+    {
+      "skill_id": "offer-delivery-mode-selection",
+      "path": "skills/offer-delivery-mode-selection/SKILL.md",
+      "human_dependency": "Required explicit business context and human authorization, per SKILL.md",
+      "agent_deliverable": "Human-readable evidence and comparison workpaper, per SKILL.md",
+      "correction_vector": "Authenticated correction/REJECT; event, evidence revision and HOLD, per SKILL.md",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "offer-delivery-mode-selection",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "offer-fulfillment-tradeoff",
@@ -152,7 +476,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "offer-fulfillment-tradeoff",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "offer-scope-package",
@@ -162,7 +505,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "offer-scope-package",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "offer-sequence-eligibility",
@@ -172,7 +534,55 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "offer-sequence-eligibility",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
+    },
+    {
+      "skill_id": "offer-workbook-validation",
+      "path": "skills/offer-workbook-validation/SKILL.md",
+      "human_dependency": "Required explicit business context and human authorization, per SKILL.md",
+      "agent_deliverable": "Human-readable evidence and comparison workpaper, per SKILL.md",
+      "correction_vector": "Authenticated correction/REJECT; event, evidence revision and HOLD, per SKILL.md",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "offer-workbook-validation",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "owner-operator-role-boundary",
@@ -182,7 +592,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "owner-operator-role-boundary",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "owner-to-trainer-handoff",
@@ -192,7 +621,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "owner-to-trainer-handoff",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "problem-solution-map",
@@ -202,7 +650,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "problem-solution-map",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "progressive-scale-portability",
@@ -212,7 +679,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "progressive-scale-portability",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "promotion-mode-suitability",
@@ -222,7 +708,55 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "promotion-mode-suitability",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
+    },
+    {
+      "skill_id": "real-capacity-promotion-check",
+      "path": "skills/real-capacity-promotion-check/SKILL.md",
+      "human_dependency": "Required explicit business context and human authorization, per SKILL.md",
+      "agent_deliverable": "Human-readable evidence and comparison workpaper, per SKILL.md",
+      "correction_vector": "Authenticated correction/REJECT; event, evidence revision and HOLD, per SKILL.md",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "real-capacity-promotion-check",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "single-channel-demand-stabilization",
@@ -232,7 +766,55 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "single-channel-demand-stabilization",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
+    },
+    {
+      "skill_id": "source-content-congruence",
+      "path": "skills/source-content-congruence/SKILL.md",
+      "human_dependency": "Required explicit business context and human authorization, per SKILL.md",
+      "agent_deliverable": "Human-readable evidence and comparison workpaper, per SKILL.md",
+      "correction_vector": "Authenticated correction/REJECT; event, evidence revision and HOLD, per SKILL.md",
+      "qualification_status": "SPECIFIED_CANDIDATE",
+      "test_status": "NOT_TESTED",
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "source-content-congruence",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "stage-transition-readiness",
@@ -242,7 +824,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "stage-transition-readiness",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "value-equation-assessment",
@@ -252,7 +853,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "value-equation-assessment",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     },
     {
       "skill_id": "visual-sketch-to-skill",
@@ -262,7 +882,26 @@
       "correction_vector": "Authenticated REJECT correction; HUMAN_OVERRIDE event; semantic cache invalidation; rebuilt L1 digest; HOLD until review",
       "qualification_status": "SPECIFIED_CANDIDATE",
       "test_status": "NOT_TESTED",
-      "execution_authority": "NONE"
+      "execution_authority": "NONE",
+      "capability_assignment": {
+        "human_entitlement": "NOT_ESTABLISHED",
+        "human_ability": "NOT_ESTABLISHED",
+        "agent_role": "DESIGN_ASSISTANT_ONLY",
+        "skill_id": "visual-sketch-to-skill",
+        "tool_permissions": "NONE_ASSUMED"
+      },
+      "intervention_selection": {
+        "selected_class": "NOT_ESTABLISHED",
+        "manual_baseline": "REQUIRED",
+        "alternatives_review": "REQUIRED",
+        "cost_evidence": "NOT_ESTABLISHED"
+      },
+      "performance_contract": {
+        "sop": "CANDIDATE",
+        "kpi_definition": "NOT_ESTABLISHED",
+        "okr": "OPTIONAL_NOT_ESTABLISHED",
+        "capa_retest": "REQUIRED_IF_DEVIATION"
+      }
     }
   ]
 }
