@@ -10,6 +10,9 @@ qualification_status: SPECIFIED_CANDIDATE
 test_status: NOT_TESTED
 authority_scope: RESEARCH_ONLY
 evidence_refs: []
+human_dependency: "Human provides context and authorization for Stress-test whether a small-business promotional offer can repay acquisition spend without a liquidity shortfall.; reviews proposed outcome before any external effect"
+agent_deliverable: "Human-readable cash-payback-stress-screen review workpaper with evidence, assumptions, alternatives, unresolved questions, proposed result and corrections diff"
+correction_vector: "Authenticated human REJECT/correction: persist HUMAN_OVERRIDE with exact permitted correction, invalidate relevant semantic cache (SEAM-B01 proposed), append a new source-linked L1 derivative/digest, block stale active envelope until revalidation"
 ---
 
 # Cash Payback Stress Screen
@@ -50,3 +53,9 @@ Keep `LTGP` (cohort lifetime gross profit), `CAC`, accounting contribution margi
 **Runtime state:** BROKER TRIP, ROUTING FREEZE and LEDGER SINK **NOT_IMPLEMENTED / NOT_TESTED**; this SKILL.md is not a deployed circuit breaker.
 
 **Falsification:** A negative reconciled 30-day cash contribution permits another automated campaign charge or unbounded discount issue → FAIL.
+
+## Human–Agent interface candidate
+Human dependency: Human provides context and authorization for Stress-test whether a small-business promotional offer can repay acquisition spend without a liquidity shortfall.; reviews proposed outcome before any external effect.
+Agent deliverable: Human-readable cash-payback-stress-screen review workpaper with evidence, assumptions, alternatives, unresolved questions, proposed result and corrections diff.
+Correction: Authenticated human REJECT/correction: persist HUMAN_OVERRIDE with exact permitted correction, invalidate relevant semantic cache (SEAM-B01 proposed), append a new source-linked L1 derivative/digest, block stale active envelope until revalidation.
+If operation exceeds the explicitly approved Equivalence Set or financial limit, require `ZONE_C_ESCALATION_REQUIRED` and prevent dispatch. No runtime implementation or probe qualification is claimed.

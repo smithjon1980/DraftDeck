@@ -10,6 +10,9 @@ qualification_status: SPECIFIED_CANDIDATE
 test_status: NOT_TESTED
 authority_scope: RESEARCH_ONLY
 evidence_refs: []
+human_dependency: "Human provides context and authorization for Evaluate recurring service, fixed-price and lifetime terms as long-lived delivery liabilities.; reviews proposed outcome before any external effect"
+agent_deliverable: "Human-readable continuity-promise-liability review workpaper with evidence, assumptions, alternatives, unresolved questions, proposed result and corrections diff"
+correction_vector: "Authenticated human REJECT/correction: persist HUMAN_OVERRIDE with exact permitted correction, invalidate relevant semantic cache (SEAM-B01 proposed), append a new source-linked L1 derivative/digest, block stale active envelope until revalidation"
 ---
 
 # Continuity Promise Liability Review
@@ -48,3 +51,9 @@ Before external routing, run the `offer-fulfillment-tradeoff` economics screen u
 **Runtime state:** broker rejection and scheduled review actions remain **NOT_IMPLEMENTED / NOT_TESTED**; this is a candidate skill requirement.
 
 **Falsification:** A customer-facing lifetime entitlement is deployed without reserve modeling or enforceable contractual safeguards; or an operator changes customer terms unilaterally based on internal profitability → FAIL.
+
+## Human–Agent interface candidate
+Human dependency: Human provides context and authorization for Evaluate recurring service, fixed-price and lifetime terms as long-lived delivery liabilities.; reviews proposed outcome before any external effect.
+Agent deliverable: Human-readable continuity-promise-liability review workpaper with evidence, assumptions, alternatives, unresolved questions, proposed result and corrections diff.
+Correction: Authenticated human REJECT/correction: persist HUMAN_OVERRIDE with exact permitted correction, invalidate relevant semantic cache (SEAM-B01 proposed), append a new source-linked L1 derivative/digest, block stale active envelope until revalidation.
+If operation exceeds the explicitly approved Equivalence Set or financial limit, require `ZONE_C_ESCALATION_REQUIRED` and prevent dispatch. No runtime implementation or probe qualification is claimed.

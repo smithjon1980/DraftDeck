@@ -10,6 +10,9 @@ qualification_status: SPECIFIED_CANDIDATE
 test_status: NOT_TESTED
 authority_scope: RESEARCH_ONLY
 evidence_refs: []
+human_dependency: "Human provides context and authorization for Convert an exploratory free trial into an original minimal paid offer only after real user feedback.; reviews proposed outcome before any external effect"
+agent_deliverable: "Human-readable first-free-to-paid-proof review workpaper with evidence, assumptions, alternatives, unresolved questions, proposed result and corrections diff"
+correction_vector: "Authenticated human REJECT/correction: persist HUMAN_OVERRIDE with exact permitted correction, invalidate relevant semantic cache (SEAM-B01 proposed), append a new source-linked L1 derivative/digest, block stale active envelope until revalidation"
 ---
 
 # First Free-to-Paid Proof
@@ -40,3 +43,9 @@ If the workpaper advances a stage or promotes execution without the stated proof
 
 ## Source
 HORMOZI-SCALING-ROADMAP-COMBINED-001; Stage 0 PDF pp.6–9; Stage 1 PDF pp.14–20. Stage-specific claims outside the inspected parts must be checked against the PDF before use.
+
+## Human–Agent interface candidate
+Human dependency: Human provides context and authorization for Convert an exploratory free trial into an original minimal paid offer only after real user feedback.; reviews proposed outcome before any external effect.
+Agent deliverable: Human-readable first-free-to-paid-proof review workpaper with evidence, assumptions, alternatives, unresolved questions, proposed result and corrections diff.
+Correction: Authenticated human REJECT/correction: persist HUMAN_OVERRIDE with exact permitted correction, invalidate relevant semantic cache (SEAM-B01 proposed), append a new source-linked L1 derivative/digest, block stale active envelope until revalidation.
+If operation exceeds the explicitly approved Equivalence Set or financial limit, require `ZONE_C_ESCALATION_REQUIRED` and prevent dispatch. No runtime implementation or probe qualification is claimed.

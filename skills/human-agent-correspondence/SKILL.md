@@ -9,6 +9,9 @@ qualification_status: SPECIFIED_CANDIDATE
 test_status: NOT_TESTED
 authority_scope: DESIGN_ONLY
 evidence_refs: []
+human_dependency: "Human provides context and authorization for Turn an atomic procedure into a comprehensible partnership protocol with declared human authority and agent responsibilities.; reviews proposed outcome before any external effect"
+agent_deliverable: "Human-readable human-agent-correspondence review workpaper with evidence, assumptions, alternatives, unresolved questions, proposed result and corrections diff"
+correction_vector: "Authenticated human REJECT/correction: persist HUMAN_OVERRIDE with exact permitted correction, invalidate relevant semantic cache (SEAM-B01 proposed), append a new source-linked L1 derivative/digest, block stale active envelope until revalidation"
 ---
 # Human–Agent Social Correspondence
 
@@ -36,3 +39,9 @@ Output: human–agent relationship contract plus falsifiable social tests.
 
 ## Reference
 ../../docs/book-to-skills/HUMAN-AGENT-SOCIAL-CORRESPONDENCE-001.md
+
+## Human–Agent interface candidate
+Human dependency: Human provides context and authorization for Turn an atomic procedure into a comprehensible partnership protocol with declared human authority and agent responsibilities.; reviews proposed outcome before any external effect.
+Agent deliverable: Human-readable human-agent-correspondence review workpaper with evidence, assumptions, alternatives, unresolved questions, proposed result and corrections diff.
+Correction: Authenticated human REJECT/correction: persist HUMAN_OVERRIDE with exact permitted correction, invalidate relevant semantic cache (SEAM-B01 proposed), append a new source-linked L1 derivative/digest, block stale active envelope until revalidation.
+If operation exceeds the explicitly approved Equivalence Set or financial limit, require `ZONE_C_ESCALATION_REQUIRED` and prevent dispatch. No runtime implementation or probe qualification is claimed.
