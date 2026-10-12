@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "functions": {
+    "api/vtracer-diagnostic.js": {
+      "includeFiles": "vtracer-bundle/**"
+    }
+  }
+}
