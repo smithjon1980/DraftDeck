@@ -1,0 +1,62 @@
+name: Whisper authenticated Drive ingress
+on:
+  workflow_dispatch:
+    inputs:
+      drive_file_id:
+        description: Google Drive file ID (non-secret)
+        required: true
+        type: string
+      sha256:
+        description: Expected audio SHA256 (64 lowercase hex)
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  private-asr:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Drive API client
+        run: python3 -m pip install --user google-auth requests
+      - name: Authenticated Drive fetch and hash admission
+        shell: bash
+        env:
+          GOOGLE_DRIVE_SA_JSON: ${{ secrets.BOSS_DRIVE_SA_JSON }}
+          DRIVE_FILE_ID: ${{ inputs.drive_file_id }}
+          EXPECTED_SHA256: ${{ inputs.sha256 }}
+        run: |
+          set -euo pipefail
+          umask 077
+          mkdir -p /tmp/whisper-private
+          python3 tools/transcription/google_drive_ingress.py --file-id "$DRIVE_FILE_ID" --output /tmp/whisper-private/source.wav --expected-sha256 "$EXPECTED_SHA256"
+      - name: Bootstrap ASR
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg cmake g++
+          bash tools/transcription/bootstrap-whisper.sh v1.8.2 base.en
+      - name: Execute real audio ASR
+        run: |
+          python3 tools/transcription/transcribe.py --input /tmp/whisper-private/source.wav --model base.en --out-dir /tmp/whisper-private/output
+      - name: Sanitize evidence receipt
+        env:
+          EXPECTED_SHA256: ${{ inputs.sha256 }}
+          SOURCE_ID: ${{ inputs.drive_file_id }}
+        run: |
+          python3 tools/transcription/redact_receipt.py --receipt /tmp/whisper-private/output/source.asr-receipt.json --out /tmp/whisper-private/output/ingress-receipt.json --expected-sha256 "$EXPECTED_SHA256" --source-id "$SOURCE_ID"
+          rm -f /tmp/whisper-private/output/source.asr-receipt.json
+      - name: Upload text outputs only
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: whisper-private-asr-evidence
+          path: |
+            /tmp/whisper-private/output/*.txt
+            /tmp/whisper-private/output/*.srt
+            /tmp/whisper-private/output/ingress-receipt.json
+          retention-days: 7
+          if-no-files-found: error
+      - name: Delete temporary recording
+        if: always()
+        run: rm -f /tmp/whisper-private/source.wav /tmp/whisper-private/output/*.wav

@@ -1,0 +1,9 @@
+vendor/
+models/
+output/
+*.wav
+*.m4a
+*.mp3
+*.srt
+*.vtt
+*.json
