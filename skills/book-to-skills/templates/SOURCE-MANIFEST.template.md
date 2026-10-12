@@ -1,0 +1,13 @@
+# Source Manifest
+- Source ID: <SOURCE_ID>
+- Title / contributor: <title and attribution>
+- Source form: <PDF / book / transcript / text>
+- Date received: <actual receipt date>
+- Provenance URI or uploaded file reference: <reference>
+- SHA-256: NOT_ESTABLISHED (until bytes processed)
+- Extraction / reuse permission: NOT_ESTABLISHED
+- Admission: PENDING_AUTHENTICATION
+- Evidence anchors: <pages / lines / timestamps>
+- Derived skill paths: <paths>
+- Contradictions and missing material: <items>
+- Release authority: NONE
