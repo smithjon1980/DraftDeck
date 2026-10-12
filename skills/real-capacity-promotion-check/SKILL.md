@@ -42,3 +42,9 @@ Human approval is required before any external/financial operation. Proposed SEA
 
 ## Source
 HORMOZI-100M-OFFERS-WORKBOOK-2024-001; Exercises 21–24 (PDF pp.29–32). Original BOSS design adaptation; no full reproduction of copyrighted exercise text. All proof requirements are candidate tests, NOT_TESTED.
+
+## Three-Quadrant Conformity (Candidate)
+A: Human entitlement and competence NOT_ESTABLISHED; agent is DESIGN_ASSISTANT_ONLY; skill identity and authorized tools must be matched per workflow. human_dependency, agent_deliverable, correction_vector remain mandatory.
+B: Compare manual/no-change, SCRIPT, PROGRAM, NARROW_AI, GENERAL_AI before selecting minimum sufficient method; record cost and rejected alternatives. Class NOT_ESTABLISHED until scoped.
+C: SOP CANDIDATE; KPI baseline, denominator and measurement window NOT_ESTABLISHED; OKR optional; CAPA demands recorded defect, human correction and retest proof.
+Missing authorization or evidence -> HOLD. No production permission; NOT_TESTED.

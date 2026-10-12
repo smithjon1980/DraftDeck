@@ -49,3 +49,9 @@ Human dependency: Human provides context and authorization for Test one understa
 Agent deliverable: Human-readable single-channel-demand-stabilization review workpaper with evidence, assumptions, alternatives, unresolved questions, proposed result and corrections diff.
 Correction: Authenticated human REJECT/correction: persist HUMAN_OVERRIDE with exact permitted correction, invalidate relevant semantic cache (SEAM-B01 proposed), append a new source-linked L1 derivative/digest, block stale active envelope until revalidation.
 If operation exceeds the explicitly approved Equivalence Set or financial limit, require `ZONE_C_ESCALATION_REQUIRED` and prevent dispatch. No runtime implementation or probe qualification is claimed.
+
+## Three-Quadrant Conformity (Candidate)
+A: Human entitlement and competence NOT_ESTABLISHED; agent is DESIGN_ASSISTANT_ONLY; skill identity and authorized tools must be matched per workflow. human_dependency, agent_deliverable, correction_vector remain mandatory.
+B: Compare manual/no-change, SCRIPT, PROGRAM, NARROW_AI, GENERAL_AI before selecting minimum sufficient method; record cost and rejected alternatives. Class NOT_ESTABLISHED until scoped.
+C: SOP CANDIDATE; KPI baseline, denominator and measurement window NOT_ESTABLISHED; OKR optional; CAPA demands recorded defect, human correction and retest proof.
+Missing authorization or evidence -> HOLD. No production permission; NOT_TESTED.

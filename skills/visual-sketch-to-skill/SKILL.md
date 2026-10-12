@@ -49,3 +49,9 @@ Human dependency: Human supplies evidence and business context for Translate exp
 Agent deliverable: Human-readable visual-sketch-to-skill decision workpaper: facts, assumptions, evidence references, conflicts, suggested action, rejected alternatives, and review diff.
 Correction: Authenticated human correction/REJECT channel: record HUMAN_OVERRIDE with exact authorized correction, invalidate affected semantic cache (proposed SEAM-B01), derive new L1 digest preserving history, hold stale envelopes pending confirmation.
 When requested action exceeds the explicit Equivalence Set or financial authority, require `ZONE_C_ESCALATION_REQUIRED` and no dispatch. Documentation only; NOT_IMPLEMENTED / NOT_TESTED.
+
+## Three-Quadrant Conformity (Candidate)
+A: Human entitlement and competence NOT_ESTABLISHED; agent is DESIGN_ASSISTANT_ONLY; skill identity and authorized tools must be matched per workflow. human_dependency, agent_deliverable, correction_vector remain mandatory.
+B: Compare manual/no-change, SCRIPT, PROGRAM, NARROW_AI, GENERAL_AI before selecting minimum sufficient method; record cost and rejected alternatives. Class NOT_ESTABLISHED until scoped.
+C: SOP CANDIDATE; KPI baseline, denominator and measurement window NOT_ESTABLISHED; OKR optional; CAPA demands recorded defect, human correction and retest proof.
+Missing authorization or evidence -> HOLD. No production permission; NOT_TESTED.

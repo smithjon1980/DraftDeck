@@ -29,3 +29,9 @@ No arbitrary percentage threshold presented as universal. Do not claim that a cl
 
 ## Falsification
 If a known contaminated fixture passes or causes generated skills, reject the implementation.
+
+## Three-Quadrant Conformity (Candidate)
+A: Human entitlement and competence NOT_ESTABLISHED; agent is DESIGN_ASSISTANT_ONLY; skill identity and authorized tools must be matched per workflow. human_dependency, agent_deliverable, correction_vector remain mandatory.
+B: Compare manual/no-change, SCRIPT, PROGRAM, NARROW_AI, GENERAL_AI before selecting minimum sufficient method; record cost and rejected alternatives. Class NOT_ESTABLISHED until scoped.
+C: SOP CANDIDATE; KPI baseline, denominator and measurement window NOT_ESTABLISHED; OKR optional; CAPA demands recorded defect, human correction and retest proof.
+Missing authorization or evidence -> HOLD. No production permission; NOT_TESTED.
