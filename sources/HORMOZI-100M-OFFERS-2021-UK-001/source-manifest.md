@@ -3,10 +3,10 @@
 **Uploaded document:** `922973864-Uk-100m-Offers-2.pdf`; 117 PDF pages.
 **Source identity:** IDENTIFIED / NOT AUTHENTICATED.
 **Rights:** all rights reserved stated on copyright page (PDF page 2). User possession is not redistribution permission.
-**Actual uploaded binary SHA-256:** PENDING_CONTAINER_HASH (must not guess).
+**Actual uploaded binary SHA-256:** 72d87186bfbb576470a5c3417dff3dd920b8608e2f7eb8b5c6e0d9ec38255651 (computed from uploaded 3.8MB PDF).
 **Original-language confidence:** Ukrainian translation; exact English expressions may differ from original edition.
 **Source locations:** introductory structure PDF page 4; market chapters pp.29–37; pricing pp.38–47; value-equation pp.49–58; problem/solution mapping pp.63–76; scarcity/urgency/bonus/guarantee/name pp.79–110; closing review pp.111–115.
-**Admission status:** PENDING_HUMAN_AUTHENTICATION.
+**Admission status:** PENDING_HUMAN_AUTHENTICATION. Local hash only establishes exact uploaded bytes, not source publisher authenticity.
 **Trust classification:** UNVERIFIED_COMMERCIAL_METHOD. Personal revenue statements and testimonials are not independently verified.
 **Extracted candidates:** market-demand-screen, value-equation-assessment, problem-solution-map, offer-scope-package, ethical-risk-reversal, honest-offer-presentation.
 **Copyright controls:** original procedural abstractions only; no lengthy book passages, scanned diagrams, or derivative full-book substitute.
