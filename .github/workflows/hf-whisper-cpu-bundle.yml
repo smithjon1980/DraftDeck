@@ -1,0 +1,103 @@
+name: BOSS Whisper CPU Bundle Qualification
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Acquire and build whisper.cpp from public upstream
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 https://github.com/ggml-org/whisper.cpp.git upstream
+          git -C upstream rev-parse HEAD > source-commit.txt
+          cmake -S upstream -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DGGML_OPENMP=OFF
+          cmake --build build --config Release --parallel 2 --target whisper-cli
+          test -x build/bin/whisper-cli
+      - name: Acquire pinned tiny.en model and sample
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p package
+          python3 - <<'PY'
+          import hashlib, json, pathlib, urllib.request
+          repo = "ggerganov/whisper.cpp"
+          def get(u):
+              request=urllib.request.Request(u,headers={"User-Agent":"BOSS-Whisper-qualification/1.0"})
+              return urllib.request.urlopen(request,timeout=90)
+          with get(f"https://huggingface.co/api/models/{repo}") as response:
+              metadata=json.load(response)
+          rev=metadata.get("sha")
+          assert isinstance(rev,str) and len(rev)==40 and all(c in "0123456789abcdef" for c in rev.lower()), "Unresolved immutable model revision"
+          filename="ggml-tiny.en.bin"
+          url=f"https://huggingface.co/{repo}/resolve/{rev}/{filename}"
+          target=pathlib.Path("package")/filename
+          digest=hashlib.sha256()
+          size=0
+          with get(url) as response, target.open("wb") as dest:
+              while True:
+                  chunk=response.read(1024*1024)
+                  if not chunk: break
+                  size+=len(chunk)
+                  if size>130_000_000: raise RuntimeError("Model size exceeds 130 MB safety limit")
+                  digest.update(chunk); dest.write(chunk)
+          if size<50_000_000: raise RuntimeError("Model unexpectedly small")
+          pathlib.Path("model-provenance.json").write_text(json.dumps({"repository":repo,"commit":rev,"url":url,"model_sha256":digest.hexdigest(),"bytes":size},sort_keys=True,indent=2)+"\n")
+          print("Model upstream revision:",rev,"size:",size,"sha256:",digest.hexdigest())
+          PY
+          cp upstream/samples/jfk.wav package/jfk.wav
+          cp build/bin/whisper-cli package/whisper-cli
+          ldd package/whisper-cli | tee package/runtime-dependencies.txt
+          if grep -q 'not found' package/runtime-dependencies.txt; then exit 1; fi
+      - name: Execute CPU-only real speech-to-text fixture
+        shell: bash
+        run: |
+          set -euo pipefail
+          chmod +x package/whisper-cli
+          timeout 240s package/whisper-cli -m package/ggml-tiny.en.bin -f package/jfk.wav -otxt -of package/jfk > package/test-stdout.txt 2> package/test-stderr.txt
+          test -s package/jfk.txt
+          if ! grep -iq 'ask not what' package/jfk.txt; then
+            echo "Expected phrase not recognized"
+            cat package/jfk.txt
+            exit 1
+          fi
+          cat package/jfk.txt
+      - name: Assemble offline transport bundle and manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp source-commit.txt package/source-commit.txt
+          cp model-provenance.json package/model-provenance.json
+          cat > package/run-whisper.sh <<'SH'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          cd "$(dirname "$0")"
+          if [[ $# -ne 1 ]]; then echo "Usage: ./run-whisper.sh path/to/16kHz-mono-16bit.wav" >&2; exit 2; fi
+          ./whisper-cli -m ggml-tiny.en.bin -f "$1" -otxt
+          SH
+          chmod +x package/run-whisper.sh
+          python3 - <<'PY'
+          import hashlib,json,pathlib,datetime
+          p=pathlib.Path("package")
+          excluded={"manifest.json","SHA256SUMS.txt"}
+          files=sorted(f for f in p.iterdir() if f.is_file() and f.name not in excluded)
+          checks={f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in files}
+          (p/"SHA256SUMS.txt").write_text("".join(f"{digest}  {name}\n" for name,digest in checks.items()))
+          manifest={"order_id":"BOSS-SOURCE-ACQ-002","status":"ACQUIRED_AND_CPU_FIXTURE_TESTED","platform":"ubuntu-24.04-x86_64","tool":"whisper.cpp/whisper-cli","source_commit":(p/"source-commit.txt").read_text().strip(),"model_provenance":json.loads((p/"model-provenance.json").read_text()),"files_sha256":checks,"test":{"fixture":"jfk.wav","output":"jfk.txt","criterion":"case-insensitive phrase 'ask not what'","result":"PASS"},"limitations":["CPU-only Linux binary","Linux system C/C++ runtime libraries required as listed in runtime-dependencies.txt","Only bundled public JFK fixture tested","No diarization qualification"],"release_status":"HOLD","created_at_utc":datetime.datetime.now(datetime.timezone.utc).isoformat()}
+          (p/"manifest.json").write_text(json.dumps(manifest,indent=2,sort_keys=True)+"\n")
+          PY
+          (cd package && sha256sum -c SHA256SUMS.txt)
+          zip -q -9 -r boss-whisper-cpu-bundle.zip package
+          unzip -t boss-whisper-cpu-bundle.zip | tail -n 2
+      - name: Upload quarantined CPU bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: boss-whisper-cpu-bundle
+          path: boss-whisper-cpu-bundle.zip
+          retention-days: 7
+          if-no-files-found: error
