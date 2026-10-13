@@ -1,0 +1,48 @@
+{
+  "schema_id": "bioscillate-podcast-contract-example-v0.1",
+  "status": "EXAMPLE_NOT_APPROVED",
+  "episode_id": "DZ-AUDIO-01",
+  "lesson_rubric_ref": "curriculum/day-zero/audio/COMPETENCY_RUBRIC_WORKING_V0.1.md",
+  "script": {
+    "path": "PRIVATE_APPROVED_SCRIPT_PATH_REQUIRED",
+    "version": "v0.1-DRAFT",
+    "encoding": "UTF-8",
+    "hash_algorithm": "SHA-256",
+    "sha256": null,
+    "byte_scope": "EXACT_FILE_BYTES",
+    "human_word_approval": null
+  },
+  "speakers": [
+    {
+      "id": "HOST_A",
+      "voice_id": null,
+      "human_voice_approval": null
+    },
+    {
+      "id": "HOST_B",
+      "voice_id": null,
+      "human_voice_approval": null
+    }
+  ],
+  "pronunciation": {
+    "bioscillate": "HUMAN_READING_REQUIRED",
+    "provider_mapping_status": "NOT_ESTABLISHED"
+  },
+  "delivery": {
+    "provider": null,
+    "model_id": null,
+    "markup_is_separate_from_spoken_copy": true,
+    "vendor_capabilities_verified": false
+  },
+  "segments": [],
+  "qa": {
+    "status": "NOT_STARTED",
+    "audio_fidelity": "NOT_ESTABLISHED",
+    "human_listening_review": null
+  },
+  "release": {
+    "status": "HOLD",
+    "approved_by": null,
+    "approved_at": null
+  }
+}
