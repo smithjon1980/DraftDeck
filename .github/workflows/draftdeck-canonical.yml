@@ -7,11 +7,6 @@ on:
         type: choice
         options: ['1', '2']
         default: '1'
-  push:
-    branches: [feature/book-to-skills-intake-candidate]
-    paths:
-      - 'skills/draftdeck/**'
-      - '.github/workflows/draftdeck-canonical.yml'
 permissions:
   contents: read
 jobs:
