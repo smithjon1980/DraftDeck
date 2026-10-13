@@ -1,1 +1,0 @@
-import{runLayered}from'./layered-run.mjs';const r=await runLayered();console.log(JSON.stringify({status:r.status,events:r.events,qa:r.qa},null,2));if(r.status!=='AWAITING_HUMAN_VISUAL_REVIEW')process.exitCode=1;
