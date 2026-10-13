@@ -37,8 +37,10 @@ jobs:
           npx @tailwindcss/cli -i input.css -o output/styles.css --minify
       - uses: browser-actions/setup-chrome@v2
         id: chrome
-      - name: Unit tests
-        run: go test ./...
+      - name: Compile Go engine
+        run: go build -o output/draftdeck-engine .
+      - name: Unit and negative tests
+        run: go test -count=1 -v ./...
       - name: Build Phase 1
         env:
           CHROME_BIN: ${{ steps.chrome.outputs.chrome-path }}
