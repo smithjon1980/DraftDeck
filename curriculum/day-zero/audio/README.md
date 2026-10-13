@@ -20,9 +20,13 @@ These two episodes complement rather than duplicate one another:
 - Episode 01 asks: **How do deliberate constraints, practice, feedback and verification produce accountable outcomes?**
 - Episode 02 asks: **What does a human actually do when coordinating two models with partly overlapping capabilities and errors?**
 
-## Competency linkage
+## Competency linkage — build backward from the intended result
 
-See the [candidate crosswalk](episode-02-human-centered-ai-triad/RUBRIC_CROSSWALK_CANDIDATE.md). Existing Day Zero case studies offer learner checks for authority, source integrity, correction, and tool choice, but no ratified complete course rubric was established in this inspection. Competency IDs and achievement claims remain pending human-approved rubric comparison.
+**Human instruction:** the rubric is co-developed *as we generate and script each Audio Overview*, rather than treated as a prerequisite that must already be finished. First specify what the learner should be able to **demonstrate**; align the episode examples, reflective questions and assessment artifacts to that end; revise transparently as we learn.
+
+The shared [working Day Zero Audio Competency Rubric v0.1](COMPETENCY_RUBRIC_WORKING_V0.1.md) now states the proposed end capability, C-01–C-07 criteria, a provisional performance scale and a chapter-to-assessment feedback loop. The [Episode 02 crosswalk](episode-02-human-centered-ai-triad/RUBRIC_CROSSWALK_CANDIDATE.md) maps its distinct learning function back to the same evolving rubric. These are human-review **candidates**, not inherited ratified or empirically validated results.
+
+**Sequence:** define the end → draft and assess in tandem → review/freeze rubric version for an approved script → run actual learner checks → improve the next version with documented changes. The human may change the rubric; do not silently relax standards to declare an episode successful.
 
 ## Production gate
 
