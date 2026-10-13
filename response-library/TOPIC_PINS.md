@@ -11,6 +11,8 @@
 
 **Avoid:** assuming three roles yield verified truth, assuming a model output is an executed plan, treating the human as mere routing middleware, or attributing independent experience/agency to the models.
 
-**Release:** Do not script, produce NotebookLM audio, open a production job, or declare this a scheduled podcast without separate human authorization. Park it as a curriculum/research hypothesis and a later editorial concept.
+**Queue update (2026-10-13):** The human has now placed this as **Day Zero Deep Dive Episode 02, immediately following the first episode, The Discipline of Constraint**. Its 60-minute candidate outline is [archived in the episode brief](../curriculum/day-zero/audio/episode-02-human-centered-ai-triad/EPISODE_BRIEF.md) and its assessment is co-developed from a [shared working rubric](../curriculum/day-zero/audio/COMPETENCY_RUBRIC_WORKING_V0.1.md). The idea is no longer an unsequenced pin; the production status remains **QUEUED / NOT STARTED**.
+
+**Release:** Do not script, produce NotebookLM audio, open a production job, or declare this a scheduled podcast without separate human authorization. The queued slot is not permission to manufacture or publish.
 
 **Possible tie-in:** Prompt Library + Response Library + Decision/Evidence Record → teach how constraint and disciplined feedback actually develop over iterations.
