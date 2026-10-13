@@ -1,0 +1,859 @@
+{
+  "manifest_id": "day-zero-full-inventory-001",
+  "status": "CANDIDATE_NOT_AUTHENTICATED",
+  "reference": {
+    "path": "REFERENCE_FILE_NOT_ADMITTED",
+    "sha256": null
+  },
+  "source": {
+    "path": "SOURCE_FILE_NOT_ADMITTED",
+    "sha256": null
+  },
+  "canvas": {
+    "width": 1600,
+    "height": 900,
+    "unit": "px",
+    "origin": "top-left"
+  },
+  "safe_zone": {
+    "x": 55,
+    "y": 20,
+    "width": 1490,
+    "height": 850
+  },
+  "tokens": [
+    "ink-primary",
+    "ink-muted",
+    "stroke-1",
+    "stroke-2",
+    "alert-orange"
+  ],
+  "elements": [
+    {
+      "layer": "story",
+      "id": "drafting-background",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 900
+      },
+      "z_index": 0,
+      "asset_reference": "REFERENCE_ASSET_PENDING.webp",
+      "asset_sha256": null,
+      "role": "background"
+    },
+    {
+      "layer": "text",
+      "id": "brand",
+      "bounds": {
+        "x": 55,
+        "y": 20,
+        "width": 460,
+        "height": 30
+      },
+      "z_index": 20,
+      "content": "bioscillate / BOSS",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-18"
+    },
+    {
+      "layer": "text",
+      "id": "edition",
+      "bounds": {
+        "x": 1030,
+        "y": 20,
+        "width": 515,
+        "height": 30
+      },
+      "z_index": 20,
+      "content": "OPERATING SYSTEM BY SEVEN · DAY ZERO / 01",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-15"
+    },
+    {
+      "layer": "art",
+      "id": "header-rule",
+      "bounds": {
+        "x": 55,
+        "y": 52,
+        "width": 1490,
+        "height": 2
+      },
+      "z_index": 10,
+      "component_type": "horizontal-rule",
+      "design_tokens": [
+        "ink-primary",
+        "stroke-2"
+      ]
+    },
+    {
+      "layer": "text",
+      "id": "eyebrow",
+      "bounds": {
+        "x": 55,
+        "y": 67,
+        "width": 760,
+        "height": 24
+      },
+      "z_index": 20,
+      "content": "INSTRUCTIONAL DISPATCH / LEARNING PACKAGE 001",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-14"
+    },
+    {
+      "layer": "text",
+      "id": "headline",
+      "bounds": {
+        "x": 55,
+        "y": 104,
+        "width": 1330,
+        "height": 65
+      },
+      "z_index": 20,
+      "content": "From AI Consumer to Governed Operator.",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "serif-bold-56"
+    },
+    {
+      "layer": "text",
+      "id": "subhead",
+      "bounds": {
+        "x": 55,
+        "y": 171,
+        "width": 1180,
+        "height": 60
+      },
+      "z_index": 20,
+      "content": "Stop asking what the model can generate. Start defining what the business needs, who is authorized, and what counts as verified delivery.",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "serif-24"
+    },
+    {
+      "layer": "text",
+      "id": "chain-heading",
+      "bounds": {
+        "x": 660,
+        "y": 245,
+        "width": 450,
+        "height": 26
+      },
+      "z_index": 20,
+      "content": "GOVERNED EXECUTION CHAIN",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-17"
+    },
+    {
+      "layer": "art",
+      "id": "chain-rule",
+      "bounds": {
+        "x": 324,
+        "y": 278,
+        "width": 990,
+        "height": 2
+      },
+      "z_index": 10,
+      "component_type": "horizontal-rule",
+      "design_tokens": [
+        "ink-primary",
+        "stroke-2"
+      ]
+    },
+    {
+      "layer": "art",
+      "id": "sender-icon",
+      "bounds": {
+        "x": 91,
+        "y": 339,
+        "width": 70,
+        "height": 88
+      },
+      "z_index": 11,
+      "component_type": "container-box",
+      "design_tokens": [
+        "ink-primary",
+        "stroke-2"
+      ]
+    },
+    {
+      "layer": "text",
+      "id": "sender-label",
+      "bounds": {
+        "x": 71,
+        "y": 432,
+        "width": 126,
+        "height": 50
+      },
+      "z_index": 20,
+      "content": "HUMANS\nSENDERS AND RECEIVERS",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-12"
+    },
+    {
+      "layer": "art",
+      "id": "node-intake",
+      "bounds": {
+        "x": 215,
+        "y": 337,
+        "width": 181,
+        "height": 61
+      },
+      "z_index": 11,
+      "component_type": "container-box",
+      "design_tokens": [
+        "ink-primary",
+        "stroke-2"
+      ],
+      "semantic_link": [
+        "node-label-0"
+      ]
+    },
+    {
+      "layer": "text",
+      "id": "node-label-0",
+      "bounds": {
+        "x": 230,
+        "y": 353,
+        "width": 150,
+        "height": 33
+      },
+      "z_index": 20,
+      "content": "INTAKE",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-18"
+    },
+    {
+      "layer": "text",
+      "id": "node-note-0",
+      "bounds": {
+        "x": 218,
+        "y": 408,
+        "width": 177,
+        "height": 60
+      },
+      "z_index": 20,
+      "content": "CAPTURE THE REQUEST AND BUSINESS CONTEXT.",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-12"
+    },
+    {
+      "layer": "art",
+      "id": "link-0",
+      "bounds": {
+        "x": 401,
+        "y": 358,
+        "width": 31,
+        "height": 20
+      },
+      "z_index": 12,
+      "component_type": "connector-arrow",
+      "design_tokens": [
+        "ink-primary"
+      ],
+      "semantic_link": [
+        "node-intake",
+        "node-package"
+      ]
+    },
+    {
+      "layer": "art",
+      "id": "node-package",
+      "bounds": {
+        "x": 433,
+        "y": 337,
+        "width": 181,
+        "height": 61
+      },
+      "z_index": 11,
+      "component_type": "container-box",
+      "design_tokens": [
+        "ink-primary",
+        "stroke-2"
+      ],
+      "semantic_link": [
+        "node-label-1"
+      ]
+    },
+    {
+      "layer": "text",
+      "id": "node-label-1",
+      "bounds": {
+        "x": 448,
+        "y": 353,
+        "width": 150,
+        "height": 33
+      },
+      "z_index": 20,
+      "content": "PACKAGE",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-18"
+    },
+    {
+      "layer": "text",
+      "id": "node-note-1",
+      "bounds": {
+        "x": 436,
+        "y": 408,
+        "width": 177,
+        "height": 60
+      },
+      "z_index": 20,
+      "content": "STRUCTURE CARGO WITH METADATA AND CONSTRAINTS.",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-12"
+    },
+    {
+      "layer": "art",
+      "id": "link-1",
+      "bounds": {
+        "x": 619,
+        "y": 358,
+        "width": 31,
+        "height": 20
+      },
+      "z_index": 12,
+      "component_type": "connector-arrow",
+      "design_tokens": [
+        "ink-primary"
+      ],
+      "semantic_link": [
+        "node-package",
+        "node-route"
+      ]
+    },
+    {
+      "layer": "art",
+      "id": "node-route",
+      "bounds": {
+        "x": 651,
+        "y": 337,
+        "width": 181,
+        "height": 61
+      },
+      "z_index": 11,
+      "component_type": "container-box",
+      "design_tokens": [
+        "ink-primary",
+        "stroke-2"
+      ],
+      "semantic_link": [
+        "node-label-2"
+      ]
+    },
+    {
+      "layer": "text",
+      "id": "node-label-2",
+      "bounds": {
+        "x": 666,
+        "y": 353,
+        "width": 150,
+        "height": 33
+      },
+      "z_index": 20,
+      "content": "ROUTE",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-18"
+    },
+    {
+      "layer": "text",
+      "id": "node-note-2",
+      "bounds": {
+        "x": 654,
+        "y": 408,
+        "width": 177,
+        "height": 60
+      },
+      "z_index": 20,
+      "content": "DETERMINE THE HANDLING PATH AND REQUIRED CONDITIONS.",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-12"
+    },
+    {
+      "layer": "art",
+      "id": "link-2",
+      "bounds": {
+        "x": 837,
+        "y": 358,
+        "width": 31,
+        "height": 20
+      },
+      "z_index": 12,
+      "component_type": "connector-arrow",
+      "design_tokens": [
+        "ink-primary"
+      ],
+      "semantic_link": [
+        "node-route",
+        "node-inspect"
+      ]
+    },
+    {
+      "layer": "art",
+      "id": "node-inspect",
+      "bounds": {
+        "x": 869,
+        "y": 337,
+        "width": 181,
+        "height": 61
+      },
+      "z_index": 11,
+      "component_type": "container-box",
+      "design_tokens": [
+        "ink-primary",
+        "stroke-2"
+      ],
+      "semantic_link": [
+        "node-label-3"
+      ]
+    },
+    {
+      "layer": "text",
+      "id": "node-label-3",
+      "bounds": {
+        "x": 884,
+        "y": 353,
+        "width": 150,
+        "height": 33
+      },
+      "z_index": 20,
+      "content": "INSPECT",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-18"
+    },
+    {
+      "layer": "text",
+      "id": "node-note-3",
+      "bounds": {
+        "x": 872,
+        "y": 408,
+        "width": 177,
+        "height": 60
+      },
+      "z_index": 20,
+      "content": "VERIFY IDENTITY, PROVENANCE, QUALITY AND COMPLIANCE.",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-12"
+    },
+    {
+      "layer": "art",
+      "id": "link-3",
+      "bounds": {
+        "x": 1055,
+        "y": 358,
+        "width": 31,
+        "height": 20
+      },
+      "z_index": 12,
+      "component_type": "connector-arrow",
+      "design_tokens": [
+        "ink-primary"
+      ],
+      "semantic_link": [
+        "node-inspect",
+        "node-deliver"
+      ]
+    },
+    {
+      "layer": "art",
+      "id": "node-deliver",
+      "bounds": {
+        "x": 1087,
+        "y": 337,
+        "width": 181,
+        "height": 61
+      },
+      "z_index": 11,
+      "component_type": "container-box",
+      "design_tokens": [
+        "ink-primary",
+        "stroke-2"
+      ],
+      "semantic_link": [
+        "node-label-4"
+      ]
+    },
+    {
+      "layer": "text",
+      "id": "node-label-4",
+      "bounds": {
+        "x": 1102,
+        "y": 353,
+        "width": 150,
+        "height": 33
+      },
+      "z_index": 20,
+      "content": "DELIVER",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-18"
+    },
+    {
+      "layer": "text",
+      "id": "node-note-4",
+      "bounds": {
+        "x": 1090,
+        "y": 408,
+        "width": 177,
+        "height": 60
+      },
+      "z_index": 20,
+      "content": "RELEASE VERIFIED WORK TO THE DESTINATION.",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-12"
+    },
+    {
+      "layer": "art",
+      "id": "verification-diamond",
+      "bounds": {
+        "x": 1324,
+        "y": 334,
+        "width": 72,
+        "height": 72
+      },
+      "z_index": 11,
+      "component_type": "verification-diamond",
+      "design_tokens": [
+        "ink-primary",
+        "stroke-2"
+      ],
+      "semantic_link": [
+        "node-inspect"
+      ]
+    },
+    {
+      "layer": "text",
+      "id": "verification-caption",
+      "bounds": {
+        "x": 1301,
+        "y": 411,
+        "width": 144,
+        "height": 50
+      },
+      "z_index": 20,
+      "content": "VERIFIED DELIVERY\nPROOF OF DELIVERY",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-12"
+    },
+    {
+      "layer": "art",
+      "id": "failure-arrow",
+      "bounds": {
+        "x": 1070,
+        "y": 484,
+        "width": 214,
+        "height": 20
+      },
+      "z_index": 11,
+      "component_type": "connector-arrow",
+      "design_tokens": [
+        "alert-orange"
+      ],
+      "semantic_link": [
+        "verification-diamond",
+        "hold-box"
+      ]
+    },
+    {
+      "layer": "art",
+      "id": "hold-box",
+      "bounds": {
+        "x": 1117,
+        "y": 505,
+        "width": 139,
+        "height": 51
+      },
+      "z_index": 11,
+      "component_type": "container-box",
+      "design_tokens": [
+        "alert-orange",
+        "stroke-2"
+      ],
+      "semantic_link": [
+        "hold-label"
+      ]
+    },
+    {
+      "layer": "text",
+      "id": "hold-label",
+      "bounds": {
+        "x": 1144,
+        "y": 517,
+        "width": 90,
+        "height": 27
+      },
+      "z_index": 20,
+      "content": "HOLD",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-24"
+    },
+    {
+      "layer": "text",
+      "id": "hold-instructions",
+      "bounds": {
+        "x": 1282,
+        "y": 500,
+        "width": 251,
+        "height": 75
+      },
+      "z_index": 20,
+      "content": "REVIEW REQUIRED\nADDITIONAL EVIDENCE\nCLARIFY CONSTRAINTS\nHUMAN DECISION",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-12"
+    },
+    {
+      "layer": "art",
+      "id": "panel-rule",
+      "bounds": {
+        "x": 55,
+        "y": 592,
+        "width": 1490,
+        "height": 1
+      },
+      "z_index": 10,
+      "component_type": "horizontal-rule",
+      "design_tokens": [
+        "ink-muted"
+      ]
+    },
+    {
+      "layer": "art",
+      "id": "panel-0",
+      "bounds": {
+        "x": 55,
+        "y": 617,
+        "width": 355,
+        "height": 174
+      },
+      "z_index": 11,
+      "component_type": "container-box",
+      "design_tokens": [
+        "ink-muted",
+        "stroke-1"
+      ],
+      "semantic_link": [
+        "panel-head-0",
+        "panel-body-0"
+      ]
+    },
+    {
+      "layer": "text",
+      "id": "panel-head-0",
+      "bounds": {
+        "x": 70,
+        "y": 633,
+        "width": 326,
+        "height": 25
+      },
+      "z_index": 20,
+      "content": "01 IDENTIFY THE CARGO",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-16"
+    },
+    {
+      "layer": "text",
+      "id": "panel-body-0",
+      "bounds": {
+        "x": 70,
+        "y": 681,
+        "width": 325,
+        "height": 96
+      },
+      "z_index": 20,
+      "content": "The request, its source, intended recipient, and handling destination.",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "serif-20"
+    },
+    {
+      "layer": "art",
+      "id": "panel-1",
+      "bounds": {
+        "x": 432,
+        "y": 617,
+        "width": 355,
+        "height": 174
+      },
+      "z_index": 11,
+      "component_type": "container-box",
+      "design_tokens": [
+        "ink-muted",
+        "stroke-1"
+      ],
+      "semantic_link": [
+        "panel-head-1",
+        "panel-body-1"
+      ]
+    },
+    {
+      "layer": "text",
+      "id": "panel-head-1",
+      "bounds": {
+        "x": 447,
+        "y": 633,
+        "width": 326,
+        "height": 25
+      },
+      "z_index": 20,
+      "content": "02 RECORD THE EVIDENCE",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-16"
+    },
+    {
+      "layer": "text",
+      "id": "panel-body-1",
+      "bounds": {
+        "x": 447,
+        "y": 681,
+        "width": 325,
+        "height": 96
+      },
+      "z_index": 20,
+      "content": "What is known, where it came from, and what remains uncertain.",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "serif-20"
+    },
+    {
+      "layer": "art",
+      "id": "panel-2",
+      "bounds": {
+        "x": 809,
+        "y": 617,
+        "width": 355,
+        "height": 174
+      },
+      "z_index": 11,
+      "component_type": "container-box",
+      "design_tokens": [
+        "ink-muted",
+        "stroke-1"
+      ],
+      "semantic_link": [
+        "panel-head-2",
+        "panel-body-2"
+      ]
+    },
+    {
+      "layer": "text",
+      "id": "panel-head-2",
+      "bounds": {
+        "x": 824,
+        "y": 633,
+        "width": 326,
+        "height": 25
+      },
+      "z_index": 20,
+      "content": "03 VERIFY THE RESULT",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-16"
+    },
+    {
+      "layer": "text",
+      "id": "panel-body-2",
+      "bounds": {
+        "x": 824,
+        "y": 681,
+        "width": 325,
+        "height": 96
+      },
+      "z_index": 20,
+      "content": "Compare delivered work with the declared standard and ground truth.",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "serif-20"
+    },
+    {
+      "layer": "art",
+      "id": "panel-3",
+      "bounds": {
+        "x": 1186,
+        "y": 617,
+        "width": 355,
+        "height": 174
+      },
+      "z_index": 11,
+      "component_type": "container-box",
+      "design_tokens": [
+        "ink-muted",
+        "stroke-1"
+      ],
+      "semantic_link": [
+        "panel-head-3",
+        "panel-body-3"
+      ]
+    },
+    {
+      "layer": "text",
+      "id": "panel-head-3",
+      "bounds": {
+        "x": 1201,
+        "y": 633,
+        "width": 326,
+        "height": 25
+      },
+      "z_index": 20,
+      "content": "04 RELEASE BY PERMISSION",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-16"
+    },
+    {
+      "layer": "text",
+      "id": "panel-body-3",
+      "bounds": {
+        "x": 1201,
+        "y": 681,
+        "width": 325,
+        "height": 96
+      },
+      "z_index": 20,
+      "content": "Human authorization—not model confidence—controls final release.",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "serif-20"
+    },
+    {
+      "layer": "art",
+      "id": "footer-rule",
+      "bounds": {
+        "x": 55,
+        "y": 825,
+        "width": 1490,
+        "height": 2
+      },
+      "z_index": 10,
+      "component_type": "horizontal-rule",
+      "design_tokens": [
+        "ink-primary",
+        "stroke-2"
+      ]
+    },
+    {
+      "layer": "text",
+      "id": "footer-left",
+      "bounds": {
+        "x": 55,
+        "y": 842,
+        "width": 805,
+        "height": 25
+      },
+      "z_index": 20,
+      "content": "DATA IS CARGO. VERIFICATION IS PROOF OF DELIVERY.",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-12"
+    },
+    {
+      "layer": "text",
+      "id": "footer-right",
+      "bounds": {
+        "x": 1120,
+        "y": 842,
+        "width": 425,
+        "height": 25
+      },
+      "z_index": 20,
+      "content": "CANDIDATE · NOT A RELEASE",
+      "source_reference": "REFERENCE_COPY_PENDING",
+      "typography": "mono-bold-12"
+    }
+  ],
+  "verification": {
+    "tolerance_px": 5,
+    "policy": "HOLD_UNTIL_REFERENCE_AUTHENTICATED",
+    "visual_fidelity": "NOT_ESTABLISHED"
+  }
+}
