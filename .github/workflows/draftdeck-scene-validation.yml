@@ -1,0 +1,40 @@
+name: DraftDeck Scene Manifest Validation Only
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/book-to-skills-intake-candidate]
+    paths:
+      - 'skills/draftdeck/scene-manifest-001/**'
+      - '.github/workflows/draftdeck-scene-validation.yml'
+permissions:
+  contents: read
+jobs:
+  validate-scene:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    defaults:
+      run:
+        working-directory: skills/draftdeck/scene-manifest-001
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.24'
+          cache: false
+      - name: Compile validator
+        run: go build ./...
+      - name: Run negative validation tests
+        run: go test -count=1 -v ./...
+      - name: Check inventory completeness and provenance HOLD
+        run: |
+          python3 - <<'PY'
+          import json,pathlib
+          m=json.loads(pathlib.Path("day-zero-manifest-001.json").read_text())
+          ids=[e["id"] for e in m["elements"]]
+          assert len(ids)==len(set(ids))
+          assert len(ids)>=40
+          assert m["reference"]["sha256"] is None
+          assert m["source"]["sha256"] is None
+          assert {e["layer"] for e in m["elements"]}=={"story","art","text"}
+          print("INVENTORY STRUCTURE VERIFIED; SOURCE AUTHENTICATION HOLD")
+          PY
