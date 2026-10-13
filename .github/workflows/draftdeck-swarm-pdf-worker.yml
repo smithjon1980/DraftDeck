@@ -1,0 +1,48 @@
+name: BOSS Swarm Real PDF Worker Trial
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/book-to-skills-intake-candidate]
+    paths:
+      - 'experiments/boss-agent-swarm-001/**'
+      - '.github/workflows/draftdeck-swarm-pdf-worker.yml'
+permissions:
+  contents: read
+jobs:
+  render-pdf:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: experiments/boss-agent-swarm-001
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated dependencies
+        run: npm install --ignore-scripts --no-audit --no-fund
+      - name: Install headless Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run mock routing tests
+        run: npm test
+      - name: Render genuine Chromium PDF
+        run: node src/build-demo.mjs
+      - name: Verify PDF file and text
+        run: |
+          test -s output/day-zero.pdf
+          head -c 5 output/day-zero.pdf | grep -q '%PDF-'
+          python3 - <<'PY'
+          import json,pathlib
+          m=json.loads(pathlib.Path("output/day-zero.pdf.manifest.json").read_text())
+          assert m["status"] == "BUILT_UNVERIFIED_VISUAL"
+          assert m["bytes"] > 5000
+          print("PDF binary + SHA256 manifest PASS:",m["sha256"])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: boss-swarm-real-pdf-trial
+          path: |
+            experiments/boss-agent-swarm-001/output/day-zero.pdf
+            experiments/boss-agent-swarm-001/output/day-zero.pdf.manifest.json
+          retention-days: 7
