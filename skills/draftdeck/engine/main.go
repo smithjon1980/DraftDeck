@@ -61,7 +61,8 @@ func run(scenePath,out,chrome string)error{
  if s.Phase==3{return errors.New("PHASE_3_REQUIRES_SEPARATE_INDEPENDENT_QA_AND_HUMAN_APPROVAL")}
  if s.Phase==1{ev.Status="P1_BUILD_CANDIDATE"}else{ev.Status="P2_COMPOSITION_CANDIDATE"}
  ev.Tests=append(ev.Tests,"SCENE_CONTRACT_VALID","LAYER_SCOPE_VALID","SVG_SOURCE_EXCLUDED")
- t,err:=template.ParseFiles("templates/page.html");if err!=nil{return err}
+ templatePath:="templates/page.html";if s.Phase==2{templatePath="templates/phase2.html"}
+ t,err:=template.ParseFiles(templatePath);if err!=nil{return err}
  htmlPath:=filepath.Join(out,"day-zero.html");file,err:=os.Create(htmlPath);if err!=nil{return err}
  if err=t.Execute(file,view);err!=nil{file.Close();return err};if err=file.Close();err!=nil{return err}
  if chrome==""{chrome="google-chrome"}
