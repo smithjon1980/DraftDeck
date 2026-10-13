@@ -1,0 +1,53 @@
+name: BOSS Go Tailwind Chromium Trial
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/book-to-skills-intake-candidate]
+    paths:
+      - 'experiments/boss-go-tailwind-001/**'
+      - '.github/workflows/draftdeck-go-tailwind-trial.yml'
+permissions:
+  contents: read
+jobs:
+  go-tailwind-chromium:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: experiments/boss-go-tailwind-001
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.24'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Compile Tailwind CSS
+        run: |
+          npm install --no-save --no-audit --no-fund tailwindcss @tailwindcss/cli
+          mkdir -p output
+          npx @tailwindcss/cli -i input.css -o output/styles.css --minify
+      - uses: browser-actions/setup-chrome@v2
+        id: chrome
+      - name: Render using Go and Chromium
+        env:
+          CHROME_BIN: ${{ steps.chrome.outputs.chrome-path }}
+        run: go run main.go
+      - name: Validate PDF and forbid SVG files
+        run: |
+          python3 - <<'PY'
+          import pathlib,json
+          root=pathlib.Path('output')
+          assert (root/'day-zero.pdf').read_bytes()[:5]==b'%PDF-'
+          manifest=json.loads((root/'manifest.json').read_text())
+          assert manifest['status']=='AWAITING_HUMAN_VISUAL_REVIEW'
+          assert not list(root.rglob('*.svg'))
+          assert 'grid-cols-4' in (root/'day-zero.html').read_text()
+          print('GO TAILWIND PDF STRUCTURAL PASS — VISUAL QA PENDING')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: boss-go-tailwind-chromium-001
+          path: experiments/boss-go-tailwind-001/output/
+          retention-days: 7
