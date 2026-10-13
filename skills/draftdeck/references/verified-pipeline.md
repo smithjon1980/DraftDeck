@@ -1,48 +1,33 @@
-# Verified HTML → Canva pipeline
+# DraftDeck — Phase-Gated Pipeline and Evidence (candidate rebuild)
 
-## Demonstrated route: 2026-10-05
+## What has been established
+- Earlier HTML → Canva experimentation demonstrated some editable elements and highlighted serious visual-fidelity problems. It is **historical research only**; Canva is not in the current renderer.
+- Node/Playwright/Chromium produced genuine PDFs in prior isolated candidate trials; those do not establish a live generative swarm.
+- **Go + Tailwind + Chromium GitHub Actions run 38345114996**, job 115124603718, completed with all job steps successful; generated PDF reported 54,822 bytes and SHA-256 `da6ef261573b1bed2d980dd8eedf4565402d327e32d23f6aa2b859ad58b1f375`; a CI artifact was uploaded. User inspected `day-zero.pdf` and classified it as a **low-fidelity wireframe because the Story and Art layers were missing**.
+- Those checks establish **Phase 1 execution**, NOT high-fidelity completion, independent visual reference acceptance, fully autonomous agents, or durable delivery.
 
-A 15-page raster reference document was used to validate the layered import method. The test established a stable workflow for converting a visual reference into static HTML/CSS with live text and separate artwork layers.
+## Phase 1: structure / LOW FIDELITY
+Test question: Can Go create semantic HTML from governed source data, Tailwind compile styles, and Chromium export a structurally valid, single-page 16:9 PDF?
+Evidence: `day-zero.html`, `styles.css`, `day-zero.pdf`, `manifest.json`, GitHub Actions logs, provenance, screenshots.
+Decision: **P1_TECHNICAL_PASS** when checks pass; **P1_HOLD** when they fail. Retain a visual review record; do not invent a Story asset.
 
-1. Render the source page and inspect it visually.
-2. Separate artwork from titles, dimensions, annotations, stamps, and title-block wording.
-3. Save the artwork as an independent asset.
-4. Compose the page in HTML/CSS with separate live text elements and explicit page dimensions.
-5. Import the local HTML through Canva's file-import route.
-6. Inspect the imported page, layer records, and rendered thumbnail.
+## Phase 2: composition / MEDIUM TO HIGH FIDELITY CANDIDATE
+Test question: Can independently scoped Story, Art, and Text specialist workers produce assets and components that Go assembles without cross-layer modification?
+Story = PNG/WebP, text-free. Art = HTML/CSS editable diagram and spatial structure, no SVG. Text = exact semantic HTML/structured copy. Assembly = deterministic Go template/Tailwind CSS. PDF/preview = Chromium.
+Evidence: scene contract, role assignments, independent layer hashes, visible composite, text edit/select test, repair ledger. Must inspect resulting actual page. **P2_HOLD** until all required layers are present.
 
-## Evidence
+## Phase 3: QA / HIGH FIDELITY RELEASE
+Test question: Does output match reference sufficiently, survive PDF QA, and qualify for approved, durable delivery?
+Evidence: reference-versus-output screenshots, exact-copy report, contrast/clipping/overflow checks, text extraction, copyright/asset rights, integrity hashes, human approval and persistent storage read-back.
+**RELEASE_HOLD** until every required gate passes.
 
-The demonstrated route verified:
-- 1920 × 1080 page dimensions;
-- independent rich-text elements;
-- separate image assets;
-- adapter-side editability flags;
-- preserved rotation/border behavior in the rendered preview.
+## Forbidden paths and meanings
+- NO SVG files, tags, icons, format conversions, or intermediate exports.
+- No React build/runtime, Canva conversion, or PowerPoint.
+- Do not treat CSS-drawn art as a completed generated illustration if Story is absent.
+- Do not label a GitHub Actions green check as visual acceptance.
+- Do not label a seven-day Actions artifact link as persistent storage.
+- Do not label deterministic fixture nodes 'live AI agents'.
 
-The current Logistics Framework flagship is a semantic and artwork migration of the reference implementation and must be re-verified in Canva before its own adapter status is marked current.
-
-## Boundaries of verification
-
-The earlier route did not establish font-perfect equivalence, native SVG preservation, or a full edit/save/reopen round trip. A technically editable import can still fail visual intent.
-
-An earlier test with many live text elements failed because the design became a generic boxes-and-lines composition. Do not treat layer count as proof of fidelity.
-
-## Stable import pattern
-
-```html
-<section data-document-role="page" data-label="Slide title"
-         style="position:relative;width:1920px;height:1080px;overflow:hidden;background:#FFFFFF">
-  <img src="data:image/png;base64,..." alt="Text-free artwork"
-       style="position:absolute;left:0;top:0;width:1920px;height:1080px">
-  <div style="position:absolute;left:80px;top:110px;font-family:Georgia;font-size:56px;font-weight:bold">
-    Editable action title
-  </div>
-</section>
-```
-
-## Logistics Framework style route
-
-Follow the selected reference together with the current project standard: pure white `#FFFFFF`, near-black technical ink, burnt orange `#B34700`, heavy serif action titles, uppercase monospace metadata, line-built diagrams/hatching, and logistics-native component semantics.
-
-The active semantic model is documented in `doctrine/logistics-framework.md`. Do not reintroduce predecessor travel/aviation metaphors.
+## Migration guidance
+Existing `skills/draftdeck/scripts/build_slide.py` was a Canva/SVG-capable Python experiment. It is retired from production. The Go experiment remains **candidate**, not automatically a production replacement. The integration of true Story/Art/Text workers in Go and full visual QA remains open.

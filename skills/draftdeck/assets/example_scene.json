@@ -1,11 +1,40 @@
 {
-  "title": "Layered HTML syntax fixture",
-  "width": 1920,
-  "height": 1080,
-  "background": "#FFFFFF",
-  "layers": [
-    {"type": "border", "x": 40, "y": 40, "width": 1840, "height": 1000, "stroke": 1, "color": "#1A1A1A"},
-    {"type": "text", "x": 80, "y": 75, "text": "// EDITABLE SLIDE", "font": "Courier New", "size": 24, "color": "#B34700"},
-    {"type": "text", "x": 80, "y": 125, "text": "Replace with the reference's action title", "font": "Georgia", "size": 56, "weight": "bold"}
-  ]
+  "schema_version": "draftdeck-phase-gates-v1",
+  "status": "CANDIDATE",
+  "phase": "P1_LOW_FIDELITY_WIREFRAME",
+  "run_id": "go-tailwind-001",
+  "canvas": {
+    "width": 1600,
+    "height": 900,
+    "background": "#FFFFFF"
+  },
+  "source": {
+    "ref": "UNAUTHENTICATED_SAMPLE_ONLY",
+    "verification": "NOT_ESTABLISHED"
+  },
+  "story": {
+    "status": "NOT_PRODUCED_IN_PHASE_1",
+    "allowed_extensions": [
+      ".png",
+      ".webp"
+    ]
+  },
+  "art": {
+    "status": "NOT_PRODUCED_IN_PHASE_1",
+    "renderer": "HTML_CSS_COMPONENTS"
+  },
+  "text": {
+    "status": "STRUCTURED_EDITABLE_HTML",
+    "title": "From AI Consumer to Governed Operator."
+  },
+  "renderer": {
+    "controller": "Go",
+    "layout": "Tailwind CSS",
+    "output": "Chromium PDF",
+    "svg": "FORBIDDEN"
+  },
+  "release": {
+    "state": "HOLD",
+    "reason": "Requires Phase 2 composition and Phase 3 independent QA"
+  }
 }
