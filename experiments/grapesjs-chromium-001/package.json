@@ -1,0 +1,22 @@
+{
+  "name": "draftdeck-grapesjs-chromium-trial",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "pdf": "node scripts/export-pdf.mjs"
+  },
+  "dependencies": {
+    "grapesjs": "^0.22.0",
+    "@grapesjs/react": "^2.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0",
+    "playwright": "^1.56.0"
+  }
+}
