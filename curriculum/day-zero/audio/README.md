@@ -32,6 +32,13 @@ The shared [working Day Zero Audio Competency Rubric v0.1](COMPETENCY_RUBRIC_WOR
 
 Before Episode 02 moves from QUEUED to ACTIVE, record evidence that Episode 01's approved script has been produced and reviewed at its intended quality level, together with an explicit human instruction to begin Episode 02. Reuse what the audio manufacturing pilot actually proves; don't claim TTS/GPT API performance in advance. A queue entry is not a scheduled automation or background execution.
 
+## Immediate podcast-manufacturing research and Gemini handoff
+
+- [Episode 01 five-minute test and manufacturing plan](EPISODE_01_MANUFACTURING_PLAN_CANDIDATE.md) integrates Gemini's Scribe → human script lock → TTS → independent QA recommendation, with explicit status and correct cost units.
+- [Candidate bioscillate-podcast-planner skill](../../../skills/bioscillate-podcast-planner/SKILL.md) is a documented **derivative of Gemini's user-relayed report**, not a verified copy of Gemini's original saved skill. It is not registered in the fixed-count `skills/metadata.json` and has no runtime implementation.
+- [Gemini sync read-first memo](GEMINI_SYNC_2026-10-13.md) requires Gemini to verify real GitHub branch/HEAD access and compares everything changed during side conversations.
+- [User-relayed Gemini response case RL-003](../../../response-library/cases/RL-003-gemini-podcast-manufacturing-report.md) distinguishes the actual prompt/response relationship from our adapted documentation.
+
 ## Supporting research
 
 - [Prompt Library](../../../prompt-library/README.md)
