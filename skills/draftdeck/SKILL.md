@@ -1,24 +1,58 @@
 ---
 name: draftdeck
-description: Canonical phase-gated instructional visual artifact builder: Go supervisor/assembly, Tailwind CSS, Chromium PDF; Story PNG/WebP, Art HTML/CSS, Text semantic HTML; no SVG or React, no Canva pipeline.
+description: Governed Dual-Spark instructional visual artifact workflow: human-approved NotebookLM-to-composite ideation, supervising-agent Scene Manifest planning, Go/Tailwind/Chromium deterministic assembly, independently verified visual fidelity and human release. Story PNG/WebP, Art HTML/CSS, Text semantic HTML; no SVG, React or Canva execution route.
 ---
 
-# DraftDeck — Canonical Production Process
+# DraftDeck — Canonical Dual-Spark Production Process
 
-**Candidate, not released.** Phase 1 low-fidelity structure execution has passed prior GitHub Actions trials. Phase 2 requires an actual raster Story asset and an Art component. Phase 3 is independent high-fidelity QA plus explicit human release authority.
+**Status: CANDIDATE / PRODUCTION RELEASE HOLD.** This skill describes the intended pipeline; documentation does not prove a working agent runtime, schema validation, reference admission, visual fidelity or human release. The currently verified low-fidelity wireframe milestone is historical technical evidence, not visual acceptance.
 
-## One process — no historical fallback
-Only the code in `skills/draftdeck/engine/` and workflow `.github/workflows/draftdeck-canonical.yml` is the *active DraftDeck execution candidate*. Superseded experiments are not fallback implementations. No SVG source, output, conversion, icons or intermediate files; no React, Canvas flattening, Canva or PowerPoint.
+## One production route; no historical fallback
+The active executable candidate is `skills/draftdeck/engine/` with `.github/workflows/draftdeck-canonical.yml`. Superseded experiments are not fallback implementations. Production constraints: **no SVG in source, output, conversion, icons or intermediates; no React, Canvas-flattened teaching text, Canva or PowerPoint.** Use Go `html/template`, Tailwind CSS, and Chromium PDF export. Story uses raster PNG/WebP, Art uses permitted semantic HTML/CSS, and Text uses native semantic HTML.
 
-## Lifecycle
-**Phase 1 / WIREFRAME:** supervisor checks scene contract; Text layer establishes live headings, copy, page geometry and a structural PDF. Story and Art may be missing. Structural pass does NOT constitute visual approval.
+## Dual-Spark distinction: designing is not manufacturing
+- **Spark 01 / Reference A:** the genuine NotebookLM instructional image, grounded in authoritative course material (**Reference C**).
+- **Spark 02 / Reference B:** a **fully composed visual reimagination** produced in the learner's chosen image-capable AI tool from A and the creative prompt. Creative generation can include provisional typography and illustrative elements; do not impose HTML layer-manufacturing constraints on this image.
+- **Reference D:** a written creative handoff explaining teaching objective, story/metaphor, visual hierarchy and relationships, source-preserving choices, creative deltas and unknowns.
+- **Human selection:** the operator examines and explicitly accepts or rejects B and D. Silence is not approval.
+- **Production:** the supervising agent receives **A, approved B, authenticated C and approved D** and compiles a scene plan/manifest; the separate workers manufacture the scoped components. B is the approved *visual target*, **not** an acceptable flattened final slide. C remains the *authority for exact instructional copy*; any words in B are provisional unless independently supported by C.
 
-**Phase 2 / LAYERED COMPOSITION:** supervisor receives one genuine PNG/WebP Story asset, HTML/CSS Art components and semantic Text content; treats worker outputs as separately scoped, immutable, provenance-bearing inputs. No autonomous image model or task-dispatch service is presently wired into the engine. Missing required layers or invalid assets → HOLD. Render via Go html/template + Tailwind + Chromium.
+The learner acts as creative director during reimagination and as systems architect during governed manufacturing. This is a teaching model and not proof that automated workers are wired into the repository.
 
-**Phase 3 / HIGH FIDELITY:** independent reference comparison, overflow and clipping tests, exact source text, contrast and visual inspection, hashes, licensing, storage read-back, and explicit human release. Never self-certify. Production RELEASE_HOLD until proof exists.
+## Phase 0 — Ideation and source admission (outside the engine)
+**Input:** authentic A and C, with byte-level SHA-256 and provenance records. A NotebookLM image or screenshot must be the genuine source, not a previously generated low-fidelity DraftDeck PDF, extrapolated description or unrelated reference. Record filename, byte hash, publisher/author or Notebook provenance, source-text/version, rights, date and permitted use.
 
-## Execution
-GitHub Actions is the candidate execution environment. `engine/main.go` reads a structured JSON scene, performs layer separation and exclusions, assembles deterministic HTML, invokes Chromium to write PDF, and creates a hash evidence manifest. Run `go test ./...` and compile Tailwind CSS first; use `scenes/phase1.json` for the verified wireframe milestone.
+**Action:** run [the learner's creative prompt](dual-spark-handoff/PROMPTS.md) through a selected image-capable tool; retain original A, generated B, source C, and brief D as four distinct files. Document changes and unsupported copy. Obtain human acceptance of **B and D**.
 
-## Inspector handoff
-Read `GEMINI_INSPECTION.md`, audit **all** canonical files, inspect the actual PDF artifact, and report supported PASS/FAIL/NOT_ESTABLISHED. Do not interpret a successful workflow as visual fidelity or operational autonomous agents. Do not publish or overwrite on inspection.
+**Gate:** authenticated A/C, recorded B/D and affirmative human creative approval before manufacturing planning. If A or C is missing or unverified, keep **SOURCE_ADMISSION_HOLD**; preparing templates and candidate architecture is allowed, but do not claim that Spark 01 executed.
+
+## Phase 1 — Supervising-agent scene planning (no artistic invention)
+**Input:** the four admitted references and the operator's constraints.
+
+**Action:** inspect A and B visually; ground teaching meaning and exact required text against C; use D to map interpretation decisions. The supervisor outputs a machine-readable scene manifest plus a claim/evidence ledger and worker contracts. Do not delegate freeform restyling. Record common coordinate system (candidate manifest currently 1600×900 px, top-left origin), bounded element boxes, IDs, permitted design tokens, semantic relationships, z-index, exact source-copy mapping, asset references with hashes and reference versions.
+
+**Schema gate:** the desired contract is `scene-schema-v1.json`; **that file was not present in `scene-manifest-001/` at the 2026-10-13 audit**. The extant `scene-manifest-001/validator.go` checks a bounded subset (1600×900 containment, known art tokens/components, ID/link uniqueness, reserved layer z-index bands, and byte-level hashes for the reference and source files when supplied). Its tests are not proof of complete JSON Schema conformance, image-text separation, semantic validity, actual visual fidelity or production readiness. Do not describe the manifest as fully validated against an unavailable specification.
+
+**Gate:** a real versioned schema and validator implementation must agree and pass negative as well as positive tests; authenticated file hashes must resolve against real bytes; worker scopes and exact source copy must be accepted; otherwise **MANIFEST_HOLD**. Existing `scene-manifest-001/day-zero-manifest-001.json` is **CANDIDATE_NOT_AUTHENTICATED**: approximated coordinates and null reference/source hashes are not admitted ground truth.
+
+## Phase 2 — Worker manufacturing and deterministic assembly
+The supervisor provides each specialist only the necessary bounded contract and does not itself paint or render.
+
+- **STORY worker:** creates/identifies separated PNG/WebP illustration assets, free from baked instructional text in production. Log file path, bytes, hashes and provenance. Verify actual raster type, not filename only.
+- **ART worker:** produces allowed HTML/CSS geometry, connectors, annotations and design components consistent with B, constrained by permitted tokens and approved component registry. No SVG.
+- **TEXT worker:** produces native, selectable semantic HTML containing exact source-grounded copy from C, with IDs, hierarchy, provenance and declared geometry. No unsupported rewritten image text.
+
+The Go engine validates inputs to the extent implemented, assembles HTML through templates and Tailwind, and uses Chromium to render a PDF with a content/hash evidence record. The existence of role definitions does **not** establish an operational multi-agent dispatcher. Invalid or missing assets, copy or provenance → **ASSEMBLY_HOLD**.
+
+## Phase 3 — Independent verification and human release
+Independent reviewer compares the actual rendered output with **B for approved narrative, geometry, hierarchy and appearance**, **C for exact facts/copy**, and **A for retained teaching objective and source-boundary fidelity**. Inspect actual page(s), readability, text selection, clipping/overflow, contrasts, image separation, source SHA-256, asset rights, output hash and evidence storage/read-back. Record numerical tolerances **only when defined in the approved verification contract**; do not fabricate pixel-match scores or claim pixel-identical style.
+
+Record each gate as PASS / FAIL / NOT_ESTABLISHED and link to actual evidence. Build success, JSON parsing, Go unit tests, a valid PDF signature or a pleasant reference image **never** independently establish fidelity. Gemini may critique and improve the candidate process but is not a replacement for human release. **RELEASE_HOLD** persists until explicit human authorization.
+
+## Historical milestone mapping
+The previously named **Phase 1 / WIREFRAME** is retained as an earlier demonstrated infrastructure milestone. It is **not** the newly defined Phase 1 **Scene Planning**, and must not be promoted to the visual master. Existing low-fidelity Phase 2 fixtures also do not establish autonomous worker execution or reference correspondence.
+
+## Current execution and inspection
+For active code, use `engine/main.go`, templates, `engine/scenes/`, and the workflow `.github/workflows/draftdeck-canonical.yml`. Run `go test ./...`, inspect actual source, engine and PDF bytes, and test with authentically admitted inputs. For candidate scene extraction, read `scene-manifest-001/README.md` and `validator.go`; do not assume the manifest and engine share the same fully implemented schema.
+
+See [Dual-Spark handoff](dual-spark-handoff/README.md) for the exact artifact packet and [copyable prompts](dual-spark-handoff/PROMPTS.md) for the learner and supervisor. Give Gemini `GEMINI_INSPECTION.md` and independent evidence. Do not publish, merge, deploy or overwrite on inspection alone.
