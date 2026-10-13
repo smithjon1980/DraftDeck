@@ -56,3 +56,15 @@ The previously named **Phase 1 / WIREFRAME** is retained as an earlier demonstra
 For active code, use `engine/main.go`, templates, `engine/scenes/`, and the workflow `.github/workflows/draftdeck-canonical.yml`. Run `go test ./...`, inspect actual source, engine and PDF bytes, and test with authentically admitted inputs. For candidate scene extraction, read `scene-manifest-001/README.md` and `validator.go`; do not assume the manifest and engine share the same fully implemented schema.
 
 See [Dual-Spark handoff](dual-spark-handoff/README.md) for the exact artifact packet and [copyable prompts](dual-spark-handoff/PROMPTS.md) for the learner and supervisor. Give Gemini `GEMINI_INSPECTION.md` and independent evidence. Do not publish, merge, deploy or overwrite on inspection alone.
+
+## Mandatory four-option Spark 02 gate — audit amendment 2026-10-13
+
+The image-capable model must return **four distinct, independently addressable candidate images**, A/B/C/D, based on the **same authenticated NotebookLM page A** and its specific teaching objective. A collage/contact sheet of four thumbnail designs is not four output assets. A visually plausible image of the wrong source, or an infographic about DraftDeck itself, is **REJECTED_WRONG_SUBJECT** and must not be counted as a creative candidate.
+
+Each candidate must have its own recorded bytes, SHA-256 and concise visual rationale. Archive the exact operator-visible creative prompt and generator/tool identity, generated candidates, all failures, prompt iteration and reference-page identity. Do not claim access to a hidden provider prompt or random seed where not supplied.
+
+**Human creative approval requires an explicit selection and rationale**: identify the chosen candidate; why its hero, hierarchy, visual relationships and narrative teach the specific lesson better than the other three; approved differences from A; requested corrections; decision timestamp. Preserve the rejected alternatives for research. A passing generator call is not a human decision.
+
+The supervising planner must emit the **tripartite packet**: `scene-manifest.json`, `narrative-brief.md` and `worker-criteria.md`, plus a provenance/evidence ledger. Negative worker constraints must be verified in code; prompts alone cannot enforce them. SHA-256 establishes byte identity, not source truth, human approval or visual equivalence. A PDF with selectable text is not automatically a native editable slide or certified PDF-editor editability; check the required destination behavior separately.
+
+**Manual simulation is next:** one authorized reference slide → four separate image candidates → human selection with rationale → manual tripartite packet → validator → one real Go assembly render → independent QA → release authorization. On failed reference matching, stop at CREATIVE_GENERATION_HOLD. Never silently substitute a different NotebookLM source.
