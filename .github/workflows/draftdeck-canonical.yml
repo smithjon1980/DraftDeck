@@ -59,8 +59,37 @@ jobs:
           assert not list(o.rglob('*.svg'))
           print('PHASE 1 STRUCTURAL CHECK PASS; VISUAL QA NOT ESTABLISHED')
           PY
+      - name: Generate Phase 2 Story fixture
+        run: go run ./cmd/story-fixture
+      - name: Build Phase 2
+        env:
+          CHROME_BIN: ${{ steps.chrome.outputs.chrome-path }}
+        run: go run . scenes/phase2.json output/phase2
+      - name: Verify Phase 2 candidate evidence
+        run: |
+          python3 - <<'PY'
+          import json,pathlib,hashlib
+          d=pathlib.Path('output/phase2')
+          evidence=json.loads((d/'evidence.json').read_text())
+          pdf=(d/'day-zero.pdf').read_bytes()
+          assert evidence['status']=='P2_COMPOSITION_CANDIDATE'
+          assert evidence['story_sha256'] == hashlib.sha256(pathlib.Path('scenes/story.png').read_bytes()).hexdigest()
+          assert evidence['pdf_sha256'] == hashlib.sha256(pdf).hexdigest()
+          assert len(pdf)>15000
+          assert evidence['visual_qa']=='NOT_ESTABLISHED'
+          print('PHASE 2 COMPOSITION CANDIDATE BUILT — VISUAL QA PENDING')
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: draftdeck-canonical-phase1
           path: skills/draftdeck/engine/output/
+          retention-days: 7
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: draftdeck-phase2-approval-001
+          path: |
+            skills/draftdeck/engine/output/phase2/
+            skills/draftdeck/engine/scenes/phase2.json
+            skills/draftdeck/engine/scenes/story.png
           retention-days: 7
