@@ -1,0 +1,28 @@
+name: DraftDeck Governed Agent Graph Trial
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/book-to-skills-intake-candidate]
+    paths:
+      - 'experiments/agent-swarm-001/**'
+      - '.github/workflows/draftdeck-agent-swarm-trial.yml'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    defaults:
+      run:
+        working-directory: experiments/agent-swarm-001
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install LangGraph
+        run: npm install --ignore-scripts --no-audit --no-fund
+      - name: Verify routing and HOLD tests
+        run: npm test
+      - name: Run traceable demonstration
+        run: npm run demo
