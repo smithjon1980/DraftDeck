@@ -1,28 +1,15 @@
-# DraftDeck open-source visual editor trial 001
-Status: CANDIDATE / NOT_BUILT / NOT_VISUALLY_ACCEPTED / PRODUCTION HOLD
+# DraftDeck GrapesJS Open Editor trial
+Status: CANDIDATE / BUILD UNDER CI TEST / VISUAL AND PDF QA NOT YET PASSED
 
 ## Why
-Use **GrapesJS core** (open-source visual HTML/CSS editor) inside a React 19 editor shell. Replace the Canva intermediate step; retain editable HTML/CSS and Chromium PDF release file. No compulsory SVG. The included BOSS page is a disposable example, **not** a faithful reconstruction of the approved blueprint story layer.
+A browser-native visual **HTML/CSS** editor with genuine text editing. GrapesJS core runs within React; the canvas model is HTML/CSS, **not** JSX round-trip. No Canva, compulsory SVG, or PowerPoint.
 
-## Run when network/package access is available
-```bash
-npm install
-npm run dev
-```
-Edit text/styles on the canvas. Download **editable project JSON** and **HTML/CSS** from top bar. Then:
-```bash
-npm run pdf -- /absolute/path/to/overview01.html
-```
-Install Chromium for Playwright separately if absent (`npx playwright install chromium`). Never run unreviewed package install hooks in production. Project JSON is the editable GrapesJS model; the HTML is Chromium input.
+## How to use
+Run `npm install` and `npm run dev` in an isolated Node 22 environment. Select a text component, edit using the sidebar, save project JSON, reload it to check persistence, export HTML/CSS, then generate PDF with `npm run pdf -- /path/to/overview01.html`. The Vite build may also run via a branch-scoped GitHub Actions workflow with downloadable compiled artifacts.
 
-## Important limit
-The `@grapesjs/react` official wrapper integrates editor UI with React; it does *not* mean GrapesJS canvas objects are authored JSX/React components. Our initial editor uses grapesjs core mounted by React; do not claim native JSX round-trip. Proprietary GrapesJS Studio SDK and its React renderer are **not** required here.
-
-## Acceptance gates
-- Human can visually edit headline and proof-of-delivery captions.
-- Save/reload project JSON without dropping text or styles.
-- Export HTML/CSS and Chromium PDF with white page and exact text.
-- Inspect PDF text objects and visual reference fidelity; reject generic boxed scenes.
-- Richer story artwork is a separate human-approved design task; photo/illustration may be raster as a separate layer, **never rasterize live text**.
-- Test any dependencies and lockfile in an isolated runtime, record versions and license compliance.
-- Do NOT claim visual success before running an actual editor instance.
+## Acceptance
+- React application must compile in GitHub Actions, and run interactively in Chromium.
+- A selected text component's change must persist through project JSON save/reload.
+- Exported HTML must contain revised text, and Chromium PDF must contain selectable accurate text, with correct white background.
+- Visual fidelity to the approved BOSS story reference is **NOT ESTABLISHED**. The sample uses illustrative process blocks pending composition redesign; no automatic production claim.
+- No source promotion, credential provision, or public hosting without human approval.

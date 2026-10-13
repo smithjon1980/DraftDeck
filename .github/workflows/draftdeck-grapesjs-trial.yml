@@ -1,0 +1,36 @@
+name: DraftDeck GrapesJS Trial Build
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/book-to-skills-intake-candidate]
+    paths:
+      - 'experiments/grapesjs-chromium-001/**'
+      - '.github/workflows/draftdeck-grapesjs-trial.yml'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions:
+      contents: read
+    defaults:
+      run:
+        working-directory: experiments/grapesjs-chromium-001
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated trial dependencies
+        run: npm install --ignore-scripts --no-audit --no-fund
+      - name: Compile React + GrapesJS trial
+        run: npm run build
+      - name: Verify export code and inspect bundle
+        run: |
+          node --check scripts/export-pdf.mjs
+          test -s dist/index.html
+          test -n "$(find dist/assets -type f -name '*.js' -print -quit)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: draftdeck-grapesjs-editor-build
+          path: experiments/grapesjs-chromium-001/dist
+          retention-days: 7
