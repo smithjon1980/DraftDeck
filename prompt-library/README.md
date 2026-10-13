@@ -51,3 +51,10 @@ Every accepted library entry needs a stable ID, use-case, intended recipient, re
 - [Book-to-Skills extraction workflow](../skills/book-to-skills/SKILL.md)
 
 **Preserve historical conflict openly:** Old DraftDeck React/Canva/SVG-era instructions in root AGENTS.md belong to an earlier workflow; current audio-first research and canonical candidate manufacturing restrictions must not be inferred from that legacy text. The active slide production initiative is paused pending a separate decision.
+
+
+## Companion response and decision evidence
+
+Pair an instruction with its **actual observed response, the human's reaction and the resulting evidence**, rather than teaching prompts in isolation. See the [Response & Decision Library](../response-library/README.md), [case catalog](../response-library/CATALOG.md) and [response record template](../response-library/RESPONSE_TEMPLATE.md).
+
+The primary learning objective is **constraint and discipline**, with human authority and verification; the prompt/response archive is a teaching instrument. Full original Gemini outputs should remain in a permission-appropriate research archive unless explicitly cleared for public repository use.
