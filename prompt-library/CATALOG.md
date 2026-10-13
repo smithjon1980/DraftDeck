@@ -11,6 +11,7 @@
 | PL-005 | [Gemini Podcast Tool and Script Fidelity Benchmark](prompts/PL-005-gemini-script-fidelity-benchmark.md) | Research/experiment / Gemini | CANDIDATE | Oct 13 Podcastfy/Jellypod/ElevenLabs/Kokoro survey |
 | PL-006 | [NotebookLM Source and Historical Conversation Reconciliation](prompts/PL-006-source-to-notebooklm-admission.md) | Source integrity / Gemini | CANDIDATE | Day Zero NotebookLM source-admission protocol |
 | PL-007 | [Prompt Archaeology and Improvement](prompts/PL-007-prompt-library-curation.md) | Curriculum extraction / Gemini/GPT | CANDIDATE | User requested history-based prompt library |
+| PL-008 | [Gemini Live GitHub Sync and Research Reconciliation](prompts/PL-008-gemini-github-reconciliation.md) | Mandatory repository preflight / Gemini | CANDIDATE | Oct 13 human synchronization requirement and report reconciliation |
 | Existing | [Restricted Creative Prompt + Production Supervisor](../skills/draftdeck/dual-spark-handoff/PROMPTS.md) | Role-separated execution | REPO EXACT REFERENCE | Existing candidate source, Oct 13 |
 | Existing | [Gemini DraftDeck Code Inspection](../skills/draftdeck/GEMINI_INSPECTION.md) | Code/evidence critique | REPO EXACT REFERENCE | Existing candidate source |
 | Existing | [NotebookLM Source-Admission Handoff](../curriculum/day-zero/notebooklm/source-admission-v0.4/GEMINI_NOTEBOOKLM_HANDOFF_READ_FIRST.md) | Source admission, HOLD gate, audio instruction | REPO EXACT REFERENCE | Existing v0.4 source |
