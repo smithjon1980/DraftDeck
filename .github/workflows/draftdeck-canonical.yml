@@ -61,6 +61,8 @@ jobs:
           PY
       - name: Generate Phase 2 Story fixture
         run: go run ./cmd/story-fixture
+      - name: Stage Phase 2 CSS
+        run: mkdir -p output/phase2 && cp output/styles.css output/phase2/styles.css
       - name: Build Phase 2
         env:
           CHROME_BIN: ${{ steps.chrome.outputs.chrome-path }}
