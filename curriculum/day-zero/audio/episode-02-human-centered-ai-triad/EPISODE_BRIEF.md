@@ -76,7 +76,7 @@ Present one bounded project request and two conflicting, clearly labeled *candid
 
 1. Revisit this brief with the actual Episode 01 audio/scripting lessons.
 2. Human approves editorial scope and preferred public title.
-3. Admit exact source records; compare [rubric candidate crosswalk](RUBRIC_CROSSWALK_CANDIDATE.md) with human-ratified standards.
+3. Admit exact source records and co-develop the [working shared rubric](../COMPETENCY_RUBRIC_WORKING_V0.1.md) with the episode. Start with its intended learner performance, map each segment through the [candidate crosswalk](RUBRIC_CROSSWALK_CANDIDATE.md), and obtain human editorial approval of a specific rubric version before script lock.
 4. Use NotebookLM/Gemini as private inspiration and critique; obtain a creative spark only.
 5. Build an exact grounded two-host script, verified before TTS, with speaker turn manifest and source/evidence references.
 6. Manufacture segmented audio in the proven stack; independently compare audio to locked script; human releases.
