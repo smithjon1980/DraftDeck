@@ -22,7 +22,7 @@ func main() {
   Subtitle:"Stop asking what the model can generate. Start defining what the business needs, who is authorized, and what counts as verified delivery.",
   Panels:[]Panel{{"01","IDENTIFY THE CARGO","The request, its source, intended recipient, and handling destination."},{"02","RECORD THE EVIDENCE","What is known, where it came from, and what remains uncertain."},{"03","VERIFY THE RESULT","Compare delivered work with the declared standard and ground truth."},{"04","RELEASE BY PERMISSION","Human authorization—not model confidence—controls final release."}},
  }
- const page=`<!doctype html><html lang="en"><head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"><style>@page{size: 16in 9in;margin:0}html,body{margin:0;width:1600px;height:900px;overflow:hidden}*{box-sizing:border-box}</style></head>
+ const page=`<!doctype html><html lang="en"><head><meta charset="UTF-8"><link rel="stylesheet" href="styles.css"><style>@page{size: 16.6667in 9.375in;margin:0}html,body{margin:0;width:1600px;height:900px;overflow:hidden}*{box-sizing:border-box}</style></head>
  <body class="bg-white text-neutral-950"><main class="w-[1600px] h-[900px] px-[55px] py-[36px] font-sans flex flex-col">
  <header class="flex justify-between border-b-2 border-black pb-3 text-[19px] font-bold"><span>bioscillate / BOSS</span><span class="font-mono text-[15px]">OPERATING SYSTEM BY SEVEN · DAY ZERO / 01</span></header>
  <p class="font-mono text-[15px] tracking-wide mt-4">INSTRUCTIONAL DISPATCH / LEARNING PACKAGE 001</p>
