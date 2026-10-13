@@ -54,7 +54,7 @@ Script-lock implementation, TTS model support and automated hash enforcement rem
 
 Gemini's reported CPAM formula added raw “API tokens + TTS minutes + regeneration waste”; those quantities have incompatible units. The valid metric is expressed in a single currency:
 
-\`\`\`text
+```text
 C_direct_USD =
     C_editorial_model_USD
   + C_TTS_initial_USD
@@ -67,7 +67,7 @@ CPAM_direct_USD = C_direct_USD / minutes_of_final_human_approved_audio
 
 CPAM_all_in_USD =
   (C_direct_USD + C_human_labor_USD) / minutes_of_final_human_approved_audio
-\`\`\`
+```
 
 Only allocate spending actually incurred or state an estimation method. Do not double count regeneration charged inside a total invoice. Record provider pricing units separately; compare a credible baseline to test whether upfront approval reduces expensive re-runs.
 
