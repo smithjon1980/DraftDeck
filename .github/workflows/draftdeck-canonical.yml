@@ -1,0 +1,64 @@
+name: DraftDeck Canonical Go Pipeline
+on:
+  workflow_dispatch:
+    inputs:
+      phase:
+        description: "Run phase 1 or 2"
+        type: choice
+        options: ['1', '2']
+        default: '1'
+  push:
+    branches: [feature/book-to-skills-intake-candidate]
+    paths:
+      - 'skills/draftdeck/**'
+      - '.github/workflows/draftdeck-canonical.yml'
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: skills/draftdeck/engine
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.24'
+          cache: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Compile Tailwind
+        run: |
+          npm install --no-save --no-audit --no-fund tailwindcss@4 @tailwindcss/cli@4
+          mkdir -p output
+          npx @tailwindcss/cli -i input.css -o output/styles.css --minify
+      - uses: browser-actions/setup-chrome@v2
+        id: chrome
+      - name: Unit tests
+        run: go test ./...
+      - name: Build Phase 1
+        env:
+          CHROME_BIN: ${{ steps.chrome.outputs.chrome-path }}
+        run: go run . scenes/phase1.json output
+      - name: Inspect structural evidence
+        run: |
+          python3 - <<'PY'
+          import json,hashlib,pathlib
+          o=pathlib.Path('output')
+          e=json.loads((o/'evidence.json').read_text())
+          pdf=(o/'day-zero.pdf').read_bytes()
+          assert pdf[:5]==b'%PDF-'
+          assert e['pdf_sha256']==hashlib.sha256(pdf).hexdigest()
+          assert e['status']=='P1_BUILD_CANDIDATE'
+          assert e['visual_qa']=='NOT_ESTABLISHED'
+          assert not list(o.rglob('*.svg'))
+          print('PHASE 1 STRUCTURAL CHECK PASS; VISUAL QA NOT ESTABLISHED')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: draftdeck-canonical-phase1
+          path: skills/draftdeck/engine/output/
+          retention-days: 7
