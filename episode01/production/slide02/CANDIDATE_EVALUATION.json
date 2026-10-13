@@ -1,0 +1,38 @@
+{
+  "status": "BLOCKED_ON_ORIGINAL_NOTEBOOKLM_SOURCE",
+  "source_file": "[UNKNOWN]",
+  "source_page": "[UNKNOWN]",
+  "bridge_1_completed": false,
+  "bridge_2_completed": false,
+  "exact_copy_manifest": "episode01/reference/slide-copy.candidate.json",
+  "copy_status": "CANDIDATE",
+  "original_logo": "episode01/assets/brand/bioscillate-original-supplied.jpg",
+  "hard_failure_rules": [
+    "invented facts",
+    "missing required copy",
+    "substituted logo",
+    "flattened production text"
+  ],
+  "candidates": [
+    { "id": "A", "status": "NOT_AUTHORED", "source_page": "[UNKNOWN]", "bridge_1_delta": "[UNKNOWN]", "bridge_2_mapping": "[UNKNOWN]", "screenshot": null, "source": null },
+    { "id": "B", "status": "NOT_AUTHORED", "source_page": "[UNKNOWN]", "bridge_1_delta": "[UNKNOWN]", "bridge_2_mapping": "[UNKNOWN]", "screenshot": null, "source": null },
+    { "id": "C", "status": "NOT_AUTHORED", "source_page": "[UNKNOWN]", "bridge_1_delta": "[UNKNOWN]", "bridge_2_mapping": "[UNKNOWN]", "screenshot": null, "source": null },
+    { "id": "D", "status": "NOT_AUTHORED", "source_page": "[UNKNOWN]", "bridge_1_delta": "[UNKNOWN]", "bridge_2_mapping": "[UNKNOWN]", "screenshot": null, "source": null }
+  ],
+  "matrix": {
+    "source_story_correspondence": { "A": "NOT TESTED", "B": "NOT TESTED", "C": "NOT TESTED", "D": "NOT TESTED", "evidence": "Original NotebookLM page unavailable." },
+    "bridge_1_preservation_and_deltas": { "A": "NOT TESTED", "B": "NOT TESTED", "C": "NOT TESTED", "D": "NOT TESTED", "evidence": "Source-grounded story not yet authored." },
+    "bridge_2_theme_fidelity": { "A": "NOT TESTED", "B": "NOT TESTED", "C": "NOT TESTED", "D": "NOT TESTED", "evidence": "No A–D renders." },
+    "exact_copy": { "A": "NOT TESTED", "B": "NOT TESTED", "C": "NOT TESTED", "D": "NOT TESTED", "evidence": "Manifest identified; no A–D output." },
+    "original_logo_and_artwork": { "A": "NOT TESTED", "B": "NOT TESTED", "C": "NOT TESTED", "D": "NOT TESTED", "evidence": "Logo source known; narrative artwork unknown." },
+    "layer_editability": { "A": "NOT TESTED", "B": "NOT TESTED", "C": "NOT TESTED", "D": "NOT TESTED", "evidence": "Historical native DOM checks do not establish new candidate integrity." },
+    "hierarchy_readability": { "A": "NOT TESTED", "B": "NOT TESTED", "C": "NOT TESTED", "D": "NOT TESTED", "evidence": "No actual A–D render." },
+    "geometry_clipping": { "A": "NOT TESTED", "B": "NOT TESTED", "C": "NOT TESTED", "D": "NOT TESTED", "evidence": "No actual A–D browser check." }
+  },
+  "eligible_candidates": [],
+  "evaluator_recommendation": null,
+  "recommendation_reason": "Cannot recommend an unrendered candidate without both source-grounded bridges.",
+  "human_selection": "[UNKNOWN]",
+  "human_visual_approval": "[UNKNOWN]",
+  "canva_import_performed": false
+}
