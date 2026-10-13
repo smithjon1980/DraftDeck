@@ -1,70 +1,75 @@
 ---
 name: draftdeck
-description: Governed Dual-Spark instructional visual artifact workflow: human-approved NotebookLM-to-composite ideation, supervising-agent Scene Manifest planning, Go/Tailwind/Chromium deterministic assembly, independently verified visual fidelity and human release. Story PNG/WebP, Art HTML/CSS, Text semantic HTML; no SVG, React or Canva execution route.
+description: Governed source-to-spark production using compartmentalized, need-to-know creative generation, human-approved images, supervising-agent scene planning and Go/Tailwind/Chromium deterministic manufacturing. No SVG, React, Canva or PowerPoint in the canonical production route.
 ---
 
-# DraftDeck — Canonical Dual-Spark Production Process
+# DraftDeck — Need-to-Know Spark Handoff
 
-**Status: CANDIDATE / PRODUCTION RELEASE HOLD.** This skill describes the intended pipeline; documentation does not prove a working agent runtime, schema validation, reference admission, visual fidelity or human release. The currently verified low-fidelity wireframe milestone is historical technical evidence, not visual acceptance.
+**Status: CANDIDATE · 2026-10-13 · RELEASE_HOLD.** The process below is an approved *candidate specification* for implementation; it does not prove that role-based access controls, the creative generator, a supervisor, or a worker dispatcher are running.
 
-## One production route; no historical fallback
-The active executable candidate is `skills/draftdeck/engine/` with `.github/workflows/draftdeck-canonical.yml`. Superseded experiments are not fallback implementations. Production constraints: **no SVG in source, output, conversion, icons or intermediates; no React, Canvas-flattened teaching text, Canva or PowerPoint.** Use Go `html/template`, Tailwind CSS, and Chromium PDF export. Story uses raster PNG/WebP, Art uses permitted semantic HTML/CSS, and Text uses native semantic HTML.
+## Core distinction
+**The system generates the spark upstream. The human authorizes a candidate. Only the approved visual and the minimum manufacturing instructions go to the supervising agent.**
 
-## Dual-Spark distinction: designing is not manufacturing
-- **Spark 01 / Reference A:** the genuine NotebookLM instructional image, grounded in authoritative course material (**Reference C**).
-- **Spark 02 / Reference B:** a **fully composed visual reimagination** produced in the learner's chosen image-capable AI tool from A and the creative prompt. Creative generation can include provisional typography and illustrative elements; do not impose HTML layer-manufacturing constraints on this image.
-- **Reference D:** a written creative handoff explaining teaching objective, story/metaphor, visual hierarchy and relationships, source-preserving choices, creative deltas and unknowns.
-- **Human selection:** the operator examines and explicitly accepts or rejects B and D. Silence is not approval.
-- **Production:** the supervising agent receives **A, approved B, authenticated C and approved D** and compiles a scene plan/manifest; the separate workers manufacture the scoped components. B is the approved *visual target*, **not** an acceptable flattened final slide. C remains the *authority for exact instructional copy*; any words in B are provisional unless independently supported by C.
+The original NotebookLM presentation and all prompts used for reimagination remain in a **creative provenance/audit compartment**, not in the ordinary supervisor input. The supervisor is a scene-contract compiler, not a visual prompt interpreter or a second creative director. It cannot require the hidden creative prompt to do its job. This is a structural correspondence with **need-to-know compartmentalization**, not a claim of U.S. government classified status or accredited clearance.
 
-The learner acts as creative director during reimagination and as systems architect during governed manufacturing. This is a teaching model and not proof that automated workers are wired into the repository.
+This corrects the earlier four-reference supervisor-packet design. The full A/B/C/D relationship is preserved in the privileged **archive**, but the production supervisor no longer receives all four raw sources.
 
-## Phase 0 — Ideation and source admission (outside the engine)
-**Input:** authentic A and C, with byte-level SHA-256 and provenance records. A NotebookLM image or screenshot must be the genuine source, not a previously generated low-fidelity DraftDeck PDF, extrapolated description or unrelated reference. Record filename, byte hash, publisher/author or Notebook provenance, source-text/version, rights, date and permitted use.
+## Upstream → downstream contract
 
-**Action:** run [the learner's creative prompt](dual-spark-handoff/PROMPTS.md) through a selected image-capable tool; retain original A, generated B, source C, and brief D as four distinct files. Document changes and unsupported copy. Obtain human acceptance of **B and D**.
+1. **Ingest and authenticate (Source/Ingestion compartment).** The learner chooses a NotebookLM PDF or slide. The system verifies exact bytes, source identity, specific page, provenance/usage rights and the intended teaching objective, and associates authorized instructional text. No creative prompt is written or exposed by the supervisor.
+2. **Internal prompt synthesis (Creative compartment).** The same upstream system uses the ingested reference and stated learner expectations to compose a **source-specific visual-generation prompt**, record its exact operator-visible text and hash, and execute the connected image-capable generator. The human can choose a candidate count supported by the tool (one to four; **four is the manual-trial default**, not a universal mandate). Each image must be a separate candidate asset, not one collage/contact sheet; do not claim an inaccessible hidden tool prompt was recorded.
+3. **Source correspondence preflight (Creative compartment).** The upstream verifier checks generated candidates against the chosen slide's subject, hero/objects, instructional meaning and hard constraints. Reject images about the wrong lesson or mere diagrams of the DraftDeck workflow. A creative candidate need not be pixel-identical to NotebookLM; exact image-to-image reproduction is **not the objective**.
+4. **Human decision (Approval compartment).** Present accepted candidates. The operator selects one or rejects all and may iterate. Archive the full written selection rationale and candidates. The operator approves **what is to be made and why**, not how the prompt was worded.
+5. **Minimal production handoff (Supervisor compartment).** Send **only** the approved creative raster asset, its ID and verified hash, a bounded teaching objective, authorized exact copy/excerpts, required visual/manufacturing constraints, allowed deltas, and a signed/recorded approval attestation (including selection ID). **Do not include the source PDF by default, creative-generation prompt, prompt history, unselected options, private review notes, or whole evidence ledger.** A production supervisor may request *specific additional approved context* through a logged authorization gateway when actually necessary. An auditor/QA reviewer with appropriate access can independently inspect original references and archives.
+6. **Compile (Supervisor).** Produce the tripartite contract: `scene-manifest.json` (geometry and material ownership), `narrative-brief.md` (source-grounded intent and desired composition) and `worker-criteria.md` (bounded positive and negative acceptance tests). No further artistic redesign and no rendering performed by the supervisor.
+7. **Manufacture (Workers/Go).** Story creates text-free PNG/WebP, Art creates registered HTML/CSS components without instructional text, Text emits exact sourced semantic HTML. The Go/Tailwind/Chromium engine assembles the approved manifest; no SVG, React, Canva, PowerPoint or flattened teaching text.
+8. **Independently verify and request release.** Manufacturing QA compares actual output to the *selected creative asset for meaningful visual/story correspondence*, to the authorized source for instructional accuracy, and to the implementation contract for geometry, typography and isolation. Outcome is **meets/exceeds the human's declared expectations** only if recorded acceptance criteria are satisfied. Exceeding expectations does **not** authorize changing facts, adding uncontrolled elements, or claiming pixel parity. Human release authorization remains distinct.
 
-**Gate:** authenticated A/C, recorded B/D and affirmative human creative approval before manufacturing planning. If A or C is missing or unverified, keep **SOURCE_ADMISSION_HOLD**; preparing templates and candidate architecture is allowed, but do not claim that Spark 01 executed.
+## Compartment map
 
-## Phase 1 — Supervising-agent scene planning (no artistic invention)
-**Input:** the four admitted references and the operator's constraints.
+| Compartment / role | May access by default | Must not receive by default |
+|---|---|---|
+| Source ingestion | Original NotebookLM reference; original authorized content; source credentials under separate security policy | Production-worker write rights |
+| Creative generation | Necessary source page/excerpts, tool-specific synthesis prompt, its own candidates | Unrelated learner private data; release permission |
+| Human approver | Source context, accepted candidate options, creative intent, selection rationale | Secret service credentials and engine internals |
+| Production supervisor | Selected approved image, approved content/copy, operational/visual constraints, approval verification token | Generation prompts, rejected options, entire source PDF or raw archive |
+| Story worker | Allowed image crop/visual spec; permitted raster asset input | Creative prompt; entire original PDF; mandatory instructional text |
+| Art worker | Allowed component spec, bounds and registered tokens | Creative prompt; unapproved editorial text; arbitrary styling/code |
+| Text worker | Exact authorized strings, source identifiers and semantic hierarchy | Creative prompt; raw unapproved visual text; layout/CSS instructions |
+| Independent QA/auditor | Necessary immutable evidence for its explicitly authorized review, potentially including original and prompt archive | Authority to approve its own release |
 
-**Action:** inspect A and B visually; ground teaching meaning and exact required text against C; use D to map interpretation decisions. The supervisor outputs a machine-readable scene manifest plus a claim/evidence ledger and worker contracts. Do not delegate freeform restyling. Record common coordinate system (candidate manifest currently 1600×900 px, top-left origin), bounded element boxes, IDs, permitted design tokens, semantic relationships, z-index, exact source-copy mapping, asset references with hashes and reference versions.
+Need-to-know is a **data minimization objective**. GitHub folders and prose do not enforce permissions. Enforce file/connector ACLs, separate scoped identities, manifest data-schema allowlists, runtime checks, retrieval logging, immutable hashes and least-privilege secrets. Audit privilege is explicit, not universal.
 
-**Schema gate:** the desired contract is `scene-schema-v1.json`; **that file was not present in `scene-manifest-001/` at the 2026-10-13 audit**. The extant `scene-manifest-001/validator.go` checks a bounded subset (1600×900 containment, known art tokens/components, ID/link uniqueness, reserved layer z-index bands, and byte-level hashes for the reference and source files when supplied). Its tests are not proof of complete JSON Schema conformance, image-text separation, semantic validity, actual visual fidelity or production readiness. Do not describe the manifest as fully validated against an unavailable specification.
+## What crosses the supervisor boundary
 
-**Gate:** a real versioned schema and validator implementation must agree and pass negative as well as positive tests; authenticated file hashes must resolve against real bytes; worker scopes and exact source copy must be accepted; otherwise **MANIFEST_HOLD**. Existing `scene-manifest-001/day-zero-manifest-001.json` is **CANDIDATE_NOT_AUTHENTICATED**: approximated coordinates and null reference/source hashes are not admitted ground truth.
+```text
+production-handoff/
+  approved-spark.webp          # selected, exact bytes; PNG also permitted
+  approved-brief.json          # objective, visual expectations, explicit delta permissions
+  source-copy.json             # authorized strings/excerpts + source IDs, not full private corpus
+  selection-attestation.json   # selected candidate ID, hash, decision/time, approver reference
+  handoff-manifest.json        # checksums, versioned contract ID, minimum provenance join ID
+```
 
-## Phase 2 — Worker manufacturing and deterministic assembly
-The supervisor provides each specialist only the necessary bounded contract and does not itself paint or render.
+**What stays upstream:** original NotebookLM PDF, prompt text and prompt versions, all generated/rejected candidates, complete human discussion/rationale, generator metadata and the full `provenance.json` audit sidecar. The downstream attestation can carry a hashed ledger reference and permission-scoped verification result, never a link that grants unbounded raw access. Hashes prove byte identity, not truthfulness or actual access control.
 
-- **STORY worker:** creates/identifies separated PNG/WebP illustration assets, free from baked instructional text in production. Log file path, bytes, hashes and provenance. Verify actual raster type, not filename only.
-- **ART worker:** produces allowed HTML/CSS geometry, connectors, annotations and design components consistent with B, constrained by permitted tokens and approved component registry. No SVG.
-- **TEXT worker:** produces native, selectable semantic HTML containing exact source-grounded copy from C, with IDs, hierarchy, provenance and declared geometry. No unsupported rewritten image text.
+**Human selection rationale:** preserve the full rationale in the audit archive. Put only **actionable, approved design requirements** distilled from it in `approved-brief.json` (e.g. “CPU remains hero; telemetry ring remains visually legible; no invented statistics”). The supervisor does not need the human's entire dialogue either.
 
-The Go engine validates inputs to the extent implemented, assembles HTML through templates and Tailwind, and uses Chromium to render a PDF with a content/hash evidence record. The existence of role definitions does **not** establish an operational multi-agent dispatcher. Invalid or missing assets, copy or provenance → **ASSEMBLY_HOLD**.
+## Acceptance contracts
+- **Source gate:** reference is a real accessible NotebookLM asset; source text and permissions have a verified identity; actual SHA-256 is calculated, not invented. Failure → SOURCE_ADMISSION_HOLD.
+- **Creative gate:** selected slide was truly observed; each candidate matches its specific topic and meaning; candidates are distinct assets. A wrong-topic output → REJECTED_WRONG_SUBJECT, not a passing candidate.
+- **Human gate:** documented choice, rationale, approved image hash and decision. Failure → HUMAN_SELECTION_HOLD.
+- **Boundary gate:** the supervisor payload is constructed by a positive allowlist and rejected if it contains raw prompt history, unselected-image bytes/URLs, raw source PDF, privileged archive credentials or unapproved instructions. Test negative cases. Failure → HANDOFF_CLEARANCE_HOLD.
+- **Manifest gate:** Go validator and an actual versioned JSON Schema must both pass as implemented, including failure tests. The `scene-manifest-001/validator.go` already checks some bounds, IDs/links, layer bands, component tokens and file hashes; it is not a complete schema or visual validator. The requested `scene-schema-v1.json` was not present at the prior audit. Failure → MANIFEST_HOLD.
+- **Manufacturing gate:** verify actual role separation, allowed asset types, exact copy, HTML/CSS allowlists, renderer output, source/asset hashes, no SVG and no unauthorized elements. Failure → ASSEMBLY_HOLD.
+- **QA/release gate:** demonstrable visual and instructional acceptability, real rendered evidence, independent review and final human permission. Failure → RELEASE_HOLD.
 
-## Phase 3 — Independent verification and human release
-Independent reviewer compares the actual rendered output with **B for approved narrative, geometry, hierarchy and appearance**, **C for exact facts/copy**, and **A for retained teaching objective and source-boundary fidelity**. Inspect actual page(s), readability, text selection, clipping/overflow, contrasts, image separation, source SHA-256, asset rights, output hash and evidence storage/read-back. Record numerical tolerances **only when defined in the approved verification contract**; do not fabricate pixel-match scores or claim pixel-identical style.
+## Manual validation milestone
+Choose one recovered, authentic NotebookLM slide, associate genuine instructional source text, let the upstream generator build its **own source-specific prompt**, generate four separate alternatives (or fewer if the user explicitly chooses), human-select one with rationale, **strip creative provenance from production payload**, manually compile a scene + narrative brief + worker criteria, then run the existing Go stack for one page. Conduct tests that prove the supervisor cannot see `generation_prompt`, `prompt_history`, `candidates_unselected`, or original PDF bytes through the production route.
 
-Record each gate as PASS / FAIL / NOT_ESTABLISHED and link to actual evidence. Build success, JSON parsing, Go unit tests, a valid PDF signature or a pleasant reference image **never** independently establish fidelity. Gemini may critique and improve the candidate process but is not a replacement for human release. **RELEASE_HOLD** persists until explicit human authorization.
+Prior failed image trials drifted into DraftDeck-process infographics or another Day Zero topic **during generation**, before any real supervisor handoff. Those errors establish a need for source anchoring upstream; prompt isolation alone does not repair image generator behavior. No image fidelity, live role isolation or finished rendering is newly claimed by this skill patch.
 
-## Historical milestone mapping
-The previously named **Phase 1 / WIREFRAME** is retained as an earlier demonstrated infrastructure milestone. It is **not** the newly defined Phase 1 **Scene Planning**, and must not be promoted to the visual master. Existing low-fidelity Phase 2 fixtures also do not establish autonomous worker execution or reference correspondence.
+## Historic technical evidence
+The older **Phase 1 WIREFRAME** was a prior structural run, not the current manual scene-planning milestone or a visual master. The only current candidate renderer is `skills/draftdeck/engine/` plus `.github/workflows/draftdeck-canonical.yml`. Existing agent definitions do not show an implemented multi-agent dispatcher. Never treat a green workflow, successful PDF signature, or model confidence as a release decision.
 
-## Current execution and inspection
-For active code, use `engine/main.go`, templates, `engine/scenes/`, and the workflow `.github/workflows/draftdeck-canonical.yml`. Run `go test ./...`, inspect actual source, engine and PDF bytes, and test with authentically admitted inputs. For candidate scene extraction, read `scene-manifest-001/README.md` and `validator.go`; do not assume the manifest and engine share the same fully implemented schema.
-
-See [Dual-Spark handoff](dual-spark-handoff/README.md) for the exact artifact packet and [copyable prompts](dual-spark-handoff/PROMPTS.md) for the learner and supervisor. Give Gemini `GEMINI_INSPECTION.md` and independent evidence. Do not publish, merge, deploy or overwrite on inspection alone.
-
-## Mandatory four-option Spark 02 gate — audit amendment 2026-10-13
-
-The image-capable model must return **four distinct, independently addressable candidate images**, A/B/C/D, based on the **same authenticated NotebookLM page A** and its specific teaching objective. A collage/contact sheet of four thumbnail designs is not four output assets. A visually plausible image of the wrong source, or an infographic about DraftDeck itself, is **REJECTED_WRONG_SUBJECT** and must not be counted as a creative candidate.
-
-Each candidate must have its own recorded bytes, SHA-256 and concise visual rationale. Archive the exact operator-visible creative prompt and generator/tool identity, generated candidates, all failures, prompt iteration and reference-page identity. Do not claim access to a hidden provider prompt or random seed where not supplied.
-
-**Human creative approval requires an explicit selection and rationale**: identify the chosen candidate; why its hero, hierarchy, visual relationships and narrative teach the specific lesson better than the other three; approved differences from A; requested corrections; decision timestamp. Preserve the rejected alternatives for research. A passing generator call is not a human decision.
-
-The supervising planner must emit the **tripartite packet**: `scene-manifest.json`, `narrative-brief.md` and `worker-criteria.md`, plus a provenance/evidence ledger. Negative worker constraints must be verified in code; prompts alone cannot enforce them. SHA-256 establishes byte identity, not source truth, human approval or visual equivalence. A PDF with selectable text is not automatically a native editable slide or certified PDF-editor editability; check the required destination behavior separately.
-
-**Manual simulation is next:** one authorized reference slide → four separate image candidates → human selection with rationale → manual tripartite packet → validator → one real Go assembly render → independent QA → release authorization. On failed reference matching, stop at CREATIVE_GENERATION_HOLD. Never silently substitute a different NotebookLM source.
+Read [compartmentalized handoff](dual-spark-handoff/README.md), [role-specific prompts](dual-spark-handoff/PROMPTS.md), and [Gemini inspection brief](GEMINI_INSPECTION.md). New work stays on the candidate branch until verified and authorized; do not merge or release automatically.
