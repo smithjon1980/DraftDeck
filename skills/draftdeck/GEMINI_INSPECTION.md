@@ -53,3 +53,20 @@ Audit the Dual-Spark claim chain separately:
 - Release: identify human authorizing action; passing CI never releases a candidate. Keep `RELEASE_HOLD` absent authenticated approval.
 
 **Review deliverable:** (a) A–D admission matrix; (b) requirements-to-code/validator traceability table; (c) claim-by-claim PASS / FAIL / NOT_ESTABLISHED with evidence; (d) severity-ranked blockers and single-slide proof plan; (e) corrective patch suggestions as a *proposal*, not unilateral implementation. Distinguish code review from tests actually run.
+
+## Need-to-Know Handoff Audit — 2026-10-13 amendment
+
+**Canonical intent changed** after the earlier four-reference contract: the supervisor is **not** entitled to the NotebookLM original, the generated prompt, or rejected image candidates by default. Full creative provenance is maintained separately for scoped audit. The supervisor receives just the selected approved spark, approved manufacturing expectations, authorized copy and selection attestation; request missing facts through a logged, minimal-retrieval boundary.
+
+Audit the following without treating documentation as deployed security:
+1. Does the **upstream** process really inspect a specific source slide and synthesize its own generation prompt? Does it generate the user-specified 1–4 **separate** candidates, evaluate source correspondence and record actual rejected attempts?
+2. Does human approval identify the selected image hash, written rationale, explicit allowable changes and actual decision identity/time? Is lack of selection a hard HOLD?
+3. Can the supervisor read the creative prompt, prompt history, unselected images, original PDF, raw `provenance.json` or unrestricted Drive/GitHub? **Prove actual runtime tool/credential scopes**, not merely instructions. Are supervisor payload fields positively allowlisted, and do prohibited-field negative tests fail closed?
+4. Is the QA auditor independently entitled to necessary source material without giving those permissions to the supervisor? Does the audit verify signed/otherwise reliably authenticated decisions rather than trust self-generated text?
+5. Does the supervisor produce `scene-manifest.json`, `narrative-brief.md` and `worker-criteria.md` from the sealed handoff *without* access to the generation prompt? Is the schema real and versioned?
+6. Test visual acceptance as **meets/exceeds documented expectations** rather than **pixel-identical to NotebookLM**. Separately verify factual exactness against authorized source copy, layer separation, permission boundaries, PDF selectable-text and actual editability.
+7. Report meaningful failures for `SOURCE_ADMISSION_HOLD`, `REJECTED_WRONG_SUBJECT`, `HUMAN_SELECTION_HOLD`, `HANDOFF_CLEARANCE_HOLD`, `MANIFEST_HOLD`, `ASSEMBLY_HOLD`, and `RELEASE_HOLD`.
+
+**Security terminology:** “need to know” is used as an engineering analogy. No material or role is legally designated U.S. classified; a prose prompt does not establish a security clearance, ACL or accreditation. Runtime enforcement of data minimization remains NOT ESTABLISHED until actually tested.
+
+**Historical note:** The previous rejected image outputs were off-subject *at image generation*, not evidence of failed supervisor access isolation. Do not claim the new boundary alone resolves source-anchoring drift.
