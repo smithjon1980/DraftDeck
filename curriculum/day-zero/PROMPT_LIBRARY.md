@@ -22,3 +22,12 @@ Give the learner two prompts that appear plausible, but one lacks source require
 **Assessment:** Explain the difference between creative exploration and governed execution and defend the role-specific information access of Gemini as research critic versus production supervisor.
 
 No assertion of learning efficacy is made until tested. The curriculum route and competency rubric still require human review and validation.
+
+
+## Paired response study
+
+The companion [Response & Decision Library](../../response-library/README.md) turns a reusable prompt into a teachable feedback cycle: exact/approximate prompt provenance → reported Gemini response → human challenge or selection → revised plan → actual evidence → remaining unknowns.
+
+**Do not mistake the archive for the goal.** The educational goal is to recognize and practice appropriate constraints and sustained discipline. Repository commits may document decisions, while only actual runtime tests can establish technical performance. Start with the [Dual-Spark response case](../../response-library/cases/RL-001-dual-spark-audit-to-patch.md) and [Audio/Discipline response case](../../response-library/cases/RL-002-discipline-audio-research-response.md).
+
+The [ChatGPT–Human–Gemini learning triad](../../response-library/TOPIC_PINS.md) is a separately pinned future podcast idea, not an active media production.
