@@ -27,13 +27,20 @@ For each competency, require: **(1) explanation**, **(2) application to a docume
 - Same case (e.g., rejected off-topic DraftDeck images): Episode 01 focuses on violated constraints and correction. Episode 02 focuses on model disagreement, decision rights, where a second reviewer helps or fails, and which evidence permits execution.
 - Prefer source-grounded case reconstructions to theatrical staged debate.
 
-## Rubric admission gate before lessons claim alignment
+## Co-develop the rubric alongside the episodes
 
-1. Locate the complete currently approved BOSS Day Zero competency rubric and record its source/version/authority.
-2. Map candidate outcomes C-01..C-07 to **actual official identifiers**; expose gaps and overlaps rather than silently inventing them.
-3. Define assessment evidence for each and verify it measures the claimed skill.
-4. Have the human approve the scope and relevant performance criteria.
-5. Only then label either episode as RUBRIC_ALIGNED. Until then use CANDIDATE_CROSSWALK.
+The human explicitly directed us to **know the end at the beginning, then construct the assessment as the Audio Overview develops**. We do not need to find or invent a pre-existing final rubric before drafting instruction.
+
+The [shared working rubric v0.1](../COMPETENCY_RUBRIC_WORKING_V0.1.md) now proposes a terminal learner performance and C-01–C-07 competencies for the two episodes. They remain working local identifiers; they are **not** claimed as an older ratified course standard.
+
+1. Begin each chapter with the end performance it supports; map one or more working competencies.
+2. Draft a source-grounded explanation, realistic case and **observable learner task** while writing the audio.
+3. Compare chapter/assessment coverage with the terminal performance; document gaps, revise the script *or* rubric with rationale.
+4. Have the human approve a specific rubric version when locking an episode's editorial script.
+5. Keep an explicit change log and re-check Episode 01 to Episode 02 continuity if criteria change.
+6. Verify mastery through completed learner work, not by listening time or the elegance of the generated podcast.
+
+Until the relevant draft and human approval are in place, the relationship is **CANDIDATE_CROSSWALK**. Do not claim full course alignment or measured learning effects.
 
 ## Research warning
 
