@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "rea": {
+      "command": "npx",
+      "args": [
+        "--yes",
+        "--package=rea-agents@6.3.0",
+        "rea",
+        "mcp"
+      ]
+    }
+  }
+}
