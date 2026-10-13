@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BOSS scene contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "source",
+    "canvas",
+    "layers",
+    "authority"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "ref",
+        "sha256"
+      ],
+      "properties": {
+        "ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "canvas": {
+      "type": "object",
+      "required": [
+        "width",
+        "height",
+        "background"
+      ],
+      "properties": {
+        "width": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "background": {
+          "const": "#FFFFFF"
+        }
+      }
+    },
+    "layers": {
+      "type": "object",
+      "required": [
+        "story",
+        "art",
+        "text"
+      ],
+      "properties": {
+        "story": {
+          "$ref": "#/$defs/layer"
+        },
+        "art": {
+          "$ref": "#/$defs/layer"
+        },
+        "text": {
+          "$ref": "#/$defs/layer"
+        }
+      }
+    },
+    "authority": {
+      "type": "object",
+      "required": [
+        "release_state"
+      ],
+      "properties": {
+        "release_state": {
+          "const": "HOLD"
+        },
+        "approved_by": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  },
+  "$defs": {
+    "layer": {
+      "type": "object",
+      "required": [
+        "agent",
+        "z_index",
+        "allowed_outputs"
+      ],
+      "properties": {
+        "agent": {
+          "enum": [
+            "story",
+            "art",
+            "text"
+          ]
+        },
+        "z_index": {
+          "type": "integer"
+        },
+        "allowed_outputs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      }
+    }
+  }
+}

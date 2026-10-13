@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1.0",
+  "run_id": "draftdeck-layered-001",
+  "source": {
+    "ref": "FIXTURE_ONLY_UNAUTHENTICATED",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "canvas": {
+    "width": 1536,
+    "height": 864,
+    "background": "#FFFFFF"
+  },
+  "layers": {
+    "story": {
+      "agent": "story",
+      "z_index": 10,
+      "allowed_outputs": [
+        "story.webp",
+        "story-prompt.txt"
+      ]
+    },
+    "art": {
+      "agent": "art",
+      "z_index": 20,
+      "allowed_outputs": [
+        "art.json",
+        "art.svg"
+      ]
+    },
+    "text": {
+      "agent": "text",
+      "z_index": 30,
+      "allowed_outputs": [
+        "text.json",
+        "text-layer.tsx"
+      ]
+    }
+  },
+  "authority": {
+    "release_state": "HOLD",
+    "approved_by": null
+  }
+}
