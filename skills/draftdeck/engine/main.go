@@ -21,9 +21,24 @@ type Evidence struct { RunID string `json:"run_id"`; Phase int `json:"phase"`; S
 type View struct { Scene Scene; StoryURI string; Text []Layer; Art []Layer }
 func checksum(data []byte)string{h:=sha256.Sum256(data);return hex.EncodeToString(h[:])}
 func saveJSON(path string,v any)error{b,e:=json.MarshalIndent(v,"","  ");if e!=nil{return e};return os.WriteFile(path,append(b,'\n'),0644)}
-func readSafeAsset(root,name string)([]byte,error){if name==""||filepath.Base(name)!=name||strings.Contains(name,".."){return nil,errors.New("UNSAFE_ASSET_PATH")};extension:=strings.ToLower(filepath.Ext(name));if extension!=".png"&&extension!=".webp"{return nil,errors.New("STORY_ASSET_MUST_BE_PNG_OR_WEBP")};b,e:=os.ReadFile(filepath.Join(root,name));if e!=nil{return nil,e};if extension==".png"&&!strings.HasPrefix(string(b),"\x89PNG\r\n\x1a\n"){return nil,errors.New("PNG_SIGNATURE_INVALID")};if extension==".webp"&&(len(b)<12||string(b[:4])!="RIFF"||string(b[8:12])!="WEBP"){return nil,errors.New("WEBP_SIGNATURE_INVALID")};return b,nil}
+const maxStoryBytes int64 = 10 << 20
+const maxSceneBytes int64 = 1 << 20
+func readBounded(path string,limit int64)([]byte,error){
+ f,err:=os.Open(path);if err!=nil{return nil,err};defer f.Close()
+ data,err:=io.ReadAll(io.LimitReader(f,limit+1));if err!=nil{return nil,err}
+ if int64(len(data))>limit{return nil,errors.New("INPUT_SIZE_LIMIT_EXCEEDED")}
+ return data,nil
+}
+func readSafeAsset(root,name string)([]byte,error){
+ if name==""||filepath.Base(name)!=name||strings.Contains(name,".."){return nil,errors.New("UNSAFE_ASSET_PATH")}
+ ext:=strings.ToLower(filepath.Ext(name));if ext!=".png"&&ext!=".webp"{return nil,errors.New("STORY_ASSET_MUST_BE_PNG_OR_WEBP")}
+ b,err:=readBounded(filepath.Join(root,name),maxStoryBytes);if err!=nil{return nil,err}
+ if ext==".png"&&(len(b)<8||!strings.HasPrefix(string(b),"\x89PNG\r\n\x1a\n")){return nil,errors.New("PNG_SIGNATURE_INVALID")}
+ if ext==".webp"&&(len(b)<12||string(b[:4])!="RIFF"||string(b[8:12])!="WEBP"){return nil,errors.New("WEBP_SIGNATURE_INVALID")}
+ return b,nil
+}
 func run(scenePath,out,chrome string)error{
- bytes,err:=os.ReadFile(scenePath);if err!=nil{return err}
+ bytes,err:=readBounded(scenePath,maxSceneBytes);if err!=nil{return err}
  var s Scene
  if err=json.Unmarshal(bytes,&s);err!=nil{return err}
  if !regexp.MustCompile(`^[A-Za-z0-9_-]{1,80}$`).MatchString(s.RunID)||s.Title==""||s.Source==""||s.Phase<1||s.Phase>3{return errors.New("CONTRACT_INVALID")}
@@ -62,5 +77,6 @@ func run(scenePath,out,chrome string)error{
  return nil
 }
 func base64Encode(b []byte)string{const abc="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";var x strings.Builder;for i:=0;i<len(b);i+=3{v:=uint(b[i])<<16;remaining:=len(b)-i;if remaining>1{v|=uint(b[i+1])<<8};if remaining>2{v|=uint(b[i+2])};x.WriteByte(abc[(v>>18)&63]);x.WriteByte(abc[(v>>12)&63]);if remaining>1{x.WriteByte(abc[(v>>6)&63])}else{x.WriteByte('=')};if remaining>2{x.WriteByte(abc[v&63])}else{x.WriteByte('=')}};return x.String()}
-func containsSVG(s string)bool{return strings.Contains(strings.ToLower(s),"<svg")||strings.Contains(strings.ToLower(s),"image/svg+xml")}\nfunc main(){if len(os.Args)!=3{fmt.Fprintln(os.Stderr,"usage: go run . <scene.json> <output-dir>");os.Exit(2)};if err:=run(os.Args[1],os.Args[2],os.Getenv("CHROME_BIN"));err!=nil{fmt.Fprintln(os.Stderr,"HOLD:",err);os.Exit(1)}}
-var _ io.Reader
+func containsSVG(s string)bool{return strings.Contains(strings.ToLower(s),"<svg")||strings.Contains(strings.ToLower(s),"image/svg+xml")}
+func main(){if len(os.Args)!=3{fmt.Fprintln(os.Stderr,"usage: go run . <scene.json> <output-dir>");os.Exit(2)};if err:=run(os.Args[1],os.Args[2],os.Getenv("CHROME_BIN"));err!=nil{fmt.Fprintln(os.Stderr,"HOLD:",err);os.Exit(1)}}
+
