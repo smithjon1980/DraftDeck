@@ -44,3 +44,17 @@
 **Theme (A) → Arrangement (B + D) → Conductor's score (manifest) → Sections of the orchestra (Story / Art / Text) → Performance (Go assembly) → Listening and critique (independent QA) → Audience release (human authority).**
 
 This music-theory structural correspondence is instructional. It does not assert literal equivalence between musical notation and software execution or that the design was empirically shown to improve learning.
+
+## Amendment — four independently saved alternatives and human-written selection (2026-10-13)
+
+The **governing rule below supersedes Prompt 1's older one-image output count**. The learner must receive exactly **four distinct full-composite image files A–D**, not a 2×2 contact sheet and not four choices printed inside one infographic. A prompt describing the workflow itself is not an acceptable candidate illustration. All four must match the exact specific NotebookLM source page and subject.
+
+**Reference anchoring preflight (add before generation):** Quote the original reference slide's visible title, subject/hero object, and a distinctive detail. If the input cannot be inspected, or if the output topic changes, report REJECTED_WRONG_SUBJECT. For the first manual simulation, source A is `BOSS_System_Diagnostics.pdf` page 1: `INITIALIZING TELEMETRY: THE ANOMALY`, a smartphone exploded mechanical view, highlighted CPU and amber telemetry rings. Do not substitute `Day Zero: Ground Zero` or a diagram of DraftDeck's architecture. Exact instructional text must ultimately come from separately admitted source C; visible picture text is provisional until reconciled.
+
+**Four design directions:** A precise isometric exploded technical cutaway; B a tactile forensic examination workbench; C a thermal-signal observatory; D a visual cause/effect technical editorial with detailed component subviews. Render each as a **separate 16:9 image**, independently hash and archive. No final instruction-carrying manufacturing layer is produced by this prompt.
+
+**Human creative gate:** the learner records `candidate_id`, candidate file hash, explicit `selection_rationale` (hero, hierarchy, pedagogical clarity, original-source correspondence), approved changes, rejected alternatives and timestamp. No silent approval. The chosen creative image B plus A/C and human-approved D advance to supervisor planning.
+
+**Amend Prompt 2 output:** always return `scene-manifest.json`, `narrative-brief.md`, `worker-criteria.md` and `provenance.json` with actual byte hashes and explicit status. Each negative worker boundary must be enforced in mechanical acceptance tests. Neither a generated image nor a Go compilation establishes visual fidelity. If human selection is missing, stop at HUMAN_SELECTION_HOLD; if required source C is missing, stop at SOURCE_ADMISSION_HOLD.
+
+**Failed-run example:** a generator returning a DraftDeck process infographic rather than a visual reconstruction of the exploded smartphone is a **rejected generation**, never candidate A. A four-image collage about a *different Day Zero lesson* also fails source correspondence, however attractive its design.
