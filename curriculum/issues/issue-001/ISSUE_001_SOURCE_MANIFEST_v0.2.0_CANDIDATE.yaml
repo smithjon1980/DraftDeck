@@ -1,0 +1,398 @@
+schema_id: boss.issue-source-manifest.v1
+manifest_id: ISM-001-0.2.0
+issue_id: ISSUE-001
+issue_number: 1
+version: 0.2.0-candidate
+status: PREPARED_NOT_APPROVED
+release_scope: PRIVATE_REVIEW_ONLY
+title: The Discipline of Constraint
+subtitle: From a Single Note to a Governed Symphony
+central_question: How do deliberate constraints, practice, corrective feedback, and verification support accountable outcomes?
+source_branch: feature/book-to-skills-intake-candidate
+source_commit: 0af0e92d902f145f30cf02002fd4cb4dee89cd0f
+rebuild_status: COHERENT_REBUILD_FROM_FULL_V0_1_INVENTORY
+human_direction_date: '2026-10-14'
+ratified_constitutional_sections: ['6.04', '6.05']
+editorial_intake_approval: C011_C014_APPROVED_FOR_CANDIDATE_INTEGRATION
+previous_manifest: ISM-001-0.1.0
+historical_grf_branch: training/editorial-grf-v1
+historical_grf_commit: 9d144b13f7da37570ba46dfe200f29e4a8722709
+spec_ref: BOSS_GRF_v2_ISSUE_PUBLISHING_CANDIDATE.md
+lexicon_ref: LEXICON_GATEWAY_v1.1_CANDIDATE.yaml
+manufacturing_plan_ref: EPISODE_01_MANUFACTURING_PLAN_v0.2.0_CANDIDATE.md
+constitution_ref: ../../../doctrine/constitutional-charter-v1.1.md
+issue_competency_goal: >-
+  Learners can define a bounded publishing task, label what is and is not
+  established, specify human approval boundaries, and design a falsifiable
+  quality test that could detect failures before release.
+competency_anchors:
+  - id: C-01
+    state: WORKING_RUBRIC_NOT_RATIFIED
+    skill: Define the goal, one bounded constraint, a justified exclusion, and an exception path.
+    assessment: Produce a four-field constraint card for a two-format lesson: goal, bounded rule, justified exclusion, exception path.
+  - id: C-02
+    state: WORKING_RUBRIC_NOT_RATIFIED
+    skill: Name proposer, verifier, and final approving authority.
+    assessment: Annotate the roles in the provided publication case.
+  - id: C-03
+    state: WORKING_RUBRIC_NOT_RATIFIED
+    skill: Distinguish assertion, source, observation, and untested inference.
+    assessment: Classify four sample assertions with evidence labels.
+  - id: C-04
+    state: WORKING_RUBRIC_NOT_RATIFIED
+    skill: Describe a testable error, bounded correction, and re-verification.
+    assessment: Specify a one-segment audio correction procedure.
+  - id: C-05
+    state: WORKING_RUBRIC_NOT_RATIFIED
+    skill: Assemble a trace from source through prompt and decision to evidence.
+    assessment: Provide a simple source-claim-output acceptance ledger.
+  - id: C-06
+    state: WORKING_RUBRIC_NOT_RATIFIED
+    skill: Identify evidence that would falsify a claimed improvement.
+    assessment: Propose a cost or quality comparison with confounders.
+  - id: C-07
+    state: WORKING_RUBRIC_NOT_RATIFIED
+    skill: Transfer versioned information another reviewer can inspect.
+    assessment: Assemble a portable decision packet with unresolved states.
+source_registry:
+  - id: S01
+    path: doctrine/logistics-framework.md
+    branch: feature/book-to-skills-intake-candidate
+    commit: 843023651fff28cad3189b2b53f03b7de5c1a7b4
+    scope: BOSS logistics roles, human authority, semantic firewall
+    source_state: REPOSITORY_DOCUMENT_INSPECTED
+    rights: INTERNAL_AUTHORING_ASSUMED_NEEDS_RELEASE_REVIEW
+  - id: S02
+    path: doctrine/prime-alignment-decomposition-feedback.md
+    branch: feature/book-to-skills-intake-candidate
+    commit: 843023651fff28cad3189b2b53f03b7de5c1a7b4
+    scope: Alignment before packaging, bounded tasks, falsifiable tests, feedback
+    source_state: CANDIDATE_DOCTRINE_DOCUMENT_INSPECTED
+    rights: INTERNAL_AUTHORING_ASSUMED_NEEDS_RELEASE_REVIEW
+  - id: S03
+    path: curriculum/day-zero/audio/COMPETENCY_RUBRIC_WORKING_V0.1.md
+    branch: feature/book-to-skills-intake-candidate
+    commit: 843023651fff28cad3189b2b53f03b7de5c1a7b4
+    scope: Seven working competencies and human-review state
+    source_state: WORKING_NOT_RATIFIED
+    rights: INTERNAL_AUTHORING_ASSUMED_NEEDS_RELEASE_REVIEW
+  - id: S04
+    path: curriculum/day-zero/audio/EPISODE_01_MANUFACTURING_PLAN_CANDIDATE.md
+    branch: feature/book-to-skills-intake-candidate
+    commit: 843023651fff28cad3189b2b53f03b7de5c1a7b4
+    scope: HISTORICAL original four-by-15-minute proposal, audio experiment, script lock, QA HOLD, claims not measured
+    source_state: SUPERSEDED_DURATION_PROPOSAL_PRESERVED_AS_HISTORICAL_CONTEXT
+    rights: INTERNAL_AUTHORING_ASSUMED_NEEDS_RELEASE_REVIEW
+  - id: S05
+    path: episode01/reference/working/DraftDeck_Brand_Style_Guide.md
+    branch: feature/book-to-skills-intake-candidate
+    commit: 843023651fff28cad3189b2b53f03b7de5c1a7b4
+    scope: Ten feature contracts, cross-format ID system and brand boundaries
+    source_state: WORKING_GUIDE
+    rights: INTERNAL_AUTHORING_ASSUMED_NEEDS_RELEASE_REVIEW
+  - id: S06
+    path: training/editorial/boss-guided-reasoning-format.md
+    branch: training/editorial-grf-v1
+    commit: 9d144b13f7da37570ba46dfe200f29e4a8722709
+    scope: Five candidate laws, GRF-A/B and semantic devices
+    source_state: CANDIDATE_PR24_UNMERGED
+    rights: INTERNAL_AUTHORING_ASSUMED_NEEDS_RELEASE_REVIEW
+  - id: S07
+    path: skills/bioscillate-podcast-planner/SKILL.md
+    branch: feature/book-to-skills-intake-candidate
+    commit: 843023651fff28cad3189b2b53f03b7de5c1a7b4
+    scope: Scribe, human script lock, audio QA and human release state machine
+    source_state: DERIVED_CANDIDATE_UNTESTED
+    rights: INTERNAL_AUTHORING_ASSUMED_NEEDS_RELEASE_REVIEW
+  - id: S08
+    path: doctrine/constitutional-charter-v1.1.md
+    branch: feature/book-to-skills-intake-candidate
+    commit: BOUND_AT_THIS_MANIFEST_RELEASE
+    scope: Human-ratified Sections 6.04–6.05 only; rest of charter retains inherited candidate status
+    source_state: PARTIAL_CONSTITUTIONAL_RATIFICATION_ACTIVE_SECTIONS
+    rights: INTERNAL_AUTHORED
+  - id: S09
+    path: doctrine/evidence-verification-architecture.md
+    branch: feature/book-to-skills-intake-candidate
+    commit: 0af0e92d902f145f30cf02002fd4cb4dee89cd0f
+    scope: Evidence verification, observable comparisons, governance debt
+    source_state: REPOSITORY_DOCTRINE_INSPECTED
+    rights: INTERNAL_AUTHORING_ASSUMED_NEEDS_RELEASE_REVIEW
+  - id: S10
+    path: Why_AI_Fluency_Demands_Human_Verification.m4a
+    uri: google-drive-internal-research-archive
+    sha256: e490b28c97b6b8fef19b1b892506ba5b8967ef7e6f05047deeedb7fde32bfc62
+    duration_seconds: 2719.73
+    scope: Private Creative Spark and candidate Pick-and-Pull transcript; idea locators only
+    source_state: PRIVATE_RESEARCH_CANDIDATE_NOT_EXTERNAL_FACT_EVIDENCE
+    rights: PRIVATE_RESEARCH_ONLY
+  - id: S11
+    path: curriculum/issues/issue-001/BOSS_GRF_v2_ISSUE_PUBLISHING_CANDIDATE.md
+    branch: feature/book-to-skills-intake-candidate
+    commit: BOUND_AT_THIS_MANIFEST_RELEASE
+    scope: Candidate Issue editorial modes, vocabulary checks, evidence and release gates
+    source_state: REBUILT_EDITORIAL_SPEC_CANDIDATE_NOT_RATIFIED
+    rights: INTERNAL_AUTHORING_ASSUMED_NEEDS_RELEASE_REVIEW
+  - id: S12
+    path: curriculum/issues/issue-001/EPISODE_01_MANUFACTURING_PLAN_v0.2.0_CANDIDATE.md
+    branch: feature/book-to-skills-intake-candidate
+    commit: BOUND_AT_THIS_MANIFEST_RELEASE
+    scope: Current proposed 40-to-60-minute manufactured lecture parts, 24-hour program direction, source and QA boundaries
+    source_state: CANDIDATE_PRODUCTION_BLUEPRINT_WITH_HUMAN_DIRECTED_DURATION
+    rights: INTERNAL_AUTHORING_ASSUMED_NEEDS_RELEASE_REVIEW
+claim_registry:
+  - claim_id: C001
+    statement: A fluent creative output can still fail a bounded task when no common outcome and acceptance condition are specified.
+    source_ids: [S02]
+    evidence_state: DOCTRINAL_RULE
+    verification_status: PENDING_HUMAN_REVIEW
+    scope: Planning and inspection of bounded BOSS work; illustrative consequences only.
+    boundary: No empirically demonstrated superiority rate is claimed.
+    competency_ids: [C-01, C-03]
+    allowed_paraphrase: true
+    target_articles: [A01]
+    target_audio: [ACT01, PILOT]
+  - claim_id: C002
+    statement: Alignment of the goal and evidence criteria precedes creating independently routable packages.
+    source_ids: [S02]
+    evidence_state: DOCTRINAL_RULE
+    verification_status: PENDING_HUMAN_REVIEW
+    scope: BOSS Prime Process candidate doctrine.
+    boundary: Alignment is not a guarantee of a successful execution.
+    competency_ids: [C-01]
+    allowed_paraphrase: true
+    target_articles: [A01]
+    target_audio: [ACT01, PILOT]
+  - claim_id: C003
+    statement: Exploratory Creative Spark outputs can propose alternatives but are not themselves authorized publication copy.
+    source_ids: [S12, S07]
+    evidence_state: SOURCE_SUPPORTED
+    verification_status: PENDING_HUMAN_REVIEW
+    scope: Private ideation versus public material.
+    boundary: A Creative Spark is a process role, not a synonym for a digital image.
+    competency_ids: [C-02, C-03]
+    allowed_paraphrase: true
+    target_articles: [A01]
+    target_audio: [ACT01, PILOT]
+  - claim_id: C004
+    statement: A model assertion or agreement between models does not establish a verified external fact.
+    source_ids: [S03, S07]
+    evidence_state: DOCTRINAL_RULE
+    verification_status: PENDING_HUMAN_REVIEW
+    scope: Evidence literacy and source comparison.
+    boundary: Verification depends on suitable independent evidence and task-specific comparators.
+    competency_ids: [C-03]
+    allowed_paraphrase: true
+    target_articles: [A01]
+    target_audio: [ACT01, PILOT]
+  - claim_id: C005
+    statement: The proposed Issue Source Manifest links the same numbered claims and competency targets to multiple distinct renderers.
+    source_ids: [S05, S06]
+    evidence_state: HYPOTHESIS
+    verification_status: NOT_ESTABLISHED
+    scope: Proposed publishing design, not an existing proven runtime system.
+    boundary: A shared manifest can constrain drafts but does not prevent every semantic divergence by itself.
+    competency_ids: [C-03, C-05]
+    allowed_paraphrase: true
+    target_articles: [A01]
+    target_audio: [ACT01, PILOT]
+  - claim_id: C006
+    statement: The candidate Authorized Lexicon Gateway associates controlled terms with concepts and checks misleading substitutions in context.
+    source_ids: [S05, S06]
+    evidence_state: HYPOTHESIS
+    verification_status: NOT_ESTABLISHED
+    scope: Proposed design requiring implementation and human semantic review.
+    boundary: Simple string scanning does not prove meaning or correctness.
+    competency_ids: [C-03, C-05]
+    allowed_paraphrase: true
+    target_articles: [A01]
+    target_audio: [ACT01, PILOT]
+  - claim_id: C007
+    statement: Distinct formats require independent checks of claim coverage, evidence boundaries, and completion of an operator action.
+    source_ids: [S03, S05, S06]
+    evidence_state: DOCTRINAL_RULE
+    verification_status: PENDING_HUMAN_REVIEW
+    scope: Cross-format QA design requirement.
+    boundary: Passing a terminology check does not establish factual fidelity or learner competency.
+    competency_ids: [C-03, C-05]
+    allowed_paraphrase: true
+    target_articles: [A01]
+    target_audio: [ACT01, PILOT]
+  - claim_id: C008
+    statement: Script byte hashes and segment identities establish source identity and repair traceability, not audible word fidelity or approval.
+    source_ids: [S12, S07]
+    evidence_state: SOURCE_SUPPORTED
+    verification_status: PENDING_HUMAN_REVIEW
+    scope: Technical podcast manufacturing procedures.
+    boundary: Human word approval, independent audio comparison and release authority remain separate.
+    competency_ids: [C-02, C-04, C-05]
+    allowed_paraphrase: true
+    target_articles: [A01]
+    target_audio: [ACT01, PILOT]
+  - claim_id: C009
+    statement: One-segment regeneration may isolate a repair but must also be assessed for word accuracy and audible joining.
+    source_ids: [S12, S07]
+    evidence_state: HYPOTHESIS
+    verification_status: NOT_ESTABLISHED
+    scope: Mechanical and perceptual test; specific vendor performance unproven.
+    boundary: A local fixture does not validate all providers or publication-level sound quality.
+    competency_ids: [C-04, C-06]
+    allowed_paraphrase: true
+    target_articles: [A01]
+    target_audio: [ACT01, PILOT]
+  - claim_id: C010
+    statement: Listening to a lesson is not evidence that the learner can independently perform its intended operator action.
+    source_ids: [S03]
+    evidence_state: DOCTRINAL_RULE
+    verification_status: PENDING_HUMAN_REVIEW
+    scope: Learning assessment design, not a measured learning effect.
+    boundary: Learner competence needs observed work products and appropriate scoring.
+    competency_ids: [C-01, C-03, C-07]
+    allowed_paraphrase: true
+    target_articles: [A01]
+    target_audio: [ACT01, PILOT]
+  - claim_id: C011
+    statement: A reviewer identifies an observable discrepancy and its comparator before classifying an error as Split-Signal Error, Evidence Deficit, Authorization Failure, or Control Violation.
+    source_ids: [S08, S09]
+    inspiration_source_id: S10
+    inspiration_timecodes: ['00:18:50', '00:23:01', '00:29:12', '00:33:51', '00:42:43']
+    evidence_state: DOCTRINAL_RULE
+    constitutional_authority: HUMAN_RATIFIED_SECTION_6_04
+    verification_status: PENDING_EDITORIAL_REVIEW
+    scope: Technical and editorial claim diagnostics in the BOSS framework.
+    boundary: SSE requires contradiction against verified evidence; missing proof is NOT ESTABLISHED; labels cannot establish software motive.
+    competency_ids: [C-03, C-04, C-05]
+    allowed_paraphrase: true
+    target_articles: [A01, A04]
+    target_audio: [ACT01, ACT04]
+  - claim_id: C012
+    statement: Source admission must separate active authoritative material, closed historical records, transit artifacts, and stale material before retrieval content becomes controlling context.
+    source_ids: [S02, S09]
+    inspiration_source_id: S10
+    inspiration_timecodes: ['00:18:03', '00:20:05']
+    evidence_state: DOCTRINAL_RULE
+    verification_status: PENDING_EDITORIAL_REVIEW
+    scope: Source classification, retrieval, and context assembly.
+    boundary: A source status label alone does not prove a discrepancy was prevented.
+    competency_ids: [C-03, C-05, C-07]
+    allowed_paraphrase: true
+    target_articles: [A02, A03]
+    target_audio: [ACT02, ACT03]
+  - claim_id: C013
+    statement: Under Pick-and-Pull, model-generated completeness does not obligate whole-artifact adoption; selective human inspection and authorization govern integration.
+    source_ids: [S08, S07]
+    inspiration_source_id: S10
+    inspiration_timecodes: ['00:14:52', '00:17:40']
+    evidence_state: DOCTRINAL_RULE
+    constitutional_authority: HUMAN_RATIFIED_SECTION_6_05
+    verification_status: PENDING_EDITORIAL_REVIEW
+    scope: Private ideation, professional creation, editorial distillation.
+    boundary: No fixed editing percentage is required; entire-artifact adoption may be authorized after substantive review; no automatic public release.
+    competency_ids: [C-02, C-03, C-05]
+    allowed_paraphrase: true
+    target_articles: [A03]
+    target_audio: [ACT03]
+  - claim_id: C014
+    statement: Generation throughput should not be scaled without an appropriate verification route and capacity; doing so creates governance debt.
+    source_ids: [S09]
+    inspiration_source_id: S10
+    inspiration_timecodes: ['00:38:21', '00:44:10']
+    evidence_state: DOCTRINAL_RULE
+    verification_status: PENDING_EDITORIAL_REVIEW
+    scope: Workflow and instructional design; capacity planning.
+    boundary: This is a BOSS design constraint, not a measured universal cost increase.
+    competency_ids: [C-04, C-06, C-07]
+    allowed_paraphrase: true
+    target_articles: [A04]
+    target_audio: [ACT04]
+editorial_movements:
+  - movement_id: M01
+    question: Why impose constraints before production?
+    learning_target: Define a destination, bounded constraint, and evidence check.
+    competency_ids: [C-01, C-03, C-04]
+    claim_ids: [C001, C002, C003, C004, C011, C014]
+    article_id: A01
+    act_id: ACT01
+  - movement_id: M02
+    question: How do individual parts become a governed work package?
+    learning_target: Explain the relation of note, composition, and logistics without literalizing the analogy.
+    competency_ids: [C-01, C-02, C-05]
+    claim_ids: [C002, C004, C005, C012]
+    article_id: A02
+    act_id: ACT02
+  - movement_id: M03
+    question: What separates exploratory generation from authorized manufacture?
+    learning_target: Assign human, Scribe and tool roles and script-lock checkpoints.
+    competency_ids: [C-02, C-03, C-05]
+    claim_ids: [C003, C006, C008, C012, C013]
+    article_id: A03
+    act_id: ACT03
+  - movement_id: M04
+    question: What evidence supports the claimed results?
+    learning_target: Specify falsifiers, feedback loops and a portable record.
+    competency_ids: [C-04, C-06, C-07]
+    claim_ids: [C004, C007, C009, C010, C011, C014]
+    article_id: A04
+    act_id: ACT04
+article_plan:
+  - {id: A01, title: Why Constraint Comes Before Production, mode: GRF-A, slug: why-constraint-comes-before-production, state: DRAFT_CANDIDATE}
+  - {id: A02, title: From a Single Note to a Governed Symphony, mode: GRF-A/GRF-B, slug: from-note-to-governed-symphony, state: PLANNED}
+  - {id: A03, title: Pick-and-Pull — From Creative Spark to Approved Execution, mode: GRF-B, slug: creative-spark-approved-execution, state: PLANNED}
+  - {id: A04, title: How Do We Know the Process Worked, mode: GRF-B, slug: evidence-discipline-results, state: PLANNED}
+audio_plan:
+  governing_note: System A is Creative Spark research and not manufactured audio. System B parts use human-locked scripts; durations are planning targets, not established finished recordings.
+  system_a_notebooklm:
+    role: PRIVATE_PICK_AND_PULL_CREATIVE_SPARK
+    accepted_recording_name: Why_AI_Fluency_Demands_Human_Verification.m4a
+    accepted_recording_duration_seconds: 2719.73
+    previous_fifteen_minute_exploration_target: RETIRED
+    fixed_duration_limit: null
+    approval_state: INTERNAL_RESEARCH_ADMITTED_NOT_PUBLIC
+  system_b_manufactured_lectures:
+    role: HUMAN_GOVERNED_MANUFACTURING
+    minimum_minutes_per_part: 40
+    recommended_starting_minutes_per_part: 45
+    maximum_target_minutes_per_part: 60
+    former_fifteen_minute_act_targets: RETIRED
+    previous_sixty_minute_four_act_total: RETIRED
+    provisional_issue_parts: 4
+    provisional_issue_total_target_minutes_range: [160, 240]
+    final_script_lock: NOT_ESTABLISHED
+    parts:
+      - {id: ACT01, part_id: PART01, target_minutes_range: [40, 60], title: Why We Constrain, state: DRAFT_CANDIDATE_NOT_LOCKED}
+      - {id: ACT02, part_id: PART02, target_minutes_range: [40, 60], title: The Governed Symphony, state: PLANNED}
+      - {id: ACT03, part_id: PART03, target_minutes_range: [40, 60], title: From Spark to Manufacture, state: PLANNED}
+      - {id: ACT04, part_id: PART04, target_minutes_range: [40, 60], title: Verified Practice, state: PLANNED}
+  curriculum_program:
+    minimum_substantive_audio_minutes_goal: 1440
+    minimum_goal_hours: 24
+    planning_range_if_parts_average_40_to_60_minutes: [24, 36]
+    status: ASPIRATIONAL_EDUCATIONAL_PROGRAM_TARGET_NOT_VALIDATED
+    quality_rule: Duration alone does not establish learning value; measure coverage, practice, usable content, and assessed learner outcomes.
+  archived_mechanical_fixture:
+    id: PILOT
+    duration_target_minutes: 5
+    target_words: 750
+    state: LOCAL_MECHANICAL_FIXTURE_NOT_APPROVED
+cross_format_matrix:
+  A01: {movement: M01, audio: ACT01, article_grf: GRF-A, standalone_web: PLANNED, print_issue: PLANNED}
+  A02: {movement: M02, audio: ACT02, article_grf: GRF-A/GRF-B, standalone_web: PLANNED, print_issue: PLANNED}
+  A03: {movement: M03, audio: ACT03, article_grf: GRF-B, standalone_web: PLANNED, print_issue: PLANNED}
+  A04: {movement: M04, audio: ACT04, article_grf: GRF-B, standalone_web: PLANNED, print_issue: PLANNED}
+review:
+  issue_editor: HUMAN_REQUIRED
+  claim_registry_status: NOT_APPROVED
+  claims_C011_to_C014: HUMAN_APPROVED_FOR_CANDIDATE_INTEGRATION
+  constitutional_sections_6_04_and_6_05: HUMAN_RATIFIED
+  lecture_duration_change: HUMAN_AUTHORIZED_2026_10_14
+  lexicon_status: CANDIDATE_NOT_HUMAN_APPROVED
+  competency_rubric_status: WORKING
+  rights_review_status: NOT_ESTABLISHED
+  review_timestamp: null
+release:
+  web: HOLD
+  print: HOLD
+  audio: HOLD
+  approved_by: null
+  approved_at: null
+  manifest_sha256_after_approval: null

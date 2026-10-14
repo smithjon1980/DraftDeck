@@ -1,0 +1,127 @@
+[
+  {
+    "id": "P01",
+    "speaker": "HOST_A",
+    "claim_ids": [
+      "C001"
+    ],
+    "text": "Here is the first question. When a project feels creative, why would anyone put limits around it? A limit can sound like less possibility. Yet a project can produce many attractive answers and still fail to deliver what was actually requested. Today we will examine that difference. Our example is a learning publication."
+  },
+  {
+    "id": "P02",
+    "speaker": "HOST_B",
+    "claim_ids": [
+      "C001",
+      "C002"
+    ],
+    "text": "Consider a hypothetical assignment: prepare a short article and an audio lesson about constraint. Two writers receive the topic but no shared objective, no definitions, and no list of claims. One writer makes it motivational. The other makes it technical. The outputs are fluent but inconsistent. The missing element is an agreed destination."
+  },
+  {
+    "id": "P03",
+    "speaker": "HOST_A",
+    "claim_ids": [
+      "C002"
+    ],
+    "text": "That is why our working rule says alignment precedes packaging. First identify the learner's intended action. Then specify the claims, the sources, the boundaries, and who can authorize release. Only after that should a writer receive a bounded assignment. The purpose is to make creative work inspectable."
+  },
+  {
+    "id": "P04",
+    "speaker": "HOST_B",
+    "claim_ids": [
+      "C003"
+    ],
+    "text": "Let me argue against that for a moment. If we prescribe every detail, do we not make the writing stiff? Valuable ideas can emerge during exploration. We should not treat every exploratory sentence like final approved copy. Instead, separate an exploratory Creative Spark from the material permitted into public production."
+  },
+  {
+    "id": "P05",
+    "speaker": "HOST_A",
+    "claim_ids": [
+      "C003",
+      "C004"
+    ],
+    "text": "Now inspect the payload. Exploration generates candidate alternatives. A source-backed assertion is something else. Before a candidate statement enters a publication, we need to know whether the source supports it, whether its wording overreaches, and whether important information remains unknown. Two models agreeing with each other does not establish the claim."
+  },
+  {
+    "id": "P06",
+    "speaker": "HOST_B",
+    "claim_ids": [
+      "C004"
+    ],
+    "text": "Pause and consider this: what evidence would change your conclusion? If nothing could change it, you are defending a sentence rather than testing it. A governed workflow asks for a comparator and a reason for a result. Without those elements, a confident paragraph can still be a beautifully formatted mistake."
+  },
+  {
+    "id": "P07",
+    "speaker": "HOST_A",
+    "claim_ids": [
+      "C005"
+    ],
+    "text": "Here is the standard for this pilot. The Issue Source Manifest is our candidate upstream learning blueprint. It names competencies, claims, sources, and terminology. The Article Scribe and Podcast Scribe receive distinct forms but the same bounded teaching facts. A difference in tone is allowed. A contradiction in underlying claims is not."
+  },
+  {
+    "id": "P08",
+    "speaker": "HOST_B",
+    "claim_ids": [
+      "C005",
+      "C006"
+    ],
+    "text": "And the Bioscillate Authorized Lexicon Gateway prevents another subtle failure. Suppose the system uses the name Dual-Spark Architecture for a defined interaction pattern. A writer cannot casually replace it with a generic phrase and pretend nothing changed. Context still matters: Creative Spark does not mean every digital image or model output."
+  },
+  {
+    "id": "P09",
+    "speaker": "HOST_A",
+    "claim_ids": [
+      "C007"
+    ],
+    "text": "A publishing test should go beyond whether the pages look polished. An article could omit the boundary. A podcast could imply unmeasured results have been established. We therefore inspect claim coverage, evidence classification, vocabulary, and the final operating instruction."
+  },
+  {
+    "id": "P10",
+    "speaker": "HOST_B",
+    "claim_ids": [
+      "C008"
+    ],
+    "text": "Now take the audio manufacturing step. This test uses an exact candidate script divided into speaker turns. The speech engine receives each specified test turn as data, not permission to improvise. We can hash source bytes, record settings, and measure duration. This does not constitute human approval."
+  },
+  {
+    "id": "P11",
+    "speaker": "HOST_A",
+    "claim_ids": [
+      "C008"
+    ],
+    "text": "Here is our designated two-second pause. We measure that silence separately from the spoken material. The silence separates inspection from authorization. Producing sound does not certify its words. After the pause, we will test an isolated correction without changing the other segments of the recording."
+  },
+  {
+    "id": "P12",
+    "speaker": "HOST_B",
+    "claim_ids": [
+      "C008",
+      "C009"
+    ],
+    "text": "Imagine one turn at the wrong volume. We should be able to regenerate that turn and replace only its audio segment. Then inspect the join, compare the resulting hashes, and confirm neighboring audio was not rebuilt. If the join sounds awkward, the mechanical operation happened, but the audio acceptance test still has a problem."
+  },
+  {
+    "id": "P13",
+    "speaker": "HOST_A",
+    "claim_ids": [
+      "C009"
+    ],
+    "text": " Word-level fidelity requires an independent account of what was spoken. An input text file and a synthesis log alone cannot prove that no words were dropped. Independent transcription can help, but transcription systems also make mistakes. A human listener must inspect disputed spans before anyone declares the narration faithful."
+  },
+  {
+    "id": "P14",
+    "speaker": "HOST_B",
+    "claim_ids": [
+      "C010"
+    ],
+    "text": "What should a learner be able to do after this example? Name a goal, identify one justified constraint, establish who can approve an output, and specify evidence that would expose failure. Without those actions in a new case, competence is not demonstrated. Listening completion is not a substitute for an observed operator move."
+  },
+  {
+    "id": "P15",
+    "speaker": "HOST_A",
+    "claim_ids": [
+      "C001",
+      "C010"
+    ],
+    "text": " The result is bounded. Constraint provides an explicit comparison target. Discipline is the repeated practice of working within that target while inspecting the consequences. Verification tells us what the evidence actually supports. For this pilot, we can demonstrate a local speech-production mechanism. Whether its voices, wording, pronunciation, and joins meet publication quality remains a separate decision."
+  }
+]

@@ -1,0 +1,132 @@
+schema_id: boss.authorized-lexicon-gateway.v1
+id: LEXICON-GATEWAY-001
+version: 1.1.0-candidate
+status: CANDIDATE_RULE_IMPLEMENTATION_WITH_RATIFIED_CONSTITUTIONAL_REFERENCES
+constitutional_authority: ../../../doctrine/constitutional-charter-v1.1.md
+ratified_clause_refs: ['6.04', '6.05']
+release_authority: HUMAN_REQUIRED
+scope: ISSUE-001
+normalization:
+  unicode: NFC
+  search_mode: case_insensitive_for_detection
+  matching: concept_scoped_with_human_review_for_ambiguous_uses
+mandatory_phrasing:
+  - concept_id: ISM
+    canonical: Issue Source Manifest
+    first_use_definition: A versioned learning blueprint with approved claims, competencies, evidence boundaries, and vocabulary.
+    trigger_concepts: [upstream_learning_blueprint, issue_claim_source]
+    required_if_discussed: true
+  - concept_id: LEX
+    canonical: Authorized Lexicon Gateway
+    first_use_definition: The controlled terminology and writing-conformance checkpoint.
+    trigger_concepts: [lexical_rule_set, terminology_validation]
+    required_if_discussed: true
+  - concept_id: GRFA
+    canonical: GRF-A
+    first_use_definition: Guided Reasoning Format mode for testing a proposition.
+    trigger_concepts: [adjudication_article_mode]
+    required_if_discussed: true
+  - concept_id: GRFB
+    canonical: GRF-B
+    first_use_definition: Guided Reasoning Format mode for operator practice.
+    trigger_concepts: [operator_article_mode]
+    required_if_discussed: true
+  - concept_id: SPARK
+    canonical: Creative Spark
+    first_use_definition: Exploratory model output used as a candidate idea or critique, not approved public copy.
+    trigger_concepts: [private_ideation_material]
+    required_if_discussed: true
+  - concept_id: DUAL
+    canonical: Dual-Spark Architecture
+    status: PROPOSED_TERM_DEFINITION_PENDING_HUMAN_CONFIRMATION
+    trigger_concepts: [specifically_named_dual_spark_architecture]
+    required_if_discussed: true
+  - concept_id: HUMAN
+    canonical: human release authority
+    trigger_concepts: [final_release_permission]
+    required_if_discussed: true
+  - concept_id: SSE
+    canonical: Split-Signal Error (SSE)
+    first_use_definition: An output claim demonstrably contradicting independently verified evidence.
+    trigger_concepts: [established_factual_contradiction]
+    required_if_discussed: true
+  - concept_id: EVIDENCE_DEFICIT
+    canonical: Evidence Deficit
+    first_use_definition: Missing or insufficient proof for a claim; mark NOT ESTABLISHED.
+    trigger_concepts: [unverified_claim, missing_comparator]
+    required_if_discussed: true
+  - concept_id: AUTHORIZATION_FAILURE
+    canonical: Authorization Failure
+    first_use_definition: Action outside valid human or delegated authority boundaries.
+    trigger_concepts: [unauthorized_action]
+    required_if_discussed: true
+  - concept_id: CONTROL_VIOLATION
+    canonical: Control Violation
+    first_use_definition: Observed departure from an applicable lexical, execution, or manufacturing constraint.
+    trigger_concepts: [documented_constraint_deviation]
+    required_if_discussed: true
+  - concept_id: PICK_PULL
+    canonical: Pick-and-Pull Principle
+    first_use_definition: Human selection, inspection, fitting, and authorization of useful components from provisional AI-generated material.
+    trigger_concepts: [selective_ai_adoption]
+    required_if_discussed: true
+contextual_prohibited_equivalents:
+  - concept_id: SPARK
+    forbidden_as_alias: [AI-generated image, generic AI artwork, finished podcast]
+    reason: These describe artifacts and cannot substitute for the exploratory ideation role.
+    allowed_when: Literal and clearly labeled artifact description or contrast.
+  - concept_id: ISM
+    forbidden_as_alias: [simple content outline, unverified AI summary, random prompt]
+    reason: Those are not equivalent to a governed, source-versioned claim registry.
+    allowed_when: Critique or explicit contrast.
+  - concept_id: HUMAN
+    forbidden_as_alias: [AI auto-approval, model self-certification, passed therefore published]
+    reason: Implementation and model evaluation do not grant human permission.
+    allowed_when: Negative example quotation.
+  - concept_id: LOGISTICS
+    forbidden_as_alias: [runway, cockpit, airspace, pilot-in-command]
+    reason: Legacy aviation-control vocabulary is excluded from the current logistics flagship.
+    allowed_when: Explicit archival discussion only.
+constitutional_language_rules:
+  status: RATIFIED_DOCTRINE_CANDIDATE_TOOL_ENFORCEMENT
+  release_scope: [authored_articles, manufactured_podcast_scripts, approved_course_materials]
+  excluded_scope: [raw_research_audio, verbatim_transcripts, historical_quotes, explicitly_labeled_negative_examples]
+  false_cognition:
+    candidate_regexes:
+      - '(?i)\\b(?:ai|model|system|algorithm)\\s+(?:wants?|thinks?|believes?|decides?|feels?|dreams?|hallucinates?)\\b'
+      - '(?i)\\b(?:ai|model|system)\\s+(?:is|gets)\\s+(?:confused|afraid|happy|angry)\\b'
+      - '(?i)\\b(?:ai|model)(?:\\x27s|\\u2019s)\\s+(?:mind|brain|feelings?)\\b'
+    enforcement: HUMAN_CONTEXT_REVIEW
+    rule: Do not infer subjective experiences, motive, or human-like mental states from model output.
+  hallucination_retirement:
+    candidate_regex: '(?i)\\bhallucinat(?:ion|ions|e|es|ed|ing)\\b'
+    enforcement: FAIL_AUTHORED_RELEASE_COPY_UNLESS_NEGATIVE_EXAMPLE_APPROVED
+    classification_rule: Compare against evidence; choose SSE only for a verified contradiction, Evidence Deficit if unverified, Control Violation for a breached constraint, or Authorization Failure for unauthorized actions.
+  sovereignty_substitution:
+    candidate_regex: '(?i)\\bsovereignty\\b'
+    enforcement: HUMAN_CONTEXT_REVIEW
+    rule: Use autonomy or governance only when conceptually accurate. Do not rename human legal sovereignty or a quoted title.
+  scan_statuses: [LEXICAL_PASS, LEXICAL_FAIL, HUMAN_CONTEXT_REVIEW]
+  scan_is_not: [FACTUAL_VERIFICATION, CONSTITUTIONAL_RATIFICATION, RELEASE_AUTHORIZATION]
+  implementation_state: SPECIFICATION_ONLY_REGEX_RUNTIME_NOT_YET_PROVEN
+style_constraints:
+  - id: ST01
+    rule: End on a supported boundary, next operator action, or explicitly unresolved state; never generic inspiration.
+  - id: ST02
+    rule: Mark hypothetical scenarios as illustrative and do not claim their outcomes were measured.
+  - id: ST03
+    rule: Avoid unsourced quantified superiority, savings, causation or skill-gain claims.
+  - id: ST04
+    rule: Models compute, compare, classify, and generate outputs within task bounds. Do not attribute private intentions, cognition, emotions, or personality; preserve literal quotations in the private source archive.
+  - id: ST05
+    rule: Use short progressive paragraphs, defined terms, one focused question per checkpoint.
+  - id: ST06
+    rule: Keep verification and final human release separate.
+  - id: ST07
+    rule: Do not rewrite a human-locked script during synthesis.
+review:
+  owner: HUMAN_EDITOR_REQUIRED
+  approved_by: null
+  approved_at: null
+  scan_pass_means: Terminology conformance for listed patterns only
+  semantic_validation: HUMAN_REVIEW_REQUIRED

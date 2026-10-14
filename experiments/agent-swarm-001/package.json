@@ -1,0 +1,13 @@
+{
+  "name": "draftdeck-governed-swarm-trial",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "demo": "node src/graph.mjs"
+  },
+  "dependencies": {
+    "@langchain/langgraph": "^1.0.0"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "run_id": "day-zero-phase2-approval-001",
+  "phase": 2,
+  "title": "From AI Consumer to Governed Operator.",
+  "subtitle": "Stop asking what the model can generate. Start defining what the business needs, who is authorized, and what counts as verified delivery.",
+  "source": "Day Zero prior reference — pending authenticated source manifest",
+  "layers": [
+    {
+      "id": "story-background",
+      "kind": "story",
+      "asset": "story.png"
+    },
+    {
+      "id": "art-governed-chain",
+      "kind": "art",
+      "text": "Governed execution chain and verification gate"
+    },
+    {
+      "id": "01 IDENTIFY THE CARGO",
+      "kind": "text",
+      "text": "The request, its source, intended recipient, and handling destination."
+    },
+    {
+      "id": "02 RECORD THE EVIDENCE",
+      "kind": "text",
+      "text": "What is known, where it came from, and what remains uncertain."
+    },
+    {
+      "id": "03 VERIFY THE RESULT",
+      "kind": "text",
+      "text": "Compare delivered work with the declared standard and ground truth."
+    },
+    {
+      "id": "04 RELEASE BY PERMISSION",
+      "kind": "text",
+      "text": "Human authorization—not model confidence—controls final release."
+    }
+  ]
+}

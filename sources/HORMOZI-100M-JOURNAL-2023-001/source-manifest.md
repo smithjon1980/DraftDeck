@@ -1,0 +1,15 @@
+# Source Manifest — HORMOZI-100M-JOURNAL-2023-001
+- Title: *$100M Journal: The Visual Evolution of the Frameworks Behind $100M Offers and $100M Leads*
+- Author: Alex Hormozi; copyright page states 2023.
+- Uploaded file: `977337641-100M-Journal.pdf`.
+- Binary pages inspected programmatically: 266 (some document rendering pipelines report 265; page anchors use viewer numbering and should be checked against target reader).
+- Binary size: 74,604,316 bytes.
+- SHA-256: `de730e9d27cd01c64b7973905183092adf02b223efe417d06de4e87b6ce6619c` (computed from uploaded binary).
+- Source form: visual PDF, extensive handwritten sketches; parsers may garble text.
+- Source authority: IDENTIFIED / PENDING_HUMAN_AUTHENTICATION.
+- Copyright: all rights reserved; derivative original procedural abstractions only. No redistribution of pages/diagrams.
+- Relationship: companion private journal for $100M Offers and $100M Leads; exploratory framework history rather than independent confirmation of their finalized methods.
+- Core evidence: opening reader contract p.4; offer-component sketch pp.25–26; value equation evolution pp.27–29; price/value pp.31–36; sales-to-fulfillment p.38; iterative book architecture pp.54–78; lead acquisition mapping p.78; channel/stage studies pp.122–155 and pp.173 onward.
+- Derived skills: framework-evolution-lineage, offer-fulfillment-tradeoff, lead-stage-definition, channel-experiment-ladder, visual-sketch-to-skill.
+- Qualification: SPECIFIED_CANDIDATE / NOT_TESTED.
+- Verification and permissions: NOT_ESTABLISHED beyond exact uploaded bytes.

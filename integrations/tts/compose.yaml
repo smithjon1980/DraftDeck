@@ -1,0 +1,50 @@
+name: boss-tts-candidate
+services:
+  kokoro:
+    image: ${KOKORO_IMAGE:-ghcr.io/remsky/kokoro-fastapi-cpu:v0.9.0}
+    ports:
+      - "127.0.0.1:8880:8880"
+    environment:
+      API_LOG_LEVEL: WARNING
+      ENABLE_VOICE_TAGS: "true"
+      ENABLE_SSML: "true"
+      ALLOW_LOCAL_VOICE_SAVING: "false"
+      DEFAULT_VOICE: af_heart
+    networks: [tts-internal]
+    restart: "no"
+  audition-runner:
+    profiles: [audition]
+    image: python:3.12.7-slim
+    depends_on: [kokoro]
+    working_dir: /work
+    entrypoint: ["python"]
+    volumes:
+      - ./:/work:rw
+    networks: [tts-internal]
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=256m
+    security_opt: [no-new-privileges:true]
+    cap_drop: [ALL]
+    restart: "no"
+  mcp-preview:
+    profiles: [editorial-preview]
+    build:
+      context: ./mcp
+    depends_on: [kokoro]
+    stdin_open: true
+    read_only: true
+    user: "10001:10001"
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=16m
+    volumes:
+      - preview-data:/data/previews:rw
+    networks: [tts-internal]
+    security_opt: [no-new-privileges:true]
+    cap_drop: [ALL]
+    restart: "no"
+networks:
+  tts-internal:
+    internal: true
+volumes:
+  preview-data:

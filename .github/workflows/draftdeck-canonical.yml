@@ -1,0 +1,92 @@
+name: DraftDeck Canonical Go Pipeline
+on:
+  workflow_dispatch:
+    inputs:
+      phase:
+        description: "Run phase 1 or 2"
+        type: choice
+        options: ['1', '2']
+        default: '1'
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: skills/draftdeck/engine
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.24'
+          cache: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Compile Tailwind
+        run: |
+          npm install --no-save --no-audit --no-fund tailwindcss@4 @tailwindcss/cli@4
+          mkdir -p output
+          npx @tailwindcss/cli -i input.css -o output/styles.css --minify
+      - uses: browser-actions/setup-chrome@v2
+        id: chrome
+      - name: Compile Go engine
+        run: go build -o output/draftdeck-engine .
+      - name: Unit and negative tests
+        run: go test -count=1 -v ./...
+      - name: Build Phase 1
+        env:
+          CHROME_BIN: ${{ steps.chrome.outputs.chrome-path }}
+        run: go run . scenes/phase1.json output
+      - name: Inspect structural evidence
+        run: |
+          python3 - <<'PY'
+          import json,hashlib,pathlib
+          o=pathlib.Path('output')
+          e=json.loads((o/'evidence.json').read_text())
+          pdf=(o/'day-zero.pdf').read_bytes()
+          assert pdf[:5]==b'%PDF-'
+          assert e['pdf_sha256']==hashlib.sha256(pdf).hexdigest()
+          assert e['status']=='P1_BUILD_CANDIDATE'
+          assert e['visual_qa']=='NOT_ESTABLISHED'
+          assert not list(o.rglob('*.svg'))
+          print('PHASE 1 STRUCTURAL CHECK PASS; VISUAL QA NOT ESTABLISHED')
+          PY
+      - name: Generate Phase 2 Story fixture
+        run: go run ./cmd/story-fixture
+      - name: Stage Phase 2 CSS
+        run: mkdir -p output/phase2 && cp output/styles.css output/phase2/styles.css
+      - name: Build Phase 2
+        env:
+          CHROME_BIN: ${{ steps.chrome.outputs.chrome-path }}
+        run: go run . scenes/phase2.json output/phase2
+      - name: Verify Phase 2 candidate evidence
+        run: |
+          python3 - <<'PY'
+          import json,pathlib,hashlib
+          d=pathlib.Path('output/phase2')
+          evidence=json.loads((d/'evidence.json').read_text())
+          pdf=(d/'day-zero.pdf').read_bytes()
+          assert evidence['status']=='P2_COMPOSITION_CANDIDATE'
+          assert evidence['story_sha256'] == hashlib.sha256(pathlib.Path('scenes/story.png').read_bytes()).hexdigest()
+          assert evidence['pdf_sha256'] == hashlib.sha256(pdf).hexdigest()
+          assert len(pdf)>15000
+          assert evidence['visual_qa']=='NOT_ESTABLISHED'
+          print('PHASE 2 COMPOSITION CANDIDATE BUILT — VISUAL QA PENDING')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: draftdeck-canonical-phase1
+          path: skills/draftdeck/engine/output/
+          retention-days: 7
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: draftdeck-phase2-approval-001
+          path: |
+            skills/draftdeck/engine/output/phase2/
+            skills/draftdeck/engine/scenes/phase2.json
+            skills/draftdeck/engine/scenes/story.png
+          retention-days: 7

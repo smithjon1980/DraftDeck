@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "runtime_enforcement",
+    "skills"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "social-capability-conformity-v2"
+    },
+    "status": {
+      "const": "SPECIFIED_CANDIDATE"
+    },
+    "runtime_enforcement": {
+      "const": "NOT_IMPLEMENTED"
+    },
+    "skills": {
+      "type": "array",
+      "minItems": 31,
+      "maxItems": 31,
+      "items": {
+        "type": "object",
+        "required": [
+          "skill_id",
+          "path",
+          "human_dependency",
+          "agent_deliverable",
+          "correction_vector",
+          "qualification_status",
+          "test_status",
+          "execution_authority",
+          "capability_assignment",
+          "intervention_selection",
+          "performance_contract"
+        ],
+        "properties": {
+          "skill_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "human_dependency": {
+            "type": "string",
+            "minLength": 1
+          },
+          "agent_deliverable": {
+            "type": "string",
+            "minLength": 1
+          },
+          "correction_vector": {
+            "type": "string",
+            "minLength": 1
+          },
+          "qualification_status": {
+            "const": "SPECIFIED_CANDIDATE"
+          },
+          "test_status": {
+            "const": "NOT_TESTED"
+          },
+          "execution_authority": {
+            "const": "NONE"
+          },
+          "capability_assignment": {
+            "type": "object",
+            "required": [
+              "human_entitlement",
+              "human_ability",
+              "agent_role",
+              "skill_id",
+              "tool_permissions"
+            ],
+            "properties": {
+              "human_entitlement": {
+                "type": "string"
+              },
+              "human_ability": {
+                "type": "string"
+              },
+              "agent_role": {
+                "type": "string"
+              },
+              "skill_id": {
+                "type": "string"
+              },
+              "tool_permissions": {
+                "type": "string"
+              }
+            }
+          },
+          "intervention_selection": {
+            "type": "object",
+            "required": [
+              "selected_class",
+              "manual_baseline",
+              "alternatives_review",
+              "cost_evidence"
+            ],
+            "properties": {
+              "selected_class": {
+                "enum": [
+                  "NOT_ESTABLISHED",
+                  "SCRIPT",
+                  "PROGRAM",
+                  "NARROW_AI",
+                  "GENERAL_AI",
+                  "NONE_MANUAL"
+                ]
+              },
+              "manual_baseline": {
+                "type": "string"
+              },
+              "alternatives_review": {
+                "type": "string"
+              },
+              "cost_evidence": {
+                "type": "string"
+              }
+            }
+          },
+          "performance_contract": {
+            "type": "object",
+            "required": [
+              "sop",
+              "kpi_definition",
+              "okr",
+              "capa_retest"
+            ],
+            "properties": {
+              "sop": {
+                "type": "string"
+              },
+              "kpi_definition": {
+                "type": "string"
+              },
+              "okr": {
+                "type": "string"
+              },
+              "capa_retest": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

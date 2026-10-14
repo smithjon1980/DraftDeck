@@ -1,0 +1,20 @@
+# Capability Assignment — Candidate
+- human_role:
+- human_ability_requirement:
+- human_entitlement: NOT_ESTABLISHED
+- agent_role_or_none:
+- skill_id_and_version:
+- tools_and_permitted_actions:
+- manual_baseline:
+- intervention_class: SCRIPT | PROGRAM | NARROW_AI | GENERAL_AI | NONE_MANUAL
+- selection_rationale:
+- rejected_alternatives_and_rationale:
+- SOP_reference:
+- KPI_formula_and_window:
+- OKR_reference_optional:
+- CAPA_trigger_and_retest:
+- human_decision_checkpoint:
+- correction_vector:
+- evidence_refs:
+- execution_status: NOT_TESTED
+- release_authority: NONE

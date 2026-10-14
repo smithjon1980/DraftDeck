@@ -1,0 +1,8 @@
+# Decision 003 — Visual authoring without Canva
+Status: EXPERIMENT STAGED / NOT_EXECUTED
+Decision: trial the MIT-licensed GrapesJS core for visual HTML/CSS editing; retain Chromium PDF as distribution export; retain React 19 for the editor shell; exclude Canva. Avoid obligatory SVG or PowerPoint.
+Rejected for initial trial: Penpot (SVG-oriented model, though capable and open source); Paged.js and Vivliostyle (print composition engines rather than direct visual editor); Inkscape (vector-first). These are alternative categories, not claims of incompatibility.
+Why: the requirement is separate, editable text and art in a browser-native composition with visual tools; Canva PDF round trips produced gray/black canvas and merged text. Chromium-only PDFs retained correct white background and selectable text.
+Scope boundaries: not a replacement for BOSS/SEVEN governance; candidate only. Source-of-truth remains the downloaded GrapesJS project JSON plus exported HTML/CSS and the build manifest. PDF is a distribution artifact; named editable PDF layers are NOT promised. Official GrapesJS React wrapper does not render user-defined JSX as native canvas elements. Dependencies have NOT been installed or executed in this session.
+Source references: https://github.com/GrapesJS/grapesjs ; https://github.com/GrapesJS/react ; https://github.com/penpot/penpot ; https://github.com/pagedjs/pagedjs ; https://github.com/vivliostyle/vivliostyle.js
+Verification pending: local build, editing test, persisted JSON round-trip, Chromium PDF rendering, full reference fidelity, typography correctness, evidence record, human approval.

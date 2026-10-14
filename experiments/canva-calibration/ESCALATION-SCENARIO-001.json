@@ -1,0 +1,28 @@
+{
+  "schema_version": "boss-escalation-candidate-v1",
+  "status": "SPECIFIED_CANDIDATE",
+  "actual_windmill_run": "NOT_RUN",
+  "actual_rea_run": "NOT_RUN",
+  "cases": [
+    {
+      "id": "CAL-001-BG",
+      "observed": "Page field gray in Canva while opaque white test sample preserved",
+      "hypotheses": [
+        "Page-level background mapping differs from explicit drawing rectangle",
+        "PDF media or transparency behavior"
+      ],
+      "next_test": "Export explicit full-page white block and compare Canva import",
+      "state": "HOLD"
+    },
+    {
+      "id": "CAL-001-TEXT",
+      "observed": "Spaces merged and text overlapped in imported Canva view",
+      "hypotheses": [
+        "PDF glyph placement conversion",
+        "CSS layout clipping independent from converter"
+      ],
+      "next_test": "Compare exact string and bounding boxes before/after PDF import",
+      "state": "HOLD"
+    }
+  ]
+}

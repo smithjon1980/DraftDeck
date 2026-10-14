@@ -1,0 +1,70 @@
+name: Kokoro candidate audition (non-release)
+on:
+  push:
+    branches:
+      - feature/book-to-skills-intake-candidate
+    paths:
+      - 'integrations/tts/**'
+      - '.github/workflows/kokoro-tts-candidate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  controlled-audition:
+    runs-on: ubuntu-latest
+    timeout-minutes: 28
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: integrations/tts/go-transport/go.mod
+      - name: Go REST boundary tests
+        working-directory: integrations/tts/go-transport
+        run: go test -v ./...
+      - name: Python contract tests (mock only)
+        working-directory: integrations/tts
+        run: python -m unittest discover -s tests -v
+      - name: Validate Docker Compose
+        working-directory: integrations/tts
+        run: docker compose -f compose.yaml config --quiet
+      - name: Start pinned Kokoro CPU service
+        working-directory: integrations/tts
+        run: |
+          docker compose -f compose.yaml pull kokoro
+          docker compose -f compose.yaml up -d --no-build kokoro
+          docker image inspect ghcr.io/remsky/kokoro-fastapi-cpu:v0.9.0 --format '{{json .RepoDigests}}' > image-digests.json
+      - name: Poll Kokoro readiness
+        run: |
+          for i in $(seq 1 90); do
+            if docker compose -f integrations/tts/compose.yaml exec -T kokoro python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8880/v1/audio/voices',timeout=4)" >/dev/null 2>&1; then exit 0; fi
+            sleep 4
+          done
+          docker compose -f integrations/tts/compose.yaml logs --tail 120 kokoro
+          exit 1
+      - name: Execute 750-word governed audition
+        working-directory: integrations/tts
+        run: |
+          set -u
+          # The runner has a read-only rootfs and a read-only checkout.
+          # Generate within a bounded writable tmpfs, then export from the
+          # stopped container through docker cp to the Actions artifact path.
+          docker compose -f compose.yaml run --name boss-audition-evidence -T audition-runner audition.py --api-base http://kokoro:8880 --out /tmp/output
+          result=$?
+          mkdir -p output
+          docker cp boss-audition-evidence:/tmp/output/. ./output/ || true
+          docker rm -f boss-audition-evidence || true
+          exit "$result"
+      - name: Upload candidate-only evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kokoro-candidate-evidence-${{ github.run_id }}
+          path: |
+            integrations/tts/output/
+            integrations/tts/image-digests.json
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Stop service
+        if: always()
+        working-directory: integrations/tts
+        run: docker compose -f compose.yaml down --remove-orphans

@@ -1,0 +1,9 @@
+# Decision 004 — One supervisor and bounded specialists
+Status: CANDIDATE; no production authority.
+Use LangGraph.js as the sole agent-workflow orchestrator initially. Use Puck for the visual editor, React/CSS for authored pages, Sharp for image preparation, Playwright/Chromium for PDF export, and a persistent object store (SeaweedFS is candidate). Each tool has exactly one functional responsibility.
+Do not add CrewAI, AutoGen or a second model-based scheduler to the same path without measured need. LangGraph has durable execution and human interrupt features but checkpoint DB, model providers, credentials and storage are NOT CONFIGURED.
+Each specialist has one capability: RequirementsAgent: gather contract; DesignAgent: produce composition; ArtworkAgent: create/select art; VerificationAgent: assemble independent evidence; Supervisor: choose and reschedule bounded routes. RELEASE is controlled by deterministic gate and human authorization, not an agent.
+The source request includes id, source_ref, artifact_type, required_text and storage destination. Missing authoritative operands → HOLD. Produced artifacts record sha256, source commit, exact text check, story-layer review, PDF manifest, verification state and human decision. Rework loops max 2 in a candidate future implementation; model loops not enabled in trial 001.
+Conditional paths: a text-only memo may not need artwork; a photo-heavy lesson may route to asset preparation; a factual discrepancy returns to source analysis; an export failure routes to Chromium diagnostics. Deterministic gate defines eligibility; supervisor only proposes routing.
+User experience target: one natural-language request → governed job ID → agent/tool execution → independent verification → persistent object storage → stable file URL. Release requires configured authenticated storage and human-authorized policy.
+No SVG-first, no Canva, no PowerPoint. No new BOSS constitutional layer. Production HOLD.

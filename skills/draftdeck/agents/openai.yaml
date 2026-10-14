@@ -1,10 +1,7 @@
 interface:
-  display_name: DraftDeck — Layered HTML Slides
-  short_description: Build reference-based slides with editable text and separate artwork layers
-  default_prompt: Use $draftdeck to rebuild this reference as a 16:9 HTML slide with
-    editable text and separate artwork layers.
-  icon_small: assets/icon.svg
-  icon_large: assets/icon.svg
+  display_name: DraftDeck — Governed Visual Production
+  short_description: Three-phase Go + Tailwind + Chromium pipeline with isolated Story, Art and Text
+  default_prompt: Use $draftdeck to classify the requested artifact phase, preserve source copy, build or inspect a Go + Tailwind + Chromium candidate, and require independent QA before release. No SVG, React, Canva or PowerPoint in the active rendering workflow.
 policy:
   products:
   - chatgpt

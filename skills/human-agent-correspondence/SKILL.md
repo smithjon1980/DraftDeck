@@ -1,0 +1,53 @@
+---
+name: human-agent-correspondence
+description: Define a reciprocal, bounded, human-authorized interaction contract around any book-derived business or design skill.
+version: 0.1.0-candidate
+operational_phase_tags: [DISCOVERY, DESIGN, VALIDATION]
+enforcement_tags: [G1, G2, G5]
+trust_class: ORIGINAL_BOSS_DESIGN
+qualification_status: SPECIFIED_CANDIDATE
+test_status: NOT_TESTED
+authority_scope: DESIGN_ONLY
+evidence_refs: []
+human_dependency: "Human provides context and authorization for Turn an atomic procedure into a comprehensible partnership protocol with declared human authority and agent responsibilities.; reviews proposed outcome before any external effect"
+agent_deliverable: "Human-readable human-agent-correspondence review workpaper with evidence, assumptions, alternatives, unresolved questions, proposed result and corrections diff"
+correction_vector: "Authenticated human REJECT/correction: persist HUMAN_OVERRIDE with exact permitted correction, invalidate relevant semantic cache (SEAM-B01 proposed), append a new source-linked L1 derivative/digest, block stale active envelope until revalidation"
+---
+# Human–Agent Social Correspondence
+
+## Goal
+Turn an atomic procedure into a comprehensible partnership protocol with declared human authority and agent responsibilities.
+
+## Proof
+A human can identify the question, correct the model, understand the evidence, review the decision and recover from a mistake. A passed execution test without understandable handoff is insufficient.
+
+## Steps
+1. Begin with a non-manipulative, concrete feed hook tied to the human's actual operation.
+2. Elicit the business owner or customer's observed task and constraints without merging their roles.
+3. Restate the situation, separating facts, impressions, estimates and unknowns.
+4. Offer a small set of alternatives, including doing nothing/manual improvement.
+5. Record decision authority, approval checkpoint, evidence requirement and refusal/HOLD paths.
+6. Return a plain-language outcome and ask for corrections; preserve rejected interpretations and their rationale.
+7. Package the paired protocol into the specific skill's references and tests.
+
+## Boundary
+No fabricated empathy, motive inference or promotional guarantees. Social correspondence is one-to-one functional handoff, not agent personhood or unilateral authority. Respect privacy, source-rights and G1–G5. Never elevate a source or operational claim based on conversation alone.
+
+## Inputs and outputs
+Input: existing SKILL.md, source references, observed problem and authorized human context.
+Output: human–agent relationship contract plus falsifiable social tests.
+
+## Reference
+../../docs/book-to-skills/HUMAN-AGENT-SOCIAL-CORRESPONDENCE-001.md
+
+## Human–Agent interface candidate
+Human dependency: Human provides context and authorization for Turn an atomic procedure into a comprehensible partnership protocol with declared human authority and agent responsibilities.; reviews proposed outcome before any external effect.
+Agent deliverable: Human-readable human-agent-correspondence review workpaper with evidence, assumptions, alternatives, unresolved questions, proposed result and corrections diff.
+Correction: Authenticated human REJECT/correction: persist HUMAN_OVERRIDE with exact permitted correction, invalidate relevant semantic cache (SEAM-B01 proposed), append a new source-linked L1 derivative/digest, block stale active envelope until revalidation.
+If operation exceeds the explicitly approved Equivalence Set or financial limit, require `ZONE_C_ESCALATION_REQUIRED` and prevent dispatch. No runtime implementation or probe qualification is claimed.
+
+## Three-Quadrant Conformity (Candidate)
+- **A — Assignment:** Human entitlement and ability: NOT_ESTABLISHED until operator provides evidence; agent role: DESIGN_ASSISTANT_ONLY; skill: `human-agent-correspondence`; tool access: NONE_ASSUMED. Check the existing `human_dependency`, `agent_deliverable`, and `correction_vector` fields.
+- **B — Minimum sufficient intervention:** Evaluate manual/no-change, SCRIPT, PROGRAM, NARROW_AI and GENERAL_AI in that order subject to suitability; selected class NOT_ESTABLISHED until the specific task is scoped; record rejected alternatives.
+- **C — Operational performance:** SOP reference: CANDIDATE_ONLY; KPI definition/baseline/denominator/window: NOT_ESTABLISHED; OKR reference: OPTIONAL/NOT_ESTABLISHED; CAPA: record observed defect, correction authority, retest evidence and outcome. Never treat an untested KPI as a measured improvement.
+- **Stop rule:** missing entitlement, material evidence, valid intervention economics or authorization -> HOLD. This overlay does not authorize execution or imply operational qualification.

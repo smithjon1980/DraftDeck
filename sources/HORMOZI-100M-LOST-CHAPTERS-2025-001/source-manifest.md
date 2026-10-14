@@ -1,0 +1,12 @@
+# Source identification — HORMOZI-100M-LOST-CHAPTERS-2025-001
+- Title: Alex Hormozi, *$100M Lost Chapters: Lost Treasures from $100M Offers, $100M Leads, & $100M Money Models*
+- Copyright: 2025, Bumble IP, LLC.
+- Source: conversation-uploaded private-volume PDF (164 pages; 4,939,004 bytes).
+- SHA-256: ece4087b329836e29c5031efa3c3fe45556f013e460892d139f4dff6cc46ea28
+- L0 status: IDENTIFIED / AUTHENTICATION PENDING. Digest proves uploaded bytes only.
+- Restrictions: PRIVATE VOLUME; NOT FOR DISTRIBUTION. Publisher asserts rights including text/data mining. Exact text and PDF are not committed to public GitHub.
+- Scope: published collection of separately usable discarded chapters; not a chronological history and not automatically superior to the previously published methods.
+- Comparative assessment: seven original high-level design skills in this cycle; avoid duplicate skills from prior Offers/Journal packages.
+- Qualification: SPECIFIED_CANDIDATE / NOT_TESTED / research-only.
+- Rights to reuse source passages in public files: NOT_ESTABLISHED; human review required for wider distribution.
+- Source register proof location: local uploaded copy and digest, not a persistent archive in GitHub.
