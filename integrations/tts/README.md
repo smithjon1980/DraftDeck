@@ -8,7 +8,7 @@
 
 - `compose.yaml`: private-network Kokoro-FastAPI CPU image, configured `v0.9.0`; localhost-bound port 8880. A named release tag is not an immutable digest. The CI captures image digest(s); pin a reviewed digest before production.
 - `go-transport/`: standard-library-only Go REST speech client. NEVER calls MCP.
-- `audition.py`: Python **test harness** for 750-word baseline + exact one-sentence P12 edit; contacts only the localhost REST endpoint. This is not the Go release supervisor.
+- `audition.py`: Python **test harness** for 750-word baseline + exact one-sentence P12 edit; contacts only localhost REST or the private `kokoro:8880` Docker service. This is not the Go release supervisor.
 - `mcp/`: BOSS restricted stdio editorial preview server, optional Docker Compose profile `editorial-preview`, no user-selected paths, voices whitelisted, one constrained backend address, output inside `/data/previews`. It does not run during manufacturing.
 - `fixtures/pilot_turns.json`: 15 turns, 750 words, original candidate status preserved.
 - `tests/`: mock REST harness tests; mock success does not establish neural model behavior.
@@ -21,7 +21,7 @@ python -m unittest discover -s tests -v
 (cd go-transport && go test ./...)
 docker compose -f compose.yaml config
 docker compose -f compose.yaml up -d kokoro
-python audition.py --api-base http://127.0.0.1:8880 --out output
+docker compose -f compose.yaml run --rm -T audition-runner audition.py --api-base http://kokoro:8880 --out output
 ```
 
 The GitHub Actions file `.github/workflows/kokoro-tts-candidate.yml` runs Go, mock, Docker, and 750-word real model audition on push to the specified candidate branch. The job publishes non-release evidence artifacts for human review; it never commits generated media or releases it to the public.
@@ -44,3 +44,5 @@ Inspected `giannisanni/kokoro-tts-mcp` at commit `855b2af58b25154b840d2652cc774d
 ## Release states
 
 `LOCAL_MOCK_PASS` is not `KOKORO_AUDITION_PASS`. `KOKORO_AUDITION_PASS` is not `SPOKEN_FIDELITY_PASS`. `SPOKEN_FIDELITY_PASS` is not `HUMAN_RELEASE_APPROVED`. All output is candidate-only and transcript-first.
+
+**Private-network test transport:** CI checks readiness from inside the Kokoro container, and the audition runner executes inside the private Docker bridge. Neither step depends on reaching an internal-network service from the GitHub runner host.

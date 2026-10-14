@@ -35,8 +35,8 @@ def write_bytes(path, data):
 
 
 def request_wav(base, phrase, voice, timeout=300):
-    if not base.startswith(('http://127.0.0.1:', 'http://localhost:')):
-        raise ValueError('Audition REST target MUST be localhost; no external endpoints authorized')
+    if not base.startswith(('http://127.0.0.1:', 'http://localhost:', 'http://kokoro:8880')):
+        raise ValueError('Audition REST target MUST be localhost or the private Docker service; external endpoints forbidden')
     body = json.dumps({'model': 'kokoro', 'input': phrase, 'voice': voice,
                        'response_format': 'wav', 'speed': 1.0}).encode()
     req = urllib.request.Request(base.rstrip('/') + '/v1/audio/speech', data=body,

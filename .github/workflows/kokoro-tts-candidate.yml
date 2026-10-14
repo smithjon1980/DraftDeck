@@ -36,14 +36,14 @@ jobs:
       - name: Poll Kokoro readiness
         run: |
           for i in $(seq 1 90); do
-            if curl -fsS --max-time 4 http://127.0.0.1:8880/v1/audio/voices >/dev/null; then exit 0; fi
+            if docker compose -f integrations/tts/compose.yaml exec -T kokoro python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8880/v1/audio/voices',timeout=4)" >/dev/null 2>&1; then exit 0; fi
             sleep 4
           done
           docker compose -f integrations/tts/compose.yaml logs --tail 120 kokoro
           exit 1
       - name: Execute 750-word governed audition
         working-directory: integrations/tts
-        run: python audition.py --api-base http://127.0.0.1:8880 --out output
+        run: docker compose -f compose.yaml run --rm -T audition-runner audition.py --api-base http://kokoro:8880 --out output
       - name: Upload candidate-only evidence
         if: always()
         uses: actions/upload-artifact@v4
