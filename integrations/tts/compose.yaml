@@ -23,7 +23,7 @@ services:
     networks: [tts-internal]
     read_only: true
     tmpfs:
-      - /tmp:rw,noexec,nosuid,size=32m
+      - /tmp:rw,noexec,nosuid,size=256m
     security_opt: [no-new-privileges:true]
     cap_drop: [ALL]
     restart: "no"
