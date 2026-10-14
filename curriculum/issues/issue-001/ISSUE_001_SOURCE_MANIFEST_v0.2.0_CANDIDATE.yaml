@@ -19,6 +19,7 @@ historical_grf_branch: training/editorial-grf-v1
 historical_grf_commit: 9d144b13f7da37570ba46dfe200f29e4a8722709
 spec_ref: BOSS_GRF_v2_ISSUE_PUBLISHING_CANDIDATE.md
 lexicon_ref: LEXICON_GATEWAY_v1.1_CANDIDATE.yaml
+manufacturing_plan_ref: EPISODE_01_MANUFACTURING_PLAN_v0.2.0_CANDIDATE.md
 constitution_ref: ../../../doctrine/constitutional-charter-v1.1.md
 issue_competency_goal: >-
   Learners can define a bounded publishing task, label what is and is not
@@ -79,8 +80,8 @@ source_registry:
     path: curriculum/day-zero/audio/EPISODE_01_MANUFACTURING_PLAN_CANDIDATE.md
     branch: feature/book-to-skills-intake-candidate
     commit: 843023651fff28cad3189b2b53f03b7de5c1a7b4
-    scope: Four-act targets, audio experiment, script lock, QA HOLD, claims not measured
-    source_state: CANDIDATE_UNTESTED_VENDOR_PATHS
+    scope: HISTORICAL original four-by-15-minute proposal, audio experiment, script lock, QA HOLD, claims not measured
+    source_state: SUPERSEDED_DURATION_PROPOSAL_PRESERVED_AS_HISTORICAL_CONTEXT
     rights: INTERNAL_AUTHORING_ASSUMED_NEEDS_RELEASE_REVIEW
   - id: S05
     path: episode01/reference/working/DraftDeck_Brand_Style_Guide.md
@@ -117,13 +118,6 @@ source_registry:
     scope: Evidence verification, observable comparisons, governance debt
     source_state: REPOSITORY_DOCTRINE_INSPECTED
     rights: INTERNAL_AUTHORING_ASSUMED_NEEDS_RELEASE_REVIEW
-  - id: S11
-    path: curriculum/issues/issue-001/BOSS_GRF_v2_ISSUE_PUBLISHING_CANDIDATE.md
-    branch: feature/book-to-skills-intake-candidate
-    commit: BOUND_AT_THIS_MANIFEST_RELEASE
-    scope: Candidate Issue editorial modes, vocabulary checks, evidence and release gates
-    source_state: REBUILT_EDITORIAL_SPEC_CANDIDATE_NOT_RATIFIED
-    rights: INTERNAL_AUTHORING_ASSUMED_NEEDS_RELEASE_REVIEW
   - id: S10
     path: Why_AI_Fluency_Demands_Human_Verification.m4a
     uri: google-drive-internal-research-archive
@@ -132,6 +126,20 @@ source_registry:
     scope: Private Creative Spark and candidate Pick-and-Pull transcript; idea locators only
     source_state: PRIVATE_RESEARCH_CANDIDATE_NOT_EXTERNAL_FACT_EVIDENCE
     rights: PRIVATE_RESEARCH_ONLY
+  - id: S11
+    path: curriculum/issues/issue-001/BOSS_GRF_v2_ISSUE_PUBLISHING_CANDIDATE.md
+    branch: feature/book-to-skills-intake-candidate
+    commit: BOUND_AT_THIS_MANIFEST_RELEASE
+    scope: Candidate Issue editorial modes, vocabulary checks, evidence and release gates
+    source_state: REBUILT_EDITORIAL_SPEC_CANDIDATE_NOT_RATIFIED
+    rights: INTERNAL_AUTHORING_ASSUMED_NEEDS_RELEASE_REVIEW
+  - id: S12
+    path: curriculum/issues/issue-001/EPISODE_01_MANUFACTURING_PLAN_v0.2.0_CANDIDATE.md
+    branch: feature/book-to-skills-intake-candidate
+    commit: BOUND_AT_THIS_MANIFEST_RELEASE
+    scope: Current proposed 40-to-60-minute manufactured lecture parts, 24-hour program direction, source and QA boundaries
+    source_state: CANDIDATE_PRODUCTION_BLUEPRINT_WITH_HUMAN_DIRECTED_DURATION
+    rights: INTERNAL_AUTHORING_ASSUMED_NEEDS_RELEASE_REVIEW
 claim_registry:
   - claim_id: C001
     statement: A fluent creative output can still fail a bounded task when no common outcome and acceptance condition are specified.
@@ -157,7 +165,7 @@ claim_registry:
     target_audio: [ACT01, PILOT]
   - claim_id: C003
     statement: Exploratory Creative Spark outputs can propose alternatives but are not themselves authorized publication copy.
-    source_ids: [S04, S07]
+    source_ids: [S12, S07]
     evidence_state: SOURCE_SUPPORTED
     verification_status: PENDING_HUMAN_REVIEW
     scope: Private ideation versus public material.
@@ -212,7 +220,7 @@ claim_registry:
     target_audio: [ACT01, PILOT]
   - claim_id: C008
     statement: Script byte hashes and segment identities establish source identity and repair traceability, not audible word fidelity or approval.
-    source_ids: [S04, S07]
+    source_ids: [S12, S07]
     evidence_state: SOURCE_SUPPORTED
     verification_status: PENDING_HUMAN_REVIEW
     scope: Technical podcast manufacturing procedures.
@@ -223,7 +231,7 @@ claim_registry:
     target_audio: [ACT01, PILOT]
   - claim_id: C009
     statement: One-segment regeneration may isolate a repair but must also be assessed for word accuracy and audible joining.
-    source_ids: [S04, S07]
+    source_ids: [S12, S07]
     evidence_state: HYPOTHESIS
     verification_status: NOT_ESTABLISHED
     scope: Mechanical and perceptual test; specific vendor performance unproven.

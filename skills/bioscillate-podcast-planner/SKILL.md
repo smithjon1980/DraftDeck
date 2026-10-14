@@ -17,6 +17,8 @@ derivation: CHATGPT_RECONSTRUCTION_FROM_USER_RELAYED_GEMINI_REPORT_2026-10-13
 
 ## Why this skill exists
 
+**Human production direction (2026-10-14):** 40–60-minute fully scripted lectures **per part**, for a program target of **at least 24 hours** of substantial instruction; prior 15-minute act production targets retired. The five-minute clip is only a mechanical manufacturing test. Distinguish this from 45:19 NotebookLM Creative Spark research. Ratified constitutional §§6.04–6.05 govern editorial terminology and selective adoption, but this skill's implementation remains a candidate.
+
 Day Zero is teaching **constraint, discipline, human judgment, feedback and verified results**. The podcast is a medium and case study for those lessons. A NotebookLM/Gemini Audio Overview is a **private creative spark**, not authorized public narration. A human-approved exact script becomes the manufacturing authority.
 
 ### Role boundaries
@@ -49,7 +51,7 @@ Day Zero is teaching **constraint, discipline, human judgment, feedback and veri
 
 ## Preferred working artifacts
 
-- \`editorial-brief.md\` — intended lesson, sources, private inspirations and 60-minute target; no unsupported runtime promise.
+- \`editorial-brief.md\` — intended lesson, sources, private inspirations and a 40–60-minute working target **per part**, contributing to an at-least-24-hour curriculum; no unsupported runtime promise.
 - \`working-competency-crosswalk.md\` — learner performance and assessment evidence co-created with the script.
 - \`script-v0.1.txt\` or stable-ordered speaker-turn source — precise, versioned, human-reviewed words.
 - \`production-contract.json\` — hashes/refs, voice map, pronunciation rules, delivery metadata, human authorization, gates.
@@ -59,7 +61,7 @@ Day Zero is teaching **constraint, discipline, human judgment, feedback and veri
 - \`release-attestation.md\` — final human decision only after all required evidence.
 A JSON example schema-shaped *fixture* lives in [production-contract.example.json](production-contract.example.json). It is **not** a validator or locked script.
 
-## Five-minute manual proof — required before 60-minute spend
+## Five-minute manual manufacturing proof — required before long-form part production
 
 - Use approximately five minutes of **measured** speech, not guaranteed by any fixed word count. A proposed 500-word sample may be less than five minutes at typical delivery rates; confirm actual pace and plan sufficient representative turns.
 - Two approved speakers; one pause; one project-specific word such as “Bioscillate” with pronunciation chosen **by the human**, not invented from model inference.
@@ -96,6 +98,6 @@ Podcastfy, Open Notebook and Podcast Creator are *candidates*; exact locked-scri
 
 - [Day Zero Audio queue and sequence](../../curriculum/day-zero/audio/README.md)
 - [Shared working learner competency rubric](../../curriculum/day-zero/audio/COMPETENCY_RUBRIC_WORKING_V0.1.md)
-- [Five-minute manufacturing experiment](../../curriculum/day-zero/audio/EPISODE_01_MANUFACTURING_PLAN_CANDIDATE.md)
+- [Rebuilt Issue 01 long-form manufacturing plan](../../curriculum/issues/issue-001/EPISODE_01_MANUFACTURING_PLAN_v0.2.0_CANDIDATE.md)
 - [Prompt Library](../../prompt-library/README.md)
 - [Response & Decision Library](../../response-library/README.md)
