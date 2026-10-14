@@ -12,7 +12,7 @@ The 45:19 NotebookLM research recording was received as a productive exploratory
 
 ## Authority boundary
 
-- **HUMAN_RATIFIED_ACTIVE_CANON:** charter sections 6.04–6.06 in the coherent v1.1 rebuild, which define diagnostic language, Pick-and-Pull selective adoption, and the applicable editorial check.
+- **HUMAN_RATIFIED_ACTIVE_CANON:** charter sections 6.04–6.05 in the coherent v1.1 rebuild, which define diagnostic language, Pick-and-Pull selective adoption, and the applicable editorial check.
 - **CANDIDATE / NOT AUTOMATICALLY RATIFIED:** unrelated pre-existing charter articles. Human ratification of this defined change does not implicitly authorize every clause in the prior constitutional proposal.
 - **CANDIDATE ISSUE MANIFEST:** C011–C014 approved by the human for integration into a candidate manifest. This is not final manifest lock, evidence approval, or public release.
 - **CANDIDATE LEXICON GATEWAY:** inherits the ratified constitutional distinctions but its regex runtime and enforcement tests remain NOT ESTABLISHED.
