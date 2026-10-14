@@ -3,7 +3,7 @@ id: LEXICON-GATEWAY-001
 version: 1.1.0-candidate
 status: CANDIDATE_RULE_IMPLEMENTATION_WITH_RATIFIED_CONSTITUTIONAL_REFERENCES
 constitutional_authority: ../../../doctrine/constitutional-charter-v1.1.md
-ratified_clause_refs: ['6.04', '6.05', '6.06']
+ratified_clause_refs: ['6.04', '6.05']
 release_authority: HUMAN_REQUIRED
 scope: ISSUE-001
 normalization:

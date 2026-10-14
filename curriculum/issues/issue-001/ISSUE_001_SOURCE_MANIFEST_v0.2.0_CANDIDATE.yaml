@@ -12,15 +12,14 @@ source_branch: feature/book-to-skills-intake-candidate
 source_commit: 0af0e92d902f145f30cf02002fd4cb4dee89cd0f
 rebuild_status: COHERENT_REBUILD_FROM_FULL_V0_1_INVENTORY
 human_direction_date: '2026-10-14'
-ratified_constitutional_sections: ['6.04', '6.05', '6.06']
+ratified_constitutional_sections: ['6.04', '6.05']
 editorial_intake_approval: C011_C014_APPROVED_FOR_CANDIDATE_INTEGRATION
 previous_manifest: ISM-001-0.1.0
 historical_grf_branch: training/editorial-grf-v1
 historical_grf_commit: 9d144b13f7da37570ba46dfe200f29e4a8722709
-spec_ref: BOSS_GRF_v2_ISSUE_PUBLISHING_CANDIDATE.md  # source artifact; private candidate, not copied to this repository path
+spec_ref: BOSS_GRF_v2_ISSUE_PUBLISHING_CANDIDATE.md
 lexicon_ref: LEXICON_GATEWAY_v1.1_CANDIDATE.yaml
 constitution_ref: ../../../doctrine/constitutional-charter-v1.1.md
-note_on_spec_ref: Original GRF v2 candidate held in source packet; registry link is NOT ESTABLISHED until committed or linked to immutable evidence.
 issue_competency_goal: >-
   Learners can define a bounded publishing task, label what is and is not
   established, specify human approval boundaries, and design a falsifiable
@@ -108,7 +107,7 @@ source_registry:
     path: doctrine/constitutional-charter-v1.1.md
     branch: feature/book-to-skills-intake-candidate
     commit: BOUND_AT_THIS_MANIFEST_RELEASE
-    scope: Human-ratified Sections 6.04–6.06 only; rest of charter retains inherited candidate status
+    scope: Human-ratified Sections 6.04–6.05 only; rest of charter retains inherited candidate status
     source_state: PARTIAL_CONSTITUTIONAL_RATIFICATION_ACTIVE_SECTIONS
     rights: INTERNAL_AUTHORED
   - id: S09
@@ -117,6 +116,13 @@ source_registry:
     commit: 0af0e92d902f145f30cf02002fd4cb4dee89cd0f
     scope: Evidence verification, observable comparisons, governance debt
     source_state: REPOSITORY_DOCTRINE_INSPECTED
+    rights: INTERNAL_AUTHORING_ASSUMED_NEEDS_RELEASE_REVIEW
+  - id: S11
+    path: curriculum/issues/issue-001/BOSS_GRF_v2_ISSUE_PUBLISHING_CANDIDATE.md
+    branch: feature/book-to-skills-intake-candidate
+    commit: BOUND_AT_THIS_MANIFEST_RELEASE
+    scope: Candidate Issue editorial modes, vocabulary checks, evidence and release gates
+    source_state: REBUILT_EDITORIAL_SPEC_CANDIDATE_NOT_RATIFIED
     rights: INTERNAL_AUTHORING_ASSUMED_NEEDS_RELEASE_REVIEW
   - id: S10
     path: Why_AI_Fluency_Demands_Human_Verification.m4a
@@ -369,7 +375,7 @@ review:
   issue_editor: HUMAN_REQUIRED
   claim_registry_status: NOT_APPROVED
   claims_C011_to_C014: HUMAN_APPROVED_FOR_CANDIDATE_INTEGRATION
-  constitutional_sections_6_04_to_6_06: HUMAN_RATIFIED
+  constitutional_sections_6_04_and_6_05: HUMAN_RATIFIED
   lecture_duration_change: HUMAN_AUTHORIZED_2026_10_14
   lexicon_status: CANDIDATE_NOT_HUMAN_APPROVED
   competency_rubric_status: WORKING
