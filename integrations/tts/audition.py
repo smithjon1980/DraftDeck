@@ -206,7 +206,7 @@ def run_pilot(base, turns_file, output, human_ipa=None, skip_probes=False):
 def main():
     p=argparse.ArgumentParser()
     p.add_argument('--api-base', default=os.getenv('KOKORO_API_BASE','http://127.0.0.1:8880'))
-    p.add_argument('--turns',type=Path,default=ROOT/'fixtures/pilot_turns.json')
+    p.add_argument('--turns',type=Path,default=ROOT/'fixtures/controlled_turns.json')
     p.add_argument('--out',type=Path,default=ROOT/'output')
     p.add_argument('--human-approved-ipa',default=None,help='Only after documented human pronunciation approval')
     p.add_argument('--skip-probes',action='store_true')

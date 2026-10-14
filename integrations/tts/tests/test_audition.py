@@ -38,7 +38,7 @@ class AuditionTests(unittest.TestCase):
         try:
             with tempfile.TemporaryDirectory() as td:
                 report=audition.run_pilot('http://127.0.0.1:'+str(server.server_port),
-                    audition.ROOT/'fixtures/pilot_turns.json',pathlib.Path(td),skip_probes=False)
+                    audition.ROOT/'fixtures/controlled_turns.json',pathlib.Path(td),skip_probes=False)
                 self.assertEqual(len(SpeechHandler.calls),18) # 15 baseline + 1 patch + 2 probes
                 self.assertEqual(report['source_words'],750)
                 self.assertEqual(report['patch_test']['neighbor_count'],14)
@@ -54,7 +54,7 @@ class AuditionTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             audition.request_wav('https://example.com','test','af_heart')
     def test_source_words(self):
-        turns=json.loads((audition.ROOT/'fixtures/pilot_turns.json').read_text())
+        turns=json.loads((audition.ROOT/'fixtures/controlled_turns.json').read_text())
         self.assertEqual(len(turns),15)
 
 if __name__=='__main__': unittest.main()

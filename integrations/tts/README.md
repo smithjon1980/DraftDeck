@@ -10,7 +10,7 @@
 - `go-transport/`: standard-library-only Go REST speech client. NEVER calls MCP.
 - `audition.py`: Python **test harness** for 750-word baseline + exact one-sentence P12 edit; contacts only localhost REST or the private `kokoro:8880` Docker service. This is not the Go release supervisor.
 - `mcp/`: BOSS restricted stdio editorial preview server, optional Docker Compose profile `editorial-preview`, no user-selected paths, voices whitelisted, one constrained backend address, output inside `/data/previews`. It does not run during manufacturing.
-- `fixtures/pilot_turns.json`: 15 turns, 750 words, original candidate status preserved.
+- `fixtures/controlled_turns.json`: 15 turns, 750 words, original candidate status preserved.
 - `tests/`: mock REST harness tests; mock success does not establish neural model behavior.
 
 ## Run mechanically
