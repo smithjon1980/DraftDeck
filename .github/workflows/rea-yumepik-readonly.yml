@@ -1,0 +1,95 @@
+name: REA YumePik Read-Only Trial
+
+on:
+  push:
+    branches:
+      - experiment/rea-yumepik-readonly-20261015
+    paths:
+      - .github/workflows/rea-yumepik-readonly.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rea-browser-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - name: Set up isolated Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify official npm metadata and install in temporary directory
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p rea-evidence "$RUNNER_TEMP/rea-trial"
+          node --version | tee rea-evidence/node-version.txt
+          npm --version | tee rea-evidence/npm-version.txt
+          npm view rea-agents version --json | tee rea-evidence/rea-version.json
+          npm view rea-agents repository license engines dist.integrity scripts --json | tee rea-evidence/rea-package-metadata.json
+          python3 - <<'PY'
+          import json
+          d=json.load(open('rea-evidence/rea-package-metadata.json'))
+          print('Package repo metadata:', d.get('repository'))
+          assert 'morluto/rea' in str(d.get('repository')), 'Unexpected upstream repository identity'
+          assert d.get('license') == 'MIT', 'Unexpected license'
+          PY
+          REA_VERSION=$(node -p "JSON.parse(require('fs').readFileSync('rea-evidence/rea-version.json','utf8'))")
+          npm install --prefix "$RUNNER_TEMP/rea-trial" --no-save --ignore-scripts --no-audit --no-fund --exact "rea-agents@$REA_VERSION"
+          find "$RUNNER_TEMP/rea-trial/node_modules/.bin" -maxdepth 1 -type l -print | tee rea-evidence/installed-bin-links.txt
+          "$RUNNER_TEMP/rea-trial/node_modules/.bin/rea" --help > rea-evidence/rea-cli-help.txt
+      - name: Launch disposable Chromium and inspect YumePik page through REA
+        shell: bash
+        run: |
+          set -uo pipefail
+          mkdir -p rea-evidence
+          REA="$RUNNER_TEMP/rea-trial/node_modules/.bin/rea"
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          echo "chrome=$CHROME" | tee rea-evidence/browser-binary.txt
+          if [ -z "$CHROME" ]; then echo "CHROME_UNAVAILABLE" > rea-evidence/status.txt; exit 0; fi
+          "$CHROME" --version | tee -a rea-evidence/browser-binary.txt
+          "$CHROME" --headless=new --no-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run --disable-extensions --remote-debugging-address=127.0.0.1 --remote-debugging-port=9222 --user-data-dir="$RUNNER_TEMP/rea-yumepik-profile" "https://www.yumepik.com/tools/image-vectorizer" > rea-evidence/chrome.log 2>&1 &
+          CHROME_PID=$!
+          trap 'kill "$CHROME_PID" || true' EXIT
+          for i in {1..30}; do curl -fsS http://127.0.0.1:9222/json/list -o rea-evidence/browser-targets-http.json && break; sleep 1; done
+          timeout 90 "$REA" list-browser-targets http://127.0.0.1:9222 --json > rea-evidence/rea-target-list.json 2> rea-evidence/rea-target-list-stderr.txt
+          echo "target_listing_exit_code=$?" | tee rea-evidence/status.txt
+          python3 - <<'PY'
+          import json
+          p='rea-evidence/rea-target-list.json'
+          try: data=json.load(open(p))
+          except Exception as e: print('Cannot parse REA targets:', e); open('rea-evidence/target-id.txt','w').write(''); raise SystemExit(0)
+          found=[]
+          def walk(o):
+              if isinstance(o,dict):
+                  if 'yumepik.com' in str(o.get('url','')):
+                      for k in ['id','target_id','targetId']:
+                          if isinstance(o.get(k),str): found.append(o[k]); break
+                  for v in o.values(): walk(v)
+              elif isinstance(o,list):
+                  for v in o: walk(v)
+          walk(data)
+          target=found[0] if found else ''
+          open('rea-evidence/target-id.txt','w').write(target)
+          print('Target found:',bool(target))
+          PY
+          TARGET="$(cat rea-evidence/target-id.txt)"
+          if [ -n "$TARGET" ]; then
+            timeout 100 "$REA" inspect-web-page http://127.0.0.1:9222 "$TARGET" --observation-ms 1200 --json > rea-evidence/rea-inspect-page.json 2> rea-evidence/rea-inspect-page-stderr.txt
+            echo "page_inspection_exit_code=$?" | tee -a rea-evidence/status.txt
+            timeout 100 "$REA" analyze-web-bundle http://127.0.0.1:9222 "$TARGET" --json > rea-evidence/rea-web-bundle.json 2> rea-evidence/rea-web-bundle-stderr.txt
+            echo "bundle_analysis_exit_code=$?" | tee -a rea-evidence/status.txt
+          else
+            echo "NO_YUMEPIK_TARGET" | tee -a rea-evidence/status.txt
+          fi
+          echo "No upload, form submission, login, API request or payment performed." | tee rea-evidence/scope.txt
+      - name: Upload disposable trial evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rea-yumepik-readonly-evidence
+          path: rea-evidence/
+          if-no-files-found: warn
+          retention-days: 3
