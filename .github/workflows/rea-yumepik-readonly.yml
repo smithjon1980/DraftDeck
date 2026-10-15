@@ -79,6 +79,10 @@ jobs:
           if [ -n "$TARGET" ]; then
             timeout 100 "$REA" inspect-web-page http://127.0.0.1:9222 "$TARGET" --observation-ms 1200 --json > rea-evidence/rea-inspect-page.json 2> rea-evidence/rea-inspect-page-stderr.txt
             echo "page_inspection_exit_code=$?" | tee -a rea-evidence/status.txt
+            timeout 90 "$REA" inspect-web-page http://127.0.0.1:9222 "$TARGET" --observation-ms 1200 --include-accessibility-text --json > rea-evidence/rea-accessibility.json 2> rea-evidence/rea-accessibility-stderr.txt
+            echo "accessibility_exit_code=$?" | tee -a rea-evidence/status.txt
+            timeout 90 "$REA" capture-web-screenshot http://127.0.0.1:9222 "$TARGET" --json > rea-evidence/rea-screenshot.json 2> rea-evidence/rea-screenshot-stderr.txt
+            echo "screenshot_exit_code=$?" | tee -a rea-evidence/status.txt
             timeout 100 "$REA" analyze-web-bundle http://127.0.0.1:9222 "$TARGET" --json > rea-evidence/rea-web-bundle.json 2> rea-evidence/rea-web-bundle-stderr.txt
             echo "bundle_analysis_exit_code=$?" | tee -a rea-evidence/status.txt
           else
