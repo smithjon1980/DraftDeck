@@ -1,0 +1,52 @@
+# UPSTREAM EDITORIAL/CREATIVE CONTRACT TEMPLATE — NOT AN ACTUAL APPROVED RUN.
+# Contains artwork-generation instructions. NEVER send this whole document to manufacturer.
+schema_version: "1.0-candidate"
+contract_type: "SLIDE_CREATIVE_RECOMPOSITION"
+route_id: "draftdeck-creative-recomposition-v1-candidate"
+status: "PENDING_HUMAN_APPROVAL"
+run_id: "REPLACE_WITH_ACTUAL_RUN_ID"
+issue_id: "REPLACE_WITH_ACTUAL_ISSUE_ID"
+spark_admission:
+  source_asset_id: "REPLACE_WITH_ADMITTED_ASSET_ID"
+  observed_page_or_frame: "NOT_ESTABLISHED"
+  sha256: "NOT_ESTABLISHED"
+  rights_review_state: "NOT_ESTABLISHED"
+  source_manifest_ref: "NOT_ESTABLISHED"
+instructional_layer:
+  teaching_claim_id: "NOT_ESTABLISHED"
+  proposition_evidence_state: "NOT_ESTABLISHED"
+  verified_proposition: "NOT_ESTABLISHED"
+  extracted_expression_ids: []
+  proposition_decision_receipt_ids: []
+  expression_decision_receipt_ids: []
+  competency_objective: "NOT_ESTABLISHED"
+creative_layer:
+  spark_inspiration_description: "NOT_ESTABLISHED"
+  creative_treatment: "UNSELECTED" # RETELL or REIMAGINE after human direction
+  narrative_direction: "NOT_ESTABLISHED"
+  artwork_brief_prompt: "NOT_ESTABLISHED" # upstream only; visual instructions; no editorial text
+  candidate_count_requested: "NOT_ESTABLISHED" # 1 to 4 only if tool actually supports it
+manufacturing_layer:
+  editable_copy:
+    title: "NOT_ESTABLISHED"
+    subtitle: ""
+    body_elements: []
+    exact_copy_source_refs: []
+  visual_standard:
+    profile_id: "NOT_ESTABLISHED"
+    canvas: "16:9"
+    brand_asset_refs: []
+    geometry_constraints: []
+    forbidden_visuals: []
+acceptance_criteria:
+  instructional_alignment: "NOT_ESTABLISHED"
+  creative_execution: "NOT_ESTABLISHED"
+  editability_proof: "Edit, save and reopen actual instructional text independently from artwork."
+  rights_and_safety: "NOT_ESTABLISHED"
+approval_gate_1:
+  decision: "PENDING"
+  receipt_id: null
+  approver_ref: null
+  time: null
+# After Gate 1, create candidates and seek separate Gate 2 selection.
+# Gate 3 is downstream release approval, not implied by this template.

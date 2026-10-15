@@ -1,0 +1,26 @@
+# CARRIER EXAMPLE ONLY — THE VALUES BELOW ARE PLACEHOLDERS, NOT VERIFIED.
+# Validate an ACTUAL run against restricted_manufacturing_handoff.schema.json
+# before any downstream manufacturing; this file intentionally will not validate.
+schema_version: "1.0-candidate"
+route_id: "draftdeck-creative-recomposition-v1-candidate"
+run_id: "REPLACE_WITH_ACTUAL_RUN_ID"
+selected_artwork:
+  file: "REPLACE_WITH_ALLOWED_ARTWORK_ASSET"
+  sha256: "NOT_ESTABLISHED"
+  media_type: "image/webp" # also image/png or image/svg+xml
+  rights_scope: "NOT_ESTABLISHED"
+editable_copy:
+  - element_id: "title-01"
+    text: "REPLACE_WITH_EXACT_APPROVED_TITLE"
+    source_ref: "NOT_ESTABLISHED"
+visual_constraints:
+  profile_id: "NOT_ESTABLISHED"
+  canvas_aspect_ratio: "16:9"
+  requirements: []
+  exclusions: []
+approval_receipts:
+  gate_1_direction_id: "NOT_ESTABLISHED"
+  gate_2_artwork_selection_id: "NOT_ESTABLISHED"
+provenance_join_id: "NOT_ESTABLISHED"
+# Forbidden: raw NotebookLM PDF, original Spark bytes, artwork_brief_prompt,
+# generator history, unselected candidates, unrestricted editorial/audit ledgers.
