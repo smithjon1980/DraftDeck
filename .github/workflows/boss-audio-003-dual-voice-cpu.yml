@@ -1,0 +1,114 @@
+# BOSS-AUDIO-003, two-host CPU test. Experimental-only PR job.
+name: BOSS-AUDIO-003 Two-Host CPU Trial
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [feature/creative-composer-trial]
+    paths:
+      - .github/workflows/boss-audio-003-dual-voice-cpu.yml
+      - tools/audio-studio/scripts/render_dialogue.py
+      - tools/audio-studio/fixtures/studio07_dual_host_probe.json
+permissions:
+  contents: read
+concurrency:
+  group: boss-audio-003-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  cpu-dual-host:
+    if: ${{ github.event_name == 'pull_request' && github.base_ref == 'feature/creative-composer-trial' && github.head_ref == 'feature/boss-audio-003-dual-host' && github.event.pull_request.head.repo.full_name == github.repository }}
+    runs-on: ubuntu-slim
+    timeout-minutes: 15
+    env:
+      CUDA_VISIBLE_DEVICES: ""
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      PYTHONUNBUFFERED: "1"
+      OMP_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      HF_HOME: /tmp/boss-audio-003-hf-cache
+      PIP_DISABLE_PIP_VERSION_CHECK: "1"
+      SOURCE_FILE: tools/audio-studio/fixtures/studio07_dual_host_probe.json
+      RENDER_SCRIPT: tools/audio-studio/scripts/render_dialogue.py
+      OUTPUT_DIR: /tmp/boss-audio-003
+    steps:
+      - name: Checkout source (no token persisted)
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Fixture and environment preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUTPUT_DIR"
+          date -u +%FT%TZ > "$OUTPUT_DIR/start_utc.txt"
+          python3 --version > "$OUTPUT_DIR/python_version.txt"
+          free -m > "$OUTPUT_DIR/memory_preflight.txt"
+          cat /sys/fs/cgroup/memory.events > "$OUTPUT_DIR/memory_events_before.txt" 2>/dev/null || true
+          sha256sum "$SOURCE_FILE" > "$OUTPUT_DIR/source_sha256.txt"
+          python3 "$RENDER_SCRIPT" --source "$SOURCE_FILE" --output "$OUTPUT_DIR/dialogue.wav" --manifest "$OUTPUT_DIR/preflight_manifest.json" --preflight-only
+      - name: Install Kokoro CPU dependencies with bounded time
+        id: install
+        shell: bash
+        run: |
+          set -uo pipefail
+          timeout -s TERM -k 10s 270s bash -euo pipefail -c '
+            sudo apt-get update -qq
+            sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq espeak-ng libsndfile1
+            python3 -m venv .venv
+            .venv/bin/python -m pip install --timeout 25 --retries 1 --no-cache-dir torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+            .venv/bin/python -m pip install --timeout 25 --retries 1 --no-cache-dir kokoro==0.9.4 soundfile==0.13.1
+            .venv/bin/python -m pip freeze
+          ' > "$OUTPUT_DIR/install.log" 2>&1
+          rc=$?
+          echo "$rc" > "$OUTPUT_DIR/install_exit_code.txt"
+          tail -n 30 "$OUTPUT_DIR/install.log"
+          exit "$rc"
+      - name: Render dialogue in locked speaker-turn order
+        id: render
+        if: steps.install.outcome == 'success'
+        shell: bash
+        run: |
+          set -uo pipefail
+          timeout -s TERM -k 10s 400s .venv/bin/python "$RENDER_SCRIPT" --source "$SOURCE_FILE" --output "$OUTPUT_DIR/dialogue.wav" --manifest "$OUTPUT_DIR/render_manifest.json" > "$OUTPUT_DIR/render.log" 2>&1
+          rc=$?
+          echo "$rc" > "$OUTPUT_DIR/render_exit_code.txt"
+          tail -n 35 "$OUTPUT_DIR/render.log"
+          exit "$rc"
+      - name: Diagnostic disposition and checksums
+        if: always()
+        shell: bash
+        run: |
+          set -uo pipefail
+          date -u +%FT%TZ > "$OUTPUT_DIR/end_utc.txt"
+          cat /sys/fs/cgroup/memory.events > "$OUTPUT_DIR/memory_events_after.txt" 2>/dev/null || true
+          free -m > "$OUTPUT_DIR/memory_postflight.txt" 2>/dev/null || true
+          python3 - "$OUTPUT_DIR" "${{ steps.install.outcome }}" "${{ steps.render.outcome }}" <<'PY_CODE'
+          import json,pathlib,sys
+          out=pathlib.Path(sys.argv[1]); install,render=sys.argv[2:4]
+          def code(n):
+              try:return int((out/n).read_text().strip())
+              except (ValueError,FileNotFoundError):return None
+          def ev(n):
+              try:return dict((k,int(v)) for k,v in (line.split() for line in (out/n).read_text().splitlines()) if len((k,v))==2)
+              except (ValueError,FileNotFoundError):return None
+          before,after=ev('memory_events_before.txt'),ev('memory_events_after.txt')
+          oom=(after.get('oom_kill',0)-before.get('oom_kill',0)) if before is not None and after is not None else None
+          ir,rr=code('install_exit_code.txt'),code('render_exit_code.txt')
+          if oom is not None and oom>0: result='CGROUP_OOM_KILL_OBSERVED'
+          elif 124 in (ir,rr): result='BOUNDED_TIMEOUT_OBSERVED'
+          elif ir is not None and ir!=0: result='INSTALL_FAILURE_LOG_REVIEW'
+          elif rr is not None and rr!=0: result='RENDER_FAILURE_LOG_REVIEW'
+          elif install=='success' and render=='success': result='AUDIO_GENERATED_LISTENING_PENDING'
+          else: result='NOT_ESTABLISHED'
+          rec={'case_id':'BOSS-AUDIO-003','install_exit_code':ir,'render_exit_code':rr,'install_outcome':install,'render_outcome':render,'oom_kill_delta':oom,'disposition':result,'human_listening_verified':False,'publication_authorized':False}
+          (out/'execution_evidence.json').write_text(json.dumps(rec,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(rec,sort_keys=True))
+          PY_CODE
+          (cd "$OUTPUT_DIR" && find . -type f ! -name SHA256SUMS.txt -print0 | sort -z | xargs -0 -r sha256sum) > "$OUTPUT_DIR/SHA256SUMS.txt" || true
+      - name: Upload evidence; no publishing
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: boss-audio-003-evidence-${{ github.run_id }}
+          path: /tmp/boss-audio-003/
+          if-no-files-found: warn
+          retention-days: 7

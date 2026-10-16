@@ -1,0 +1,58 @@
+{
+  "schema": "boss.audio.dialogue.v1",
+  "case_id": "BOSS-AUDIO-003",
+  "title": "Digital Warehouse — Two-Host L1 Manufacturing Probe",
+  "source_relation": "Editorially reconstructed from the BOSS Studio 07 supply-chain VPS podcast opening and L1 Issue-style study; not certified original-speaker transcription.",
+  "speaker_attribution_status": "EDITORIAL_CANDIDATE_NOT_DIARIZED",
+  "release": "HOLD",
+  "turns": [
+    {
+      "id": "T001",
+      "speaker": "HOST_A",
+      "voice": "af_heart",
+      "text": "Imagine renting an empty warehouse at the edge of town. It has an address, electricity, and a loading dock. Does that make it a productive facility?"
+    },
+    {
+      "id": "T002",
+      "speaker": "HOST_B",
+      "voice": "am_michael",
+      "text": "Not yet. Before accepting a shipment, someone must know what may arrive, who may receive it, and what evidence proves delivery. An address is not an operating procedure."
+    },
+    {
+      "id": "T003",
+      "speaker": "HOST_A",
+      "voice": "af_heart",
+      "text": "What changes when our warehouse is digital? We rent computing capacity, receive an IP address, and can connect to a server. Isn't that enough to begin?"
+    },
+    {
+      "id": "T004",
+      "speaker": "HOST_B",
+      "voice": "am_michael",
+      "text": "It's a beginning, not a verified operation. The provider controls the physical hardware. The operator still needs defined inputs, a bounded process, inspectable outputs, and accountable acceptance."
+    },
+    {
+      "id": "T005",
+      "speaker": "HOST_A",
+      "voice": "af_heart",
+      "text": "So the central rule is manual first, automated second, governed always. But doesn't automation make those inspections unnecessary?"
+    },
+    {
+      "id": "T006",
+      "speaker": "HOST_B",
+      "voice": "am_michael",
+      "text": "No. A manual checklist establishes what the later automated task must reproduce. A completed command does not prove that the correct work was authorized, nor does a zero exit code establish accepted delivery."
+    },
+    {
+      "id": "T007",
+      "speaker": "HOST_A",
+      "voice": "af_heart",
+      "text": "Consider two examples. A file matches its expected checksum. A terminology guard reports PASS. Can we now claim the whole digital factory is secure?"
+    },
+    {
+      "id": "T008",
+      "speaker": "HOST_B",
+      "voice": "am_michael",
+      "text": "We cannot. The checksum establishes corresponding bytes. The guard establishes the condition it tested. BOSS requires the operator to examine each boundary and record what remains unknown. What did we receive? What did we verify? Who may authorize release?"
+    }
+  ]
+}
