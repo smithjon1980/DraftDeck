@@ -1,11 +1,15 @@
-# BOSS-AUDIO-001 — Experimental, manual-only CPU qualification.
-# IMPORTANT: This file is staged on an experimental branch ONLY.
-# GitHub requires workflow_dispatch to exist on the default branch before it
-# can be manually invoked. Do not merge/register on main without a new approval.
+# BOSS-AUDIO-001 — Experimental PR CPU qualification, authorization 2026-10-15.
+# Only this experimental PR head can run the CPU trial; no push/main trigger.
+# workflow_dispatch remains inactive until separately registered on default branch.
 name: BOSS-AUDIO-001 Kokoro CPU Trial
 
 on:
   workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [feature/creative-composer-trial]
+    paths:
+      - .github/workflows/boss-audio-cpu-trial.yml
 
 permissions:
   contents: read
@@ -16,6 +20,7 @@ concurrency:
 
 jobs:
   cpu-trial:
+    if: ${{ github.event_name == 'pull_request' && github.base_ref == 'feature/creative-composer-trial' && github.head_ref == 'feature/boss-audio-001-pr-execution' && github.event.pull_request.head.repo.full_name == github.repository }}
     runs-on: ubuntu-slim
     timeout-minutes: 15
     env:
