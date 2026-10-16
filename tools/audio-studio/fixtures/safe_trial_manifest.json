@@ -1,0 +1,32 @@
+{
+  "schema": "boss.audio.full_episode_manifest.v1",
+  "case_id": "BOSS-AUDIO-004",
+  "release": "HOLD",
+  "chapters": [
+    {
+      "chapter_id": "CH01",
+      "file": "chapters/CH01.json",
+      "sha256": "70c93cc35e8cfcc257b79091d44f9e77247246c8e67b259c322eb822a6b4a58f",
+      "speaker_turn_ids": [
+        "T001",
+        "T002",
+        "T003",
+        "T004"
+      ],
+      "words": 107
+    },
+    {
+      "chapter_id": "CH02",
+      "file": "chapters/CH02.json",
+      "sha256": "0f5473ef457a7c7fde31200a18c9ca6a32bb6a10196376f1d493145dd1f036d6",
+      "speaker_turn_ids": [
+        "T005",
+        "T006",
+        "T007",
+        "T008"
+      ],
+      "words": 114
+    }
+  ],
+  "scope": "PUBLIC_SAFE_TWO_CHAPTER_ENGINE_TEST_NOT_FULL_EPISODE"
+}

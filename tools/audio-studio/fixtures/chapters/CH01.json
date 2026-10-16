@@ -1,0 +1,41 @@
+{
+  "case_id": "BOSS-AUDIO-004",
+  "chapter_id": "CH01",
+  "chapter_title": "Public-safe two-host smoke test CH01",
+  "release": "HOLD",
+  "schema": "boss.audio.chapter.v1",
+  "script_review_status": "EXISTING_PROBE_ONLY",
+  "source_time_label": "SAFE_TEST_NO_SOURCE_TIME",
+  "source_type": "PUBLIC_SAFE_EXISTING_BOSS_AUDIO_003_DIALOGUE",
+  "speaker_attribution_status": "PROVISIONAL_EDITORIAL_NOT_ORIGINAL_DIARIZATION",
+  "turns": [
+    {
+      "id": "T001",
+      "original_host_verified": false,
+      "speaker": "HOST_A",
+      "text": "Imagine renting an empty warehouse at the edge of town. It has an address, electricity, and a loading dock. Does that make it a productive facility?",
+      "voice": "af_heart"
+    },
+    {
+      "id": "T002",
+      "original_host_verified": false,
+      "speaker": "HOST_B",
+      "text": "Not yet. Before accepting a shipment, someone must know what may arrive, who may receive it, and what evidence proves delivery. An address is not an operating procedure.",
+      "voice": "am_michael"
+    },
+    {
+      "id": "T003",
+      "original_host_verified": false,
+      "speaker": "HOST_A",
+      "text": "What changes when our warehouse is digital? We rent computing capacity, receive an IP address, and can connect to a server. Isn't that enough to begin?",
+      "voice": "af_heart"
+    },
+    {
+      "id": "T004",
+      "original_host_verified": false,
+      "speaker": "HOST_B",
+      "text": "It's a beginning, not a verified operation. The provider controls the physical hardware. The operator still needs defined inputs, a bounded process, inspectable outputs, and accountable acceptance.",
+      "voice": "am_michael"
+    }
+  ]
+}

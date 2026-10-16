@@ -1,0 +1,127 @@
+# BOSS-AUDIO-004: PUBLIC-SAFE two-chapter infrastructure trial only.
+# The unpublished 21-chapter podcast script is NOT admitted to this public repository.
+name: BOSS-AUDIO-004 Staged Podcast Manufacturing
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [feature/creative-composer-trial]
+    paths:
+      - .github/workflows/boss-audio-004-staged-podcast.yml
+      - tools/audio-studio/scripts/render_chapter.py
+      - tools/audio-studio/scripts/assemble_chapters.py
+      - tools/audio-studio/fixtures/chapters/CH01.json
+      - tools/audio-studio/fixtures/chapters/CH02.json
+      - tools/audio-studio/fixtures/safe_trial_manifest.json
+permissions:
+  contents: read
+concurrency:
+  group: boss-audio-004-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  render:
+    if: ${{ github.event_name == 'pull_request' && github.base_ref == 'feature/creative-composer-trial' && github.head_ref == 'feature/boss-audio-004-staged-podcast' && github.event.pull_request.head.repo.full_name == github.repository }}
+    strategy:
+      fail-fast: false
+      matrix:
+        chapter: [CH01, CH02]
+    name: CPU render ${{ matrix.chapter }}
+    runs-on: ubuntu-slim
+    timeout-minutes: 15
+    env:
+      HF_HUB_DISABLE_TELEMETRY: '1'
+      HF_HOME: /tmp/boss-audio-004-model-cache
+      CUDA_VISIBLE_DEVICES: ''
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      PYTHONUNBUFFERED: '1'
+      PIP_DISABLE_PIP_VERSION_CHECK: '1'
+      CHAPTER_FILE: tools/audio-studio/fixtures/chapters/${{ matrix.chapter }}.json
+      OUTPUT_DIR: /tmp/boss-audio-004/${{ matrix.chapter }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Preflight source identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUTPUT_DIR"
+          date -u +%FT%TZ > "$OUTPUT_DIR/start_utc.txt"
+          sha256sum "$CHAPTER_FILE" > "$OUTPUT_DIR/source_sha256.txt"
+          python3 tools/audio-studio/scripts/render_chapter.py \
+            --chapter "$CHAPTER_FILE" --output-dir "$OUTPUT_DIR/preflight" --preflight-only
+      - name: Install CPU speech dependencies (bounded)
+        id: install
+        shell: bash
+        run: |
+          set -uo pipefail
+          timeout -s TERM -k 10s 270s bash -euo pipefail -c '
+            sudo apt-get update -qq
+            sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq espeak-ng libsndfile1
+            python3 -m venv .venv
+            .venv/bin/python -m pip install --timeout 25 --retries 1 --no-cache-dir torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+            .venv/bin/python -m pip install --timeout 25 --retries 1 --no-cache-dir kokoro==0.9.4 soundfile==0.13.1
+            .venv/bin/python -m pip freeze
+          ' > "$OUTPUT_DIR/install.log" 2>&1
+          rc=$?
+          printf '%s\n' "$rc" > "$OUTPUT_DIR/install_exit_code.txt"
+          tail -n 30 "$OUTPUT_DIR/install.log"
+          exit "$rc"
+      - name: Render exactly assigned speaker turns (bounded)
+        id: render
+        if: steps.install.outcome == 'success'
+        shell: bash
+        run: |
+          set -uo pipefail
+          timeout -s TERM -k 10s 390s .venv/bin/python tools/audio-studio/scripts/render_chapter.py \
+            --chapter "$CHAPTER_FILE" --output-dir "$OUTPUT_DIR" \
+            > "$OUTPUT_DIR/render.log" 2>&1
+          rc=$?
+          printf '%s\n' "$rc" > "$OUTPUT_DIR/render_exit_code.txt"
+          tail -n 40 "$OUTPUT_DIR/render.log"
+          exit "$rc"
+      - name: Preserve diagnostics and checksums
+        if: always()
+        shell: bash
+        run: |
+          set -uo pipefail
+          mkdir -p "$OUTPUT_DIR"
+          date -u +%FT%TZ > "$OUTPUT_DIR/end_utc.txt"
+          ( cd "$OUTPUT_DIR" && find . -type f ! -name SHA256SUMS.txt -print0 | sort -z | xargs -0 -r sha256sum ) > "$OUTPUT_DIR/SHA256SUMS.txt" || true
+      - name: Upload private-use trial WAV and logs, not publication
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: boss-audio-004-${{ matrix.chapter }}
+          path: /tmp/boss-audio-004/${{ matrix.chapter }}/
+          retention-days: 7
+          if-no-files-found: warn
+  assemble:
+    name: Assemble verified chapters
+    needs: [render]
+    if: ${{ success() && github.event_name == 'pull_request' && github.head_ref == 'feature/boss-audio-004-staged-podcast' }}
+    runs-on: ubuntu-slim
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: boss-audio-004-CH*
+          path: /tmp/boss-audio-004-inputs
+      - name: Assemble with source identity and turn order checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install --disable-pip-version-check --timeout 25 --retries 1 numpy==2.2.3 soundfile==0.13.1
+          python3 tools/audio-studio/scripts/assemble_chapters.py \
+            --index tools/audio-studio/fixtures/safe_trial_manifest.json \
+            --inputs /tmp/boss-audio-004-inputs \
+            --output-dir /tmp/boss-audio-004-assembled
+      - name: Upload assembled test evidence; never publish
+        uses: actions/upload-artifact@v4
+        with:
+          name: boss-audio-004-assembled
+          path: /tmp/boss-audio-004-assembled/
+          retention-days: 7
