@@ -1,5 +1,6 @@
 # BOSS-AUDIO-001 — Experimental PR CPU qualification, authorization 2026-10-15.
 # Only this experimental PR head can run the CPU trial; no push/main trigger.
+# Second PR event probe: synchronize after opening PR #52; no scope expansion.
 # workflow_dispatch remains inactive until separately registered on default branch.
 name: BOSS-AUDIO-001 Kokoro CPU Trial
 
