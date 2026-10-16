@@ -1,21 +1,27 @@
-# BOSS-AUDIO-001 — Experimental, manual-only CPU qualification.
-# IMPORTANT: This file is staged on an experimental branch ONLY.
-# GitHub requires workflow_dispatch to exist on the default branch before it
-# can be manually invoked. Do not merge/register on main without a new approval.
-name: BOSS-AUDIO-001 Kokoro CPU Trial
+# BOSS-AUDIO-002 — Issue-style editorial qualification on the same L1 CPU runner.
+# Only the experimental PR head named below may execute the workflow.
+# The original L1 approved_solo.md fixture remains unchanged.
+# No default-branch registration, automatic publication or other execution trigger.
+name: BOSS-AUDIO-002 Issue-Style Solo CPU Trial
 
 on:
-  workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [feature/creative-composer-trial]
+    paths:
+      - .github/workflows/boss-audio-cpu-trial.yml
+      - tools/audio-studio/fixtures/BOSS_AUDIO_001_Issue_Style_Solo_CANDIDATE.md
 
 permissions:
   contents: read
 
 concurrency:
-  group: boss-audio-001-${{ github.ref }}
+  group: boss-audio-002-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
   cpu-trial:
+    if: ${{ github.event_name == 'pull_request' && github.base_ref == 'feature/creative-composer-trial' && github.head_ref == 'feature/boss-audio-002-issue-style-cpu-trial' && github.event.pull_request.head.repo.full_name == github.repository }}
     runs-on: ubuntu-slim
     timeout-minutes: 15
     env:
@@ -24,11 +30,11 @@ jobs:
       PYTHONUNBUFFERED: "1"
       OMP_NUM_THREADS: "1"
       MKL_NUM_THREADS: "1"
-      HF_HOME: ${{ runner.temp }}/boss-audio-hf-cache
+      HF_HOME: /tmp/boss-audio-hf-cache
       PIP_DISABLE_PIP_VERSION_CHECK: "1"
-      SOURCE_FILE: tools/audio-studio/fixtures/approved_solo.md
+      SOURCE_FILE: tools/audio-studio/fixtures/BOSS_AUDIO_001_Issue_Style_Solo_CANDIDATE.md
       RENDER_SCRIPT: tools/audio-studio/scripts/render_audio.py
-      OUTPUT_DIR: ${{ runner.temp }}/boss-audio-001
+      OUTPUT_DIR: /tmp/boss-audio-002
     steps:
       - name: Checkout approved repository revision
         uses: actions/checkout@v4
@@ -123,7 +129,7 @@ jobs:
           else:
               reason = 'NOT_ESTABLISHED_REVIEW_LOGS'
           record = {
-              'case_id':'BOSS-AUDIO-001', 'runner':'ubuntu-slim',
+              'case_id':'BOSS-AUDIO-002', 'runner':'ubuntu-slim',
               'install_outcome':install, 'render_outcome':render,
               'install_exit_code':irc, 'render_exit_code':rrc,
               'cgroup_oom_kill_delta':oom_delta,
@@ -143,7 +149,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: boss-audio-001-evidence-${{ github.run_id }}
-          path: ${{ runner.temp }}/boss-audio-001/
+          name: boss-audio-002-evidence-${{ github.run_id }}
+          path: /tmp/boss-audio-002/
           retention-days: 7
           if-no-files-found: warn
