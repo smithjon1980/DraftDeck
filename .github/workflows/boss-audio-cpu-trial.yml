@@ -1,0 +1,149 @@
+# BOSS-AUDIO-001 — Experimental, manual-only CPU qualification.
+# IMPORTANT: This file is staged on an experimental branch ONLY.
+# GitHub requires workflow_dispatch to exist on the default branch before it
+# can be manually invoked. Do not merge/register on main without a new approval.
+name: BOSS-AUDIO-001 Kokoro CPU Trial
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: boss-audio-001-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  cpu-trial:
+    runs-on: ubuntu-slim
+    timeout-minutes: 15
+    env:
+      CUDA_VISIBLE_DEVICES: ""
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      PYTHONUNBUFFERED: "1"
+      OMP_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      HF_HOME: ${{ runner.temp }}/boss-audio-hf-cache
+      PIP_DISABLE_PIP_VERSION_CHECK: "1"
+      SOURCE_FILE: tools/audio-studio/fixtures/approved_solo.md
+      RENDER_SCRIPT: tools/audio-studio/scripts/render_audio.py
+      OUTPUT_DIR: ${{ runner.temp }}/boss-audio-001
+    steps:
+      - name: Checkout approved repository revision
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Source and runner preflight (standard library only)
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUTPUT_DIR"
+          date -u +%FT%TZ | tee "$OUTPUT_DIR/start_utc.txt"
+          python3 --version | tee "$OUTPUT_DIR/python_version.txt"
+          df -h . | tee "$OUTPUT_DIR/disk_preflight.txt"
+          free -m | tee "$OUTPUT_DIR/memory_preflight.txt"
+          cat /sys/fs/cgroup/memory.events > "$OUTPUT_DIR/memory_events_before.txt" 2>/dev/null || true
+          sha256sum "$SOURCE_FILE" | tee "$OUTPUT_DIR/source_sha256.txt"
+          python3 "$RENDER_SCRIPT" --source "$SOURCE_FILE" \
+            --output "$OUTPUT_DIR/narration.wav" \
+            --manifest "$OUTPUT_DIR/preflight_manifest.json" --preflight-only
+
+      - name: Install CPU speech dependencies (bounded)
+        id: install
+        shell: bash
+        run: |
+          set -uo pipefail
+          # Stop well before the runner's hard 15-minute limit so diagnostics
+          # remain uploadable. A timeout here is NOT proof of CPU insufficiency.
+          timeout -s TERM -k 10s 270s bash -euo pipefail -c '
+            sudo apt-get update -qq
+            sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq espeak-ng libsndfile1
+            python3 -m venv .venv
+            .venv/bin/python -m pip install --timeout 25 --retries 1 --no-cache-dir \
+              torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+            .venv/bin/python -m pip install --timeout 25 --retries 1 --no-cache-dir \
+              kokoro==0.9.4 soundfile==0.13.1
+            .venv/bin/python -m pip freeze
+          ' > "$OUTPUT_DIR/install.log" 2>&1
+          rc=$?
+          printf '%s\n' "$rc" > "$OUTPUT_DIR/install_exit_code.txt"
+          tail -n 45 "$OUTPUT_DIR/install.log"
+          exit "$rc"
+
+      - name: Render exact fixture without LLM rewriting (bounded)
+        id: render
+        if: steps.install.outcome == 'success'
+        shell: bash
+        run: |
+          set -uo pipefail
+          timeout -s TERM -k 10s 360s .venv/bin/python "$RENDER_SCRIPT" \
+            --source "$SOURCE_FILE" --output "$OUTPUT_DIR/narration.wav" \
+            --manifest "$OUTPUT_DIR/render_manifest.json" \
+            > "$OUTPUT_DIR/render.log" 2>&1
+          rc=$?
+          printf '%s\n' "$rc" > "$OUTPUT_DIR/render_exit_code.txt"
+          tail -n 45 "$OUTPUT_DIR/render.log"
+          exit "$rc"
+
+      - name: Collect evidence and preserve unresolved classifications
+        if: always()
+        shell: bash
+        run: |
+          set -uo pipefail
+          mkdir -p "$OUTPUT_DIR"
+          date -u +%FT%TZ > "$OUTPUT_DIR/end_utc.txt"
+          cat /sys/fs/cgroup/memory.events > "$OUTPUT_DIR/memory_events_after.txt" 2>/dev/null || true
+          df -h . > "$OUTPUT_DIR/disk_postflight.txt" 2>&1 || true
+          free -m > "$OUTPUT_DIR/memory_postflight.txt" 2>&1 || true
+          python3 - "$OUTPUT_DIR" "${{ steps.install.outcome }}" "${{ steps.render.outcome }}" <<'PY'
+          import json, pathlib, sys
+          out = pathlib.Path(sys.argv[1]); install, render = sys.argv[2:4]
+          def code(name):
+              try: return int((out / name).read_text().strip())
+              except (FileNotFoundError, ValueError): return None
+          def cg(name):
+              try:
+                  return {line.split()[0]:int(line.split()[1]) for line in (out/name).read_text().splitlines() if len(line.split())==2}
+              except (FileNotFoundError,ValueError): return {}
+          before, after = cg('memory_events_before.txt'), cg('memory_events_after.txt')
+          oom_delta = after.get('oom_kill', 0) - before.get('oom_kill', 0) if before and after else None
+          irc, rrc = code('install_exit_code.txt'), code('render_exit_code.txt')
+          if oom_delta is not None and oom_delta > 0:
+              reason = 'CGROUP_OOM_KILL_OBSERVED'
+          elif irc == 124 or rrc == 124:
+              reason = 'STEP_TIMEOUT_OBSERVED'
+          elif irc is not None and irc != 0:
+              reason = 'INSTALL_FAILED_REVIEW_LOG'
+          elif rrc is not None and rrc != 0:
+              reason = 'RENDER_FAILED_REVIEW_LOG'
+          elif install == 'success' and render == 'success':
+              reason = 'RENDER_COMPLETED_AUDIO_REVIEW_PENDING'
+          else:
+              reason = 'NOT_ESTABLISHED_REVIEW_LOGS'
+          record = {
+              'case_id':'BOSS-AUDIO-001', 'runner':'ubuntu-slim',
+              'install_outcome':install, 'render_outcome':render,
+              'install_exit_code':irc, 'render_exit_code':rrc,
+              'cgroup_oom_kill_delta':oom_delta,
+              'diagnostic_disposition':reason,
+              'human_listening_verified':False,
+              'word_for_word_audio_alignment_verified':False,
+              'publication_authorized':False,
+              'warning':'A code 137 alone cannot prove OOM; review cgroup evidence and logs.'
+          }
+          (out/'execution_evidence.json').write_text(json.dumps(record,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(record,sort_keys=True))
+          PY
+          ( cd "$OUTPUT_DIR" && find . -type f ! -name 'SHA256SUMS.txt' -print0 | sort -z | xargs -0 -r sha256sum ) \
+            > "$OUTPUT_DIR/SHA256SUMS.txt" || true
+
+      - name: Retain trial audio and diagnostics; never publish
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: boss-audio-001-evidence-${{ github.run_id }}
+          path: ${{ runner.temp }}/boss-audio-001/
+          retention-days: 7
+          if-no-files-found: warn
