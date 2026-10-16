@@ -30,11 +30,11 @@ jobs:
       PYTHONUNBUFFERED: "1"
       OMP_NUM_THREADS: "1"
       MKL_NUM_THREADS: "1"
-      HF_HOME: ${{ runner.temp }}/boss-audio-hf-cache
+      HF_HOME: /tmp/boss-audio-hf-cache
       PIP_DISABLE_PIP_VERSION_CHECK: "1"
       SOURCE_FILE: tools/audio-studio/fixtures/approved_solo.md
       RENDER_SCRIPT: tools/audio-studio/scripts/render_audio.py
-      OUTPUT_DIR: ${{ runner.temp }}/boss-audio-001
+      OUTPUT_DIR: /tmp/boss-audio-001
     steps:
       - name: Checkout approved repository revision
         uses: actions/checkout@v4
@@ -150,6 +150,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: boss-audio-001-evidence-${{ github.run_id }}
-          path: ${{ runner.temp }}/boss-audio-001/
+          path: /tmp/boss-audio-001/
           retention-days: 7
           if-no-files-found: warn
