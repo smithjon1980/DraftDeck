@@ -1,0 +1,41 @@
+{
+  "case_id": "BOSS-AUDIO-004",
+  "chapter_id": "CH02",
+  "chapter_title": "Public-safe two-host smoke test CH02",
+  "release": "HOLD",
+  "schema": "boss.audio.chapter.v1",
+  "script_review_status": "EXISTING_PROBE_ONLY",
+  "source_time_label": "SAFE_TEST_NO_SOURCE_TIME",
+  "source_type": "PUBLIC_SAFE_EXISTING_BOSS_AUDIO_003_DIALOGUE",
+  "speaker_attribution_status": "PROVISIONAL_EDITORIAL_NOT_ORIGINAL_DIARIZATION",
+  "turns": [
+    {
+      "id": "T005",
+      "original_host_verified": false,
+      "speaker": "HOST_A",
+      "text": "So the central rule is manual first, automated second, governed always. But doesn't automation make those inspections unnecessary?",
+      "voice": "af_heart"
+    },
+    {
+      "id": "T006",
+      "original_host_verified": false,
+      "speaker": "HOST_B",
+      "text": "No. A manual checklist establishes what the later automated task must reproduce. A completed command does not prove that the correct work was authorized, nor does a zero exit code establish accepted delivery.",
+      "voice": "am_michael"
+    },
+    {
+      "id": "T007",
+      "original_host_verified": false,
+      "speaker": "HOST_A",
+      "text": "Consider two examples. A file matches its expected checksum. A terminology guard reports PASS. Can we now claim the whole digital factory is secure?",
+      "voice": "af_heart"
+    },
+    {
+      "id": "T008",
+      "original_host_verified": false,
+      "speaker": "HOST_B",
+      "text": "We cannot. The checksum establishes corresponding bytes. The guard establishes the condition it tested. BOSS requires the operator to examine each boundary and record what remains unknown. What did we receive? What did we verify? Who may authorize release?",
+      "voice": "am_michael"
+    }
+  ]
+}
