@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/anomalyco/opencode.git",
+  "commit": "512165cec1c01029e2fae0c89e7ab7cbf827c36d",
+  "source_version": "2.0.32",
+  "license": "MIT",
+  "package_manager": "bun@1.4.2",
+  "source_build": "NOT_TESTED",
+  "private_kaggle_access": "NOT_ESTABLISHED"
+}
