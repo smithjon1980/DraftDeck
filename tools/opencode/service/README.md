@@ -48,6 +48,14 @@ A custom ChatGPT MCP connection uses the deployed `/mcp` URL and bearer authenti
 
 ## Verification
 
-Run `npm ci` and `npm test` with Node/npm and Python 3 installed. Tests start a real OpenCode process using isolated temporary state, exercise authenticated portal access and MCP discovery, inspect sessions, and verify ZIP extraction, corrupt-file rejection, unsafe-path rejection, source mismatch handling, and interrupted-record recovery. They do not invoke a model or access a user's Kaggle account. Test data and generated credentials are discarded afterward.
+Run `npm ci`, `node install-atlas.mjs`, then `npm test` with Node/npm and Python 3 installed. The atlas installer downloads the exact pinned release and verifies SHA-256 before extracting. For offline installation, pass the local complete atlas ZIP as the installer's argument. Tests start a real OpenCode process using isolated temporary state, exercise authenticated portal access and MCP discovery, inspect sessions, and verify ZIP extraction, corrupt-file rejection, unsafe-path rejection, source mismatch handling, and interrupted-record recovery. They also verify that the tools hub, atlas, catalogue data and package download require browser authentication, and that authenticated content/downloads work. They do not invoke a model or access a user's Kaggle account. Test data and generated credentials are discarded afterward.
 
 A live deployment additionally requires terminal Railway `SUCCESS`, public health and authentication checks, private Kaggle retrieval, actual downloads, and phone/browser inspection. Mark each limit explicitly. Keep the upstream MIT notice when copying or redistributing OpenCode. The PR does not merge itself or authorize publication of retrieved content.
+
+## Internal browser applications
+
+`/tools/` is the private tools hub. `/tools/atlas/` serves the complete 368-symbol engineering atlas with ordinary relative image/script URLs; it does not require copying large HTML into a chat. `/tools/atlas/download` downloads its full offline package. The hub also links the existing audio artifact desk and OpenCode workspace.
+
+The gateway protects the hub, HTML, catalogue, individual SVGs and package download with the same browser authentication. It uses private/no-store responses. Docker installs the pinned atlas package during the build, with its fixed byte count and SHA-256 checked before bounded extraction; it is not fetched or rebuilt on every request. The atlas files live in the immutable application image and do not consume the persistent workspace volume. Existing user state and model-provider configuration remain in `/data`.
+
+For another internal tool, add a bounded route and a reviewed build artifact to this gateway, then verify its login boundary, browser behavior and deployed health. Server-held credentials stay in server routes; never put them into an HTML page. Use separate services only when a tool needs its own runtime or scaling.

@@ -51,6 +51,21 @@ test('real OpenCode gateway: authentication, MCP discovery, backend status, and 
     assert.equal(status.health.healthy, true);
     assert.equal(status.private_kaggle_access, 'NOT_VERIFIED');
     const basic = `Basic ${Buffer.from(`opencode:${password}`).toString('base64')}`;
+    for (const route of ['/tools/', '/tools/atlas/', '/tools/atlas/assets.js', '/tools/atlas/download']) {
+      assert.equal((await fetch(`${url}${route}`)).status, 401, `Protected internal route: ${route}`);
+    }
+    const internalHome = await fetch(`${url}/tools/`, { headers: { Authorization: basic } });
+    assert.equal(internalHome.status, 200);
+    assert.match(await internalHome.text(), /Engineering atlas/);
+    const atlas = await fetch(`${url}/tools/atlas/`, { headers: { Authorization: basic } });
+    assert.equal(atlas.status, 200);
+    assert.match(await atlas.text(), /DRAFTDECK_ATLAS_COMPLETE_368/);
+    const catalogue = await fetch(`${url}/tools/atlas/assets.js`, { headers: { Authorization: basic } });
+    assert.equal(catalogue.status, 200);
+    assert.match(catalogue.headers.get('cache-control'), /private, no-store/);
+    const packageDownload = await fetch(`${url}/tools/atlas/download`, { headers: { Authorization: basic } });
+    assert.equal(packageDownload.status, 200);
+    assert.equal((await packageDownload.arrayBuffer()).byteLength, 751451);
     assert.equal((await fetch(`${url}/artifacts`)).status, 401);
     const portal = await fetch(`${url}/artifacts/`, { headers: { Authorization: basic } });
     assert.equal(portal.status, 200);

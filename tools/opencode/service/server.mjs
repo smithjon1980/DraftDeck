@@ -1,5 +1,6 @@
 import express from 'express';
 import { createArtifacts } from './artifacts.mjs';
+import { createInternalTools } from './internal-tools.mjs';
 import http from 'node:http';
 import crypto from 'node:crypto';
 import { mkdir, copyFile } from 'node:fs/promises';
@@ -139,6 +140,11 @@ app.post('/mcp', async (req, res) => {
   catch { if (!res.headersSent) res.status(500).json({ error: 'MCP request failed' }); }
 });
 app.all('/mcp', (_req, res) => res.sendStatus(405));
+
+app.use('/tools', (req, res, next) => {
+  if (!matches(req.headers.authorization, basic)) return res.status(401).set('WWW-Authenticate', 'Basic realm="BOSS OpenCode", charset="UTF-8"').end();
+  next();
+}, createInternalTools(root));
 
 app.use('/artifacts', (req, res, next) => {
   if (!matches(req.headers.authorization, basic)) return res.status(401).set('WWW-Authenticate', 'Basic realm="BOSS OpenCode", charset="UTF-8"').end();
