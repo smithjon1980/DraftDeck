@@ -1,17 +1,13 @@
-# Design System
+# Design system
 
-## Implemented slide components
+## Engineering graphics
 
-[`slide-kit/`](slide-kit/README.md) contains a candidate React/Tailwind component library, pinned Lucide icons, a standalone HTML catalogue build, and a page-level reference audit. It declares the Episode 01 interface profile explicitly. This implementation does not silently adopt the older roadmap palette or metaphors below.
+[`engineering-library/`](engineering-library/README.md) contains the candidate technical graphics collection: 286 ISO-referenced process symbols, 75 mechanical drafting elements, seven ANSI/IEEE logic gates, original source files with pinned provenance, and React composition adapters.
 
-## Earlier roadmap
+Build its searchable atlas with `npm ci && npm run build` inside that directory. Use the source records, licensing and standard-scope notes when selecting components. Generic layout containers are not the project's technical graphics library.
 
-Roadmap home of reusable DraftDeck design assets:
+## Visual profiles
 
-- `tokens/` — palette, stroke hierarchy, typography (see `doctrine/composition-standard.md`).
-- `frames/` — drafting frames, margin rails, title blocks.
-- `hatches/` — state textures (DEFAULT / ROUTED / HELD / BLOCKED / VERIFIED).
-- `icons/` — semantic icon selections.
-- `components/` — registered native components (Shipping & Receiving Control Desk, Verification Tag, D.A.T.A. Connector, Claim Comparator, Consignee Release Latch).
+Episode 01 follows the root `AGENTS.md` interface profile: white ground, black live text, measured grids, cyan #00BCEB and magenta #E30074 reserved for original identity and selective emphasis. The older composition doctrine remains historical context; do not silently mix palettes or retired metaphors.
 
-Custom components are registered here, not improvised per build. Component naming and geometry must remain logistics-native and must not reintroduce deprecated travel/aviation metaphors.
+Technical geometry, original story illustrations, original bioscillate brand assets and live editorial text remain separate layers. A component import is not slide approval, standards certification or Canva editability verification.

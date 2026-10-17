@@ -1,0 +1,9 @@
+{
+  "name": "@draftdeck/engineering-library",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {"build": "python3 scripts/import_assets.py && node --import tsx scripts/build.tsx"},
+  "dependencies": {"react": "19.3.1", "react-dom": "19.3.1"},
+  "devDependencies": {"@tailwindcss/cli": "4.3.3", "tailwindcss": "4.3.3", "tsx": "4.20.6"}
+}
