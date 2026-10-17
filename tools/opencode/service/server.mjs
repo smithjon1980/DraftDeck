@@ -2,6 +2,7 @@ import express from 'express';
 import { createArtifacts } from './artifacts.mjs';
 import { createInternalTools } from './internal-tools.mjs';
 import { createGoogleAuth } from './google-auth.mjs';
+import { createSlideStudio } from './slide-studio.mjs';
 import http from 'node:http';
 import crypto from 'node:crypto';
 import { mkdir, copyFile } from 'node:fs/promises';
@@ -156,6 +157,7 @@ app.post('/mcp', async (req, res) => {
 });
 app.all('/mcp', (_req, res) => res.sendStatus(405));
 
+app.use('/tools/slides', browserGuard, await createSlideStudio({ directory: path.join(workspace, 'slide-studio'), root }));
 app.use('/tools', browserGuard, createInternalTools(root));
 
 app.use('/artifacts', browserGuard, artifacts.router);

@@ -52,11 +52,13 @@ OAuth2Client.prototype.getFederatedSignonCertsAsync=async()=>({certs:{fixture:pu
     const callback = await request('/auth/google/callback?code=fixture&state=' + state, { headers: { Cookie: cookieOf(start, '__Host-boss_oauth') } });
     assert.equal(callback.status, 303);
     const session = cookieOf(callback, '__Host-boss_session'); assert.ok(session);
-    for (const url of ['/tools/', '/tools/atlas/', '/artifacts/', '/global/health', '/mcp']) {
+    for (const url of ['/tools/', '/tools/atlas/', '/tools/slides/', '/artifacts/', '/global/health', '/mcp']) {
       const response = await request(url, { headers: { Cookie: session } });
       assert.equal(response.status, 200, url);
       const body = await response.text(); assert.ok(!body.includes(password) && !body.includes(token));
     }
+    assert.equal((await request('/tools/slides/api/projects', { headers: { Cookie: session } })).status, 200);
+    assert.equal((await request('/tools/slides/api/projects', { method: 'POST', headers: { Cookie: session, Origin: 'https://untrusted.example', 'Content-Type': 'application/json' }, body: '{}' })).status, 403);
     const identity = await request('/auth/me', { headers: { Cookie: session } });
     assert.equal((await identity.json()).subject, 'fixture-owner');
     assert.equal((await request('/session', { method: 'POST', headers: { Cookie: session, Origin: 'https://untrusted.example', 'Content-Type': 'application/json' }, body: '{}' })).status, 403);
