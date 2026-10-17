@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "express": "5.1.0",
+    "http-proxy": "1.18.1",
+    "opencode-ai": "1.19.3",
+    "zod": "3.25.76"
+  },
+  "name": "boss-opencode-service",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/smoke.mjs"
+  }
+}
