@@ -1,9 +1,11 @@
 {
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.32.1",
+    "crc-32": "1.2.2",
     "express": "5.1.0",
     "http-proxy": "1.18.1",
     "opencode-ai": "1.19.3",
+    "yauzl": "3.2.0",
     "zod": "3.25.76"
   },
   "name": "boss-opencode-service",
@@ -12,6 +14,6 @@
   "type": "module",
   "scripts": {
     "start": "node server.mjs",
-    "test": "node --test tests/smoke.mjs"
+    "test": "node --test tests/*.mjs"
   }
 }
