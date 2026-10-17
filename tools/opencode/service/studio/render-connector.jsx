@@ -1,0 +1,14 @@
+import React from 'react';
+import {renderToStaticMarkup} from 'react-dom/server';
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {AssemblySlide} from './assembly.jsx';
+const out=process.argv[2];if(!out)throw Error('Provide an absolute output directory');await mkdir(out,{recursive:true});
+const seed=JSON.parse(await readFile('studio/connector.seed.json','utf8'));const s=seed.content.slides[0];
+const logo='data:image/jpeg;base64,'+(await readFile('studio/logo.jpg')).toString('base64');
+const artwork='data:image/png;base64,'+(await readFile('studio/artwork/connector-v1.png')).toString('base64');
+const css=await readFile('public/studio/style.css','utf8');
+const html=renderToStaticMarkup(<AssemblySlide slide={s} logo={logo} artwork={artwork}/>);
+await writeFile(out+'/BOSS_Connector_Editable.html','<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BOSS / Constraints make an interface executable</title><style>'+css+'</style></head><body>'+html+'</body></html>');
+await writeFile(out+'/BOSS_Connector_Project.json',JSON.stringify(seed,null,2)+'\n');
+await writeFile(out+'/BOSS_Connector_Companion.md','# '+s.title.replace(/\n/g,' ')+'\n\n## Four constraints\n\n'+s.assembly.callouts.map(c=>'### '+c.title+'\n'+c.text).join('\n\n')+'\n\n## Reflection\n'+s.question+'\n\n## Scope\n'+s.evidence+'\n\n## Source and story bridge\n'+seed.content.bridge1+'\n\n## Visual bridge\n'+seed.content.bridge2+'\n\n'+seed.content.sources.map(x=>'### '+x.name+'\n'+x.reference+'\n\n'+x.excerpt).join('\n\n'));
+console.log('Produced static HTML with native text, separate artwork and logo, companion and project model.');

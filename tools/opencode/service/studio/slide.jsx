@@ -1,6 +1,8 @@
 import React from 'react';
+import {AssemblySlide} from './assembly.jsx';
 export const variants={A:'Editorial split',B:'Evidence window',C:'Working agreement',D:'Reflection rail'};
 export function Slide({slide:s,project:p,index=0,asset,logo,reviewed=false}){
+ if(s.assembly)return <AssemblySlide slide={s} logo={logo} artwork={typeof STUDIO_CONNECTOR==='string'?STUDIO_CONNECTOR:''}/>;
  const paragraphs=s.body.split('\n').filter(Boolean);
  return <section className={'slide variant-'+s.variant} data-document-role="page" aria-label={'Slide '+(index+1)}>
   <header className="slide-mast"><img src={logo} alt="Bioscillate Operating System by Seven"/><span>{p.title||'[Project title]'} / {String(index+1).padStart(2,'0')}</span><span>{reviewed?'HUMAN REVIEW RECORDED':'CANDIDATE / '+s.variant}</span></header>
