@@ -1,56 +1,53 @@
 # BOSS OpenCode service candidate
 
-One service supplies the OpenCode browser interface at `/` and a Streamable HTTP MCP bridge at `/mcp`. Phone and computer browsers use the same workspace and sessions. ChatGPT can call the bridge after an authenticated custom connection is supported and configured in the user's client.
+The service supplies an OpenCode browser interface, an authenticated MCP bridge, and an artifact retrieval desk. It uses the existing Railway service and persistent `/data` volume. The runtime remains pinned to `opencode-ai` 1.19.3; the separately recorded upstream source snapshot is not built by this Dockerfile.
 
-The deployed runtime is pinned to `opencode-ai` 1.19.3, the version verified in the initial trial. The separately pinned OpenCode upstream source in `../upstream.json` is a newer development snapshot and is not built by this Dockerfile. This service is an integration around OpenCode's public API, not a modified OpenCode distribution.
-
-## Interface and credentials
+## Access
 
 | Route | Purpose | Authentication |
 | --- | --- | --- |
-| `/` | OpenCode web interface and API | HTTP Basic; default username `opencode` |
-| `/mcp` | Four OpenCode tools for ChatGPT or another MCP client | Bearer token |
+| `/` | OpenCode interface and native API | HTTP Basic, username `opencode` by default |
+| `/artifacts` | Existing-output retrieval, verification records, individual WAV downloads | Same HTTP Basic credentials |
+| `/mcp` | Six BOSS/OpenCode tools | Separate bearer token |
 | `/health` | Boolean backend readiness | Public; no account details |
 
-The service refuses startup unless `OPENCODE_SERVER_PASSWORD` has at least 24 characters, `BOSS_MCP_TOKEN` has at least 32 characters, and their values differ. Set both through the host's secret settings. Do not put credentials in GitHub or chat. `PUBLIC_ORIGIN` is the actual HTTPS origin of the deployment without a trailing slash. It restricts Host and Origin headers for authenticated routes; it is not a substitute for TLS termination.
+The native OpenCode browser API also uses `/mcp`. Requests authenticated with browser credentials are forwarded to that native API; bearer requests go to the BOSS bridge.
 
-OpenCode listens on a private loopback port. The gateway alone is exposed. It does not expose an arbitrary proxy target, a raw shell MCP tool, or API routes for changing stored credentials through MCP. The authenticated browser still has OpenCode's full user interface and API.
+Set distinct `OPENCODE_SERVER_PASSWORD` (at least 24 characters) and `BOSS_MCP_TOKEN` (at least 32 characters) through the host's secret settings. `PUBLIC_ORIGIN` must equal the deployment's HTTPS origin without a trailing slash. Only the gateway port is public; OpenCode listens on loopback. Browser operations with a different Origin are rejected. These application controls do not establish operating-system sandbox isolation.
 
-## Deploy on Railway
+## Artifact retrieval
 
-1. Use the reviewed DraftDeck branch containing this directory. Create a service from that repository with root directory `tools/opencode/service`; select its Dockerfile.
-2. Attach a persistent volume at `/data`. Confirm the runtime user (`node`, UID 1000 in this image) can write to it. The service saves workspace files and XDG configuration, credentials, cache, and session state there. Back up this volume as operational state.
-3. Set separate generated values for `OPENCODE_SERVER_PASSWORD` and `BOSS_MCP_TOKEN` in Railway's secret settings. Set `XDG_CONFIG_HOME=/data/config`, `XDG_DATA_HOME=/data/share`, and `XDG_CACHE_HOME=/data/cache` if the host overrides image settings.
-4. Generate an HTTPS domain. Set `PUBLIC_ORIGIN` to that exact HTTPS origin, then restart. Set the health check path to `/health`; route the host's assigned `PORT` to the service. The gateway reads `PORT` directly.
-5. Open the domain in a browser and sign in with `opencode` and the web password. Connect the chosen model provider using OpenCode's supported sign-in UI. No provider is selected or billed by this source package.
-6. Connect Kaggle using its supported OAuth or API-token method. A remote OAuth flow may require a reachable callback; do not assume a localhost callback works from a phone. Complete private notebook access verification before describing Kaggle as connected to the account.
-7. Configure the actual deployed `/mcp` HTTPS URL as a custom MCP connection using bearer/API-key authentication where the host client supports it. Store the bearer token in the client's credential field, not a URL or prompt. If the ChatGPT client cannot accept this auth mode or custom connections, use OpenCode's browser interface until a compatible connection is available.
+Open `/artifacts`, enter a Kaggle API token beginning with `KGAT`, then select **Retrieve and verify** for `smithjon1980/boss-audio-003-kaggle-setup-repair`. The worker requests the existing `BOSS_AUDIO_003_RESULTS.zip` through Kaggle's official MCP `download_notebook_output` tool. It never starts the notebook or invokes a model. A token entered in the portal stays in process memory until restart; it is not written to a file, browser storage, logs, URLs, or manifests. To retain it across restarts, the owner can set `KAGGLE_API_TOKEN` in Railway's secret settings instead.
 
-Railway account connection, service provisioning, volume configuration, Docker build, HTTPS access, and phone verification must be tested on the destination host. Local checks do not establish deployment success. Hosting can incur charges; inspect the existing account and service plan before provisioning.
+Credential configured is not equivalent to private account access verified. Private retrieval must pass with the user's credential. The implementation accepts one supported HTTPS download address returned by Kaggle; it does not guess a file endpoint when the response is unsupported. Redirect hosts are checked, and the Kaggle credential is sent only to Kaggle's own hostname, never an external storage host.
 
-## Local verification
+The trial limits are 50 MB compressed archive, 100 MB total expanded contents, 32 MB per entry, and 5,000 entries. The worker checks available storage before admission, allows one active retrieval at a time, rejects unsafe paths, symlinks and encrypted archives, verifies entry CRCs, and hashes retained files. Archive buffers are bounded by the compressed limit. Only WAV entries are extracted to generated local names; the original ZIP is retained. Completed records and audio live in the persistent workspace's `artifacts` directory. No files are automatically deleted to make room.
 
-With Node/npm installed:
+For the named trial, all three WAVs must match the hashes printed in the completed `boss-audio-003-kaggle-setup-repair.ipynb` output supplied in the session on October 16, 2026. The expected filenames are `smoke_generated.wav`, `solo_generated.wav`, and `deep_dive_generated.wav`. Missing, duplicated, changed, or additional WAVs prevent verified completion. Other notebooks using the same package filename receive archive checks without this trial-specific comparison. CRCs and hashes establish file integrity and identity; listening, wording, and publication checks remain separate and pending.
 
-```sh
-npm ci
-npm test
-```
+A restart converts unfinished records to `INTERRUPTED` and preserves their evidence; it does not retry or claim delivery. Download and audio-player URLs use the same private browser credentials and support ordinary file transfer. They are not public share links or automatic ChatGPT file attachments.
 
-The smoke check starts a real OpenCode instance with temporary state, verifies unauthenticated rejection, separate web/MCP credentials, cross-origin rejection, SDK-based MCP initialization/tool discovery, backend health, and session creation/readback without invoking a model. Prompt submission with a connected model, permission approval through the browser, and Kaggle downloads need separate live account checks.
+## MCP tools
 
-For normal local use, set the two secrets in the process environment and choose a writable `BOSS_WORKSPACE`. `PUBLIC_ORIGIN` can be omitted for local terminal-client testing; browser requests with an Origin header are rejected until the real HTTPS origin is configured. XDG variables should point to persistent private directories. Run `npm start`.
+- `opencode_status`: backend health, MCP states, connected model provider IDs. Private Kaggle access remains explicitly unverified.
+- `opencode_sessions`: recent sessions in the configured workspace.
+- `opencode_prompt`: admit an explicit work order asynchronously; may execute tools and modify files, requires a connected model provider, and does not imply completion.
+- `opencode_session`: inspect progress and recent text; idle does not mean success.
+- `boss_artifacts`: list retained artifact jobs and authenticated download links.
+- `boss_retrieve_audio`: start the bounded existing-output retrieval directly, without a model or OpenCode prompt. Requires a credential configured in the portal or host secrets.
 
-## MCP operations
+The bridge does not approve OpenCode permission requests. Initial configuration asks before shell commands, edits, and unspecified Kaggle operations. It allows read-only notebook inspection and existing-output downloads. The authenticated browser exposes OpenCode's own interface and native APIs.
 
-`opencode_status` returns backend health, MCP states, and connected provider IDs. It explicitly leaves private Kaggle access unverified. `opencode_sessions` lists workspace sessions. `opencode_prompt` accepts an explicit work order and returns a new session ID after asynchronous admission; this is not a completion receipt. It can execute tools and modify workspace files, subject to OpenCode's configured permissions. `opencode_session` reads status and recent text for progress review; idle status alone does not prove success. There is no automatic retry of prompt submission because that can duplicate work.
+## Deployment
 
-The initial config asks before shell commands, file edits, or unspecified Kaggle operations. Read-only notebook inspection and existing-output downloads are allowed. Permission prompts are handled in the authenticated OpenCode interface; this bridge does not approve them. These controls do not establish sandbox isolation or publication approval.
+Use the repository's `tools/opencode/service` directory as the Docker build root. Mount persistent storage at `/data`, set the two service credentials, and set `PUBLIC_ORIGIN` after generating the HTTPS hostname. Railway passes `PORT`; the gateway reads it directly. The container entrypoint initializes volume directory ownership then runs as `node`.
 
-## First work order
+The image defines `XDG_CONFIG_HOME=/data/config`, `XDG_DATA_HOME=/data/share`, and `XDG_CACHE_HOME=/data/cache`. The persistent workspace defaults to `/data/workspace`. Confirm backups and persistence on the destination host. No model provider is selected or billed by this package; connect the chosen provider through OpenCode before using prompt execution. Kaggle authentication for the artifact worker is separate from OpenCode's own Kaggle MCP configuration.
 
-Retrieve existing outputs for `smithjon1980/boss-audio-003-kaggle-setup-repair`; do not regenerate the audio. Download `BOSS_AUDIO_003_RESULTS.zip` into persistent workspace storage, check archive integrity, and verify the three WAV files against recorded hashes. Listening and wording review remain separate from file completion. Do not claim success from a connection indicator or fluent generated response.
+A custom ChatGPT MCP connection uses the deployed `/mcp` URL and bearer authentication where supported by the user's client. Plugin creation, server health, and tool discovery do not establish that the host has completed this authentication.
 
-## Current boundary
+## Verification
 
-This service does not provide OAuth authorization for ChatGPT, public artifact sharing, a user-friendly download portal, repository synchronization, background scheduling, or production qualification. The initial persistent workspace is empty; clone DraftDeck there separately when code execution against the repository is needed. Keep the OpenCode MIT notice when copying or redistributing the dependency.
+Run `npm ci` and `npm test` with Node/npm and Python 3 installed. Tests start a real OpenCode process using isolated temporary state, exercise authenticated portal access and MCP discovery, inspect sessions, and verify ZIP extraction, corrupt-file rejection, unsafe-path rejection, source mismatch handling, and interrupted-record recovery. They do not invoke a model or access a user's Kaggle account. Test data and generated credentials are discarded afterward.
+
+A live deployment additionally requires terminal Railway `SUCCESS`, public health and authentication checks, private Kaggle retrieval, actual downloads, and phone/browser inspection. Mark each limit explicitly. Keep the upstream MIT notice when copying or redistributing OpenCode. The PR does not merge itself or authorize publication of retrieved content.
