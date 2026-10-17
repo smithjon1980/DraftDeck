@@ -1,0 +1,602 @@
+[
+  {
+    "family": "iso",
+    "path": "DWG/BK-2020-04-PID-1-SHT1.svg",
+    "commit": "105ff030f6d8a9a335b6b94fc8eda7f6d0f07d3b",
+    "sha256": "a793f2c959a4a01c7b5fde63d39ddb104ed2d56616cdae1f67ab136a952d0f95"
+  },
+  {
+    "family": "iso",
+    "path": "DWG/BK-2020-04-PID-1-SHT2.svg",
+    "commit": "105ff030f6d8a9a335b6b94fc8eda7f6d0f07d3b",
+    "sha256": "2e007ef121013ef135845cf9febe966ab5e9cef99539fa1ddc2bbaecea169e61"
+  },
+  {
+    "family": "iso",
+    "path": "DWG/BK-2020-04-PID-1-SHT3.svg",
+    "commit": "105ff030f6d8a9a335b6b94fc8eda7f6d0f07d3b",
+    "sha256": "50a40837b106c4c82cc6947ffb030888cce95bd291f4b3534a398e3852c0e64d"
+  },
+  {
+    "family": "iso",
+    "path": "DWG/BK-2020-04-PID-1-SHT4.svg",
+    "commit": "105ff030f6d8a9a335b6b94fc8eda7f6d0f07d3b",
+    "sha256": "d0c31bca79edfa23b5c8b6f11f0d2ba54489c838b5b60dc8a10b96378fc14bac"
+  },
+  {
+    "family": "iso",
+    "path": "DWG/BK-2020-04-PID-1-SHT5.svg",
+    "commit": "105ff030f6d8a9a335b6b94fc8eda7f6d0f07d3b",
+    "sha256": "04d42517ed2b8e3f9b43d62090785260a75cc7c73934ac547fedeb378051c62c"
+  },
+  {
+    "family": "iso",
+    "path": "DWG/BK-2020-04-PID-1-SHT6.svg",
+    "commit": "105ff030f6d8a9a335b6b94fc8eda7f6d0f07d3b",
+    "sha256": "d344ffb4126aa98a378f11b4d7971708ecaf491ac56e02d23ea8a4595e2fa87b"
+  },
+  {
+    "family": "iso",
+    "path": "DWG/BK-2020-04-PID-1-SHT7.svg",
+    "commit": "105ff030f6d8a9a335b6b94fc8eda7f6d0f07d3b",
+    "sha256": "1a2c513b3109b682a087441f12290d2e121c5a9926d6be76daa472feb60a8401"
+  },
+  {
+    "family": "iso",
+    "path": "README.org",
+    "commit": "105ff030f6d8a9a335b6b94fc8eda7f6d0f07d3b",
+    "sha256": "54940482d11c746b5f0c8c287ceed127e58d0dc4f4d53506bb236958a1894a96"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/gd-and-t/ConcentricityFrame.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "5dda058020126c90acf75ba625bec5e7dac5efd8674f1b7fa95b124074792a45"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/gd-and-t/CylindricityFrame.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "1cf46d4a5e5eced60ad358b9c6c2d34f57c06326ee6505be76252bca8b769d90"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/gd-and-t/FlatnessFrame.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "d63302094a828ae1a6d78782c59b2583dda72f53b18ed7141ba3c62f454fa58d"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/gd-and-t/ParallelismFrame.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "944ef847bc2598d045365adf01d08ab68219ab07d8ca2d54d1225954cc672d29"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/gd-and-t/ReferenceSurface.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "4252e4363d137db05b236e4a470904dfb68097c8aff64dce2059705e7568b98e"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/gd-and-t/RoundnessFrame.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "aeaf8237e35d1d32e31ff943e053892279e8357dbd6f48c6722902aa80468359"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/gd-and-t/SquarenessFrame.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "937b444768e637b2f0bfe4a0f56d81325335c35721042a8d7e3e97c375ccd4ec"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/gd-and-t/angularity-left.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "90e3b9b1fbd39cea56f0962e73d6e812987b10ae4ecdb741649290dd729cfc11"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/gd-and-t/angularity-right.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "e2e00955dfffa5e15281bb3c3d7bf2ac6921999f5b14395ba66e5aee729ad242"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/gd-and-t/concentricity.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "1dc45c40685d5a9383c915c23ab3d297ceac733edb04eb3ac96db6dd4aa71471"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/gd-and-t/cylindricity.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "62bc6ef7b274030a82c80e68f1315eb3b7586831d98fb8a6cf4dea2bc49f8d85"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/gd-and-t/flatness.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "a965f616d1fb8289becc1821429b6397ab5c854430fc95b68a17ed734006c1bc"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/gd-and-t/parallelism.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "14e02038abddd7df88e7b410a5e3266d0c2c24d46a7e987027783dcfda6e74b1"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/gd-and-t/perpendicularity.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "e507ac47db7485f0303b8da818420467f041d1a5089195bee48d4c5c0bb5fab3"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/gd-and-t/position.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "b4b5e9c1efc055a7539ede7997226599fa2fb785bbdf815332fd85fe4e191236"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/gd-and-t/profile-tolerance-of-line.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "70ed5438fcb2e40095b0910e329270ca3e91507fe521a6f06de09adc14397e0a"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/gd-and-t/profile-tolerance-of-plane.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "1d48f199460d643bf133c41016fd558b16ae430013bbdf1228dcc0f1136c7b97"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/gd-and-t/roundness.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "94290cdb8e46e43f62a0e706081f179b0f2242e8409814424a77b9df35acd517"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/gd-and-t/symmetry.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "2bc85d161c17c3c5fc500341f72ab035f4df8e2292c077ef712ec92c602cb65f"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/gd-and-t/totalrunout.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "1a75c9441643185e269a4ad392554c12ada224d8d2cd9cd4cdde6863cf9aeb6e"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/1st_Angle_Projection.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "4b4f65d19f5037a68fc56a51ffa9f6dbd6fcea1fd7eea1dcdcf4e9f07217c28b"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/3rd_Angle_Projection.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "9422e24e152e758b71d04300a476f07bc36d700718d4a4dfbb83bccd07cf25f2"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Arrow_Long_Filled.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "5cba9765f965702e8444a74d96d2608dd220a9ef99e12a1df7db5a63e4efb691"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Arrow_Long_Open.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "3c8ad8284f6b7b27bf15c3ba6a280f203df668246771a1d03cbf82e80971d0ff"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Arrow_Medium_Filled.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "918552e8bc23f293f331914fbb84095de56a0e5f198d4d305d9c5011cb43f935"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Arrow_Medium_Open.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "0feaaf7c6d058e315f2a7f2cd80ba2bb070d452f75a34163dc271ce6eab094c9"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Arrow_Short_Filled.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "98fb6eb812504862a274316a3310cf93f3c69bfe162e5c6df7a0434f1047481d"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Arrow_Short_Open.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "448ded617c75eaa7cdc6ced18558a78fc5c694162a9196670b8664e75d64831f"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Balloon_Editable_Text.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "92ca50f174f03f94088a758695fe262005a046df51bb3269504138e5d1f977ab"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Balloon_Long.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "034a0c4f205cdf36a84fe28c0b97d2bb12a793d5c35e232aec12e87ee695956b"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Balloon_Medium.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "c6343d64fe25193d5eaeecd07fa3c43f7506867b2e0d7f6e25162eb20898246f"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Balloon_Short.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "1a7a9b21c70b584a298c51a4c552776ad68ab8cc46795f1791f51cca15262129"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/CallOut.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "b9a60d667e04d6e03d369e73e7db47a2d3f4608226310dcd4c67e2cffbb85ace"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/CallOut_Left.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "0168b7426a1fd6a412f6612ba253faaae129c4124d113fbe2e559b879eddc993"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/CallOut_Right.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "58f3a082159847d6d05b5a245d32a603fcd3452276e2adda9f19a4d2e210cfc8"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Centre_Justified_Text_10_Lines.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "70603f060546ba070ddce1a20c36dad419a1e1566c6b53873c6bc9ab28792fa2"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Cloud.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "49aede2be96d4becd649104276502258fcdf72109b4e10e59bc305950180ca8d"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Cosmetic_Break_Long.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "a5eb172960e204849207677a0395c6cdf0abcbb5db09ba86f2f18937725d110d"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Cosmetic_Break_Medium.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "86bef1c7e48fdd5ef8b0b60e1e95cb607350197b694e6a3dafa7ebb0f307edf2"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Cosmetic_Break_Small.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "73964500373da71e400b95032dc86828dab4145bc499075bf6e1d9b39328ec02"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Cosmetic_Round_Section_End.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "fed51a08c51f1ca8cfacb513819516b07b1f9202832f7db3b32eef5c6b12ef44"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Cosmetic_Round_Section_End_Large.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "f80c97a241f4b9dff8b4d648e39c97b61db3a0a350d247b706279ed424f44e29"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Cosmetic_Round_Section_Middle.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "e7061628d7841182ae5b14435068a6e1e9c30ffcae377339e21d06b1f493b8d4"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Cosmetic_Round_Section_Middle_Large.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "43482deec850cd4099cf1bac334998e3fb4c34a7f014ea1e37c63befee351a84"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Datum_Left.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "636348ca20615c47b0b101009edd1278bce59a2c3f759b12b447651214b65ea0"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Datum_Point.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "e7ccd9d5f4b95e707e31073e56e19f0085ee34dc60f7b4c7a07af1311917fba4"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Datum_Right.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "549fc17aa3518e5d17010d352cd82b9cfd37ad1aed825a5601d8b717699374fc"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Datum_Target_Left.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "4b89ea2f5060e3636d9ab5d777a33f23d64c5d673be9bfae0796681dc251e9bc"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Datum_Target_Plain.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "c75c82705878acb03ca526213b6476d9c593d6cf14d816ecd457a8189dc86e60"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Datum_Target_Right.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "fbae3157a5bdb8baa48237098c1ab71f70f7a3a331d984549c01ee11ff6b0f05"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Datum_Target_Up.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "ba37f89a618908edca79638275a47e2ae417f70614aa38d514d54830649d4c2d"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Datum_Up.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "47538c4186c4e147f7493d61d4714e700f9aee65253227e76563881181272978"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Feature_Left.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "dcb25dab14c0b7e171993133156369959429fe44798dd2d226fca3990c3313b7"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Feature_Right.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "19375ec97677e83f29b6ab90e8c64bb96890d96bc67a2be5fa33b3fd905435ff"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Feature_Up.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "fdedd5545ef27ee559ffc20d3efac59dff572ab5482a7bb444043450ae9e2a27"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Left_Justified_Text_10_Lines.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "09c2cfd01f4190267071cc5024a0e805921e4b80cc9d3e6f4e48eb0d6459c9e5"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/North.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "37cfec92afddd5dd91cc9e6ebf9a22949c5bc1776f37274aac2d380fbe60822f"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Revision_Triangle.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "09958ebe5ae102f785629238efe6ce058d6dd8d634db3e830c49292089a75c6a"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Right_Justified_Text_10_Lines.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "4f47a8040a7964b0c385e7fc9072776da031a988bda761c42e5577b8e7384f43"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Whiteout_Rectangle_Long.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "d5b043cde28d176ec04d2da14ac8e52d6f948df55a4495c6a7e380b32bd6c26e"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Whiteout_Rectangle_Medium.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "1cf4c5a2d64c9632fe5a36188e092576639745435d2c1e7c5e6d784d0b159964"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Whiteout_Rectangle_Short.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "33a21bfa86692717d5d4ad4733ca1463b16ed2c2ee1c143d111619460779fb6e"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/misc/Whiteout_Square.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "17c3829c07ee1298ada3ead08332c9ecefcdc32a76a798de3cb0fed8342b940e"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/other/CutLine.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "823e0f44c4aa00cd924e84ce401ab97431df2ffb305277d8e4c279a0eb051c95"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/other/Diameter.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "eb3a8ee4f094ff650299056f6b32646e2513a57bb75e2ce158fa0f2601fce321"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/other/Envelope.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "cc89d4f2c92c2aee2510a98c3fcea760ebd0ac2c9aeb3cf05670b13a3a7f8cb8"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/other/FilletInside.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "1e30938bc850a3ab8a69fd8a68a9510878d7744596d4d01ab1da2e7299e12768"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/other/FilletOutside.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "0f86e555ab681d3d17c43c22ccd8fdd1af4a9c819c19a4b8f005a0064b14600e"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/other/IndexCircle.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "512db9b4d8aa7f08df336ef1927ffa33c5417cc56177ccd79b27236e92602215"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/other/IndexTriangle.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "cd22c6ac003f2bee53fd7850b253f3544e092337ce0fe3ab508697fd447e94bd"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/other/InsideEdgeBroken.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "a58c0f9b7fa750681d779071f671383b411680abe00fa8b1a700a73572428970"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/other/OutsideEdgeBroken.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "79e9b64647d7d81650a3dfee9c6edc4b205aa02a7c7bab0851d6b274076a1820"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/other/Rectangle.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "32e102270ebe380c71f678c658094cbf26922165c3b7b8df412b5a83b0ed287a"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/other/SectionLine.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "22687bd1a817706e3a84c9f6163be4d97e35a7ab27741b30e60d097ddb072b12"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/other/Square.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "22c2709633555e0f478a37b5b841d9c90812d06564083fa41908ca0b9c247476"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/surface-roughness-symbols/Roughness.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "e577366563ddc165ca918aaa9807e3fcc25c50e8dbe833a6b24dd7f586591587"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/surface-roughness-symbols/RoughnessGeneral.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "c408d3ba81237492a2f2aa8a69ca4748e3100ff3f622e358fe2f70a9bb19c266"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/surface-roughness-symbols/surface-roughness-contour.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "b7bdb76903eeb9b7cd9c405c93b6c00a415c52bf2fbc98cb5d4d6eaa794ebdff"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/surface-roughness-symbols/surface-roughness-layer-removing.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "9d2a85bb9c841064d414206ebd908f01fa07ca728080676f4c32434e4c383a6d"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/surface-roughness-symbols/surface-roughness-no-layer-removing.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "caa640dad83aec8d7040b35af9a42e6907daba12234e5226e64594219b247578"
+  },
+  {
+    "family": "freecad",
+    "path": "src/Mod/TechDraw/Symbols/surface-roughness-symbols/surface-roughness.svg",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "a18a973e9df53de8686b0d97123a42025d8dc3c98259f891230a8537d0010877"
+  },
+  {
+    "family": "freecad",
+    "path": "LICENSE",
+    "commit": "e95a31c3119f09a5b185c0b9c901a91384961cc0",
+    "sha256": "7ffe1954587c77dfba1cf8eb9b2ea743671fa6e63f9e7a2f258119d42e14eefe"
+  },
+  {
+    "family": "qet",
+    "path": "20_logic/2010_logic_gates/201010_ansi_ieee/20101000_and.elmt",
+    "commit": "73cbffb86d29590ad0fa63508afdc41163fff975",
+    "sha256": "0470b5d4f7821556d4561e9d4f440f0c84571bcd9e5cb8e792c9b52b43714dd0"
+  },
+  {
+    "family": "qet",
+    "path": "20_logic/2010_logic_gates/201010_ansi_ieee/20101002_nand.elmt",
+    "commit": "73cbffb86d29590ad0fa63508afdc41163fff975",
+    "sha256": "6b741b8d77d3fea03469d11615fcb48214e1433b629d250695b433e8a064b63c"
+  },
+  {
+    "family": "qet",
+    "path": "20_logic/2010_logic_gates/201010_ansi_ieee/20101010_or.elmt",
+    "commit": "73cbffb86d29590ad0fa63508afdc41163fff975",
+    "sha256": "a96927548ecaa3a4ae5be52bed46a6e0424c0ed2ae3cc4374fafc23d716d0c75"
+  },
+  {
+    "family": "qet",
+    "path": "20_logic/2010_logic_gates/201010_ansi_ieee/20101012_nor.elmt",
+    "commit": "73cbffb86d29590ad0fa63508afdc41163fff975",
+    "sha256": "f11d9cb5358f3a7dacacf7eaed0f373191e07d3f7af106f3f4546d560f047f69"
+  },
+  {
+    "family": "qet",
+    "path": "20_logic/2010_logic_gates/201010_ansi_ieee/20101020_not.elmt",
+    "commit": "73cbffb86d29590ad0fa63508afdc41163fff975",
+    "sha256": "47e117e3cba71c76787752888244f27435a731b0024ce1196cfe485b9f0c086e"
+  },
+  {
+    "family": "qet",
+    "path": "20_logic/2010_logic_gates/201010_ansi_ieee/20101030_xor.elmt",
+    "commit": "73cbffb86d29590ad0fa63508afdc41163fff975",
+    "sha256": "eb4211bebda0dc9e4b117880df2d88bf4ccebbb6ac94d6399ee44c7a707573f0"
+  },
+  {
+    "family": "qet",
+    "path": "20_logic/2010_logic_gates/201010_ansi_ieee/20101031_xnor.elmt",
+    "commit": "73cbffb86d29590ad0fa63508afdc41163fff975",
+    "sha256": "85d55c7c169933e38cbe961150b91ca15e0ff9ef5552a23b3b6790daa2928fff"
+  },
+  {
+    "family": "qet",
+    "path": "20_logic/2010_logic_gates/201010_ansi_ieee/20101060_input.elmt",
+    "commit": "73cbffb86d29590ad0fa63508afdc41163fff975",
+    "sha256": "e9c6fa623b5f65c6bc612a93c9b236186489a68aca3aa25876879035a8ba64f1"
+  },
+  {
+    "family": "qet",
+    "path": "20_logic/2010_logic_gates/201010_ansi_ieee/20101070_output.elmt",
+    "commit": "73cbffb86d29590ad0fa63508afdc41163fff975",
+    "sha256": "0a7a4785e302ef2d8ed06d603b3d5288c7064af908b83e957048daaa56305e31"
+  },
+  {
+    "family": "qet",
+    "path": "ELEMENTS.LICENSE",
+    "commit": "73cbffb86d29590ad0fa63508afdc41163fff975",
+    "sha256": "67b8bb50d99553e3e238f75810702105c205ce95d279a4b44de2a8033e375fd1"
+  }
+]
