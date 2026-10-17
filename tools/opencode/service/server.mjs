@@ -1,4 +1,5 @@
 import express from 'express';
+import { createArtifacts } from './artifacts.mjs';
 import http from 'node:http';
 import crypto from 'node:crypto';
 import { mkdir, copyFile } from 'node:fs/promises';
@@ -47,7 +48,10 @@ async function api(route, method = 'GET', body) {
   return result.json();
 }
 
+const artifacts = await createArtifacts({ dataDirectory: process.env.BOSS_ARTIFACT_DIRECTORY || path.join(workspace, 'artifacts'), page: path.join(root, 'artifacts.html'), publicOrigin });
+
 const tools = [
+  ...artifacts.tools,
   {
     name: 'opencode_status', description: 'Check OpenCode health, MCP connection states, and connected model provider IDs. Does not prove private Kaggle access.',
     inputSchema: { type: 'object', properties: {}, additionalProperties: false },
@@ -95,6 +99,7 @@ async function call(name, args = {}) {
     const [session, statuses, messages] = await Promise.all([api(`/session/${id}`), api('/session/status'), api(`/session/${id}/message?limit=10`)]);
     return { session_id: session.id, title: session.title, status: statuses[session.id] || { type: 'idle' }, messages: messages.slice(-10).map(({ info, parts }) => ({ role: info.role, error: info.error, text: parts.filter(p => p.type === 'text').map(p => p.text).join('\n').slice(0, 20000) })), note: 'Idle status alone does not establish successful completion.' };
   }
+  if (artifacts.tools.some(tool => tool.name === name)) return artifacts.call(name, args);
   throw new Error('Unknown tool');
 }
 
@@ -121,6 +126,8 @@ app.get('/health', async (_req, res) => {
   catch { res.status(503).json({ healthy: false }); }
 });
 app.use('/mcp', (req, res, next) => {
+  // OpenCode's browser client also uses /mcp; Basic auth targets its native API.
+  if (matches(req.headers.authorization, basic)) return proxy.web(req, res);
   if (!matches(req.headers.authorization, bearer)) return res.status(401).set('WWW-Authenticate', 'Bearer realm="boss-opencode"').end();
   next();
 }, express.json({ limit: '64kb' }));
@@ -132,6 +139,11 @@ app.post('/mcp', async (req, res) => {
   catch { if (!res.headersSent) res.status(500).json({ error: 'MCP request failed' }); }
 });
 app.all('/mcp', (_req, res) => res.sendStatus(405));
+
+app.use('/artifacts', (req, res, next) => {
+  if (!matches(req.headers.authorization, basic)) return res.status(401).set('WWW-Authenticate', 'Basic realm="BOSS OpenCode", charset="UTF-8"').end();
+  next();
+}, artifacts.router);
 
 const proxy = httpProxy.createProxyServer({ target: backend, ws: true });
 proxy.on('error', (_error, _req, res) => {
