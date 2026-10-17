@@ -54,6 +54,8 @@ A live deployment additionally requires terminal Railway `SUCCESS`, public healt
 
 ## Internal browser applications
 
+Google sign-in is implemented behind `GOOGLE_AUTH_ENABLED=true`; it is disabled until the owner registers a Google OAuth Web client and sets the exact account allowlist. Follow [GOOGLE_SETUP.md](GOOGLE_SETUP.md) for the callback URL, Railway variables, session behavior and live acceptance checks. `/login` offers Google sign-in when enabled and password recovery. Browser sessions also authorize OpenCode's HTTP/WebSocket proxy; the backend password is supplied server-side. The MCP bearer token remains separate.
+
 `/tools/` is the private tools hub. `/tools/atlas/` serves the complete 368-symbol engineering atlas with ordinary relative image/script URLs; it does not require copying large HTML into a chat. `/tools/atlas/download` downloads its full offline package. The hub also links the existing audio artifact desk and OpenCode workspace.
 
 The gateway protects the hub, HTML, catalogue, individual SVGs and package download with the same browser authentication. It uses private/no-store responses. Docker installs the pinned atlas package during the build, with its fixed byte count and SHA-256 checked before bounded extraction; it is not fetched or rebuilt on every request. The atlas files live in the immutable application image and do not consume the persistent workspace volume. Existing user state and model-provider configuration remain in `/data`.

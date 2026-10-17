@@ -3,7 +3,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends git ca-certific
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
-COPY server.mjs artifacts.mjs artifacts.html internal-tools.mjs tools.html install-atlas.mjs runtime-config.json entrypoint.sh ./
+COPY server.mjs google-auth.mjs artifacts.mjs artifacts.html internal-tools.mjs tools.html install-atlas.mjs runtime-config.json entrypoint.sh ./
 RUN node install-atlas.mjs
 RUN chmod +x /app/entrypoint.sh
 RUN mkdir -p /data/workspace /data/config /data/share /data/cache && chown -R node:node /data

@@ -1,6 +1,7 @@
 import express from 'express';
 import { createArtifacts } from './artifacts.mjs';
 import { createInternalTools } from './internal-tools.mjs';
+import { createGoogleAuth } from './google-auth.mjs';
 import http from 'node:http';
 import crypto from 'node:crypto';
 import { mkdir, copyFile } from 'node:fs/promises';
@@ -115,6 +116,14 @@ function createMcp() {
 }
 
 const app = express();
+const google = createGoogleAuth();
+function browserAuthenticated(req) { return matches(req.headers.authorization, basic) || !!google.authenticate(req); }
+function browserGuard(req, res, next) {
+  if (matches(req.headers.authorization, basic)) return next();
+  if (google.authenticate(req)) return google.guard(req, res, next);
+  if (google.enabled && req.headers.accept?.includes('text/html')) return res.redirect(303, '/login?return=' + encodeURIComponent(req.originalUrl));
+  return res.status(401).set('WWW-Authenticate', 'Basic realm="BOSS OpenCode", charset="UTF-8"').end();
+}
 app.disable('x-powered-by');
 app.use((req, res, next) => {
   if (req.path === '/health' && req.method === 'GET') return next();
@@ -126,9 +135,15 @@ app.get('/health', async (_req, res) => {
   try { const health = await api('/global/health'); res.status(health.healthy ? 200 : 503).json({ healthy: !!health.healthy }); }
   catch { res.status(503).json({ healthy: false }); }
 });
+app.use(google.router);
+app.get('/auth/basic', (req, res) => {
+  if (!matches(req.headers.authorization, basic)) return res.status(401).set('WWW-Authenticate', 'Basic realm="BOSS OpenCode", charset="UTF-8"').end();
+  res.redirect(303, '/tools/');
+});
 app.use('/mcp', (req, res, next) => {
   // OpenCode's browser client also uses /mcp; Basic auth targets its native API.
-  if (matches(req.headers.authorization, basic)) return proxy.web(req, res);
+  if (matches(req.headers.authorization, basic)) return proxy.web(req, res, { headers: { Authorization: basic } });
+  if (google.authenticate(req)) return google.guard(req, res, () => proxy.web(req, res, { headers: { Authorization: basic } }));
   if (!matches(req.headers.authorization, bearer)) return res.status(401).set('WWW-Authenticate', 'Bearer realm="boss-opencode"').end();
   next();
 }, express.json({ limit: '64kb' }));
@@ -141,39 +156,32 @@ app.post('/mcp', async (req, res) => {
 });
 app.all('/mcp', (_req, res) => res.sendStatus(405));
 
-app.use('/tools', (req, res, next) => {
-  if (!matches(req.headers.authorization, basic)) return res.status(401).set('WWW-Authenticate', 'Basic realm="BOSS OpenCode", charset="UTF-8"').end();
-  next();
-}, createInternalTools(root));
+app.use('/tools', browserGuard, createInternalTools(root));
 
-app.use('/artifacts', (req, res, next) => {
-  if (!matches(req.headers.authorization, basic)) return res.status(401).set('WWW-Authenticate', 'Basic realm="BOSS OpenCode", charset="UTF-8"').end();
-  next();
-}, artifacts.router);
+app.use('/artifacts', browserGuard, artifacts.router);
 
 const proxy = httpProxy.createProxyServer({ target: backend, ws: true });
 proxy.on('error', (_error, _req, res) => {
   if (typeof res.writeHead === 'function' && !res.headersSent) res.writeHead(502);
   res.end();
 });
-app.use((req, res) => {
-  if (!matches(req.headers.authorization, basic)) return res.status(401).set('WWW-Authenticate', 'Basic realm="BOSS OpenCode", charset="UTF-8"').end();
-  proxy.web(req, res);
-});
+app.use(browserGuard, (req, res) => proxy.web(req, res, { headers: { Authorization: basic } }));
 const listener = http.createServer(app);
 listener.on('upgrade', (req, socket, head) => {
-  if (!matches(req.headers.authorization, basic) || (req.headers.origin && req.headers.origin !== publicOrigin) || (publicOrigin && req.headers.host !== new URL(publicOrigin).host)) {
+  if (!browserAuthenticated(req) || (google.authenticate(req) && req.headers.origin !== publicOrigin) || (req.headers.origin && req.headers.origin !== publicOrigin) || (publicOrigin && req.headers.host !== new URL(publicOrigin).host)) {
     socket.end('HTTP/1.1 401 Unauthorized\r\nConnection: close\r\n\r\n'); return;
   }
-  proxy.ws(req, socket, head);
+  proxy.ws(req, socket, head, { headers: { Authorization: basic } });
 });
 
 const configPath = path.join(workspace, 'opencode.json');
 try { await copyFile(path.join(root, 'runtime-config.json'), configPath, 1); }
 catch (error) { if (error.code !== 'EEXIST') throw error; }
 const binary = process.env.OPENCODE_BIN || path.join(root, 'node_modules/.bin/opencode');
+const childEnvironment = { ...process.env, OPENCODE_CONFIG: configPath };
+delete childEnvironment.GOOGLE_CLIENT_SECRET;
 const child = spawn(binary, ['web', '--hostname', '127.0.0.1', '--port', String(backendPort)], {
-  cwd: workspace, env: { ...process.env, OPENCODE_CONFIG: configPath }, stdio: ['ignore', 'inherit', 'inherit'],
+  cwd: workspace, env: childEnvironment, stdio: ['ignore', 'inherit', 'inherit'],
 });
 child.on('error', () => { console.error('Could not start OpenCode'); listener.close(); process.exitCode = 1; });
 child.on('exit', code => { listener.close(); process.exitCode = code || 0; });
