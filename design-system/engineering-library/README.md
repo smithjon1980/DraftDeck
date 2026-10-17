@@ -20,12 +20,12 @@ Requires Node 24 and Python 3. No CAD application or browser download is needed 
 ```sh
 cd design-system/engineering-library
 npm ci
-npm run build
+npm run package
 ```
 
-Open `dist/index.html`. The self-contained React-rendered atlas has search, collection filters, enlarged inspection, source/license metadata and per-component SVG download. `dist/assets.json` is the reusable component data. Source geometry is kept separate from live HTML titles, captions and annotations. Tailwind is compiled locally; no CDN is required.
+Extract `dist/DraftDeck_Engineering_Atlas_Complete.zip` in full, then open `index.html`. Keep `assets.js` and the `assets/` directory beside it. The offline React-rendered atlas has search, collection filters, enlarged inspection, source/license metadata and per-component SVG download. `dist/assets.json` is the reusable component data. Source geometry is kept separate from live HTML titles, captions and annotations. Tailwind is compiled locally; no CDN or web server is required. The 13.8 KB HTML shell contains no base64 images. Geometry files and catalogue data are separate, avoiding the former 2.87 MB single-file handoff. `npm run build` creates the folder; `npm run package` also creates and verifies the ZIP and per-file SHA-256 packing list.
 
-`src/components.tsx` exports `TechnicalSymbol`, `LeaderCallout`, `DimensionLine`, and `EngineeringAtlas`. `TechnicalSymbol` is a server-rendered adapter that takes an `EngineeringAsset`; for a browser bundle, replace its Node Buffer encoding with a browser-safe data URL or serve the individual asset file. Reuse the content records independently of the atlas UI. Dimension labels describe the supplied content; never invent measurements or tolerances.
+`src/components.tsx` exports `TechnicalSymbol`, `LeaderCallout`, `DimensionLine`, and `EngineeringAtlas`. `TechnicalSymbol` takes an `EngineeringAsset` and uses its `assetUrl` when present. Its optional embedded-SVG fallback uses Node Buffer during server rendering. Reuse the content records independently of the atlas UI. Dimension labels describe the supplied content; never invent measurements or tolerances.
 
 To regenerate the source pack from checked-out upstream repositories at the recorded commits:
 

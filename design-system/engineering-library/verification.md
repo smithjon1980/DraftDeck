@@ -1,12 +1,10 @@
-# Candidate verification — 2026-10-17
+# Offline package verification — 2026-10-17
 
-- Source pack: 100 original files with family, exact upstream commit and SHA-256; full source/license notices retained. Normal builds verify every hash.
-- Import: 368 usable text-free geometry records. Eight text-bearing sources explicitly deferred to editable-label adapters; originals retained.
-- Bounds: all 368 records produced nonempty geometry bounds in Chromium 153. A horizontal line's zero geometric height is padded rather than misclassified as an empty component. Crops recorded in `vendor/viewboxes.json`.
-- Build: `npm install --ignore-scripts` and `npm run build` passed. Actual React rendering and compiled Tailwind CSS.
-- Browser: 368 atlas images loaded. The unused dialog image has no source until selection. No page JavaScript errors observed.
-- Interaction: ANSI/IEEE filter returns seven assets; a gate opens the enlarged inspector; heat-exchanger search returns 13 assets; an unmatched search returns zero. SVG export links include the selected geometry and embedded attribution/license metadata.
-- Viewport: 390px viewport has document scroll width 390px.
-- Visual review: process equipment, ANSI/IEEE gates and GD&T views inspected. Source technical geometry remains separate from native HTML labels.
+- Original local HTML was complete at 2,873,508 bytes, including the inspector, scripts, all collections and closing markup. A received text copy was reported truncated within a base64 image; no missing symbols were reconstructed or stubbed.
+- Rebuilt output separates the HTML shell (13,831 bytes), catalogue script and 368 real SVG files. No base64 image is embedded in index.html. The complete footer/inspector and closing markup are present; the final completion marker is DRAFTDECK_ATLAS_COMPLETE_368.
+- `npm run package` passed. The ZIP contains 375 entries, including originals and licensing in source-pack.zip. ZIP CRC and every entry's SHA-256/size were checked after writing. PACKING-LIST.json is included.
+- The ZIP was extracted to a fresh directory and opened through file:// in Chromium 153. All 368 card images loaded. ANSI filtering returned seven entries; heat-exchanger search returned 13; enlarged inspection opened; an individual SVG downloaded and retained attribution/license metadata. No page JavaScript errors observed.
+- Source pack retains 100 original files with exact upstream commit and SHA-256. Normal builds verify every source hash. Eight text-bearing sources remain explicitly deferred, with originals preserved.
+- All 368 geometry bounds were measured. Process equipment, ANSI/IEEE and GD&T views were visually inspected. Source vector geometry and live editorial labels remain separate.
 
-Not established: independent per-symbol ISO/ANSI/ASME conformance; mechanical or piping correctness of a future composed diagram; detailed connector/assembly illustration equivalence; rendering and acceptance of composition adapters in a final figure; full accessibility conformance; Canva destination editability; human selection of a new slide master. Individual SVG accessibility labels and inspector controls were implemented; this is not a full accessibility audit.
+Not established: independent per-symbol standards conformance; detailed mechanical cutaway or exploded-assembly equivalence; final composition-adapter acceptance; full accessibility conformance; Canva editability; human slide-master selection.
