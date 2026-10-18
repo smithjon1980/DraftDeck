@@ -27,6 +27,7 @@ Python 3.10+ standard library for scoring; Pillow needed only to create the synt
 ```bash
 cd experiments/muse-spark-eval-v01
 python3 make_synthetic_images.py                    # creates synthetic/*.png, NOT real BOSS art
+python3 make_blind_requests.py                     # writes private synthetic blind_requests.jsonl
 python3 make_control_predictions.py                # writes control_expected.jsonl + control_intentionally_bad.jsonl
 python3 evaluate.py --predictions control_expected.jsonl --require-all-pass
 python3 evaluate.py --predictions control_intentionally_bad.jsonl
@@ -39,7 +40,7 @@ Predictions are JSON Lines with exactly these fields per case:
 {"case_id":"V01","decision":"FAIL","route":"NONE","defects":["LOGO_POSITION"],"evidence_ids":["img"],"explanation":"Marker is at upper-right, not lower-right."}
 ```
 
-`decision`: one of `PASS`, `FAIL`, `HOLD`. `route`: `GITHUB_ACTIONS`, `WINDMILL`, `KAGGLE`, `RAILWAY`, or `NONE` for routing cases. `defects`: required defect codes for failures. `evidence_ids`: IDs **present in that case's provided evidence**; fabricated IDs are scored as failure. Use image bytes from `fixture` for the V cases; evidence metadata in each case is for evaluation, not a substitute for a model seeing the image. For a blinded model run, only send case `id`, category, prompt, authorized evidence and optional screenshot bytes—**not** the `reference` object.
+`decision`: one of `PASS`, `FAIL`, `HOLD`. `route`: `GITHUB_ACTIONS`, `WINDMILL`, `KAGGLE`, `RAILWAY`, or `NONE` for routing cases. `defects`: required defect codes for failures. `evidence_ids`: IDs **present in that case's provided evidence**; fabricated IDs are scored as failure. Use image bytes from `fixture` for the V cases; evidence metadata in each case is for evaluation, not a substitute for a model seeing the image. For a blinded model run, use the output of `make_blind_requests.py`: it includes the synthetic screenshot bytes as `image_data_url` and deliberately omits the `reference` object and descriptive image filenames. The model must not receive `cases.json`, a local path with a revealing label, or ground truth. Never send private customer or unpublished manuscript assets by substituting them into this exporter.
 
 ## Later live evaluation: authorization gate
 
