@@ -7,6 +7,8 @@ Source files:
 - tokens/tokens.css — named color, typography, spacing, and slide-size variables, subject to contract validation.
 - components.md — bounded semantic component registry; specification does not imply implementation.
 - validation/check_contract.py — structural contract checks and negative fixtures.
+- library-policy.md — third-party React/print tooling admission policy; candidates not installed.
+- cross-format-poc-v01.md — bounded 16:9 slide to 11 × 17 in print experiment, pending source selection.
 
 Read AGENTS.md for the two-bridge editorial workflow, four-candidate comparison, rendering, and approval boundaries. The project must validate source provenance, reference composition, editability, and actual target rendering separately.
 
