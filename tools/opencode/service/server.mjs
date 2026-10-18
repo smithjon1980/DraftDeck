@@ -3,6 +3,7 @@ import { createArtifacts } from './artifacts.mjs';
 import { createInternalTools } from './internal-tools.mjs';
 import { createGoogleAuth } from './google-auth.mjs';
 import { createSlideStudio } from './slide-studio.mjs';
+import { createAionuiBroker } from './aionui-broker.mjs';
 import http from 'node:http';
 import crypto from 'node:crypto';
 import { mkdir, copyFile } from 'node:fs/promises';
@@ -137,6 +138,7 @@ app.get('/health', async (_req, res) => {
   catch { res.status(503).json({ healthy: false }); }
 });
 app.use(google.router);
+app.use(createAionuiBroker({google,opencodeStatus:()=>call('opencode_status')}));
 app.get('/auth/basic', (req, res) => {
   if (!matches(req.headers.authorization, basic)) return res.status(401).set('WWW-Authenticate', 'Basic realm="BOSS OpenCode", charset="UTF-8"').end();
   res.redirect(303, '/tools/');
