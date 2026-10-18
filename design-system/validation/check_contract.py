@@ -49,6 +49,26 @@ def checks(contract, css, components):
     for item in contract.get("components", []):
         if not re.search(r"(?m)^\|\s*" + re.escape(item) + r"\s*\|", components):
             errors.append(f"Missing declared component: {item}")
+    gate = contract.get("visual_evidence_gate", {})
+    if gate.get("hard_hold_without_visual_evidence") is not True:
+        errors.append("Visual evidence must be a blocking review prerequisite")
+    if gate.get("human_approval_required") is not True:
+        errors.append("Human visual approval must remain mandatory")
+    expected_artifacts = {
+        "source_manifest", "approved_reference_or_explicit_hold",
+        "browser_render_capture", "side_by_side_comparison",
+        "difference_annotations", "native_text_and_art_layer_evidence",
+        "per_gate_review_states", "human_review_record"
+    }
+    if not expected_artifacts.issubset(set(gate.get("required_artifacts", []))):
+        errors.append("Visual evidence bundle is incomplete")
+    cad = gate.get("cad_review", {})
+    if not all(cad.get(k) is True for k in ("grid_required", "title_block_required", "zone_markers_required")):
+        errors.append("CAD visual framing checks missing")
+    if cad.get("standards_claim") != "ANSI_ISO_INFORMED_NOT_CERTIFIED":
+        errors.append("Cannot imply standards certification")
+    if gate.get("protocol") != "doctrine/visual-evidence-gate.md":
+        errors.append("Visual evidence protocol path missing")
     return errors
 
 def run():
@@ -67,6 +87,12 @@ def run():
     assert checks(changed, css, comps), "implied approval unexpectedly passed"
     assert checks(obj, css.replace("#E30074", "#B34700"), comps), "wrong brand accent unexpectedly passed"
     assert checks(obj, css, comps + "\n| Cargo | unsupported | n/a | n/a |\n"), "obsolete vocabulary unexpectedly passed"
+    changed = json.loads(json.dumps(obj))
+    changed["visual_evidence_gate"]["hard_hold_without_visual_evidence"] = False
+    assert checks(changed, css, comps), "non-blocking visual gate unexpectedly passed"
+    changed = json.loads(json.dumps(obj))
+    changed["visual_evidence_gate"]["cad_review"]["title_block_required"] = False
+    assert checks(changed, css, comps), "missing CAD title block rule unexpectedly passed"
     print("BOSS design contract structural checks PASS; visual QA NOT_ESTABLISHED; human approval PENDING")
 
 if __name__ == "__main__":

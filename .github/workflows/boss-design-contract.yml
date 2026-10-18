@@ -8,6 +8,8 @@ on:
       - 'design-system/**'
       - 'doctrine/composition-standard.md'
       - 'doctrine/release-qa.md'
+      - 'doctrine/visual-evidence-gate.md'
+      - 'skills/draftdeck/SKILL.md'
       - '.github/workflows/boss-design-contract.yml'
   workflow_dispatch:
 permissions:

@@ -5,14 +5,14 @@ description: Build BOSS instructional slides as native layered HTML/CSS with ind
 
 # DraftDeck — current instructional visual production
 
-Read AGENTS.md, design-system/boss-design-contract.json, doctrine/production-contract.md, doctrine/reference-render-protocol.md and doctrine/release-qa.md before generation. This candidate replaces the assumption that a historical demonstration's palette or metaphor is automatically approved for new BOSS content.
+Read AGENTS.md, design-system/boss-design-contract.json, doctrine/production-contract.md, doctrine/reference-render-protocol.md, doctrine/visual-evidence-gate.md and doctrine/release-qa.md before generation. This candidate replaces the assumption that a historical demonstration's palette or metaphor is automatically approved for new BOSS content.
 
 ## Production
 1. Visually inspect reference and original source art, including page-level evidence; record missing sources as UNKNOWN.
 2. Apply the two bridges: source to reimagined teaching story, then story to current Bioscillate design profile.
 3. Plan text, artwork, annotations, geometry, metadata, and learner reflection as separate layers.
 4. Implement selected concepts in React/Tailwind where required, emitting 1920x1080 static HTML/CSS slides with native editable editorial text. Never flatten a production slide to a bitmap or SVG text.
-5. Run structural checks and inspect real browser output. Neither level proves Canva or other adapter fidelity.
+5. Run structural checks and inspect actual browser output. For each candidate attach its reference (or explicit unapproved-reference HOLD), actual capture, side-by-side visual comparison, annotated differences, CAD grid/title-plate inspection where applicable, and proof of native text/art layers. No visual evidence bundle = HOLD. Neither structural checks nor screenshots prove Canva or other adapter fidelity.
 6. Use the destination's currently supported import method. Verify layer objects, rendered composition, and hands-on editability independently.
 7. Preserve generation and test evidence and await explicit human approval before release.
 
