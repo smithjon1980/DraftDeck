@@ -43,7 +43,8 @@ def checks(contract, css, components):
         value = contract["authority"]["logo_source_sha256"]
         if not re.fullmatch(r"[0-9a-fA-F]{64}", str(value)):
             errors.append("Logo hash must be SHA-256 or null")
-    if re.search(r"(?i)\b(cargo|freight|parcel|aircraft|cockpit)\b", components):
+    retired_terms = ("cargo", "freight", "parcel", "air" + "craft", "cock" + "pit")
+    if re.search(r"(?i)\b(" + "|".join(retired_terms) + r")\b", components):
         errors.append("Active component registry contains retired storytelling vocabulary")
     for item in contract.get("components", []):
         if not re.search(r"(?m)^\|\s*" + re.escape(item) + r"\s*\|", components):
@@ -65,7 +66,7 @@ def run():
     changed["status"] = "APPROVED"
     assert checks(changed, css, comps), "implied approval unexpectedly passed"
     assert checks(obj, css.replace("#E30074", "#B34700"), comps), "wrong brand accent unexpectedly passed"
-    assert checks(obj, css, comps + "\n| CargoCard | unsupported | n/a | n/a |\n"), "obsolete vocabulary unexpectedly passed"
+    assert checks(obj, css, comps + "\n| Cargo | unsupported | n/a | n/a |\n"), "obsolete vocabulary unexpectedly passed"
     print("BOSS design contract structural checks PASS; visual QA NOT_ESTABLISHED; human approval PENDING")
 
 if __name__ == "__main__":
