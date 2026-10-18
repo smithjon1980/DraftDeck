@@ -20,6 +20,9 @@ Scope: current BOSS Episode 01, Day Zero slides and corresponding instructional 
 6. Implement the candidate as React/Tailwind where specified; emit discrete static HTML/CSS with editable native text. Do not make SVG or a flattened image the editorial layer.
 7. Visually inspect actual render and source/copy/geometry correspondence; test adapter import separately.
 
+## Episode-length manuscript and dense editorial companion
+For new episodes, use `doctrine/episode-production-protocol-v01.md` (review candidate) and `design-system/episode-manifest-template-v01.json`. Preserve the approved manuscript word-for-word and in sequence across the **full reading companion**, with paragraph IDs, hash, and an independent supplemental-annotation layer. Readability controls page breaks: add pages/slides rather than shrink type or omit copy. 11 × 17 print and 1920 × 1080 reading slides are independently composed and tested. NotebookLM may be used for source exploration, not as a required slide generator. This proposed protocol does not establish that dense slides or print pages have already passed visual review.
+
 ## Candidate comparison and approval
 - Produce four distinct A–D arrangements only when requested for an approved comparison stage. Do not change facts, exact copy, brand identity, or evidence status between variants.
 - Score actual renders on story fidelity, copy, logo, geometry, editability, accessibility and clarity using PASS / FAIL / NOT TESTED with evidence.
