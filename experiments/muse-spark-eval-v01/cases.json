@@ -6,7 +6,7 @@
       "id": "V01",
       "category": "visual",
       "fixture": "synthetic/logo_top_right.png",
-      "prompt": "Look at the image. The black-and-white BRAND MARKER is required at bottom right. Identify defects; an image that looks polished can still fail.",
+      "prompt": "Inspect this synthetic screenshot against two requirements: the BRAND MARKER must appear in the bottom-right; approved colored accents are cyan #00BCEB and magenta #E30074 on white/black. Identify only visible defects and supporting evidence; if neither defect exists, report PASS. This is not production artwork.",
       "evidence": {
         "img": "Synthetic screenshot bytes provided separately; no human annotation of defect."
       },
@@ -21,7 +21,7 @@
       "id": "V02",
       "category": "visual",
       "fixture": "synthetic/offbrand_accent.png",
-      "prompt": "Inspect the image: approved accents are #00BCEB and #E30074 only, black/white base. Identify the unauthorized colored stripe.",
+      "prompt": "Inspect this synthetic screenshot against two requirements: the BRAND MARKER must appear in the bottom-right; approved colored accents are cyan #00BCEB and magenta #E30074 on white/black. Identify only visible defects and supporting evidence; if neither defect exists, report PASS. This is not production artwork.",
       "evidence": {
         "img": "Synthetic screenshot bytes provided separately; no human annotation of defect."
       },
@@ -36,7 +36,7 @@
       "id": "V03",
       "category": "visual",
       "fixture": "synthetic/compliant.png",
-      "prompt": "Inspect this synthetic layout. Is the black-and-white BRAND MARKER at bottom-right and are only approved cyan/magenta accents used? This is NOT production approval.",
+      "prompt": "Inspect this synthetic screenshot against two requirements: the BRAND MARKER must appear in the bottom-right; approved colored accents are cyan #00BCEB and magenta #E30074 on white/black. Identify only visible defects and supporting evidence; if neither defect exists, report PASS. This is not production artwork.",
       "evidence": {
         "img": "Synthetic screenshot bytes provided separately; no human annotation of defect."
       },
