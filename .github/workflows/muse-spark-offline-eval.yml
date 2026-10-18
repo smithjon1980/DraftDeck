@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Run scorer regression tests (no models, no provider requests)
-        run: python3 -m unittest discover -s experiments/muse-spark-eval-v01 -p test_evaluate.py -v
+        run: python3 -m unittest discover -s experiments/muse-spark-eval-v01 -p 'test_*.py' -v
       - name: Evaluate expected-control and intentional-error fixtures
         working-directory: experiments/muse-spark-eval-v01
         run: |
