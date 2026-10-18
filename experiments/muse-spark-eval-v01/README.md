@@ -61,6 +61,16 @@ Relevant official references:
 - Baseten workspace API key permissions: https://www.baseten.co/resources/changelog/add-workspace-api-keys-for-more-granular-permissions/
 - Baseten read-only usage cost endpoint (not used by preflight): https://www.baseten.co/resources/changelog/model-api-costs/
 
+## Read-only authentication verification after GitHub secret setup
+
+The original exposed Baseten key was reported revoked by the account owner, and GitHub Actions separately confirmed `BASETEN_API_KEY` **exists** without sending an API request. Those checks do not establish whether the replacement key is valid with Baseten.
+
+After approving and merging the separate catalog-check PR, use **GitHub → DraftDeck → Actions → BOSS Baseten catalog authentication (read-only) → Run workflow**, select `main`, check **Authorize one GET to Baseten model catalog; no model inference**, and run.
+
+The check calls only `GET https://inference.baseten.co/v1/models` with an Authorization header read from the Actions secret. This authenticated catalog discovery endpoint is documented in Baseten's own usage tutorial (https://www.baseten.co/blog/how-to-run-any-open-model-inside-deepseek-harness/). It does not POST to `chat/completions`, produce tokens, deploy models or modify workspace configuration. It emits only a small status summary (model count and whether a Muse Spark identifier was listed), never key material or raw provider response. `PASS` means that key was accepted to read the catalog, **not** that an inference call was authorized or that a provider-side cost limit exists.
+
+A missing secret, 401, 403, unexpected catalog structure, connection error or redirect returns `HOLD` and fails the job. This check requires an explicit manual checkbox, runs only on the `main` branch and does not run for pull requests. Paid inference remains `HOLD` until the approved provider-side spending policy and separate billing authorization are established.
+
 ## Default-off hosted adapter: Baseten Muse Spark Open
 
 The repository includes `run_baseten.py` to prepare or execute a tightly controlled **synthetic-only** inference run against the official Baseten OpenAI-compatible endpoint:
