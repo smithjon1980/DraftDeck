@@ -1,0 +1,42 @@
+name: BOSS Baseten catalog authentication (read-only)
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_catalog_get:
+        description: 'Authorize one GET to Baseten model catalog; no model inference'
+        required: true
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: baseten-catalog-auth
+  cancel-in-progress: false
+jobs:
+  catalog-auth:
+    name: Read-only API catalog check
+    if: ${{ github.ref == 'refs/heads/main' && inputs.confirm_catalog_get == true }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit-test safe catalog checker
+        run: python -m unittest discover -s experiments/muse-spark-eval-v01 -p test_check_baseten_catalog.py -v
+      - name: Read-only catalog authentication
+        shell: bash
+        env:
+          BASETEN_API_KEY: ${{ secrets.BASETEN_API_KEY }}
+        run: |
+          set -euo pipefail
+          python experiments/muse-spark-eval-v01/check_baseten_catalog.py --check
+      - name: Explicit limits
+        if: always()
+        run: |
+          echo "This workflow sends only one read-only GET /v1/models."
+          echo "No inference requested; no secret values logged."
+          echo "An accepted key does not verify provider billing limits or authorize paid model requests."
