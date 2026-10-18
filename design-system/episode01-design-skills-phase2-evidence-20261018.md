@@ -1,6 +1,6 @@
 # Episode 01 — Design skill guidance, controlled Phase 2 comparison
 
-**Status:** PRIVATE EXPERIMENT EXECUTED / BOTH PATTERNS CONDITIONALLY ENDORSED / PAGE-LEVEL VISUAL APPROVAL PENDING.
+**Status:** PATTERNS A/B CONDITIONALLY VALID / INITIAL BRAND PALETTE FAILED / CORRECTIVE CANDIDATES PASS PRELIMINARY QA / HUMAN APPROVAL PENDING.
 Date: 2026-10-18. No unpublished manuscript, source art, private manifest or PDFs belong in this public repository.
 
 ## Scope and provenance
@@ -44,6 +44,18 @@ The owner reviewed the A/B comparison and confirmed: **both A and B work, depend
 **Hybrid / other:** The art/story relationship may require a third arrangement; do not enforce a binary template family. The same overall issue should vary paragraph density and image prominence *per source beat* rather than alternate layouts mechanically.
 
 **Selection procedure for each page:** (1) identify the exact candidate/approved script passage and its teaching assertion; (2) identify the visual evidence or engineering relationship necessary to understand it; (3) assign narrative-led, art-led or hybrid based on which content must dominate; (4) compose without imprisoning narration in boxes; (5) verify no omitted, reordered or manufactured spoken copy; (6) render and inspect actual readability, art integrity and print geometry; (7) obtain separate human page/issue approval. A beautiful page that truncates a critical mechanism is a failed teaching page.
+
+## Brand-identity regression: user review and corrective proof (2026-10-18)
+
+**Human finding:** the original A/B variants were compositionally useful, but the BOSS color palette was **not followed**. The original canonical brand logo was absent, the cyan `#00BCEB` and magenta `#E30074` accents were absent, and the otherwise useful drawing retained a blue-gray tint. These are **BRAND FAILURES**, not aesthetic alternatives. Preserve earlier layouts as learning evidence; **do not count either previous A/B screenshot/PDF as visually approved**. The owner's story-dependent acceptance of composition patterns A and B remains valid and separate.
+
+**Private rebuild completed:** four corrected pages (A1, A2, B1, B2) were regenerated from the same exact eight source paragraphs. The original supplied logo binary was independently hash-matched (`95f56729fe279a07b151ba5169a764a0aa387a1fac8cf283424ea783f950b146`); only its surrounding blank area was cropped for placement. Source illustration bytes were retained, and a non-destructive grayscale/contrast CSS filter neutralized the previously off-brand art tint. White/black ground and typography, original cyan/magenta logo and deliberately restrained brand rules/markers replaced the off-brand colors. Spacing was adjusted to remove an original-logo/figure collision and an A2 figure/caption overlap. The approved narrative text was **not** silently rewritten; it is still `SCRIPT_CANDIDATE`.
+
+**Measured in real Chromium and extractable PDF** (private): two pages per layout, each 1224 × 792 pt, four successful source-paragraph fidelity checks (one per page), four visible loaded logo instances, two independent image objects per page, branded accents visible, no detected logo/figure or caption/figure collisions, no page overflow. A/B now pass the **preliminary color gate only**; the owner has **not** yet visually approved the corrected pages or authorized publication.
+
+**New regression guard:** `tools/visual-poc/check_brand_proof.py` verifies the original asset's exact SHA-256 and measures approved cyan/magenta accents plus suspicious nonbrand chroma from real rendered page PNGs. It requires Pillow/NumPy on the local runner and produces a report. A baseline sample with blue-tinted art failed; all four corrected private samples passed. This is not comprehensive detection of source art substitutions, a CSS audit, accessibility evaluation, CMYK proof, or human approval. Full checks still require an actual render comparison and printer validation.
+
+**Privacy:** corrected candidate artwork, logo bytes, script, PDFs, and screenshots remain private outside public DraftDeck commits. No contractor, CI job or external installer receives unreleased content through this change.
 
 ## Reproducibility without releasing private work
 
