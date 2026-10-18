@@ -8,7 +8,7 @@
       "fixture": "synthetic/logo_top_right.png",
       "prompt": "Look at the image. The black-and-white BRAND MARKER is required at bottom right. Identify defects; an image that looks polished can still fail.",
       "evidence": {
-        "img": "Synthetic browser image V01; brand marker upper right"
+        "img": "Synthetic screenshot bytes provided separately; no human annotation of defect."
       },
       "reference": {
         "decision": "FAIL",
@@ -23,7 +23,7 @@
       "fixture": "synthetic/offbrand_accent.png",
       "prompt": "Inspect the image: approved accents are #00BCEB and #E30074 only, black/white base. Identify the unauthorized colored stripe.",
       "evidence": {
-        "img": "Synthetic browser image V02; nonbrand orange stripe"
+        "img": "Synthetic screenshot bytes provided separately; no human annotation of defect."
       },
       "reference": {
         "decision": "FAIL",
@@ -38,7 +38,7 @@
       "fixture": "synthetic/compliant.png",
       "prompt": "Inspect this synthetic layout. Is the black-and-white BRAND MARKER at bottom-right and are only approved cyan/magenta accents used? This is NOT production approval.",
       "evidence": {
-        "img": "Synthetic browser image V03; marker lower right, canonical accents"
+        "img": "Synthetic screenshot bytes provided separately; no human annotation of defect."
       },
       "reference": {
         "decision": "PASS",
