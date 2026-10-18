@@ -9,6 +9,8 @@ Source files:
 - validation/check_contract.py — structural contract checks and negative fixtures.
 - library-policy.md — third-party React/print tooling admission policy; candidates not installed.
 - cross-format-poc-v01.md — bounded 16:9 slide to 11 × 17 in print experiment, pending source selection.
+- episode-manifest-template-v01.json — per-episode source/manuscript/page coverage and review-state template.
+- ../doctrine/episode-production-protocol-v01.md — proposed repeatable art-first editorial production gates with verbatim reading tracks.
 
 Read AGENTS.md for the two-bridge editorial workflow, four-candidate comparison, rendering, and approval boundaries. The project must validate source provenance, reference composition, editability, and actual target rendering separately.
 
