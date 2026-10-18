@@ -1,0 +1,26 @@
+name: BOSS Day Zero 60-slide structure gate
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'experiments/dayzero-60/**'
+      - '.github/workflows/dayzero-60-structure.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  no-model-structure-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test synthetic 60-slide and negative cases
+        run: python -m unittest discover -s experiments/dayzero-60 -p 'test_*.py' -v
+      - name: Explicit source and cost limits
+        run: |
+          echo "Structure and synthetic private-source tests only."
+          echo "No unpublished manuscripts loaded; no Muse inference; no Baseten API key accessed."
+          echo "Layout fidelity, brand placement, recording parity, slide editability and release remain separately gated."
