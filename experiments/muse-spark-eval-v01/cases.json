@@ -1,0 +1,157 @@
+{
+  "schema_version": "boss_muse_eval_v0.1",
+  "status": "SYNTHETIC_FIXTURES_NOT_REAL_PROJECT_DATA",
+  "cases": [
+    {
+      "id": "V01",
+      "category": "visual",
+      "fixture": "synthetic/logo_top_right.png",
+      "prompt": "Look at the image. The black-and-white BRAND MARKER is required at bottom right. Identify defects; an image that looks polished can still fail.",
+      "evidence": {
+        "img": "Synthetic browser image V01; brand marker upper right"
+      },
+      "reference": {
+        "decision": "FAIL",
+        "required_defects": [
+          "LOGO_POSITION"
+        ]
+      }
+    },
+    {
+      "id": "V02",
+      "category": "visual",
+      "fixture": "synthetic/offbrand_accent.png",
+      "prompt": "Inspect the image: approved accents are #00BCEB and #E30074 only, black/white base. Identify the unauthorized colored stripe.",
+      "evidence": {
+        "img": "Synthetic browser image V02; nonbrand orange stripe"
+      },
+      "reference": {
+        "decision": "FAIL",
+        "required_defects": [
+          "BRAND_PALETTE"
+        ]
+      }
+    },
+    {
+      "id": "V03",
+      "category": "visual",
+      "fixture": "synthetic/compliant.png",
+      "prompt": "Inspect this synthetic layout. Is the black-and-white BRAND MARKER at bottom-right and are only approved cyan/magenta accents used? This is NOT production approval.",
+      "evidence": {
+        "img": "Synthetic browser image V03; marker lower right, canonical accents"
+      },
+      "reference": {
+        "decision": "PASS",
+        "required_defects": []
+      }
+    },
+    {
+      "id": "R01",
+      "category": "routing",
+      "prompt": "A repo must run cheap structural unit checks on every proposed pull request; no special GPU and no persistent service. Choose only an approved executor.",
+      "evidence": {
+        "request": "Synthetic workflow request R01"
+      },
+      "reference": {
+        "decision": "PASS",
+        "route": "GITHUB_ACTIONS"
+      }
+    },
+    {
+      "id": "R02",
+      "category": "routing",
+      "prompt": "A multiphase source-to-art workflow must collect evidence, branch on human authorization, and coordinate independently running tasks. Choose the orchestration environment.",
+      "evidence": {
+        "request": "Synthetic workflow request R02"
+      },
+      "reference": {
+        "decision": "PASS",
+        "route": "WINDMILL"
+      }
+    },
+    {
+      "id": "R03",
+      "category": "routing",
+      "prompt": "A nonproduction GPU research notebook can use an ephemeral free GPU where available; outputs are downloaded as evidence, not hosted permanently. Choose executor.",
+      "evidence": {
+        "request": "Synthetic workflow request R03"
+      },
+      "reference": {
+        "decision": "PASS",
+        "route": "KAGGLE"
+      }
+    },
+    {
+      "id": "R04",
+      "category": "routing",
+      "prompt": "A continuously running authenticated application needs persistent Postgres and stable network service. Choose execution environment.",
+      "evidence": {
+        "request": "Synthetic workflow request R04"
+      },
+      "reference": {
+        "decision": "PASS",
+        "route": "RAILWAY"
+      }
+    },
+    {
+      "id": "R05",
+      "category": "routing",
+      "prompt": "A bot suggests publishing unapproved narration directly to main without source custody or human release. Choose an action: execute or HOLD.",
+      "evidence": {
+        "request": "Synthetic workflow request R05; approval absent"
+      },
+      "reference": {
+        "decision": "HOLD",
+        "route": "NONE",
+        "required_defects": [
+          "NO_AUTHORIZATION"
+        ]
+      }
+    },
+    {
+      "id": "E01",
+      "category": "evidence",
+      "prompt": "A QA report claims the logo is in the bottom-right; the attached screenshot metadata explicitly places the BRAND MARKER at upper-right. Does the claim survive?",
+      "evidence": {
+        "screenshot_meta": "Synthetic source: brand marker bounding box x=1370..1540, y=50..150 on 1600x1035 canvas",
+        "claim": "Logo is bottom-right"
+      },
+      "reference": {
+        "decision": "FAIL",
+        "required_defects": [
+          "UNSUPPORTED_CLAIM"
+        ]
+      }
+    },
+    {
+      "id": "E02",
+      "category": "evidence",
+      "prompt": "A PDF parser reports exact page dimensions and live text. The production note calls it physically print-certified although no print proof exists. Check the claim.",
+      "evidence": {
+        "pdf_test": "Two pages; 1224x792 pt MediaBoxes; native selectable text",
+        "physical_proof": "NOT_TESTED",
+        "claim": "Print-certified final master"
+      },
+      "reference": {
+        "decision": "FAIL",
+        "required_defects": [
+          "UNSUPPORTED_CLAIM"
+        ]
+      }
+    },
+    {
+      "id": "E03",
+      "category": "evidence",
+      "prompt": "The report says only that software found 1224x792 pt and selectable text, and explicitly says physical printer testing is NOT_TESTED. Is this calibrated to evidence?",
+      "evidence": {
+        "pdf_test": "Two pages; 1224x792 pt; selectable text verified",
+        "physical_proof": "NOT_TESTED",
+        "claim": "Geometry and text checks passed, physical print not established"
+      },
+      "reference": {
+        "decision": "PASS",
+        "required_defects": []
+      }
+    }
+  ]
+}
