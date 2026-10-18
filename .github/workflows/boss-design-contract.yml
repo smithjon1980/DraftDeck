@@ -1,0 +1,27 @@
+name: BOSS design contract (candidate)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'AGENTS.md'
+      - 'README.md'
+      - 'design-system/**'
+      - 'doctrine/composition-standard.md'
+      - 'doctrine/release-qa.md'
+      - '.github/workflows/boss-design-contract.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  structural:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate design contract and negative fixtures
+        run: python3 design-system/validation/check_contract.py
+      - name: Report limits
+        run: echo "Only structural parity checked. Visual/adapters/human authorization remain unverified."

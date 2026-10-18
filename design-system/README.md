@@ -1,11 +1,15 @@
-# Design System
+# BOSS / DraftDeck design system
 
-Roadmap home of reusable DraftDeck design assets:
+CURRENT CANDIDATE. This directory is the entry point for the contemporary Bioscillate visual contract for Episode 01, Day Zero, and related instructional web surfaces.
 
-- `tokens/` — palette, stroke hierarchy, typography (see `doctrine/composition-standard.md`).
-- `frames/` — drafting frames, margin rails, title blocks.
-- `hatches/` — state textures (DEFAULT / ROUTED / HELD / BLOCKED / VERIFIED).
-- `icons/` — semantic icon selections.
-- `components/` — registered native components (Shipping & Receiving Control Desk, Verification Tag, D.A.T.A. Connector, Claim Comparator, Consignee Release Latch).
+Source files:
+- boss-design-contract.json — bounded machine-readable rules, status, known unknowns, and separate output profiles.
+- tokens/tokens.css — named color, typography, spacing, and slide-size variables, subject to contract validation.
+- components.md — bounded semantic component registry; specification does not imply implementation.
+- validation/check_contract.py — structural contract checks and negative fixtures.
 
-Custom components are registered here, not improvised per build. Component naming and geometry must remain logistics-native and must not reintroduce deprecated travel/aviation metaphors.
+Read AGENTS.md for the two-bridge editorial workflow, four-candidate comparison, rendering, and approval boundaries. The project must validate source provenance, reference composition, editability, and actual target rendering separately.
+
+Do not silently import older palettes, themes, or metaphor-based components from prior work. Older experimental branches and examples remain available as history, not as approval of their visual decisions. This new contract is a candidate until the human reviewer selects a representative visual master and approves its authority.
+
+A slide profile is not a web breakpoint. A print page is not a 16:9 slide. Do not assume Canva, Figma, or another target is editable or visually faithful without a current adapter-specific test.
