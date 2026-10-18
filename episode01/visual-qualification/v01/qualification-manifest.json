@@ -1,0 +1,49 @@
+{
+  "status": "VISUAL_CANDIDATE_PENDING_HUMAN_APPROVAL",
+  "source_commit": "8eb33998c31d0d173388fdfa32799a2eb988706c",
+  "logo": {
+    "repo_path": "episode01/assets/brand/bioscillate-original-supplied.jpg",
+    "sha256": "95f56729fe279a07b151ba5169a764a0aa387a1fac8cf283424ea783f950b146",
+    "dimensions_px": [
+      1536,
+      857
+    ],
+    "mime": "image/jpeg",
+    "identity": "verified original supplied JPEG, not an editable vector"
+  },
+  "slides": [
+    "01",
+    "02",
+    "06"
+  ],
+  "source_copy": "episode01/reference/slide-copy.candidate.json",
+  "checks": {
+    "browser_dom": "PASS",
+    "slide_canvas_1920x1080": "PASS",
+    "pdf_three_selectable_text_pages": "PASS",
+    "no_svg_text": "PASS",
+    "logo_loaded": "PASS",
+    "outer_slide_overflow": "PASS",
+    "canva_import": "PASS",
+    "canva_page_size_1920x1080": "PASS",
+    "canva_text_elements": 72,
+    "canva_image_elements": 3,
+    "canva_temporary_text_edit_discarded": "PASS",
+    "canva_individual_image_editability": "NOT_TESTED",
+    "canva_visual_fidelity_against_browser": "NOT_ESTABLISHED",
+    "human_approved_visual_reference": "NOT_ESTABLISHED",
+    "human_release": "PENDING"
+  },
+  "canva": {
+    "design_id": "DAHYXEwViiA",
+    "edit_url": "https://www.canva.com/d/IeOVTDsYtwdhKP0",
+    "view_url": "https://www.canva.com/d/KZr6m-DESri_qB_"
+  },
+  "limitations": [
+    "No approved governing reference render recovered for Slides 01, 02, 06",
+    "Slide 06 participants, message labels and decision gates remain UNKNOWN",
+    "Reflective questions are explicit placeholders; no fabricated questions or learner responses",
+    "Canva import objects are editable, but hands-on image manipulation and source-to-Canva visual comparison require further examination",
+    "No merge/release authorization implied"
+  ]
+}
