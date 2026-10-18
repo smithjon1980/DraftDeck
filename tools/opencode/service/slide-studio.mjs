@@ -5,7 +5,10 @@ import {randomUUID,createHash} from 'node:crypto';
 import {z} from 'zod';
 const text=n=>z.string().max(n);
 const source=z.object({id:z.string().uuid(),name:text(160),reference:text(1000),excerpt:text(60000)}).strict();
-const slide=z.object({id:z.string().uuid(),title:text(140),lead:text(400),body:text(1800),question:text(250),evidence:text(1000),sourceIds:z.array(z.string().uuid()).max(20),assetId:text(120),variant:z.enum(['A','B','C','D'])}).strict();
+const coordinate=z.number().finite().min(0);
+const callout=z.object({id:text(64),title:text(80),text:text(180),x:coordinate.max(1650),y:coordinate.max(880),side:z.enum(['left','right']),bendX:coordinate.max(1920),bendY:coordinate.max(1080),targetX:coordinate.max(1920),targetY:coordinate.max(1080)}).strict();
+const assembly=z.object({artworkId:z.literal('connector-v1'),callouts:z.array(callout).min(1).max(12).refine(calls=>new Set(calls.map(c=>c.id)).size===calls.length)}).strict();
+const slide=z.object({id:z.string().uuid(),title:text(140),lead:text(400),body:text(1800),question:text(250),evidence:text(1000),sourceIds:z.array(z.string().uuid()).max(20),assetId:text(120),variant:z.enum(['A','B','C','D']),assembly:assembly.optional()}).strict();
 const schema=z.object({title:text(160).min(1),audience:text(300),bridge1:text(3000),bridge2:text(3000),sources:z.array(source).max(20),slides:z.array(slide).min(1).max(12)}).strict();
 const hash=d=>createHash('sha256').update(JSON.stringify(d)).digest('hex');
 function validate(d){const v=schema.parse(d);const ids=new Set(v.sources.map(s=>s.id)); if(ids.size!==v.sources.length||new Set(v.slides.map(s=>s.id)).size!==v.slides.length)throw Error('Duplicate IDs'); if(v.slides.some(s=>s.sourceIds.some(id=>!ids.has(id))))throw Error('Unknown source reference');return v;}
@@ -19,6 +22,7 @@ export async function createSlideStudio({directory,root}){
  router.use((_req,res,next)=>{res.set('Cache-Control','private, no-store');res.set('X-Content-Type-Options','nosniff');next();});
  router.use('/api',express.json({limit:'2mb'}));
  const handle=fn=>(req,res,next)=>serialized(()=>fn(req,res)).catch(next);
+ router.get('/api/templates/connector',handle(async(_req,res)=>res.json(JSON.parse(await readFile(path.join(root,'studio/connector.seed.json'),'utf8')))));
  router.get('/api/projects',handle(async(_req,res)=>{const names=(await readdir(directory)).filter(n=>/^[0-9a-f-]{36}\.json$/.test(n));const rows=await Promise.all(names.map(async n=>{const d=await load(n.slice(0,-5));return {id:d.id,title:d.content.title,revision:d.revision,updatedAt:d.updatedAt,review:d.review};}));res.json(rows.sort((a,b)=>b.updatedAt.localeCompare(a.updatedAt)));}));
  router.get('/api/projects/:id',handle(async(req,res)=>res.json(await load(req.params.id))));
  router.post('/api/projects',handle(async(req,res)=>{if((await readdir(directory)).filter(n=>n.endsWith('.json')).length>=100)return res.status(409).json({error:'Project limit reached. Export a backup and contact the administrator.'});const content=validate(req.body.content);const now=new Date().toISOString();res.status(201).json(await persist({id:randomUUID(),revision:1,updatedAt:now,content,contentHash:hash(content),review:null}));}));

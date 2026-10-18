@@ -1,0 +1,91 @@
+{
+  "content": {
+    "title": "BOSS / Connector / approved concept reconstruction",
+    "audience": "BOSS practitioners · interface constraints",
+    "bridge1": "Reference: Enterprise_AI_Operations_Manual (1).pdf, page 12. Preserve exploded keyed connector, mating alignment, cutaway conductors and four explanatory callouts. Rephrase reference Direct/Anchor/Throttle/Audit labels as Define/Anchor/Bound/Record, as selected in the approved concept. Do not promote the historical D.A.T.A. acronym to current doctrine.",
+    "bridge2": "User approved the complete connector concept on 2026-10-17. Rebuild it as separate raster mechanical artwork, original bioscillate logo, native editable HTML headings/labels/reflection, and CSS callout leaders/targets on a white 1920 × 1080 canvas. Preserve black hairlines and cyan/magenta/black identity. Artwork is illustrative; generated geometry is not dimensional CAD or a standards certification. Editable reconstruction/export verification is separate from concept approval.",
+    "sources": [
+      {
+        "id": "7265cfe9-71cc-4738-83e4-d365e41015d1",
+        "name": "NotebookLM connector reference",
+        "reference": "Enterprise_AI_Operations_Manual (1).pdf · page 12 · visually inspected",
+        "excerpt": "Reference shows exploded male/female cable connector with keyed mating interface and labels Direct (objective/format/security), Anchor (model version state), Throttle (cadence and budget), Audit (append-only telemetry logging). This is visual inspiration; wording and mechanical correctness are not automatically verified."
+      },
+      {
+        "id": "7f0b8fab-eade-4e63-88f2-40d8787c6c8a",
+        "name": "Approved connector concept",
+        "reference": "ChatGPT conversation · 2026-10-17 · “perfect this fix our draft deck problems”",
+        "excerpt": "Selected concept headline: Constraints make an interface executable. Four callouts: 01 Define — Objective, format, security; 02 Anchor — Model and version; 03 Bound — Cadence and budget; 04 Record — Execution trace. Reflection: Which constraint must be explicit before these parts can connect? Scope: Keying illustrates fit. Software controls still require implementation and testing. Approval applies to the concept, not proof of the later editable reconstruction."
+      }
+    ],
+    "slides": [
+      {
+        "id": "92d1650c-afca-4ba0-bc68-49c1a8882e38",
+        "title": "Constraints make\nan interface executable.",
+        "lead": "",
+        "body": "01 Define — Objective, format, security\n02 Anchor — Model and version\n03 Bound — Cadence and budget\n04 Record — Execution trace",
+        "question": "Which constraint must be explicit before these parts can connect?",
+        "evidence": "Keying illustrates fit. Software controls still require implementation and testing.",
+        "sourceIds": [
+          "7265cfe9-71cc-4738-83e4-d365e41015d1",
+          "7f0b8fab-eade-4e63-88f2-40d8787c6c8a"
+        ],
+        "assetId": "",
+        "variant": "A",
+        "assembly": {
+          "artworkId": "connector-v1",
+          "callouts": [
+            {
+              "id": "define",
+              "title": "01 Define",
+              "text": "Objective, format, security",
+              "x": 114,
+              "y": 354,
+              "side": "left",
+              "bendX": 782,
+              "bendY": 384,
+              "targetX": 889,
+              "targetY": 515
+            },
+            {
+              "id": "anchor",
+              "title": "02 Anchor",
+              "text": "Model and version",
+              "x": 114,
+              "y": 484,
+              "side": "left",
+              "bendX": 598,
+              "bendY": 514,
+              "targetX": 640,
+              "targetY": 544
+            },
+            {
+              "id": "bound",
+              "title": "03 Bound",
+              "text": "Cadence and budget",
+              "x": 1544,
+              "y": 646,
+              "side": "right",
+              "bendX": 1365,
+              "bendY": 676,
+              "targetX": 1288,
+              "targetY": 625
+            },
+            {
+              "id": "record",
+              "title": "04 Record",
+              "text": "Execution trace",
+              "x": 1544,
+              "y": 809,
+              "side": "right",
+              "bendX": 1245,
+              "bendY": 839,
+              "targetX": 1132,
+              "targetY": 758
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
