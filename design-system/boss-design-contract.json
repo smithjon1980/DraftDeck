@@ -73,5 +73,27 @@
     "PauseAndConsider",
     "ReleaseStatus"
   ],
-  "checkpoint": "Hold approval until validated source asset, rendered visual sample, and human decision are recorded"
+  "checkpoint": "Hold approval until validated source asset, rendered visual sample, and human decision are recorded",
+  "visual_evidence_gate": {
+    "status": "PROPOSED",
+    "protocol": "doctrine/visual-evidence-gate.md",
+    "hard_hold_without_visual_evidence": true,
+    "human_approval_required": true,
+    "required_artifacts": [
+      "source_manifest",
+      "approved_reference_or_explicit_hold",
+      "browser_render_capture",
+      "side_by_side_comparison",
+      "difference_annotations",
+      "native_text_and_art_layer_evidence",
+      "per_gate_review_states",
+      "human_review_record"
+    ],
+    "cad_review": {
+      "grid_required": true,
+      "title_block_required": true,
+      "zone_markers_required": true,
+      "standards_claim": "ANSI_ISO_INFORMED_NOT_CERTIFIED"
+    }
+  }
 }
