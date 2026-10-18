@@ -2,6 +2,10 @@
 
 Scope: current BOSS Episode 01, Day Zero slides and corresponding instructional interface output. This file identifies project constraints; it does not override human approval. The active candidate source is design-system/boss-design-contract.json and the design-system/ directory. Historical demonstration files retain historical scope.
 
+## Episode 01 print-specific candidate (2026-10-18)
+
+For the **proposed** 17 × 11 inch landscape narration-first Episode 01 magazine, review `episode01/EP01_NARRATION_FIRST_PRINT_PARITY_CANDIDATE.md` **in addition to** these operating instructions. It defines a separate print profile and candidate-script-to-approved-exact-copy boundary. It does not revise the 1920 × 1080 slide profile, qualify prior proofs, or authorize release. Do not promote the new manuscript to verified recorded transcript before an audio comparison, or imply that a proposed 48-page issue is finished.
+
 ## Identity and visuals
 - Brand: Bioscillate Operating System by Seven. Original canonical logo artwork only. The logo source SHA is not yet established; never invent or substitute it.
 - White (#FFFFFF) canvas, black editorial text, canonical cyan (#00BCEB) and magenta (#E30074) brand colors. No borrowed orange core accent or substituted logo profile for current work.
