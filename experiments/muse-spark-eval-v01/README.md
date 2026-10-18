@@ -44,7 +44,7 @@ Predictions are JSON Lines with exactly these fields per case:
 
 ## GitHub → Baseten connection preparation (zero-charge gate)
 
-The manual Actions preflight is in `.github/workflows/baseten-connection-preflight.yml`. On PRs, it checks test-fixture generation, blinded JSONL and a three-case dry-run **without injecting an API key**. When manually dispatched from GitHub Actions on the default branch after this PR merges, a second job checks *only whether* the repository secret is configured; it **does not call Baseten**, measure authentication, verify a spend cap, or run Muse. No secrets, synthetic screenshots, transcript or generated payloads are uploaded as workflow artifacts.
+The manual Actions preflight is in `.github/workflows/baseten-connection-check.yml`. On PRs, it checks test-fixture generation, blinded JSONL and a three-case dry-run **without injecting an API key**. When manually dispatched from GitHub Actions on the default branch after this PR merges, a second job checks *only whether* the repository secret is configured; it **does not call Baseten**, measure authentication, verify a spend cap, or run Muse. No secrets, synthetic screenshots, transcript or generated payloads are uploaded as workflow artifacts.
 
 **Workspace setup by an authorized human in Baseten:**
 
@@ -52,7 +52,7 @@ The manual Actions preflight is in `.github/workflows/baseten-connection-preflig
 2. Ask Baseten support or inspect the dashboard to verify whether Model APIs can be limited with a **provider-enforced hard spend cap** at the intended ceiling (for example, $1). Do not treat an alert, estimated token-cost calculation, or client-side budget guard as a hard cap.
 3. If creating a Baseten key, prefer an appropriately limited **workspace** key rather than a broad personal administrative key, and restrict permitted operations/models wherever the UI actually supports those permissions. Do not post the key in a PR, a ChatGPT message or an issue.
 4. In GitHub **DraftDeck → Settings → Secrets and variables → Actions → New repository secret**, store it under the exact name `BASETEN_API_KEY`. Configure access carefully and remove/rotate it if compromised. The GitHub connector currently cannot read or configure repository secrets for the user.
-5. **After** PR review and merge, in **Actions → BOSS Baseten GitHub connection preflight → Run workflow**, run the non-billable check. It will distinguish an absent repository secret from a present one, but neither outcome validates that Baseten accepts the key.
+5. **After** PR review and merge, in **Actions → BOSS Baseten GitHub connection check → Run workflow**, run the non-billable check. It will distinguish an absent repository secret from a present one, but neither outcome validates that Baseten accepts the key.
 
 **Important:** No live/payed inference workflow has been enabled here. The Python adapter's `--account-hard-cap-confirmed` argument records an operator assertion, not a measured provider-side guarantee. Even a confirmed hard spending policy must be inspected for enforcement latency and billing exceptions. Baseten's published Model APIs page mentions budgeting, but as of the preparation date we have not independently verified that this BOSS account can enforce a $1 hard cap. Until that is established and the user explicitly approves chargeable calls, remain `HOLD`.
 
