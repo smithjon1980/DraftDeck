@@ -1,5 +1,7 @@
 # BOSS / DraftDeck release QA — current candidate
 
+**Required review protocol:** `doctrine/visual-evidence-gate.md`. A review candidate without reference/render screenshots, annotated comparison and a recorded decision is **HOLD**, not visually qualified. For CAD-framed work, the visible grid, zone markers and technical title plate are visual acceptance criteria; no claim of ANSI/ISO certification is implied.
+
 These are **separate** evidence levels, not interchangeable approvals:
 1. Source admission: original reference and brand asset identity, exact copy, manifest, and approved design rules.
 2. Structural build: scene, dimensions, named token use, component APIs, layers, hash, and non-raster editorial text.
