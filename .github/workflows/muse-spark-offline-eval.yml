@@ -1,0 +1,32 @@
+name: BOSS Muse candidate offline evaluation
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'experiments/muse-spark-eval-v01/**'
+      - '.github/workflows/muse-spark-offline-eval.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  synthetic-scorer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run scorer regression tests (no models, no provider requests)
+        run: python3 -m unittest discover -s experiments/muse-spark-eval-v01 -p 'test_*.py' -v
+      - name: Evaluate expected-control and intentional-error fixtures
+        working-directory: experiments/muse-spark-eval-v01
+        run: |
+          python3 make_control_predictions.py
+          python3 evaluate.py --predictions control_expected.jsonl --require-all-pass > /dev/null
+          if python3 evaluate.py --predictions control_intentionally_bad.jsonl --require-all-pass > /dev/null; then
+            echo "ERROR: deliberately wrong responses unexpectedly passed"
+            exit 1
+          fi
+      - name: Explicit scope notice
+        run: echo "Offline scorer verified only. Muse and comparator inference NOT TESTED. No deployment, design or release authorization."

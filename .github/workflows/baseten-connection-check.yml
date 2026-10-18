@@ -1,0 +1,55 @@
+name: BOSS Baseten GitHub connection check (zero inference)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'experiments/muse-spark-eval-v01/**'
+      - '.github/workflows/baseten-connection-check.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: baseten-connection-check-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  synthetic-dry-run:
+    name: Synthetic payload and no-network dry run
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install fixture generator dependency only
+        run: python -m pip install "Pillow==11.3.0"
+      - name: Generate synthetic samples and blinded input in temporary directory
+        working-directory: experiments/muse-spark-eval-v01
+        run: |
+          python make_synthetic_images.py
+          python make_blind_requests.py
+          python run_baseten.py --mode dry-run --max-calls 3
+      - name: Offline unit tests
+        run: python -m unittest discover -s experiments/muse-spark-eval-v01 -p 'test_*.py' -v
+      - name: Result classification
+        run: echo "DRY_RUN_ONLY - NO MODEL INFERENCE; no API key loaded; no billing authority."
+  repository-secret-presence:
+    name: Repository secret presence only (no network)
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Check for Baseten key without transmitting or displaying it
+        env:
+          BASETEN_API_KEY: ${{ secrets.BASETEN_API_KEY }}
+        shell: bash
+        run: |
+          if [[ -z "${BASETEN_API_KEY}" ]]; then
+            echo "::notice title=Setup incomplete::BASETEN_API_KEY is not configured. Nothing was transmitted."
+            exit 1
+          fi
+          echo "::notice title=Secret configured::BASETEN_API_KEY is present. Authentication and spending limits are NOT verified. No network requests made."
+      - name: Explicit billing boundary
+        run: |
+          echo "No Baseten API call executed."
+          echo "A repository secret presence check does not prove provider access, a spend cap, billing approval or model availability."
