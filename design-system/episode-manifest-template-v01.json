@@ -1,0 +1,73 @@
+{
+  "schema_version": "0.1-review-candidate",
+  "episode_id": "EP01",
+  "manuscript": {
+    "version": "v0-draft",
+    "language": "en",
+    "sha256": null,
+    "verification_status": "NOT_VERIFIED",
+    "segments": [
+      {
+        "segment_id": "EP01-S001",
+        "source_text": null,
+        "source_sha256": null,
+        "source_time_start": null,
+        "source_time_end": null,
+        "slide_ids": [],
+        "print_page_ids": [],
+        "type": "verbatim_narration"
+      }
+    ]
+  },
+  "supplements": [
+    {
+      "supplement_id": "EP01-A001",
+      "type": "art_label_or_reflection",
+      "text": null,
+      "source_or_editorial_status": "DRAFT",
+      "display_ids": []
+    }
+  ],
+  "assets": {
+    "logo": {
+      "path": null,
+      "sha256": null,
+      "status": "MISSING_SOURCE_HASH"
+    },
+    "artwork": []
+  },
+  "profiles": {
+    "slide": {
+      "canvas_px": [
+        1920,
+        1080
+      ],
+      "adapter_status": "NOT_BUILT",
+      "reading_track": true
+    },
+    "print": {
+      "page_inches": [
+        11,
+        17
+      ],
+      "orientation": "UNDECIDED",
+      "adapter_status": "NOT_BUILT",
+      "press_proof": "NOT_TESTED"
+    }
+  },
+  "evidence": {
+    "manuscript_coverage": "NOT_TESTED",
+    "order_and_exact_text": "NOT_TESTED",
+    "native_text_layers": "NOT_TESTED",
+    "rendered_visual_comparison": "NOT_TESTED",
+    "cad_grid_and_title_plate": "NOT_TESTED",
+    "screen_legibility": "NOT_TESTED",
+    "print_readability": "NOT_TESTED"
+  },
+  "review": {
+    "editorial": "PENDING",
+    "concept": "PENDING",
+    "visual": "PENDING",
+    "release": "PENDING"
+  }
+}
