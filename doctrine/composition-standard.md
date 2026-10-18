@@ -1,44 +1,24 @@
-# Composition Standard
+# BOSS Composition Standard — coherent v0.1 candidate
 
-> **Editability is necessary but not sufficient.**
-> A technically editable slide that destroys the reference composition is a failed DraftDeck build.
+Scope: current Episode 01 and Day Zero instructional visual production. Status: CANDIDATE_PENDING_HUMAN_REVIEW, not a released design-system version.
 
-An earlier run produced verified live text elements and still failed because it recreated a generic boxes-and-lines composition instead of the reference. Layer counts prove structure; they do not prove fidelity. Both are required.
+The authoritative machine-readable proposal is design-system/boss-design-contract.json. The original Bioscillate visual identity is preserved; the logo binary has not yet been hash-pinned and must not be replaced with a generated approximation.
 
-## Canvas
+## Visual constraints
+- Primary slide profile: 1920 x 1080, exact 16:9 logical canvas. CSS-scaled viewing does not change the internal coordinate system.
+- Ground: #FFFFFF. Core ink: black. Preserve approved cyan (#00BCEB) and magenta (#E30074) for the canonical logo and controlled emphasis.
+- Tesla Model Y center touchscreen is a **layout influence** (controlled panels, information hierarchy), not a product skin or brand substitution.
+- CAD/ISO drafting influence: measured edges, hairline geometry, explicit alignment. Project visual inspiration is not a claim of ISO compliance.
+- Native selectable HTML text for headings, narrative, annotations, labels, and notes. Story art stays a separate asset. SVG may be used for art/geometry, not editorial text.
+- Avoid gradients, glossy 3D, decorative shadows, thick frames, gratuitous rounded cards, and generic sparse marketing layouts.
+- Use named shared design tokens and specify component state, accessibility, and content/visual source provenance.
 
-- Exact 16:9 integer canvas; default 1920×1080.
-- Pages never nest; one top-level page section per slide.
+## Output profiles
+- Slides: fixed 1920 x 1080; art/text layered and independently inspectable.
+- Responsive web and Academy lessons: semantic reflow across screen sizes, retaining design roles rather than literal slide dimensions.
+- Print: independent profile pending explicit approval; do not reuse an incompatible slide canvas.
 
-## Token palette
+## Authority and migration
+This rebuild supersedes contradictory prior core styling choices for new BOSS visual work **when approved**. Historical example decks and open feature branches may still contain older profiles; their code is not automatically migrated or verified. No current source may claim that an old accent or old instructional metaphor outranks the original Bioscillate identity.
 
-The core standard is pure-white-only. There is one ground.
-
-| Token | Value | Use |
-|---|---|---|
-| Pure White Ground | `#FFFFFF` | The ground. No alternates in the core standard. |
-| Near-Black Ink | `#1A1A1A` | Primary ink |
-| Burnt Orange | `#B34700` | Restricted accent (status, key marks, controlled emphasis) |
-| Drafting Gray | `#DEDEDE` | Grid, construction lines, low-priority technical substrate |
-
-**Visual profiles.** DraftDeck can host named optional profiles, but a profile is valid only when explicitly declared for a build and documented under `design-system/`. The core profile remains pure white.
-
-## Typography
-
-- Heavy serif action titles (Georgia).
-- Uppercase monospace kickers and metadata (Courier New).
-- Sans body copy (Arial).
-
-## Stroke hierarchy
-
-- 1.0pt (≈3px) — outer frames and major dividers.
-- 0.5pt (≈1.5–2px) — controls and connector housings.
-- 0.25pt (≈0.75px) — grid, hatch, and detail lines.
-
-## Semantic constraint
-
-The flagship Logistics Framework uses shipping, receiving, cargo, routing, proof-of-delivery, consignee, dispatch, handling, and release language. Deprecated travel/aviation metaphors are prohibited in current source, generated output, component names, and user-facing documentation.
-
-## Prohibited
-
-Solid pictogram fills, UI red, gradients, glows, ambient occlusion, glossy 3D, soft pill shapes, and silent substitution of a non-core visual profile. State is communicated through architectural hatching and line texture, not color alone.
+Approval requires visual evaluation of a representative slide and the verified logo source. An accepted CSS stylesheet alone cannot establish design approval.

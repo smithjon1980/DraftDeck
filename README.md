@@ -1,56 +1,22 @@
 # DraftDeck
 
-DraftDeck is a production engine that transforms visual references into layered, editable 16:9 presentations built from static HTML and CSS. It combines CAD-inspired precision, replaceable story artwork, and live editable text — with no PowerPoint intermediate.
+DraftDeck prepares layered, editable instructional presentations and visual evidence from approved source material. Current BOSS work uses the original Bioscillate Operating System by Seven identity, information-dense Tesla-screen-inspired hierarchy, CAD/ISO-informed geometry, and human approval boundaries.
 
-**Core rule:** Editability is necessary but not sufficient. A technically editable slide that destroys the reference composition is a failed DraftDeck build.
+**Current candidate contract:** design-system/boss-design-contract.json (not released or human-approved). Read AGENTS.md and design-system/README.md before generating a new Episode 01 or Day Zero design.
 
-## Architecture
+## Current operating boundaries
+- Source and explicit approved design rules govern output; a rendered image or PDF is not automatically editable.
+- Default slide canvas: 1920 x 1080 with native HTML editorial text and separately sourced artwork. Mobile web content must reflow rather than shrink a fixed slide.
+- NotebookLM-to-story and story-to-design bridges precede source-grounded production.
+- Automated tests may qualify structural correctness; actual render inspection, destination-specific tests, and human release authorization remain separate.
+- Original cyan/magenta/black branding must not be overwritten by historical demonstration palettes.
 
-| Path | Role |
-|---|---|
-| `skills/draftdeck/` | Operating instructions for the engine (agent-facing skill) |
-| `doctrine/` | Production contract, reference-render protocol, composition standard, Logistics Framework, Prime Process, Prime Process orchestration doctrine, release QA |
-| `renderer/` | Scene schema and HTML/CSS build pipeline (roadmap; builder currently lives in the skill) |
-| `design-system/` | Tokens, frames, hatches, icons, components (roadmap) |
-| `adapters/` | Import targets, each with its own verification status |
-| `examples/logistics-framework/` | Flagship reference implementation: 15-slide logistics and proof-of-delivery deck |
-| `archive/` | Current archive notes for retained non-deprecated evidence |
+## Repository orientation
+- design-system/: current visual contract, tokens, components, and validation.
+- doctrine/: mixed history and ongoing production/evidence principles. Read doctrine/README.md for current versus historical scope.
+- renderer/: renderer roadmap and compatibility notes.
+- skills/draftdeck/: build instructions and reference-implementation tooling.
+- examples/: historical and experimental demonstrations, not automatically current brand authority.
+- .github/workflows/: independently scoped validation and generation workflows.
 
-## Doctrine map
-
-Start with `doctrine/README.md` for the canonical doctrine stack, reading order, and fresh-agent boot sequence.
-
-## Flagship doctrine
-
-The flagship implementation uses a logistics model governed by `doctrine/logistics-framework.md` and the operational spine in `doctrine/prime-process.md`:
-
-> **Data is cargo. Humans are senders and receivers. Agents are couriers. Models are freight. Verification is proof of delivery.**
-
-Its control spine is:
-
-The executable orchestration extension is defined in `doctrine/prime-process-orchestration.md`. Context severance, cross-session handoff, and return-routing are defined in `doctrine/prime-handoff-context-routing.md`.
-
-
-
-> **LOCATION → ACCOUNTING → ADJUDICATION → AUTHORITY**
-
-The repository must not reintroduce deprecated travel/aviation metaphors into source, generated output, design-system components, or user-facing documentation.
-
-## Adapter verification status
-
-| Adapter | Status | Evidence |
-|---|---|---|
-| Canva | **Verified route; current flagship re-verification pending** | The HTML → Canva route has verified editable text/image records. The logistics-migrated flagship must receive a fresh adapter review before its own verification record is upgraded. |
-| Adobe Express | Unverified | Do not claim compatibility until independently tested. |
-| Figma | Unverified | No import test completed. |
-| Floot | Exploratory | No import test completed. |
-
-## Quick start
-
-Rebuild the flagship deck offline (Python standard library only):
-
-```sh
-python3 examples/logistics-framework/source/Build_Deck.py
-```
-
-See `doctrine/production-contract.md` before editing anything: generated output is overwritten on rebuild, so authored changes belong in the source, never in generated HTML.
+Existing historical example decks, old ontology documents, and experimental feature branches are intentionally retained in Git. Their presence is not a claim that their design decisions are approved for the current BOSS release. The active design contract is a review candidate pending an authoritative logo asset and human-approved reference render.

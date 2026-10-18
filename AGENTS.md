@@ -1,57 +1,33 @@
-# BOSS / DraftDeck Agentic Operations Manual
-**Target:** Autonomous Code Agents (Codex, etc.) operating in this repository.
-**Project:** BOSS · Episode 01 — The Pitch
-**Status:** Canonical Directives — Strict Compliance Required
+# BOSS / DraftDeck operating instructions — v0.1 review candidate
 
-## 1. Master Design Standards & Visual Authority
-This project uses a precise, information-dense technical operating interface aesthetic. It is inspired by the Tesla Model Y center touchscreen UI combined with CAD/ISO technical drafting. 
-*   **Canvas:** Fixed `1920x1080` (16:9) logical canvas. Must scale dynamically via CSS transforms to fit the viewport. Do not use `h-screen` or `vw/vh` as structural constraints for the internal slide grid.
-*   **Background:** Pure White (`#FFFFFF`).
-*   **Geometry:** 1px hairline borders (`border-black`), measured padding, strict grid alignments. No rounded corners, drop shadows, or thick decorative borders.
-*   **Typography:** Black native HTML text (`h1`, `h2`, `p`, `span`). No canvas drawing for text. No SVG text.
-*   **Brand Colors:** Cyan (`#00BCEB`) and Magenta (`#E30074`) reserved exclusively for the canonical bioscillate logo and highly selective emphasis. No generic Tailwind colors (e.g., `cyan-500`) without verifying hex matches. 
-*   **Prohibited Metaphors:** No sparse marketing website aesthetics, giant empty hero sections, or generic SaaS feature cards.
+Scope: current BOSS Episode 01, Day Zero slides and corresponding instructional interface output. This file identifies project constraints; it does not override human approval. The active candidate source is design-system/boss-design-contract.json and the design-system/ directory. Historical demonstration files retain historical scope.
 
-## 2. The Production Workflow
-1.  **Code Generation:** Agents develop React/Tailwind components in this repository.
-2.  **Static HTML/CSS:** The React output must be capable of rendering as clean, discrete HTML/CSS static files.
-3.  **Hosting:** Static files and image assets (logos) are hosted on a public HTTPS endpoint (e.g., Vercel, GitHub Pages).
-4.  **Canva Import:** The public URL is imported into Canva to generate an editable design.
+## Identity and visuals
+- Brand: Bioscillate Operating System by Seven. Original canonical logo artwork only. The logo source SHA is not yet established; never invent or substitute it.
+- White (#FFFFFF) canvas, black editorial text, canonical cyan (#00BCEB) and magenta (#E30074) brand colors. No borrowed orange core accent or substituted logo profile for current work.
+- Slide canvas: exactly 1920 x 1080 logical pixels, CSS-scaled to viewer size. Do not use h-screen/vh as structural slide geometry.
+- Interface influence: Tesla Model Y center touchscreen information architecture + CAD/ISO-informed drafting precision; no generic SaaS cards, gradients, decorative rounded corners, or heavy shadows.
+- Text remains native HTML, not SVG text, canvas text, or baked into a rasterized full slide. Artwork and text remain separate layers.
+- Website and lesson interface must reflow; print requires separate dimensions. Do not conflate slides with a responsive web page.
+- Legacy transport and aviation metaphors are retired for contemporary instructional releases, though historical artifacts may remain archived.
 
-## 3. Canva Integration Test Results & Limits
-*   **Requirement:** Canva's import engine requires a public HTTPS URL. Local file uploads of HTML/CSS are currently unsupported for automated agentic integration.
-*   **Fidelity:** Native HTML text elements (`<h1>`, `<div>` text) and `<img>` tags successfully import as editable, movable Canva elements. 
-*   **Structural Conversion:** CSS borders and flexbox grids convert into absolute-positioned shapes and lines. They lose responsive CSS properties but remain editable.
-*   **Strict Prohibition:** Do NOT use full-slide SVGs, PNGs, JPEGs, or PDFs as workarounds to force visual fidelity. The layout must rely on native DOM elements to ensure downstream editability.
+## Editorial two-bridge process
+1. Inspect the actual source/reference visually. Log file, page, teaching point, story art, exact copy, source status, and unresolved fields. NotebookLM output is a spark, not a new authority.
+2. Bridge 1: reimagine the source into a grounded teaching story. Separate preserved evidence and exact copy from candidate creative departures.
+3. Bridge 2: translate the story into the approved BOSS interface hierarchy and original brand. Do not turn a missing logo or source into invented artwork.
+4. Plan layers from artwork foundation through story, structural geometry, source brand elements, live primary text, supporting annotations, and reflection/notes footer.
+5. Provide the bridges, source manifest, copy manifest, candidate status, acceptance criteria, and provenance to the implementer.
+6. Implement the candidate as React/Tailwind where specified; emit discrete static HTML/CSS with editable native text. Do not make SVG or a flattened image the editorial layer.
+7. Visually inspect actual render and source/copy/geometry correspondence; test adapter import separately.
 
-## 4. Known Failures to Avoid
-*   **Failure:** Generating a single SVG that looks like a slide. *Correction:* Use HTML/Tailwind `div` structures.
-*   **Failure:** Using `h-screen` which causes layout clipping on different monitors. *Correction:* Use a fixed `1920px` by `1080px` wrapper with a `transform: scale()` CSS hook.
-*   **Failure:** Inventing placeholder data. *Correction:* Preserve missing values explicitly as `[UNKNOWN]`, `null`, or use the exact provided instructional text.
+## Candidate comparison and approval
+- Produce four distinct A–D arrangements only when requested for an approved comparison stage. Do not change facts, exact copy, brand identity, or evidence status between variants.
+- Score actual renders on story fidelity, copy, logo, geometry, editability, accessibility and clarity using PASS / FAIL / NOT TESTED with evidence.
+- No eligible candidate = HOLD and repair, not a relative winner.
+- Generation success, visual recommendation, human selection, and authorized release are four distinct states. Silence is not authorization.
 
-## 5. Current Milestone
-**Deliverable:** Build the React/Tailwind browser preview for **Slides 01, 02, and 06** only.
-*   Construct the `SlideCanvas`, `TopMetadataRail` (with canonical logo), `SplitPanelLayout`, and `SequenceDiagram` components.
-*   Prove the CAD/ISO geometry and pure-white/black aesthetic without generating the remaining 9 slides.
-*   Await human visual approval before expanding the slide deck.
-
-## Two-bridge transformation contract — 2026-10-09
-
-Apply this sequence before composing a NotebookLM-inspired DraftDeck slide:
-
-1. Inspect the actual NotebookLM output visually. Record the source file/page, teaching point, story/metaphor, artwork, relationships, copy provenance, and unknowns. Treat it as the first creative spark, not automatically as approved copy or an exact-composition mandate. Do not substitute a logo, diagnostic, conflicting deck, or rejected candidate for this source.
-2. Bridge 1 — NotebookLM to reimagined story: write a source-grounded creative brief that reimagines how the teaching point is communicated. Document what is preserved, what changes, and why. Preserve exact required copy; label proposed copy and new artwork as candidates. Derive the creative prompt from this story, rather than merely arranging extracted text.
-3. Bridge 2 — reimagined story to target visual system: translate that concept into the project's approved interface theme. For Episode 01, use the information-dense Tesla Model Y center touchscreen influence, CAD/ISO geometry, and original cyan/magenta/black bioscillate artwork. Do not import another BOSS palette or erase story artwork merely to simplify implementation.
-4. Write every image/concept prompt bottom-to-top: background/art foundation; story artwork; structural geometry; original brand assets; primary live-text plan; annotations/supporting text; footer/metadata. Describe each layer's purpose, placement, dependencies, and provenance. Adapt the stack explicitly when the story requires it. Name applicable standards precisely (e.g. ISO 128-2:2022-informed line conventions, W3C CSS Grid, WCAG 2.2 AA contrast). Distinguish project/design tokens from standards requirements; never claim compliance from a prompt or raster render.
-5. Hand off both bridge records, exact-copy manifest, ordered layer plan, original assets, candidate status, and acceptance checks. Ideogram is optional creative exploration; Codex can implement the bridged concept directly. Provider choice does not remove either bridge.
-6. Build the selected concept in React/Tailwind, compile static HTML/CSS, and retain editorial text as native selectable HTML. Keep logo and story artwork separate. Never flatten the whole production slide or use SVG text as its editorial layer.
-7. Inspect actual rendered output for story correspondence, exact copy, original asset preservation, hierarchy, geometry, clipping, and readability. Keep build/text-selection checks separate from visual acceptance. Present proposed deltas for human selection without treating silence as approval. Missing NotebookLM source blocks source-grounded completion, but does not block infrastructure, evidence inventory, or handoff preparation; mark it [UNKNOWN] and do not invent it.
-
-## Four-candidate comparison
-
-After both bridges, produce four meaningfully different composition candidates from the same source-grounded story and exact-copy manifest. Vary visual storytelling, hierarchy, and arrangement within the approved frame; do not vary facts, required wording, brand identity, or evidence limits. Use A–D identifiers. Codex may render four candidates sequentially; this instruction does not require parallel agents or four external image-generation calls.
-
-Evaluate each actual render using a comparison matrix: source/story correspondence; Bridge 1 preservation and creative deltas; Bridge 2 theme fidelity; exact-copy accuracy; original logo/artwork provenance; layer/editability integrity; hierarchy/readability; geometry/clipping. Record PASS/FAIL/NOT TESTED plus concrete evidence. Treat invented facts, missing required copy, substituted logo, or flattened production text as hard failures. Recommend the strongest eligible candidate and explain tradeoffs; keep selection and approval distinct. Human selection governs the final visual master. Do not silently promote the evaluator's recommendation to approval. If none passes, repair the concrete failures rather than selecting a failed candidate by relative score.
-
-## Import evidence correction
-Discover the current Canva import schema. A local HTML design_file route has been observed; public HTTPS is not a universal requirement. Treat the earlier section 3 claims as historical reported evidence, not a guarantee. Verify destination editability and visual fidelity separately before claiming success.
+## Source and build boundaries
+- Authoritative copy/geometry lives in versioned source. Rebuild generated output; do not hand-edit derivatives and claim the source was updated.
+- CI checks structure and contracts; only actual render inspection validates visual fidelity. Hands-on adapter editing is a separate higher-level test.
+- Confirm the current Canva import API/schema for the target. Historical routes are not universal guarantees and do not automatically verify current destination editability.
+- Preserve missing evidence explicitly as UNKNOWN or NOT_ESTABLISHED, including actual human approval and unverified import fidelity.

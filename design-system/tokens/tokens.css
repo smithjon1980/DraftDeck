@@ -1,0 +1,24 @@
+/* BOSS design tokens v0.1 — candidate, not human-approved.
+   Contract source: design-system/boss-design-contract.json
+   Presentation tokens do not define web layout or print dimensions.
+*/
+:root {
+  --boss-color-ground: #FFFFFF;
+  --boss-color-ink: #000000;
+  --boss-color-brand-cyan: #00BCEB;
+  --boss-color-brand-magenta: #E30074;
+  --boss-font-display: Arial, Helvetica, sans-serif;
+  --boss-font-reading: Arial, Helvetica, sans-serif;
+  --boss-font-label: "Courier New", monospace;
+  --boss-space-1: 8px;
+  --boss-space-2: 16px;
+  --boss-space-3: 24px;
+  --boss-space-4: 32px;
+  --boss-space-5: 48px;
+  --boss-space-6: 64px;
+  --boss-stroke-hairline: 1px;
+}
+.boss-slide-profile {
+  --boss-canvas-width: 1920px;
+  --boss-canvas-height: 1080px;
+}

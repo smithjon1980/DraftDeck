@@ -1,0 +1,77 @@
+{
+  "schema_version": "0.1",
+  "status": "CANDIDATE_PENDING_HUMAN_REVIEW",
+  "scope": [
+    "BOSS Episode 01 presentation",
+    "BOSS Day Zero instructional slides",
+    "related responsive web instructional surfaces"
+  ],
+  "out_of_scope": [
+    "legacy demonstration decks",
+    "historical archived source",
+    "print-size ratification",
+    "unverified destination adapter capabilities"
+  ],
+  "authority": {
+    "final_visual_approval": "human",
+    "release_authorization": "human",
+    "ai_or_build_authority": "prepare_and_test_only",
+    "logo_source_sha256": null,
+    "uncertainties": [
+      "Canonical logo binary/hash not yet pinned",
+      "Exact production typography and component dimensions await representative render approval"
+    ]
+  },
+  "brand": {
+    "identity": "Bioscillate Operating System by Seven",
+    "ground": "#FFFFFF",
+    "ink": "#000000",
+    "cyan": "#00BCEB",
+    "magenta": "#E30074",
+    "brand_accents": "original logo and controlled emphasis; never substitute another palette"
+  },
+  "profiles": {
+    "slide": {
+      "width_px": 1920,
+      "height_px": 1080,
+      "aspect_ratio": "16:9",
+      "scale_behavior": "CSS scaling of fixed logical slide"
+    },
+    "web": {
+      "width_px": null,
+      "height_px": null,
+      "layout": "responsive semantic reflow; do not shrink a slide and call it a mobile layout"
+    },
+    "print": {
+      "width_px": null,
+      "height_px": null,
+      "layout": "requires separately approved print geometry"
+    }
+  },
+  "rules": {
+    "editable_editorial_text": "native HTML text; not SVG or rasterized text",
+    "artwork": "separate source-traceable image or vector layers",
+    "background": "white; no gradient or decorative fill",
+    "geometry": "hairline CAD/ISO-informed grid; no decorative rounded corners, shadows, thick borders",
+    "change_control": "candidate -> verify -> human approve -> release",
+    "evidence": "separate structural, visual, adapter-layer, and hands-on-edit tests",
+    "metaphors": "Current BOSS output must not use retired aviation or parcel-transport story framing"
+  },
+  "source_hierarchy": [
+    "This contract and approved logo asset once hash-pinned",
+    "Current explicit human project approvals",
+    "Current BOSS presentation/lesson specifications",
+    "Renderer and adapter implementation documentation",
+    "Historical files only as historical evidence"
+  ],
+  "components": [
+    "SlideCanvas",
+    "BrandMasthead",
+    "TechnicalPanel",
+    "EvidenceWindow",
+    "SequenceDiagram",
+    "PauseAndConsider",
+    "ReleaseStatus"
+  ],
+  "checkpoint": "Hold approval until validated source asset, rendered visual sample, and human decision are recorded"
+}
