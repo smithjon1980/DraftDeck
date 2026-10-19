@@ -2,6 +2,20 @@
 
 **Scope:** Current DraftDeck / Episode 01 React+Tailwind presentation pipeline. Source: user-supplied 10-tool video transcript. This is a selective experiment, **not** authorization to install production apps, replace Railway/n8n/Figma/Canva, or publish private narrated materials.
 
+## Executed evidence (2026-10-19; synthetic only)
+
+GitHub Actions run [39252667341](https://github.com/smithjon1980/DraftDeck/actions/runs/39252667341) completed successfully. The repository terminology guard also passed on the same PR head.
+
+**Penpot token-export structural gate — PASS (five unit tests).** Generated a candidate single-JSON-set import file with four exact current BOSS color tokens (white `#FFFFFF`, black `#000000`, cyan `#00BCEB`, magenta `#E30074`) and 1920px/1080px slide-dimension tokens. Negative cases reject missing colors, substituted colors, incorrect canvas sizing and CSS/contract drift. **Actual Penpot import, edit-save-reopen, font parity, component fidelity and design review remain NOT_TESTED.**
+
+**Excalidraw actual React editor + browser roundtrip — PASS for technical editability only.** `@excalidraw/excalidraw@0.18.1` compiled using esbuild's explicit `production` condition; Chromium loaded **11 scene elements** representing four labeled nodes and three lines, kept all four expected stable source IDs after `convertToExcalidrawElements(scene.elements,{regenerateIds:false})`, changed the `msc-hold` node's stroke to `#000000`, and exported **11 elements** through the library JSON serializer. No browser runtime errors were reported. Artifacts include `screenshots/excalidraw-before.png`, `screenshots/excalidraw-edited.png`, a serializable scene JSON and report JSON.
+
+**Visual assessment — FAIL as BOSS production diagram.** Inspection of the two real browser screenshots showed a text overflow/clipping problem in the customer-request node, awkward word splitting in the decision diamond and handwritten/default-editor label appearance that diverges from BOSS's bold typography and technical CAD/ISO control. Successful JSON roundtrip does **not** qualify this editor's visual rendering as the approved React master.
+
+**Important intermediate failures and fixes:** the Excalidraw CSS conditional export required `esbuild --conditions=production`. The initial scene-conversion behavior regenerated object IDs, breaking provenance until `regenerateIds:false` was used. These are now documented integration constraints. No editor account was connected and no production migration or hosted service was performed.
+
+**Human decision requested:** keep Penpot as a candidate **design-token review tool**, and keep Excalidraw only as an optional **concept/storyboard aid**. The original reviewed Mermaid/PlantUML source plus BOSS React semantic composer remains the stronger direction for production diagrams. No evidence justifies replacing the production renderer.
+
 ## Test questions
 
 **Penpot.** Can we turn the existing DraftDeck design tokens into a Penpot single-JSON-set import candidate **without reinterpreting brand values**? Run `python -m unittest discover -s experiments/oss-design-v01/scripts -p test_*.py -v`, then `python experiments/oss-design-v01/scripts/export_penpot_tokens.py --output <path>`. The output has the `Global` top-level set and DTCG `$type`, `$value`, `$description` fields prescribed by Penpot's official documentation. Six tokens: four colors, fixed slide width and height. An offline schema/parity pass DOES NOT establish an actual Penpot UI import, native layer fidelity, or React code generation. Penpot account and import are **NOT CONNECTED / NOT TESTED**. See https://help.penpot.dev/user-guide/design-systems/design-tokens/ .
