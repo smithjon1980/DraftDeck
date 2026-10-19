@@ -1,4 +1,4 @@
-name: BOSS real diagram engines + React browser proof
+name: BOSS standards source to native React diagram proof
 on:
   pull_request:
     branches: [main]
@@ -36,9 +36,15 @@ jobs:
           npm ls --depth=0
           java -version
           (google-chrome --version || chromium --version)
+      - name: Test restricted semantic adapters and reject unsupported syntax
+        working-directory: examples/diagram-react-v01
+        run: npm run test:semantic
       - name: Render actual Mermaid and PlantUML SVG geometry
         working-directory: examples/diagram-react-v01
         run: bash scripts/render-engines.sh
+      - name: Compile source-verified diagram structure to typed IR
+        working-directory: examples/diagram-react-v01
+        run: npm run compile:semantic
       - name: Build React app and compiled Tailwind stylesheet
         working-directory: examples/diagram-react-v01
         run: |
@@ -59,11 +65,12 @@ jobs:
             examples/diagram-react-v01/screenshots/*.pdf
             examples/diagram-react-v01/screenshots/report.json
             examples/diagram-react-v01/dist/diagrams/*.svg
+            examples/diagram-react-v01/dist/diagrams/*.ir.json
             examples/diagram-react-v01/package-lock.json
           retention-days: 14
       - name: Declare validation boundary
         if: always()
         run: |
-          echo "Engine syntax and browser integration only: semantic accuracy NOT_TESTED."
+          echo "Real engines compile sources; restricted adapters preserve node/link and participant/message parity."
           echo "No private manuscript, model inference, approved logo, or external release."
-          echo "Art direction, visual approval, cross-platform editability and spending safeguards remain separate."
+          echo "Semantic meaning, final art direction, visual approval, cross-platform editability and spending safeguards remain NOT_TESTED."
