@@ -13,10 +13,21 @@ function App(){
     if(!api)return;
     apiRef.current=api;
     const current=api.getSceneElements();
-    window.__bossTrial={ready:true, initialCount:current.length,
+    window.__bossTrial={ready:false, initialCount:current.length,
       initialIDs:current.map(x=>x.id),
       hasReactEditor:true, modified:false};
-    setStatus("READY / EDITABLE SCRATCHPAD");
+    setStatus("EDITOR MOUNTED / WAITING FOR SCENE");
+  }
+  function onSceneChange(elements){
+    if(!window.__bossTrial) return;
+    const ids=elements.map(x=>x.id);
+    const expected=["msc-request","msc-check","msc-hold","msc-work"];
+    if(expected.every(id=>ids.includes(id))){
+      window.__bossTrial.ready=true;
+      window.__bossTrial.initialCount=elements.length;
+      window.__bossTrial.initialIDs=ids;
+      setStatus("READY / EDITABLE SCRATCHPAD");
+    }
   }
   function edit(){
     if(!apiRef.current)throw Error("NO_EXCALIDRAW_API");
@@ -36,7 +47,7 @@ function App(){
     <header><strong>BOSS / MAIN STREET COPY</strong><span>EXCALIDRAW INTEROPERABILITY — SCRATCHPAD ONLY</span></header>
     <section className="layout">
       <div className="editor" data-test-editor>
-        <Excalidraw excalidrawAPI={markReady} initialData={{
+        <Excalidraw excalidrawAPI={markReady} onChange={onSceneChange} initialData={{
           elements:source,appState:{viewBackgroundColor:"#FFFFFF",zenModeEnabled:true,
             currentItemStrokeColor:"#000000"},files:{}
         }} UIOptions={{canvasActions:{loadScene:false}}}/>
