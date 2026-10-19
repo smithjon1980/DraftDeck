@@ -26,7 +26,7 @@
 | Actor/system interaction over time | UML sequence 2.5.1 | PlantUML sequence | truthful lifelines, order, `alt`/`opt` guards, messages |
 | User roles and capabilities | UML use case 2.5.1 | PlantUML use case | system boundary, actor associations, correctly applied `include`/`extend` |
 | Lifecycle / HOLD-RELEASE | UML state machine 2.5.1 | PlantUML state or Mermaid stateDiagram-v2 (choose ONE per figure) | state invariants; valid triggers; no false automatic release |
-| Swimswimlane business process and handoffs | BPMN 2.0.2 | BPMN 2.0 XML via bpmn-js viewer | starts, tasks, lanes, gateways, message-vs-sequence semantics; BPMN lint |
+| Swimlane business process and handoffs | BPMN 2.0.2 | BPMN 2.0 XML via bpmn-js viewer | starts, tasks, lanes, gateways, message-vs-sequence semantics; BPMN lint |
 | Rules such as missing field ⇒ HOLD | DMN 1.5 decision model | DMN table / XML via dmn-js if available | hit policy, explicit unknown case, test cases, rule precedence |
 | Context / container / component structure | C4 model | C4-PlantUML after separately admitted pinned library; else labeled PlantUML components | correctly distinct abstraction levels, boundaries, technology, relationships |
 | Dense MECE issue tree | explicit partition logic (MECE is an analytical method, not an ISO notation) | Mermaid small tree; Graphviz DOT for dense tree | clear universe, no overlapping categories, defined residual/unknown cases, source-supported exhaustiveness |
