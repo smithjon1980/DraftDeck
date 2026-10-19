@@ -1,5 +1,8 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import { BossFlowDiagram, BossSequenceDiagram } from "./diagram-components.jsx";
+import flowIR from "../dist/diagrams/intake.ir.json";
+import sequenceIR from "../dist/diagrams/clarification.ir.json";
 
 const PROOFS = [
   {
@@ -15,13 +18,12 @@ const PROOFS = [
       "Only a validated request can proceed to an authorized production step. Completion requires inspection and a recorded handoff, not merely a confident statement."
     ],
     principle: "Missing information must remain visible until it is resolved.",
-    diagramPath: "./diagrams/intake.svg",
     diagramLabel: "Rendered Mermaid flowchart of Main Street Copy intake and HOLD branches",
     diagramTitle: "MSC-01 // ORDER INTAKE AND HOLD",
-    method: "Mermaid 11.x engine family",
+    method: "MERMAID SOURCE → BOSS REACT",
     cue: "FLOWCHART",
     reflection: "Which condition prevents the job from advancing to production?",
-    caption: "Companion proof: engine-generated diagram geometry and labels, with independently selectable HTML editorial content."
+    caption: "All process nodes, branch labels and titles are native HTML; only connector strokes use SVG geometry."
   },
   {
     id: "EP01-039",
@@ -36,13 +38,12 @@ const PROOFS = [
       "The resulting sequence explains the handoff boundary: production is authorized only after the required data has been checked. The diagram is a teaching candidate, not evidence that a real shop system executed."
     ],
     principle: "An acknowledgement is not proof that production was authorized.",
-    diagramPath: "./diagrams/clarification.svg",
     diagramLabel: "Rendered PlantUML sequence diagram showing customer, counter operator, work order, and production interactions",
     diagramTitle: "MSC-02 // ACTORS AND HANDOFFS",
-    method: "PlantUML 1.2025.10",
+    method: "PLANTUML SOURCE → BOSS REACT",
     cue: "UML SEQUENCE",
     reflection: "Who is responsible for obtaining and validating the missing information?",
-    caption: "Sequence semantics remain candidates for human review; successful UML rendering verifies syntax, not the business process."
+    caption: "Actor names, interaction labels, branch conditions and editorial text remain independent React text."
   }
 ];
 
@@ -102,7 +103,7 @@ function Slide({slide}) {
             <span className="font-label text-[16px] text-slate-600">{slide.method}</span>
           </div>
           <div className="relative min-h-0 flex-1 flex justify-center items-center py-[15px]">
-            <img className="max-w-full max-h-full w-full h-full object-contain" src={slide.diagramPath} alt={slide.diagramLabel} />
+            {slide.id==="EP01-038" ? <BossFlowDiagram model={flowIR}/> : <BossSequenceDiagram model={sequenceIR}/>}
           </div>
           <div className="border-t border-slate-400 pt-2 font-label text-[16px]">{slide.caption}</div>
         </section>
