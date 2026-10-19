@@ -1,0 +1,54 @@
+/* BOSS diagram wrapper — v0.2 candidate (React/Tailwind host)
+   Native slide narrative, headings, labels, and reflection remain HTML elements.
+   Diagram SVG is bounded technical geometry, NOT the slide canvas nor editable editorial copy.
+   No dark fill; no shadows; no gradients; no retired waveform.
+   Import design-system/tokens/tokens.css BEFORE this file.
+*/
+.boss-diagram {
+  color: var(--boss-color-ink, #000000);
+  background: var(--boss-color-ground, #FFFFFF);
+  font-family: var(--boss-font-reading, Arial, Helvetica, sans-serif);
+  isolation: isolate;
+  position: relative;
+  overflow: visible;
+  min-width: 0;
+}
+.boss-diagram__drawing {
+  max-width: 100%;
+  width: 100%;
+  overflow: visible;
+  display: block;
+}
+.boss-diagram__drawing > svg {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.boss-diagram__heading {
+  font-family: var(--boss-font-display, Arial, Helvetica, sans-serif);
+  font-weight: 800;
+  color: var(--boss-color-ink, #000000);
+}
+.boss-diagram__caption,
+.boss-diagram__legend {
+  font-family: var(--boss-font-reading, Arial, Helvetica, sans-serif);
+  color: var(--boss-color-ink, #000000);
+  line-height: 1.35;
+}
+.boss-diagram__annotation--action {
+  border-left: 2px solid var(--boss-color-brand-cyan, #00BCEB);
+}
+.boss-diagram__annotation--hold {
+  border-left: 2px solid var(--boss-color-brand-magenta, #E30074);
+}
+.boss-diagram__technical-title {
+  border-top: var(--boss-stroke-hairline, 1px) solid var(--boss-color-ink, #000000);
+  font-family: var(--boss-font-label, "Courier New", monospace);
+  color: var(--boss-color-ink, #000000);
+}
+/* Do not use CSS to recolor arbitrary model-supplied SVG elements.
+   Renderers receive theme config; trusted wrappers handle the technical title block. */
+@media print {
+  .boss-diagram { break-inside: avoid; print-color-adjust: exact; }
+}
