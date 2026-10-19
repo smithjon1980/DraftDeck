@@ -1,0 +1,92 @@
+{
+  "diagram_id": "MSC103_HOLD",
+  "slide_id": "EP01_Diagram_Example",
+  "intent": "simple_flow",
+  "semantic_standard": "DIRECTED_FLOW",
+  "renderer": "mermaid",
+  "status": "READY_FOR_VALIDATION",
+  "source_refs": [
+    "SYNTH_MSC103_A",
+    "SYNTH_MSC103_B"
+  ],
+  "nodes": [
+    {
+      "id": "A",
+      "label": "Receive MSC-103",
+      "evidence_refs": [
+        "SYNTH_MSC103_A"
+      ]
+    },
+    {
+      "id": "B",
+      "label": "Copy count provided?",
+      "evidence_refs": [
+        "SYNTH_MSC103_B"
+      ]
+    },
+    {
+      "id": "H",
+      "label": "HOLD: request count",
+      "evidence_refs": [
+        "SYNTH_MSC103_B"
+      ]
+    },
+    {
+      "id": "C",
+      "label": "Calculate 4 x copies",
+      "evidence_refs": [
+        "SYNTH_MSC103_A",
+        "SYNTH_MSC103_B"
+      ]
+    },
+    {
+      "id": "D",
+      "label": "Review before work",
+      "evidence_refs": [
+        "SYNTH_MSC103_A"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "A",
+      "to": "B",
+      "meaning": "Validate required order fields",
+      "evidence_refs": [
+        "SYNTH_MSC103_B"
+      ]
+    },
+    {
+      "from": "B",
+      "to": "H",
+      "meaning": "Copy count absent",
+      "guard": "No",
+      "evidence_refs": [
+        "SYNTH_MSC103_B"
+      ]
+    },
+    {
+      "from": "B",
+      "to": "C",
+      "meaning": "Copy count provided",
+      "guard": "Yes",
+      "evidence_refs": [
+        "SYNTH_MSC103_B"
+      ]
+    },
+    {
+      "from": "C",
+      "to": "D",
+      "meaning": "Draft computed quantity for review",
+      "evidence_refs": [
+        "SYNTH_MSC103_A"
+      ]
+    }
+  ],
+  "source_code": "flowchart LR\n    A[\"Receive MSC-103\"]\n    B{\"Copy count provided?\"}\n    H[\"HOLD: request count\"]\n    C[\"Calculate 4 x copies\"]\n    D[\"Review before work\"]\n    A --> B\n    B -->|No| H\n    B -->|Yes| C\n    C --> D\n",
+  "caption": "Synthetic MSC-103 example; copy count is unavailable and dependent work is held.",
+  "accessible_summary": "The job is checked for a copy count. When missing, it is held; when supplied, the draft sheet quantity is calculated for review.",
+  "unresolved": [
+    "Sample only; no real operation performed."
+  ]
+}
