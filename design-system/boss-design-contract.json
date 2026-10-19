@@ -16,11 +16,12 @@
     "final_visual_approval": "human",
     "release_authorization": "human",
     "ai_or_build_authority": "prepare_and_test_only",
-    "logo_source_sha256": null,
+    "logo_source_sha256": "95f56729fe279a07b151ba5169a764a0aa387a1fac8cf283424ea783f950b146",
     "uncertainties": [
-      "Canonical logo binary/hash not yet pinned",
+      "The authenticated original-supplied logo is a JPEG, not a confirmed editable vector master; alternate lockups and clear-space measurements remain unapproved",
       "Exact production typography and component dimensions await representative render approval"
-    ]
+    ],
+    "logo_source_repo_path": "episode01/assets/brand/bioscillate-original-supplied.jpg"
   },
   "brand": {
     "identity": "Bioscillate Operating System by Seven",
