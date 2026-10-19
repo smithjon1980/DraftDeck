@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Browser-native editorial labels and typography. Engine-generated SVG is
+   separate technical geometry, never the entire slide.
+   Design source: design-system/boss-design-contract.json. */
+:root {
+  --boss-color-ground: #FFFFFF;
+  --boss-color-ink: #000000;
+  --boss-color-brand-cyan: #00BCEB;
+  --boss-color-brand-magenta: #E30074;
+}
+html, body { background: #FFFFFF; margin: 0; padding: 0; }
+body { font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
+#root { width: 1920px; height: 1080px; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, #root { width: 1920px; height: 1080px; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
