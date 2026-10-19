@@ -5,7 +5,7 @@ import "@excalidraw/excalidraw/index.css";
 import "./style.css";
 import scene from "../assets/scene.json";
 
-const source=convertToExcalidrawElements(scene.elements);
+const source=convertToExcalidrawElements(scene.elements,{regenerateIds:false});
 function App(){
   const apiRef=useRef(null);
   const [status,setStatus]=useState("LOADING");
