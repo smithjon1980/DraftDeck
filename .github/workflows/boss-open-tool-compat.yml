@@ -1,0 +1,62 @@
+name: BOSS open tool compatibility trial (no paid services)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'experiments/open-tool-fit-v01/**'
+      - '.github/workflows/boss-open-tool-compat.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  penpot-token-parity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: DTCG token format, BOSS palette and negative fixtures
+        run: python -m unittest discover -s experiments/open-tool-fit-v01 -p 'test_penpot_tokens.py' -v
+      - name: Limits
+        run: echo "Static Penpot-compatible DTCG check only. Actual Penpot import/export and graphical editing NOT_TESTED."
+  excalidraw-editor-conversion:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PUPPETEER_SKIP_DOWNLOAD: '1'
+      CI: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install exact direct package versions
+        working-directory: experiments/open-tool-fit-v01
+        run: npm install --no-audit --no-fund
+      - name: Compile Excalidraw editor candidate
+        working-directory: experiments/open-tool-fit-v01
+        run: |
+          npm run build
+          cp index.html dist/index.html
+      - name: Convert synthetic Mermaid source in browser and inspect mounted editor
+        working-directory: experiments/open-tool-fit-v01
+        run: |
+          export CHROME_BIN="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          npm run test:browser
+      - name: Upload review artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: boss-open-tool-excalidraw-smoke
+          path: |
+            experiments/open-tool-fit-v01/proof/*.png
+            experiments/open-tool-fit-v01/proof/*.json
+            experiments/open-tool-fit-v01/package-lock.json
+          retention-days: 14
+      - name: Trial limits
+        if: always()
+        run: |
+          echo "No Baseten model calls, no paid hosting, no student private data."
+          echo "Excalidraw editor conversion is an exploration tool, not the finalized BOSS diagram renderer."

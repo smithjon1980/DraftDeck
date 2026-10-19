@@ -1,0 +1,38 @@
+{
+  "BOSS": {
+    "color": {
+      "ground": {
+        "$type": "color",
+        "$value": "#FFFFFF"
+      },
+      "ink": {
+        "$type": "color",
+        "$value": "#000000"
+      },
+      "cyan": {
+        "$type": "color",
+        "$value": "#00BCEB"
+      },
+      "magenta": {
+        "$type": "color",
+        "$value": "#E30074"
+      }
+    },
+    "dimension": {
+      "slideWidth": {
+        "$type": "dimension",
+        "$value": {
+          "value": 1920,
+          "unit": "px"
+        }
+      },
+      "slideHeight": {
+        "$type": "dimension",
+        "$value": {
+          "value": 1080,
+          "unit": "px"
+        }
+      }
+    }
+  }
+}
