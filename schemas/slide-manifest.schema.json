@@ -1,0 +1,822 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:boss:diagram-slide-manifest:0.2-candidate",
+  "title": "BOSS diagram-slide candidate manifest (model output ONLY)",
+  "description": "Untrusted model proposal. Does not verify render, source truth, logo approval, or human authorization.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "slide_id",
+    "slide_role",
+    "teaching_objective",
+    "diagram_kind",
+    "diagram_source",
+    "source",
+    "story",
+    "editorial",
+    "art",
+    "brand",
+    "profile",
+    "qa",
+    "candidate_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.2-candidate"
+    },
+    "slide_id": {
+      "type": "string",
+      "pattern": "^EP[0-9]{2}-[0-9]{3}$"
+    },
+    "slide_role": {
+      "enum": [
+        "hero",
+        "editorial",
+        "process",
+        "architecture",
+        "decision",
+        "concept",
+        "comparison",
+        "worksheet",
+        "reflection"
+      ]
+    },
+    "teaching_objective": {
+      "enum": [
+        "no-diagram",
+        "simple-branch",
+        "entity-state",
+        "service-interaction",
+        "roles-permissions",
+        "business-handoffs",
+        "business-rules",
+        "system-architecture",
+        "root-cause",
+        "facility-mechanics"
+      ]
+    },
+    "diagram_kind": {
+      "enum": [
+        "none",
+        "mermaid-flowchart",
+        "mermaid-state",
+        "plantuml-state",
+        "plantuml-sequence",
+        "plantuml-usecase",
+        "bpmn",
+        "dmn",
+        "c4-structurizr",
+        "mece-tree",
+        "iso-technical"
+      ]
+    },
+    "diagram_source": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/inlineDiagram"
+        },
+        {
+          "$ref": "#/$defs/fileDiagram"
+        }
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reference",
+        "section",
+        "status"
+      ],
+      "properties": {
+        "reference": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 512
+        },
+        "section": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "status": {
+          "enum": [
+            "UNVERIFIED_CANDIDATE",
+            "AUTHOR_VERIFIED_SOURCE"
+          ]
+        }
+      }
+    },
+    "story": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scenario",
+        "narrative_beat",
+        "reflection_question"
+      ],
+      "properties": {
+        "scenario": {
+          "enum": [
+            "main-street-copy",
+            "general-engineering",
+            "operator-exercise"
+          ]
+        },
+        "narrative_beat": {
+          "type": "string",
+          "minLength": 12,
+          "maxLength": 1200
+        },
+        "reflection_question": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 300
+        }
+      }
+    },
+    "editorial": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "headline",
+        "body",
+        "copy_status"
+      ],
+      "properties": {
+        "headline": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 180
+        },
+        "body": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 12000
+        },
+        "copy_status": {
+          "enum": [
+            "PARAPHRASE_CANDIDATE",
+            "VERBATIM_PENDING_COMPARISON",
+            "NON_SPOKEN_EDITORIAL"
+          ]
+        }
+      }
+    },
+    "art": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "treatment",
+        "asset_ref",
+        "contains_editorial_text"
+      ],
+      "properties": {
+        "treatment": {
+          "enum": [
+            "technical-engraving",
+            "iso-facility-scene",
+            "source-diagram-only",
+            "none"
+          ]
+        },
+        "asset_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 350
+        },
+        "contains_editorial_text": {
+          "const": false
+        }
+      }
+    },
+    "brand": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "identity",
+        "ground",
+        "ink",
+        "cyan",
+        "magenta",
+        "retired_waveform",
+        "logo_source"
+      ],
+      "properties": {
+        "identity": {
+          "const": "Bioscillate Operating System by Seven"
+        },
+        "ground": {
+          "const": "#FFFFFF"
+        },
+        "ink": {
+          "const": "#000000"
+        },
+        "cyan": {
+          "const": "#00BCEB"
+        },
+        "magenta": {
+          "const": "#E30074"
+        },
+        "retired_waveform": {
+          "const": false
+        },
+        "logo_source": {
+          "const": "RESOLVED_BY_TRUSTED_BUILD_NOT_MODEL"
+        }
+      }
+    },
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "width",
+        "height",
+        "render_master",
+        "editorial_text"
+      ],
+      "properties": {
+        "width": {
+          "const": 1920
+        },
+        "height": {
+          "const": 1080
+        },
+        "render_master": {
+          "const": "react-tailwind"
+        },
+        "editorial_text": {
+          "const": "native-html"
+        }
+      }
+    },
+    "qa": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "syntax",
+        "semantics",
+        "visual",
+        "human_approval"
+      ],
+      "properties": {
+        "syntax": {
+          "const": "NOT_TESTED"
+        },
+        "semantics": {
+          "const": "NOT_TESTED"
+        },
+        "visual": {
+          "const": "NOT_TESTED"
+        },
+        "human_approval": {
+          "const": "PENDING"
+        }
+      }
+    },
+    "candidate_status": {
+      "const": "MODEL_PROPOSED_UNVERIFIED"
+    }
+  },
+  "$defs": {
+    "inlineDiagram": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "language",
+        "body"
+      ],
+      "properties": {
+        "mode": {
+          "const": "inline"
+        },
+        "language": {
+          "enum": [
+            "mermaid",
+            "plantuml",
+            "bpmn-xml",
+            "dmn-xml",
+            "structurizr",
+            "json-tree",
+            "illustration-spec"
+          ]
+        },
+        "body": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 30000
+        }
+      }
+    },
+    "fileDiagram": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "language",
+        "path"
+      ],
+      "properties": {
+        "mode": {
+          "const": "file"
+        },
+        "language": {
+          "enum": [
+            "mermaid",
+            "plantuml",
+            "bpmn-xml",
+            "dmn-xml",
+            "structurizr",
+            "json-tree",
+            "illustration-spec"
+          ]
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^diagrams/[A-Za-z0-9_/-]+\\.(mmd|puml|bpmn|dmn|dsl|json)$",
+          "maxLength": 240
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "teaching_objective": {
+            "const": "no-diagram"
+          }
+        },
+        "required": [
+          "teaching_objective"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_kind": {
+            "enum": [
+              "none"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "teaching_objective": {
+            "const": "simple-branch"
+          }
+        },
+        "required": [
+          "teaching_objective"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_kind": {
+            "enum": [
+              "mermaid-flowchart"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "teaching_objective": {
+            "const": "entity-state"
+          }
+        },
+        "required": [
+          "teaching_objective"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_kind": {
+            "enum": [
+              "mermaid-state",
+              "plantuml-state"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "teaching_objective": {
+            "const": "service-interaction"
+          }
+        },
+        "required": [
+          "teaching_objective"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_kind": {
+            "enum": [
+              "plantuml-sequence"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "teaching_objective": {
+            "const": "roles-permissions"
+          }
+        },
+        "required": [
+          "teaching_objective"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_kind": {
+            "enum": [
+              "plantuml-usecase"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "teaching_objective": {
+            "const": "business-handoffs"
+          }
+        },
+        "required": [
+          "teaching_objective"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_kind": {
+            "enum": [
+              "bpmn"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "teaching_objective": {
+            "const": "business-rules"
+          }
+        },
+        "required": [
+          "teaching_objective"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_kind": {
+            "enum": [
+              "dmn"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "teaching_objective": {
+            "const": "system-architecture"
+          }
+        },
+        "required": [
+          "teaching_objective"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_kind": {
+            "enum": [
+              "c4-structurizr"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "teaching_objective": {
+            "const": "root-cause"
+          }
+        },
+        "required": [
+          "teaching_objective"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_kind": {
+            "enum": [
+              "mece-tree"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "teaching_objective": {
+            "const": "facility-mechanics"
+          }
+        },
+        "required": [
+          "teaching_objective"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_kind": {
+            "enum": [
+              "iso-technical"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "diagram_kind": {
+            "const": "none"
+          }
+        },
+        "required": [
+          "diagram_kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_source": {
+            "type": "null"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "diagram_source": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "diagram_kind": {
+            "const": "mermaid-flowchart"
+          }
+        },
+        "required": [
+          "diagram_kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_source": {
+            "properties": {
+              "language": {
+                "const": "mermaid"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "diagram_kind": {
+            "const": "mermaid-state"
+          }
+        },
+        "required": [
+          "diagram_kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_source": {
+            "properties": {
+              "language": {
+                "const": "mermaid"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "diagram_kind": {
+            "const": "plantuml-state"
+          }
+        },
+        "required": [
+          "diagram_kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_source": {
+            "properties": {
+              "language": {
+                "const": "plantuml"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "diagram_kind": {
+            "const": "plantuml-sequence"
+          }
+        },
+        "required": [
+          "diagram_kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_source": {
+            "properties": {
+              "language": {
+                "const": "plantuml"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "diagram_kind": {
+            "const": "plantuml-usecase"
+          }
+        },
+        "required": [
+          "diagram_kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_source": {
+            "properties": {
+              "language": {
+                "const": "plantuml"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "diagram_kind": {
+            "const": "bpmn"
+          }
+        },
+        "required": [
+          "diagram_kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_source": {
+            "properties": {
+              "language": {
+                "const": "bpmn-xml"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "diagram_kind": {
+            "const": "dmn"
+          }
+        },
+        "required": [
+          "diagram_kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_source": {
+            "properties": {
+              "language": {
+                "const": "dmn-xml"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "diagram_kind": {
+            "const": "c4-structurizr"
+          }
+        },
+        "required": [
+          "diagram_kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_source": {
+            "properties": {
+              "language": {
+                "const": "structurizr"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "diagram_kind": {
+            "const": "mece-tree"
+          }
+        },
+        "required": [
+          "diagram_kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_source": {
+            "properties": {
+              "language": {
+                "const": "json-tree"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "diagram_kind": {
+            "const": "iso-technical"
+          }
+        },
+        "required": [
+          "diagram_kind"
+        ]
+      },
+      "then": {
+        "properties": {
+          "diagram_source": {
+            "properties": {
+              "language": {
+                "const": "illustration-spec"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
