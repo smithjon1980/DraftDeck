@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.2-candidate",
+  "slide_id": "EP01-038",
+  "slide_role": "process",
+  "teaching_objective": "simple-branch",
+  "diagram_kind": "mermaid-flowchart",
+  "diagram_source": {
+    "mode": "file",
+    "language": "mermaid",
+    "path": "diagrams/main-street-copy-intake.mmd"
+  },
+  "source": {
+    "reference": "SYNTHETIC_TEST_SCENARIO",
+    "section": "request-intake-example",
+    "status": "UNVERIFIED_CANDIDATE"
+  },
+  "story": {
+    "scenario": "main-street-copy",
+    "narrative_beat": "The customer has provided an incomplete print request and the counter operator must request the missing copy count before production.",
+    "reflection_question": "Which field must be established before production can proceed?"
+  },
+  "editorial": {
+    "headline": "When a request is incomplete, place it on HOLD",
+    "body": "Illustrative process only. Do not treat this as evidence of a real customer transaction.",
+    "copy_status": "NON_SPOKEN_EDITORIAL"
+  },
+  "art": {
+    "treatment": "source-diagram-only",
+    "asset_ref": null,
+    "contains_editorial_text": false
+  },
+  "brand": {
+    "identity": "Bioscillate Operating System by Seven",
+    "ground": "#FFFFFF",
+    "ink": "#000000",
+    "cyan": "#00BCEB",
+    "magenta": "#E30074",
+    "retired_waveform": false,
+    "logo_source": "RESOLVED_BY_TRUSTED_BUILD_NOT_MODEL"
+  },
+  "profile": {
+    "width": 1920,
+    "height": 1080,
+    "render_master": "react-tailwind",
+    "editorial_text": "native-html"
+  },
+  "qa": {
+    "syntax": "NOT_TESTED",
+    "semantics": "NOT_TESTED",
+    "visual": "NOT_TESTED",
+    "human_approval": "PENDING"
+  },
+  "candidate_status": "MODEL_PROPOSED_UNVERIFIED"
+}
