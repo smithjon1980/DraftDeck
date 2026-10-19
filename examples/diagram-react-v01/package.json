@@ -2,12 +2,14 @@
   "name": "boss-diagram-react-v01",
   "version": "0.1.0",
   "private": true,
-  "description": "BOSS: real Mermaid and PlantUML compiler evidence in React/Tailwind (synthetic only)",
+  "description": "BOSS: Mermaid/PlantUML validated source → strict IR → native React/Tailwind diagram construction",
   "scripts": {
     "build:css": "tailwindcss -i src/styles.css -o dist/styles.css --minify",
     "build:app": "esbuild src/main.jsx --bundle --minify --format=iife --loader:.jsx=jsx --outfile=dist/main.js",
     "build": "npm run build:css && npm run build:app",
-    "render:browser": "node scripts/render-browser.mjs"
+    "render:browser": "node scripts/render-browser.mjs",
+    "compile:semantic": "node scripts/compile-semantic.mjs",
+    "test:semantic": "node --test scripts/test-semantic.mjs"
   },
   "devDependencies": {
     "@mermaid-js/mermaid-cli": "11.17.0",
