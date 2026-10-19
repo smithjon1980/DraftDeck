@@ -1,19 +1,19 @@
-flowchart TB
-    subgraph INTAKE["01 / INTAKE AND VALIDATION"]
-        direction LR
-        A["Customer submits print request"] --> B{"Required fields and copy count provided?"}
+flowchart LR
+    subgraph INTAKE["01 / INTAKE + VALIDATION"]
+        direction TB
+        A["Customer print request"] --> B{"All required fields and copy count known?"}
         B -->|No| C["HOLD: request missing information"]
         C --> B
     end
-    subgraph PRODUCE["02 / BOUNDED PRODUCTION"]
-        direction LR
+    subgraph PRODUCTION["02 / REVIEWED PRODUCTION"]
+        direction TB
         D["Create reviewed work order"] --> E["Authorized production"]
     end
-    subgraph QUALITY["03 / INSPECT AND RELEASE"]
-        direction LR
-        F{"Quality inspection passed?"} -->|No| G["Record defect; correct job"]
+    subgraph QUALITY["03 / INSPECTION + DELIVERY"]
+        direction TB
+        F{"Quality inspection passed?"} -->|No| G["Record defect and correct job"]
         G --> F
-        F -->|Yes| H["Pickup or shipment with receipt"]
+        F -->|Yes| H["Pickup or shipment receipt"]
     end
-    B -->|Yes| D
-    E --> F
+    INTAKE -->|All required data verified| PRODUCTION
+    PRODUCTION -->|Completed item| QUALITY
