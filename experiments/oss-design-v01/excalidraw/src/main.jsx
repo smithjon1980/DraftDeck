@@ -2,6 +2,7 @@ import React, {useRef,useState} from "react";
 import {createRoot} from "react-dom/client";
 import {Excalidraw,convertToExcalidrawElements,serializeAsJSON} from "@excalidraw/excalidraw";
 import "@excalidraw/excalidraw/index.css";
+import "./style.css";
 import scene from "../assets/scene.json";
 
 const source=convertToExcalidrawElements(scene.elements);
