@@ -14,7 +14,31 @@ try{
   const errors=[];page.on("pageerror",e=>errors.push(e.message));
   await page.goto(pathToFileURL(path.join(root,"dist","index.html")).href,
     {waitUntil:"domcontentloaded",timeout:60000});
-  await page.waitForFunction(()=>window.__bossTrial?.ready===true,{timeout:60000});
+  try {
+    await page.waitForFunction(()=>{
+      const api=window.__bossExcalidrawAPI;
+      if(!api) return false;
+      const els=api.getSceneElements();
+      const ids=els.map(x=>x.id);
+      const required=["msc-request","msc-check","msc-hold","msc-work"];
+      if(!required.every(x=>ids.includes(x))) return false;
+      window.__bossTrial={...(window.__bossTrial||{}),ready:true,
+        initialCount:els.length,initialIDs:ids};
+      return true;
+    },{timeout:20000});
+  } catch(err){
+    const diagnostics=await page.evaluate(()=>({
+      status:document.querySelector("#status")?.textContent,
+      root:document.querySelector("#root")?.textContent?.slice(0,800),
+      apiPresent:Boolean(window.__bossExcalidrawAPI),
+      currentIDs:window.__bossExcalidrawAPI?.getSceneElements()?.map(x=>x.id),
+      trial:window.__bossTrial,
+      appCanvasCount:document.querySelectorAll("canvas").length,
+    }));
+    await page.screenshot({path:path.join(out,"initialization-failure.png"),fullPage:true});
+    console.error("BROWSER_SCENE_DIAGNOSTIC",JSON.stringify({diagnostics,errors},null,2));
+    throw err;
+  }
   const initial=await page.evaluate(()=>window.__bossTrial);
   if(!initial.initialIDs.includes("msc-request")||!initial.initialIDs.includes("msc-hold")||
      !initial.initialIDs.includes("msc-check")||!initial.initialIDs.includes("msc-work")){
