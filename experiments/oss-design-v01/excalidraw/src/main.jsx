@@ -12,6 +12,7 @@ function App(){
   function markReady(api){
     if(!api)return;
     apiRef.current=api;
+    window.__bossExcalidrawAPI=api;
     const current=api.getSceneElements();
     window.__bossTrial={ready:false, initialCount:current.length,
       initialIDs:current.map(x=>x.id),
