@@ -149,7 +149,7 @@ function SequenceMessage({item,actors,index}) {
       <defs><marker id={"seq-tip-"+index} markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
         <path d="M 0 0 L 8 4 L 0 8 z" fill={isHold?"#E30074":"#00BCEB"}/>
       </marker></defs>
-      <line x1={x1} y1="45" x2={x2} y2="45"
+      <line x1={x1} y1="35" x2={x2} y2="35"
         stroke={isHold?"#E30074":"#00BCEB"}
         strokeWidth="2.5" strokeDasharray={item.reply?"7 4":undefined}
         markerEnd={"url(#seq-tip-"+index+")"}/>
