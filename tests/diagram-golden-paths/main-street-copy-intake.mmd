@@ -1,0 +1,10 @@
+flowchart LR
+  intake["Customer submits print request"] --> verify{"Copy count and required fields provided?"}
+  verify -->|No| hold["HOLD: ask customer for missing information"]
+  hold --> verify
+  verify -->|Yes| work["Create reviewed work order"]
+  work --> produce["Authorized production"]
+  produce --> inspect{"Quality inspection passed?"}
+  inspect -->|No| fix["Record defect; correct job"]
+  fix --> inspect
+  inspect -->|Yes| deliver["Pickup or shipment with receipt"]
