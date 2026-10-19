@@ -1,0 +1,6 @@
+flowchart LR
+  A["Main Street Copy request"] --> B{"Copy count known?"}
+  B -->|No| C["HOLD: seek clarification"]
+  C --> B
+  B -->|Yes| D["Validate work order"]
+  D --> E["Authorized production"]
