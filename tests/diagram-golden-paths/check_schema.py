@@ -55,6 +55,11 @@ class ContractTests(unittest.TestCase):
                 pointer[path[-1]] = value
                 self.assert_invalid(obj)
 
+    def test_model_cannot_claim_author_verified_source(self):
+        obj = copy.deepcopy(self.fixture)
+        obj["source"]["status"] = "AUTHOR_VERIFIED_SOURCE"
+        self.assert_invalid(obj)
+
     def test_route_rejects_different_diagram_kind(self):
         obj = copy.deepcopy(self.fixture)
         obj["diagram_kind"] = "plantuml-sequence"
