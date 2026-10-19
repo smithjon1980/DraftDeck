@@ -108,10 +108,7 @@
           "pattern": "^[0-9a-f]{64}$"
         },
         "status": {
-          "enum": [
-            "UNVERIFIED_CANDIDATE",
-            "AUTHOR_VERIFIED_SOURCE"
-          ]
+          "const": "UNVERIFIED_CANDIDATE"
         }
       }
     },
