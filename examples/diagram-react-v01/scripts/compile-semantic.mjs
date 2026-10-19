@@ -9,7 +9,7 @@ import { fileURLToPath } from "node:url";
 const hash = s => crypto.createHash("sha256").update(s).digest("hex");
 function reject(line, label) { throw Error("UNSUPPORTED_" + label + ": " + line); }
 function safeText(text) {
-  if (typeof text !== "string" || text.length > 140 || /[<>{}]/.test(text) && /[<>]/.test(text)) {
+  if (typeof text !== "string" || text.length > 140 || /[<>]/.test(text)) {
     throw Error("UNSAFE_OR_OVERSIZE_LABEL");
   }
   return text;
@@ -44,7 +44,7 @@ export function parseMermaid(source) {
     }
     if (line === "direction TB") { if(!current||current.direction)throw Error("INVALID_DIRECTION");current.direction="TB";continue; }
     if (line === "end") { if(!current)throw Error("UNBALANCED_END");current=null;continue; }
-    const arrow=line.split(/\s+-->\s+/);
+    const arrow=line.split(/\s+-->\s*/);
     if(arrow.length!==2) reject(line,"MERMAID_STATEMENT");
     let rhs=arrow[1], label=null;
     const labelMatch=rhs.match(/^\|([^|]+)\|\s*(.+)$/);
