@@ -1,0 +1,33 @@
+name: BOSS diagram contract (offline structural)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'docs/BOSS_Diagram_Standards_Contract.md'
+      - 'schemas/slide-manifest.schema.json'
+      - 'design-system/diagram/**'
+      - 'tests/diagram-golden-paths/**'
+      - '.github/workflows/boss-diagram-contract.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  contract-tests:
+    name: Schema and negative-fixture checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned offline schema validator
+        run: python -m pip install 'jsonschema==4.23.0'
+      - name: Validate synthetic schema examples and failures
+        run: python -m unittest discover -s tests/diagram-golden-paths -p 'check_schema.py' -v
+      - name: Explicit validation scope
+        run: |
+          echo "PASS means JSON Schema, routing and static token fixture checks only."
+          echo "No Mermaid, PlantUML, BPMN, DMN, C4 engine rendering attempted."
+          echo "No private manuscript, Baseten API key, paid inference or external approval exercised."
+          echo "Browser visual fidelity, semantics, target editability and release remain NOT_TESTED."

@@ -1,0 +1,18 @@
+@startuml
+title Main Street Copy — request clarification (synthetic)
+actor Customer
+participant "Counter Operator" as Counter
+participant "Work Order" as Order
+participant "Production" as Production
+Customer -> Counter : Submit printing requirements
+Counter -> Order : Validate required fields
+alt Copy count missing
+  Order --> Counter : HOLD / missing field
+  Counter -> Customer : Request copy count
+  Customer -> Counter : Supply count
+  Counter -> Order : Revalidate requirements
+else Required fields complete
+  Order --> Counter : Validation ready
+end
+Counter -> Production : Release only after validation
+@enduml
