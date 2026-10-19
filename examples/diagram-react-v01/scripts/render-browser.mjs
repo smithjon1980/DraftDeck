@@ -28,8 +28,7 @@ try {
       const root = document.querySelector("#slide");
       const bbox = root.getBoundingClientRect();
       const diagram = root.querySelector("section img");
-      const text = Array.from(root.querySelectorAll("h1,h2,p"))
-        .map(el => el.innerText).join(" ");
+      const text = root.innerText;
       return {
         id: root.getAttribute("data-slide-id"),
         width: bbox.width, height: bbox.height,
