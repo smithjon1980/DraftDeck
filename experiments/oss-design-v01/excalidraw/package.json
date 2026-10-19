@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
-    "build": "esbuild src/main.jsx --bundle --format=iife --minify --loader:.jsx=jsx --loader:.woff2=file --loader:.woff=file --outfile=dist/app.js",
+    "build": "esbuild src/main.jsx --bundle --format=iife --conditions=production --minify --loader:.jsx=jsx --loader:.woff2=file --loader:.woff=file --outfile=dist/app.js",
     "test": "node scripts/browser-test.mjs"
   },
   "dependencies": {
