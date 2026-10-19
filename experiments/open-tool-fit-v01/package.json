@@ -4,7 +4,7 @@
   "private": true,
   "description": "No-cost BOSS Mermaid-to-Excalidraw compatibility smoke test",
   "scripts": {
-    "build": "esbuild src/main.jsx --bundle --platform=browser --format=iife --conditions=production --loader:.mmd=text --loader:.css=css --outdir=dist",
+    "build": "esbuild src/main.jsx --bundle --platform=browser --format=iife --conditions=production --loader:.mmd=text --loader:.css=css --loader:.woff2=file --asset-names=assets/[name]-[hash] --outdir=dist",
     "test:browser": "node scripts/check-browser.mjs"
   },
   "dependencies": {
