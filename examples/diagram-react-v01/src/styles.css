@@ -245,7 +245,7 @@ body { font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antial
   pointer-events:none;
 }
 .boss-seq-message-label {
-  position:absolute;z-index:2;top:3px;
+  position:absolute;z-index:2;top:1px;
   padding:3px 5px 2px;
   background:#FFFFFF;
   font-size:14px;font-weight:800;
@@ -276,4 +276,4 @@ body { font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antial
   color:#E30074;
 }
 .boss-seq-condition--else {color:#00738e;border-color:#00BCEB;}
-.boss-seq-condition--end {height:19px;padding:2px 9px;font-size:11px;color:#555;border-color:#999;}
+.boss-seq-condition--end {height:14px;padding:0px 9px;font-size:10px;color:#555;border-color:#999;}
