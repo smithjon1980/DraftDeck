@@ -1,0 +1,4 @@
+interface:
+  display_name: "BOSS Cross-Media Review"
+  short_description: "Check BOSS source, audio, slides and workbook alignment"
+  default_prompt: "Use $boss-cross-media-review to inspect a BOSS module family."

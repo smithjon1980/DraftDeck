@@ -18,7 +18,7 @@ When higher authority conflicts with candidate interpretation, surface the confl
 
 ## Selected generation baseline
 Use only this revision's ingestion folder and the latest candidate architecture note.
-Do not mix earlier authority/core-doctrine summaries containing “agents are couriers” and “models are freight” into this notebook. Those summaries remain historical/current doctrine records outside this candidate generation set; their formal reconciliation is not claimed here.
+Use the reconciled Module 01 v0.2 derivatives when combining this Day Zero set with Module 01. They use the same agent/counter, model/capability and data/task/payload relationships. Older training compilations are historical references, excluded from active generation. This is source-set reconciliation, not controlled doctrine promotion.
 The reframed role correspondence is:
 Human = sender/receiver.
 Data + task = payload.
@@ -54,3 +54,4 @@ Exclude aviation framing and predecessor terminology.
 Media generated from these sources is WIP candidate output.
 Source upload, generation, ASR completion, rendering, evaluator success and final release are distinct.
 Surface HOLD / UNKNOWN / NOT ESTABLISHED where required conditions lack evidence.
+

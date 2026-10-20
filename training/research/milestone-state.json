@@ -1,0 +1,379 @@
+{
+  "schema_version": "1.0",
+  "project": "BOSS",
+  "repository": "smithjon1980/DraftDeck",
+  "work_branch": "training/module-01-assessment-rigor-v1",
+  "pull_request": 32,
+  "goal": "Research practice in learning design and governed information work",
+  "timezone": "America/Chicago",
+  "scope": "Project evidence and author development; not degree equivalence or learner qualification",
+  "baseline_basis": "Verified artifacts and observed conversation reasoning; no learner pilot outcomes or independent methods review recorded",
+  "milestones": [
+    {
+      "id": "M1",
+      "name": "Design coherence",
+      "state": "drafted",
+      "next_gate": "tested",
+      "gates": {
+        "drafted": [
+          {
+            "id": "M1-D1",
+            "requirement": "A usable deliverable exists",
+            "status": "verified",
+            "evidence_refs": [
+              "https://github.com/smithjon1980/DraftDeck/blob/training/module-01-assessment-rigor-v1/training/boss-operator-program/module-01/assessment/07_MODULE_01_REVIEW_SECTION.md"
+            ]
+          },
+          {
+            "id": "M1-D2",
+            "requirement": "Source basis and limits are identifiable",
+            "status": "verified",
+            "evidence_refs": [
+              "https://github.com/smithjon1980/DraftDeck/blob/training/module-01-assessment-rigor-v1/training/boss-operator-program/module-01/assessment/00_ASSESSMENT_ALIGNMENT_AND_INDEX.md"
+            ]
+          }
+        ],
+        "tested": [
+          {
+            "id": "M1-T1",
+            "requirement": "Jonathan explains and reviews the complete section in his own words",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M1-T2",
+            "requirement": "Available final audio and PDF are inspected against the source",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M1-T3",
+            "requirement": "Material correspondence mismatches are corrected or explicitly unresolved",
+            "status": "pending",
+            "evidence_refs": []
+          }
+        ],
+        "independently_reviewed": [
+          {
+            "id": "M1-R1",
+            "requirement": "Relevant independent critique is recorded",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M1-R2",
+            "requirement": "Material objections receive an evidence-based response",
+            "status": "pending",
+            "evidence_refs": []
+          }
+        ]
+      },
+      "next_action": "Review the complete Module 01 section for voice, correspondence and evidence; record specific comments."
+    },
+    {
+      "id": "M2",
+      "name": "Research grounding",
+      "state": "drafted",
+      "next_gate": "tested",
+      "gates": {
+        "drafted": [
+          {
+            "id": "M2-D1",
+            "requirement": "A usable deliverable exists",
+            "status": "verified",
+            "evidence_refs": [
+              "https://github.com/smithjon1980/DraftDeck/blob/training/module-01-assessment-rigor-v1/training/research/boss-development-and-evidence-plan.md"
+            ]
+          },
+          {
+            "id": "M2-D2",
+            "requirement": "Source basis and limits are identifiable",
+            "status": "verified",
+            "evidence_refs": [
+              "https://designbasedresearch.org/reppubs/DBRC2003.pdf"
+            ]
+          }
+        ],
+        "tested": [
+          {
+            "id": "M2-T1",
+            "requirement": "Explain relevant primary research methods and limits independently",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M2-T2",
+            "requirement": "Record competing explanations and source-to-claim links",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M2-T3",
+            "requirement": "Revise or bound unsupported design claims",
+            "status": "pending",
+            "evidence_refs": []
+          }
+        ],
+        "independently_reviewed": [
+          {
+            "id": "M2-R1",
+            "requirement": "Relevant independent critique is recorded",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M2-R2",
+            "requirement": "Material objections receive an evidence-based response",
+            "status": "pending",
+            "evidence_refs": []
+          }
+        ]
+      },
+      "next_action": "Complete one critical source-to-claim note for the shipping-counter teaching decision."
+    },
+    {
+      "id": "M3",
+      "name": "Study design",
+      "state": "drafted",
+      "next_gate": "tested",
+      "gates": {
+        "drafted": [
+          {
+            "id": "M3-D1",
+            "requirement": "A usable deliverable exists",
+            "status": "verified",
+            "evidence_refs": [
+              "https://github.com/smithjon1980/DraftDeck/blob/training/module-01-assessment-rigor-v1/training/boss-operator-program/module-01/assessment/05_PILOT_AND_TRANSFER_PLAN.md"
+            ]
+          },
+          {
+            "id": "M3-D2",
+            "requirement": "Source basis and limits are identifiable",
+            "status": "verified",
+            "evidence_refs": [
+              "https://github.com/smithjon1980/DraftDeck/blob/training/module-01-assessment-rigor-v1/training/research/boss-development-and-evidence-plan.md"
+            ]
+          }
+        ],
+        "tested": [
+          {
+            "id": "M3-T1",
+            "requirement": "Defend the question, sampling, measures and analysis limits",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M3-T2",
+            "requirement": "Check administration and scoring with actual feasibility evidence",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M3-T3",
+            "requirement": "Record protocol revisions and their reasons",
+            "status": "pending",
+            "evidence_refs": []
+          }
+        ],
+        "independently_reviewed": [
+          {
+            "id": "M3-R1",
+            "requirement": "Relevant independent critique is recorded",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M3-R2",
+            "requirement": "Material objections receive an evidence-based response",
+            "status": "pending",
+            "evidence_refs": []
+          }
+        ]
+      },
+      "next_action": "Prepare the Module 01 research brief before recruiting learners."
+    },
+    {
+      "id": "M4",
+      "name": "Evidence analysis",
+      "state": "not_started",
+      "next_gate": "drafted",
+      "gates": {
+        "drafted": [
+          {
+            "id": "M4-D1",
+            "requirement": "A usable deliverable exists",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M4-D2",
+            "requirement": "Source basis and limits are identifiable",
+            "status": "pending",
+            "evidence_refs": []
+          }
+        ],
+        "tested": [
+          {
+            "id": "M4-T1",
+            "requirement": "Check analysis against preserved independent ratings and valid denominators",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M4-T2",
+            "requirement": "Explain missing data, deviations and alternative explanations",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M4-T3",
+            "requirement": "Link a revision to observed evidence",
+            "status": "pending",
+            "evidence_refs": []
+          }
+        ],
+        "independently_reviewed": [
+          {
+            "id": "M4-R1",
+            "requirement": "Relevant independent critique is recorded",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M4-R2",
+            "requirement": "Material objections receive an evidence-based response",
+            "status": "pending",
+            "evidence_refs": []
+          }
+        ]
+      },
+      "next_action": "Collect the planned evidence only after the protocol is ready; then produce the analysis."
+    },
+    {
+      "id": "M5",
+      "name": "Bounded contribution",
+      "state": "not_started",
+      "next_gate": "drafted",
+      "gates": {
+        "drafted": [
+          {
+            "id": "M5-D1",
+            "requirement": "A usable deliverable exists",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M5-D2",
+            "requirement": "Source basis and limits are identifiable",
+            "status": "pending",
+            "evidence_refs": []
+          }
+        ],
+        "tested": [
+          {
+            "id": "M5-T1",
+            "requirement": "Compare the candidate contribution with relevant prior work",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M5-T2",
+            "requirement": "Challenge the claim with evidence and contrary interpretations",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M5-T3",
+            "requirement": "State the supported context and unresolved claims",
+            "status": "pending",
+            "evidence_refs": []
+          }
+        ],
+        "independently_reviewed": [
+          {
+            "id": "M5-R1",
+            "requirement": "Relevant independent critique is recorded",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M5-R2",
+            "requirement": "Material objections receive an evidence-based response",
+            "status": "pending",
+            "evidence_refs": []
+          }
+        ]
+      },
+      "next_action": "After results exist, write a contribution memo with explicit limits."
+    },
+    {
+      "id": "M6",
+      "name": "Independent critique",
+      "state": "not_started",
+      "next_gate": "drafted",
+      "gates": {
+        "drafted": [
+          {
+            "id": "M6-D1",
+            "requirement": "A usable deliverable exists",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M6-D2",
+            "requirement": "Source basis and limits are identifiable",
+            "status": "pending",
+            "evidence_refs": []
+          }
+        ],
+        "tested": [
+          {
+            "id": "M6-T1",
+            "requirement": "Explain the method and argument under independent questioning",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M6-T2",
+            "requirement": "Record responses and substantive revisions",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M6-T3",
+            "requirement": "Make the method and materials inspectable by another researcher",
+            "status": "pending",
+            "evidence_refs": []
+          }
+        ],
+        "independently_reviewed": [
+          {
+            "id": "M6-R1",
+            "requirement": "Relevant independent critique is recorded",
+            "status": "pending",
+            "evidence_refs": []
+          },
+          {
+            "id": "M6-R2",
+            "requirement": "Material objections receive an evidence-based response",
+            "status": "pending",
+            "evidence_refs": []
+          }
+        ]
+      },
+      "next_action": "Prepare the research brief for critique by someone with relevant methods expertise."
+    }
+  ],
+  "author_evidence": {
+    "observed": [
+      "Identified metaphor drift into fictional shipping employment",
+      "Asked for structural correspondence across text, podcast and slide companion"
+    ],
+    "not_established": [
+      "Independent critical literature synthesis",
+      "Empirical study execution and analysis",
+      "Original research contribution",
+      "Independent defense of a research finding"
+    ]
+  }
+}
