@@ -1,0 +1,24 @@
+name: BOSS local model evaluation kit
+on:
+  pull_request:
+    paths:
+      - 'experiments/saluki-local-v01/**'
+      - '.github/workflows/boss-local-model-eval.yml'
+permissions:
+  contents: read
+jobs:
+  fixture-and-scorer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile runner
+        run: python -m py_compile experiments/saluki-local-v01/evaluate.py
+      - name: Check fixtures and scorer negative controls
+        run: python experiments/saluki-local-v01/evaluate.py --self-test
+      - name: Validate exported case count
+        run: |
+          python experiments/saluki-local-v01/evaluate.py --export-cases > /tmp/boss-cases.json
+          python -c "import json; x=json.load(open('/tmp/boss-cases.json')); assert len(x)==20"
