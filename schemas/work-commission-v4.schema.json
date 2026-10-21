@@ -1,0 +1,224 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bioscillate.com/schemas/work-commission-v4.schema.json",
+  "title": "BOSS V4 Work Commission — structural candidate",
+  "description": "Validates the Section 6 candidate payload. This is not proof of identity, authority, permission, acceptance, or successful execution. Human authorization and policy checks must be performed outside untrusted content.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "engagement_id",
+    "commission_id",
+    "parent_commission_id",
+    "practice_id",
+    "mandate",
+    "business_objective",
+    "inputs",
+    "permissions",
+    "method",
+    "deliverables",
+    "acceptance_checks",
+    "next_practices",
+    "limits",
+    "status",
+    "authority_ref"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "v4-candidate-1"
+    },
+    "engagement_id": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "commission_id": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "parent_commission_id": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "practice_id": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 80,
+      "pattern": "^[a-z][a-z0-9_-]*$"
+    },
+    "mandate": {
+      "type": "string",
+      "minLength": 15,
+      "maxLength": 4000
+    },
+    "business_objective": {
+      "type": "string",
+      "minLength": 12,
+      "maxLength": 3000
+    },
+    "inputs": {
+      "type": "array",
+      "maxItems": 128,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "classification",
+          "authorized"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+          },
+          "classification": {
+            "type": "string",
+            "enum": [
+              "PUBLIC_SYNTHETIC",
+              "PUBLIC",
+              "INTERNAL",
+              "CLIENT_CONFIDENTIAL",
+              "RESTRICTED"
+            ]
+          },
+          "authorized": {
+            "type": "boolean",
+            "description": "Declared authorization claim; policy must independently validate."
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "source_ref": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          }
+        }
+      }
+    },
+    "permissions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "read",
+        "write",
+        "production_mutation"
+      ],
+      "properties": {
+        "read": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "uniqueItems": true,
+          "maxItems": 64
+        },
+        "write": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "uniqueItems": true,
+          "maxItems": 64
+        },
+        "production_mutation": {
+          "type": "boolean",
+          "description": "Declares intended scope only; true still requires an independently authenticated human decision."
+        }
+      }
+    },
+    "method": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 180
+      },
+      "uniqueItems": true,
+      "maxItems": 64
+    },
+    "deliverables": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 180
+      },
+      "uniqueItems": true
+    },
+    "acceptance_checks": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 180
+      },
+      "uniqueItems": true
+    },
+    "next_practices": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_-]*$",
+        "minLength": 2,
+        "maxLength": 80
+      },
+      "uniqueItems": true,
+      "maxItems": 64
+    },
+    "limits": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 180
+      },
+      "uniqueItems": true,
+      "maxItems": 64
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "READY",
+        "ASSIGNED",
+        "RUNNING",
+        "DELIVERED_UNINSPECTED",
+        "INSPECTION_HOLD",
+        "INSPECTED_ACCEPTABLE",
+        "INSPECTED_REJECTED",
+        "ESCALATED",
+        "CLOSED",
+        "CANCELLED"
+      ]
+    },
+    "authority_ref": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024
+    }
+  }
+}
