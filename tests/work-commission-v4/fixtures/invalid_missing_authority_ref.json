@@ -1,0 +1,50 @@
+{
+  "schema_version": "v4-candidate-1",
+  "engagement_id": "ENG-DEMO-MSC-001",
+  "commission_id": "COM-DEMO-MSC-OPS-001",
+  "parent_commission_id": null,
+  "practice_id": "operations",
+  "mandate": "Specify metadata validation for a proposed document-intake request",
+  "business_objective": "Investigate incomplete requests without assuming deployment",
+  "inputs": [
+    {
+      "id": "SYNTHETIC-REQ-SPEC",
+      "classification": "PUBLIC_SYNTHETIC",
+      "authorized": true
+    }
+  ],
+  "permissions": {
+    "read": [
+      "SYNTHETIC-REQ-SPEC"
+    ],
+    "write": [
+      "sandbox://candidate-output"
+    ],
+    "production_mutation": false
+  },
+  "method": [
+    "IPOS",
+    "PARCELS",
+    "PRIME"
+  ],
+  "deliverables": [
+    "IPOS specification",
+    "PRIME handoff proposal",
+    "evidence gap report"
+  ],
+  "acceptance_checks": [
+    "All four IPOS elements addressed",
+    "Unknowns explicitly labeled",
+    "No deployed-system success claims"
+  ],
+  "next_practices": [
+    "technology",
+    "evidence"
+  ],
+  "limits": [
+    "No customer data",
+    "No automatic release",
+    "No change to operating systems"
+  ],
+  "status": "DRAFT"
+}
