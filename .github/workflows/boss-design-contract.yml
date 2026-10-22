@@ -12,6 +12,10 @@ on:
       - 'doctrine/release-qa.md'
       - 'doctrine/visual-evidence-gate.md'
       - 'skills/draftdeck/SKILL.md'
+      - '.agents/skills/webapp-testing/**'
+      - '.agents/skills/diagnosing-bugs/**'
+      - 'tests/test_external_skill_admission.py'
+      - 'experiments/skill-admission/**'
       - '.github/workflows/boss-design-contract.yml'
   workflow_dispatch:
 permissions:
@@ -31,5 +35,7 @@ jobs:
         run: python3 design-system/validation/test_visual_evidence.py
       - name: Validate visual evidence manifest negative fixtures
         run: python3 -m unittest discover -s tests -p 'test_evidence_manifest.py' -v
+      - name: Validate pinned external skill bytes and mutation fixture
+        run: python3 -m unittest discover -s tests -p 'test_external_skill_admission.py' -v
       - name: Report limits
         run: echo "Only structural parity checked. Visual/adapters/human authorization remain unverified."
