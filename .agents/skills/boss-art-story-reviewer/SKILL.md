@@ -1,22 +1,23 @@
 ---
 name: boss-art-story-reviewer
-description: Review source-story-art completeness for BOSS editorial slides before browser-to-PDF parity testing or visual approval. Use to detect logo-only screens, placeholder reflection copy, untraceable art, invented causal stories, and artwork lost between stages.
+description: Reject incorrect image medium and missing story meaning before BOSS slides reach browser/PDF acceptance. Verifies native art/logo/text separation and source-grounded storytelling; never grants human design approval.
 ---
 
-# BOSS Art & Story Reviewer — two independent gates
+# BOSS Art & Story Reviewer — style, substance, source and export
 
-Read `AGENTS.md`, `doctrine/visual-evidence-gate.md`, and `skills/draftdeck/references/visual-acceptance.md`.
+Read `AGENTS.md`, `doctrine/visual-evidence-gate.md`, and active BOSS Story Architect, Visual Storyboard and Art Asset Producer instructions.
 
-## First gate: structural handoff
-Run `python tools/visual-poc/check_story_layers.py RENDERED_SLIDE.html STORY_MANIFEST.json` on **the actual rendered single-slide HTML**, not source JSX or all slides combined. Require a real story illustration distinct from the canonical logo, matching hashes for the logo and story asset, complete Bridge 1/2 declarations, an actual learner reflection question, and live editorial text. No story asset or unknown reflection question is a HOLD. Store missing evidence rather than fabricating it.
+## Gate 0 — visual medium (human-visible inspection)
+For Episode 01 Slide 02, **reject photography, photorealistic people, dark cinematic/neon HUDs, generic stock-photo side-by-side layouts, generic icon dashboards, and charts posing as story scenes**. Accept only for further assessment a white-ground **technical editorial illustration** with actual process/story mechanisms and limited cyan/magenta/black detail. Classifying a PHOTO as EDITORIAL_ILLUSTRATION in a JSON manifest does not make it so. Compare the actual pixels against the approved brief; if no reviewer inspected the medium, record NOT_TESTED.
 
-## Second gate: semantic and visual review
-Visually inspect the real slide and original source/reference side by side: Can the learner identify the required relationship from the drawing? Are the business objects, actions, constraints and consequences present? Did source-to-story transformation invent factual evidence? Did an asset get cropped or rasterized incorrectly? Are the drawing, logo, editable text and CAD framing distinguishable? Capture a specific difference record and per-gate PASS/FAIL/NOT_TESTED.
+## Gate 1 — narrative adequacy
+At minimum show a specific Market Seven business need, work performed, a **test/proof** of a working capability, deployment/usage consequence, and support/continuity. Do not infer factual metrics. If removing labels destroys every cue of what actually happens, mark FAIL. Compare source teaching assertion to scene, and separate proposed creative devices from approved copy.
 
-Only after both gates should the existing browser-to-PDF fidelity, target editability and explicit human release checks proceed. Structural success is not visual approval, human signoff or publication authorization.
+## Gate 2 — separate layers/structural checks
+On the rendered single-slide HTML run `python tools/visual-poc/check_story_layers.py RENDERED.html STORY_MANIFEST.json`. Require the distinct original-logo and story-illustration bytes for the current bounded gate; check the exact native headline, two bridges, source identity, and native reflection question. Record the separate new BOSS wordmark as an explicitly selected candidate identity asset; do not confuse it with original Bioscillate logo or story art. This script detects presence and hashes, not stylistic quality or source truth.
 
-## Intermediate gate: measured artwork quality
-After structural completeness, inspect actual browser image metrics and run `python tools/visual-poc/check_story_art_resolution.py BROWSER_IMAGE_METRICS.json`. Generate that JSON from live DOM image element dimensions and computed `object-fit`; do not supply claimed sizes from a design prompt. One rendered story-art element must have at least one source pixel per displayed CSS pixel along the effective crop/stretch axis. Report below-threshold input as **HOLD: ART RESOLUTION**. This does not prove sharpness, genuine high-frequency detail or source quality.
+## Gate 3 — actual output
+Render Chromium at 1920×1080 and inspect font/asset loads, protected crop regions, dense illustration detail, native HTML text, correct BOSS wordmark treatment, and CAD/ISO-informed white layout. Rasterize PDF at matched dimensions, compare actual pixels and legibility; do not fix a weak image by PNG re-encoding. Verify target editor edit/save/reopen separately.
 
-## Test 06 warning
-A small crop from a visually persuasive generated full slide can pass logo/artifact hash and reflection structure yet fail the story mechanism and effective resolution. The illustrator must deliver separate scene artwork showing the required operational causal event. Structural READY is not a human visual acceptance result, including when all editorial copy is native and the PDF looks similar.
+## Gate 4 — human decision
+Record PASS/FAIL/NOT_TESTED for medium, narrative, copy, logo and wordmark provenance, artwork detail, browser parity, PDF parity, destination layers, and explicit human selection. A numerical pixel diff or a machine-ready report is not artwork approval. No explicit human review → HOLD.
