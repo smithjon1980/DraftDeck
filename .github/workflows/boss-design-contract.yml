@@ -15,6 +15,8 @@ on:
       - '.agents/skills/boss-*/**'
       - 'tools/visual-poc/check_story_layers.py'
       - 'tests/test_story_layers.py'
+      - 'tools/visual-poc/check_story_art_resolution.py'
+      - 'tests/test_story_art_resolution.py'
       - 'episode01/reference/skill-updates/README.md'
       - '.github/workflows/boss-design-contract.yml'
   workflow_dispatch:
@@ -37,5 +39,7 @@ jobs:
         run: python3 -m unittest discover -s tests -p 'test_evidence_manifest.py' -v
       - name: Validate story illustration integrity and creative handoff negative fixtures
         run: python3 -m unittest discover -s tests -p 'test_story_layers.py' -v
+      - name: Validate browser-measured story artwork resolution negative fixtures
+        run: python3 -m unittest discover -s tests -p 'test_story_art_resolution.py' -v
       - name: Report limits
         run: echo "Only structural parity checked. Visual/adapters/human authorization remain unverified."
