@@ -25,5 +25,7 @@ jobs:
           python-version: '3.12'
       - name: Validate design contract and negative fixtures
         run: python3 design-system/validation/check_contract.py
+      - name: Validate evidence gate fixtures
+        run: python3 design-system/validation/test_visual_evidence.py
       - name: Report limits
         run: echo "Only structural parity checked. Visual/adapters/human authorization remain unverified."
