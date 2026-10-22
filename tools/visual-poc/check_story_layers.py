@@ -18,6 +18,9 @@ HASH = re.compile(r"^[0-9a-f]{64}$")
 MODES = {"art-led", "narrative-led", "hybrid"}
 # Recovered original supplied logo; update only through reviewed asset provenance.
 EXPECTED_LOGO_SHA = "95f56729fe279a07b151ba5169a764a0aa387a1fac8cf283424ea783f950b146"
+# No independently admitted production source for the newly selected BOSS wordmark yet.
+# Only a reviewed code change with source provenance may set this exact trusted digest.
+EXPECTED_NEW_BOSS_WORDMARK_SHA = None
 IMAGE = re.compile(r"^data:image/(png|jpeg|webp|svg\+xml);base64,(.+)$", re.S)
 
 
@@ -139,12 +142,26 @@ def evaluate(html, manifest):
     for label, value in (("logo", logo), ("story art", story_sha)):
         if not HASH.fullmatch(value):
             errors.append("invalid " + label + " SHA-256")
-    if logo != EXPECTED_LOGO_SHA:
-        errors.append("supplied logo SHA differs from recovered canonical asset")
-    if logo not in hashes:
-        errors.append("canonical logo image bytes absent from rendered HTML")
+    variant = assets.get("brand_variant", "LEGACY_BIOSCILLATE")
+    if variant == "LEGACY_BIOSCILLATE":
+        if logo != EXPECTED_LOGO_SHA:
+            errors.append("supplied logo SHA differs from recovered canonical asset")
+        if logo not in hashes:
+            errors.append("canonical logo image bytes absent from rendered HTML")
+    elif variant == "BOSS_NEW_WORDMARK":
+        # A manifest assertion is not independent approval of an identity asset.
+        # A source/provenance review must first pin a trusted digest in code.
+        require(assets, "wordmark_source_id", "assets.wordmark_source_id")
+        if EXPECTED_NEW_BOSS_WORDMARK_SHA is None:
+            errors.append("selected new BOSS wordmark production source SHA is NOT ESTABLISHED; HOLD")
+        elif logo != EXPECTED_NEW_BOSS_WORDMARK_SHA:
+            errors.append("new BOSS wordmark bytes differ from reviewed production identity")
+        if logo not in hashes:
+            errors.append("selected new BOSS wordmark image bytes absent from rendered HTML")
+    else:
+        errors.append("unrecognized brand variant; cannot substitute a manifest logo")
     if story_sha == logo:
-        errors.append("story illustration cannot be the logo")
+        errors.append("story illustration cannot be the brand identity")
     if story_sha not in hashes:
         errors.append("separate manifested story illustration absent from rendered HTML")
     if any("error" in image for image in rendered.images):
