@@ -14,7 +14,7 @@ jobs:
     timeout-minutes: 25
     env:
       HF_HUB_DISABLE_TELEMETRY: '1'
-      HF_HOME: ${{ runner.temp }}/hf-public-smoke
+      HF_HOME: /tmp/hf-public-smoke
       PYTHONUNBUFFERED: '1'
       OMP_NUM_THREADS: '4'
     steps:
