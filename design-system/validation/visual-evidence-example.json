@@ -1,0 +1,42 @@
+{
+  "schema_version": "1",
+  "profile": "slide",
+  "source_commit": "REPLACE_WITH_PINNED_COMMIT",
+  "artifacts": {
+    "source_manifest": {
+      "status": "NOT_TESTED"
+    },
+    "approved_reference_or_explicit_hold": {
+      "status": "NOT_TESTED"
+    },
+    "browser_render_capture": {
+      "status": "NOT_TESTED"
+    },
+    "side_by_side_comparison": {
+      "status": "NOT_TESTED"
+    },
+    "difference_annotations": {
+      "status": "NOT_TESTED"
+    },
+    "native_text_and_art_layer_evidence": {
+      "status": "NOT_TESTED"
+    },
+    "per_gate_review_states": {
+      "status": "NOT_TESTED"
+    },
+    "human_review_record": {
+      "status": "NOT_TESTED"
+    }
+  },
+  "gates": {
+    "source": "NOT_TESTED",
+    "story": "NOT_TESTED",
+    "brand": "NOT_TESTED",
+    "layout": "NOT_TESTED",
+    "native_layers": "NOT_TESTED",
+    "export": "NOT_TESTED",
+    "adapter": "NOT_TESTED"
+  },
+  "release_state": "HOLD",
+  "human_authorization": "PENDING"
+}
