@@ -6,15 +6,15 @@ description: Governed BOSS instructional media pipeline—from grounded teaching
 # DraftDeck — creative-production and visual-evidence skill (candidate rebuild)
 
 ## Read first
-\`AGENTS.md\`; \`design-system/boss-design-contract.json\`; \`doctrine/production-contract.md\`; \`doctrine/reference-render-protocol.md\`; \`doctrine/visual-evidence-gate.md\`; \`doctrine/release-qa.md\`.
+`AGENTS.md`; `design-system/boss-design-contract.json`; `doctrine/production-contract.md`; `doctrine/reference-render-protocol.md`; `doctrine/visual-evidence-gate.md`; `doctrine/release-qa.md`.
 
 The following **active project-scoped skills** now define the upstream creative handoff:
-- \`.agents/skills/boss-story-architect/SKILL.md\` — source evidence → operational teaching story (Bridge 1).
-- \`.agents/skills/boss-visual-storyboard/SKILL.md\` — teaching story → meaningful art-led/narrative-led/hybrid composition (Bridge 2).
-- \`.agents/skills/boss-art-asset-producer/SKILL.md\` — independent traceable story illustration, verified original logo, crop/resolution records.
-- \`.agents/skills/boss-art-story-reviewer/SKILL.md\` — structural completeness first; actual visual storytelling review second.
+- `.agents/skills/boss-story-architect/SKILL.md` — source evidence → operational teaching story (Bridge 1).
+- `.agents/skills/boss-visual-storyboard/SKILL.md` — teaching story → meaningful art-led/narrative-led/hybrid composition (Bridge 2).
+- `.agents/skills/boss-art-asset-producer/SKILL.md` — independent traceable story illustration, verified original logo, crop/resolution records.
+- `.agents/skills/boss-art-story-reviewer/SKILL.md` — structural completeness first; actual visual storytelling review second.
 
-Supporting references: \`references/editorial-composition.md\` (editorial hierarchy), \`references/web-engineering.md\` (React/Tailwind, tokens, accessibility, separate slide/web/print profiles), \`references/visual-acceptance.md\` (browser/reference/PDF checks). Historical \`references/verified-pipeline.md\` applies only to its historical adapter experiment.
+Supporting references: `references/editorial-composition.md` (editorial hierarchy), `references/web-engineering.md` (React/Tailwind, tokens, accessibility, separate slide/web/print profiles), `references/visual-acceptance.md` (browser/reference/PDF checks). Historical `references/verified-pipeline.md` applies only to its historical adapter experiment.
 
 These skills are not new source authority. The design contract, verified source material and humans control identity, facts and release. Legacy Episode 01 reference skill updates are historical and **do not supersede** this rebuilt workflow.
 
@@ -27,7 +27,7 @@ These skills are not new source authority. The design contract, verified source 
 
 **Execute** — Art Asset Producer preserves or creates the substantive independent illustration. Then compose it in React/Tailwind with CAD/ISO-informed frame, canonical white/black/cyan/magenta brand, original logo, native/selectable editorial HTML, contextual annotations, and the actual learner reflection. The 1920×1080 logical slide scales as a unit; responsive web reflows and print has its own separately approved geometry. A concept PNG may contain provisional text; the production slide must rebuild approved copy as HTML and keep artwork separate.
 
-**Normalize by evidence** — Render the **actual selected slide** in a real browser and capture full-resolution PNG and rendered single-slide HTML. Run \`tools/visual-poc/check_story_layers.py\` with an authored story-layer manifest to detect absent artwork, logo substitutions and unfinished reflection. Run existing design/brand/evidence checks separately. Compare real artwork/reference and browser/PDF images side by side; failure in semantic artwork, technical export, source copy or adapter editability are different failures. Preserve the minimum failing fixture and corrected re-test.
+**Normalize by evidence** — Render the **actual selected slide** in a real browser and capture full-resolution PNG and rendered single-slide HTML. Run `tools/visual-poc/check_story_layers.py` with an authored story-layer manifest to detect absent artwork, logo substitutions and unfinished reflection. Run existing design/brand/evidence checks separately. Compare real artwork/reference and browser/PDF images side by side; failure in semantic artwork, technical export, source copy or adapter editability are different failures. Preserve the minimum failing fixture and corrected re-test.
 
 **Human boundaries** — Source concept review, visual selection, target-editor edit/save/reopen, and final release require their own explicit evidence and decisions. Machine-ready ≠ visually faithful ≠ approved. Never silently publish, import, select a failed winner or infer approval from silence.
 
