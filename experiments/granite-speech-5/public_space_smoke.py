@@ -50,6 +50,8 @@ def main():
             payload.append(handle_file(str(wav.resolve())))
         elif "textbox" in component or "prompt" in label:
             payload.append("transcribe the speech with proper punctuation and capitalization.")
+        elif p.get("parameter_has_default", False):
+            payload.append(p.get("parameter_default"))
         elif "checkbox" in component:
             payload.append(False)
         elif "dropdown" in component or "radio" in component:
