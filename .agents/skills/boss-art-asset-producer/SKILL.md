@@ -6,7 +6,7 @@ description: Produce or recover source-traceable separate story illustration ass
 # BOSS Art Asset Producer — preserve real story artwork
 
 ## Authority
-Read the admitted storyboard, \`AGENTS.md\`, \`design-system/boss-design-contract.json\` and \`doctrine/visual-evidence-gate.md\`. Follow the actual image-generation/editing tool workflow when artwork generation or edits are requested; do not claim to run an unavailable provider.
+Read the admitted storyboard, `AGENTS.md`, `design-system/boss-design-contract.json` and `doctrine/visual-evidence-gate.md`. Follow the actual image-generation/editing tool workflow when artwork generation or edits are requested; do not claim to run an unavailable provider.
 
 ## Asset production
 - Prefer preserved original permitted high-quality artwork where possible. Record source, license/rights status, author/owner, original bytes hash, dimensions, crop and transformation history.
@@ -18,6 +18,6 @@ Read the admitted storyboard, \`AGENTS.md\`, \`design-system/boss-design-contrac
 - Record hash, source ID, claimed rights status, intended story relationship, profile dimensions, transformation pipeline, and tests actually performed. Unknown source/rights/approval means HOLD, not substitution.
 
 ## Machine-checkable handoff
-For \`tools/visual-poc/check_story_layers.py\`, the final HTML must include a discrete \`<img>\` whose decoded bytes match the \`story_art_sha256\` in a story-layer manifest and differ from \`logo_sha256\`. Use a self-contained data URI for isolated/offline verification. This is an **intentionally bounded proof route**; external URLs, CSS backgrounds and other rendering modes require a separate verified adapter before passing this gate.
+For `tools/visual-poc/check_story_layers.py`, the final HTML must include a discrete `<img>` whose decoded bytes match the `story_art_sha256` in a story-layer manifest and differ from `logo_sha256`. Use a self-contained data URI for isolated/offline verification. This is an **intentionally bounded proof route**; external URLs, CSS backgrounds and other rendering modes require a separate verified adapter before passing this gate.
 
 Never claim a matching hash proves narrative correctness. Actual visual inspection and human selection remain mandatory.
