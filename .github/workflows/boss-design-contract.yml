@@ -12,6 +12,14 @@ on:
       - 'doctrine/release-qa.md'
       - 'doctrine/visual-evidence-gate.md'
       - 'skills/draftdeck/SKILL.md'
+      - '.agents/skills/boss-*/**'
+      - 'tools/visual-poc/check_story_layers.py'
+      - 'tests/test_story_layers.py'
+      - 'tests/test_current_case_doctrine.py'
+      - 'doctrine/main-street-copy-case-model.md'
+      - 'tools/visual-poc/check_story_art_resolution.py'
+      - 'tests/test_story_art_resolution.py'
+      - 'episode01/reference/skill-updates/README.md'
       - '.github/workflows/boss-design-contract.yml'
   workflow_dispatch:
 permissions:
@@ -31,5 +39,11 @@ jobs:
         run: python3 design-system/validation/test_visual_evidence.py
       - name: Validate visual evidence manifest negative fixtures
         run: python3 -m unittest discover -s tests -p 'test_evidence_manifest.py' -v
+      - name: Validate story illustration integrity and creative handoff negative fixtures
+        run: python3 -m unittest discover -s tests -p 'test_story_layers.py' -v
+      - name: Validate browser-measured story artwork resolution negative fixtures
+        run: python3 -m unittest discover -s tests -p 'test_story_art_resolution.py' -v
+      - name: Validate current case and script-approval boundaries
+        run: python3 -m unittest discover -s tests -p 'test_current_case_doctrine.py' -v
       - name: Report limits
         run: echo "Only structural parity checked. Visual/adapters/human authorization remain unverified."
