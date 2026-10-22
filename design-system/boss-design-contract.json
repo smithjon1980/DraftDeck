@@ -20,7 +20,11 @@
     "uncertainties": [
       "Canonical logo binary/hash not yet pinned",
       "Exact production typography and component dimensions await representative render approval"
-    ]
+    ],
+    "art_technical_plan": "OWNER_ACCEPTED_2026-10-22",
+    "narration_revision": "AUTHORIZED_TO_DRAFT_V4; NEW_BYTES_NOT_YET_FINAL_LOCKED",
+    "selected_wordmark": "NEW_BOSS_WORDMARK_SELECTED_VISUALLY; PRODUCTION_SOURCE_PENDING",
+    "unreleased_script_publication": "NOT_AUTHORIZED_BY_PLAN_APPROVAL"
   },
   "brand": {
     "identity": "Bioscillate Operating System by Seven",
@@ -55,7 +59,11 @@
     "geometry": "hairline CAD/ISO-informed grid; no decorative rounded corners, shadows, thick borders",
     "change_control": "candidate -> verify -> human approve -> release",
     "evidence": "separate structural, visual, adapter-layer, and hands-on-edit tests",
-    "metaphors": "Current BOSS output must not use retired aviation or parcel-transport story framing"
+    "metaphors": "Main Street Copy's copy/print/pack/ship and UPS Ground/FedEx Ground are current instructional analogies; historical aviation and older convenience-retail demonstrations are retired for new work. PARCELS=architectural responsibilities; PRIME=governed handoff.",
+    "story_medium": "white-ground technical editorial illustration; no photorealistic/stock imagery or full-slide flattened text",
+    "canonical_case": "Main Street Copy, a proposed untested document-services business; no real carrier affiliation or shipment success asserted",
+    "pdr_thesis": "Productive Digital Real Estate: domain=address/endpoint, compute/storage/network/access=facility, workflows/APIs/tools=equipment; operation/value require independent inspection",
+    "narration_change_control": "Owner authorized a coherent new V4 candidate, but exact revised narration requires a new spoken-text lock/hash and new audio alignment. Preserve V1/October 20 source history."
   },
   "source_hierarchy": [
     "This contract and approved logo asset once hash-pinned",
@@ -95,5 +103,16 @@
       "zone_markers_required": true,
       "standards_claim": "ANSI_ISO_INFORMED_NOT_CERTIFIED"
     }
+  },
+  "current_reference_case": {
+    "name": "Main Street Copy",
+    "status": "SIMULATED_NOT_DEPLOYED",
+    "case_file": "doctrine/main-street-copy-case-model.md",
+    "carrier_examples": [
+      "UPS Ground",
+      "FedEx Ground"
+    ],
+    "carrier_selection": "alternatives_not_simultaneous",
+    "source_proof": "label_creation_not_carrier_possession_not_recipient_delivery"
   }
 }
