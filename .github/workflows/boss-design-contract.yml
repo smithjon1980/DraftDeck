@@ -6,6 +6,8 @@ on:
       - 'AGENTS.md'
       - 'README.md'
       - 'design-system/**'
+      - 'tools/visual-poc/check_evidence_manifest.py'
+      - 'tests/test_evidence_manifest.py'
       - 'doctrine/composition-standard.md'
       - 'doctrine/release-qa.md'
       - 'doctrine/visual-evidence-gate.md'
@@ -27,5 +29,7 @@ jobs:
         run: python3 design-system/validation/check_contract.py
       - name: Validate evidence gate fixtures
         run: python3 design-system/validation/test_visual_evidence.py
+      - name: Validate visual evidence manifest negative fixtures
+        run: python3 -m unittest discover -s tests -p 'test_evidence_manifest.py' -v
       - name: Report limits
         run: echo "Only structural parity checked. Visual/adapters/human authorization remain unverified."
