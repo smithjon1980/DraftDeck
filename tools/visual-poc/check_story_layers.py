@@ -18,7 +18,7 @@ HASH = re.compile(r"^[0-9a-f]{64}$")
 MODES = {"art-led", "narrative-led", "hybrid"}
 # Recovered original supplied logo; update only through reviewed asset provenance.
 EXPECTED_LOGO_SHA = "95f56729fe279a07b151ba5169a764a0aa387a1fac8cf283424ea783f950b146"
-IMAGE = re.compile(r"^data:image/(?:png|jpeg|webp|svg\+xml);base64,(.+)$", re.S)
+IMAGE = re.compile(r"^data:image/(png|jpeg|webp|svg\+xml);base64,(.+)$", re.S)
 
 
 def seems_like_image(blob, mime):
