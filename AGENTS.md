@@ -35,3 +35,9 @@ For the **proposed** 17 × 11 inch landscape narration-first Episode 01 magazine
 - CI checks structure and contracts; only actual render inspection validates visual fidelity. Hands-on adapter editing is a separate higher-level test.
 - Confirm the current Canva import API/schema for the target. Historical routes are not universal guarantees and do not automatically verify current destination editability.
 - Preserve missing evidence explicitly as UNKNOWN or NOT_ESTABLISHED, including actual human approval and unverified import fidelity.
+
+## External skill discovery (find-skills)
+- Project-scoped discovery skill: `.agents/skills/find-skills/SKILL.md`; its pinned upstream and license are recorded in `.agents/skills/find-skills/BOSS_ADMISSION.md`.
+- This skill may identify *candidate* external skills. A recommendation or installer command is **not** source admission, execution authorization, a design-contract amendment, or release approval.
+- Inspect candidate repository/ref, license, permissions, dependencies, security posture, and runtime compatibility; isolate testing before adoption. Never auto-install all matches or run remote installation as part of discovery without authorization.
+- Existing BOSS instructions and the two-bridge visual evidence gate take precedence over third-party skill advice. No general skill can replace human visual or publication approval.
