@@ -19,6 +19,13 @@ For the **proposed** 17 × 11 inch landscape narration-first Episode 01 magazine
 - Main Street Copy: customer intake and bounded job ticket → copy/print → inspect → pack → carrier choice and explicit human release → ground-network handoff → tracking/delivery evidence. A label is not delivery proof.
 - Preserve **PARCELS** as architectural responsibilities (Platform, Attachment, Routing, Carriage, Exchange, Language, Service), **PRIME** as governed work handoff (Package, Route, Inspect, Move, Establish Delivery). They are not the same as the shop's physical stages.
 
+## Productive Digital Real Estate — approved art direction
+- The 2026-10-22 user-approved visual thesis: domain/DNS/endpoint as the **address**, compute/storage/network/permission arrangements as the **facility**, APIs/software/workflows as the **equipment**. An address or running URL does not establish a productive business; verification and economics are separate claims.
+- The approved **art and technical** plan spans 60 slides, using Main Street Copy as the untested simulated physical/digital twin. The opened scripts are not to be silently replaced by older pitch slides; the owner **authorized a new V4 spoken revision candidate**. Exact V4 wording requires a fresh author read-through/hash lock; previous exact script and audio approvals cannot be inherited.
+- The owner's `Flight_Plan_Engineering.pdf` is drafting-style inspiration ONLY (white drafting ground, technical isometrics, detailed hatching, title plates), not current aviation metaphors or permission to flatten live editorial copy.
+- Keep complete source narration and unapproved art private. Public PRs may contain rules, schemas, structural tests, and publicly safe case descriptions, **not** unpublished complete spoken script or private evidence.
+- For each Main Street Copy shipment: one selected eligible carrier, either UPS Ground or FedEx Ground; a label is not custody, custody is not final delivery, and delivery does not prove financial gain.
+
 ## Editorial two-bridge process
 1. Inspect the actual source/reference visually. Log file, page, teaching point, story art, exact copy, source status, and unresolved fields. NotebookLM output is a spark, not a new authority.
 2. Bridge 1: reimagine the source into a grounded teaching story. Separate preserved evidence and exact copy from candidate creative departures.
