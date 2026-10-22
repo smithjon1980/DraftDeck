@@ -7,13 +7,17 @@ Scope: current BOSS Episode 01, Day Zero slides and corresponding instructional 
 For the **proposed** 17 × 11 inch landscape narration-first Episode 01 magazine, review `episode01/EP01_NARRATION_FIRST_PRINT_PARITY_CANDIDATE.md` **in addition to** these operating instructions. It defines a separate print profile and candidate-script-to-approved-exact-copy boundary. It does not revise the 1920 × 1080 slide profile, qualify prior proofs, or authorize release. Do not promote the new manuscript to verified recorded transcript before an audio comparison, or imply that a proposed 48-page issue is finished.
 
 ## Identity and visuals
-- Brand: Bioscillate Operating System by Seven. Original canonical logo artwork only. The logo source SHA is not yet established; never invent or substitute it.
+- Brand identity: Bioscillate Operating System by Seven. For the current illustrative concept, the owner selected the NEW cyan/magenta/black **BOSS wordmark**. Preserve that selection as a named candidate visual asset with its own provenance; do not invent a production hash or silently substitute the older wave/diamond logo. Keep older source logos intact as historical assets until separately reviewed.
 - White (#FFFFFF) canvas, black editorial text, canonical cyan (#00BCEB) and magenta (#E30074) brand colors. No borrowed orange core accent or substituted logo profile for current work.
 - Slide canvas: exactly 1920 x 1080 logical pixels, CSS-scaled to viewer size. Do not use h-screen/vh as structural slide geometry.
 - Interface influence: Tesla Model Y center touchscreen information architecture + CAD/ISO-informed drafting precision; no generic SaaS cards, gradients, decorative rounded corners, or heavy shadows.
 - Text remains native HTML, not SVG text, canvas text, or baked into a rasterized full slide. Artwork and text remain separate layers.
 - Website and lesson interface must reflow; print requires separate dimensions. Do not conflate slides with a responsive web page.
-- Legacy transport and aviation metaphors are retired for contemporary instructional releases, though historical artifacts may remain archived.
+- Current case: **Main Street Copy**, a fictional neighborhood copy/print/pack/ship shop. Copy → Pack → Ship and UPS Ground/FedEx Ground carrier processes are CURRENT instructional metaphors. Historical aviation and older convenience-retail framing are not current creative authority. Read `doctrine/main-street-copy-case-model.md`. Carrier prices, eligible destinations, deadlines and claims of delivery require real verification.
+
+## Current reference business
+- Main Street Copy: customer intake and bounded job ticket → copy/print → inspect → pack → carrier choice and explicit human release → ground-network handoff → tracking/delivery evidence. A label is not delivery proof.
+- Preserve **PARCELS** as architectural responsibilities (Platform, Attachment, Routing, Carriage, Exchange, Language, Service), **PRIME** as governed work handoff (Package, Route, Inspect, Move, Establish Delivery). They are not the same as the shop's physical stages.
 
 ## Editorial two-bridge process
 1. Inspect the actual source/reference visually. Log file, page, teaching point, story art, exact copy, source status, and unresolved fields. NotebookLM output is a spark, not a new authority.
