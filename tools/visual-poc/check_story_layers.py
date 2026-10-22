@@ -161,7 +161,7 @@ def evaluate(html, manifest):
     else:
         errors.append("unrecognized brand variant; cannot substitute a manifest logo")
     if story_sha == logo:
-        errors.append("story illustration cannot be the brand identity")
+        errors.append("story illustration cannot be the logo or wordmark")
     if story_sha not in hashes:
         errors.append("separate manifested story illustration absent from rendered HTML")
     if any("error" in image for image in rendered.images):
