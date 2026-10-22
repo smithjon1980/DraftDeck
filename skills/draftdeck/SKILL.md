@@ -16,16 +16,21 @@ Four active candidate skills specify the production workflow:
 
 Supporting `references/editorial-composition.md`, `references/web-engineering.md` and `references/visual-acceptance.md` remain in force. `references/verified-pipeline.md` applies only to its historical Canva adapter experiment.
 
+## Script versions and Productive Digital Real Estate
+The owner accepted the **60-slide Art & Technical Plan** on 2026-10-22 and authorized a coherent **V4 narration revision**. Old wording and hash history must remain immutable. Revised V4 spoken words are a **new exact-review candidate**, not automatically an author-locked or recorded master. No new voiceover, real-time word timings, approved art or public repository publication is established by the art-plan approval.
+
+The visual thesis maps physical street address → domain/endpoint, building/utilities → compute/storage/network/access, copier/equipment → software/APIs, job ticket → authenticated structured input, print/inspection → bounded workflow/tests, shipping counter → authorized external handoff, receipt → actual scoped delivery evidence. Prove each stage separately and evaluate profits independently. **PARCELS** (architecture) and **PRIME** (handoff) are different tools, not one parcel-route diagram.
+
 ## Current visual directive for Episode 01
 - **White-ground technical editorial illustration** with substantive dimensional drawing, section/axonometric details and a visible causal business process. Photography and photorealistic corporate scenes, stock collages, dark HUDs, gradients, glossy 3D and icons-as-art are **rejected** unless the human explicitly changes the visual medium.
 - Tesla Model Y center touchscreen influences information zoning; CAD/ISO informs thin geometry. Neither means a Tesla copy nor certification. White #FFFFFF, black #000000, restrained cyan #00BCEB and magenta #E30074; never inherit retired burnt-orange styling.
 - The user selected a **new BOSS wordmark** for the current Slide 02 art exploration. Preserve its cyan/magenta/black form as a distinct concept asset; do not silently replace it with an earlier logo, recreate it as ordinary text, or falsely claim its vector/production source is established. Preserve the original supplied Bioscillate logo as a separately traceable source asset. The current design-contract status still requires final identity proof and human review.
-- The learner's message must be carried by the illustration itself: a business need, actual work, verification, deployed result and continuity. Tables, labels, generic networks and decorative boxes cannot substitute for the scene.
+- The learner's message must be carried by the illustration itself: a business need, an appropriately specified operation, scoped verification evidence, candidate handoffs and operational continuity without inventing a deployed result. Tables, labels, generic networks and decorative boxes cannot substitute for the scene.
 
 ## SEVEN — creation and testing
 **Survey:** Locate authoritative materials, exact-copy boundaries, source artwork, brand assets, lesson outcome, approved reference status and unknowns. NotebookLM is an inspiration source, not independent factual authority.
 
-**Evaluate:** Complete Bridge 1 (teach the operational difference) and Bridge 2 (story in visual form). Write a **medium gate record before requesting generation**. For Slide 02, illustrate a Market Seven workflow that demonstrates what changes from connections to verified delivered capability; proposed scenarios must not claim verified business metrics.
+**Evaluate:** Complete Bridge 1 (teach the operational difference) and Bridge 2 (story in visual form). Write a **medium gate record before requesting generation**. For Episode 01, illustrate the **Main Street Copy** physical/digital operating twin: domain/address, digital infrastructure/facility, APIs/equipment, authorized job ticket, print inspection, packing, alternative UPS Ground or FedEx Ground handoff, distinct custody and delivery evidence. Slide 02 is **architectural rendering versus operating reality**, not the historical networking pitch. Read `doctrine/main-street-copy-case-model.md`. No actual shipping/deployment/sales claim.
 
 **Validate:** Require editorial-illustration medium, scene inventory, protected crop and reserved HTML text zones, complete learner reflection candidate, original-logo provenance and new BOSS wordmark status. Reject image-generation outputs that merely move photographs onto white or emit photo-people with an illustrated UI frame. Creative-reference images may be fully composed, but never automatically become production masters.
 
