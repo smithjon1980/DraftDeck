@@ -29,7 +29,7 @@ def make_html(art=True, reflection=True, headline=None):
     question = "<p>How does delivered capability create business value?</p>" if reflection else \
                "<p>[REFLECTION QUESTION PENDING AUTHOR APPROVAL]</p>"
     return ("<html><body><section class='slide'><img alt='logo' src='" + logo + "'>"
-            + "<h1>" + (headline or "The Problem Isn't Networking") + "</h1>"
+            + "<h1>" + (headline or "Rendering versus Reality") + "</h1>"
             + story + question + "</section></body></html>")
 
 def make_manifest():
@@ -37,17 +37,17 @@ def make_manifest():
         "source": {
             "source_id": "episode01/reference/slide-copy.candidate.json#02",
             "status": "CANDIDATE",
-            "exact_headline": "The Problem Isn't Networking",
+            "exact_headline": "Rendering versus Reality",
         },
         "bridge1": {
             "teaching_assertion": "Delivery of capability differs from recruitment.",
-            "story_mechanism": "A store operator receives an observable working result.",
+            "story_mechanism": "A fictional copy shop must prove the operating conditions behind a rendering.",
             "learner_observation": "A service can be verified independently of recruiting."
         },
         "art_direction": {"medium": "EDITORIAL_ILLUSTRATION", "background": "WHITE", "photographic_reference": False},
         "bridge2": {
             "composition_mode": "art-led",
-            "visual_relationship": "The store's working capability has a measurable outcome.",
+            "visual_relationship": "The architectural depiction remains distinct from a verified working facility.",
             "focal_art_description": "Actual operational action, not a decorative logo"
         },
         "assets": {
@@ -102,7 +102,7 @@ class StoryArtTests(unittest.TestCase):
         self.assertTrue(any("separate manifested story illustration absent" in e for e in errors), errors)
 
     def test_wrong_headline_rejected(self):
-        errors, _ = gate.evaluate(make_html(headline="The Problem Is Networking"), make_manifest())
+        errors, _ = gate.evaluate(make_html(headline="Rendering replaces Reality"), make_manifest())
         self.assertTrue(any("native h1" in e for e in errors), errors)
 
     def test_missing_story_mechanism_rejected(self):
@@ -135,6 +135,20 @@ class StoryArtTests(unittest.TestCase):
         m["art_direction"]["background"] = "DARK"
         errors, _ = gate.evaluate(make_html(), m)
         self.assertTrue(any("white ground" in e for e in errors), errors)
+
+    def test_new_boss_wordmark_with_unpinned_source_must_hold(self):
+        m = make_manifest()
+        m["assets"]["brand_variant"] = "BOSS_NEW_WORDMARK"
+        m["assets"]["wordmark_source_id"] = "USER_SELECTED_CONCEPT_ASSET_UNVERIFIED"
+        errors, observations = gate.evaluate(make_html(), m)
+        self.assertTrue(any("NOT ESTABLISHED" in e for e in errors), errors)
+        self.assertFalse(observations["reference_visual_approved"])
+
+    def test_brand_variant_unknown_rejected(self):
+        m = make_manifest()
+        m["assets"]["brand_variant"] = "UNVERIFIED_SUBSTITUTION"
+        errors, _ = gate.evaluate(make_html(), m)
+        self.assertTrue(any("unrecognized brand variant" in e for e in errors), errors)
 
     def test_unverified_substituted_logo_rejected(self):
         m = make_manifest()
