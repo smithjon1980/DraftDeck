@@ -6,7 +6,7 @@ description: Translate an admitted BOSS teaching story into an inspectable artwo
 # BOSS Visual Storyboard — relationship to artwork
 
 ## Authority
-Read \`AGENTS.md\`, \`design-system/boss-design-contract.json\`, \`skills/draftdeck/references/editorial-composition.md\` and \`boss-story-architect/SKILL.md\`. Preserve the canonical Bioscillate white/black/cyan/magenta identity; never import retired orange styling from older reference skills.
+Read `AGENTS.md`, `design-system/boss-design-contract.json`, `skills/draftdeck/references/editorial-composition.md` and `boss-story-architect/SKILL.md`. Preserve the canonical Bioscillate white/black/cyan/magenta identity; never import retired orange styling from older reference skills.
 
 ## Bridge 2: story to BOSS composition
 1. Identify the **observable relationship** the artwork must teach. Draw a scene inventory: people or actors, setting, objects, business actions, proof artifacts, directional relationships and required label zones.
@@ -16,8 +16,8 @@ Read \`AGENTS.md\`, \`design-system/boss-design-contract.json\`, \`skills/draftd
 5. Review at the intended logical 1920×1080 slide canvas. Test story legibility at display size, not just thumbnail attractiveness. Show the reference/artwork side by side and annotate missing relationships.
 
 ## Acceptance before production
-For every storyboard, record \`composition_mode\`, \`visual_relationship\`, \`focal_art_description\`, \`art_region\`, \`text_regions\`, \`protected_crop_regions\`, \`source_and_copy_status\`, \`concept_status\`. A drawing that includes brand marks but no independent story scene fails. Neither typography nor a drafting grid supplies the missing illustration.
+For every storyboard, record `composition_mode`, `visual_relationship`, `focal_art_description`, `art_region`, `text_regions`, `protected_crop_regions`, `source_and_copy_status`, `concept_status`. A drawing that includes brand marks but no independent story scene fails. Neither typography nor a drafting grid supplies the missing illustration.
 
 Create A–D variants **only when comparison is explicitly requested**. No eligible concept means HOLD; a relatively better failed drawing is not the master.
 
-Handoff to \`boss-art-asset-producer\` and then the existing DraftDeck HTML compositor.
+Handoff to `boss-art-asset-producer` and then the existing DraftDeck HTML compositor.
