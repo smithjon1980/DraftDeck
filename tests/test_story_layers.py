@@ -16,7 +16,9 @@ SPEC.loader.exec_module(gate)
 LOGO = (ROOT / "episode01" / "assets" / "brand" /
         "bioscillate-original-supplied.jpg").read_bytes()
 # A deliberately minimal fixture, NOT proof of composition quality.
-ART = b"synthetic fixture representing independent story artwork"
+ART = base64.b64decode(
+    "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIHWP4z8DwHwAFgAI/ScLttAAAAABJRU5ErkJggg=="
+)  # Real 1px PNG format fixture; NOT meaningful teaching art
 
 def uri(blob, mime):
     return "data:" + mime + ";base64," + base64.b64encode(blob).decode()
@@ -113,6 +115,11 @@ class StoryArtTests(unittest.TestCase):
         source = source.replace(uri(ART, "image/png"), "https://untrusted.example/art.png")
         errors, _ = gate.evaluate(source, make_manifest())
         self.assertTrue(any("non-inline" in e for e in errors), errors)
+
+    def test_invalid_image_signature_rejected(self):
+        source = make_html().replace(uri(ART, "image/png"), uri(b"not a PNG", "image/png"))
+        errors, _ = gate.evaluate(source, make_manifest())
+        self.assertTrue(any("non-inline" in e or "invalid" in e for e in errors), errors)
 
     def test_unverified_substituted_logo_rejected(self):
         m = make_manifest()
