@@ -1,30 +1,23 @@
 ---
 name: boss-art-asset-producer
-description: Produce or recover source-traceable separate story illustration assets for BOSS slides without flattening approved editorial text. Use when a slide contains only a logo, artwork is missing/pixelated, or PDF export appears to lose visual detail.
+description: Produce separate source-traceable illustrated BOSS story artwork. Use when photo art, dark HUD treatments, missing illustrations, flattened generated text, or low-quality PDF art compromise instructional fidelity.
 ---
 
-# BOSS Art Asset Producer — preserve real story artwork
+# BOSS Art Asset Producer — illustrated scene, not photo art
 
-## Authority
-Read the admitted storyboard, `AGENTS.md`, `design-system/boss-design-contract.json` and `doctrine/visual-evidence-gate.md`. Follow the actual image-generation/editing tool workflow when artwork generation or edits are requested; do not claim to run an unavailable provider.
+## Required instructions
+Read the admitted Story Architect and Visual Storyboard records plus `AGENTS.md` and `design-system/boss-design-contract.json`. The default for Episode 01 narrative art is **hand-crafted-looking technical editorial illustration**. Preserve the original teaching relationship, not an earlier failed raster treatment. Record user requests that modify medium or wordmark status.
 
-## Asset production
-- Prefer preserved original permitted high-quality artwork where possible. Record source, license/rights status, author/owner, original bytes hash, dimensions, crop and transformation history.
-- For new art, use the **required teaching relationship** as the prompt's subject. The drawing must communicate concrete operational activity and consequences; reject generic rectangles, undifferentiated icon clusters and branding-only art.
-- Produce a distinct illustration asset separate from the original logo. Never redraw, recolor, recreate or misidentify the original logo. Preserve exact original logo identity.
-- **Concept stage:** an exploratory complete composition may contain rough generated typography. **Production stage:** provide a discrete, text-free or text-safe illustration asset; required headings and paragraphs must remain selectable HTML layers.
-- Allow an appropriate PNG, JPEG, WebP or standalone vector illustration; choose by target fidelity and adapter support. Never use a single SVG or raster image for the entire slide; never place required editorial text inside SVG.
-- Check original pixel dimensions against the artwork's displayed CSS pixel dimensions; report upscaling and print effective resolution. Converting an underspecified source to PNG or exporting at 300 DPI cannot restore omitted or rasterized detail.
-- Record hash, source ID, claimed rights status, intended story relationship, profile dimensions, transformation pipeline, and tests actually performed. Unknown source/rights/approval means HOLD, not substitution.
+## Production decisions
+1. Determine `art_medium`: `EDITORIAL_ILLUSTRATION` (default); `TECHNICAL_DIAGRAM` may support it. Treat `PHOTO`, `PHOTOREALISTIC`, and `DARK_HUD` as explicit disallowed candidate media for this Slide 02. Do not transform a rejected photo merely by placing it on white.
+2. Source-grounded scene first: create an axonometric/cutaway/sectional business environment with mechanically intelligible activity and evidence of **what was verified and delivered**. For a Market Seven candidate, a functioning POS workflow is illustrative, not a claim of real deployment. Do not invent measured results.
+3. **Separate the image component:** generate or recover clean text-free/label-safe illustration artwork without the masthead, BOSS wordmark, original Bioscillate logo, exact teaching copy, reflective question, or CAD title rail baked into pixels. Final editorial text is HTML; its copy source is independently verified.
+4. Track two identity assets individually: original recovered Bioscillate logo (known SHA-256 in code) and **new BOSS wordmark selected by the user for concept design** (art-source/hash currently a candidate and must be independently provided or derived with provenance before verified production use). Never claim they are byte-equivalent or overwrite the original.
+5. Prefer a true illustration with clear fine lines, limited brand accents, readable operational detail and a pure #FFFFFF field. Reject stock-photo compositions, photorealistic people, fake software screenshots, repetitive boxes/arrows and half-page generic icon grids.
+6. Preserve unaltered generated output and prompt/reference lineage. Record actual pixel dimensions, SHA-256, crop regions, displayed CSS dimensions, upscaling factor, and effective print resolution. Do not call PNG a vector or claim that DPI export creates missing detail.
+7. Candidate inspection: hide all text and marks; ask whether the illustration alone conveys the operational transition, a working system, test/proof, and a real learner-relevant outcome. Fail if it does not. Machine hashing verifies asset identity, not semantic meaning.
 
-## Machine-checkable handoff
-For `tools/visual-poc/check_story_layers.py`, the final HTML must include a discrete `<img>` whose decoded bytes match the `story_art_sha256` in a story-layer manifest and differ from `logo_sha256`. Use a self-contained data URI for isolated/offline verification. This is an **intentionally bounded proof route**; external URLs, CSS backgrounds and other rendering modes require a separate verified adapter before passing this gate.
+## Handoff and verification
+For the bounded offline HTML gate, place the final illustration in a separate `<img>` with a self-contained data URI and record `story_art.sha256`, `source_id` and `teaching_relationship`. Preserve original logo separately when the current gate requires it. An unapproved BOSS-wordmark graphic does not count as story illustration. Cropping a full candidate screenshot does not turn flattened copy into a production layer.
 
-Never claim a matching hash proves narrative correctness. Actual visual inspection and human selection remain mandatory.
-
-## Effective-resolution and isolation gate (Test 06 finding)
-When a provider returns a **complete slide** in response to an artwork-only commission, reject it as a production art asset: it may have baked editorial copy, a false logo, unrelated process steps, and an incorrect palette. An exploratory concept is not a source-traceable standalone illustration. Cropping a small region is at most a CANDIDATE extraction with documented loss of detail and source context, not a resolution fix.
-
-Capture real `HTMLImageElement.naturalWidth/naturalHeight`, `getBoundingClientRect().width/height`, and computed `object-fit` from the **actual 1920x1080 browser render**. Pass the metrics to `tools/visual-poc/check_story_art_resolution.py`. A source-pixel-to-displayed-CSS-pixel factor below 1.0 is a quality HOLD, not something that PDF DPI, upscale or image re-encoding can repair. This screen minimum is not automatically adequate for press print; apply a separately approved print effective-PPI check.
-
-Explicitly score **semantic fitness** separately from this pixel test: a pristine image of unrelated equipment or people cannot stand in for a required Market Seven order-to-ticket verification scene. The story relationship, not merely the existence of pixels, is the admission test.
+Report media rule PASS/FAIL, illustration quality REVIEW_REQUIRED, source permissions, and remaining unknowns. No release authorization is implied.
