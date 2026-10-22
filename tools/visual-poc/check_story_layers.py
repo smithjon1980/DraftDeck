@@ -16,6 +16,8 @@ import sys
 
 HASH = re.compile(r"^[0-9a-f]{64}$")
 MODES = {"art-led", "narrative-led", "hybrid"}
+# Recovered original supplied logo; update only through reviewed asset provenance.
+EXPECTED_LOGO_SHA = "95f56729fe279a07b151ba5169a764a0aa387a1fac8cf283424ea783f950b146"
 IMAGE = re.compile(r"^data:image/(?:png|jpeg|webp|svg\+xml);base64,(.+)$", re.S)
 
 
@@ -102,6 +104,8 @@ def evaluate(html, manifest):
     for label, value in (("logo", logo), ("story art", story_sha)):
         if not HASH.fullmatch(value):
             errors.append("invalid " + label + " SHA-256")
+    if logo != EXPECTED_LOGO_SHA:
+        errors.append("supplied logo SHA differs from recovered canonical asset")
     if logo not in hashes:
         errors.append("canonical logo image bytes absent from rendered HTML")
     if story_sha == logo:
