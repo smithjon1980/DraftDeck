@@ -44,6 +44,7 @@ def make_manifest():
             "story_mechanism": "A store operator receives an observable working result.",
             "learner_observation": "A service can be verified independently of recruiting."
         },
+        "art_direction": {"medium": "EDITORIAL_ILLUSTRATION", "background": "WHITE", "photographic_reference": False},
         "bridge2": {
             "composition_mode": "art-led",
             "visual_relationship": "The store's working capability has a measurable outcome.",
@@ -120,6 +121,20 @@ class StoryArtTests(unittest.TestCase):
         source = make_html().replace(uri(ART, "image/png"), uri(b"not a PNG", "image/png"))
         errors, _ = gate.evaluate(source, make_manifest())
         self.assertTrue(any("non-inline" in e or "invalid" in e for e in errors), errors)
+
+    def test_photo_medium_declared_rejected(self):
+        m = make_manifest()
+        m["art_direction"]["medium"] = "PHOTOGRAPHY"
+        m["art_direction"]["photographic_reference"] = True
+        errors, _ = gate.evaluate(make_html(), m)
+        self.assertTrue(any("EDITORIAL_ILLUSTRATION" in e for e in errors), errors)
+
+    def test_dark_hud_declared_rejected(self):
+        m = make_manifest()
+        m["art_direction"]["medium"] = "DARK_HUD"
+        m["art_direction"]["background"] = "DARK"
+        errors, _ = gate.evaluate(make_html(), m)
+        self.assertTrue(any("white ground" in e for e in errors), errors)
 
     def test_unverified_substituted_logo_rejected(self):
         m = make_manifest()
