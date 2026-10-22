@@ -21,6 +21,26 @@ EXPECTED_LOGO_SHA = "95f56729fe279a07b151ba5169a764a0aa387a1fac8cf283424ea783f95
 IMAGE = re.compile(r"^data:image/(?:png|jpeg|webp|svg\+xml);base64,(.+)$", re.S)
 
 
+def seems_like_image(blob, mime):
+    """Validate basic source file signatures only, not full decode or visual meaning."""
+    if mime == "png":
+        return (len(blob) >= 24 and blob.startswith(b"\x89PNG\r\n\x1a\n")
+                and blob[12:16] == b"IHDR"
+                and int.from_bytes(blob[16:20], "big") > 0
+                and int.from_bytes(blob[20:24], "big") > 0)
+    if mime == "jpeg":
+        return len(blob) > 4 and blob.startswith(b"\xff\xd8\xff") and blob.endswith(b"\xff\xd9")
+    if mime == "webp":
+        return len(blob) > 20 and blob.startswith(b"RIFF") and blob[8:12] == b"WEBP"
+    if mime == "svg+xml":
+        import xml.etree.ElementTree as ET
+        try:
+            return ET.fromstring(blob).tag == "{http://www.w3.org/2000/svg}svg"
+        except ET.ParseError:
+            return False
+    return False
+
+
 class SlideHTML(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
@@ -44,8 +64,12 @@ class SlideHTML(HTMLParser):
                 self.images.append({"error": "non-inline or unsupported image source"})
             else:
                 try:
-                    blob = base64.b64decode(match.group(1), validate=True)
-                    self.images.append({"sha256": hashlib.sha256(blob).hexdigest(), "bytes": len(blob)})
+                    mime, payload = match.groups()
+                    blob = base64.b64decode(payload, validate=True)
+                    if not seems_like_image(blob, mime):
+                        self.images.append({"error": "image bytes do not match declared media type"})
+                    else:
+                        self.images.append({"sha256": hashlib.sha256(blob).hexdigest(), "bytes": len(blob)})
                 except (ValueError, base64.binascii.Error):
                     self.images.append({"error": "invalid base64 image"})
 
