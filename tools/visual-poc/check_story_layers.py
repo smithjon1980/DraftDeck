@@ -119,6 +119,17 @@ def evaluate(html, manifest):
     for field in ("visual_relationship", "focal_art_description"):
         require(bridge2, field, "bridge2." + field)
 
+    # Art direction is an admission *declaration*, not a pixel classifier.
+    direction = manifest.get("art_direction", {})
+    if not isinstance(direction, dict):
+        direction = {}
+    if direction.get("medium") != "EDITORIAL_ILLUSTRATION":
+        errors.append("Episode 01 requires declared EDITORIAL_ILLUSTRATION medium; photo/HUD art rejected")
+    if direction.get("background") != "WHITE":
+        errors.append("illustration direction must declare a white ground")
+    if direction.get("photographic_reference") not in (False,):
+        errors.append("photographic reference disallowed unless separately authorized")
+
     assets = manifest.get("assets", {})
     logo = require(assets, "logo_sha256", "assets.logo_sha256").lower()
     story = assets.get("story_art", {}) if isinstance(assets, dict) else {}
