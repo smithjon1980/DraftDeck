@@ -1,3 +1,5 @@
+> **HISTORICAL ADAPTER EVIDENCE — NOT CURRENT BOSS DESIGN AUTHORITY.** This 2026-10-05 experiment retains an earlier Logistics Framework orange/serif styling route for audit history only. Do not apply its retired palette, metaphors or visual choices to contemporary Bioscillate Episode 01 or Day Zero. Follow `AGENTS.md`, `skills/draftdeck/SKILL.md` and the current design contract. The historical import is not proof of current Canva support or edit/save/reopen fidelity.
+
 # Verified HTML → Canva pipeline
 
 ## Demonstrated route: 2026-10-05
