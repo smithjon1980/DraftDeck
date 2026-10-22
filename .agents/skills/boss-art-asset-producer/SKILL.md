@@ -21,3 +21,10 @@ Read the admitted storyboard, `AGENTS.md`, `design-system/boss-design-contract.j
 For `tools/visual-poc/check_story_layers.py`, the final HTML must include a discrete `<img>` whose decoded bytes match the `story_art_sha256` in a story-layer manifest and differ from `logo_sha256`. Use a self-contained data URI for isolated/offline verification. This is an **intentionally bounded proof route**; external URLs, CSS backgrounds and other rendering modes require a separate verified adapter before passing this gate.
 
 Never claim a matching hash proves narrative correctness. Actual visual inspection and human selection remain mandatory.
+
+## Effective-resolution and isolation gate (Test 06 finding)
+When a provider returns a **complete slide** in response to an artwork-only commission, reject it as a production art asset: it may have baked editorial copy, a false logo, unrelated process steps, and an incorrect palette. An exploratory concept is not a source-traceable standalone illustration. Cropping a small region is at most a CANDIDATE extraction with documented loss of detail and source context, not a resolution fix.
+
+Capture real `HTMLImageElement.naturalWidth/naturalHeight`, `getBoundingClientRect().width/height`, and computed `object-fit` from the **actual 1920x1080 browser render**. Pass the metrics to `tools/visual-poc/check_story_art_resolution.py`. A source-pixel-to-displayed-CSS-pixel factor below 1.0 is a quality HOLD, not something that PDF DPI, upscale or image re-encoding can repair. This screen minimum is not automatically adequate for press print; apply a separately approved print effective-PPI check.
+
+Explicitly score **semantic fitness** separately from this pixel test: a pristine image of unrelated equipment or people cannot stand in for a required Market Seven order-to-ticket verification scene. The story relationship, not merely the existence of pixels, is the admission test.
