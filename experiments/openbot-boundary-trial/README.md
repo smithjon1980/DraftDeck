@@ -1,37 +1,37 @@
-# OpenBot governance pilot — synthetic BOSS slide-production actions
+# OpenBot governance — isolated BOSS acceptance trial
 
-**Scope:** isolated source-level exercise of OpenBot's authentic `evaluateActionPolicy` and `decideAction` functions. No OpenBot service, database, browser computer, agent, model, or production BOSS application is installed by this pilot.
+**Evaluation status:** SOURCE-LEVEL POLICY + MOCKED GATEWAY PASS / LIVE INTEGRATION HOLD. No OpenBot service was installed, and the BOSS production stack remains unchanged.
 
-## Source admission
-- Upstream: `https://github.com/CopilotKit/OpenBot` (MIT license).
-- Full upstream pinned commit: `bd4dc94943a9d62aefd05e5e99073ba58919c9c6`.
-- Exactly fetched at job execution, validated with native Git blob hashes:
-  - `server/src/computer/policy.ts`: `94bc46ad3a74bdb56ad84f86527057ecba6c735e`
-  - `server/src/approvals/policy.ts`: `56606eeda7f58fbac7f9ba29806c31c4e4118314`
-- Source is unmodified in the test job; it is not vendored into DraftDeck or used for production.
+## Upstream source custody
+- Public MIT upstream: `https://github.com/CopilotKit/OpenBot`.
+- Pinned source revision: `bd4dc94943a9d62aefd05e5e99073ba58919c9c6`.
+- Direct BOSS decision tests download and Git-hash-verify OpenBot's **unmodified** policy module (`94bc46ad3a74bdb56ad84f86527057ecba6c735e`) and approval module (`56606eeda7f58fbac7f9ba29806c31c4e4118314`).
+- Native gateway tests fetch the same exact repository commit in a disposable runner. The upstream source is not vendored into DraftDeck.
 
-## Pilot boundaries
-- BOSS skills/React/Tailwind, GitHub Actions, Windmill, n8n, Railway, source custody and release workflow remain unchanged.
-- No production credentials, approved manuscript, unpublished media, payment tools, model endpoints, or external write actions.
-- Only synthetic source IDs, filenames and business metadata.
-- Permission policy has `mode: enforce`, narrow allowlist and explicit denies for shell, navigation, GUI activation, external MCP writes, protected files, and scheduled writes.
-- Separate OpenBot approval-decision rules require human approval or handoff for consequential actions.
-- Includes a **negative demonstration** proving `dry-run` forwards denied actions; it must never be confused with protection.
-- CI only writes public-safe JSON evidence to a temporary runner and saves a short-lived action artifact.
+## Executed tests
 
-## Not tested (explicit HOLD)
-- Server gateway path and pre-execution PostgreSQL audit row (needs isolated OpenBot server + test DB and a mocked computer).
-- Browser snapshots/resolved targets versus malicious caller labels; browser-click/Enter bypass in actual browser.
-- Live persistence/recovery, replay/idempotent tool actions, restart behavior or actual human approval UI.
-- Full integration overhead, uptime, CopilotKit Intelligence license, model credentials, and production security.
-- Real slide rendering or deployment.
-- OpenDots, which remains deferred until operator workspace requirements justify it.
+**Stage A — BOSS synthetic decisions:** 22 / 22 PASS. Authoritative OpenBot functions `evaluateActionPolicy` and `decideAction` executed on synthetic BOSS actions. Scenarios include:
+- Permitted public-source read and exactly scoped candidate JSX write.
+- Denied protected narration edit, `.env`, shell, external MCP writes, browser Publish click and Enter activation.
+- Scheduled candidate write refused, scheduled read permitted.
+- Absent/broken policy fail closed, deny beats permissive allow, unknown tool denied.
+- Dry-run **forwards refused actions** (documented unsafe mode), enforced denial stops forwarding.
+- Merge requires team-level human handoff; unreviewed writes require approval; missing approval reviewer fails closed; payment safety is a human handoff.
+- Team restrictions take precedence over a conflicting personal allow.
 
-## Proposed admission gates
-1. Exact upstream source and license audit, fail-closed policy decisions (this pilot).
-2. Gateway + database audit ordering under injected failure in a disposable environment.
-3. Human-approval round trip, refusals and idempotent retries across restarts.
-4. Cost/maintenance comparison against existing Windmill/GitHub Actions approach.
-5. Human inspection and separate adoption authorization. A green test does not install or authorize OpenBot.
+**Stage B — OpenBot original gateway and approval suite:** 101 / 101 PASS; 295 assertions. Runs `bun test server/tests/computer-gateway.test.ts server/tests/approvals-policy.test.ts` on the pinned original upstream repository. The suites use mocked computers and in-memory audit stores to test refused action forwarding, audit record generation for allowed/refused/failed operations, resolved browser target integrity, secret-content avoidance in audit payloads, approval decision semantics, stale browser snapshots and restart-like mock states.
 
-**No changes to current stack or Episode 01 narration.**
+Evidence: [GitHub Actions run 39980063035](https://github.com/smithjon1980/DraftDeck/actions/runs/39980063035). CI's native suites did **not** connect to a production PostgreSQL database.
+
+## Constraints that matter before promotion
+- **OpenBot's shipped configured policy is broadly permissive** (`deny: []`, `allow: ["true"]`); replace this for any BOSS deployment. An *absent* policy fails closed, but the upstream starter config is not absent.
+- **Dry-run is not enforcement:** it forwards refused actions. Deploy `enforce` with narrow allowlists.
+- `OPENBOT_SINGLE_USER` is a developer convenience, not a production identity/access model.
+- A shell command's text filter is not a sandbox; the actual container/host isolation must be verified.
+- The above results do not prove the real database transaction boundary, multi-tenant authentication, durable human approval, idempotency across restarts, per-agent container isolation, egress policy or full lifecycle security.
+- CopilotKit Intelligence, Docker, Bun and model credentials add operating requirements; compare total cost and risk to continuing with GitHub Actions/Windmill.
+
+## Next admission gate (separate authorization)
+Run a **disposable integration** with only synthetic data and an actual PostgreSQL instance and isolated computer provider. Inject audit-write failure before forwarding and post-forward failure after allowed actions. Test a human-approval lifecycle, interrupted/retried action identifiers, browser target resolution, strict service credentials and network egress. Compare the result to the existing BOSS workflow. No live organization accounts.
+
+**Disposition:** Governance source/policy candidate qualified for further evaluation; production adoption HOLD. OpenDots intentionally deferred. No change to approved Episode 01 narration or visual stack.
