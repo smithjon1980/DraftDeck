@@ -77,6 +77,23 @@ jobs:
             server/tests/routines-store.integration.test.ts \
             server/tests/policy-fanout.integration.test.ts \
             2>&1 | tee ../openbot_postgres_test_log.txt
+      - name: Inject synthetic BOSS audit-failure and concurrent action tests in disposable checkout
+        run: |
+          cat experiments/openbot-opendots-boundary/boss_openbot_fault_append.ts >> upstream-openbot/server/tests/computer-gateway.test.ts
+          echo "BOSS_EXTRA_TESTS_IN_EPHEMERAL_CHECKOUT_ONLY"
+      - name: Execute audit-write failure, 75 denied and 75 permitted concurrent mock actions
+        working-directory: upstream-openbot
+        run: |
+          set -o pipefail
+          bun test server/tests/computer-gateway.test.ts 2>&1 | tee ../openbot_fault_test_log.txt
+      - name: Archive temporary injection-test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: boss-openbot-audit-failure-burst-log
+          path: openbot_fault_test_log.txt
+          if-no-files-found: ignore
+          retention-days: 7
       - name: Archive temporary evidence without database contents
         if: always()
         uses: actions/upload-artifact@v4
@@ -172,6 +189,8 @@ jobs:
       - name: Install pinned lockfile
         working-directory: upstream-opendots
         run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Inject BOSS synthetic 150-request denial burst suite in disposable OpenDots checkout
+        run: cp experiments/openbot-opendots-boundary/boss_opendots_permission_burst.test.ts upstream-opendots/tests/boss_opendots_permission_burst.test.ts
       - name: Run ALL OpenDots native tests (not just selected suites)
         working-directory: upstream-opendots
         run: |
