@@ -126,7 +126,7 @@ await run("10_allow_scheduled_read",()=>{
  return d.allowed && d.forward;
 });
 await run("11_missing_policy_default_deny",()=>{
- const d=p({intent:"read"},undefined);
+ const d=evaluateActionPolicy(undefined,makeContext({intent:"read"}));
  return !d.forward&&!d.allowed&&d.source==="default";
 });
 await run("12_broken_deny_expression_fails_closed",()=>{
