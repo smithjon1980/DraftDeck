@@ -16,6 +16,8 @@ on:
       - 'tools/visual-poc/check_story_layers.py'
       - 'tests/test_story_layers.py'
       - 'tests/test_current_case_doctrine.py'
+      - 'tools/editorial-layout/check_editorial_manuscript.py'
+      - 'tests/test_editorial_manuscript.py'
       - 'doctrine/main-street-copy-case-model.md'
       - 'tools/visual-poc/check_story_art_resolution.py'
       - 'tests/test_story_art_resolution.py'
@@ -45,5 +47,7 @@ jobs:
         run: python3 -m unittest discover -s tests -p 'test_story_art_resolution.py' -v
       - name: Validate current case and script-approval boundaries
         run: python3 -m unittest discover -s tests -p 'test_current_case_doctrine.py' -v
+      - name: Validate manuscript-first editorial layout source hash negative fixtures
+        run: python3 -m unittest discover -s tests -p 'test_editorial_manuscript.py' -v
       - name: Report limits
         run: echo "Only structural parity checked. Visual/adapters/human authorization remain unverified."
