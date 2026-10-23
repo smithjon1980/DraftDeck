@@ -34,6 +34,7 @@ jobs:
           ! grep -q 'EP01_P001' boss/experiments/openbot-governance/boss-governance.test.ts
           test ! -e openbot/.env
           cp boss/experiments/openbot-governance/boss-governance.test.ts openbot/server/tests/boss-governance.test.ts
+          cp boss/experiments/openbot-governance/boss-gateway.test.ts openbot/server/tests/boss-gateway.test.ts
       - name: Install OpenBot dependencies without package lifecycle scripts
         working-directory: openbot
         run: bun install --frozen-lockfile --ignore-scripts
@@ -42,6 +43,11 @@ jobs:
         run: |
           set -o pipefail
           bun test server/tests/boss-governance.test.ts 2>&1 | tee ../boss_governance_policy.log
+      - name: Test real OpenBot gateway with BOSS synthetic audit/refusal cases
+        working-directory: openbot
+        run: |
+          set -o pipefail
+          bun test server/tests/boss-gateway.test.ts 2>&1 | tee ../boss_gateway_e2e_mock.log
       - name: Run upstream policy, computer gateway and approval regression tests
         working-directory: openbot
         run: |
@@ -58,6 +64,7 @@ jobs:
           name: openbot-governance-synthetic-pilot
           path: |
             boss_governance_policy.log
+            boss_gateway_e2e_mock.log
             openbot_upstream_governance.log
             openbot_governance_run_status.txt
           retention-days: 7
