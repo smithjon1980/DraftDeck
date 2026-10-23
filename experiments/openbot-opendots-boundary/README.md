@@ -1,34 +1,50 @@
-# BOSS OpenBot + OpenDots — isolated boundary and persistence stress trial
+# BOSS — OpenBot + OpenDots Governed Execution Stress Trial
 
-**Source status:** candidate, no adoption, no external account access. This does not replace React/Tailwind, Windmill, n8n, Railway, GitHub Actions, existing custody, or human release gates.
+**Record date:** 2026-10-23  
+**Status:** SOURCE / ISOLATED INTEGRATION TESTS PASS. CROSS-SYSTEM ENFORCEMENT AND PRODUCTION ADOPTION HOLD.  
+**Owner decision:** lead with OpenBot and OpenDots in testing, preserve the current BOSS production stack and human authority.
 
-## What the two programs actually share
-OpenDots documents reuse of OpenBot's **computer image/supervisor**. But its `src/server/computer-tools.ts` invokes `ComputerService.action` inside OpenDots directly, which applies **OpenDots per-Dot permissions and audit**. Reusing OpenBot's container supervisor **does not automatically run OpenBot's server/src/computer/policy.ts CEL policy or PostgreSQL audit gateway**. This is a strict cross-product governance qualification blocker until independently connected and tested.
-
-## Pinned source
+## Exact source admission
 - OpenBot: `CopilotKit/OpenBot@bd4dc94943a9d62aefd05e5e99073ba58919c9c6` (MIT)
 - OpenDots: `CopilotKit/OpenDots@8091324942b86789ed0da7facbee855145d933b0` (MIT)
-- Their source, licensing and README assertions are upstream; evaluation is not an endorsement or guarantee.
+- Original upstream source is cloned and SHA-checked on disposable CI runners. Supplemental BOSS tests are copied/appended **only in those throwaway runner checkouts**, not committed upstream. The DraftDeck PR contains only public synthetic harness code and documentation.
+- **Canonical successful evidence:** [GitHub Actions 40021472637](https://github.com/smithjon1980/DraftDeck/actions/runs/40021472637).
 
-## Jobs
-1. **OpenBot real PostgreSQL**: ephemeral pgvector PostgreSQL 17; upstream production migrator; native integration tests of persisted deny policies, human approvals, audit pagination/retention, snapshots, replica session guards, work queue, publication, and MCP permission revocation. Test data only.
-2. **OpenDots React + workspace**: Node 24, `npm ci`, TypeScript typecheck, production UI/server build, and selected native Vitest suites for browser permissions, computer routes, approval-before-save, duplicate prevention, page integrity, scheduled research revocation, runtime isolation, security and shutdown.
-3. **Cross-product architecture gate:** explicitly mark automatic shared authorization/audit between OpenDots -> OpenBot server as **NOT ESTABLISHED**; cannot be promoted on either suite passing.
+## Verified execution outcomes
 
-## Operating limits / ethics
-- No API keys, private manuscript, live GitHub mutating tokens, payment provider, Slack, phone, email or consumer data.
-- No OpenBot/OpenDots services deployed publicly or installed on current BOSS infrastructure.
-- No external network browsing by agents; code fetch and dependency installation only in CI.
-- No user authorization to publish. PASS of test suites only qualifies corresponding behavior under those test environments.
-- Automated test results must not be confused with security proof: Docker runtime isolation, hostile websites, LLM prompt injection and real human approval remain separate tests.
-- OpenDots default containers share the host kernel and the project documents no restrictive egress policy by default: avoid giving shells/network credentials to untrusted sessions without additional isolation.
+| Separate native/test suite | Result | Boundary tested |
+| --- | ---: | --- |
+| OpenBot PostgreSQL + pgvector database integration (16 files) | 172/172 PASS; 469 assertions | Persisted policy, approval stores and reviews, audit identity/cursor/retention, service coordination, publication and revocation |
+| OpenBot agent-computer boundary (7 files) | 139/139 PASS; 319 assertions | Egress policy module, action barrier, authorisation, request validation, workspace, control |
+| OpenBot mocked gateway including 3 injected BOSS cases (1 file) | 74/74 PASS; 221 assertions | Audit insertion failure stops otherwise allowed action; 75 concurrently refused actions do not reach mock computer; 75 concurrently allowed actions produce matching decision records |
+| OpenDots complete native suite with 2 injected BOSS cases (56 files) | 348/348 PASS | Computer permissions, audit, page approval, task/retry/storage, security, workspace; 75 disabled-shell and 75 globally paused attempts denied without mock transport calls |
+| OpenDots typecheck and real Vite/React/server build | PASS | Real JS/TS build integrity |
+| OpenDots focused 17-file rerun | 130/130 PASS | Overlap with full suite; **do not add** to distinct total |
+| DraftDeck ontology guard | PASS | Repository candidate naming |
 
-## Future integration authorization gates
-- Route **all write and release actions** through one server-side audited permission gateway with explicit actor + initiator identity.
-- Record audit intent **before execution** using a real persistent DB, fail closed if the record cannot be written.
-- Human approval must bind to exact action digest and fail closed on modified payload/replay.
-- Test process restart with pending requests, duplicate tool calls, 2+ tenant users, secret leakage, prompt injection and egress denial.
-- Benchmark resource use and maintenance vs BOSS existing orchestration stack.
-- Owner must approve exact version and production deployment separately.
+**733 distinct executed tests in latest successful stress workflow:** 172 + 139 + 74 + 348. This count includes original upstream and 5 added synthetic test cases, excludes overlapping focused OpenDots rerun and all previous PR #94 tests.
 
-Current decision: **controlled trial only**.
+## Subtle audit observation: visibility vs durability
+Initial extra OpenDots tests expected 75 audit rows from `w.computers.audit(id)`; the method intentionally returns **only the latest 50**. Its `ComputerStore.finish` retains **up to 1,000 completed rows per Dot**. That first assertion was invalid because it conflated UI query scope with database persistence. The final corrected tests require **50 returned by the query and 75 matching rows persisted in SQLite after closing and reopening the workspace database**. Both tests pass.
+
+For BOSS, 50 visible / 1,000 retained is **not** a complete long-term evidence archive. A separately controlled, immutable audit archive/export, retention rules, pagination and provenance must be designed before operator/charter production use.
+
+## Critical shared-policy gap — NOT TESTED, do not imply integration
+OpenDots uses OpenBot's *computer image/supervisor* but calls its **own** `ComputerService.action` and `ComputerStore` from `computerTools`, subject to OpenDots per-Dot permissions. It **does not automatically traverse OpenBot's server-level CEL policy decision gateway or OpenBot PostgreSQL audit store**.
+
+Therefore, a successful OpenDots task is **NOT evidence** that OpenBot's BOSS policy authorized it. A BOSS boundary must become physically unavoidable through a dedicated server-side adapter/gateway and network isolation—not simply an agent instruction, OpenDots checkbox, or superficial UI approval.
+
+## Production-admission gaps / adversarial next test
+1. **Cross-system route:** OpenDots -> BOSS authority -> isolated computer; deny must block at network boundary, even if OpenDots would otherwise permit. No direct app-to-supervisor bypass.
+2. **Real fault injection:** disconnect/fail **actual PostgreSQL** during intent audit write, verify no downstream dispatch. Current failure injection covered gateway behavior with a fake failing audit store; persistence integration used healthy PostgreSQL.
+3. **End-to-end approval:** bind exact action digest to authenticated human decision and current source identity; refuse replay, changed payload, expired request and unattended self-approval. Survive application restart.
+4. **Host/container attacks:** test unexpected egress including DNS, internal addresses/SSRF and shell/network abuse using disposable runtime, not merely egress-policy unit tests. OpenDots docs say restrictive network egress is **not** configured by default, and stock Docker containers share host kernel.
+5. **Multi-tenant and storage:** two users/dots must not share credentials, approval scopes, file stores or hidden browser profiles. Validate 1000-row retention and long-term evidence export.
+6. **Cost of integration:** compare maintenance, CopilotKit Intelligence/self-hosted licence and per-computer resources against existing GitHub Actions/Windmill/n8n/Railway.
+7. **Real BOSS build:** synthetic React candidate only until protected narration and brand assets can be provisioned through a safe private source path with exact-copy hashes.
+
+## Architecture under evaluation
+
+**OpenDots = operator workspace and review surface (candidate)** → **BOSS authoritative policy, custody and approval gateway using OpenBot governance patterns (candidate)** → **scoped MCP / browser/compute adapters** → **existing Windmill / GitHub Actions / n8n / Railway for their designated jobs**. Store full immutable evidence independently. Humans retain authorization over releases, charter actions and claims.
+
+No BOSS production services were modified, no user accounts/credentials or unpublished narrations were passed, no new service was deployed. PR remains draft and merge requires human review. OpenBot/OpenDots are still candidates despite passing isolated suites.
