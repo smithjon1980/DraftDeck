@@ -45,3 +45,32 @@ jobs:
           path: experiments/openbot-boundary-trial/openbot_governance_results.json
           if-no-files-found: ignore
           retention-days: 7
+
+  upstream_gateway:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions:
+      contents: read
+    steps:
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: '1.4.3'
+      - name: Clone exact OpenBot source in disposable runner
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --filter=blob:none --depth=1 https://github.com/CopilotKit/OpenBot.git upstream-openbot
+          cd upstream-openbot
+          git fetch --filter=blob:none --depth=1 origin bd4dc94943a9d62aefd05e5e99073ba58919c9c6
+          git checkout --detach bd4dc94943a9d62aefd05e5e99073ba58919c9c6
+          test "$(git rev-parse HEAD)" = bd4dc94943a9d62aefd05e5e99073ba58919c9c6
+          echo EXACT_UPSTREAM_GATEWAY_COMMIT_VERIFIED
+      - name: Install original OpenBot workspace dependencies
+        working-directory: upstream-openbot
+        run: bun install --frozen-lockfile
+      - name: Run OpenBot's own gateway and approval-policy tests
+        working-directory: upstream-openbot
+        run: |
+          bun test server/tests/computer-gateway.test.ts server/tests/approvals-policy.test.ts
+      - name: Report limits
+        run: echo "Only original OpenBot gateway tests with mocked computer and audit store executed; no live database or deployment."
