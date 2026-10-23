@@ -1,0 +1,14 @@
+{
+  "name": "boss-openbot-policy-pilot",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "test": "bun run test:policy",
+    "test:policy": "bun ./pilot.ts"
+  },
+  "dependencies": {
+    "cel-js": "0.8.2",
+    "zod": "4.4.3"
+  }
+}
