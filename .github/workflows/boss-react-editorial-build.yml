@@ -1,0 +1,38 @@
+name: BOSS React editorial compile check
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'experiments/editorial-react-demo/**'
+      - '.github/workflows/boss-react-editorial-build.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  react_build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: experiments/editorial-react-demo
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install React, Vite and Tailwind dependencies
+        run: npm install --no-audit --no-fund
+      - name: Compile actual JSX with Vite + Tailwind
+        run: npm run build
+      - name: Assert emitted HTML and JavaScript bundle
+        run: |
+          test -f dist/index.html
+          test -d dist/assets
+          find dist/assets -name '*.js' | grep -q .
+          echo 'REACT_VITE_TAILWIND_BUILD_PASS'
+      - name: Upload public synthetic dist (no narration)
+        uses: actions/upload-artifact@v4
+        with:
+          name: boss-react-editorial-demo
+          path: experiments/editorial-react-demo/dist
+          retention-days: 3
