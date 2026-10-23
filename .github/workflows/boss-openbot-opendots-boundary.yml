@@ -1,0 +1,140 @@
+name: BOSS OpenBot + OpenDots boundary stress (isolated)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'experiments/openbot-opendots-boundary/**'
+      - '.github/workflows/boss-openbot-opendots-boundary.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+
+jobs:
+  openbot_postgres:
+    name: OpenBot real PostgreSQL integration
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_DB: openbot_test
+          POSTGRES_USER: openbot
+          POSTGRES_PASSWORD: openbot
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U openbot -d openbot_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
+    env:
+      DATABASE_URL: postgres://openbot:openbot@localhost:5432/openbot_test
+      TEST_DATABASE_URL: postgres://openbot:openbot@localhost:5432/openbot_test
+      DO_NOT_TRACK: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: '1.4.3'
+      - name: Fetch pinned, unmodified OpenBot source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --filter=blob:none --depth=1 https://github.com/CopilotKit/OpenBot.git upstream-openbot
+          cd upstream-openbot
+          git fetch --filter=blob:none --depth=1 origin bd4dc94943a9d62aefd05e5e99073ba58919c9c6
+          git checkout --detach bd4dc94943a9d62aefd05e5e99073ba58919c9c6
+          test "$(git rev-parse HEAD)" = bd4dc94943a9d62aefd05e5e99073ba58919c9c6
+          echo OPENBOT_PIN_VERIFIED
+      - name: Install original OpenBot workspace dependencies
+        working-directory: upstream-openbot
+        run: bun install --frozen-lockfile
+      - name: Run upstream PostgreSQL migration and database-specific safeguards
+        working-directory: upstream-openbot/server
+        run: bun scripts/migrate.ts
+      - name: Execute native integration tests against real PostgreSQL
+        working-directory: upstream-openbot
+        run: |
+          set -euo pipefail
+          bun test \
+            server/tests/policy-durability.integration.test.ts \
+            server/tests/approvals-policy.integration.test.ts \
+            server/tests/approvals-store.integration.test.ts \
+            server/tests/audit-cursor.integration.test.ts \
+            server/tests/audit-retention.integration.test.ts \
+            server/tests/computer-snapshot-store.integration.test.ts \
+            server/tests/computer-session-guard-replicas.integration.test.ts \
+            server/tests/work-queue.integration.test.ts \
+            server/tests/sandboxed-publication.integration.test.ts \
+            server/tests/mcp-grant-removal.integration.test.ts \
+            2>&1 | tee ../openbot_postgres_test_log.txt
+      - name: Archive temporary evidence without database contents
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: boss-openbot-postgres-test-log
+          path: openbot_postgres_test_log.txt
+          if-no-files-found: ignore
+          retention-days: 7
+
+  opendots_workspace:
+    name: OpenDots full suite, typecheck and build
+    runs-on: ubuntu-latest
+    timeout-minutes: 23
+    env:
+      CI: 'true'
+      DO_NOT_TRACK: '1'
+      WEB_SEARCH_PROVIDER: disabled
+      NODE_ENV: test
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Fetch pinned OpenDots source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --filter=blob:none --depth=1 https://github.com/CopilotKit/OpenDots.git upstream-opendots
+          cd upstream-opendots
+          git fetch --filter=blob:none --depth=1 origin 8091324942b86789ed0da7facbee855145d933b0
+          git checkout --detach 8091324942b86789ed0da7facbee855145d933b0
+          test "$(git rev-parse HEAD)" = 8091324942b86789ed0da7facbee855145d933b0
+          echo OPENDOTS_PIN_VERIFIED
+      - name: Install exact OpenDots lockfile dependencies
+        working-directory: upstream-opendots
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Typecheck project
+        working-directory: upstream-opendots
+        run: npm run typecheck
+      - name: Build real OpenDots React and server TypeScript
+        working-directory: upstream-opendots
+        run: npm run build
+      - name: Test actual OpenDots approval, storage, computer security, worker recovery, tool and route behavior
+        working-directory: upstream-opendots
+        run: |
+          set -o pipefail
+          npm test -- \
+            tests/computer-routes.test.ts tests/computer.test.ts \
+            tests/security.test.ts tests/runner.test.ts \
+            tests/page-review.test.tsx tests/page-routes.test.ts \
+            tests/page-service.test.ts tests/page-snapshots.test.ts \
+            tests/connections.test.ts tests/composio-tools.test.ts \
+            tests/headless-runtime.test.ts tests/headless.test.ts \
+            tests/shutdown.test.ts tests/runtime-scope.test.ts \
+            tests/workspace.test.ts tests/research.test.ts \
+            tests/agent-run-timeout.test.ts \
+            2>&1 | tee ../opendots_boundary_test_log.txt
+      - name: Save isolated test output (no external credentials)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: boss-opendots-boundary-test-log
+          path: opendots_boundary_test_log.txt
+          if-no-files-found: ignore
+          retention-days: 7
