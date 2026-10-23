@@ -14,6 +14,8 @@ Four active candidate skills specify the production workflow:
 3. `.agents/skills/boss-art-asset-producer/SKILL.md` — distinct source-traceable illustration, provenance and resolution.
 4. `.agents/skills/boss-art-story-reviewer/SKILL.md` — medium, storytelling, layer separation, parity and human review.
 
+5. `.agents/skills/boss-editorial-layout-director/SKILL.md` — exact V4 manuscript coverage, 1–4-column text layout and nonspoken action-title selection. The approved narration remains authoritative; text-fit and human readability are separate gates.
+
 Supporting `references/editorial-composition.md`, `references/web-engineering.md` and `references/visual-acceptance.md` remain in force. `references/verified-pipeline.md` applies only to its historical Canva adapter experiment.
 
 ## Script versions and Productive Digital Real Estate
