@@ -1,0 +1,64 @@
+name: OpenBot isolated governance evaluation
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'experiments/openbot-governance/**'
+      - '.github/workflows/openbot-governance-isolated.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  upstream_governance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - name: Fetch BOSS synthetic test harness only
+        uses: actions/checkout@v4
+        with:
+          path: boss
+          persist-credentials: false
+      - name: Checkout pinned public OpenBot source
+        uses: actions/checkout@v4
+        with:
+          repository: CopilotKit/OpenBot
+          ref: bd4dc94943a9d62aefd05e5e99073ba58919c9c6
+          path: openbot
+          persist-credentials: false
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.3
+      - name: Verify upstream SHA and no private source
+        run: |
+          test "$(git -C openbot rev-parse HEAD)" = "bd4dc94943a9d62aefd05e5e99073ba58919c9c6"
+          ! grep -q 'EP01_P001' boss/experiments/openbot-governance/boss-governance.test.ts
+          test ! -e openbot/.env
+          cp boss/experiments/openbot-governance/boss-governance.test.ts openbot/server/tests/boss-governance.test.ts
+      - name: Install OpenBot dependencies without package lifecycle scripts
+        working-directory: openbot
+        run: bun install --frozen-lockfile --ignore-scripts
+      - name: Evaluate BOSS policy against real OpenBot CEL engine
+        working-directory: openbot
+        run: |
+          set -o pipefail
+          bun test server/tests/boss-governance.test.ts 2>&1 | tee ../boss_governance_policy.log
+      - name: Run upstream policy, computer gateway and approval regression tests
+        working-directory: openbot
+        run: |
+          set -o pipefail
+          bun test server/tests/computer-policy.test.ts server/tests/computer-gateway.test.ts server/tests/approvals-policy.test.ts 2>&1 | tee ../openbot_upstream_governance.log
+      - name: Report successful checkpoints
+        run: |
+          printf 'OPENBOT_UPSTREAM_SHA=%s\nPOLICY_AND_GATEWAY_TESTS=PASS\nSCOPE=ISOLATED_SYNTHETIC_ONLY\nPRODUCTION_CONNECTED=false\n' "$(git -C openbot rev-parse HEAD)" > openbot_governance_run_status.txt
+          cat openbot_governance_run_status.txt
+      - name: Upload public-only test evidence
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: openbot-governance-synthetic-pilot
+          path: |
+            boss_governance_policy.log
+            openbot_upstream_governance.log
+            openbot_governance_run_status.txt
+          retention-days: 7
+          if-no-files-found: ignore
