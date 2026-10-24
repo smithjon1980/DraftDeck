@@ -49,7 +49,7 @@ const simulator={
   if(!d.allowed||!d.forward) return {status:"DENIED",receipt:entry.id};
   if(req.consequential){
    const id=randomUUID();
-   this.approvals.set(id,{digest:digest(req),request:req,status:"pending",actor:req.actor,used:false});
+   this.approvals.set(id,{digest:digest(req),request:req,status:"pending",actor:{id:ctx.actor.id},used:false});
    return {status:"APPROVAL_REQUIRED",approvalId:id};
   }
   this.calls.push({id:randomUUID(),action:req.intent,path:req.path});
