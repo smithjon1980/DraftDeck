@@ -11,6 +11,9 @@ on:
       - 'doctrine/composition-standard.md'
       - 'doctrine/release-qa.md'
       - 'doctrine/visual-evidence-gate.md'
+      - 'doctrine/boss-precomposition-human-selection.md'
+      - 'tools/visual-gate/check_precomposition.mjs'
+      - 'tests/precomposition_gate.test.mjs'
       - 'skills/draftdeck/SKILL.md'
       - '.agents/skills/boss-*/**'
       - 'tools/visual-poc/check_story_layers.py'
@@ -49,5 +52,7 @@ jobs:
         run: python3 -m unittest discover -s tests -p 'test_current_case_doctrine.py' -v
       - name: Validate manuscript-first editorial layout source hash negative fixtures
         run: python3 -m unittest discover -s tests -p 'test_editorial_manuscript.py' -v
+      - name: Test fail-closed independent art and story selection custody (Node, no slide generation)
+        run: node --test tests/precomposition_gate.test.mjs
       - name: Report limits
         run: echo "Only structural parity checked. Visual/adapters/human authorization remain unverified."
