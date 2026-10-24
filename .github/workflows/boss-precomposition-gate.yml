@@ -1,0 +1,22 @@
+name: BOSS precomposition approvals integrity
+on:
+  pull_request:
+    paths:
+      - '.agents/skills/boss-precomposition-human-approval/**'
+      - 'tools/precomposition-gate/**'
+      - '.github/workflows/boss-precomposition-gate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  precomposition-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m unittest discover -s tools/precomposition-gate -p 'test_*.py' -v
