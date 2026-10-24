@@ -1,0 +1,8 @@
+{
+  "name": "boss-opendots-openbot-direct-boundary",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "cel-js": "0.8.2"
+  }
+}
