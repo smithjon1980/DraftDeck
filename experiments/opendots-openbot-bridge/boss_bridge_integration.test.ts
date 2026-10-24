@@ -6,6 +6,7 @@ import {tmpdir} from "node:os";
 import {join} from "node:path";
 import {WorkspaceStore} from "../src/server/workspace.js";
 import {ComputerService} from "../src/server/computer-service.js";
+import {computerTools} from "../src/server/computer-tools.js";
 import {evaluateActionPolicy} from "./boss-openbot-policy.js";
 import {decideAction} from "./boss-openbot-approvals.js";
 
@@ -190,4 +191,33 @@ describe("OpenDots ComputerService -> OpenBot original policies -> durable BOSS 
   try{expect(second.prepare("UPDATE approvals SET used=1 WHERE hash=? AND used=0 AND expires>?").run(d,h.now).changes).toBe(0)}
   finally{second.close()}
  });
+ it("OpenDots published agent tool entrypoint calls actual OpenBot policy through bridge",async()=>{
+  const h=new Harness();
+  const t=computerTools(h.service,h.id,()=>{},new AbortController().signal);
+  const read=t.find(x=>x.name==="computer_files_read");
+  expect(read).toBeDefined();
+  await expect(read!.execute?.({path:"source/public-brief.txt"})).resolves.toMatchObject({text:"PUBLIC SYNTHETIC BRIEF"});
+  expect(h.forwarded).toHaveLength(1);expect(h.count("authorized")).toBe(1);
+ });
+ it("OpenDots agent computer_exec is stopped by OpenBot despite local shell permission",async()=>{
+  const h=new Harness();
+  const t=computerTools(h.service,h.id,()=>{},new AbortController().signal);
+  const exec=t.find(x=>x.name==="computer_exec");
+  expect(exec).toBeDefined();
+  await expect(exec!.execute?.({command:"echo BLOCKED"})).rejects.toThrow();
+  expect(h.forwarded).toHaveLength(0);expect(h.count("refused")).toBe(1);
+ });
+ it("live OpenBot policy revocation blocks a second real OpenDots read",async()=>{
+  const h=new Harness(),b={path:"source/public-brief.txt"};
+  await h.call("files_read",b);expect(h.forwarded).toHaveLength(1);
+  h.policy={mode:"enforce",deny:['intent == "read_file"'],allow:["true"]};
+  await expect(h.call("files_read",b)).rejects.toThrow();
+  expect(h.forwarded).toHaveLength(1);expect(h.count("refused")).toBe(1);
+ });
+ it("broken OpenBot deny expression blocks forwarding even with permissive allow",async()=>{
+  const h=new Harness();h.policy={mode:"enforce",deny:["broken CEL ((("],allow:["true"]};
+  await expect(h.call("files_read",{path:"source/public-brief.txt"})).rejects.toThrow();
+  expect(h.forwarded).toHaveLength(0);
+ });
+
 });
