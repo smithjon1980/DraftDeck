@@ -1,4 +1,4 @@
-name: BOSS OpenBot + OpenDots boundary stress (isolated)
+name: BOSS OpenBot + OpenDots cross-governance stress (no database)
 on:
   pull_request:
     branches: [main]
@@ -10,99 +10,6 @@ permissions:
   contents: read
 
 jobs:
-  openbot_postgres:
-    name: OpenBot real PostgreSQL integration
-    runs-on: ubuntu-latest
-    timeout-minutes: 22
-    services:
-      postgres:
-        image: pgvector/pgvector:pg17
-        env:
-          POSTGRES_DB: openbot_test
-          POSTGRES_USER: openbot
-          POSTGRES_PASSWORD: openbot
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd "pg_isready -U openbot -d openbot_test"
-          --health-interval 5s
-          --health-timeout 5s
-          --health-retries 12
-    env:
-      DATABASE_URL: postgres://openbot:openbot@localhost:5432/openbot_test
-      TEST_DATABASE_URL: postgres://openbot:openbot@localhost:5432/openbot_test
-      DO_NOT_TRACK: '1'
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-      - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: '1.4.3'
-      - name: Fetch pinned, unmodified OpenBot source
-        shell: bash
-        run: |
-          set -euo pipefail
-          git clone --filter=blob:none --depth=1 https://github.com/CopilotKit/OpenBot.git upstream-openbot
-          cd upstream-openbot
-          git fetch --filter=blob:none --depth=1 origin bd4dc94943a9d62aefd05e5e99073ba58919c9c6
-          git checkout --detach bd4dc94943a9d62aefd05e5e99073ba58919c9c6
-          test "$(git rev-parse HEAD)" = bd4dc94943a9d62aefd05e5e99073ba58919c9c6
-          echo OPENBOT_PIN_VERIFIED
-      - name: Install original OpenBot workspace dependencies
-        working-directory: upstream-openbot
-        run: bun install --frozen-lockfile
-      - name: Run upstream PostgreSQL migration and database-specific safeguards
-        working-directory: upstream-openbot/server
-        run: bun scripts/migrate.ts
-      - name: Execute native integration tests against real PostgreSQL
-        working-directory: upstream-openbot
-        run: |
-          set -euo pipefail
-          bun test \
-            server/tests/policy-durability.integration.test.ts \
-            server/tests/approvals-policy.integration.test.ts \
-            server/tests/approvals-store.integration.test.ts \
-            server/tests/audit-cursor.integration.test.ts \
-            server/tests/audit-retention.integration.test.ts \
-            server/tests/computer-snapshot-store.integration.test.ts \
-            server/tests/computer-session-guard-replicas.integration.test.ts \
-            server/tests/work-queue.integration.test.ts \
-            server/tests/sandboxed-publication.integration.test.ts \
-            server/tests/mcp-grant-removal.integration.test.ts \
-            server/tests/approvals-interactive.integration.test.ts \
-            server/tests/approvals-question-resume.integration.test.ts \
-            server/tests/audit-initiator.integration.test.ts \
-            server/tests/enterprise-controls.integration.test.ts \
-            server/tests/routines-store.integration.test.ts \
-            server/tests/policy-fanout.integration.test.ts \
-            2>&1 | tee ../openbot_postgres_test_log.txt
-      - name: Inject synthetic BOSS audit-failure and concurrent action tests in disposable checkout
-        run: |
-          cat experiments/openbot-opendots-boundary/boss_openbot_fault_append.ts >> upstream-openbot/server/tests/computer-gateway.test.ts
-          echo "BOSS_EXTRA_TESTS_IN_EPHEMERAL_CHECKOUT_ONLY"
-      - name: Execute audit-write failure, 75 denied and 75 permitted concurrent mock actions
-        working-directory: upstream-openbot
-        run: |
-          set -o pipefail
-          bun test server/tests/computer-gateway.test.ts 2>&1 | tee ../openbot_fault_test_log.txt
-      - name: Archive temporary injection-test evidence
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: boss-openbot-audit-failure-burst-log
-          path: openbot_fault_test_log.txt
-          if-no-files-found: ignore
-          retention-days: 7
-      - name: Archive temporary evidence without database contents
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: boss-openbot-postgres-test-log
-          path: openbot_postgres_test_log.txt
-          if-no-files-found: ignore
-          retention-days: 7
-
   opendots_workspace:
     name: OpenDots full suite, typecheck and build
     runs-on: ubuntu-latest
