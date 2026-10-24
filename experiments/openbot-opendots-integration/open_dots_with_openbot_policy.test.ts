@@ -61,7 +61,7 @@ it("BOSS integration: permitted OpenDots source read flows through actual OpenBo
 });
 it("BOSS integration: protected text write is stopped despite OpenDots files permission",async()=>{
  const x=setup(true);
- await expect(x.service.action(x.id,"files_write",{path:"approved/ep01.md",text:"changed"},"agent")).rejects.toThrow();
+ await expect(x.service.action(x.id,"files_write",{path:"approved/ep01.md",contents:"changed"},"agent")).rejects.toThrow();
  expect(x.decisions).toHaveLength(1);
  expect(x.decisions[0]).toMatchObject({allowed:false,forward:false,source:"deny"});
  expect(x.executed).toHaveLength(0);
@@ -69,7 +69,7 @@ it("BOSS integration: protected text write is stopped despite OpenDots files per
 });
 it("BOSS integration: bounded JSX candidate write is allowed and accounted for",async()=>{
  const x=setup(true);
- await x.service.action(x.id,"files_write",{path:"candidates/slide02.jsx",text:"export default ()=>null"},"agent");
+ await x.service.action(x.id,"files_write",{path:"candidates/slide02.jsx",contents:"export default ()=>null"},"agent");
  expect(x.executed).toEqual(["/files/write:candidates/slide02.jsx"]);
  expect(x.decisions[0]?.allowed).toBe(true);
 });
@@ -81,14 +81,14 @@ it("BOSS integration: unavailable audit stops downstream dispatch",async()=>{
 });
 it("BOSS bypass probe: current unmodified OpenDots transport without gateway would permit protected write",async()=>{
  const x=setup(false);
- await x.service.action(x.id,"files_write",{path:"approved/ep01.md",text:"changed"},"agent");
+ await x.service.action(x.id,"files_write",{path:"approved/ep01.md",contents:"changed"},"agent");
  expect(x.executed).toEqual(["/files/write:approved/ep01.md"]);
  expect(x.decisions).toHaveLength(0);
  // This PASS establishes an implementation gap, not a security property.
 });
 it("BOSS integration: unknown file with no explicit allow is refused",async()=>{
  const x=setup(true);
- await expect(x.service.action(x.id,"files_write",{path:"candidates/unapproved-other.js",text:"x"},"agent")).rejects.toThrow();
+ await expect(x.service.action(x.id,"files_write",{path:"candidates/unapproved-other.js",contents:"x"},"agent")).rejects.toThrow();
  expect(x.decisions[0]).toMatchObject({allowed:false,forward:false,source:"default"});
  expect(x.executed).toHaveLength(0);
 });
