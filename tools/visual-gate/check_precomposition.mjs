@@ -33,6 +33,8 @@ export function inspect(root,manifest,review){
    const layer=manifest?.[role],decision=review?.[role];
    if(!layer || typeof layer !== 'object'){err(role+' source missing');continue;}
    if(!decision || typeof decision !== 'object'){err(role+' human decision missing');continue;}
+   if(typeof layer.source_path!=='string'||!layer.source_path.endsWith('.tsx'))err(role+' must be native React TSX source');
+   if(typeof layer.preview_path!=='string'||!/\.(png|webp)$/i.test(layer.preview_path))err(role+' must have separate rendered preview');
    for(const kind of ['source','preview']){
      const path=layer[kind+'_path'],sha=layer[kind+'_sha256'];
      if(!isHash(sha)){err(role+' '+kind+' SHA missing or invalid');continue;}
@@ -43,6 +45,12 @@ export function inspect(root,manifest,review){
        if(digest(readFileSync(f))!==sha)err(role+' '+kind+' bytes modified after selection');
      }catch(e){err(role+' '+kind+' '+String(e.message));}
      if(decision[kind+'_sha256']!==sha)err(role+' '+kind+' hash not selected by reviewer');
+   }
+   if(files[role+':source']){
+     const code=readFileSync(files[role+':source'],'utf8');
+     if(!new RegExp('\\b'+(role==='art'?'ArtLayer':'StoryLayer')+'\\b').test(code))err(role+' missing explicit React layer');
+     if(!/className\\s*=/.test(code))err(role+' missing Tailwind/React className');
+     if(/<text(?:\\s|>)|<canvas\\b|dangerouslySetInnerHTML|toDataURL\\s*\\(/i.test(code))err(role+' uses forbidden flattened/native-text replacement');
    }
    if(decision.decision!=='APPROVE_'+role.toUpperCase())err(role+' not explicitly approved');
    if(typeof decision.reviewer_account!=='string'||decision.reviewer_account.trim().length<2)err(role+' reviewer identity missing');
