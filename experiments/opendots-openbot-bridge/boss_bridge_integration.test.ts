@@ -220,4 +220,35 @@ describe("OpenDots ComputerService -> OpenBot original policies -> durable BOSS 
   expect(h.forwarded).toHaveLength(0);
  });
 
+ it("NEGATIVE CONTROL: unmodified OpenDots direct computer transport bypasses an unwired OpenBot CEL gateway",async()=>{
+  const ws=new WorkspaceStore(":memory:","BOSS-OWNER");
+  try{
+   const id=ws.dots()[0].id;ws.computers.patch(id,{enabled:true,files:true});
+   let directWrites=0;
+   const transport:typeof fetch=async (addr,init)=>{
+    if(String(addr).endsWith("/computers"))return Response.json({computers:[{
+     botId:id,container:"opendots-computer-"+id,status:"running",
+     url:"http://opendots-computer-"+id+":4100"
+    }]});
+    if(String(addr).endsWith("/files/write")){
+     directWrites++;
+     return Response.json({path:"approved/ep01.md",bytes:6,appended:false});
+    }
+    return new Response("unexpected", {status:404});
+   };
+   const service=new ComputerService(ws,{
+    baseUrl:"http://127.0.0.1",voiceName:"synthetic",slackUsers:[],runtimeUrl:"http://127.0.0.1",
+    computerSupervisorUrl:"http://127.0.0.1:4312",computerSupervisorToken:"TEST",
+    computerToken:MASTER,computerNamespace:"opendots"
+   },()=>false,transport);
+   const originalPolicy=evaluateActionPolicy(POLICY,
+    context(id,"files_write",{path:"approved/ep01.md",contents:"TAMPER"},false) as any);
+   expect(originalPolicy.forward).toBe(false);
+   await service.action(id,"files_write",{path:"approved/ep01.md",contents:"TAMPER"},"agent");
+   expect(directWrites).toBe(1);
+   // Expected vulnerability reproduction, NOT an acceptance pass:
+   // without mandatory routing/network isolation, the OpenBot policy is never asked.
+  }finally{ws.close()}
+ });
+
 });
