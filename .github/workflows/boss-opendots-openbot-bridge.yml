@@ -1,0 +1,57 @@
+name: BOSS OpenDots to OpenBot authorization boundary
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'experiments/openbot-opendots-integration/**'
+      - '.github/workflows/boss-opendots-openbot-bridge.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bridge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 13
+    env:
+      DO_NOT_TRACK: '1'
+      WEB_SEARCH_PROVIDER: disabled
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Fetch exact OpenDots and OpenBot source revisions
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --filter=blob:none --depth=1 https://github.com/CopilotKit/OpenDots.git dots
+          (cd dots && git fetch --filter=blob:none --depth=1 origin 8091324942b86789ed0da7facbee855145d933b0 && git checkout --detach 8091324942b86789ed0da7facbee855145d933b0)
+          git clone --filter=blob:none --depth=1 https://github.com/CopilotKit/OpenBot.git bot
+          (cd bot && git fetch --filter=blob:none --depth=1 origin bd4dc94943a9d62aefd05e5e99073ba58919c9c6 && git checkout --detach bd4dc94943a9d62aefd05e5e99073ba58919c9c6)
+          test "$(git -C dots rev-parse HEAD)" = 8091324942b86789ed0da7facbee855145d933b0
+          test "$(git -C bot rev-parse HEAD)" = bd4dc94943a9d62aefd05e5e99073ba58919c9c6
+      - name: Install OpenDots and OpenBot CEL evaluation dependency
+        working-directory: dots
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          npm install --no-save --no-package-lock --ignore-scripts --no-audit --no-fund cel-js@0.8.2
+      - name: Inject original OpenBot policy evaluator and BOSS bridge tests into disposable checkout
+        run: |
+          cp bot/server/src/computer/policy.ts dots/src/server/boss-openbot-policy.ts
+          cp experiments/openbot-opendots-integration/open_dots_with_openbot_policy.test.ts dots/tests/boss_open_dots_openbot_policy.test.ts
+          test "$(git hash-object dots/src/server/boss-openbot-policy.ts)" = 94bc46ad3a74bdb56ad84f86527057ecba6c735e
+      - name: Test permitted, denied, bypass, and audit failure behavior
+        working-directory: dots
+        run: |
+          set -o pipefail
+          npx vitest run tests/boss_open_dots_openbot_policy.test.ts --maxWorkers=1 2>&1 | tee ../boss_opendots_bridge_log.txt
+      - name: Upload bridge and bypass evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: boss-openbot-opendots-bridge-log
+          path: boss_opendots_bridge_log.txt
+          if-no-files-found: ignore
+          retention-days: 7
