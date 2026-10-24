@@ -50,7 +50,7 @@ export function inspect(root,manifest,review){
      const code=readFileSync(files[role+':source'],'utf8');
      if(!new RegExp('\\b'+(role==='art'?'ArtLayer':'StoryLayer')+'\\b').test(code))err(role+' missing explicit React layer');
      if(!/className\\s*=/.test(code))err(role+' missing Tailwind/React className');
-     if(/<text(?:\\s|>)|<canvas\\b|dangerouslySetInnerHTML|toDataURL\\s*\\(/i.test(code))err(role+' uses forbidden flattened/native-text replacement');
+     if(['<text ','<text>','<text/','<canvas','dangerouslySetInnerHTML','toDataURL('].some(needle => code.includes(needle)))err(role+' uses forbidden flattened/native-text replacement');
    }
    if(decision.decision!=='APPROVE_'+role.toUpperCase())err(role+' not explicitly approved');
    if(typeof decision.reviewer_account!=='string'||decision.reviewer_account.trim().length<2)err(role+' reviewer identity missing');
