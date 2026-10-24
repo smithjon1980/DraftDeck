@@ -1,0 +1,70 @@
+name: OpenDots isolated governance evaluation
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/opendots-governance-isolated.yml'
+      - 'experiments/opendots-governance/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  upstream_governance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout BOSS test specification
+        uses: actions/checkout@v4
+        with:
+          path: boss
+          persist-credentials: false
+      - name: Checkout pinned OpenDots
+        uses: actions/checkout@v4
+        with:
+          repository: CopilotKit/OpenDots
+          ref: 8091324942b86789ed0da7facbee855145d933b0
+          path: opendots
+          persist-credentials: false
+      - name: Verify immutable source
+        run: |
+          test "$(git -C opendots rev-parse HEAD)" = "8091324942b86789ed0da7facbee855145d933b0"
+          test ! -e opendots/.env
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: opendots/package-lock.json
+      - name: Install pinned dependencies with scripts disabled
+        working-directory: opendots
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Run source-backed security and permission regressions
+        working-directory: opendots
+        run: |
+          set -o pipefail
+          npx vitest run tests/security.test.ts tests/runtime-scope.test.ts tests/computer.test.ts tests/computer-routes.test.ts tests/composio-tools.test.ts tests/connections.test.ts 2>&1 | tee ../opendots-security.log
+      - name: Run human approval and revision regressions
+        working-directory: opendots
+        run: |
+          set -o pipefail
+          npx vitest run tests/page-review.test.tsx tests/page-review-card.test.tsx tests/page-service.test.ts tests/page-snapshots.test.ts tests/autosave.test.ts tests/workspace.test.ts 2>&1 | tee ../opendots-approval.log
+      - name: Test timeouts, concurrency and cancellation regressions
+        working-directory: opendots
+        run: |
+          set -o pipefail
+          npx vitest run tests/agent-run-timeout.test.ts tests/parallel.test.ts tests/parallel-user-agent.test.ts tests/runner.test.ts 2>&1 | tee ../opendots-concurrency.log
+      - name: Mark successful isolated scope
+        run: |
+          printf 'OPENDOTS_SHA=8091324942b86789ed0da7facbee855145d933b0\nSOURCE_BACKED_TESTS=PASS\nPRODUCTION_CONNECTED=false\nOPENBOT_OPENDOTS_INTEGRATION=NOT_TESTED\n' > opendots-governance-status.txt
+      - name: Upload non-secret evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: opendots-governance-upstream-regressions
+          retention-days: 7
+          if-no-files-found: ignore
+          path: |
+            opendots-security.log
+            opendots-approval.log
+            opendots-concurrency.log
+            opendots-governance-status.txt
