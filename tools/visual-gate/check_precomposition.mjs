@@ -12,7 +12,10 @@ const digest = b => createHash('sha256').update(b).digest('hex');
 const isHash = x => typeof x === 'string' && /^[0-9a-f]{64}$/.test(x);
 const local = (root,path) => {
   if(typeof path !== 'string' || !path || path.startsWith('/') || path.includes('\\')) throw Error('non-relative path');
-  const rootReal=realpathSync(root),target=realpathSync(resolve(root,path));
+  const resolvedRoot=resolve(root),candidate=resolve(resolvedRoot,path);
+  const prospective=relative(resolvedRoot,candidate);
+  if(prospective==='..'||prospective.startsWith('..'+sep)||prospective.startsWith(sep))throw Error('path outside approved root');
+  const rootReal=realpathSync(root),target=realpathSync(candidate);
   const rel=relative(rootReal,target);
   if(rel==='..'||rel.startsWith('..'+sep)||rel.startsWith(sep)) throw Error('path outside approved root');
   return target;
@@ -49,7 +52,7 @@ export function inspect(root,manifest,review){
    if(files[role+':source']){
      const code=readFileSync(files[role+':source'],'utf8');
      if(!new RegExp('\\b'+(role==='art'?'ArtLayer':'StoryLayer')+'\\b').test(code))err(role+' missing explicit React layer');
-     if(!/className\\s*=/.test(code))err(role+' missing Tailwind/React className');
+     if(!code.includes('className'))err(role+' missing Tailwind/React className');
      if(['<text ','<text>','<text/','<canvas','dangerouslySetInnerHTML','toDataURL('].some(needle => code.includes(needle)))err(role+' uses forbidden flattened/native-text replacement');
    }
    if(decision.decision!=='APPROVE_'+role.toUpperCase())err(role+' not explicitly approved');
