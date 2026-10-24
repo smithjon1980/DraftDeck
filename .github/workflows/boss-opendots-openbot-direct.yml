@@ -1,0 +1,43 @@
+name: BOSS OpenDots to OpenBot isolated direct boundary
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'experiments/opendots-openbot-direct/**'
+      - '.github/workflows/boss-opendots-openbot-direct.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  direct-boundary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: experiments/opendots-openbot-direct
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: '1.4.3'
+      - name: Fetch pinned authentic OpenBot policy engine
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p upstream/server/src/computer
+          curl -fsSL --retry 3 https://raw.githubusercontent.com/CopilotKit/OpenBot/bd4dc94943a9d62aefd05e5e99073ba58919c9c6/server/src/computer/policy.ts -o upstream/server/src/computer/policy.ts
+          test "$(git hash-object upstream/server/src/computer/policy.ts)" = 94bc46ad3a74bdb56ad84f86527057ecba6c735e
+      - name: Install only CEL required by authentic policy module
+        run: bun install --no-save
+      - name: Execute synthetic OpenDots-through-OpenBot boundary tests
+        run: bun trial.ts
+      - name: Persist machine-readable results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: boss-opendots-openbot-direct-boundary
+          path: experiments/opendots-openbot-direct/results.json
+          if-no-files-found: ignore
+          retention-days: 7
