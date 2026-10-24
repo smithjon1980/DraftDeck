@@ -56,9 +56,7 @@ function fakeCompute(rule=policy) {
   const u=new URL(String(input));
   const path=u.pathname;
   if(path==="/computers"){
-   return Response.json({computers:[...new Set([..."AB"].map(t=>t))].filter(Boolean).flatMap(()=>{
-    return [];
-   })]});
+   return Response.json({computers:[]});
   }
   // The caller's x-openbot-bot-id header is NOT a trusted identity in
   // production. This spike uses it to construct test context and explicitly
