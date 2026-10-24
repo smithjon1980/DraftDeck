@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "contract",
+    "candidate_id",
+    "status",
+    "source_file",
+    "art_origin",
+    "story_origin",
+    "text_origin",
+    "generator_files",
+    "human_approved",
+    "release_authorized"
+  ],
+  "properties": {
+    "contract": {
+      "const": "BOSS-REACT-LAYERS-V1"
+    },
+    "candidate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "SUBMITTED",
+        "REJECTED",
+        "RESUBMITTED",
+        "TECHNICALLY_ACCEPTED",
+        "HUMAN_ACCEPTED"
+      ]
+    },
+    "source_file": {
+      "type": "string",
+      "pattern": "\\\\.tsx$"
+    },
+    "art_origin": {
+      "const": "REACT_TSX"
+    },
+    "story_origin": {
+      "const": "REACT_TSX"
+    },
+    "text_origin": {
+      "const": "NATIVE_HTML"
+    },
+    "generator_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "human_approved": {
+      "type": "boolean"
+    },
+    "release_authorized": {
+      "const": false
+    },
+    "supersedes": {
+      "type": "string"
+    },
+    "change_summary": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

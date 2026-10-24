@@ -1,0 +1,12 @@
+{
+  "contract": "BOSS-REACT-LAYERS-V1",
+  "candidate_id": "SYNTHETIC-STUDIO02-A",
+  "status": "SUBMITTED",
+  "source_file": "examples/react-layer-submission/Slide.tsx",
+  "art_origin": "REACT_TSX",
+  "story_origin": "REACT_TSX",
+  "text_origin": "NATIVE_HTML",
+  "generator_files": [],
+  "human_approved": false,
+  "release_authorized": false
+}
