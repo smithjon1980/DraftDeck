@@ -1,25 +1,42 @@
-# BOSS / OpenDots + OpenBot enforced bridge trial
+# BOSS OpenDots + OpenBot — direct bridge qualification (October 23, 2026)
 
-**Status:** candidate. No production deployment, source mutation, human authorization, database addition or stack replacement.
+**Status: TEST HARNESS QUALIFIED / UNMEDIATED DIRECT PATH CONFIRMED / DEPLOYMENT HOLD.**
+This is an experimental bridge, **not a production modification**.
 
-This experiment exercises the **actual OpenDots `ComputerService.action`** with a custom synthetic transport adapter that invokes OpenBot's **unmodified, exact-pinned CEL `evaluateActionPolicy`** and **`decideAction` approval policy**. It uses SQLite solely for test decision evidence and a disposable single-use simulated approval ledger. No PostgreSQL, production access, model inference or unpublished BOSS text.
+## Execution and source evidence
 
-## What this does test
+- **21/21 Vitest cases PASSED** in the verified [GitHub Actions run #40043606600](https://github.com/smithjon1980/DraftDeck/actions/runs/40043606600).
+- DraftDeck ontology guard PASSED on the same commit.
+- Actual OpenDots `ComputerService` and `computerTools` modules, not a rewritten agent tool facade.
+- Real OpenBot upstream CEL `evaluateActionPolicy` and approval `decideAction` modules copied unchanged into disposable OpenDots checkout and hash verified:
+  - `server/src/computer/policy.ts`: Git blob `94bc46ad3a74bdb56ad84f86527057ecba6c735e`.
+  - `server/src/approvals/policy.ts`: Git blob `56606eeda7f58fbac7f9ba29806c31c4e4118314`.
+- Pinned OpenBot commit `bd4dc94943a9d62aefd05e5e99073ba58919c9c6`; pinned OpenDots commit `8091324942b86789ed0da7facbee855145d933b0`.
+- No PostgreSQL, production database, personal accounts, private manuscript, model provider, actual email or remote browser. A disposable **SQLite** approval/evidence ledger is used only by the test harness.
 
-A real OpenDots request must cross the injected adapter before a mock computer receives it. Narrow read permission, denial of executable shell, blocked edits to `approved/`, no premature file writes, fail-closed audit insertion, expired and changed approvals, single-use grants, denial under scheduled initiators, concurrent denied actions and identity-token mismatches are covered.
+## What passes through the bridge
 
-A test-only signed approval permit is deliberately **NOT** evidence of real user session identity, human UI or remote access protection; production would require the app's signed identity context and audited decision semantics.
+- Real OpenDots agent tool entrypoint `computer_files_read` -> OpenDots ComputerService -> BOSS synthetic transport -> original OpenBot CEL policy -> original approval decision -> simulated computer. Read allowed and logged before execution.
+- Real OpenDots `computer_exec` is stopped by OpenBot policy even if OpenDots shell permission is enabled.
+- Protected `approved/` manuscript mutation blocked; exact candidate file writes demand explicit human approval.
+- Prototype test-only signed, hash-bound, expiring approval consumed exactly once; changed payload, expired approval, forged identity and replay rejected. The consumed record persists on reopening the SQLite ledger.
+- Scheduled/unattended writes refused even when a signature exists. A simulated audit insertion failure stops dispatch.
+- 75 concurrent denied shell attempts create 75 evidence rows with **zero mock computer calls**.
+- Browser Enter-activation path refused; malicious contents do not gain authority; missing, dry-run or broken CEL policy fails closed.
+- Policy is reevaluated on every action: mid-session revocation blocks subsequent reads; per-Dot HMAC token mismatch is rejected by the bridge.
 
-## Upstream admission
+## Important **confirmed bypass** (negative control)
 
-OpenBot commit `bd4dc94943a9d62aefd05e5e99073ba58919c9c6`, two exact modules hash-verified by Git; OpenDots commit `8091324942b86789ed0da7facbee855145d933b0`. Both MIT. Original modules are downloaded into an isolated runner checkout; test modules are injected there and discarded when CI finishes.
+One test deliberately uses **unmodified OpenDots ComputerService with a direct transport**, no bridge. Although the *separate OpenBot policy* would deny a write to `approved/ep01.md`, OpenDots' own permissions are enabled and the direct mock computer receives that write.
 
-## Critical limitations
+**Result: BYPASS PATH REPRODUCED.** The test is GREEN because it is a negative-control assertion that correctly detected a design gap. It is **not** an authorization PASS. Without a mandatory enforced network topology, simply placing an optional adapter between OpenDots and OpenBot does not make all executions subject to BOSS governance.
 
-1. The bridge is **inside an injected transport fixture**. An OpenDots deployment still contains a direct route to its computer supervisor; tests here **cannot demonstrate** that a malicious process cannot bypass the new gateway. Production requires enforceable network isolation and removal of the direct path.
-2. No real authenticated human session, browser takeover, Docker container or MCP system was exercised. No signed multi-user authorization has been proven.
-3. A SQLite simulated one-time approval token is a **test prototype**, not a shipped OpenBot approval service. Runtime restart verification is limited to reopening its ledger and confirming a consumed permit stays consumed.
-4. The BOSS evidence ledger needs custody, export, immutable retention and failure semantics beyond a standalone demo.
-5. This is **not** approval to push any private Episode 01 narration into OpenDots.
+## Necessary further qualifications (HOLD)
 
-**Qualified next steps:** permission gateway as mandatory egress path; deny direct computer requests at network layer; use signed real auth identity and OpenBot's full approval records; test lost network, duplicate delivery, concurrency and work resumption. Preserve GitHub Actions, Windmill, n8n, Railway and React as currently assigned.
+1. Replace injectable bridge with a **mandatory authenticated network gateway**; restrict computers and supervisor to accept requests **only from that gateway**. Deliberately try a direct service-to-computer request and require a hard network-level refusal.
+2. Bind authorization to a real server-side authenticated person, roles and signed run initiator. The synthetic `HUMAN` key in the harness is not a real authentication mechanism.
+3. Replace prototype SQLite approval with audited, durable production-grade single-use action approvals. Verify process-kill/restart, 2+ users, and actual incomplete side-effect recovery.
+4. Browser/terminal/egress hostile-input tests in disposable containers, not mocks, and maintain redacted complete evidence custody.
+5. Do not treat passing a CI test suite as human release authorization; compare overhead against GitHub Actions, Windmill, n8n and Railway.
+
+The current BOSS production stack, unpublished Episode 01 materials and GitHub `main` remain unchanged. The PR is a draft review candidate.
