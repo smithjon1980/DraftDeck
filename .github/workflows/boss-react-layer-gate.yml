@@ -1,0 +1,25 @@
+name: BOSS React art-story source gate
+on:
+  pull_request:
+    paths:
+      - '.agents/skills/boss-react-art-story-submission/**'
+      - 'schemas/boss-react-layer-submission.schema.json'
+      - 'tools/react-layer-gate/**'
+      - 'examples/react-layer-submission/**'
+      - '.github/workflows/boss-react-layer-gate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m unittest discover -s tools/react-layer-gate -p 'test_*.py' -v
+      - run: python3 tools/react-layer-gate/check_submission.py examples/react-layer-submission/manifest.json .
