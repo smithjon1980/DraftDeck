@@ -1,6 +1,6 @@
 """Untrusted Render peer canary. No secret and no caller-specified proxy target."""
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-import json, os, urllib.request, urllib.error, urllib.parse
+import json, os, secrets, time, urllib.request, urllib.error, urllib.parse
 from urllib.request import Request
 
 def probe():
@@ -13,17 +13,19 @@ def probe():
             alive=r.status==200
     except Exception:
         return {"mode":"untrusted","status":"UNREACHABLE","network_reachable":False}
-    payload=b'{"operation":"synthetic_render","fixture":"BOSS-SYNTHETIC-SIX-FRAME"}'
+    payload=json.dumps({"operation":"synthetic_render","fixture":"BOSS-SYNTHETIC-SIX-FRAME", "nonce":secrets.token_hex(20),"issued_at":int(time.time()),"caller":"gateway-test-only"},sort_keys=True,separators=(",",":")).encode()
     req=Request(origin+"/v1/qualification/render",data=payload,headers={"Content-Type":"application/json"},method="POST")
     try:
         with urllib.request.urlopen(req,timeout=4) as r:
             status=r.status
+            denial={}
     except urllib.error.HTTPError as e:
         status=e.code
+        denial=json.loads(e.read())
     except Exception:
         return {"mode":"untrusted","status":"ERROR","network_reachable":alive}
     return {"mode":"untrusted","status":"DENIED" if status in (403,413) else "UNEXPECTED","network_reachable":alive,
-            "unsigned_svg_operation_http_status":status,"protected_operation_refused":status in (403,413)}
+            "unsigned_svg_operation_http_status":status,"protected_operation_refused":status==403 and denial.get("reason")=="MISSING_GATEWAY_PROOF", "denial_reason":denial.get("reason","UNKNOWN")}
 
 class Handler(BaseHTTPRequestHandler):
     def log_message(self,*_):pass
