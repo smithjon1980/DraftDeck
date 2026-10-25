@@ -1,0 +1,51 @@
+name: BOSS SVG network boundary adversarial qualification
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/boss-svg-network-boundary.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  disposable-network-boundary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Isolate synthetic worker from untrusted ingress
+        shell: bash
+        run: |
+          set -euo pipefail
+          trap 'docker rm -f boss-svg-attacker boss-svg-gateway-sim boss-svg-worker >/dev/null 2>&1 || true; docker network rm boss-svg-ingress boss-svg-private >/dev/null 2>&1 || true' EXIT
+          docker network create boss-svg-ingress
+          docker network create --internal boss-svg-private
+          docker run -d --rm --name boss-svg-worker --network boss-svg-private python:3.12-alpine sh -c 'mkdir -p /srv && echo SYNTHETIC_ONLY > /srv/fixture.txt && cd /srv && python -m http.server 8000 --bind 0.0.0.0'
+          docker run -d --rm --name boss-svg-gateway-sim --network boss-svg-private alpine:3.21 sleep 180
+          docker network connect boss-svg-ingress boss-svg-gateway-sim
+          docker run -d --rm --name boss-svg-attacker --network boss-svg-ingress alpine:3.21 sleep 180
+          # Authorized side can see worker (routing only; NO policy implied).
+          for i in $(seq 1 15); do
+            if docker exec boss-svg-gateway-sim wget -q -T2 -O- http://boss-svg-worker:8000/fixture.txt | grep -q SYNTHETIC_ONLY; then break; fi
+            sleep 1
+          done
+          docker exec boss-svg-gateway-sim wget -q -T2 -O- http://boss-svg-worker:8000/fixture.txt | grep -q SYNTHETIC_ONLY
+          echo 'PASS gateway-connected container can access worker'
+          # Untrusted side has no private DNS or worker route.
+          if docker exec boss-svg-attacker wget -q -T2 -O- http://boss-svg-worker:8000/fixture.txt; then
+            echo 'FAIL untrusted ingress bypassed private worker'; exit 1
+          fi
+          private_ip="$(docker inspect -f '{{range .NetworkSettings.Networks}}{{if eq .NetworkID ""}}invalid{{else}}{{.IPAddress}}{{end}}{{end}}' boss-svg-worker)"
+          if docker exec boss-svg-attacker wget -q -T2 -O- "http://${private_ip}:8000/fixture.txt"; then
+            echo 'FAIL direct private IP route accessible'; exit 1
+          fi
+          test -z "$(docker port boss-svg-worker)"
+          echo 'PASS worker has no published port; direct ingress DNS and IP refused'
+          # Essential negative control: network authorization, not application wrappers,
+          # determines whether alternate direct worker routes exist.
+          docker network connect boss-svg-private boss-svg-attacker
+          docker exec boss-svg-attacker wget -q -T2 -O- http://boss-svg-worker:8000/fixture.txt | grep -q SYNTHETIC_ONLY
+          echo 'NEGATIVE CONTROL VERIFIED: untrusted container joining private network BYPASSES simulated gateway'
+          docker network disconnect boss-svg-private boss-svg-attacker
+          if docker exec boss-svg-attacker wget -q -T2 -O- http://boss-svg-worker:8000/fixture.txt; then
+            echo 'FAIL private worker still accessible after removal'; exit 1
+          fi
+          echo 'PASS segmentation recovered after network disconnection'
