@@ -2,7 +2,19 @@
 
 **Status:** Experimental. **Authority:** Read-only. **Production:** HOLD.
 
-## Five qualification gates
+## Seven qualification gates — expanded scope
+
+1. **Source evidence records** — public-safe OKF-style Markdown linked to GitHub.
+2. **Personal knowledge interface** — evaluate SilverBullet with fictional notes in a separate private folder. Candidate only; not deployed.
+3. **Controlled knowledge promotion** — human review, redact, verify source, stage a permitted record through PR review.
+4. **Exact/keyword search** — baseline retrieval on approved records.
+5. **Semantic and hybrid comparison** — local FastEmbed + Qdrant challenger, optional until validated.
+6. **Evidence and graph evaluation** — assess status, freshness, contradiction and relationship queries; only then consider a graph engine.
+7. **ChatGPT read-only integration** — requires independent access, security and retrieval tests plus owner approval.
+
+See [personal knowledge workspace candidate](PERSONAL_WORKSPACE_CANDIDATE.md) and [transfer contract](workspace_contract.json). These are reviewed design candidates, **not implemented enforcement**.
+
+## Original retrieval gates (now embedded in the seven-gate upgrade)
 
 1. **Source ledger:** Record only public-safe decisions and evidence as Google OKF v0.2 Markdown concepts; maintain source URLs, lifecycle status, and explicit uncertainty.
 2. **Deterministic baseline:** Query the records using an auditable token-ranking method and return source locations, not generated answers.
@@ -22,16 +34,16 @@
 ## Run the deterministic test
 
 ```bash
-python -m pip install -r experiments/boss-knowledge-pilot/requirements.txt
+python -m pip install -r experiments/boss-knowledge-index/requirements.txt
 python -m unittest discover -s experiments/boss-knowledge-pilot -p 'test_*.py' -v
-python experiments/boss-knowledge-pilot/query.py "Why is OpenBot production integration on hold?"
+python experiments/boss-knowledge-index/query.py "Why is OpenBot production integration on hold?"
 ```
 
 ## Optional semantic experiment (local CPU, model download on first run)
 
 ```bash
 python -m pip install "qdrant-client[fastembed]>=1.14.2"
-python experiments/boss-knowledge-pilot/query.py "What tests still block deployment?" --method semantic
+python experiments/boss-knowledge-index/query.py "What tests still block deployment?" --method semantic
 ```
 
 The semantic runner uses Qdrant in-memory. It downloads an open embedding model when run for the first time; model acquisition and model/license reviews are separate admission gates. It is **not** run automatically in the baseline CI.

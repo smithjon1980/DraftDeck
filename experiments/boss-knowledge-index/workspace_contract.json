@@ -1,0 +1,34 @@
+{
+  "schema_version": "0.1",
+  "status": "candidate_unenforced",
+  "scope": "BOSS knowledge-index and optional personal knowledge workspace",
+  "private_workspace": {
+    "candidate": "SilverBullet",
+    "storage": "separate_private_local_space",
+    "test_data": "fictional_only",
+    "automatic_public_git_sync": false,
+    "write_access": "trusted_operator_only",
+    "deployment_authorized": false
+  },
+  "admission": {
+    "automated_promotion": false,
+    "required_gates": [
+      "classification",
+      "redaction",
+      "source_trace",
+      "human_selection",
+      "pr_review"
+    ],
+    "source_of_truth": "linked_original_git_evidence"
+  },
+  "retrieval": {
+    "default": "read_only",
+    "private_note_ingestion": false,
+    "chatgpt_connector_active": false,
+    "production_write_authorized": false
+  },
+  "publication": {
+    "conversation_transcript_publication_authorized": false,
+    "private_manuscript_publication_authorized": false
+  }
+}
