@@ -1,0 +1,38 @@
+name: BOSS Render health probe container qualification
+on:
+  pull_request:
+    paths:
+      - 'Dockerfile'
+      - '.dockerignore'
+      - 'experiments/boss-svg-gateway/**'
+      - '.github/workflows/boss-svg-render-probe.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  docker-probe:
+    name: Build image and verify fail-closed HTTP surface
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Run stdlib unit and gateway contract tests
+        run: python -m unittest discover -s experiments/boss-svg-gateway -p 'test_*.py' -v
+      - name: Build test-only image
+        run: docker build --pull --tag boss-svg-render-probe:ci .
+      - name: Start isolated unprivileged container
+        run: |
+          docker run -d --rm --name boss-svg-render-probe \
+            --read-only --cap-drop=ALL --security-opt=no-new-privileges \
+            --pids-limit=64 --memory=256m --cpus=0.5 \
+            -p 127.0.0.1:17896:10000 boss-svg-render-probe:ci
+      - name: Verify actual container health and protected route denial
+        run: |
+          python experiments/boss-svg-gateway/container_smoke.py
+          test "$(docker inspect --format '{{.State.Running}}' boss-svg-render-probe)" = true
+          test "$(docker exec boss-svg-render-probe sh -c 'find /app -type f | wc -l')" = 1
+      - name: Stop test container
+        if: always()
+        run: docker stop boss-svg-render-probe || true
