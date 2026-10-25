@@ -23,7 +23,7 @@ def test():
  run(c,"--project",project,"--json","export","pdf",pdf)
  assert svg.exists() and pdf.exists() and png.exists()
  assert pdf.read_bytes().startswith(b"%PDF-")
- assert ET.parse(svg).getroot().attrib.get("viewBox")=="0 0 1920 1080"
+ assert [float(v) for v in ET.parse(svg).getroot().attrib.get("viewBox","").split()]==[0.0,0.0,1920.0,1080.0]
  with Image.open(png) as im: assert im.size==(1920,1080) and im.format=="PNG"
  run("inkscape",svg,"--export-type=png","--export-filename="+str(native),"--export-width=1920","--export-height=1080")
  with Image.open(png) as p,Image.open(native) as n:
