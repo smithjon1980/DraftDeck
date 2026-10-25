@@ -1,0 +1,74 @@
+name: BOSS Render private-worker qualification (Docker simulation)
+on:
+  pull_request:
+    paths:
+      - 'experiments/render-private-worker/**'
+      - '.github/workflows/boss-render-private-worker.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native-worker-and-peer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install native Inkscape for host unit tests
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y inkscape
+      - name: Test signed synthetic requests and denial paths
+        run: python -m unittest discover -s experiments/render-private-worker -p 'test_*.py' -v
+      - name: Build real Inkscape worker Docker image
+        run: docker build --pull -f experiments/render-private-worker/Dockerfile -t boss-private-svg-worker:ci .
+      - name: Build no-secret untrusted canary Docker image
+        run: docker build --pull -f experiments/render-private-worker/Dockerfile.canary -t boss-untrusted-canary:ci .
+      - name: Run worker and attacker in a shared private network (Render-equivalent negative control)
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker network create boss-svg-ci-private
+          secret="$(python -c 'import secrets; print(secrets.token_hex(32))')"
+          echo "::add-mask::$secret"
+          echo "BOSS_SYNTHETIC_GATEWAY_KEY=$secret" >> "$GITHUB_ENV"
+          docker run -d --rm --name boss-svg-worker --network boss-svg-ci-private \
+            --read-only --tmpfs /tmp:rw,nosuid,nodev,size=256m \
+            --cap-drop=ALL --security-opt=no-new-privileges \
+            --memory=768m --pids-limit=128 \
+            -e BOSS_SYNTHETIC_GATEWAY_KEY="$secret" boss-private-svg-worker:ci
+          docker run -d --rm --name boss-untrusted-peer --network boss-svg-ci-private \
+            -e BOSS_PRIVATE_WORKER_URL=http://boss-svg-worker:10000 boss-untrusted-canary:ci
+      - name: Prove native render + HMAC denial + replay
+        run: |
+          docker run --rm --network boss-svg-ci-private \
+            -e BOSS_TEST_WORKER_HOST=boss-svg-worker \
+            -e BOSS_SYNTHETIC_GATEWAY_KEY="$BOSS_SYNTHETIC_GATEWAY_KEY" \
+            -v "${PWD}/experiments/render-private-worker/container_smoke.py:/test.py:ro" \
+            python:3.12-slim-bookworm python /test.py
+      - name: Prove direct private-network reachability does NOT mean authorization
+        run: |
+          python - <<'PY'
+          import subprocess,time,json
+          for attempt in range(20):
+              p=subprocess.run(["docker","exec","boss-untrusted-peer","python","-c",
+                  "import sys;sys.path.insert(0,'/app');from canary_server import probe;import json;print(json.dumps(probe()))"],
+                  capture_output=True,text=True)
+              try: obj=json.loads(p.stdout)
+              except Exception:obj={}
+              if obj.get("protected_operation_refused"):break
+              time.sleep(1)
+          assert obj.get("network_reachable") is True, (p.stderr,obj)
+          assert obj.get("unsigned_svg_operation_http_status")==403, obj
+          assert obj.get("denial_reason")=="MISSING_GATEWAY_PROOF", obj
+          assert obj.get("protected_operation_refused") is True, obj
+          print("NEGATIVE CONTROL: same-network unauthorized service CAN REACH worker /healthz")
+          print("PASS: well-formed unsigned synthetic SVG render DENIED 403 despite direct network route")
+          assert subprocess.run(["docker","port","boss-svg-worker"],capture_output=True,text=True).stdout.strip()==""
+          PY
+      - name: Terminate isolated workers
+        if: always()
+        run: |
+          docker rm -f boss-untrusted-peer boss-svg-worker || true
+          docker network rm boss-svg-ci-private || true
