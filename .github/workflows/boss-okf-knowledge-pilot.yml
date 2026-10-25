@@ -1,0 +1,23 @@
+name: BOSS OKF knowledge pilot (read-only)
+on:
+  pull_request:
+    paths:
+      - 'experiments/boss-knowledge-pilot/**'
+      - '.github/workflows/boss-okf-knowledge-pilot.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r experiments/boss-knowledge-pilot/requirements.txt
+      - run: python -m unittest discover -s experiments/boss-knowledge-pilot -p 'test_*.py' -v
+      - run: python experiments/boss-knowledge-pilot/query.py "Why did the direct policy route bypass OpenBot?"
