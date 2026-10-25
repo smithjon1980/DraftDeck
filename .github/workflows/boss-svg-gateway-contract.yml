@@ -1,0 +1,17 @@
+name: BOSS SVG gateway contract only
+on:
+  pull_request:
+    paths:
+      - 'experiments/boss-svg-gateway/**'
+      - '.github/workflows/boss-svg-gateway-contract.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - run: python -m unittest discover -s experiments/boss-svg-gateway -p 'test_*.py' -v
