@@ -1,0 +1,43 @@
+name: BOSS CLI Anything Inkscape sandbox
+on:
+  pull_request:
+    paths:
+      - 'experiments/cli-anything-inkscape/**'
+      - '.github/workflows/cli-anything-inkscape-sandbox.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  isolated-harness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out BOSS test scripts without credentials
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check out immutable external harness
+        uses: actions/checkout@v4
+        with:
+          repository: HKUDS/CLI-Anything
+          ref: 34f519533bc175d2fe287ab8316b0dd99bb9cc43
+          path: upstream-cli-anything
+          persist-credentials: false
+      - name: Verify upstream pin
+        run: test "$(git -C upstream-cli-anything rev-parse HEAD)" = "34f519533bc175d2fe287ab8316b0dd99bb9cc43"
+      - name: Install real Inkscape and test-only dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y inkscape
+          python -m pip install --disable-pip-version-check pillow
+          python -m pip install --disable-pip-version-check ./upstream-cli-anything/inkscape/agent-harness
+      - name: Real harness and native renderer E2E
+        run: python experiments/cli-anything-inkscape/test_upstream_harness.py
+      - name: Upload non-private results only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cli-anything-inkscape-synthetic-evidence
+          path: cli-pilot-evidence/
+          retention-days: 7
+          if-no-files-found: ignore
