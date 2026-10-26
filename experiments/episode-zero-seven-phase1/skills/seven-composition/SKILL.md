@@ -1,0 +1,4 @@
+# BOSS Episode Zero Seven Composition Director
+Generate exactly seven independent 17 × 11 landscape compositions per manuscript paragraph; no collage/contact sheets. Use the coordinate arrays in scripts/layouts.mjs as [x,y,width,height] in inches within the allowed page box (x .5–16.5, y 1.4–10.3).
+All layouts require independently placed illustration, analytical framework, verbatim narration, reflection, and notes. Preflight counts, finite rectangle coordinates, safe bounds, pairwise non-overlap, and unique zone-coordinate signatures using scripts/validate.mjs.
+Distinct coordinates are necessary but NOT evidence of adequate storytelling, visual diversity or 35–45% white ground. Those must be inspected after rendering. Do not reword the manuscript to fit; any text-overflow or missing zones -> HOLD. SEVEN is the only algorithm name. Human makes final choice.
