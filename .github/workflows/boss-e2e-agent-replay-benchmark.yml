@@ -60,7 +60,6 @@ jobs:
         working-directory: experiments/e2e-browser-parity-v01
     env:
       E2E_TELEMETRY_DISABLED: '1'
-      BOSS_E2E_CACHE_DIR: ${{ runner.temp }}/boss-e2e-replay-cache
       CI: '1'
     steps:
       - uses: actions/checkout@v4
@@ -69,6 +68,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '26'
+      - name: Set private persistent cache directory
+        run: |
+          echo "BOSS_E2E_CACHE_DIR=$HOME/.local/share/boss-e2e/replay-cache" >> "$GITHUB_ENV"
       - name: Verify persistent runner subscription is signed in
         run: |
           mkdir -p "$BOSS_E2E_CACHE_DIR"
