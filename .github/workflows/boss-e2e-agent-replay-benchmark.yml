@@ -70,6 +70,15 @@ jobs:
         run: |
           npm install --save-exact
           npx e2e-web install chromium --with-deps
+      - name: Enable writable replay cache for CI trial
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('e2e.config.ts')
+          s=p.read_text()
+          assert 'workers: 1,' in s
+          p.write_text(s.replace('workers: 1,', "workers: 1,\n  cache: 'read-write',"))
+          PY
       - name: Cold agent test without cache
         run: |
           start=$(date +%s%N)
