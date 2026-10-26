@@ -1,5 +1,9 @@
 name: BOSS e2e agent replay benchmark
 on:
+  pull_request:
+    paths:
+      - 'experiments/e2e-browser-parity-v01/**'
+      - '.github/workflows/boss-e2e-agent-replay-benchmark.yml'
   workflow_dispatch:
     inputs:
       enable_model_trial:
