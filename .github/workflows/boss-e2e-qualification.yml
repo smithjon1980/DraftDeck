@@ -34,23 +34,56 @@ jobs:
           E2E_TELEMETRY_DISABLED: '1'
       - name: Run Playwright baseline
         run: npm run test:baseline
-      - name: Prove a deliberately broken fixture is rejected
+      - name: Verify e2e detects a deliberately broken approval response
+        env:
+          E2E_TELEMETRY_DISABLED: '1'
         run: |
           cp fixture/index.html fixture/index.html.original
           trap 'mv fixture/index.html.original fixture/index.html' EXIT
           python3 - <<'PY'
           from pathlib import Path
           p=Path('fixture/index.html')
-          s=p.read_text()
-          assert 'DENIED — AUTHENTICATED HUMAN APPROVAL REQUIRED' in s
-          p.write_text(s.replace('DENIED — AUTHENTICATED HUMAN APPROVAL REQUIRED','APPROVED WITHOUT AUTHORITY'))
+          source=p.read_text()
+          old='DENIED — AUTHENTICATED HUMAN APPROVAL REQUIRED'
+          assert old in source, 'Expected baseline fixture is absent'
+          p.write_text(source.replace(old,'APPROVED WITHOUT AUTHORITY'))
           PY
-          if npm run test:baseline -- --grep "UI approval denied"; then
-            echo "::error::Mutation was not detected"
+          set +e
+          npx e2e run tests/editorial-gate.e2e.ts --reporter list > e2e-mutation.log 2>&1
+          result=$?
+          set -e
+          cat e2e-mutation.log
+          if [ "$result" -eq 0 ]; then
+            echo "::error::e2e accepted a deliberately broken approval response"
             exit 1
-          else
-            echo "PASS: Playwright detected intentionally broken approval UI"
           fi
+          if ! grep -q 'unauthenticated UI approval is explicitly denied' e2e-mutation.log; then
+            echo "::error::The failure did not identify the intended approval test"
+            exit 1
+          fi
+          echo "PASS: e2e failed under the intentional approval mutation"
+      - name: Prove Playwright detects the same deliberate failure
+        run: |
+          cp fixture/index.html fixture/index.html.original
+          trap 'mv fixture/index.html.original fixture/index.html' EXIT
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('fixture/index.html')
+          source=p.read_text()
+          old='DENIED — AUTHENTICATED HUMAN APPROVAL REQUIRED'
+          assert old in source
+          p.write_text(source.replace(old,'APPROVED WITHOUT AUTHORITY'))
+          PY
+          set +e
+          npm run test:baseline -- --grep "UI approval denied" > playwright-mutation.log 2>&1
+          result=$?
+          set -e
+          cat playwright-mutation.log
+          if [ "$result" -eq 0 ] || ! grep -q 'UI approval denied' playwright-mutation.log; then
+            echo "::error::Playwright mutation detection not established"
+            exit 1
+          fi
+          echo "PASS: Playwright rejected the intentional approval mutation"
       - name: Archive evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -60,4 +93,5 @@ jobs:
             experiments/e2e-browser-parity-v01/.e2e/
             experiments/e2e-browser-parity-v01/test-results/
             experiments/e2e-browser-parity-v01/dependency-lock.snapshot.json
+            experiments/e2e-browser-parity-v01/*-mutation.log
           if-no-files-found: warn

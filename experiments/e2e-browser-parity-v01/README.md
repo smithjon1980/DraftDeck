@@ -12,3 +12,6 @@ E2E_TELEMETRY_DISABLED=1 npx e2e run
 Do not run `npx e2e init` in the repository root. No deploy, merge, external writes, model credentials or live system calls are permitted. The package versions are provisional and must be resolved and locked by the CI pilot; a failing install is NOT a test pass.
 
 **Qualification:** confirm dependency install; run tests; introduce one intentional editability failure and require detection; inspect screenshots/traces; compare to a same-scenario existing Playwright baseline. Only after that evaluate an authenticated agent-act trial and cache replay using synthetic data. Current state: SOURCE PREPARED, EXECUTION NOT VERIFIED, PRODUCTION HOLD.
+
+## Qualification invocation — 2026-10-25
+This review-only PR is used to trigger the existing `pull_request` e2e qualification workflow. No application files or production workflows are changed.
