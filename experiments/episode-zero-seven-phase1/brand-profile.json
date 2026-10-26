@@ -1,0 +1,47 @@
+{
+  "profile_id": "BOSS-EP00-SEVEN-BRAND-V2-REVIEW",
+  "algorithm_name": "SEVEN",
+  "status": "REVIEW_ONLY",
+  "page": {
+    "width_in": 17,
+    "height_in": 11,
+    "orientation": "landscape",
+    "safe_margin_in": 0.5,
+    "content": {
+      "x": 0.5,
+      "y": 1.4,
+      "w": 16,
+      "h": 8.9
+    }
+  },
+  "palette": {
+    "white": "#FFFFFF",
+    "cyan": "#00BCEB",
+    "magenta": "#E30074",
+    "black": "#000000"
+  },
+  "media": {
+    "allowed": [
+      "EDITORIAL_ILLUSTRATION",
+      "PREMIUM_PHOTOREALISTIC_EDITORIAL",
+      "TECHNICAL_CAD_ISO_DIAGRAM"
+    ],
+    "reject": [
+      "DARK_MODE_PAGE",
+      "FULL_BLEED_DARK",
+      "CONTACT_SHEET",
+      "BAKED_MANUSCRIPT_TEXT"
+    ]
+  },
+  "white_ground": {
+    "target_fraction_min": 0.35,
+    "target_fraction_max": 0.45,
+    "calibration_target_not_hard_gate": true
+  },
+  "layers": [
+    "illustration",
+    "vector_diagram",
+    "editable_manuscript_text"
+  ],
+  "release_authority": "HUMAN_ONLY"
+}
