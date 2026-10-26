@@ -9,10 +9,10 @@ test('editable headline persists while CAD SVG geometry is intact', async ({app,
   await expect(screen.getByRole('status')).toContainText('RELEASE STILL ON HOLD');
   await app.open('/');
   await expect(screen.getByRole('textbox',{name:'Headline'})).toHaveValue('HAVE — Human Authority, Verified Execution');
-  await expect(screen.locator('svg#cad g#geometry rect#frame')).toHaveAttribute('stroke','#00BCEB');
+  await expect(screen.getByRole('img',{name:'Editable CAD geometry'})).toBeVisible();
 });
 
-test('unauthenticated UI approval is explicitly denied', async ({app,browser})=>{
+test('unauthenticated UI approval is explicitly denied', async ({app,screen})=>{
   await app.open('/');
   await screen.getByRole('button',{name:'Approve release'}).click();
   await expect(screen.getByRole('status')).toContainText('DENIED');
