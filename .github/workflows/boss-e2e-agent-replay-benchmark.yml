@@ -1,0 +1,96 @@
+name: BOSS e2e agent replay benchmark
+on:
+  workflow_dispatch:
+    inputs:
+      enable_model_trial:
+        description: 'Run model-driven test with existing GitHub secret; costs may be incurred'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  synthetic-baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: experiments/e2e-browser-parity-v01
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '26'
+      - name: Install dependencies
+        run: npm install --save-exact
+      - name: Install baseline browser
+        run: npx playwright install chromium --with-deps
+      - name: Timed Playwright baseline (3 repeats)
+        run: |
+          for i in 1 2 3; do
+            start=$(date +%s%N)
+            npm run test:baseline > "playwright-baseline-$i.log" 2>&1
+            end=$(date +%s%N)
+            printf 'repeat=%s elapsed_ms=%s model_calls=0\n' "$i" "$(((end-start)/1000000))" | tee "playwright-baseline-$i.metrics"
+          done
+      - name: Archive baseline evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-baseline
+          path: |
+            experiments/e2e-browser-parity-v01/playwright-baseline-*.log
+            experiments/e2e-browser-parity-v01/playwright-baseline-*.metrics
+          if-no-files-found: warn
+  agentic-trial:
+    if: ${{ inputs.enable_model_trial == true }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: experiments/e2e-browser-parity-v01
+    env:
+      E2E_TELEMETRY_DISABLED: '1'
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '26'
+      - name: Validate opt-in and provider configuration
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "::error::Model trial requested, but OPENAI_API_KEY repository secret is absent"
+            exit 1
+          fi
+      - name: Install framework and browsers
+        run: |
+          npm install --save-exact
+          npx e2e-web install chromium --with-deps
+      - name: Cold agent test without cache
+        run: |
+          start=$(date +%s%N)
+          npx e2e run tests/agent-replay.e2e.ts --no-cache --reporter list > cold.log 2>&1
+          end=$(date +%s%N)
+          echo "elapsed_ms=$(((end-start)/1000000))" > cold.metrics
+          cat cold.log
+      - name: Record cache
+        run: |
+          npx e2e run tests/agent-replay.e2e.ts --reporter list > record.log 2>&1
+          cat record.log
+      - name: Replay cache
+        run: |
+          start=$(date +%s%N)
+          npx e2e run tests/agent-replay.e2e.ts --strict-cache --reporter list > replay.log 2>&1
+          end=$(date +%s%N)
+          echo "elapsed_ms=$(((end-start)/1000000))" > replay.metrics
+          cat replay.log
+      - name: Archive evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-agent-replay
+          path: |
+            experiments/e2e-browser-parity-v01/*.log
+            experiments/e2e-browser-parity-v01/*.metrics
+            experiments/e2e-browser-parity-v01/.e2e/
+          if-no-files-found: warn
