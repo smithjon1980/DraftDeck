@@ -1,0 +1,5 @@
+# BOSS Episode Zero Brand DNA — SEVEN
+Scope: 17 × 11-inch landscape Storybook ONLY. Visual authority for this profile, not a replacement for manuscript, human approval, or production-stack governance.
+White #FFFFFF; cyan #00BCEB; magenta #E30074; black #000000. 0.5-inch safe margins. Real brand assets must be source-traceable.
+Premium photorealistic editorial storytelling is PERMITTED and may be preferred. Original technical editorial illustration is also allowed. Keep the page white with generous white space around photography; 35–45% white-ground is a calibration target, not an unverified hard pixel claim. Reject dark-mode grounds/full-bleed dark imagery, green or red invented UI accents, unauthorized logos, and full-page image-generated copy.
+Render separate illustration, vector analytical diagram, and editable/verbatim narration and learning apparatus. Never allow Episode 01 legacy media prohibitions to override this Episode Zero profile. Hard-gate failures mean HOLD, never a scored pass. Humans alone select and authorize release.
