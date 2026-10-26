@@ -1,0 +1,63 @@
+name: BOSS e2e qualification
+on:
+  pull_request:
+    paths:
+      - 'experiments/e2e-browser-parity-v01/**'
+      - '.github/workflows/boss-e2e-qualification.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser-parity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: experiments/e2e-browser-parity-v01
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '26'
+      - name: Install and resolve dependencies
+        run: |
+          npm install --save-exact
+          npm ls --depth=0
+          cp package-lock.json dependency-lock.snapshot.json
+      - name: Install e2e browser
+        run: npx e2e-web install chromium --with-deps
+      - name: Install Playwright baseline browser
+        run: npx playwright install chromium --with-deps
+      - name: Run e2e deterministic cases
+        run: npx e2e run tests/editorial-gate.e2e.ts --reporter list,junit
+        env:
+          E2E_TELEMETRY_DISABLED: '1'
+      - name: Run Playwright baseline
+        run: npm run test:baseline
+      - name: Prove a deliberately broken fixture is rejected
+        run: |
+          cp fixture/index.html fixture/index.html.original
+          trap 'mv fixture/index.html.original fixture/index.html' EXIT
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('fixture/index.html')
+          s=p.read_text()
+          assert 'DENIED — AUTHENTICATED HUMAN APPROVAL REQUIRED' in s
+          p.write_text(s.replace('DENIED — AUTHENTICATED HUMAN APPROVAL REQUIRED','APPROVED WITHOUT AUTHORITY'))
+          PY
+          if npm run test:baseline -- --grep "UI approval denied"; then
+            echo "::error::Mutation was not detected"
+            exit 1
+          else
+            echo "PASS: Playwright detected intentionally broken approval UI"
+          fi
+      - name: Archive evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-qualification-evidence
+          path: |
+            experiments/e2e-browser-parity-v01/.e2e/
+            experiments/e2e-browser-parity-v01/test-results/
+            experiments/e2e-browser-parity-v01/dependency-lock.snapshot.json
+          if-no-files-found: warn
