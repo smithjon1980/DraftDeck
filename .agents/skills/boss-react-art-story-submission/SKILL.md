@@ -13,6 +13,9 @@ Not allowed as authoritative art/story layer: Python Pillow, matplotlib, reportl
 
 A genuine external illustration asset may appear INSIDE a React ArtLayer with independently recorded provenance, licensing, dimensions and approval; this exception cannot be used to flatten the entire slide or bypass visual review.
 
+## Optional Figma spec input
+If the operator selects Figma, first read `.agents/skills/boss-figma-design-bridge/SKILL.md`. Treat its frames, component naming and token variables as inspectable *design specification* only. Actual accepted `ArtLayer`, `StoryLayer`, and `TextLayer` must still exist in React TSX/Tailwind and native HTML with separately verified assets and exact manuscript digests. Never substitute Figma-generated code, flattened page image or independent Figma text for these source layers. Full Figma composition requires prior art/story human approvals under `.agents/skills/boss-precomposition-human-approval/SKILL.md`. Preserve browser rendering and acceptance gates.
+
 ## Submission record
 Store a public-safe manifest compliant with `schemas/boss-react-layer-submission.schema.json`; private narration, unpublished image bytes, and private source references remain in owner-controlled storage. Candidate states: `SUBMITTED`, `REJECTED`, `RESUBMITTED`, `TECHNICALLY_ACCEPTED`, `HUMAN_ACCEPTED`. New resubmissions have a new candidate ID, reference the rejected predecessor, and supply a change description. Never silently overwrite a rejected candidate.
 
