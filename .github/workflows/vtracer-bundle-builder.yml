@@ -1,6 +1,9 @@
 name: BOSS-CF-009-P3 VTracer Offline Bundle Builder
 
 on:
+  pull_request:
+    paths:
+      - '.github/workflows/vtracer-bundle-builder.yml'
   workflow_dispatch:
 
 permissions:
