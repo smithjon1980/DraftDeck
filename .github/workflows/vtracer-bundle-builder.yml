@@ -12,9 +12,10 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Initialize Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: '20'
+          node-version: '24'
+          package-manager-cache: false
 
       - name: Acquire official distribution and inspect
         shell: bash
@@ -41,9 +42,10 @@ jobs:
           def chunk(tag,data):
               return struct.pack('>I',len(data))+tag+data+struct.pack('>I',zlib.crc32(tag+data)&0xffffffff)
           w=h=100
-          scanlines=b''.join(b'\x00'+b''.join(bytes((0,0,0)) if 20<=x<80 and 20<=y<80 else bytes((255,255,255)) for x in range(w)) for y in range(h))
-          png=b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>2I5B',w,h,8,2,0,0,0))+chunk(b'IDAT',zlib.compress(scanlines,9))+chunk(b'IEND',b'')
-          open('test_shape.png','wb').write(png)
+          for name,pixel in [('test_shape.png',lambda x,y:(0,0,0) if 20<=x<80 and 20<=y<80 else (255,255,255)),('test_color.png',lambda x,y:(230,40,80) if x<35 else ((20,165,220) if x<70 else (245,205,35)))]:
+              scanlines=b''.join(b'\x00'+b''.join(bytes(pixel(x,y)) for x in range(w)) for y in range(h))
+              png=b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>2I5B',w,h,8,2,0,0,0))+chunk(b'IDAT',zlib.compress(scanlines,9))+chunk(b'IEND',b'')
+              open(name,'wb').write(png)
           PY
           cat > runner.js <<'JS'
           'use strict';
@@ -51,24 +53,27 @@ jobs:
           const path = require('node:path');
           const crypto = require('node:crypto');
           const vendor = require(path.join(__dirname, 'node_modules', '@visioncortex', 'vtracer'));
-          const input = fs.readFileSync(path.join(__dirname,'test_shape.png'));
-          const start = process.hrtime.bigint();
-          const svg = vendor.convertBuffer(input, { preset: 'poster' });
-          const elapsedMs = Number(process.hrtime.bigint() - start)/1e6;
-          const result = typeof svg === 'string' ? svg : Buffer.from(svg).toString('utf8');
-          if (!result.includes('<svg') || !result.includes('</svg>')) throw new Error('Invalid SVG result');
-          fs.writeFileSync(path.join(__dirname,'output_artifact.svg'), result, 'utf8');
-          const receipt = {
-            status:'EXECUTED',
-            node:process.version,
-            source_sha256:crypto.createHash('sha256').update(input).digest('hex'),
-            output_sha256:crypto.createHash('sha256').update(result).digest('hex'),
-            svg_bytes:Buffer.byteLength(result),
-            svg_paths:(result.match(/<path\b/g)||[]).length,
-            elapsed_ms:elapsedMs
-          };
-          fs.writeFileSync(path.join(__dirname,'execution_receipt.json'),JSON.stringify(receipt,null,2)+'\n');
-          console.log(JSON.stringify(receipt,null,2));
+          const cases = [
+            {name:'bw', input:'test_shape.png', options:{clustering:'bw'}},
+            {name:'color', input:'test_color.png', options:{clustering:'color'}}
+          ];
+          const receipts = [];
+          for (const test of cases) {
+            const input = fs.readFileSync(path.join(__dirname,test.input));
+            const start = process.hrtime.bigint();
+            const svg = vendor.convertBuffer(input, test.options);
+            const elapsedMs = Number(process.hrtime.bigint() - start)/1e6;
+            const result = typeof svg === 'string' ? svg : Buffer.from(svg).toString('utf8');
+            if (!result.includes('<svg') || !result.includes('</svg>') || !/<path\\b/.test(result)) throw new Error(test.name+': invalid or empty SVG');
+            if (elapsedMs >= 5000) throw new Error(test.name+': tracing exceeded 5000ms SLA ('+elapsedMs+'ms)');
+            fs.writeFileSync(path.join(__dirname,'output_'+test.name+'.svg'),result,'utf8');
+            receipts.push({status:'EXECUTED',case:test.name,node:process.version,
+              options:test.options,source_sha256:crypto.createHash('sha256').update(input).digest('hex'),
+              output_sha256:crypto.createHash('sha256').update(result).digest('hex'),
+              svg_bytes:Buffer.byteLength(result),svg_paths:(result.match(/<path\\b/g)||[]).length,elapsed_ms:elapsedMs});
+          }
+          fs.writeFileSync(path.join(__dirname,'execution_receipt.json'),JSON.stringify(receipts,null,2)+'\\n');
+          console.log(JSON.stringify(receipts,null,2));
           JS
 
       - name: Verify execution without package manager or network
@@ -76,17 +81,19 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p /tmp/boss-cf-009-offline
-          cp -a vtracer-bundle/node_modules vtracer-bundle/runner.js vtracer-bundle/test_shape.png /tmp/boss-cf-009-offline/
+          cp -a vtracer-bundle/node_modules vtracer-bundle/runner.js vtracer-bundle/test_shape.png vtracer-bundle/test_color.png /tmp/boss-cf-009-offline/
           cd /tmp/boss-cf-009-offline
           npm_config_offline=true NODE_OPTIONS= node runner.js | tee offline-execution.log
           python3 - <<'PY'
           import json, pathlib, xml.etree.ElementTree as ET
           r=json.loads(pathlib.Path('execution_receipt.json').read_text())
-          assert r['status']=='EXECUTED' and r['svg_bytes']>0
-          ET.parse('output_artifact.svg')
+          assert len(r)==2 and {x['case'] for x in r}=={'bw','color'}
+          for item in r:
+              assert item['status']=='EXECUTED' and item['svg_bytes']>0 and item['svg_paths']>0 and item['elapsed_ms']<5000
+              ET.parse('output_'+item['case']+'.svg')
           print('PASS: Valid SVG and execution receipt')
           PY
-          cp output_artifact.svg execution_receipt.json offline-execution.log "${GITHUB_WORKSPACE}/vtracer-bundle/"
+          cp output_bw.svg output_color.svg execution_receipt.json offline-execution.log "${GITHUB_WORKSPACE}/vtracer-bundle/"
 
       - name: Build self-contained bundle and hashes
         shell: bash
@@ -95,7 +102,7 @@ jobs:
           python3 - <<'PY'
           import hashlib, json, pathlib, zipfile
           root=pathlib.Path('vtracer-bundle')
-          keep=['node_modules','runner.js','test_shape.png','output_artifact.svg','execution_receipt.json','offline-execution.log','dependency-tree.txt','vendor-file-inventory.txt','binary-inventory.txt','vendor-package-metadata.json','package-lock.json']
+          keep=['node_modules','runner.js','test_shape.png','test_color.png','output_bw.svg','output_color.svg','execution_receipt.json','offline-execution.log','dependency-tree.txt','vendor-file-inventory.txt','binary-inventory.txt','vendor-package-metadata.json','package-lock.json']
           files=sorted(p for item in keep for p in ([root/item] if (root/item).is_file() else (root/item).rglob('*')) if p.is_file())
           manifest={'status':'OFFLINE_EXECUTION_VERIFIED','files':{p.relative_to(root).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files}}
           (root/'sha256-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
