@@ -1,0 +1,55 @@
+name: BOSS Episode Zero Stage 2 Validator Qualification
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/episode-zero-seven-phase1/**'
+      - '.github/workflows/boss-episode-zero-stage2.yml'
+  pull_request:
+    paths:
+      - 'experiments/episode-zero-seven-phase1/**'
+      - '.github/workflows/boss-episode-zero-stage2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  stage2-validator:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout exact source commit
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Use supported Node 24 for validator
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Execute 13 targeted positive and negative controls
+        working-directory: experiments/episode-zero-seven-phase1
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "Commit: ${GITHUB_SHA}"
+          node --version
+          node scripts/test-negative.mjs | tee stage2-validator.log
+          grep -Fx 'PASS 13 targeted tests; NO visual, source, or browser qualification claimed' stage2-validator.log
+      - name: Store validator log and commit metadata
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p stage2-evidence
+          cp experiments/episode-zero-seven-phase1/stage2-validator.log stage2-evidence/ 2>/dev/null || true
+          printf '%s\n' "${GITHUB_SHA}" > stage2-evidence/commit-sha.txt
+          printf '%s\n' "${GITHUB_RUN_ID}" > stage2-evidence/run-id.txt
+      - name: Upload qualification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: episode-zero-stage2-validator-evidence
+          path: stage2-evidence/
+          if-no-files-found: error
+          retention-days: 30
