@@ -47,6 +47,9 @@ jobs:
           scanlines=b''.join(b'\x00'+b''.join(bytes((0,0,0)) if 20<=x<80 and 20<=y<80 else bytes((255,255,255)) for x in range(w)) for y in range(h))
           png=b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>2I5B',w,h,8,2,0,0,0))+chunk(b'IDAT',zlib.compress(scanlines,9))+chunk(b'IEND',b'')
           open('test_shape.png','wb').write(png)
+          color_rows=b''.join(b'\\x00'+b''.join(bytes((255,0,0)) if x<33 else bytes((0,200,0)) if x<66 else bytes((0,0,255)) for x in range(w)) for y in range(h))
+          color_png=b'\\x89PNG\\r\\n\\x1a\\n'+chunk(b'IHDR',struct.pack('>2I5B',w,h,8,2,0,0,0))+chunk(b'IDAT',zlib.compress(color_rows,9))+chunk(b'IEND',b'')
+          open('test_color.png','wb').write(color_png)
           PY
           cat > runner.js <<'JS'
           'use strict';
@@ -59,7 +62,7 @@ jobs:
           const modeResults = {};
           for (const [mode, options] of Object.entries({bw:{clustering:'bw'},color:{preset:'poster'}})) {
             const startMode = process.hrtime.bigint();
-            const rendered = vendor.convertBuffer(input, options);
+            const rendered = vendor.convertBuffer(mode === 'color' ? fs.readFileSync(path.join(__dirname,'test_color.png')) : input, options);
             const resultMode = typeof rendered === 'string' ? rendered : Buffer.from(rendered).toString('utf8');
             const durationMs = Number(process.hrtime.bigint()-startMode)/1e6;
             if (!resultMode.includes('<svg') || !resultMode.includes('</svg>')) throw new Error('Invalid SVG '+mode);
@@ -91,7 +94,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p /tmp/boss-cf-009-offline
-          cp -a vtracer-bundle/node_modules vtracer-bundle/runner.js vtracer-bundle/test_shape.png /tmp/boss-cf-009-offline/
+          cp -a vtracer-bundle/node_modules vtracer-bundle/runner.js vtracer-bundle/test_shape.png vtracer-bundle/test_color.png /tmp/boss-cf-009-offline/
           cd /tmp/boss-cf-009-offline
           npm_config_offline=true NODE_OPTIONS= node runner.js | tee offline-execution.log
           python3 - <<'PY'
@@ -114,7 +117,7 @@ jobs:
           python3 - <<'PY'
           import hashlib, json, pathlib, zipfile
           root=pathlib.Path('vtracer-bundle')
-          keep=['node_modules','runner.js','test_shape.png','output_artifact.svg','output_bw.svg','output_color.svg','execution_receipt.json','offline-execution.log','dependency-tree.txt','vendor-file-inventory.txt','binary-inventory.txt','vendor-package-metadata.json','package-lock.json']
+          keep=['node_modules','runner.js','test_shape.png','test_color.png','output_artifact.svg','output_bw.svg','output_color.svg','execution_receipt.json','offline-execution.log','dependency-tree.txt','vendor-file-inventory.txt','binary-inventory.txt','vendor-package-metadata.json','package-lock.json']
           files=sorted(p for item in keep for p in ([root/item] if (root/item).is_file() else (root/item).rglob('*')) if p.is_file())
           manifest={'status':'OFFLINE_EXECUTION_VERIFIED','files':{p.relative_to(root).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files}}
           (root/'sha256-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
