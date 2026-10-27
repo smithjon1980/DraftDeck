@@ -21,11 +21,11 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Checkout exact source commit
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           persist-credentials: false
       - name: Use supported Node 24 for validator
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: '24'
       - name: Execute 13 targeted positive and negative controls
@@ -47,7 +47,7 @@ jobs:
           printf '%s\n' "${GITHUB_RUN_ID}" > stage2-evidence/run-id.txt
       - name: Upload qualification evidence
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: episode-zero-stage2-validator-evidence
           path: stage2-evidence/
