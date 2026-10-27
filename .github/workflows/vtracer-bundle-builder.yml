@@ -47,8 +47,8 @@ jobs:
           scanlines=b''.join(b'\x00'+b''.join(bytes((0,0,0)) if 20<=x<80 and 20<=y<80 else bytes((255,255,255)) for x in range(w)) for y in range(h))
           png=b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>2I5B',w,h,8,2,0,0,0))+chunk(b'IDAT',zlib.compress(scanlines,9))+chunk(b'IEND',b'')
           open('test_shape.png','wb').write(png)
-          color_rows=b''.join(b'\\x00'+b''.join(bytes((255,0,0)) if x<33 else bytes((0,200,0)) if x<66 else bytes((0,0,255)) for x in range(w)) for y in range(h))
-          color_png=b'\\x89PNG\\r\\n\\x1a\\n'+chunk(b'IHDR',struct.pack('>2I5B',w,h,8,2,0,0,0))+chunk(b'IDAT',zlib.compress(color_rows,9))+chunk(b'IEND',b'')
+          color_rows=b''.join(b'\x00'+b''.join(bytes((255,0,0)) if x<33 else bytes((0,200,0)) if x<66 else bytes((0,0,255)) for x in range(w)) for y in range(h))
+          color_png=b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>2I5B',w,h,8,2,0,0,0))+chunk(b'IDAT',zlib.compress(color_rows,9))+chunk(b'IEND',b'')
           open('test_color.png','wb').write(color_png)
           PY
           cat > runner.js <<'JS'
