@@ -18,6 +18,13 @@ Four active candidate skills specify the production workflow:
 
 Supporting `references/editorial-composition.md`, `references/web-engineering.md` and `references/visual-acceptance.md` remain in force. `references/verified-pipeline.md` applies only to its historical Canva adapter experiment.
 
+## Optional Figma design and responsive-web bridge (candidate)
+- Read `.agents/skills/boss-figma-design-bridge/SKILL.md` and `doctrine/figma-design-bridge.md` whenever Figma is used for Storybook composition studies or web UI component specification.
+- Figma is **not** the production renderer or the origin of editorial truth. Reference-locked input → source-grounded story and medium → CAD/layout study → separately human-approved Art + Story → optional Figma composition handoff → React/Tailwind → browser/PDF/web tests → human final decision.
+- Use Figma `LAYOUT_STUDY` before art/story approval **only** for candidate zoning, not a composed slide. Use `COMPOSITION_HANDOFF` only when both human approvals have exact art/story source identities. Web `WEB_COMPONENT_SPEC` is a design proposal and must pass native responsive, interaction and accessibility testing.
+- Do not send unpublished scripts/art to a public design file. Keep the canonical brand palette and exact manuscript hashes in GitHub/owner-controlled source; Figma variables and typography are derived projections.
+- Keep the SEVEN 17×11 experimental geometry and the 1920×1080 production slide profile separate. No generated Figma screenshot, frame or design can override source, act as release approval or prove production editability.
+
 ## Script versions and Productive Digital Real Estate
 The owner accepted the **60-slide Art & Technical Plan** on 2026-10-22 and authorized a coherent **V4 narration revision**. Old wording and hash history must remain immutable. Revised V4 spoken words are a **new exact-review candidate**, not automatically an author-locked or recorded master. No new voiceover, real-time word timings, approved art or public repository publication is established by the art-plan approval.
 
