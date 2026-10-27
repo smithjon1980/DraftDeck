@@ -1,0 +1,48 @@
+name: Episode Zero Seven Stage 2 Validator Qualification
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/episode-zero-seven-phase1/**'
+      - '.github/workflows/episode-zero-seven-stage2.yml'
+  pull_request:
+    paths:
+      - 'experiments/episode-zero-seven-phase1/**'
+      - '.github/workflows/episode-zero-seven-stage2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deliberate-failure-validator:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Verify 13 targeted cases and preserve log
+        shell: bash
+        working-directory: experiments/episode-zero-seven-phase1
+        run: |
+          set -euo pipefail
+          mkdir -p evidence
+          node scripts/test-negative.mjs 2>&1 | tee evidence/validator.log
+          test "$(grep -c '^PASS ' evidence/validator.log)" -eq 14
+          grep -Fx 'PASS 13 targeted tests; NO visual, source, or browser qualification claimed' evidence/validator.log
+          printf 'commit_sha=%s\nnode=%s\nworkflow_run_id=%s\n' "$GITHUB_SHA" "$(node -v)" "$GITHUB_RUN_ID" > evidence/execution-identity.txt
+          sha256sum evidence/validator.log evidence/execution-identity.txt > evidence/sha256-manifest.txt
+      - name: Archive qualification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: episode-zero-stage2-${{ github.sha }}
+          path: experiments/episode-zero-seven-phase1/evidence/
+          if-no-files-found: warn
+          retention-days: 30
