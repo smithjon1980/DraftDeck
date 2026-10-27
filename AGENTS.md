@@ -35,6 +35,9 @@ For the **proposed** 17 × 11 inch landscape narration-first Episode 01 magazine
 6. Implement the candidate as React/Tailwind where specified; emit discrete static HTML/CSS with editable native text. Do not make SVG or a flattened image the editorial layer.
 7. Visually inspect actual render and source/copy/geometry correspondence; test adapter import separately.
 
+## Figma design-system bridge — optional governed candidate
+The project now admits Figma **for design specification and review only**, via `.agents/skills/boss-figma-design-bridge/SKILL.md` and `doctrine/figma-design-bridge.md`. This is not an authorization to replace React/Tailwind production composition, Windmill/n8n/Railway/GitHub Actions execution, or human approvals. Never allow a Figma template or generated deck to rewrite exact source narration, invent a palette, replace artwork, or assert release eligibility. Source/reference checks come first. Uncomposed layout studies may precede art/story approval; full composition requires independently accepted art and story and a locked manuscript. Responsive web UI design must reflow separately from fixed 1920×1080 slides. Keep unpublished source and reference binaries private.
+
 ## Candidate comparison and approval
 - Produce four distinct A–D arrangements only when requested for an approved comparison stage. Do not change facts, exact copy, brand identity, or evidence status between variants.
 - Score actual renders on story fidelity, copy, logo, geometry, editability, accessibility and clarity using PASS / FAIL / NOT TESTED with evidence.

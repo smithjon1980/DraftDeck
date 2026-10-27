@@ -14,6 +14,9 @@ This is a mandatory stop gate between isolated layer generation and combined sli
 5. Composer may run ONLY when both approvals are valid for the identical section, slide ID, art and story hashes, both previewed versions, and the same intended composition target. A valid approval is not a release authorization. Any source change, missing/expired approval, hash mismatch, wrong slide, self-approval, private artifact leak or altered build → HOLD.
 6. After composition, perform editorial/native text, React/Tailwind source, browser render, brand, PDF and human final-layout inspection. The human explicitly authorizes release separately.
 
+## Figma is not an approval shortcut
+The optional Figma design bridge may stage a labeled uncomposed CAD/`LAYOUT_STUDY` before approval. A composed Figma `COMPOSITION_HANDOFF` is prohibited unless the same art/story source hashes, slide IDs, target profile and explicit human approvals in this skill are established first. Figma sharing, layers, design snapshots, generated slides or editing credentials cannot mint or inherit approvals. An accepted Figma component or frame is not a published React/HTML page and requires the regular browser and human release gates.
+
 ## Rejection of current candidates
 The previous box-based studio scenes and stick-figure Slide 05 rebuild are **REJECTED AS ART**, not accepted references. Treat new work as fresh art proposals. No previously generated slide has inferred human approval.
 

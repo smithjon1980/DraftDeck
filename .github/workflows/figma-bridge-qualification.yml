@@ -1,0 +1,23 @@
+name: Figma design bridge - static qualification
+on:
+  pull_request:
+    paths:
+      - 'tools/figma-bridge/**'
+      - '.agents/skills/boss-figma-design-bridge/**'
+      - 'doctrine/figma-design-bridge.md'
+      - '.github/workflows/figma-bridge-qualification.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  synthetic-contract-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Fail-closed Figma handoff contract negative tests
+        run: node tools/figma-bridge/test-negative.mjs
+      - name: Clarify scope
+        run: echo 'Static tests only. This job does not access Figma or approve any art, story, React render, or release.'

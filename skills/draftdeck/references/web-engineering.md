@@ -13,6 +13,9 @@ Read `design-system/boss-design-contract.json` and `design-system/tokens/tokens.
 - Website and bilingual instructional surfaces: accessible responsive reflow using Grid/Flexbox; use `rem`, `em`, percentages, relative viewport units and container queries where supported/appropriate. Test narrow/wide viewports and English/Spanish expansion.
 - Print: separately approved page dimensions, text selection and physical proof. Browser-to-PDF parity must be tested against same source and page setup.
 
+## Governed Figma-to-web handoff (optional)
+Use `.agents/skills/boss-figma-design-bridge/SKILL.md` for UI baselines. Figma may record components, style variables, desktop/tablet/mobile frames, user flows and interaction states, but `design-system/boss-design-contract.json` and source-controlled React/Tailwind remain authoritative. Check Figma color/token parity against `design-system/tokens/tokens.css`; avoid recreated logos and undocumented overrides. Each interactive design needs documented keyboard behavior, focus indication, responsive reflow, forms validation, loading/error/empty states, and English/Spanish overflow. A Figma frame is a design specification, not proof of functionality or deployment. Capture browser renders at multiple widths after implementation and compare against approved Figma frames. Preserve code review and existing GitHub Actions/Railway release boundaries.
+
 ## Media and performance
 Preserve artwork as separate original asset with provenance. Choose raster/vector form based on content, target adapter and tests rather than an SVG-only or PNG-only rule. Use `srcset`/`sizes` for responsive web image delivery when suitable, meaningful `alt`/captions, lazy loading for noncritical media, and declared image dimensions to minimize layout shift. Do not lazy-load first-view critical images by default. Fonts must load deterministically before screenshots/PDF export.
 
