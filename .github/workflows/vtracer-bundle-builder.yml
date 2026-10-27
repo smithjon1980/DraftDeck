@@ -64,15 +64,15 @@ jobs:
             const svg = vendor.convertBuffer(input, test.options);
             const elapsedMs = Number(process.hrtime.bigint() - start)/1e6;
             const result = typeof svg === 'string' ? svg : Buffer.from(svg).toString('utf8');
-            if (!result.includes('<svg') || !result.includes('</svg>') || !/<path\\b/.test(result)) throw new Error(test.name+': invalid or empty SVG');
+            if (!result.includes('<svg') || !result.includes('</svg>') || !/<path\b/.test(result)) throw new Error(test.name+': invalid or empty SVG');
             if (elapsedMs >= 5000) throw new Error(test.name+': tracing exceeded 5000ms SLA ('+elapsedMs+'ms)');
             fs.writeFileSync(path.join(__dirname,'output_'+test.name+'.svg'),result,'utf8');
             receipts.push({status:'EXECUTED',case:test.name,node:process.version,
               options:test.options,source_sha256:crypto.createHash('sha256').update(input).digest('hex'),
               output_sha256:crypto.createHash('sha256').update(result).digest('hex'),
-              svg_bytes:Buffer.byteLength(result),svg_paths:(result.match(/<path\\b/g)||[]).length,elapsed_ms:elapsedMs});
+              svg_bytes:Buffer.byteLength(result),svg_paths:(result.match(/<path\b/g)||[]).length,elapsed_ms:elapsedMs});
           }
-          fs.writeFileSync(path.join(__dirname,'execution_receipt.json'),JSON.stringify(receipts,null,2)+'\\n');
+          fs.writeFileSync(path.join(__dirname,'execution_receipt.json'),JSON.stringify(receipts,null,2)+'\n');
           console.log(JSON.stringify(receipts,null,2));
           JS
 
