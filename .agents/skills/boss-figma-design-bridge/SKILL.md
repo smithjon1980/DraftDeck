@@ -1,35 +1,19 @@
 ---
 name: boss-figma-design-bridge
-description: Governed optional Figma design-specification and component-handoff bridge for BOSS Storybook slides and responsive Bioscillate web experiences. Use only after source/reference admission, with independently approved art and story before full composition.
+description: Use optional Figma as a governed design-specification bridge, enforcing exact source/reference/target locks, separate human art and story approval, and React/Tailwind production handoff.
 ---
 
-# BOSS Figma Design Bridge — candidate v0.1
+# BOSS Figma Design Bridge — v0.3 corrective candidate
 
-## Position in the existing system
-Read `AGENTS.md`, `design-system/boss-design-contract.json`, `doctrine/figma-design-bridge.md`, `doctrine/visual-evidence-gate.md`, `.agents/skills/boss-precomposition-human-approval/SKILL.md`, and `.agents/skills/boss-react-art-story-submission/SKILL.md`. Figma is an **optional editable design/specification workspace**. It does NOT replace GitHub as the source of versioned rules, React/Tailwind as production components, or Windmill, n8n, Railway and GitHub Actions as execution infrastructure. No automatic Figma-to-production publishing.
+Read `AGENTS.md`, `doctrine/figma-design-bridge.md`, `design-system/boss-design-contract.json`, `experiments/episode-zero-seven-phase1/scripts/layouts.mjs`, `.agents/skills/boss-precomposition-human-approval/SKILL.md` and `tools/figma-bridge/check_handoff.mjs`.
 
-## Entry gates — fail closed
-1. Admit exact source copy (stable manuscript ID/revision, paragraph IDs and text digests), approved visual references with SHA-256 and approved **scope**: `COMPOSITION_ONLY`, `STYLE_ONLY`, or enumerated `CONTENT_APPROVED`. No reference or no source digest => HOLD.
-2. Read the story bridge and storyboard before selecting a composition. The current Day Zero Section 01 candidate is `BOSS.EP00.A01.S01 v0.7` (HAVE: Human Authority, Verified Execution); use its source-lock and P001–P025. Earlier "The Work Must Survive the Conversation" images are references, not the new narration or new story setting.
-3. Lock exact brand palette #FFFFFF (ground), #000000 (ink), #00BCEB (cyan), #E30074 (magenta), approved identity assets and CAD/ISO-informed hairline/title-block hierarchy. No generic palette, invented logo, stock collage, dark theme or baked manuscript text.
-4. Distinguish two Figma modes:
-   - `LAYOUT_STUDY`: an **uncomposed** CAD/design exploration with placeholders explicitly labeled nonproduction. Permitted before art/story approval, never promoted to a completed slide or release proof.
-   - `COMPOSITION_HANDOFF`: full art + story + text specification only after separate human ART and STORY approvals tied to the exact hashes, slide ID and visual target, plus a locked source transcript. Approval evidence must originate from the operator, not from Figma or a model.
-5. For web `WEB_COMPONENT_SPEC`, approved design tokens, user flows and content are required. A Figma screen is not a functional, accessible, deployed website.
+1. **SOURCE:** Admit exact private source paragraph IDs/digests, real approved-reference hashes/scopes and the story+medium brief. Never invent missing manuscript, logos or approved illustrations.
+2. **ORDER:** For `BOSS.EP00.A01.S01`, qualify opener and closer FIRST. Preapproval Figma `LAYOUT_STUDY` is CAD zoning only. The 7 variant names must originate from `layouts.mjs`, never a newly generated layout or a 17×11 stretch.
+3. **ART:** Prepare isolated original artwork with source and preview SHA-256. Operator independently approves ART for the exact source digest, slide, profile and composition ID.
+4. **STORY:** Prepare an independent visible causal story and preview; operator separately approves STORY for that *same* source/slide/profile/composition. Neither Figma nor a generated design can mint approvals.
+5. **FIGMA:** A composed frame is eligible for candidate review only when both human approvals bind to the exact ART/STORY IDs, source+preview hashes, candidate and target. Bind separately selected design review to the same target; keep editable text and artwork independent.
+6. **HANDOFF:** Use `BOSS-FIGMA-BRIDGE-V2` manifest with `target.{kind,section_id,target_id,composition_id,profile,layout_variant,source_digest,paragraph_ids}`. Run `node tools/figma-bridge/check_handoff.mjs <manifest.json>`; V1 manifests cannot be promoted. Interior targets are limited to exactly `BOSS.EP00.A01.S01.P001` through `P025` with matching `paragraph_ids`; `P000/P026/P999` fail. Interior slides require BOTH qualified anchor records with distinct `human_record_ref` values before their gate. These records are structural declarations; authentication is a separate requirement.
+7. **WEB:** For `WEB_COMPONENT_SPEC` require distinct contiguous breakpoint bands, with every viewport frame ID declared in `figma.frame_nodes`, and design-spec PASS+evidence refs for reflow, keyboard, focus, accessibility, English/Spanish expansion and interaction states. Actual browser verification after React implementation remains separate.
+8. **RELEASE:** React/Tailwind plus native HTML TextLayer remains authoritative. Verify browser render/PDF and target edit-save-reopen against original approved reference, Figma native frame and exact narration. Structural PASS never means human approval, Figma fidelity or production readiness.
 
-## Seven variants and target profiles
-- For Episode Zero's SEVEN experiment reuse the **exact seven named, independently placed layout plans** in `experiments/episode-zero-seven-phase1/scripts/layouts.mjs`. All plans provide illustration, analytical framework, verbatim narration, reflection and notes. The five user-supplied image references are scoped inputs; 5 references × 7 layouts = 35 **comparative studies**, not 35 approved original artworks.
-- The SEVEN experiment's **17 × 11 in** page is its own profile. The production slide is **1920 × 1080 px (16:9)**: recompose intentionally; do not stretch 17:11 to 16:9 or claim geometry parity by scaling.
-- For responsive web establish independent desktop, tablet and mobile frames. Record tested breakpoint ranges, typography, content reflow, interactive states, bilingual English/Spanish expansion and keyboard focus behavior. Never resize a fixed slide into a mobile site.
-- Figma tokens/components are a **projection** of GitHub BOSS source tokens; change the authoritative design token contract via governed Git workflow rather than silent edits in a Figma file.
-
-## Figma output and developer handoff
-- Record source/ref hashes, Figma file key + exact frame/node IDs and version/link, output target, composition variant, token snapshot and native-text/art/story separation evidence; do not claim the generated Figma design used reference pixels unless the originals were actually uploaded and verified.
-- Preserve `ArtLayer`, `StoryLayer`, `TextLayer` as discrete responsibilities at implementation. Independent original artwork may be placed as a traceable asset inside React `ArtLayer`. Editorial text MUST be native HTML, not Figma raster, SVG text or canvas.
-- Rebuild the specification in React/Tailwind; do not promote auto-generated code or flattened exports without review. Capture actual 1920×1080 Chromium render for slides, multiple real browser widths for web. Compare reference ↔ Figma frame ↔ React render with annotated differences.
-- Run existing source-copy, layer-origin, clipping, responsive/accessibility and PDF/adapter tests. Figma editable layers prove only Figma editability; Canva, Adobe, browser, or other destination edit-save-reopen need distinct tests.
-- Save only **public-safe** manifests and skill rules to public GitHub. Unpublished manuscript bytes, reference artwork and Figma sharing links exposing private content stay owner-controlled. Apply least-privilege connection permissions and confirm paid generation cost/plan before invoking.
-- Report `PASS`, `FAIL`, `NOT_TESTED` separately for source digest, visual reference, token equality, variant geometry, art approval, story approval, native text, browser parity, web accessibility, target editor and human release. Any missing evidence = HOLD.
-
-## Human controls
-Figma can prepare candidates; it cannot mint ART/STORY approvals, satisfy manuscript author confirmation, merge a PR, bypass protected transport, or release production. The operator separately chooses art, story, composed slide/web screens and public release. Previous automatically generated Figma presentation candidates are **not** accepted visual masters merely because they exist.
+Keep proprietary source, artwork, Figma secrets and human approval ledgers outside public GitHub; do not alter the established Railway, Windmill, n8n or GitHub Actions production responsibilities. Missing evidence or unauthorized tool substitution → HOLD.
