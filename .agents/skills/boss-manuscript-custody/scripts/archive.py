@@ -214,7 +214,7 @@ class GhTransport:
         if tree.get('truncated') is not False or not isinstance(tree.get('tree'),list):
             raise Hold('remote tree listing incomplete or unverifiable')
         return [item for item in tree['tree'] if isinstance(item,dict) and
-                (item.get('path') == path or str(item.get('path','')).startswith(path + '/')]
+                (item.get('path') == path or str(item.get('path','')).startswith(path + '/'))]
 
 def require_private(repo:str, transport)->None:
     if not REPO_PATTERN.fullmatch(repo):
