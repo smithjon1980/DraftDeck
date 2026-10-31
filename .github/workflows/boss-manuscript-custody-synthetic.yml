@@ -1,0 +1,21 @@
+name: BOSS Manuscript Custody — Synthetic Tests
+on:
+  pull_request:
+    paths:
+      - '.agents/skills/boss-manuscript-custody/**'
+      - '.github/workflows/boss-manuscript-custody-synthetic.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  synthetic-regression:
+    name: Synthetic-only custody regression
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out proposed code (read-only)
+        uses: actions/checkout@v4
+      - name: Run standard-library synthetic-only test suite
+        run: python3 -m unittest discover -s .agents/skills/boss-manuscript-custody/tests -v
