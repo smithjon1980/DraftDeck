@@ -26,7 +26,7 @@ export function verifySignedClaim(record,signatureBase64,trustedKeyPem,expected,
   for(const k of ["gate","source_digest","candidate_id","candidate_sha256",
     "preview_sha256","target_id","profile","composition_id"])
     if(record[k]!==expected[k]) return fail("APPROVAL_SCOPE_MISMATCH_"+k);
-  if(typeof signatureBase64!=="string" || typeof trustedKeyPem!=="string") return fail("MISSING_SIGNATURE_OR_TRUST_ANCHOR");
+  if(typeof signatureBase64!=="string" || !signatureBase64.trim() || typeof trustedKeyPem!=="string" || !trustedKeyPem.trim()) return fail("MISSING_SIGNATURE_OR_TRUST_ANCHOR");
   try {
     const key=crypto.createPublicKey(trustedKeyPem);
     if(key.asymmetricKeyType!=="ed25519") return fail("UNSUPPORTED_KEY");
