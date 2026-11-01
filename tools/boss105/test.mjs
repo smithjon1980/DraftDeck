@@ -136,9 +136,11 @@ test("local readback refuses parent-directory traversal",()=>{
   finally{fs.rmSync(f.root,{recursive:true,force:true});}
 });
 test("local readback refuses external symlink",()=>{
-  const f=localFixture();try{fs.symlinkSync(os.tmpdir(),path.join(f.root,"external"));
+  const f=localFixture();const outside=fs.mkdtempSync(path.join(os.tmpdir(),"boss105-outside-"));
+  try{fs.writeFileSync(path.join(outside,"source.txt"),"SYNTHETIC ONLY");
+  fs.symlinkSync(outside,path.join(f.root,"external"));
   assert.equal(verifyLocalReadback(f.root,"external/source.txt",f.raw,f.blob).code,"SYMLINK_ESCAPE");}
-  finally{fs.rmSync(f.root,{recursive:true,force:true});}
+  finally{fs.rmSync(f.root,{recursive:true,force:true});fs.rmSync(outside,{recursive:true,force:true});}
 });
 test("local readback rejects nonexistent fixture",()=>{
   const f=localFixture();try{assert.equal(verifyLocalReadback(f.root,"absent.txt",f.raw,f.blob).code,"MISSING_SOURCE");}
