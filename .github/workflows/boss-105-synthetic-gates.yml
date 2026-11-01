@@ -1,0 +1,47 @@
+name: BOSS 105 synthetic governance gates
+# This workflow is strictly read-only and tests fabricated fixtures only.
+# No approvals, manuscript reads, image generation, release, deploys or privileged writes.
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'tools/boss105/**'
+      - 'doctrine/boss-105-*.md'
+      - '.agents/skills/boss-105-gate-coordinator/**'
+      - '.github/workflows/boss-105-synthetic-gates.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: boss105-synthetic-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  fail-closed-synthetic-validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout with pinned action
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1, Node 24
+        with:
+          persist-credentials: false
+      - name: Initialize Node 24
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0, Node 24
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Show Node runtime
+        run: node --version
+      - name: Execute synthetic regression suite
+        run: node --test tools/boss105/test.mjs
+      - name: Verify control register contains exact 001-105
+        run: |
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+          src=Path('doctrine/boss-105-control-register.md').read_text(encoding='utf-8')
+          ids=[int(i) for i in re.findall(r'^\|\s*(\d{3})\s*\|\s*[1-7]\s*\|',src,re.M)]
+          assert ids == list(range(1,106)), f'Expected 001-105 once in order: got {len(ids)}'
+          print('105/105 control IDs present, ordered, unique (documentation only)')
+          PY
