@@ -102,3 +102,96 @@ verify("invalid check state rejected","SOURCE_ADMISSION",m=>{m.checks.visual="SU
 verify("missing human decision state is not silently passed","SOURCE_ADMISSION",m=>{delete m.checks.human_decision;},"FAIL","CHECK_STATE_human_decision");
 test("manifest input immutability",()=>{const m=fixture("STORY_CANDIDATE");const before=JSON.stringify(m);validate(m);assert.equal(JSON.stringify(m),before);});
 
+
+
+// Additional source-custody and signed-claim tests are fabricated and never touch owner data.
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
+import { verifyLocalReadback } from "./readback.mjs";
+import { canonicalApprovalClaim, verifySignedClaim } from "./approval-claim.mjs";
+
+function localFixture() {
+  const root=fs.mkdtempSync(path.join(os.tmpdir(),"boss105-"));
+  const contents=Buffer.from("SYNTHETIC SOURCE ONLY\n","utf8");
+  const filename="source.txt";fs.writeFileSync(path.join(root,filename),contents,{flag:"wx"});
+  const blob=crypto.createHash("sha1").update(Buffer.from("blob "+contents.length+"\0")).update(contents).digest("hex");
+  return {root,filename,raw:crypto.createHash("sha256").update(contents).digest("hex"),blob};
+}
+test("local source readback compares raw and Git blob identities",()=>{
+  const f=localFixture();try{const r=verifyLocalReadback(f.root,f.filename,f.raw,f.blob);
+  assert.equal(r.status,"PASS");assert.equal(r.scope,"LOCAL_ONLY");}
+  finally{fs.rmSync(f.root,{recursive:true,force:true});}
+});
+test("local readback rejects hash mutation",()=>{
+  const f=localFixture();try{assert.equal(verifyLocalReadback(f.root,f.filename,"0".repeat(64),f.blob).code,"RAW_MISMATCH");}
+  finally{fs.rmSync(f.root,{recursive:true,force:true});}
+});
+test("local readback differentiates Git blob from SHA256",()=>{
+  const f=localFixture();try{assert.equal(verifyLocalReadback(f.root,f.filename,f.raw,"0".repeat(40)).code,"GIT_BLOB_MISMATCH");}
+  finally{fs.rmSync(f.root,{recursive:true,force:true});}
+});
+test("local readback refuses parent-directory traversal",()=>{
+  const f=localFixture();try{assert.equal(verifyLocalReadback(f.root,"../outside",f.raw,f.blob).code,"PATH_UNSAFE");}
+  finally{fs.rmSync(f.root,{recursive:true,force:true});}
+});
+test("local readback refuses external symlink",()=>{
+  const f=localFixture();try{fs.symlinkSync(os.tmpdir(),path.join(f.root,"external"));
+  assert.equal(verifyLocalReadback(f.root,"external/source.txt",f.raw,f.blob).code,"SYMLINK_ESCAPE");}
+  finally{fs.rmSync(f.root,{recursive:true,force:true});}
+});
+test("local readback rejects nonexistent fixture",()=>{
+  const f=localFixture();try{assert.equal(verifyLocalReadback(f.root,"absent.txt",f.raw,f.blob).code,"MISSING_SOURCE");}
+  finally{fs.rmSync(f.root,{recursive:true,force:true});}
+});
+function claimFixture(){
+  const {publicKey,privateKey}=crypto.generateKeyPairSync("ed25519");
+  const now=Date.now();
+  const claim={
+    schema:"BOSS-APPROVAL-CLAIM/1.0",gate:"ART",actor_id:"human:TEST_ONLY",event_id:"synthetic:event1",
+    nonce:"a-long-random-test-nonce",issued_at:new Date(now-2000).toISOString(),
+    expires_at:new Date(now+60000).toISOString(),source_digest:"a".repeat(64),
+    candidate_id:"ART-TEST-001",candidate_sha256:"b".repeat(64),
+    preview_sha256:"c".repeat(64),target_id:"P001A",profile:"SLIDE_1920x1080",
+    composition_id:"COMPOSITION-TEST",ledger_ref:"synthetic-ledger-no-auth"};
+  const expected={...claim};
+  const sign=record=>crypto.sign(null,canonicalApprovalClaim(record),privateKey).toString("base64");
+  const key=publicKey.export({type:"spki",format:"pem"});
+  return {claim,expected,sign,key,now};
+}
+test("valid synthetic Ed25519 claim remains HOLD without real custody",()=>{
+  const f=claimFixture();const r=verifySignedClaim(f.claim,f.sign(f.claim),f.key,f.expected,new Set(),f.now);
+  assert.equal(r.status,"HOLD");assert.equal(r.cryptographic,"PASS");assert.equal(r.authority,"HOLD");
+});
+test("tampering with signed scope fails",()=>{
+  const f=claimFixture();const sig=f.sign(f.claim);f.claim.target_id="P002A";
+  assert.equal(verifySignedClaim(f.claim,sig,f.key,{...f.expected,target_id:"P002A"},new Set(),f.now).code,"SIGNATURE_MISMATCH");
+});
+test("approval cannot be reused across target",()=>{
+  const f=claimFixture();const e={...f.expected,target_id:"P002A"};
+  assert.equal(verifySignedClaim(f.claim,f.sign(f.claim),f.key,e,new Set(),f.now).code,"APPROVAL_SCOPE_MISMATCH_target_id");
+});
+test("approval cannot be reused across digest",()=>{
+  const f=claimFixture();const e={...f.expected,source_digest:"0".repeat(64)};
+  assert.equal(verifySignedClaim(f.claim,f.sign(f.claim),f.key,e,new Set(),f.now).code,"APPROVAL_SCOPE_MISMATCH_source_digest");
+});
+test("duplicate signed event rejected within process",()=>{
+  const f=claimFixture();const seen=new Set(),sig=f.sign(f.claim);
+  verifySignedClaim(f.claim,sig,f.key,f.expected,seen,f.now);
+  assert.equal(verifySignedClaim(f.claim,sig,f.key,f.expected,seen,f.now).code,"REPLAY_EVENT_IN_PROCESS");
+});
+test("expired approval claim rejected",()=>{
+  const f=claimFixture();f.claim.expires_at=new Date(f.now-1000).toISOString();
+  assert.equal(verifySignedClaim(f.claim,f.sign(f.claim),f.key,f.expected,new Set(),f.now).code,"EXPIRED_OR_INVALID_WINDOW");
+});
+test("nonhuman claim rejected",()=>{
+  const f=claimFixture();f.claim.actor_id="bot:test";
+  assert.equal(verifySignedClaim(f.claim,f.sign(f.claim),f.key,f.expected,new Set(),f.now).code,"ACTOR_NOT_HUMAN_CLAIM");
+});
+test("inadequate nonce rejected",()=>{
+  const f=claimFixture();f.claim.nonce="short";
+  assert.equal(verifySignedClaim(f.claim,f.sign(f.claim),f.key,f.expected,new Set(),f.now).code,"NONCE_TOO_SHORT");
+});
+test("missing externally trusted public key rejected",()=>{
+  const f=claimFixture();assert.equal(verifySignedClaim(f.claim,f.sign(f.claim),"",f.expected,new Set(),f.now).code,"MISSING_SIGNATURE_OR_TRUST_ANCHOR");
+});
