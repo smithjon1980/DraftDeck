@@ -39,3 +39,11 @@ The test suite covers missing P025, late/duplicate numbering, changed paragraph 
 
 The review branch tests must execute under contents: read with no repository writing, external effect, manuscript, private art or approval credentials.
 
+
+
+## Additional read-only checks
+- Local source identity: node tools/boss105/readback.mjs SOURCE_ROOT RELATIVE_SOURCE_PATH RAW_SHA256 GIT_BLOB_SHA. Computes raw SHA-256 and the Git SHA-1 blob object ID from actual local bytes; rejects traversal, missing files, external symlinks and mismatches. PASS means **LOCAL_ONLY**, not GitHub, Google Drive or archive readback.
+- Signed claim scope: tools/boss105/approval-claim.mjs exports canonicalApprovalClaim and verifySignedClaim for Ed25519 verification against a separately provided public trust anchor. Checks source/target/asset/preview/profile/composition/gate, expiry and local duplicate events. Even a cryptographically valid claim returns **HOLD** until the real authenticated human ledger, actor-to-key trust, external custody and durable replay check are established.
+- Tests dynamically create synthetic temporary source fixtures and ephemeral Ed25519 key pairs; no authentic private keys or protected manuscripts are stored or fetched.
+
+Never reuse the test key, test event IDs, or test-only approvals for a real production decision.
