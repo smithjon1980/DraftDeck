@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "id": "BOSS-EDITORIAL-PRECISION-2026-11-04",
+  "status": "OWNER_DIRECTED_REPLACEMENT_CANDIDATE_NOT_RELEASED",
+  "supersedes": "design-system/boss-design-contract.json v0.1",
+  "identity": "Bioscillate Operating System by Seven",
+  "authority": {
+    "creative_direction": "owner",
+    "final_visual_approval": "human",
+    "publication_release": "human",
+    "agents": "scoped execution only",
+    "supervisor": "ChatGPT evidence review; no autonomous release"
+  },
+  "profiles": {
+    "slide": {
+      "width_px": 1920,
+      "height_px": 1080
+    },
+    "web": "responsive semantic React/CSS",
+    "print": "separate physical-size qualification and PDF proof"
+  },
+  "visual": {
+    "theme": "premium magazine editorial with Tesla center-display hierarchy and Apple-like typographic restraint",
+    "ground": "#FFFFFF",
+    "ink": "#000000",
+    "cyan": "#00BCEB",
+    "magenta": "#E30074",
+    "yellow": "controlled CMYK accent",
+    "photorealism": "ALLOWED as approved story/art PNG",
+    "artwork_master": "original high-quality PNG, provenance and rights tracked",
+    "tracing": "optional VTracer; retain PNG when trace degrades fidelity",
+    "svg": "limited to technical geometry, grids, shapes, icons; no photographic fidelity requirement",
+    "text": "native editable HTML/CSS/React; no flattened text",
+    "geometry": "CAD/ISO-informed technical rails; white space; controlled halftones outside text",
+    "prohibited": [
+      "generic SaaS card layouts",
+      "stick figures",
+      "unapproved gradients or shadows",
+      "full-slide rasterized editorial text"
+    ]
+  },
+  "layers": [
+    "CAD geometry",
+    "art PNG",
+    "story PNG",
+    "native editorial text"
+  ],
+  "approvals": "CAD, art, story, text independently reviewed before final composition",
+  "references": "Five owner-provided visual references A-E; visual direction confirmed, original binary staging and SHA-256 pending",
+  "execution": {
+    "primary": "React/Tailwind",
+    "agents": [
+      "OpenHands",
+      "bolt.diy"
+    ],
+    "qualification": "same five inputs, same prompt, three candidates per agent",
+    "tests": [
+      "Storybook",
+      "Playwright",
+      "Vitest",
+      "Sharp",
+      "visual diff",
+      "PDF export fidelity"
+    ],
+    "cpu_first": true,
+    "hosting": "Render subject to security qualification; Railway excluded; Kaggle outside project"
+  },
+  "security": {
+    "production_gateway": "HOLD until non-bypassable route, authenticated identity, exact-digest human approval, replay resistance, custody, tenant isolation and egress tests",
+    "no_production_secrets_for_agents": true
+  },
+  "source_control": {
+    "preserve_historical_contract": true,
+    "do_not_merge_without_human_review": true,
+    "unapproved_manuscript_private": true
+  },
+  "acceptance": {
+    "photographic_quality": "visual review and effective print resolution",
+    "editable_text": true,
+    "no_clipping": true,
+    "render_evidence_required": true,
+    "release_requires_human": true
+  }
+}
