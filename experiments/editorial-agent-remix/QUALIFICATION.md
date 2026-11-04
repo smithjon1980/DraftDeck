@@ -9,16 +9,16 @@ Compare OpenHands and bolt.diy as candidate implementation agents for a 1920 × 
 
 ## Source and reference gates
 - Require reference-A through reference-E image files with provenance and explicit human authorization. Until supplied: BLOCKED_REFERENCE_INPUT.
-- Read AGENTS.md, design-system/README.md, and design-system/boss-design-contract.json before implementation.
+- Read AGENTS.md, design-system/README.md, and design-system/boss-editorial-precision-contract-v1.json before implementation; legacy boss-design-contract.json is historical on this branch.
 - Episode Zero v0.19 is an unapproved candidate. Do not ingest its complete manuscript into public branches, generate release artwork from it, or imply editorial approval. A fictional placeholder headline may be used for layout-only qualification.
-- The repository contract currently says no photorealistic imagery; the newer owner direction is PNG-first photographic editorial art. Record this as CONTRACT_CONFLICT and request a separate human-approved contract amendment before final art composition. Do not silently overwrite the contract.
+- The owner-directed replacement contract permits PNG-first photographic editorial artwork. The legacy contract is retired on this experimental branch, but main remains unchanged; final art/story approval is still required.
 - Keep private reference binaries and unpublished narration out of public PRs.
 
 ## Identical agent task
 Given the five authorized references and a design brief, create three distinct candidate compositions, each:
 - Fixed logical 1920 × 1080 slide; separate responsive web behavior if added.
 - React + Tailwind; native editable HTML/CSS typography and annotations.
-- White editorial ground, restrained cyan #00BCEB and magenta #E30074; controlled yellow only after separate brand approval.
+- White editorial ground, restrained cyan #00BCEB and magenta #E30074; controlled yellow as permitted by the replacement contract.
 - Tesla Model Y center-screen information hierarchy, Apple-like typography/spacing restraint, magazine-quality editorial storytelling, CAD/ISO-informed thin geometry.
 - Placeholder for PNG artwork; do not generate or trace imagery in this qualification.
 - SVG only for grids, lines, icons and geometric technical elements; no full-slide rasterized text.
