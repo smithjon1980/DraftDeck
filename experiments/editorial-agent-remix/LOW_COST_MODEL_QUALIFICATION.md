@@ -1,6 +1,6 @@
 # BOSS — Low-cost model qualification for OpenHands
 
-Status: CANDIDATE / NO API CALL / NO VM PROVISIONED / NO AGENT EXECUTION
+Status: OWNER APPROVED PROCEED WITH $5 MODEL + $5 VM TRIAL / PROVIDER ACCOUNT NOT CONNECTED / NO SPEND / NO AGENT EXECUTION
 Date: 2026-11-04
 Scope: experiment/editorial-agent-remix-qualification only
 
@@ -14,9 +14,9 @@ These are different models; price is not evidence of equivalent quality.
 - OpenHands provider configuration and tool-use limitations: https://github.com/OpenHands/docs/blob/main/openhands/usage/llms/llms.mdx
 
 ## Test controls
-1. No account purchases, API keys, paid services or new VMs without separate human confirmation of the provider and maximum spend.
+1. Owner approved proceeding with the proposed $10 trial ceiling on 2026-11-04. This authorizes preparation and a bounded trial only after account access, an enforceable cap and provider-specific charge confirmation. No unlimited spend, new long-running server, or production access.
 2. Configure a provider account with a hard usage cap where available, otherwise an enforceable proxy cap; never commit keys or screenshots of keys.
-3. Initial ceiling proposal: $5 model usage and $5 VM usage, not an authorization to spend.
+3. Approved trial ceiling: $5 model usage and $5 VM usage. A soft billing alert alone is not a hard cap; if provider cannot enforce a limit, stop before paid execution and request a separate bounded mechanism.
 4. Verify provider endpoint and exact model ID using authenticated, read-only model listing; do not guess.
 5. Verify OpenHands runtime isolation and permissions before repository access. GitHub default read-only; experimental branch PR only.
 6. Stage five exact reference images privately with provenance and SHA-256; do not publish their binaries.
@@ -25,6 +25,7 @@ These are different models; price is not evidence of equivalent quality.
 
 ## Status
 - Pricing comparison: RESEARCHED (not a vendor quote)
+- Provider choice: Together AI first, subject to exact model/API compatibility and enforceable spend limit; OWNER APPROVED TRIAL CEILING
 - Provider account and spend cap: NOT VERIFIED
 - API model authentication: NOT VERIFIED
 - OpenHands host: NOT PROVISIONED
