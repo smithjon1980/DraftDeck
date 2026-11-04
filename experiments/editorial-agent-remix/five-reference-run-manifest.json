@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "experiment": "BOSS Editorial Precision five-reference agent qualification",
+  "status": "BLOCKED_REFERENCE_STAGING",
+  "release_authority": "human",
+  "production_branch_mutation": false,
+  "reference_policy": {
+    "public_repo_binary_upload": false,
+    "sha256_required": true,
+    "source_authorization_required": true
+  },
+  "references": [
+    {
+      "id": "A",
+      "role": "editorial campus spread",
+      "asset_uri": null,
+      "sha256": null,
+      "rights_status": "PENDING",
+      "input_ready": false
+    },
+    {
+      "id": "B",
+      "role": "executive chapter opener",
+      "asset_uri": null,
+      "sha256": null,
+      "rights_status": "PENDING",
+      "input_ready": false
+    },
+    {
+      "id": "C",
+      "role": "creative brief and component blueprint",
+      "asset_uri": null,
+      "sha256": null,
+      "rights_status": "PENDING",
+      "input_ready": false
+    },
+    {
+      "id": "D",
+      "role": "operator orientation",
+      "asset_uri": null,
+      "sha256": null,
+      "rights_status": "PENDING",
+      "input_ready": false
+    },
+    {
+      "id": "E",
+      "role": "Episode Zero section opener",
+      "asset_uri": null,
+      "sha256": null,
+      "rights_status": "PENDING",
+      "input_ready": false
+    }
+  ],
+  "candidates": [
+    {
+      "id": "openhands",
+      "status": "NOT_CONNECTED_OR_EXECUTED"
+    },
+    {
+      "id": "bolt.diy",
+      "status": "NOT_CONNECTED_OR_EXECUTED"
+    }
+  ],
+  "common_task": {
+    "output_count_per_agent": 3,
+    "canvas": {
+      "width": 1920,
+      "height": 1080
+    },
+    "framework": "React + Tailwind",
+    "editable_text": "native HTML/CSS",
+    "artwork": "separate PNG placeholder",
+    "svg": "technical geometry only",
+    "reference_access": "identical five-image bundle",
+    "constraints": [
+      "no production secrets",
+      "no protected writes",
+      "no release without human approval"
+    ]
+  },
+  "checks": [
+    "input hashes",
+    "runtime and model provenance",
+    "dependency and egress audit",
+    "three screenshots per agent",
+    "native text editability",
+    "no clipping",
+    "visual comparison A-E",
+    "PDF print fidelity",
+    "human approval"
+  ],
+  "known_conflict": "design-system/boss-design-contract.json rules.story_medium forbids photorealism; human contract amendment required before final art composition"
+}
