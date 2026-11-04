@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "status": "CANDIDATE_PENDING_HUMAN_REVIEW",
+  "status": "RETIRED_ON_EXPERIMENT_BRANCH_SUPERSEDED_BY_EDITORIAL_PRECISION_V1",
   "scope": [
     "BOSS Episode 01 presentation",
     "BOSS Day Zero instructional slides",
@@ -114,5 +114,7 @@
     ],
     "carrier_selection": "alternatives_not_simultaneous",
     "source_proof": "label_creation_not_carrier_possession_not_recipient_delivery"
-  }
+  },
+  "superseded_by": "design-system/boss-editorial-precision-contract-v1.json",
+  "retirement_note": "Owner directed retirement 2026-11-04. Historical contract preserved for traceability. Main branch unchanged; replacement remains a review candidate pending controlled promotion."
 }
