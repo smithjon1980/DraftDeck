@@ -49,3 +49,14 @@ Every significant ART/STORY illustration must advance comprehension: establish a
 
 ## Governance
 This archive captures approved direction and pending work, **not** proof that manuscripts were revised, production assets passed CI, or any publication was released. Human approval remains mandatory. Changes to canonical specifications require versioned commits and review.
+
+
+## Day Zero depth and duration amendment — 2026-11-03
+
+**Scope:** Day Zero, *Solve for the Unknown*, comprises **seven sections and a target of 24 hours of instructional content**. A BOSS “day” means a 24-hour content allocation, **not** mandatory completion in one calendar day. Do not extrapolate this amendment into development authorization for Days One–Seven.
+
+**Publishing thesis:** Because AI has reduced the cost of accessing and producing information, BOSS differentiates through **comprehensive, verified, well-organized instructional coverage**. Provide more useful depth than a bare-minimum lesson, but do not equate quantity with learning quality. The working principle is **Comprehensive Content, Progressive Learning**: a navigable core pathway, optional deep dives, case studies, illustrations, references, worked examples, guided practice, independent tasks, feedback, and remediation. Optional enrichment must be clearly distinguished from essential competency requirements.
+
+**Instructional controls:** Every unit maps measurable objectives to narrative and visual instruction, practice, assessment, feedback, and evidence of transfer. Track manuscript volume, planned learning-time allocation, and observed learner completion time separately. Assign estimated durations to reading/narration, visual inspection, guided practice, independent assessment, and feedback; do not count words or video runtime as proof of 24 hours of learning. Validate durations and cognitive load with representative learners. Keep accommodations, pacing flexibility, and navigation available.
+
+**Immediate implementation:** Pilot these requirements in Day Zero Section One (25-paragraph manuscript candidate) with a source-authorization scenario and rubric before scaling to the remaining six Day Zero sections. Candidate manuscripts are not promoted by this amendment; human editorial release and CI gates remain mandatory.
