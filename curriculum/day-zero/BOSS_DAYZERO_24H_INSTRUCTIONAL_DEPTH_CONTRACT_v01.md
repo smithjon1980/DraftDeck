@@ -48,3 +48,18 @@ For Day Zero Section One's planned **65-paragraph** manuscript, integrate these 
 **Required story-based example:** Main Street Copy increases print throughput while using an unapproved architectural revision. Local productivity rises while system-level proposal quality fails. Learners identify the system boundary, upstream cause, downstream effects, feedback gap, intervention point and responsible human approval. Assess transfer to a new operational setting, not just recall.
 
 **Instructional guardrails:** Teach systems thinking through unfolding scenes, diagram-supported reasoning, and independent decisions. Introduce terminology only after its problem is visible. Treat the planned 65 paragraphs as a candidate structure, not proof of a 60-minute narrated runtime. Retain Day Zero-only scope and separate human approval gates for manuscript and visuals.
+
+## IPOS branches beneath systems thinking — 2026-11-03
+
+**Governing hierarchy:** Systems Thinking is the umbrella; **IPOS = Input, Process, Output, System** supplies four mutually connected instructional branches, not four independent silos. The System branch encompasses boundaries, actors, dependencies, feedback, governance, and improvement; it shapes and receives feedback from the other three branches.
+
+| Branch | Learner question | Teaching methods |
+|---|---|---|
+| Input | What enters the system, and is it authorized and reliable? | Stakeholder requirements, SIPOC, source/version verification, data quality, initial risk analysis |
+| Process | How is work transformed under controlled responsibility? | SOPs, RACI, WBS, BPMN/swimlanes, UML activity/sequence diagrams, change control, bounded AI-agent tasks |
+| Output | What is delivered and what proves acceptance? | Deliverables, acceptance criteria, OKRs, KPIs, QA, custody/evidence records |
+| System | How do the elements interact, adapt, and affect overall outcomes? | Boundaries, causal feedback, delays, bottlenecks, dependencies, human governance, continuous improvement |
+
+**Cross-branch case:** In the Texas campus/Main Street Copy narrative, a revised architectural file is an Input whose authority must be checked; an SOP-governed print workflow is Process; the accepted proposal package and evidence are Output; the architect–developer–printer–carrier–recipient network and its feedback are System. A faster printer with the wrong revision illustrates local optimization versus system effectiveness.
+
+**Pedagogy:** Show the event first, introduce the IPOS lens, then have learners diagnose a new case. Every IPOS diagram must state its system boundary and intended learner decision. Maintain SEIM narrative continuity, BEPA visual standards, HAVE authority, Day Zero-only scope, and human approval gates.
