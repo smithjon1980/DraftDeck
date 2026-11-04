@@ -1,21 +1,21 @@
-# BOSS Editorial Precision — two-reference React remix qualification
+# BOSS Editorial Precision — five-reference React remix qualification
 
 Status: EXPERIMENT / NOT APPROVED / NO RELEASE
 Branch: experiment/editorial-agent-remix-qualification
 Owner of final visual and release decisions: human
 
 ## Objective
-Compare OpenHands and bolt.diy as candidate implementation agents for a 1920 × 1080 React/Tailwind editorial slide derived from the SAME two owner-approved reference images. Neither agent is admitted or connected merely by appearing here.
+Compare OpenHands and bolt.diy as candidate implementation agents for a 1920 × 1080 React/Tailwind editorial slide derived from the SAME five supplied reference images (not automatically approved). Neither agent is admitted or connected merely by appearing here.
 
 ## Source and reference gates
-- Require reference-A and reference-B image files with provenance and explicit human authorization. Until supplied: BLOCKED_REFERENCE_INPUT.
+- Require reference-A through reference-E image files with provenance and explicit human authorization. Until supplied: BLOCKED_REFERENCE_INPUT.
 - Read AGENTS.md, design-system/README.md, and design-system/boss-design-contract.json before implementation.
 - Episode Zero v0.19 is an unapproved candidate. Do not ingest its complete manuscript into public branches, generate release artwork from it, or imply editorial approval. A fictional placeholder headline may be used for layout-only qualification.
 - The repository contract currently says no photorealistic imagery; the newer owner direction is PNG-first photographic editorial art. Record this as CONTRACT_CONFLICT and request a separate human-approved contract amendment before final art composition. Do not silently overwrite the contract.
 - Keep private reference binaries and unpublished narration out of public PRs.
 
 ## Identical agent task
-Given the two authorized references and a design brief, create three distinct candidate compositions, each:
+Given the five authorized references and a design brief, create three distinct candidate compositions, each:
 - Fixed logical 1920 × 1080 slide; separate responsive web behavior if added.
 - React + Tailwind; native editable HTML/CSS typography and annotations.
 - White editorial ground, restrained cyan #00BCEB and magenta #E30074; controlled yellow only after separate brand approval.
@@ -42,7 +42,7 @@ Given the two authorized references and a design brief, create three distinct ca
 8. PASS / FAIL / NOT TESTED for visual fidelity, editorial quality, accessibility, editability, security, reproducibility and PDF fidelity.
 
 ## Stop conditions
-No images supplied -> do not claim a visual remix was tested.
+Images are visible in the conversation, but no repository-staged input binaries or hashes are verified -> do not claim a visual remix was tested.
 No connected/qualified coding agent -> do not claim delegated execution.
 No browser screenshots -> visual fidelity NOT TESTED.
 No approved art/story -> no final composition.
@@ -50,4 +50,14 @@ No explicit human decision -> HOLD; no merge or publication.
 No approved non-bypassable gateway and custody -> no production write or deployment.
 
 ## Immediate next step
-Obtain the two exact reference images (or their approved repository paths) and qualify the agent runtimes in an isolated environment. This document is a test specification, not evidence of tool installation, benchmark completion, or approved visual output.
+Stage the five exact reference images with provenance, authorization and SHA-256 hashes outside public branches and qualify the agent runtimes in an isolated environment. This document is a test specification, not evidence of tool installation, benchmark completion, or approved visual output.
+
+## Five-reference visual brief (2026-11-04)
+- A: Editorial campus spread, large headline, photographic architecture hero, multiple narrative columns and decision summary.
+- B: Chapter opener, executive in conference room, campus display, strong serif typography and architectural linework.
+- C: Creative-brief template with inset HAVE slide, component library, acceptance criteria and production flow; reference for structure, not literal slide copy.
+- D: Module 01 operator orientation, human operator hero, editorial text, outcomes and learning journey.
+- E: Episode Zero section opener, executive and campus imagery, CMYK rails, technical sketch and section journey.
+- Preserve white backgrounds, CMYK accent restraint, photographic PNG art, native editable React/CSS text and geometric SVG only. The images are visual references, not approved manuscript or production templates.
+- Each agent gets identical five-image inputs, identical prompt and three candidate compositions. Report reference fidelity separately for A-E; do not collapse to a single aesthetic score.
+- The five images have been viewed in the conversation; repository binary staging, hashes, license/rights review and agent execution remain NOT VERIFIED. Do not mark input gate passed until artifacts are accessible to both isolated runners.
