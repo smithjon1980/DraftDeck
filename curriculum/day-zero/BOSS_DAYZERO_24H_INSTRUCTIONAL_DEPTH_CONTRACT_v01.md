@@ -26,3 +26,13 @@
 
 ## Next test
 Develop a paragraph-anchored Section One objective-to-evidence matrix, source-revision discrepancy exercise, scoring rubric, and timed pilot plan. Do not assign the remaining sections arbitrary equal duration without an approved content map.
+
+## Integrated management-to-execution instructional thread — 2026-11-03
+
+For Day Zero Section One's planned **65-paragraph** manuscript, integrate these concepts through the Texas corporate campus → Main Street Copy narrative rather than as isolated definitions: executive OKRs; operational KPIs; work breakdown structure; RACI human accountability; process maps and swimlanes; standard operating procedures (SOPs); execution checklists; evidence/quality review; risk, change control and escalation; executive issue trees; and selective UML/sequence/state diagrams when the story introduces technical system behavior. Consulting-style analytical clarity may be inspired by industry practice without copying proprietary firm templates.
+
+**Instructional spine:** Strategy → Measurement → Accountability → Process → Procedure → Execution → Verification → Improvement.
+
+**Distinctions:** An OKR expresses an objective and measurable results; KPIs monitor ongoing performance. RACI clarifies roles but does not delegate human accountability to AI. A process map represents flow; a swimlane assigns work across participants; an SOP provides controlled, repeatable task instructions; a checklist supports verification; an evidence record documents actual results. Exceptions route to human authorization, not automatic SOP bypass.
+
+**Story pilot:** Main Street Copy's document intake/revision conflict leads to an SOP for source verification, approval, preflight, print, inspection, package, and release. Show the process and RACI visually; have the learner identify the missing approval and correct the procedure. The manuscript remains a candidate until human editorial approval. Diagram and art/story layers retain separate visual gates.
