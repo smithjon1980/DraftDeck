@@ -36,3 +36,15 @@ For Day Zero Section One's planned **65-paragraph** manuscript, integrate these 
 **Distinctions:** An OKR expresses an objective and measurable results; KPIs monitor ongoing performance. RACI clarifies roles but does not delegate human accountability to AI. A process map represents flow; a swimlane assigns work across participants; an SOP provides controlled, repeatable task instructions; a checklist supports verification; an evidence record documents actual results. Exceptions route to human authorization, not automatic SOP bypass.
 
 **Story pilot:** Main Street Copy's document intake/revision conflict leads to an SOP for source verification, approval, preflight, print, inspection, package, and release. Show the process and RACI visually; have the learner identify the missing approval and correct the procedure. The manuscript remains a candidate until human editorial approval. Diagram and art/story layers retain separate visual gates.
+
+## Systems thinking as governing instructional principle — 2026-11-03
+
+**Decision:** Systems thinking governs Day Zero's treatment of AI, agents, project management, consulting, process engineering, and SOPs. An AI agent is a bounded component of a human-governed operating system, not an autonomous substitute for the whole system.
+
+**Six recurring diagnostic questions:** (1) Purpose/outcome; (2) boundary, environment and constraints; (3) components, actors and relationships; (4) flows, handoffs and dependencies; (5) feedback, delays and error signals; (6) adaptation, unintended consequences and human-governed improvement.
+
+**Integration:** OKRs express system outcomes; KPIs provide measurements that may create perverse incentives; WBS decomposes deliverables but must preserve cross-component dependencies; RACI specifies human accountability; process maps/swimlanes expose handoffs; SOPs stabilize repeatable local operations; risk and change control manage disturbance; HAVE preserves authorization and evidence. Consulting issue trees help structure investigation; causal-loop diagrams expose feedback; stock-and-flow diagrams represent accumulations and rates when relevant. Do not confuse a process flowchart with a causal-loop model.
+
+**Required story-based example:** Main Street Copy increases print throughput while using an unapproved architectural revision. Local productivity rises while system-level proposal quality fails. Learners identify the system boundary, upstream cause, downstream effects, feedback gap, intervention point and responsible human approval. Assess transfer to a new operational setting, not just recall.
+
+**Instructional guardrails:** Teach systems thinking through unfolding scenes, diagram-supported reasoning, and independent decisions. Introduce terminology only after its problem is visible. Treat the planned 65 paragraphs as a candidate structure, not proof of a 60-minute narrated runtime. Retain Day Zero-only scope and separate human approval gates for manuscript and visuals.
