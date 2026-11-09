@@ -1,0 +1,38 @@
+name: CE.SDK isolated C01 browser smoke
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'experiments/cesdk/harness/**'
+      - '.github/workflows/cesdk-c01-smoke.yml'
+permissions:
+  contents: read
+jobs:
+  c01:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: experiments/cesdk/harness
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install evaluation dependencies
+        run: |
+          npm install --no-audit --no-fund
+          npm install --no-save --no-audit --no-fund playwright
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Build isolated harness
+        run: npm run build
+      - name: Browser initialization test
+        run: node smoke.mjs
+      - name: Upload evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cesdk-c01-evidence
+          path: experiments/cesdk/harness/evidence/
+          if-no-files-found: warn
