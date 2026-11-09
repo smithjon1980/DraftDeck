@@ -1,0 +1,50 @@
+{
+  "experiment": "BOSS-CESDK-ONE-SLIDE-001",
+  "status": "NOT_EXECUTED",
+  "scope": "synthetic one-slide evaluation",
+  "baseline": "existing BOSS stack unchanged",
+  "criteria": [
+    {
+      "id": "C01",
+      "name": "React web initialization",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "C02",
+      "name": "Four-layer composition fidelity",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "C03",
+      "name": "Native text editing and scene round-trip",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "C04",
+      "name": "Vector PDF fidelity and no story pixelation",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "C05",
+      "name": "SVG export limitations documented",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "C06",
+      "name": "PDF/X-4 CMYK preflight",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "C07",
+      "name": "CAD and protected-layer enforcement",
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "C08",
+      "name": "Evidence manifest and human review",
+      "result": "NOT_RUN"
+    }
+  ],
+  "release": "HOLD",
+  "notes": "This file is a test specification, not an execution report."
+}
