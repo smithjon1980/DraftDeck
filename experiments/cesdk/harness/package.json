@@ -1,0 +1,13 @@
+{
+  "name": "boss-cesdk-qualification",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@cesdk/cesdk-js": "1.85.3",
+    "vite": "^7.0.0"
+  }
+}
