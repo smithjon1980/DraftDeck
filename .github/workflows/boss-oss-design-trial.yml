@@ -1,0 +1,75 @@
+name: BOSS OSS design interoperability trial
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'experiments/oss-design-v01/**'
+      - 'design-system/boss-design-contract.json'
+      - 'design-system/tokens/tokens.css'
+      - '.github/workflows/boss-oss-design-trial.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  penpot-candidate-tokens:
+    name: Penpot candidate token export and parity tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify all brand tokens and negative drift cases
+        run: python -m unittest discover -s experiments/oss-design-v01/scripts -p 'test_*.py' -v
+      - name: Export candidate DTCG tokens
+        run: |
+          python experiments/oss-design-v01/scripts/export_penpot_tokens.py \
+            --output experiments/oss-design-v01/output/boss-penpot-tokens.json
+      - name: Upload Penpot import candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: boss-penpot-tokens-CANDIDATE-import-untested
+          path: experiments/oss-design-v01/output/boss-penpot-tokens.json
+          retention-days: 14
+  excalidraw-editor:
+    name: Real Excalidraw editable storyboard/browser test
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PUPPETEER_SKIP_DOWNLOAD: '1'
+      CI: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install direct pinned browser-test dependencies
+        working-directory: experiments/oss-design-v01/excalidraw
+        run: npm install --no-audit --no-fund
+      - name: Build Excalidraw React test harness
+        working-directory: experiments/oss-design-v01/excalidraw
+        run: |
+          npm run build
+          cp index.html dist/index.html
+      - name: Execute real browser import/edit/JSON roundtrip
+        working-directory: experiments/oss-design-v01/excalidraw
+        run: |
+          export CHROME_BIN="$(command -v google-chrome || command -v chromium)"
+          npm run test
+      - name: Upload test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: boss-excalidraw-storyboard-browser-trial
+          path: |
+            experiments/oss-design-v01/excalidraw/screenshots/*
+            experiments/oss-design-v01/excalidraw/package-lock.json
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Explicit release boundary
+        if: always()
+        run: |
+          echo "Testing Excalidraw React editor for synthetic storyboard editing only."
+          echo "No production migration, no private narration, no Penpot account import."
+          echo "No auth token, provider inference, server deployment, or release authorization."

@@ -1,0 +1,11 @@
+html,body{margin:0;background:#fff;color:#000;font:18px Arial,Helvetica,sans-serif}
+main{width:1520px;height:900px;padding:20px;box-sizing:border-box}
+header{height:72px;border-bottom:2px solid black;display:flex;justify-content:space-between;align-items:center}
+header strong{font-size:30px;letter-spacing:-1px}header span{font:700 16px monospace}
+.layout{display:grid;grid-template-columns:1020px 420px;gap:30px;height:760px;padding-top:25px}
+.editor{height:700px;border:2px solid black;position:relative}
+aside{border-top:5px solid #00BCEB;padding:18px 0;display:flex;flex-direction:column;gap:16px}
+h1{font-size:37px;line-height:1.1;letter-spacing:-1.5px;margin:0}p{font-size:21px;line-height:1.35;margin:0}
+button{background:#fff;border:2px solid #E30074;padding:16px;text-align:left;font-size:19px;font-weight:800}
+#status{font:700 17px monospace;color:#E30074}
+footer{margin-top:auto;padding-top:15px;border-top:1px solid black;font:700 13px monospace}
