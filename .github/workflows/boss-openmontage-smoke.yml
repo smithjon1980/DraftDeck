@@ -1,0 +1,70 @@
+name: BOSS OpenMontage smoke
+on:
+  pull_request:
+    paths:
+      - 'experiments/openmontage-v01/**'
+      - '.github/workflows/boss-openmontage-smoke.yml'
+permissions:
+  contents: read
+jobs:
+  renderer-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fetch pinned upstream source
+        run: |
+          git clone https://github.com/calesthio/OpenMontage.git /tmp/openmontage
+          git -C /tmp/openmontage checkout c8066452325cb57c8fc1ba8c2a71b6e8842e6b65
+          mkdir -p proof
+          git -C /tmp/openmontage rev-parse HEAD > proof/upstream-revision.txt
+          cp /tmp/openmontage/LICENSE proof/UPSTREAM-LICENSE
+          cp experiments/openmontage-v01/props.json /tmp/openmontage/remotion-composer/smoke-props.json
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg espeak-ng
+          python -m pip install -r /tmp/openmontage/requirements.txt pytest
+          cd /tmp/openmontage/remotion-composer
+          npm ci
+      - name: Inspect upstream registry
+        working-directory: /tmp/openmontage
+        run: |
+          python -c "from tools.tool_registry import registry; import json; registry.discover(); print(json.dumps(registry.provider_menu_summary(),indent=2))" > "${GITHUB_WORKSPACE}/proof/provider-menu.json"
+      - name: Test upstream checkpoints
+        working-directory: /tmp/openmontage
+        run: |
+          pytest -q tests/lib/test_checkpoint_prerequisites.py tests/lib/test_checkpoint_resume_identity.py --junitxml="${GITHUB_WORKSPACE}/proof/checkpoint-tests.xml"
+      - name: Render actual upstream Remotion composition
+        working-directory: /tmp/openmontage/remotion-composer
+        run: |
+          npx --no-install remotion render src/index.tsx Explainer "${GITHUB_WORKSPACE}/proof/silent.mp4" --props=smoke-props.json --codec=h264 --concurrency=2
+      - name: Add synthetic audio and inspect output
+        run: |
+          espeak-ng -w proof/speech.wav "Synthetic test. Inputs are declared. Outputs require inspection. Human review remains pending."
+          ffmpeg -y -i proof/silent.mp4 -i proof/speech.wav -map 0:v -map 1:a -c:v copy -af apad -c:a aac -t 45 proof/synthetic-test.mp4
+          ffprobe -v error -show_streams -show_format -of json proof/synthetic-test.mp4 > proof/ffprobe.json
+          ffmpeg -y -ss 8 -i proof/synthetic-test.mp4 -frames:v 1 proof/frame-08.png
+          ffmpeg -y -ss 23 -i proof/synthetic-test.mp4 -frames:v 1 proof/frame-23.png
+          ffmpeg -y -ss 38 -i proof/synthetic-test.mp4 -frames:v 1 proof/frame-38.png
+          python - <<'PY'
+          import json
+          p=json.load(open("proof/ffprobe.json"))
+          video=next(s for s in p["streams"] if s["codec_type"]=="video")
+          assert video["width"]==1920 and video["height"]==1080
+          assert any(s["codec_type"]=="audio" for s in p["streams"])
+          assert abs(float(p["format"]["duration"])-45)<0.2
+          json.dump({"container_checks":"PASS","visual_review":"PENDING","listening_review":"PENDING","captions":"NOT_TESTED","pipeline_end_to_end":"NOT_TESTED","synthetic":True},open("proof/result.json","w"),indent=2)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: boss-openmontage-smoke
+          path: proof/
+          retention-days: 14

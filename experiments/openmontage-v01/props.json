@@ -1,0 +1,49 @@
+{
+  "themeConfig": {
+    "primaryColor": "#00BCEB",
+    "accentColor": "#E30074",
+    "backgroundColor": "#FFFFFF",
+    "surfaceColor": "#FFFFFF",
+    "textColor": "#000000",
+    "mutedTextColor": "#333333",
+    "chartColors": [
+      "#00BCEB",
+      "#E30074"
+    ]
+  },
+  "cuts": [
+    {
+      "id": "s1",
+      "source": "",
+      "type": "text_card",
+      "in_seconds": 0,
+      "out_seconds": 15,
+      "text": "SYNTHETIC TEST — Inputs declared",
+      "color": "#000000",
+      "backgroundColor": "#FFFFFF"
+    },
+    {
+      "id": "s2",
+      "source": "",
+      "type": "text_card",
+      "in_seconds": 15,
+      "out_seconds": 30,
+      "text": "SYNTHETIC TEST — Output inspected",
+      "color": "#000000",
+      "backgroundColor": "#FFFFFF"
+    },
+    {
+      "id": "s3",
+      "source": "",
+      "type": "text_card",
+      "in_seconds": 30,
+      "out_seconds": 44,
+      "text": "SYNTHETIC TEST — Human review pending",
+      "color": "#000000",
+      "backgroundColor": "#FFFFFF"
+    }
+  ],
+  "overlays": [],
+  "captions": [],
+  "audio": {}
+}
