@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/smithjon1980/DraftDeck/blob/docs/boss-big-three-governance-20261010/governance/specs/boss-release-gate.schema.json",
+  "title": "BOSS Commercial Release Gate — Candidate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "run_id", "system_id", "input", "process", "output", "storage", "risk", "controls", "authorization", "disposition"],
+  "properties": {
+    "schema_version": {"const": "boss-release/0.1-candidate"},
+    "run_id": {"type": "string", "minLength": 1},
+    "system_id": {"type": "string", "minLength": 1},
+    "input": {"$ref": "#/$defs/evidenceField"},
+    "process": {"$ref": "#/$defs/evidenceField"},
+    "output": {"$ref": "#/$defs/evidenceField"},
+    "storage": {"$ref": "#/$defs/evidenceField"},
+    "risk": {"type": "object", "additionalProperties": false, "required": ["tier", "reviewer", "assessment_ref"], "properties": {"tier": {"enum": ["T1", "T2", "T3", "T4", "UNKNOWN"]}, "reviewer": {"type": ["string", "null"]}, "assessment_ref": {"type": ["string", "null"]}}},
+    "controls": {"type": "object", "additionalProperties": false, "required": ["privacy", "evidence", "specialist_referral", "incident_route"], "properties": {"privacy": {"$ref": "#/$defs/control"}, "evidence": {"$ref": "#/$defs/control"}, "specialist_referral": {"$ref": "#/$defs/control"}, "incident_route": {"$ref": "#/$defs/control"}}},
+    "authorization": {"type": "object", "additionalProperties": false, "required": ["human_approver", "approval_ref"], "properties": {"human_approver": {"type": ["string", "null"]}, "approval_ref": {"type": ["string", "null"]}}},
+    "disposition": {"enum": ["HOLD", "REVIEW_PENDING", "APPROVED", "REJECTED"]}
+  },
+  "$defs": {
+    "evidenceField": {"type": "object", "additionalProperties": false, "required": ["state", "evidence_refs"], "properties": {"state": {"enum": ["OBSERVED", "NOT_ESTABLISHED", "NOT_EXECUTED", "UNKNOWN"]}, "evidence_refs": {"type": "array", "items": {"type": "string"}}}},
+    "control": {"type": "object", "additionalProperties": false, "required": ["status", "evidence_refs"], "properties": {"status": {"enum": ["PASS", "FAIL", "UNKNOWN", "NOT_APPLICABLE"]}, "evidence_refs": {"type": "array", "items": {"type": "string"}}, "rationale": {"type": "string"}}}
+  }
+}

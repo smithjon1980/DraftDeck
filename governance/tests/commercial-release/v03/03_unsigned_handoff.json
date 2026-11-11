@@ -1,0 +1,36 @@
+{
+  "schema_version": "boss-gate/0.3-candidate",
+  "workflow_id": "WF-003",
+  "risk_tier": "T3",
+  "ipos": {
+    "input": "evidence_input",
+    "process": "evidence_process",
+    "output": "evidence_output",
+    "storage": "evidence_storage"
+  },
+  "claim": {
+    "asserted_outcome": "SUCCESS",
+    "execution_receipt_id": "execution_ok"
+  },
+  "controls": {
+    "retention": {
+      "required": true,
+      "evidence_id": "retention_ok"
+    },
+    "minimization": {
+      "required": true,
+      "evidence_id": "minimization_ok"
+    },
+    "incident_route": {
+      "required": true,
+      "evidence_id": "incident_route_ok"
+    },
+    "specialist": {
+      "required": true,
+      "evidence_id": null
+    }
+  },
+  "authorization": {
+    "approval_request_id": "approval_req_1"
+  }
+}

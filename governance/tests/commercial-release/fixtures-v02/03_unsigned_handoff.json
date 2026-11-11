@@ -1,0 +1,18 @@
+{
+  "workflow_id": "WF-003",
+  "risk_tier": 3,
+  "evidence_chain": {
+    "status": "COMPLETE",
+    "ipos_trace_verified": true,
+    "split_signal_detected": false
+  },
+  "privacy_controls": {
+    "retention_schedule_defined": true,
+    "minimization_tags_applied": true
+  },
+  "authorization": {
+    "human_approval_recorded": true,
+    "engineering_signoff_required": true,
+    "engineering_signoff_recorded": false
+  }
+}
