@@ -1,0 +1,43 @@
+name: SEVEN Phase 1 qualification
+on:
+  push:
+    paths:
+      - 'experiments/episode-zero-seven-phase1/**'
+      - '.github/workflows/seven-phase1-qualification.yml'
+  pull_request:
+    paths:
+      - 'experiments/episode-zero-seven-phase1/**'
+      - '.github/workflows/seven-phase1-qualification.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  negative-tests:
+    name: SEVEN negative tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run positive and deliberately failing cases
+        run: node experiments/episode-zero-seven-phase1/scripts/test-negative.mjs
+      - name: Require seven valid layouts and locked brand
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          import assert from 'node:assert/strict';
+          import {validate} from './experiments/episode-zero-seven-phase1/scripts/validate.mjs';
+          const c=JSON.parse(fs.readFileSync('./experiments/episode-zero-seven-phase1/brand-profile.json'));
+          assert.equal(c.algorithm_name,'SEVEN');
+          assert.equal(c.page.width_in,17);
+          assert.equal(c.page.height_in,11);
+          assert.equal(c.palette.white,'#FFFFFF');
+          assert.equal(c.palette.cyan,'#00BCEB');
+          assert.equal(c.palette.magenta,'#E30074');
+          assert.equal(c.palette.black,'#000000');
+          assert.ok(c.media.allowed.includes('PREMIUM_PHOTOREALISTIC_EDITORIAL'));
+          assert.equal(validate().pass,true);
+          console.log('SEVEN brand and geometry contract PASS');
+          JS
