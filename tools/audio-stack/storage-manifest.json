@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "status": "folders_created_payload_migration_pending",
+  "storage": {
+    "google_drive": {
+      "root": {
+        "name": "BOSS_COMMAND_KIT",
+        "id": "1x_qmu2AcEqg19Saz5N-SGiev74EUfqyF"
+      },
+      "folders": {
+        "01_Source_Repositories_Backups": {
+          "id": "1RBkWAbqskiKDuoI3uhtPo_KHHjEABhg8",
+          "url": "https://drive.google.com/drive/folders/1RBkWAbqskiKDuoI3uhtPo_KHHjEABhg8"
+        },
+        "02_Executable_Tools": {
+          "id": "1RGvyiSJh0qXLQytBrzrmB5zMnsWgDy06",
+          "url": "https://drive.google.com/drive/folders/1RGvyiSJh0qXLQytBrzrmB5zMnsWgDy06"
+        },
+        "03_AI_Models": {
+          "id": "1-GLUPR6KEIjHLJwGzxkcwDniWFeqwe4U",
+          "url": "https://drive.google.com/drive/folders/1-GLUPR6KEIjHLJwGzxkcwDniWFeqwe4U"
+        },
+        "04_Original_Audio": {
+          "id": "1-YwyfVxrOmwg7bM3Xr-9UkcrmnZSqZoA",
+          "url": "https://drive.google.com/drive/folders/1-YwyfVxrOmwg7bM3Xr-9UkcrmnZSqZoA"
+        },
+        "05_Processed_Audio": {
+          "id": "107bAG-u6HJGClQRB9w6XVnlaJWnX_PQI",
+          "url": "https://drive.google.com/drive/folders/107bAG-u6HJGClQRB9w6XVnlaJWnX_PQI"
+        },
+        "06_Transcripts": {
+          "id": "1r_Nt61yflbDn_20uvUNKGU5Y5ryUx3d9",
+          "url": "https://drive.google.com/drive/folders/1r_Nt61yflbDn_20uvUNKGU5Y5ryUx3d9"
+        },
+        "07_Evidence_Receipts": {
+          "id": "1VP0JtGjTD6F-YS_vJCbFYzELWEgTuF2m",
+          "url": "https://drive.google.com/drive/folders/1VP0JtGjTD6F-YS_vJCbFYzELWEgTuF2m"
+        },
+        "08_Skills_and_Manifests": {
+          "id": "1bCXCdS1ZgtViGve31ZYDm-50_7G3qQCe",
+          "url": "https://drive.google.com/drive/folders/1bCXCdS1ZgtViGve31ZYDm-50_7G3qQCe"
+        },
+        "09_Release_Archives": {
+          "id": "1li1w6jceT7vUUuBiva4G2KpWKfLS7wg5",
+          "url": "https://drive.google.com/drive/folders/1li1w6jceT7vUUuBiva4G2KpWKfLS7wg5"
+        }
+      }
+    },
+    "github": {
+      "repository": "smithjon1980/DraftDeck",
+      "branch": "feature/command-kit-whisper-transcription",
+      "pull_request": 42
+    }
+  },
+  "security": {
+    "original_media_not_public": true,
+    "do_not_treat_drive_link_as_presigned_url": true,
+    "ingress_execution": "HOLD",
+    "transcript_verification": "NOT_ESTABLISHED"
+  },
+  "notes": [
+    "Folder creation succeeded. Empty folders do not imply binary payloads were uploaded.",
+    "Repository tool references do not constitute persistent model binaries."
+  ]
+}
