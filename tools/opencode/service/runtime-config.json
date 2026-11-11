@@ -1,0 +1,19 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "share": "disabled",
+  "mcp": {
+    "kaggle": { "type": "remote", "url": "https://www.kaggle.com/mcp", "enabled": true }
+  },
+  "permission": {
+    "bash": "ask",
+    "edit": "ask",
+    "kaggle_*": "ask",
+    "kaggle_get_notebook_info": "allow",
+    "kaggle_get_notebook_session_status": "allow",
+    "kaggle_list_notebook_files": "allow",
+    "kaggle_list_notebook_session_output": "allow",
+    "kaggle_download_notebook_output_zip": "allow",
+    "kaggle_download_notebook_output": "allow",
+    "kaggle_submit_to_competition": "deny"
+  }
+}
