@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BOSS private slide handoff manifest",
+  "type": "object",
+  "required": [
+    "contract",
+    "section_id",
+    "slide_ids",
+    "source_sha256",
+    "source_class",
+    "source_location_class",
+    "private_evidence_ref",
+    "dispatch_state",
+    "openbot_mode",
+    "mandatory_gateway_verified",
+    "audit_fail_closed",
+    "human_selection",
+    "human_release",
+    "publish_state"
+  ],
+  "properties": {
+    "contract": {
+      "const": "BOSS-SLIDE-HANDOFF-V1"
+    },
+    "section_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "slide_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "integer",
+        "minimum": 1
+      }
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source_class": {
+      "enum": [
+        "PRIVATE_UNPUBLISHED",
+        "PUBLIC_SYNTHETIC",
+        "APPROVED_FOR_DISTRIBUTION"
+      ]
+    },
+    "source_location_class": {
+      "enum": [
+        "PRIVATE_LIBRARY",
+        "PRIVATE_DRIVE",
+        "LOCAL_PRIVATE",
+        "PUBLIC_REPOSITORY"
+      ]
+    },
+    "private_evidence_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dispatch_state": {
+      "enum": [
+        "HOLD",
+        "SANDBOX_ONLY",
+        "AUTHORIZED"
+      ]
+    },
+    "openbot_mode": {
+      "enum": [
+        "enforce",
+        "dry-run",
+        "absent"
+      ]
+    },
+    "mandatory_gateway_verified": {
+      "type": "boolean"
+    },
+    "audit_fail_closed": {
+      "type": "boolean"
+    },
+    "human_selection": {
+      "enum": [
+        "PENDING",
+        "APPROVED"
+      ]
+    },
+    "human_release": {
+      "enum": [
+        "PENDING",
+        "APPROVED"
+      ]
+    },
+    "publish_state": {
+      "enum": [
+        "NOT_PUBLISHED",
+        "RELEASED"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

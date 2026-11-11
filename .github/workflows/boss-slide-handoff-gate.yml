@@ -1,0 +1,24 @@
+name: BOSS slide handoff metadata gates
+on:
+  pull_request:
+    paths:
+      - 'tools/boss-slide-handoff/**'
+      - 'schemas/boss-slide-handoff.schema.json'
+      - '.agents/skills/boss-governed-slide-handoff/**'
+      - '.github/workflows/boss-slide-handoff-gate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  structural-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run synthetic-only manifest test suite
+        run: python3 -m unittest discover -s tools/boss-slide-handoff -p 'test_*.py' -v
