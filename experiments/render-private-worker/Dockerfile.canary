@@ -1,0 +1,10 @@
+FROM python:3.12-slim-bookworm
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PORT=10000
+WORKDIR /app
+RUN groupadd --system canary && useradd --system --no-create-home --gid canary canary
+COPY experiments/render-private-worker/canary_server.py /app/canary_server.py
+USER canary
+EXPOSE 10000
+CMD ["python","/app/canary_server.py"]
