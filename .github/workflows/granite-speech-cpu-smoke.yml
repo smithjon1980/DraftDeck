@@ -32,6 +32,8 @@ jobs:
         run: |
           espeak-ng -v en-us -s 135 -w public_original.wav "The shipping label does not prove delivery. The package requires independent inspection."
           ffmpeg -hide_banner -loglevel error -y -i public_original.wav -ar 16000 -ac 1 -sample_fmt s16 public_synthetic_16k.wav
+          espeak-ng -v en-us -s 130 -w public_terms_original.wav "Bioscillate uses IPOS, PARCELS, and PRIME at Main Street Copy."
+          ffmpeg -hide_banner -loglevel error -y -i public_terms_original.wav -ar 16000 -ac 1 -sample_fmt s16 public_terms_16k.wav
       - name: Run Granite Speech 5.0 CPU inference
         run: python experiments/granite-speech-5/public_smoke.py
       - name: Upload public result

@@ -81,8 +81,39 @@ def main():
         elapsed=time.monotonic()-start
         num_input=inputs["input_ids"].shape[-1]
         hyp=tokenizer.batch_decode(generated[:,num_input:],add_special_tokens=False,skip_special_tokens=True)[0].strip()
-        record={"condition":label,"elapsed_sec":round(elapsed,3),
+        record={"case_id":"public_negation","condition":label,"elapsed_sec":round(elapsed,3),
                 "reference":REFERENCE,"hypothesis":hyp,"score":score(REFERENCE,hyp)}
+        results["runs"].append(record)
+        print(json.dumps(record,ensure_ascii=False),flush=True)
+
+    # Newly authored public sentence tests specialist terms; no user manuscript text.
+    term_reference="Bioscillate uses IPOS, PARCELS, and PRIME at Main Street Copy."
+    term_wav=Path("public_terms_16k.wav")
+    with wave.open(str(term_wav),"rb") as w:
+        if w.getnchannels()!=1 or w.getframerate()!=16000 or w.getsampwidth()!=2:
+            raise ValueError("Terminology WAV must be 16-kHz mono 16-bit")
+    terms_signal,terms_sr=sf.read(str(term_wav),dtype="float32")
+    if terms_signal.ndim!=1 or terms_sr!=16000:
+        raise ValueError("Invalid public terminology audio")
+    results["public_terms_audio_sha256"]=hashlib.sha256(term_wav.read_bytes()).hexdigest()
+    results["public_terms_duration_sec"]=len(terms_signal)/terms_sr
+    terms_audio=torch.from_numpy(terms_signal).unsqueeze(0)
+    term_prompts={
+        "ordinary":"<|audio|>transcribe the speech with proper punctuation and capitalization.",
+        "keyword_bias":"<|audio|>transcribe the speech to text. Keywords: Bioscillate, IPOS, PARCELS, PRIME, Main Street Copy."
+    }
+    for label,user_prompt in term_prompts.items():
+        chat=[{"role":"user","content":user_prompt}]
+        prompt=tokenizer.apply_chat_template(chat,tokenize=False,add_generation_prompt=True)
+        inputs=processor(prompt,terms_audio,device="cpu",return_tensors="pt").to("cpu")
+        start=time.monotonic()
+        with torch.inference_mode():
+            generated=model.generate(**inputs,max_new_tokens=110,do_sample=False,num_beams=1)
+        elapsed=time.monotonic()-start
+        num_input=inputs["input_ids"].shape[-1]
+        hyp=tokenizer.batch_decode(generated[:,num_input:],add_special_tokens=False,skip_special_tokens=True)[0].strip()
+        record={"case_id":"public_boss_terms","condition":label,"elapsed_sec":round(elapsed,3),
+                "reference":term_reference,"hypothesis":hyp,"score":score(term_reference,hyp)}
         results["runs"].append(record)
         print(json.dumps(record,ensure_ascii=False),flush=True)
     Path("granite_public_smoke_results.json").write_text(json.dumps(results,indent=2))
