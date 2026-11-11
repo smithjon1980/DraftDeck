@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "0.1-candidate",
+  "status": "CANDIDATE_NOT_ACTIVE",
+  "default_slide": {
+    "width_px": 1920,
+    "height_px": 1080,
+    "master": "react-tailwind",
+    "canvas": "#FFFFFF",
+    "ink": "#000000",
+    "cyan": "#00BCEB",
+    "magenta": "#E30074",
+    "text_layer": "native-html",
+    "technical_figure_style": "ANSI_ISO_INFORMED_NOT_CERTIFIED"
+  },
+  "policy": {
+    "one_semantics_per_diagram": true,
+    "syntax_compiler_required": true,
+    "source_ids_required": true,
+    "no_svg_slide_master": true,
+    "human_visual_review_required": true,
+    "model_output_cannot_approve": true,
+    "model_billing": "HOLD",
+    "private_source_transmission": "REQUIRES_EXPLICIT_AUTHORIZATION"
+  },
+  "routes": [
+    {
+      "intent": "simple_flow",
+      "semantic_standard": "DIRECTED_FLOW",
+      "renderer": "mermaid",
+      "diagram_type": "flowchart",
+      "compiler": "mermaid-cli-pinned",
+      "required_checks": [
+        "node_ids_unique",
+        "edges_supported",
+        "decisions_labeled",
+        "hold_path_when_applicable"
+      ]
+    },
+    {
+      "intent": "ip_os_map",
+      "semantic_standard": "IPOS_BOSS_DOCTRINE",
+      "renderer": "mermaid",
+      "diagram_type": "flowchart",
+      "compiler": "mermaid-cli-pinned",
+      "required_checks": [
+        "inputs_process_outputs_system",
+        "unknowns_explicit",
+        "edges_supported"
+      ]
+    },
+    {
+      "intent": "interaction_sequence",
+      "semantic_standard": "UML_2_5_1_SEQUENCE",
+      "renderer": "plantuml",
+      "diagram_type": "sequence",
+      "compiler": "plantuml-pinned",
+      "required_checks": [
+        "participants_named",
+        "message_order",
+        "guards_explicit",
+        "edge_source_support"
+      ]
+    },
+    {
+      "intent": "actor_use_case",
+      "semantic_standard": "UML_2_5_1_USE_CASE",
+      "renderer": "plantuml",
+      "diagram_type": "use_case",
+      "compiler": "plantuml-pinned",
+      "required_checks": [
+        "actors_and_boundary",
+        "include_extend_semantics_checked"
+      ]
+    },
+    {
+      "intent": "lifecycle",
+      "semantic_standard": "UML_2_5_1_STATE",
+      "renderer": "plantuml",
+      "diagram_type": "state",
+      "compiler": "plantuml-pinned",
+      "required_checks": [
+        "transitions_labeled",
+        "release_guard",
+        "all_states_supported"
+      ]
+    },
+    {
+      "intent": "cross_role_process",
+      "semantic_standard": "BPMN_2_0_2",
+      "renderer": "bpmn_js",
+      "diagram_type": "bpmn_xml",
+      "compiler": "bpmn-js-plus-bpmnlint-pinned",
+      "required_checks": [
+        "lanes",
+        "gateways",
+        "message_flow_vs_sequence_flow",
+        "source_trace",
+        "bpmn_xml_schema"
+      ]
+    },
+    {
+      "intent": "decision_rules",
+      "semantic_standard": "DMN_1_5",
+      "renderer": "dmn_js",
+      "diagram_type": "dmn_xml",
+      "compiler": "dmn-js-plus-rules-tests-pinned",
+      "required_checks": [
+        "hit_policy",
+        "unknown_case",
+        "negative_examples"
+      ]
+    },
+    {
+      "intent": "software_architecture",
+      "semantic_standard": "C4_MODEL",
+      "renderer": "c4_plantuml",
+      "diagram_type": "container_or_context",
+      "compiler": "plantuml-with-pinned-c4-lib",
+      "required_checks": [
+        "scope_level",
+        "boundaries",
+        "relationships_labeled",
+        "libraries_locally_pinned"
+      ]
+    },
+    {
+      "intent": "mece_issue_tree",
+      "semantic_standard": "MECE_PARTITION_CANDIDATE",
+      "renderer": "graphviz_dot",
+      "diagram_type": "directed_tree",
+      "compiler": "graphviz-dot-pinned",
+      "required_checks": [
+        "universe_defined",
+        "non_overlap_tests",
+        "coverage_tests",
+        "unknown_category_reviewed"
+      ]
+    },
+    {
+      "intent": "data_relationship",
+      "semantic_standard": "ENTITY_RELATIONSHIP",
+      "renderer": "mermaid",
+      "diagram_type": "er",
+      "compiler": "mermaid-cli-pinned",
+      "required_checks": [
+        "cardinality_supported",
+        "relationships_supported",
+        "no_invented_fields"
+      ]
+    },
+    {
+      "intent": "technical_illustration",
+      "semantic_standard": "ISO_INFORMED_TECHNICAL_FIGURE",
+      "renderer": "react_css",
+      "diagram_type": "annotated_figure",
+      "compiler": "chromium-viewport-pinned",
+      "required_checks": [
+        "nts_unless_measured",
+        "title_plate",
+        "provenance",
+        "no_fake_dimensions",
+        "independent_art_layer"
+      ]
+    }
+  ]
+}

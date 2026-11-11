@@ -1,0 +1,235 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/boss/diagram-spec/v0.1",
+  "title": "BOSS model proposed diagram output (candidate)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "diagram_id",
+    "slide_id",
+    "intent",
+    "semantic_standard",
+    "renderer",
+    "status",
+    "source_refs",
+    "nodes",
+    "edges",
+    "source_code",
+    "caption",
+    "accessible_summary",
+    "unresolved"
+  ],
+  "properties": {
+    "diagram_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{3,64}$"
+    },
+    "slide_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{3,64}$"
+    },
+    "intent": {
+      "type": "string",
+      "enum": [
+        "simple_flow",
+        "ip_os_map",
+        "interaction_sequence",
+        "actor_use_case",
+        "lifecycle",
+        "cross_role_process",
+        "decision_rules",
+        "software_architecture",
+        "mece_issue_tree",
+        "data_relationship",
+        "technical_illustration"
+      ]
+    },
+    "semantic_standard": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 80
+    },
+    "renderer": {
+      "type": "string",
+      "enum": [
+        "mermaid",
+        "plantuml",
+        "bpmn_js",
+        "dmn_js",
+        "c4_plantuml",
+        "graphviz_dot",
+        "react_css"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "READY_FOR_VALIDATION",
+        "HOLD_SOURCE_UNKNOWN",
+        "HOLD_CONTRADICTION",
+        "HOLD_NOTATION_UNAVAILABLE"
+      ]
+    },
+    "source_refs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 3
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "label",
+          "evidence_refs"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_]{1,64}$"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 3
+            }
+          }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "from",
+          "to",
+          "meaning",
+          "evidence_refs"
+        ],
+        "properties": {
+          "from": {
+            "type": "string",
+            "minLength": 1
+          },
+          "to": {
+            "type": "string",
+            "minLength": 1
+          },
+          "meaning": {
+            "type": "string",
+            "minLength": 1
+          },
+          "guard": {
+            "type": "string"
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 3
+            }
+          }
+        }
+      }
+    },
+    "source_code": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string",
+      "minLength": 1
+    },
+    "accessible_summary": {
+      "type": "string",
+      "minLength": 20
+    },
+    "unresolved": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "partition_scope": {
+      "type": "string"
+    },
+    "partition_categories": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "mece_verified": {
+      "type": "boolean"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "READY_FOR_VALIDATION"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "source_code": {
+            "minLength": 5
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "intent": {
+            "const": "mece_issue_tree"
+          }
+        },
+        "required": [
+          "intent"
+        ]
+      },
+      "then": {
+        "required": [
+          "partition_scope",
+          "partition_categories",
+          "mece_verified"
+        ],
+        "properties": {
+          "partition_scope": {
+            "minLength": 6
+          },
+          "partition_categories": {
+            "minItems": 2
+          }
+        }
+      }
+    }
+  ]
+}
