@@ -1,0 +1,73 @@
+name: DraftDeck - Stage 05 Artwork Candidates
+
+on:
+  workflow_dispatch:
+    inputs:
+      base_seed:
+        description: "First seed (generates three consecutive seeds)"
+        required: true
+        default: "42"
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: draftdeck-stage05-slide05-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  generate-three-candidates:
+    name: Stage 05 - Generate, validate, package
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out approved source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Go
+        uses: actions/setup-go@v7
+        with:
+          go-version: '1.23'
+          cache: false
+
+      - name: Verify tooling compiles
+        working-directory: tools/stage05
+        run: |
+          go vet main.go
+          go build -o /tmp/draftdeck-stage05-check main.go
+
+      - name: Check inference credential is available
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          if [ -z "${HF_TOKEN}" ]; then
+            echo 'HOLD: Missing HF_TOKEN GitHub Actions secret.' >&2
+            exit 2
+          fi
+          echo 'Inference credential configured (value not printed).'
+
+      - name: Generate three candidates and gate-package
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_BASE_SEED: ${{ inputs.base_seed }}
+        run: bash tools/stage05/run_stage05.sh
+
+      - name: Upload Approval Gate 2 package
+        uses: actions/upload-artifact@v4
+        with:
+          name: SCC-02-SLIDE05-Approval-Gate-2
+          path: tools/stage05/SCC-02-SLIDE05-Approval-Gate-2.zip
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Preserve manifest for failed or incomplete run
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: SCC-02-SLIDE05-Stage05-Diagnostic-${{ github.run_number }}
+          path: tools/stage05/SCC-02-SLIDE05-stage05-manifest.json
+          if-no-files-found: ignore
+          retention-days: 14
