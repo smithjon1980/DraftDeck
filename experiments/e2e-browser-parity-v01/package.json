@@ -8,6 +8,8 @@
   "devDependencies": {
     "e2e": "*",
     "@e2e-dev/web": "*",
-    "@playwright/test": "*"
+    "@playwright/test": "*",
+    "ai": "^7.0.0",
+    "@ai-sdk/openai": "*"
   }
 }

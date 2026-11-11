@@ -7,8 +7,9 @@ on:
   workflow_dispatch:
     inputs:
       enable_model_trial:
-        description: 'Run model-driven test with existing GitHub secret; costs may be incurred'
+        description: 'Execute the subscription-authenticated trial on a dedicated persistent runner'
         type: boolean
+        required: true
         default: false
 permissions:
   contents: read
@@ -26,9 +27,9 @@ jobs:
           node-version: '26'
       - name: Install dependencies
         run: npm install --save-exact
-      - name: Install baseline browser
+      - name: Install browser
         run: npx playwright install chromium --with-deps
-      - name: Timed Playwright baseline (3 repeats)
+      - name: Measure deterministic baseline three times
         run: |
           for i in 1 2 3; do
             start=$(date +%s%N)
@@ -45,65 +46,80 @@ jobs:
             experiments/e2e-browser-parity-v01/playwright-baseline-*.log
             experiments/e2e-browser-parity-v01/playwright-baseline-*.metrics
           if-no-files-found: warn
-  agentic-trial:
-    if: ${{ inputs.enable_model_trial == true }}
-    runs-on: ubuntu-latest
-    timeout-minutes: 25
+
+  subscription-agentic-trial:
+    # Never run this job on PR code; preserve the private subscription session.
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.enable_model_trial == true && github.ref == 'refs/heads/main' }}
+    runs-on: [self-hosted, linux, x64, boss-e2e-subscription]
+    timeout-minutes: 30
+    concurrency:
+      group: boss-e2e-subscription-trial
+      cancel-in-progress: false
     defaults:
       run:
         working-directory: experiments/e2e-browser-parity-v01
     env:
       E2E_TELEMETRY_DISABLED: '1'
-      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      CI: '1'
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: '26'
-      - name: Validate opt-in and provider configuration
+      - name: Set private persistent cache directory
         run: |
-          if [ -z "$OPENAI_API_KEY" ]; then
-            echo "::error::Model trial requested, but OPENAI_API_KEY repository secret is absent"
+          echo "BOSS_E2E_CACHE_DIR=$HOME/.local/share/boss-e2e/replay-cache" >> "$GITHUB_ENV"
+      - name: Verify persistent runner subscription is signed in
+        run: |
+          mkdir -p "$BOSS_E2E_CACHE_DIR"
+          chmod 700 "$BOSS_E2E_CACHE_DIR"
+          npm install --save-exact
+          if ! npx e2e models > /dev/null 2>&1; then
+            echo "::error::e2e login not available. Sign in interactively on this runner as its dedicated account using: npx e2e login openai"
             exit 1
           fi
-      - name: Install framework and browsers
-        run: |
-          npm install --save-exact
-          npx e2e-web install chromium --with-deps
-      - name: Enable writable replay cache for CI trial
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          p=Path('e2e.config.ts')
-          s=p.read_text()
-          assert 'workers: 1,' in s
-          p.write_text(s.replace('workers: 1,', "workers: 1,\n  cache: 'read-write',"))
-          PY
-      - name: Cold agent test without cache
+      - name: Ensure browser available
+        run: npx e2e-web install chromium
+      - name: Cold agent execution
         run: |
           start=$(date +%s%N)
           npx e2e run tests/agent-replay.e2e.ts --no-cache --reporter list > cold.log 2>&1
           end=$(date +%s%N)
-          echo "elapsed_ms=$(((end-start)/1000000))" > cold.metrics
+          printf 'stage=cold elapsed_ms=%s\n' "$(((end-start)/1000000))" | tee cold.metrics
           cat cold.log
-      - name: Record cache
+      - name: Record action cache
         run: |
+          start=$(date +%s%N)
           npx e2e run tests/agent-replay.e2e.ts --reporter list > record.log 2>&1
+          end=$(date +%s%N)
+          printf 'stage=record elapsed_ms=%s\n' "$(((end-start)/1000000))" | tee record.metrics
           cat record.log
-      - name: Replay cache
+          if [ -z "$(find "$BOSS_E2E_CACHE_DIR" -type f -name '*.json' -print -quit)" ]; then
+            echo "::error::No replay recording created; do not claim replay capability"
+            exit 1
+          fi
+      - name: Strict replay using existing record
         run: |
           start=$(date +%s%N)
           npx e2e run tests/agent-replay.e2e.ts --strict-cache --reporter list > replay.log 2>&1
           end=$(date +%s%N)
-          echo "elapsed_ms=$(((end-start)/1000000))" > replay.metrics
+          printf 'stage=replay elapsed_ms=%s\n' "$(((end-start)/1000000))" | tee replay.metrics
           cat replay.log
-      - name: Archive evidence
+          echo "Inspect the Cache and AI counters in the log before claiming zero model calls"
+      - name: Record execution provenance
+        if: always()
+        run: |
+          printf 'source_sha=%s\nrun_id=%s\nrunner=%s\n' "$GITHUB_SHA" "$GITHUB_RUN_ID" "$RUNNER_NAME" > benchmark-provenance.txt
+          echo 'Subscription credentials and replay cache are intentionally excluded from artifacts.' >> benchmark-provenance.txt
+      - name: Archive redacted benchmark evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: synthetic-agent-replay
+          name: synthetic-subscription-agent-evidence
           path: |
-            experiments/e2e-browser-parity-v01/*.log
             experiments/e2e-browser-parity-v01/*.metrics
-            experiments/e2e-browser-parity-v01/.e2e/
+            experiments/e2e-browser-parity-v01/*.log
+            experiments/e2e-browser-parity-v01/benchmark-provenance.txt
           if-no-files-found: warn
