@@ -12,3 +12,11 @@
 - Preservation: do not rewrite the approved manuscript or overwrite approved layers without explicit change authorization.
 
 This decision record pins approval to the source byte digest; the manuscript text itself is not embedded in this record. The source must be stored as an immutable version-controlled artifact before claiming a repository-contained manuscript baseline.
+
+## Manuscript repository custody (2026-11-13)
+
+- Approved manuscript committed at `manuscripts/day-zero/CANDIDATE-006-100-paragraphs.txt` in commit `7b9e5c951d35b24dfacd445d118a3b278a7a6f13`.
+- Verified sequential paragraph labels 001–100 (100 total) before commit.
+- Source file was transferred via extracted UTF-8 text; compare raw byte digest with original uploaded file before asserting byte-identical custody. The previously recorded SHA-256 remains the original uploaded file fingerprint, not a verified hash of the GitHub text.
+- The manuscript contains its original draft-status and missing-five-reference-paragraph caveats; these remain historically accurate statements from the draft, superseded for production authorization by this explicit human approval. Original five reference paragraphs are not certified verbatim.
+- No CAD, art, story, text layer, export, or publication approvals are implied.
