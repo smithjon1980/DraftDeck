@@ -15,7 +15,7 @@
 
 ## Separate trademark candidate
 
-**Humans in the Lead** is a separate phrase for trademark consideration. It is **not** the canonical governance line and must not replace **Human Authority. Verified Evidence.** in governance documents, approval records, editorial guidance, release gates, or new publication materials. No trademark filing or registration is asserted by this record.
+**HUMANS-IN-THE-LEAD / Humans in the Lead — DO NOT USE.** Third-party U.S. trademark application identified: Platteau PMO Services, LLC; serial no. 99788905; filed April 27, 2026; business consulting in artificial intelligence. Source: https://trademarks.justia.com/category/advertising-and-business/2026/april/27/3.html . This is a secondary listing; official USPTO live status has not been independently confirmed. Remove from all current Bioscillate branding, tagline, governance, marketing, publication, and trademark-candidate lists. Retain historical references only when necessary for provenance, clearly marked retired. **Human Authority. Verified Evidence.** remains the governance wording, subject to its own independent clearance before any trademark claim.
 
 ## Application and migration
 
