@@ -68,15 +68,16 @@
       "slide_id": "DZ-001",
       "paragraph": "001",
       "learning_goal": "Differentiate visible task activity from meaningful organizational progress",
-      "story": "A credible executive-level professional work environment shows a full week of completed routine tasks while one consequential initiative remains stalled",
-      "visual_direction": "Photorealistic editorial scene; human professional and workplace detail; restrained source-grounded CAD annotations; no humanoid bots",
-      "provisional_layout": "04-panel",
+      "story": "An individual professional late Friday sees completed routine tasks but an untouched priority project; does not introduce a solution",
+      "visual_direction": "Single believable late-Friday work environment; manuscript-accurate work-versus-progress tension; premium photorealism and text-free art; no boardroom group, AI dashboard or false quantitative claims",
+      "provisional_layout": "04-panel; F01 primary + F03 secondary; operator approved for calibration",
       "inspector_focus": [
         "Readable narrative",
         "Recognizable work-versus-progress contrast",
         "Photography and materials quality",
         "Protect manuscript exactly"
-      ]
+      ],
+      "art_brief_path": "production/day-zero/candidate-006/DZ-001-editorial-art-brief.v1.md"
     },
     {
       "slide_id": "DZ-053",
@@ -117,17 +118,21 @@
       "instructional_type": "instructional_narrative",
       "copy_policy": "EXACT_FROM_PINNED_MANUSCRIPT",
       "text_layer": "NATIVE_HTML_CSS_REACT",
-      "layout_family": "PENDING_DESIGN_REVIEW",
+      "layout_family": "F01_PHOTOGRAPHIC_EDITORIAL",
       "gates": {
         "cad": "NOT_STARTED",
-        "spark": "ON_HOLD_REFERENCE_SET",
-        "art": "NOT_STARTED",
+        "spark": "PENDING_EXPLICIT_HUMAN_ACCEPTANCE",
+        "art": "PENDING_SPARK_ACCEPTANCE",
         "story": "NOT_STARTED",
         "composition": "NOT_STARTED",
         "render": "NOT_TESTED",
         "human_acceptance": "PENDING"
       },
-      "release": "NOT_AUTHORIZED"
+      "release": "NOT_AUTHORIZED",
+      "secondary_family": "F03_CONSULTING_GRADE_DIAGNOSTIC",
+      "panel_geometry": "04-panel",
+      "family_status": "OPERATOR_APPROVED_FOR_CALIBRATION",
+      "art_brief_path": "production/day-zero/candidate-006/DZ-001-editorial-art-brief.v1.md"
     },
     {
       "slide_id": "DZ-002",
@@ -2208,5 +2213,12 @@
       },
       "release": "NOT_AUTHORIZED"
     }
-  ]
+  ],
+  "taxonomy": {
+    "document_id": "BOSS.VISUAL.TAXONOMY.001",
+    "path": "production/day-zero/candidate-006/visual-slide-taxonomy.v1.json",
+    "status": "OPERATOR_APPROVED_FOR_CALIBRATION_NOT_RELEASE",
+    "selection": "Human-directed; no automatic format choice for remaining 99 paragraphs"
+  },
+  "calibration_entry_status": "FAMILY_SELECTED_ART_PENDING"
 }
