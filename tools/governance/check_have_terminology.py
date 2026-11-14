@@ -18,6 +18,8 @@ def main():
     labels = [int(m.group(1)) for m in re.finditer(r"(?m)^(\d{3})\.\s", manuscript)]
     if labels != list(range(1, 101)):
         errors.append("Day Zero manuscript paragraph sequence must remain 001–100")
+    if "in the lead" in manuscript.lower():
+        errors.append("Manuscript still includes legacy lead-heading language")
     if "HAVE — Human Authority, Verified Execution — is not a slogan" not in manuscript:
         errors.append("Authorized paragraph 100 wording missing")
     record = (ROOT / "governance/approvals/APPROVED-EDITORIAL-006.md").read_text(encoding="utf-8")

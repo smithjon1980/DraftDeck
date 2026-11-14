@@ -217,7 +217,7 @@ Scene 19 — Turning Lessons into a Repeatable Practice
 094. The learner's decisions can then be evaluated against a transparent rubric. Did they identify the authoritative source? Did they distinguish an assumption from a verified fact? Did they assign ownership and authority appropriately? Did they request the necessary evidence? Did they preserve protected work and withhold release when acceptance conditions were not met? These observations provide a more meaningful picture of competence than simply recording whether a generated document exists.
 
 095. Field Application. Complete one small production exercise using a source file, a written assignment, a generated artifact, and a validation record. Introduce a deliberate discrepancy between the expected and actual result. Investigate the discrepancy without immediately replacing the entire output. Record the cause, the correction, and the evidence that supports acceptance. The purpose is to practice a repeatable method of operating, not merely to complete another document.
-Scene 20 — The Human Remains in the Lead
+Scene 20 — Human Authority and Verified Execution
 
 096. We began with an operator whose week was filled with activity but whose most important work remained unfinished. We examined why this happens, how repeated intervention creates dependency, and why adding tools does not necessarily repair the underlying operating model. We then distinguished execution from authority, conversational memory from authoritative sources, and reported success from verifiable evidence. Each distinction contributes to a larger conclusion about the role of the human operator.
 
@@ -231,6 +231,6 @@ Scene 20 — The Human Remains in the Lead
 
 Editorial status: Candidate 006 is presented above in full: 100 numbered paragraphs, organized into 20 scenes and five stages.
 
-The manuscript incorporates the Operator to CEO guide's leadership progression, including the cost of reactive work, the limitations of superficial fixes, genuine delegation, and the shift toward strategic leadership. Morrison's three dimensions—how you think, how you lead, and how you operate—are translated into Bioscillate's human-led, evidence-driven production model.
+The manuscript incorporates the Operator to CEO guide's leadership progression, including the cost of reactive work, the limitations of superficial fixes, genuine delegation, and the shift toward strategic leadership. Morrison's three dimensions—how you think, how you lead, and how you operate—are translated into Bioscillate's HAVE-governed, evidence-backed execution model.
 
 This is a review draft, not an approved manuscript. The outstanding fidelity issue is restoring your five original reference paragraphs verbatim once their exact text is available.

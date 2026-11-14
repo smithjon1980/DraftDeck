@@ -29,3 +29,10 @@ This decision record pins approval to the source byte digest; the manuscript tex
 - **Amended Git manuscript blob SHA-1:** `495fc73ae8f3108390dd21ac793e94f9f06cd01f`.
 - **Source-custody distinction:** The 2026-11-13 original upload SHA-256 above remains historical and is not claimed to hash this new Git revision. Use the Git diff and revised blob to audit the amendment.
 - **Approval boundaries:** This is an operator-authorized manuscript terminology amendment. New CAD, art, story, export, and publication approvals remain separate and are not implied.
+
+### Consistency completion in second commit — 2026-11-14
+
+- The same operator-authorized terminology migration also updates the Scene 20 heading to **Human Authority and Verified Execution** and the manuscript's concluding editorial summary to the HAVE-governed model.
+- Prior amendment blob: `495fc73ae8f3108390dd21ac793e94f9f06cd01f`.
+- Current final manuscript Git blob: `514e759abe8308705856f814b4ef88d041113778`.
+- The 100 numbered paragraph bodies remain unchanged from the preceding amendment; this second revision changes only heading and trailing draft-summary terminology.
