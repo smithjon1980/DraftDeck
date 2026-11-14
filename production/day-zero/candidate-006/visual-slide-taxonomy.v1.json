@@ -1,5 +1,4 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "document_id": "BOSS.VISUAL.TAXONOMY.001",
   "version": "1.0.0",
   "status": "OPERATOR_APPROVED_FOR_CALIBRATION_NOT_RELEASE",
@@ -149,5 +148,6 @@
       "text": "NOT_COMPOSED",
       "human_release": "NOT_AUTHORIZED"
     }
-  }
+  },
+  "schema_version": "1.0.0"
 }
