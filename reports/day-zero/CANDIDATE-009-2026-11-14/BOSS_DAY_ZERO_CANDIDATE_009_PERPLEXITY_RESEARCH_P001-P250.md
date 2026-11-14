@@ -4517,7 +4517,7 @@ BEGIN EXACT MANUSCRIPT PARAGRAPH
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The consultant added an evidence register to Main Street Copy's decision packet so that missing records, conflicting reports, and proposed assumptions would not disappear behind a polished recommendation." What source selection guidance distinguishes authoritative sources for regulations, empirical findings and technical specifications?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "At Main Street Copy, the consultant explained that an evidence register must distinguish which type of source is authoritative for each kind of claim." What source selection guidance distinguishes authoritative sources for regulations, empirical findings and technical specifications?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -5609,7 +5609,7 @@ BEGIN EXACT MANUSCRIPT PARAGRAPH
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The consultant selected one completed print-and-ship order at Main Street Copy as the first unit of economic analysis, while the publishing case used one accepted instructional module." What operations management frameworks explain selecting meaningful units of output and measuring accepted throughput?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "At Main Street Copy, the consultant selected one accepted print-and-ship order as the first unit of economic analysis." What operations management frameworks explain selecting meaningful units of output and measuring accepted throughput?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -6155,7 +6155,7 @@ BEGIN EXACT MANUSCRIPT PARAGRAPH
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The proposed Main Street Copy financial model needed to account for demand uncertainty, price sensitivity, exception handling, and the different costs of small and complex orders." What performance management guidance distinguishes actionable process metrics from vanity metrics and emphasizes metric definitions?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The Main Street Copy owner asked for a small economic dashboard that would reveal whether the proposed improvements actually increased accepted value." What performance management guidance distinguishes actionable process metrics from vanity metrics and emphasizes metric definitions?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -7988,7 +7988,7 @@ BEGIN EXACT MANUSCRIPT PARAGRAPH
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The Main Street Copy owner could permit a narrowly scoped internal pilot while still blocking payments, external data movement, or automatic customer delivery." What governance and change-management guidance supports documented scope-limited risk acceptance and reauthorization?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The Main Street Copy owner could permit a narrowly scoped internal pilot while still blocking payments, external publication, customer data movement, or automatic delivery." What governance and change-management guidance supports documented scope-limited risk acceptance and reauthorization?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
