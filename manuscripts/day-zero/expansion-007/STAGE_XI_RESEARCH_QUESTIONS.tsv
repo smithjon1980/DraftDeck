@@ -1,0 +1,23 @@
+paragraph_id	question
+207	What distributed-workflow guidance explains separation of specialist tasks and controlled handoffs?
+208	What studies compare multi-agent systems with simpler workflows on quality, cost and coordination overhead?
+209	What interface contract and service-design references support typed inputs, outputs, exclusions and failure behavior?
+210	What provenance and state-machine guidance supports explicit workflow status transitions and verifiable handoffs?
+211	What digital provenance and content-addressing standards support stable identifiers and source traceability?
+212	What reproducible-build literature distinguishes deterministic transformations from nondeterministic generation?
+213	What reproducibility guidance recommends logging prompt versions, model configurations and input artifacts?
+214	What agent security guidance addresses trust separation between tool output, retrieved text and executable instructions?
+215	What workflow orchestration and dependency-graph references describe parallelism with enforced approval gates?
+216	What distributed-systems guidance explains idempotency, at-least-once delivery and safe recovery from uncertain outcomes?
+217	What reliability engineering sources describe partial failure, workflow checkpoints and state reconciliation?
+218	What research on LLM evaluation and fact verification distinguishes model agreement from source-grounded verification?
+219	What software testing and evidence-assurance sources distinguish structural, semantic, security and human acceptance checks?
+220	What service-observability and quality measurement frameworks support outcome-oriented operational indicators?
+221	What sandboxing, workload isolation and zero-trust guidance supports constrained execution environments?
+222	What human-centered automation and decision-support guidance recommends bounded, evidence-rich approval interfaces?
+223	What root-cause analysis and software supply-chain provenance resources support accountability across multiple producers?
+224	What configuration management and records-governance standards distinguish conversation context, version control and audit records?
+225	What build dependency and change-impact analysis sources explain selective regeneration and traceable version propagation?
+226	What empirical research measures cost, latency and quality trade-offs of multi-agent and human-reviewed workflows?
+227	What business continuity and supplier-risk standards describe fallback design, requalification and recovery testing?
+228	What reproducible workflow and assurance-case methods support end-to-end demonstrations with controlled release gates?
