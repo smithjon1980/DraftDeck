@@ -1,29 +1,33 @@
-# BOSS governance language decision — 2026-11-13
+# BOSS governance language — HAVE (2026-11-14)
 
 **Project:** Bioscillate Operating System by Seven  
-**Decision:** Human Authority. Verified Evidence.  
-**Status:** User-confirmed terminology; implementation review pending.
+**Canonical decision:** HAVE — Human Authority, Verified Execution  
+**Status:** Explicitly authorized terminology and manuscript amendment, November 14, 2026.  
+**Historical file path:** This document retains its old filename to preserve existing links. The contents below govern current usage.
 
-## Canonical governance language
+## Canonical operating principle
 
-**Human Authority. Verified Evidence.**
+**HAVE — Human Authority, Verified Execution.**
 
-- **Human Authority:** Designated humans retain authority for consequential decisions, editorial and visual acceptance, protected changes, and publication/release. Automation operates only within expressly authorized scope.
-- **Verified Evidence:** Claims of completion, conformity, provenance, or successful execution require inspectable evidence tied to the exact source, artifact/version, validation and approval record.
-- Evidence does not itself grant authority; human authorization does not itself prove technical or editorial correctness.
-- Approvals must identify the authorized reviewer, scope, artifact digest/version, and decision. Changes after approval require re-evaluation under applicable rules.
+- **Human Authority:** Designated humans retain authority for consequential decisions, editorial and visual acceptance, protected changes, and publication/release. Automation operates only within authorized scope.
+- **Verified Execution:** Claims of completed or conforming operations require inspectable evidence linking authorized instructions, exact source, actual execution, specific output/artifact version, relevant validation and approval. Generated output or an assertion alone does not prove compliant execution.
+- Evidence does not grant authority. Human authorization does not itself prove technical, editorial, or visual correctness.
+- Approvals must identify reviewer, scope, artifact digest/version, and decision. Changes after approval require a traceable amendment and appropriate re-evaluation.
+- Structural tests, visual render checks, destination editability, and final human release are distinct gates.
 
-## Separate trademark candidate
+## Retired wording — historical notice only
 
-**HUMANS-IN-THE-LEAD / Humans in the Lead — DO NOT USE.** Third-party U.S. trademark application identified: Platteau PMO Services, LLC; serial no. 99788905; filed April 27, 2026; business consulting in artificial intelligence. Source: https://trademarks.justia.com/category/advertising-and-business/2026/april/27/3.html . This is a secondary listing; official USPTO live status has not been independently confirmed. Remove from all current Bioscillate branding, tagline, governance, marketing, publication, and trademark-candidate lists. Retain historical references only when necessary for provenance, clearly marked retired. **Human Authority. Verified Evidence.** remains the governance wording, subject to its own independent clearance before any trademark claim.
+**HUMANS-IN-THE-LEAD / Humans in the Lead — DO NOT USE.** The prior November 13 decision cited a third-party U.S. trademark application identified in a secondary listing: Platteau PMO Services, LLC; serial no. 99788905; filed April 27, 2026; business consulting in artificial intelligence. Source: https://trademarks.justia.com/category/advertising-and-business/2026/april/27/3.html . Official live USPTO status was not independently confirmed in this migration. This notice records history only.
+
+The earlier phrase "Human Authority. Verified Evidence." is also superseded as the canonical doctrine name. Verified evidence remains a requirement *within* Verified Execution. HAVE itself requires independent trademark review before any claim of legal clearance.
 
 ## Application and migration
 
-1. Apply canonical terminology in new governance and production records.
-2. Audit existing documents, UI labels, templates, slide footers, and approval metadata for obsolete uses; distinguish historical quotes and trademark discussions from current governance language.
-3. Preserve approved manuscripts and artwork; do not silently rewrite locked or historically approved material.
-4. Submit any required changes to protected editorial, design, or release artifacts for separate human approval.
-5. Require source/version evidence and review before claiming a migration complete.
+1. Use the canonical HAVE phrase in current identity, operational instructions, manuscripts, slide footers, UI, governance, and new deliverables.
+2. The operator explicitly authorized a scoped edit to approved Day Zero Candidate 006 on November 14, 2026. Paragraph 100 is updated and the amended Git blob is recorded in `governance/approvals/APPROVED-EDITORIAL-006.md`.
+3. Preserve historical Git versions and the explicitly retired notice, but do not present previous slogans as current.
+4. A terminology amendment does not approve CAD, art, story, exports, or publication. Those stages require independent evidence and human acceptance.
+5. Run the tracked-text terminology guard on changes so retired wording cannot re-enter active files.
 
-**Authority:** Explicit user confirmation in the November 13, 2026 conversation.  
-**Scope:** Terminology/governance record only; no approval to release any manuscript, slide, or publication.
+**Authority:** Explicit November 14, 2026 operator instructions superseding November 13 wording for current output.  
+**Scope:** Governance terminology and specifically authorized paragraph 100 edit; no publication authorization.

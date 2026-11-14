@@ -2,6 +2,10 @@
 
 Scope: current BOSS Episode 01, Day Zero slides and corresponding instructional interface output. This file identifies project constraints; it does not override human approval. The active candidate source is design-system/boss-design-contract.json and the design-system/ directory. Historical demonstration files retain historical scope.
 
+## Current governance language — HAVE (2026-11-14)
+
+**HAVE — Human Authority, Verified Execution** is the governing principle for Bioscillate Operating System by Seven. See `doctrine/human-authority-verified-evidence.md` (historical filename; revised current contents). The prior slogan is retired. Generated output alone is not verification: use inspectable source/reference identification, artifact records, observed execution, appropriate tests and scoped human acceptance. Keep CAD, art, story, text, rendering and release approvals separate. Any expressly authorized edit to a locked manuscript must be versioned and recorded in its approval history.
+
 ## Episode 01 print-specific candidate (2026-10-18)
 
 For the **proposed** 17 × 11 inch landscape narration-first Episode 01 magazine, review `episode01/EP01_NARRATION_FIRST_PRINT_PARITY_CANDIDATE.md` **in addition to** these operating instructions. It defines a separate print profile and candidate-script-to-approved-exact-copy boundary. It does not revise the 1920 × 1080 slide profile, qualify prior proofs, or authorize release. Do not promote the new manuscript to verified recorded transcript before an audio comparison, or imply that a proposed 48-page issue is finished.

@@ -1,0 +1,17 @@
+name: BOSS HAVE governance terminology guard
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  have_guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify HAVE wording and scoped manuscript amendment
+        run: python3 tools/governance/check_have_terminology.py

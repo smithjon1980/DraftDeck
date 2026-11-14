@@ -2,6 +2,8 @@
 
 DraftDeck prepares layered, editable instructional presentations and visual evidence from approved source material. Current BOSS work uses the original Bioscillate Operating System by Seven identity, information-dense Tesla-screen-inspired hierarchy, CAD/ISO-informed geometry, and human approval boundaries.
 
+**Operating principle: HAVE — Human Authority, Verified Execution.** Human authority controls consequential changes and release; execution claims must have inspectable source, output and test evidence. The current doctrine is in `doctrine/human-authority-verified-evidence.md` (filename retained for old links). The previous slogan is retired.
+
 **Current candidate contract:** design-system/boss-design-contract.json (not released or human-approved). Read AGENTS.md and design-system/README.md before generating a new Episode 01 or Day Zero design.
 
 ## Current operating boundaries

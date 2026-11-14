@@ -2,6 +2,10 @@
 
 Do not treat every document under doctrine/ as simultaneously current. This repository contains evolving, pre-release architecture as well as historical demonstration material. Git history preserves previous drafts; conflicting old language must not silently override later explicit project decisions.
 
+## Current governance wording
+
+**HAVE — Human Authority, Verified Execution** is the authoritative operating principle. See [the current policy](human-authority-verified-evidence.md), which retains its former filename for backward compatibility. The November 14, 2026 operator-authorized revision to paragraph 100 is recorded in `../governance/approvals/APPROVED-EDITORIAL-006.md`. Evidence of execution and human release authority are separate requirements.
+
 ## Current design and release reading order
 1. ../AGENTS.md — current operating constraints and human authority.
 2. ../design-system/boss-design-contract.json — current design-system candidate and explicit known unknowns.
