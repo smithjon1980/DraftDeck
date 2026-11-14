@@ -16,6 +16,14 @@
 - Historical raw upload SHA-256 is **not** asserted to be the amended manuscript hash; exact restoration of five prior reference paragraphs is **not established**.
 - Any subsequent manuscript edit requires a new source pin and impact review. Do **not** infer approval of the updated text.
 
+## Seven-family slide taxonomy (operator-approved for calibration)
+
+- Taxonomy: [visual-slide-taxonomy.v1.json](visual-slide-taxonomy.v1.json). Primary F01–F07, optional single secondary family, independent 2/3/4/6/12/16 panel geometry.
+- DZ-001 art direction: [DZ-001-editorial-art-brief.v1.md](DZ-001-editorial-art-brief.v1.md). Approved **family** selection F01 Photographic Editorial + F03 Consulting-Grade Diagnostic, four panels; independent art/story production not yet approved.
+- The opening paragraph is a demanding workweek with important work stalled. Do not use a cover slide, AI control console, or boardroom team for its specific scene.
+- All other 99 slide families remain to be individually selected using the precise paragraph purpose. Avoid producing seven versions automatically.
+- This classification approval does not itself approve the Spark candidate, CAD, art, story, composite or public release.
+
 ## Slide rule
 
 Each manifest entry binds exactly one paragraph, `001`–`100`, to one slide ID, `DZ-001`–`DZ-100`. Paragraph text must be retrieved from the pinned manuscript during composition, not manually paraphrased or copied from conversational memory. A slide may have an editorially concise visible headline or caption, but its manuscript content remains the verbatim reference and any adaptation must be explicit and approved.
