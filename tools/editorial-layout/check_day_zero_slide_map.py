@@ -59,6 +59,28 @@ def verify():
             if item["gates"]["human_acceptance"] != "PENDING":
                 failures.append(f"Human slide approval unexpectedly present at {code}")
 
+    taxonomy = json.loads((ROOT / "production/day-zero/candidate-006/visual-slide-taxonomy.v1.json").read_text(encoding="utf-8"))
+    families = taxonomy.get("families", [])
+    if [item.get("id") for item in families] != [f"F{i:02d}" for i in range(1, 8)]:
+        failures.append("Seven slide families missing or unordered")
+    if taxonomy.get("governance") != "HAVE — Human Authority, Verified Execution":
+        failures.append("Taxonomy governance mismatch")
+    if data.get("taxonomy", {}).get("document_id") != "BOSS.VISUAL.TAXONOMY.001":
+        failures.append("Slide mapping does not pin taxonomy")
+    if slides and (
+        slides[0].get("layout_family") != "F01_PHOTOGRAPHIC_EDITORIAL"
+        or slides[0].get("secondary_family") != "F03_CONSULTING_GRADE_DIAGNOSTIC"
+        or slides[0].get("panel_geometry") != "04-panel"
+        or slides[0].get("family_status") != "OPERATOR_APPROVED_FOR_CALIBRATION"
+    ):
+        failures.append("DZ-001 family or geometry was changed")
+    if slides and any(item.get("layout_family") != "PENDING_DESIGN_REVIEW" for item in slides[1:]):
+        failures.append("Unreviewed slides were assigned families without authority")
+    brief = (ROOT / "production/day-zero/candidate-006/DZ-001-editorial-art-brief.v1.md").read_text(encoding="utf-8")
+    if "How can a week filled with completed tasks produce so little meaningful progress?" not in brief:
+        failures.append("Paragraph 001 exact instructional question missing from brief")
+    if "Paragraph 001 art generation | PENDING SPARK ACCEPTANCE" not in brief:
+        failures.append("Missing art-generation hold")
     if data["pilot_selection"] != PILOTS:
         failures.append("Calibration slide selection drifted")
     if [p["slide_id"] for p in data["pilot_briefs"]] != PILOTS:
