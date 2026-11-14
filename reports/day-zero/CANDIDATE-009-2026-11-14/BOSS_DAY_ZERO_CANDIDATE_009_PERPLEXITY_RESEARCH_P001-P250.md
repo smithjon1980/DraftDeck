@@ -6,7 +6,7 @@
 **Manuscript:** [Candidate 009 — complete 250 paragraphs](BOSS_DAY_ZERO_CANDIDATE_009_250_PARAGRAPHS.md)  
 **Specification:** [Day Zero Case and Research Specification v0.2](../../../../docs/BIOSCILLATE_DAY_ZERO_CASE_RESEARCH_SPEC_v0.2_CANDIDATE.md)
 
-**Revision B custody:** All 250 exact paragraph payloads were regenerated from Candidate 009 Revision B (manuscript Git blob `880ac224aa08ab190a44896854868dd8b02ca286`), replacing stale pre-revision payloads. Distinct research questions were revised where the case context changed. This research companion and the manuscript must remain version-paired.
+**Revision B custody:** All 250 exact paragraph payloads were regenerated from Candidate 009 Revision B (manuscript Git blob `c4e44834c40bcc27689f1103f7a75aa2ea8d4c84`), replacing stale pre-revision payloads. Distinct research questions were revised where the case context changed. This research companion and the manuscript must remain version-paired.
 
 Every packet below is independently copyable. Each includes the **entire source paragraph verbatim**, targeted research instructions, exactly-three-source request, original-source quality controls, and parenthetical citation output requirements. The research apparatus is NOT part of the 250 manuscript paragraph count. Fictional Main Street Copy events are illustrative—not claims that real customer incidents occurred.
 
@@ -4513,7 +4513,7 @@ PARAGRAPH ID: P116
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-116. The consultant added an evidence register to Main Street Copy's decision packet so that missing records, conflicting reports, and proposed assumptions would not disappear behind a polished recommendation. A regulator is the natural first source for licensing rules, an original research paper for its own findings, and an equipment manufacturer for its documented device specifications. No single domain is authoritative for every question. Perplexity can help locate these sources, but source selection must follow the claim rather than the popularity of a website. Learners should identify the appropriate source class before issuing a search.
+116. At Main Street Copy, the consultant explained that an evidence register must distinguish which type of source is authoritative for each kind of claim. A regulator is the natural first source for licensing rules, an original research paper for its own findings, and an equipment manufacturer for its documented device specifications. No single domain is authoritative for every question. Perplexity can help locate these sources, but source selection must follow the claim rather than the popularity of a website. Learners should identify the appropriate source class before issuing a search.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
@@ -4747,7 +4747,7 @@ PARAGRAPH ID: P122
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-122. At Main Street Copy, the owner raised the next decision: whether to open another North Texas location once the original shop's workflow became more reliable. Consider an independent copy, print, and shipping service evaluating an additional location in North Texas. A persuasive business plan might begin with growth projections, but an evidence-led plan begins with the decision: whether enough unmet demand exists at a price that could support the operation. That question determines which variables matter, which records to seek, and which uncertainties must remain visible. Market research should narrow decisions, not decorate predetermined conclusions.
+122. When the owner of Main Street Copy proposed a second North Texas storefront, the consultant asked what evidence would justify the move. The real decision was whether enough unmet demand existed at prices that could support its operation. A persuasive business plan might begin with growth projections, but an evidence-led plan begins with the decision: whether enough unmet demand exists at a price that could support the operation. That question determines which variables matter, which records to seek, and which uncertainties must remain visible. Market research should narrow decisions, not decorate predetermined conclusions.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
@@ -5605,7 +5605,7 @@ PARAGRAPH ID: P144
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-144. The consultant selected one completed print-and-ship order at Main Street Copy as the first unit of economic analysis, while the publishing case used one accepted instructional module. For an educational publisher, it might be one approved paragraph or finished instructional module. These units have different labor, equipment, and approval requirements. Mixing them produces misleading efficiency comparisons. Choose a unit that corresponds to a customer-valued outcome and define when it becomes accepted. Only then can the operation calculate throughput, rework, and contribution in a manner that supports decisions.
+144. At Main Street Copy, the consultant selected one accepted print-and-ship order as the first unit of economic analysis. For an educational publisher, it might be one approved paragraph or finished instructional module. These units have different labor, equipment, and approval requirements. Mixing them produces misleading efficiency comparisons. Choose a unit that corresponds to a customer-valued outcome and define when it becomes accepted. Only then can the operation calculate throughput, rework, and contribution in a manner that supports decisions.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
@@ -5956,7 +5956,7 @@ PARAGRAPH ID: P153
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-153. The consultant showed how a Main Street Copy self-service intake form might reduce counter labor while shifting correction work or failed submissions onto customers. A cheap self-service interface may reduce staff time but increase customer errors and abandoned orders. Conversely, concierge assistance may cost more internally while improving acceptance rates for complex jobs. A complete value model considers the work performed by both provider and customer. Learners should identify which steps create genuine value, which steps merely shift costs, and how the decision might differ by customer segment.
+153. The consultant showed how a Main Street Copy self-service intake form might reduce counter labor while shifting correction work or failed submissions onto customers. That change could increase customer errors and abandoned orders if instructions were unclear. Conversely, concierge assistance may cost more internally while improving acceptance rates for complex jobs. A complete value model considers the work performed by both provider and customer. Learners should identify which steps create genuine value, which steps merely shift costs, and how the decision might differ by customer segment.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
@@ -6151,7 +6151,7 @@ PARAGRAPH ID: P158
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-158. The proposed Main Street Copy financial model needed to account for demand uncertainty, price sensitivity, exception handling, and the different costs of small and complex orders. It might show accepted outputs, rework rate, cycle time, unresolved exceptions, and unit contribution. A long list of vanity counts can conceal a failing process. Each metric should have a definition, owner, collection method, and threshold that triggers investigation. Importantly, a threshold is not automatically an instruction to act. The human operator determines the response after reviewing context and evidence.
+158. The Main Street Copy owner asked for a small economic dashboard that would reveal whether the proposed improvements actually increased accepted value. It might show accepted outputs, rework rate, cycle time, unresolved exceptions, and unit contribution. A long list of vanity counts can conceal a failing process. Each metric should have a definition, owner, collection method, and threshold that triggers investigation. Importantly, a threshold is not automatically an instruction to act. The human operator determines the response after reviewing context and evidence.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
@@ -7984,7 +7984,7 @@ PARAGRAPH ID: P205
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-205. The Main Street Copy owner could permit a narrowly scoped internal pilot while still blocking payments, external data movement, or automatic customer delivery. An operator may authorize a narrow pilot while blocking payments, external publication, or customer data movement. That decision is more informative than an unqualified 'approved' label because it states the envelope within which the evidence is sufficient. The record should include the tested controls, exceptions, unresolved risks, permitted scope, reviewer, and expiration or reapproval trigger. The learner's task is to write a decision that a future operator could enforce without needing to infer its boundaries from an old conversation.
+205. The Main Street Copy owner could permit a narrowly scoped internal pilot while still blocking payments, external publication, customer data movement, or automatic delivery. That decision is more informative than an unqualified 'approved' label because it states the envelope within which the evidence is sufficient. The record should include the tested controls, exceptions, unresolved risks, permitted scope, reviewer, and expiration or reapproval trigger. The learner's task is to write a decision that a future operator could enforce without needing to infer its boundaries from an old conversation.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
