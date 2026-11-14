@@ -1,0 +1,23 @@
+paragraph_id	question
+185	What governance sources distinguish technical capability from formally authorized action?
+186	What authoritative separation-of-duties and role-based access-control guidance supports independent responsibilities?
+187	What NIST or comparable security guidance explains least privilege and task-scoped authorization?
+188	What cryptographic integrity and change-approval sources support binding authorization to an exact artifact digest?
+189	What authoritative security sources describe nonce, expiration, one-time authorization and replay protection?
+190	What zero-trust and reference-monitor sources define complete mediation of protected operations?
+191	What identity and audit standards address authenticated human, workload and delegated service identities?
+192	What transaction logging, event sourcing and auditability references support durable pre-effect records?
+193	What cloud multi-tenancy security guidance describes enforceable isolation and cross-tenant access tests?
+194	What current prompt-injection and browser-automation security research supports treating retrieved content as untrusted?
+195	What model-security evaluations and threat models explain instruction hierarchy and indirect prompt injection?
+196	What regulator guidance defines data minimization, purpose limitation and retention in service workflows?
+197	What copyright-office and licensing guidance distinguishes access, analysis, reproduction and redistribution rights?
+198	What digital asset management and rights metadata standards support use restrictions and provenance tracking?
+199	What official privacy guidance describes data mapping, processor obligations and context-specific controls?
+200	What ISO or NIST risk-management sources describe impact, likelihood, treatment and residual-risk acceptance?
+201	What human-factors and risk-based approval literature explains meaningful oversight and review fatigue?
+202	What service-management and incident-response standards prescribe exception classification, escalation and safe recovery?
+203	What audit logging and traceability standards specify event integrity, required fields and privacy safeguards?
+204	What security-testing sources recommend adversarial negative tests, penetration tests and end-to-end authorization validation?
+205	What governance and change-management guidance supports documented scope-limited risk acceptance and reauthorization?
+206	What assurance-case and secure-system evaluation frameworks require evidence of authority, control effectiveness and release readiness?
