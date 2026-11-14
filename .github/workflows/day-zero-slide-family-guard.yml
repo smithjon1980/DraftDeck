@@ -1,0 +1,32 @@
+name: Day Zero C006 slide-family selection guard
+
+on:
+  push:
+    branches:
+      - production/day-zero-c006-slide-map-20261114
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'production/day-zero/candidate-006/**'
+      - 'tools/editorial-layout/check_day_zero_slide_map.py'
+      - 'manuscripts/day-zero/CANDIDATE-006-100-paragraphs.txt'
+      - '.github/workflows/day-zero-slide-family-guard.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  paragraph-mapping:
+    name: Source, family and hold-state audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate pinned manuscript and family selection
+        run: python3 tools/editorial-layout/check_day_zero_slide_map.py
+      - name: Explain QA scope
+        run: |
+          echo "PASS only validates source mapping, taxonomy and gate states."
+          echo "Spark, art, story, browser rendering, PDF and human acceptance require separate proof."
