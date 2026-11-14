@@ -1,0 +1,153 @@
+{
+  "document_id": "BOSS.VISUAL.TAXONOMY.001",
+  "version": "1.0.0",
+  "status": "OPERATOR_APPROVED_FOR_CALIBRATION_NOT_RELEASE",
+  "approved_scope": "Seven instructional composition families and Paragraph 001 family selection; no art/story/render/publication approval.",
+  "governance": "HAVE — Human Authority, Verified Execution",
+  "selection_contract": {
+    "rule": "Classify by what the paragraph teaches, before considering aesthetic appearance or panel geometry.",
+    "source_of_truth": "The exact paragraph text in the pinned Candidate 006 manuscript, not a conversational paraphrase.",
+    "primary_family_count": 1,
+    "secondary_family_count": "0_or_1_only_if_instructionally_justified",
+    "geometry_is_independent": true,
+    "geometry_options": [
+      "02-panel",
+      "03-panel",
+      "04-panel",
+      "06-panel",
+      "12-panel",
+      "16-panel"
+    ],
+    "seven_families_are_not_seven_renders": true,
+    "approval": "Human acceptance is required for each art and story candidate; classification does not approve artwork or the eventual slide.",
+    "uncertainty": "If passage purpose is ambiguous, mark NEEDS_EDITORIAL_REVIEW, avoid invented datasets, and withhold visual generation."
+  },
+  "families": [
+    {
+      "id": "F01",
+      "name": "Photographic Editorial",
+      "purpose": "Introduce experiences, consequences and real-world people or settings",
+      "strong_signals": [
+        "lived workplace experience",
+        "narrative opening",
+        "human emotional tension",
+        "specific physical scene"
+      ],
+      "mandatory": "Primary photorealistic original scene with an interpretable human situation; no botsy icon art",
+      "do_not_use_when": "Paragraph primarily requires precise step logic or numerical evidence."
+    },
+    {
+      "id": "F02",
+      "name": "Visual Storyboard",
+      "purpose": "Illustrate sequential events and contrast before/after decisions",
+      "strong_signals": [
+        "before and after",
+        "chronological sequence",
+        "chain of witnessed events",
+        "multiple scene beats"
+      ],
+      "mandatory": "Each frame represents distinct manuscript-supported state; do not invent intervening events",
+      "do_not_use_when": "Single frozen scene communicates the point more efficiently."
+    },
+    {
+      "id": "F03",
+      "name": "Consulting-Grade Diagnostic",
+      "purpose": "Dissect business problems, contrasting hypotheses and decision consequences",
+      "strong_signals": [
+        "why did this happen",
+        "activity versus outcome",
+        "competing explanation",
+        "root-cause examination"
+      ],
+      "mandatory": "Clear, grounded problem framing and disciplined contrast; never imply unverified measurements",
+      "do_not_use_when": "No analysis or structured comparison is supported by the paragraph."
+    },
+    {
+      "id": "F04",
+      "name": "Workflow & Process",
+      "purpose": "Explain procedural stages, handoffs, escalation and gates",
+      "strong_signals": [
+        "step",
+        "handoff",
+        "route",
+        "authorization gate",
+        "retry",
+        "sequence of operations"
+      ],
+      "mandatory": "Ordered state transitions and accountable actors; source-grounded meanings",
+      "do_not_use_when": "Paragraph introduces a question before explaining a process."
+    },
+    {
+      "id": "F05",
+      "name": "Evidence & Data",
+      "purpose": "Present verifiable findings, comparisons, audit results and measured outcomes",
+      "strong_signals": [
+        "named measures",
+        "reported evidence",
+        "actual figures",
+        "criteria grid",
+        "observed test results"
+      ],
+      "mandatory": "Every displayed quantity must come from a cited or pinned factual source, or be explicitly labeled fictional/example",
+      "do_not_use_when": "No dataset or evidence supports a chart or numeric dashboard."
+    },
+    {
+      "id": "F06",
+      "name": "Technical Architecture",
+      "purpose": "Illustrate systems, components, interfaces, structural geometry and controls",
+      "strong_signals": [
+        "component boundary",
+        "API",
+        "storage",
+        "runtime",
+        "interface",
+        "network topology"
+      ],
+      "mandatory": "Precise labeled architecture with correct interfaces; use independently editable technical SVG in production",
+      "do_not_use_when": "Paragraph is about human experience rather than implementation."
+    },
+    {
+      "id": "F07",
+      "name": "Decision & Application",
+      "purpose": "Turn a lesson into a learner action, diagnostic exercise or structured choice",
+      "strong_signals": [
+        "Pause and Consider",
+        "Operator's Decision",
+        "Evidence Check",
+        "Field Application",
+        "Release Gate"
+      ],
+      "mandatory": "A clear learner question, options or rubric and room for response; do not reveal answer prematurely",
+      "do_not_use_when": "Paragraph is a narrative premise without a learner exercise."
+    }
+  ],
+  "calibration_case": {
+    "slide_id": "DZ-001",
+    "paragraph": "001",
+    "source_blob": "514e759abe8308705856f814b4ef88d041113778",
+    "primary": "F01",
+    "secondary": "F03",
+    "geometry": "04-panel",
+    "selection_authorization": "User approved next production step, 2026-11-14",
+    "hypothesis": "A tired but capable professional finishes a workweek with a record of completed tasks while an important project is visually stalled.",
+    "rationale": "Paragraph 001 opens with a lived professional experience and ends with the diagnostic question of many tasks versus negligible progress.",
+    "explicitly_excluded": [
+      "cover slide",
+      "AI control dashboard",
+      "premature workflow solution",
+      "fabricated numeric chart",
+      "boardroom people reviewing a process",
+      "word-for-word text baked into art"
+    ],
+    "acceptance_gates": {
+      "source_fidelity": "VERIFY_BEFORE_RENDER",
+      "geometry": "CANDIDATE",
+      "spark": "REFERENCE_DIRECTION_NOT_APPROVED",
+      "art": "NOT_GENERATED",
+      "story": "NOT_GENERATED",
+      "text": "NOT_COMPOSED",
+      "human_release": "NOT_AUTHORIZED"
+    }
+  },
+  "schema_version": "1.0.0"
+}
