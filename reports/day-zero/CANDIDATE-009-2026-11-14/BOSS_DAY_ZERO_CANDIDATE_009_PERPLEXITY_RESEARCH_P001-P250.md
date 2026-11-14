@@ -1,10 +1,12 @@
 # Bioscillate Operating System by Seven — Day Zero
-## Candidate 009 · 250 Copy-Ready Perplexity Research Packets
+## Candidate 009 · Revision B · 250 Copy-Ready Perplexity Research Packets
 
-**Status:** RESEARCH CANDIDATE · ALL EXTERNAL CITATIONS PENDING SOURCE VERIFICATION · HUMAN RELEASE HOLD  
+**Status:** REVISION B · RESEARCH CANDIDATE · ALL EXTERNAL CITATIONS PENDING SOURCE VERIFICATION · HUMAN RELEASE HOLD  
 **Date:** 2026-11-14 (America/Chicago)  
 **Manuscript:** [Candidate 009 — complete 250 paragraphs](BOSS_DAY_ZERO_CANDIDATE_009_250_PARAGRAPHS.md)  
 **Specification:** [Day Zero Case and Research Specification v0.2](../../../../docs/BIOSCILLATE_DAY_ZERO_CASE_RESEARCH_SPEC_v0.2_CANDIDATE.md)
+
+**Revision B custody:** All 250 exact paragraph payloads were regenerated from Candidate 009 Revision B (manuscript Git blob `880ac224aa08ab190a44896854868dd8b02ca286`), replacing stale pre-revision payloads. Distinct research questions were revised where the case context changed. This research companion and the manuscript must remain version-paired.
 
 Every packet below is independently copyable. Each includes the **entire source paragraph verbatim**, targeted research instructions, exactly-three-source request, original-source quality controls, and parenthetical citation output requirements. The research apparatus is NOT part of the 250 manuscript paragraph count. Fictional Main Street Copy events are illustrative—not claims that real customer incidents occurred.
 
@@ -21,7 +23,7 @@ Every packet below is independently copyable. Each includes the **entire source 
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P001
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -60,7 +62,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P002
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -99,7 +101,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P003
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -138,7 +140,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P004
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -177,7 +179,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P005
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -216,7 +218,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P006
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -255,7 +257,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P007
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -294,7 +296,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P008
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -333,7 +335,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P009
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -372,7 +374,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P010
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -411,7 +413,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P011
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -450,7 +452,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P012
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -489,7 +491,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P013
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -528,7 +530,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P014
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -567,7 +569,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P015
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -606,7 +608,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P016
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -645,7 +647,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P017
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -684,7 +686,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P018
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -723,7 +725,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P019
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -762,7 +764,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P020
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -801,7 +803,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P021
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -840,7 +842,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P022
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -879,7 +881,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P023
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -918,7 +920,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P024
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -957,7 +959,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P025
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -996,7 +998,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P026
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1035,7 +1037,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P027
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1074,7 +1076,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P028
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1113,7 +1115,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P029
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1152,7 +1154,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P030
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1191,7 +1193,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P031
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1230,7 +1232,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P032
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1269,7 +1271,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P033
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1308,7 +1310,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P034
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1347,7 +1349,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P035
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1386,7 +1388,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P036
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1425,7 +1427,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P037
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1464,7 +1466,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P038
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1503,7 +1505,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P039
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1542,7 +1544,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P040
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1581,7 +1583,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P041
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1620,7 +1622,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P042
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1659,7 +1661,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P043
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1698,7 +1700,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P044
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1737,7 +1739,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P045
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1776,7 +1778,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P046
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1815,7 +1817,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P047
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1854,7 +1856,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P048
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1893,7 +1895,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P049
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1932,7 +1934,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P050
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -1971,7 +1973,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P051
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2010,7 +2012,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P052
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2049,7 +2051,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P053
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2088,7 +2090,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P054
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2127,7 +2129,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P055
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2166,7 +2168,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P056
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2205,7 +2207,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P057
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2244,7 +2246,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P058
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2283,7 +2285,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P059
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2322,7 +2324,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P060
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2361,7 +2363,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P061
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2400,7 +2402,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P062
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2439,7 +2441,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P063
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2478,7 +2480,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P064
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2517,7 +2519,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P065
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2556,7 +2558,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P066
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2595,7 +2597,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P067
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2634,7 +2636,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P068
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2673,7 +2675,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P069
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2712,7 +2714,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P070
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2751,7 +2753,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P071
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2790,7 +2792,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P072
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2829,7 +2831,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P073
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2868,7 +2870,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P074
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2907,7 +2909,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P075
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2946,7 +2948,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P076
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -2985,7 +2987,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P077
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3024,7 +3026,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P078
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3063,7 +3065,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P079
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3102,7 +3104,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P080
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3141,7 +3143,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P081
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3180,7 +3182,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P082
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3219,7 +3221,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P083
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3258,7 +3260,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P084
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3297,7 +3299,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P085
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3336,7 +3338,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P086
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3375,7 +3377,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P087
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3414,7 +3416,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P088
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3453,7 +3455,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P089
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3492,7 +3494,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P090
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3531,7 +3533,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P091
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3570,7 +3572,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P092
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3609,7 +3611,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P093
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3648,7 +3650,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P094
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3687,7 +3689,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P095
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3726,7 +3728,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P096
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3765,7 +3767,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P097
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3804,7 +3806,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P098
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3843,7 +3845,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P099
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3882,7 +3884,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P100
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -3921,16 +3923,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P101
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-101. The first hundred paragraphs asked whether an operating system can produce accountable results. The next question is how an operator knows what counts as evidence. A polished answer, a dashboard, and an impressive citation are all representations of information; none automatically proves the claim attached to it. In this stage, the learner will distinguish what was observed from what was inferred and what remains untested. Before approving any consequential conclusion, identify the claim, the observation that could establish it, and the method by which that observation was obtained.
+101. The Main Street Copy consultant had reached a provisional recommendation about order handling, but now needed to establish which claims the available evidence could actually support. The next question is how an operator knows what counts as evidence. A polished answer, a dashboard, and an impressive citation are all representations of information; none automatically proves the claim attached to it. In this stage, the learner will distinguish what was observed from what was inferred and what remains untested. Before approving any consequential conclusion, identify the claim, the observation that could establish it, and the method by which that observation was obtained.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What do evidence-based decision frameworks say about separating claims, observations and inferences?
+What management and auditing research distinguishes a provisional consulting recommendation from a verified claim about operating improvement?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -3960,16 +3962,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P102
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-102. Imagine a research assistant reporting that independent print shops are growing rapidly. The phrase sounds useful, but what does 'growing' mean: revenue, store count, transactions, jobs, or customer visits? Those measures can move in different directions. A disciplined operator refuses to convert an undefined adjective into a business decision. The first investigative act is to rewrite the claim as a measurable question, specifying industry definition, geography, time interval, unit, and comparison group. Only after that translation can a source meaningfully support or challenge it.
+102. The owner of Main Street Copy brought an online report to the next meeting claiming that independent print shops were growing rapidly. The phrase sounds useful, but what does 'growing' mean: revenue, store count, transactions, jobs, or customer visits? Those measures can move in different directions. A disciplined operator refuses to convert an undefined adjective into a business decision. The first investigative act is to rewrite the claim as a measurable question, specifying industry definition, geography, time interval, unit, and comparison group. Only after that translation can a source meaningfully support or challenge it.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-How do measurement definitions and industry classification choices affect claims about business growth?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The owner of Main Street Copy brought an online report to the next meeting claiming that independent print shops were growing rapidly." How do measurement definitions and industry classification choices affect claims about business growth?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -3999,7 +4001,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P103
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -4038,7 +4040,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P104
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -4077,7 +4079,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P105
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -4116,16 +4118,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P106
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-106. Consider a claim derived from customer transactions in Dallas–Fort Worth. It would be tempting to present the result as evidence for every American city, especially if the numbers appear convincing. Yet a local pattern may reflect regional demographics, industry concentration, seasonal spending, or the provider's coverage. The learner must identify the population actually represented and the population to which the lesson wants to generalize. Evidence can be strong for one question and weak for another; a clear boundary protects its usefulness.
+106. For a possible Main Street Copy expansion in North Texas, the consultant found a local demand claim that could not automatically be generalized to other American cities. It would be tempting to present the result as evidence for every American city, especially if the numbers appear convincing. Yet a local pattern may reflect regional demographics, industry concentration, seasonal spending, or the provider's coverage. The learner must identify the population actually represented and the population to which the lesson wants to generalize. Evidence can be strong for one question and weak for another; a clear boundary protects its usefulness.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What principles of external validity and geographic representativeness apply to local commercial datasets?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "For a possible Main Street Copy expansion in North Texas, the consultant found a local demand claim that could not automatically be generalized to other American cities." What principles of external validity and geographic representativeness apply to local commercial datasets?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -4155,7 +4157,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P107
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -4194,7 +4196,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P108
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -4233,7 +4235,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P109
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -4272,16 +4274,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P110
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-110. Correlation can inform a question without settling a cause. If businesses with sophisticated software show higher revenue, software might contribute to performance, but larger businesses may also have more money to purchase software. An observational relationship does not identify the direction of influence or exclude a third variable. Before making a causal statement, ask what comparison, intervention, or natural experiment would separate the explanations. If that evidence is unavailable, describe the association and the open causal question without pretending the distinction has been resolved.
+110. When the owner noticed that shops advertising advanced software also reported higher sales, the consultant warned that correlation alone could not show software caused the difference. If businesses with sophisticated software show higher revenue, software might contribute to performance, but larger businesses may also have more money to purchase software. An observational relationship does not identify the direction of influence or exclude a third variable. Before making a causal statement, ask what comparison, intervention, or natural experiment would separate the explanations. If that evidence is unavailable, describe the association and the open causal question without pretending the distinction has been resolved.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What authoritative guidance explains confounding and the limits of causal inference from observational business data?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "When the owner noticed that shops advertising advanced software also reported higher sales, the consultant warned that correlation alone could not show software caused the difference." What authoritative guidance explains confounding and the limits of causal inference from observational business data?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -4311,7 +4313,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P111
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -4350,7 +4352,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P112
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -4389,7 +4391,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P113
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -4428,7 +4430,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P114
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -4467,7 +4469,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P115
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -4506,16 +4508,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P116
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-116. A citation's authority depends partly on the type of claim. A regulator is the natural first source for licensing rules, an original research paper for its own findings, and an equipment manufacturer for its documented device specifications. No single domain is authoritative for every question. Perplexity can help locate these sources, but source selection must follow the claim rather than the popularity of a website. Learners should identify the appropriate source class before issuing a search.
+116. The consultant added an evidence register to Main Street Copy's decision packet so that missing records, conflicting reports, and proposed assumptions would not disappear behind a polished recommendation. A regulator is the natural first source for licensing rules, an original research paper for its own findings, and an equipment manufacturer for its documented device specifications. No single domain is authoritative for every question. Perplexity can help locate these sources, but source selection must follow the claim rather than the popularity of a website. Learners should identify the appropriate source class before issuing a search.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What source selection guidance distinguishes authoritative sources for regulations, empirical findings and technical specifications?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The consultant added an evidence register to Main Street Copy's decision packet so that missing records, conflicting reports, and proposed assumptions would not disappear behind a polished recommendation." What source selection guidance distinguishes authoritative sources for regulations, empirical findings and technical specifications?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -4545,7 +4547,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P117
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -4584,7 +4586,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P118
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -4623,7 +4625,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P119
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -4662,7 +4664,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P120
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -4701,16 +4703,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P121
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-121. This stage closes with a simple release question: can a reader distinguish our claim, its supporting observation, and the judgment that connects them? The paragraph should remain readable without its internal research prompt, while the slide companion can display the underlying evidence in more detail. If the source is weak, narrow the claim or label it as a hypothesis. Human authority does not mean approving attractive prose despite missing support. Under HAVE, it means authorizing only the claim the evidence can actually sustain.
+121. At the close of the evidence review, the Main Street Copy owner had to distinguish the shop's reported problems from the observed records and the consultant's interpretation. The paragraph should remain readable without its internal research prompt, while the slide companion can display the underlying evidence in more detail. If the source is weak, narrow the claim or label it as a hypothesis. Human authority does not mean approving attractive prose despite missing support. Under HAVE, it means authorizing only the claim the evidence can actually sustain.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What evidence-to-decision frameworks require traceability between claims, observations, interpretation and authorization?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "At the close of the evidence review, the Main Street Copy owner had to distinguish the shop's reported problems from the observed records and the consultant's interpretation." What evidence-to-decision frameworks require traceability between claims, observations, interpretation and authorization?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -4740,16 +4742,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P122
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-122. Evidence becomes operational when it helps answer a real business question. Consider an independent copy, print, and shipping service evaluating an additional location in North Texas. A persuasive business plan might begin with growth projections, but an evidence-led plan begins with the decision: whether enough unmet demand exists at a price that could support the operation. That question determines which variables matter, which records to seek, and which uncertainties must remain visible. Market research should narrow decisions, not decorate predetermined conclusions.
+122. At Main Street Copy, the owner raised the next decision: whether to open another North Texas location once the original shop's workflow became more reliable. Consider an independent copy, print, and shipping service evaluating an additional location in North Texas. A persuasive business plan might begin with growth projections, but an evidence-led plan begins with the decision: whether enough unmet demand exists at a price that could support the operation. That question determines which variables matter, which records to seek, and which uncertainties must remain visible. Market research should narrow decisions, not decorate predetermined conclusions.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What authoritative market research guidance describes defining a decision question before collecting market data?
+Which original local-market research methods can establish whether a second print-and-shipping storefront has enough unmet demand at sustainable prices?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -4779,16 +4781,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P123
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-123. The first market boundary is the customer. A student seeking occasional document printing, a law office ordering recurring litigation binders, and an online seller dropping off parcels use similar storefronts for different purposes. Treating them as one undifferentiated market hides different purchase frequencies, service expectations, and willingness to pay. Learners should construct provisional customer segments from observable needs, then test whether those segments exist locally. A segment is not real merely because its description is plausible; it earns attention through evidence of behavior.
+123. Before projecting demand for that proposed Main Street Copy location, the consultant separated students, law firms, local businesses, and online sellers into distinct customer hypotheses. A student seeking occasional document printing, a law office ordering recurring litigation binders, and an online seller dropping off parcels use similar storefronts for different purposes. Treating them as one undifferentiated market hides different purchase frequencies, service expectations, and willingness to pay. Learners should construct provisional customer segments from observable needs, then test whether those segments exist locally. A segment is not real merely because its description is plausible; it earns attention through evidence of behavior.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What market segmentation research supports grouping customers by jobs to be done, frequency and needs rather than only demographics?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "Before projecting demand for that proposed Main Street Copy location, the consultant separated students, law firms, local businesses, and online sellers into distinct customer hypotheses." What market segmentation research supports grouping customers by jobs to be done, frequency and needs rather than only demographics?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -4818,7 +4820,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P124
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -4857,7 +4859,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P125
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -4896,7 +4898,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P126
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -4935,16 +4937,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P127
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-127. Competition is not simply a count of storefront signs. A nearby full-service print center, a self-service kiosk, a postal counter, and an online ordering platform may each compete for only part of the same task. A useful competition map identifies service overlap, pickup speed, hours, quality expectations, and alternatives customers can realistically choose. The point is not to label every competitor a threat; it is to discover which needs are already served and where a credible service gap might exist.
+127. At the shop's front counter, the consultant asked which orders were lost because no suitable service existed and which orders were lost because the current service was unreliable. A nearby full-service print center, a self-service kiosk, a postal counter, and an online ordering platform may each compete for only part of the same task. A useful competition map identifies service overlap, pickup speed, hours, quality expectations, and alternatives customers can realistically choose. The point is not to label every competitor a threat; it is to discover which needs are already served and where a credible service gap might exist.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What competitive analysis frameworks define direct, indirect and substitute competitors for local service businesses?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "At the shop's front counter, the consultant asked which orders were lost because no suitable service existed and which orders were lost because the current service was unreliable." What competitive analysis frameworks define direct, indirect and substitute competitors for local service businesses?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -4974,7 +4976,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P128
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -5013,7 +5015,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P129
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -5052,7 +5054,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P130
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -5091,16 +5093,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P131
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-131. Business formation data may indicate entrepreneurial activity without proving market opportunity. New registrations may be inactive, operate from home, or enter industries with high failure rates. A business-count trend also tells little about spending per customer. Our guided exercise distinguishes opportunity signals from demand verification. A cautious recommendation could be to interview prospective clients or run a limited service test, rather than authorize a location investment solely because registrations increased.
+131. The owner presented regional business-formation statistics as proof that a second Main Street Copy storefront would attract customers. New registrations may be inactive, operate from home, or enter industries with high failure rates. A business-count trend also tells little about spending per customer. Our guided exercise distinguishes opportunity signals from demand verification. A cautious recommendation could be to interview prospective clients or run a limited service test, rather than authorize a location investment solely because registrations increased.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What official sources and research discuss limitations of business registrations and establishment counts as indicators of demand?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The owner presented regional business-formation statistics as proof that a second Main Street Copy storefront would attract customers." What official sources and research discuss limitations of business registrations and establishment counts as indicators of demand?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -5130,7 +5132,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P132
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -5169,7 +5171,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P133
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -5208,7 +5210,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P134
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -5247,7 +5249,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P135
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -5286,7 +5288,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P136
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -5325,16 +5327,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P137
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-137. The next question is whether observed demand is profitable to serve. A location with high customer interest can still fail if rent, labor, equipment, fulfillment, and rework costs exceed feasible contribution. Market intelligence should therefore be passed to a separate operating-economics model rather than equated with a recommendation. The handoff artifact lists demand assumptions, expected service mix, evidence confidence, and unresolved cost information. It demonstrates why commercial research is necessary but not sufficient for authorization.
+137. In a scripted follow-up interview, the consultant asked the Main Street Copy owner to distinguish customer interest from actual willingness to pay for a defined service. A location with high customer interest can still fail if rent, labor, equipment, fulfillment, and rework costs exceed feasible contribution. Market intelligence should therefore be passed to a separate operating-economics model rather than equated with a recommendation. The handoff artifact lists demand assumptions, expected service mix, evidence confidence, and unresolved cost information. It demonstrates why commercial research is necessary but not sufficient for authorization.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What business planning resources explain why market demand alone does not establish unit economics or profitability?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "In a scripted follow-up interview, the consultant asked the Main Street Copy owner to distinguish customer interest from actual willingness to pay for a defined service." What business planning resources explain why market demand alone does not establish unit economics or profitability?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -5364,7 +5366,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P138
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -5403,7 +5405,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P139
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -5442,7 +5444,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P140
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -5481,7 +5483,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P141
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -5520,16 +5522,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P142
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-142. Return to the independent copy-and-shipping storefront. The question was never whether a model could write a compelling market report. It was whether the operator could move from a commercial hypothesis to a bounded, evidenced action without confusing the two. The final lesson links the market-source register, field observations, customer interviews, and cost-model assumptions to a proposed test. If a source later changes, that test's rationale can be revisited. Durable research retains its value because its reasoning chain survives the presentation.
+142. The Main Street Copy expansion proposal returned to the owner's desk with interview notes, bounded demand assumptions, and unresolved questions instead of an automatic approval. The question was never whether a model could write a compelling market report. It was whether the operator could move from a commercial hypothesis to a bounded, evidenced action without confusing the two. The final lesson links the market-source register, field observations, customer interviews, and cost-model assumptions to a proposed test. If a source later changes, that test's rationale can be revisited. Durable research retains its value because its reasoning chain survives the presentation.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What reproducible market feasibility practices document evidence, assumptions and decisions for later reassessment?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The Main Street Copy expansion proposal returned to the owner's desk with interview notes, bounded demand assumptions, and unresolved questions instead of an automatic approval." What reproducible market feasibility practices document evidence, assumptions and decisions for later reassessment?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -5559,16 +5561,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P143
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-143. A market opportunity becomes a workable service only when its operating economics can be understood. Revenue is visible on invoices; the full cost of producing accepted outcomes is often scattered across tools, labor, corrections, waiting, and customer support. A founder may proudly announce that an AI workflow generates a lesson in minutes while omitting the hours required to repair its visuals and citations. The learner's first task is to define a unit of accepted output and track everything required to produce it, not merely its first draft.
+143. The Main Street Copy owner could now describe a potential customer, but a second storefront still required a credible estimate of the complete cost of an accepted order. Revenue is visible on invoices; the full cost of producing accepted outcomes is often scattered across tools, labor, corrections, waiting, and customer support. A founder may proudly announce that an AI workflow generates a lesson in minutes while omitting the hours required to repair its visuals and citations. The learner's first task is to define a unit of accepted output and track everything required to produce it, not merely its first draft.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What managerial accounting guidance supports measuring full process cost per accepted unit rather than initial generation cost?
+What research supports calculating the full cost of an accepted customer order, including labor, rework, queue delays, equipment and support before investing in another location?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -5598,16 +5600,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P144
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-144. For a document-production service, a unit might be one completed print-and-ship order. For an educational publisher, it might be one approved paragraph or finished instructional module. These units have different labor, equipment, and approval requirements. Mixing them produces misleading efficiency comparisons. Choose a unit that corresponds to a customer-valued outcome and define when it becomes accepted. Only then can the operation calculate throughput, rework, and contribution in a manner that supports decisions.
+144. The consultant selected one completed print-and-ship order at Main Street Copy as the first unit of economic analysis, while the publishing case used one accepted instructional module. For an educational publisher, it might be one approved paragraph or finished instructional module. These units have different labor, equipment, and approval requirements. Mixing them produces misleading efficiency comparisons. Choose a unit that corresponds to a customer-valued outcome and define when it becomes accepted. Only then can the operation calculate throughput, rework, and contribution in a manner that supports decisions.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What operations management frameworks explain selecting meaningful units of output and measuring accepted throughput?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The consultant selected one completed print-and-ship order at Main Street Copy as the first unit of economic analysis, while the publishing case used one accepted instructional module." What operations management frameworks explain selecting meaningful units of output and measuring accepted throughput?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -5637,7 +5639,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P145
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -5676,7 +5678,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P146
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -5715,7 +5717,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P147
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -5754,16 +5756,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P148
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-148. Automation projects often overlook their setup costs. A reusable publishing pipeline may need source normalization, template design, test cases, reviewer training, and exception handling before it produces dependable work. Those investments can be justified when repeated output volume is sufficient, but not every task deserves its own automation. A break-even comparison should show setup cost, marginal operating cost, expected usage, and maintenance requirements. Learners should be able to explain when a manual procedure is the rational choice.
+148. Before comparing new equipment with a workflow change, the consultant asked the shop to distinguish costs already committed from costs that would actually change under each option. A reusable publishing pipeline may need source normalization, template design, test cases, reviewer training, and exception handling before it produces dependable work. Those investments can be justified when repeated output volume is sufficient, but not every task deserves its own automation. A break-even comparison should show setup cost, marginal operating cost, expected usage, and maintenance requirements. Learners should be able to explain when a manual procedure is the rational choice.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What investment appraisal models compare automation setup cost with recurring savings and maintenance?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "Before comparing new equipment with a workflow change, the consultant asked the shop to distinguish costs already committed from costs that would actually change under each option." What investment appraisal models compare automation setup cost with recurring savings and maintenance?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -5793,7 +5795,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P149
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -5832,7 +5834,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P150
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -5871,7 +5873,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P151
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -5910,7 +5912,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P152
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -5949,16 +5951,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P153
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-153. A project can look efficient while transferring work to a customer. A cheap self-service interface may reduce staff time but increase customer errors and abandoned orders. Conversely, concierge assistance may cost more internally while improving acceptance rates for complex jobs. A complete value model considers the work performed by both provider and customer. Learners should identify which steps create genuine value, which steps merely shift costs, and how the decision might differ by customer segment.
+153. The consultant showed how a Main Street Copy self-service intake form might reduce counter labor while shifting correction work or failed submissions onto customers. A cheap self-service interface may reduce staff time but increase customer errors and abandoned orders. Conversely, concierge assistance may cost more internally while improving acceptance rates for complex jobs. A complete value model considers the work performed by both provider and customer. Learners should identify which steps create genuine value, which steps merely shift costs, and how the decision might differ by customer segment.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What service operations research discusses customer participation, self-service technologies and transferred effort?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The consultant showed how a Main Street Copy self-service intake form might reduce counter labor while shifting correction work or failed submissions onto customers." What service operations research discusses customer participation, self-service technologies and transferred effort?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -5988,7 +5990,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P154
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -6027,7 +6029,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P155
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -6066,7 +6068,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P156
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -6105,7 +6107,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P157
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -6144,16 +6146,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P158
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-158. A useful operating dashboard limits itself to decision-relevant measures. It might show accepted outputs, rework rate, cycle time, unresolved exceptions, and unit contribution. A long list of vanity counts can conceal a failing process. Each metric should have a definition, owner, collection method, and threshold that triggers investigation. Importantly, a threshold is not automatically an instruction to act. The human operator determines the response after reviewing context and evidence.
+158. The proposed Main Street Copy financial model needed to account for demand uncertainty, price sensitivity, exception handling, and the different costs of small and complex orders. It might show accepted outputs, rework rate, cycle time, unresolved exceptions, and unit contribution. A long list of vanity counts can conceal a failing process. Each metric should have a definition, owner, collection method, and threshold that triggers investigation. Importantly, a threshold is not automatically an instruction to act. The human operator determines the response after reviewing context and evidence.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What performance management guidance distinguishes actionable process metrics from vanity metrics and emphasizes metric definitions?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The proposed Main Street Copy financial model needed to account for demand uncertainty, price sensitivity, exception handling, and the different costs of small and complex orders." What performance management guidance distinguishes actionable process metrics from vanity metrics and emphasizes metric definitions?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -6183,7 +6185,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P159
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -6222,7 +6224,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P160
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -6261,7 +6263,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P161
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -6300,7 +6302,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P162
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -6339,16 +6341,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P163
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-163. This stage ends with a decision note that contains both a model and its uncertainty. The operator has a market hypothesis, a proposed service unit, an estimated process cost, and explicit limits on what can be inferred. The next choice might be a controlled order simulation, a small customer trial, or no action at all. The key shift is from asking whether a tool produces output faster to asking whether a governed capability produces accepted value at sustainable cost. That question connects economics to infrastructure entrepreneurship.
+163. The Main Street Copy engagement reached a financial decision gate, not a promise that a quicker printer or automated intake would necessarily earn a return. The operator has a market hypothesis, a proposed service unit, an estimated process cost, and explicit limits on what can be inferred. The next choice might be a controlled order simulation, a small customer trial, or no action at all. The key shift is from asking whether a tool produces output faster to asking whether a governed capability produces accepted value at sustainable cost. That question connects economics to infrastructure entrepreneurship.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What evidence-based operations decision frameworks integrate quality, total cost, throughput and uncertainty in investment decisions?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The Main Street Copy engagement reached a financial decision gate, not a promise that a quicker printer or automated intake would necessarily earn a return." What evidence-based operations decision frameworks integrate quality, total cost, throughput and uncertainty in investment decisions?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -6378,16 +6380,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P164
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-164. Infrastructure entrepreneurship begins with a change in what a small operator sells. Rather than completing one isolated task, the business develops a repeatable capability that can serve many customers under defined conditions. A print shop might sell individual copies, but it can also organize a dependable intake-to-delivery process. An educational publisher might sell one course, but it can also maintain a governed production system for multiple courses. In both cases, the underlying value lies in reusable methods, qualified tools, and reliable outcomes rather than in software possession alone.
+164. At Main Street Copy, the owner began considering whether the reliable intake-to-delivery process itself could become a repeatable service rather than a series of improvised customer favors. Rather than completing one isolated task, the business develops a repeatable capability that can serve many customers under defined conditions. A print shop might sell individual copies, but it can also organize a dependable intake-to-delivery process. An educational publisher might sell one course, but it can also maintain a governed production system for multiple courses. In both cases, the underlying value lies in reusable methods, qualified tools, and reliable outcomes rather than in software possession alone.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What service operations and platform strategy research distinguishes selling tasks from providing repeatable capabilities?
+What service-design and operations-management literature supports converting a repeatable intake-to-delivery workflow into a bounded commercial capability?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -6417,16 +6419,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P165
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-165. Capability commerce extends that idea by treating a documented operating ability as something that can be delivered, priced, and supported. The promise must be precise: what input is accepted, what outcome is produced, what quality standard applies, and what happens when the request falls outside scope. A vague promise to 'use AI for your business' is not a service contract. Learners should rewrite that phrase into a defined service with exclusions and an acceptance test. A capability becomes commercially credible when a customer can recognize successful delivery.
+165. The consultant translated that Main Street Copy service into a capability promise: which orders can enter, what processing is permitted, and what outcome the customer may expect. The promise must be precise: what input is accepted, what outcome is produced, what quality standard applies, and what happens when the request falls outside scope. A vague promise to 'use AI for your business' is not a service contract. Learners should rewrite that phrase into a defined service with exclusions and an acceptance test. A capability becomes commercially credible when a customer can recognize successful delivery.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What service-level agreement and productized-services sources explain defining inputs, outputs, quality and exclusions?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The consultant translated that Main Street Copy service into a capability promise: which orders can enter, what processing is permitted, and what outcome the customer may expect." What service-level agreement and productized-services sources explain defining inputs, outputs, quality and exclusions?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -6456,7 +6458,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P166
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -6495,7 +6497,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P167
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -6534,7 +6536,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P168
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -6573,7 +6575,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P169
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -6612,16 +6614,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P170
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-170. At the center of a reliable service is an acceptance test. A printed document must match required size, quantity, finishing, and delivery instructions. A training slide must match approved source text, preserve readable typography, and cite evidence correctly. The acceptance test should be observable and practical, not merely a judgment that the result 'looks good.' Some quality dimensions will still require human review. The entrepreneur must decide where objective checks end and expert discretion begins.
+170. A repeatable Main Street Copy capability would need to survive a change in staff, order volume, or approved software without silently changing its customer promise. A printed document must match required size, quantity, finishing, and delivery instructions. A training slide must match approved source text, preserve readable typography, and cite evidence correctly. The acceptance test should be observable and practical, not merely a judgment that the result 'looks good.' Some quality dimensions will still require human review. The entrepreneur must decide where objective checks end and expert discretion begins.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What quality assurance and contract testing sources support explicit, observable deliverable acceptance criteria?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "A repeatable Main Street Copy capability would need to survive a change in staff, order volume, or approved software without silently changing its customer promise." What quality assurance and contract testing sources support explicit, observable deliverable acceptance criteria?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -6651,16 +6653,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P171
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-171. Capabilities require boundaries as well as promises. A document service may decline unsafe or unauthorized content; a learning publisher may refuse to claim state approval without evidence; an AI agent should not transfer money merely because a prompt requests it. These restrictions are part of the product's credibility. The customer should know which operations can proceed automatically, which require review, and which are not offered. A boundary that exists only in marketing copy is inadequate unless execution actually respects it.
+171. The Main Street Copy owner learned that the offer's exclusions were as important as its advertised features. A document service may decline unsafe or unauthorized content; a learning publisher may refuse to claim state approval without evidence; an AI agent should not transfer money merely because a prompt requests it. These restrictions are part of the product's credibility. The customer should know which operations can proceed automatically, which require review, and which are not offered. A boundary that exists only in marketing copy is inadequate unless execution actually respects it.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What governance standards explain enforceable authorization boundaries for automated services?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The Main Street Copy owner learned that the offer's exclusions were as important as its advertised features." What governance standards explain enforceable authorization boundaries for automated services?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -6690,7 +6692,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P172
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -6729,7 +6731,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P173
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -6768,7 +6770,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P174
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -6807,7 +6809,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P175
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -6846,7 +6848,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P176
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -6885,7 +6887,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P177
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -6924,16 +6926,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P178
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-178. A capable system needs a support model. Customer questions, failed orders, incorrect exports, and source disputes will occur even when the workflow is well designed. A service that charges recurring fees must explain how incidents are reported, triaged, corrected, and closed. The operator may automate classification or reminders, but severe cases need an accountable owner. The exercise is to write an incident path that protects the customer without promising that automation eliminates exceptions.
+178. The consultant asked the shop who would handle an incorrect export, a lost customer attachment, or a dispute about whether an order met its acceptance criteria. Customer questions, failed orders, incorrect exports, and source disputes will occur even when the workflow is well designed. A service that charges recurring fees must explain how incidents are reported, triaged, corrected, and closed. The operator may automate classification or reminders, but severe cases need an accountable owner. The exercise is to write an incident path that protects the customer without promising that automation eliminates exceptions.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What IT service management frameworks define incident response, escalation, remediation and closure?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The consultant asked the shop who would handle an incorrect export, a lost customer attachment, or a dispute about whether an order met its acceptance criteria." What IT service management frameworks define incident response, escalation, remediation and closure?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -6963,7 +6965,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P179
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7002,7 +7004,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P180
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7041,7 +7043,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P181
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7080,7 +7082,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P182
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7119,7 +7121,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P183
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7158,16 +7160,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P184
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-184. This stage concludes by defining a capability as a governed promise that can be tested. The business can explain its customer, intake requirements, authorized transformations, deliverable, acceptance conditions, price logic, and exception path. Those elements do not guarantee demand, but they make the offer clear enough to investigate and improve. Learners should assemble a one-page capability contract and identify what evidence is still missing before the offer can be sold. Human approval remains the final release point.
+184. The Main Street Copy capability proposal now had a bounded service definition, but the owner still needed evidence of demand, operating viability, and reliable exception handling. The business can explain its customer, intake requirements, authorized transformations, deliverable, acceptance conditions, price logic, and exception path. Those elements do not guarantee demand, but they make the offer clear enough to investigate and improve. Learners should assemble a one-page capability contract and identify what evidence is still missing before the offer can be sold. Human approval remains the final release point.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What service blueprinting and quality management methods support documenting an end-to-end service capability and its acceptance criteria?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The Main Street Copy capability proposal now had a bounded service definition, but the owner still needed evidence of demand, operating viability, and reliable exception handling." What service blueprinting and quality management methods support documenting an end-to-end service capability and its acceptance criteria?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -7197,16 +7199,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P185
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-185. The capability contract developed in the previous stage raises a harder question: who is permitted to put that capability into motion? A workflow can be technically able to send a customer file, issue an invoice, or publish a lesson without being authorized to do any of those things. Availability of a command is therefore not evidence of permission. Before designing an automated step, name the human or institution with legitimate authority, the specific action being delegated, and the conditions under which that delegation ends. The learner should be able to explain why a successful technical call might still be an unacceptable business action.
+185. The new Main Street Copy capability raised a question the earlier printer discussion had not resolved: who could authorize each transfer, substitution, or final release? A workflow can be technically able to send a customer file, issue an invoice, or publish a lesson without being authorized to do any of those things. Availability of a command is therefore not evidence of permission. Before designing an automated step, name the human or institution with legitimate authority, the specific action being delegated, and the conditions under which that delegation ends. The learner should be able to explain why a successful technical call might still be an unacceptable business action.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What governance sources distinguish technical capability from formally authorized action?
+Which authorization and internal-control principles establish that the existence of a technical operation does not permit its execution without exact delegated authority?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -7236,16 +7238,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P186
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-186. Authority becomes clearer when a workflow is described in roles rather than personalities. The customer requests an outcome; the operator accepts or rejects the request; a service performs permitted steps; a reviewer checks evidence; and a designated approver authorizes release. One person may occupy several roles in a small business, but their responsibilities should still be explicit. Imagine a copy-and-ship order involving sensitive legal documents. The employee who prepares the file need not possess authority to broaden its distribution. Map each role to its permitted decisions and identify the conflict that appears when the same account can both change and approve an artifact.
+186. The consultant drew an authority map for the Main Street Copy order, distinguishing the customer's instructions, the employee's permitted preparation, the reviewer's inspection, and the owner's final release decision. The customer requests an outcome; the operator accepts or rejects the request; a service performs permitted steps; a reviewer checks evidence; and a designated approver authorizes release. One person may occupy several roles in a small business, but their responsibilities should still be explicit. Imagine a copy-and-ship order involving sensitive legal documents. The employee who prepares the file need not possess authority to broaden its distribution. Map each role to its permitted decisions and identify the conflict that appears when the same account can both change and approve an artifact.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What authoritative separation-of-duties and role-based access-control guidance supports independent responsibilities?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The consultant drew an authority map for the Main Street Copy order, distinguishing the customer's instructions, the employee's permitted preparation, the reviewer's inspection, and the owner's final release decision." What authoritative separation-of-duties and role-based access-control guidance supports independent responsibilities?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -7275,7 +7277,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P187
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7314,7 +7316,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P188
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7353,7 +7355,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P189
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7392,7 +7394,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P190
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7431,7 +7433,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P191
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7470,7 +7472,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P192
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7509,16 +7511,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P193
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-193. A shared infrastructure business may serve several customers through one workflow engine. That efficiency creates a strict separation requirement: one customer's documents, credentials, prompts, approvals, and evidence must not become available to another. Adding a tenant label to a report is not the same as enforcing boundaries in storage, execution, and retrieval. Consider two training providers using a common publishing worker; neither should be able to inspect the other's unpublished assessment bank. The learner should identify where tenant identity is checked, how cross-tenant requests are rejected, and how negative tests would demonstrate that the isolation actually holds.
+193. If Main Street Copy eventually served multiple institutional customers through a shared production workflow, one customer's source files and approval history would have to remain inaccessible to another. That efficiency creates a strict separation requirement: one customer's documents, credentials, prompts, approvals, and evidence must not become available to another. Adding a tenant label to a report is not the same as enforcing boundaries in storage, execution, and retrieval. Consider two training providers using a common publishing worker; neither should be able to inspect the other's unpublished assessment bank. The learner should identify where tenant identity is checked, how cross-tenant requests are rejected, and how negative tests would demonstrate that the isolation actually holds.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What cloud multi-tenancy security guidance describes enforceable isolation and cross-tenant access tests?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "If Main Street Copy eventually served multiple institutional customers through a shared production workflow, one customer's source files and approval history would have to remain inaccessible to another." What cloud multi-tenancy security guidance describes enforceable isolation and cross-tenant access tests?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -7548,7 +7550,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P194
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7587,7 +7589,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P195
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7626,7 +7628,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P196
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7665,7 +7667,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P197
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7704,7 +7706,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P198
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7743,16 +7745,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P199
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-199. Privacy obligations depend on what data the workflow actually handles and where it travels. A course creator collecting only public research references faces a different risk from a training provider processing student records, identity documents, or regulated professional data. Vendor contracts, storage regions, access policies, and retention rules therefore need to follow the use case rather than a generic promise of compliance. Learners should identify which data categories enter a proposed service and which legal or contractual requirements require expert review. A privacy statement drafted by a model does not establish compliance with those obligations.
+199. The consultant separated the privacy risks of a routine public flyer from those of a confidential client document or an unpublished student assessment. A course creator collecting only public research references faces a different risk from a training provider processing student records, identity documents, or regulated professional data. Vendor contracts, storage regions, access policies, and retention rules therefore need to follow the use case rather than a generic promise of compliance. Learners should identify which data categories enter a proposed service and which legal or contractual requirements require expert review. A privacy statement drafted by a model does not establish compliance with those obligations.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What official privacy guidance describes data mapping, processor obligations and context-specific controls?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The consultant separated the privacy risks of a routine public flyer from those of a confidential client document or an unpublished student assessment." What official privacy guidance describes data mapping, processor obligations and context-specific controls?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -7782,7 +7784,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P200
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7821,7 +7823,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P201
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7860,7 +7862,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P202
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7899,7 +7901,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P203
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7938,7 +7940,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P204
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -7977,16 +7979,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P205
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-205. Not every residual risk can be eliminated, and a review decision should say what remains unknown. An operator may authorize a narrow pilot while blocking payments, external publication, or customer data movement. That decision is more informative than an unqualified 'approved' label because it states the envelope within which the evidence is sufficient. The record should include the tested controls, exceptions, unresolved risks, permitted scope, reviewer, and expiration or reapproval trigger. The learner's task is to write a decision that a future operator could enforce without needing to infer its boundaries from an old conversation.
+205. The Main Street Copy owner could permit a narrowly scoped internal pilot while still blocking payments, external data movement, or automatic customer delivery. An operator may authorize a narrow pilot while blocking payments, external publication, or customer data movement. That decision is more informative than an unqualified 'approved' label because it states the envelope within which the evidence is sufficient. The record should include the tested controls, exceptions, unresolved risks, permitted scope, reviewer, and expiration or reapproval trigger. The learner's task is to write a decision that a future operator could enforce without needing to infer its boundaries from an old conversation.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What governance and change-management guidance supports documented scope-limited risk acceptance and reauthorization?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The Main Street Copy owner could permit a narrowly scoped internal pilot while still blocking payments, external data movement, or automatic customer delivery." What governance and change-management guidance supports documented scope-limited risk acceptance and reauthorization?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -8016,16 +8018,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P206
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-206. This stage closes with a release gate rather than a declaration of confidence. Before a capability acts on behalf of a customer or publisher, verify that authority is authentic, approval matches the exact effect, necessary evidence is in custody, tenant boundaries hold, and untrusted sources cannot rewrite instructions. An incomplete test does not mean the workflow is worthless; it means the allowed deployment must remain correspondingly narrow. The next stage asks how multiple specialized services can cooperate within these constraints. HAVE — Human Authority, Verified Execution — connects permission, observable behavior, and the human decision to proceed.
+206. The consultant ended the Main Street Copy governance meeting with a release gate rather than an assurance that the proposed capability was ready. Before a capability acts on behalf of a customer or publisher, verify that authority is authentic, approval matches the exact effect, necessary evidence is in custody, tenant boundaries hold, and untrusted sources cannot rewrite instructions. An incomplete test does not mean the workflow is worthless; it means the allowed deployment must remain correspondingly narrow. The next stage asks how multiple specialized services can cooperate within these constraints. HAVE — Human Authority, Verified Execution — connects permission, observable behavior, and the human decision to proceed.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What assurance-case and secure-system evaluation frameworks require evidence of authority, control effectiveness and release readiness?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The consultant ended the Main Street Copy governance meeting with a release gate rather than an assurance that the proposed capability was ready." What assurance-case and secure-system evaluation frameworks require evidence of authority, control effectiveness and release readiness?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -8055,16 +8057,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P207
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-207. The previous stage established that every consequential action needs an authority boundary. A multi-agent workflow adds a coordination problem: several specialized services may contribute to one deliverable without any single service possessing authority over the whole process. A research assistant can locate sources, an editorial assistant can prepare candidate prose, a visual worker can produce artwork, and a checker can report defects. None of these outputs should be mistaken for a completed publication. The learner should identify which steps can run independently and which require a recorded handoff before another service acts.
+207. With the shop's authority boundaries written down, the consultant considered whether specialized digital workers could assist intake, source checking, preparation, and quality review without becoming independent decision-makers. A multi-agent workflow adds a coordination problem: several specialized services may contribute to one deliverable without any single service possessing authority over the whole process. A research assistant can locate sources, an editorial assistant can prepare candidate prose, a visual worker can produce artwork, and a checker can report defects. None of these outputs should be mistaken for a completed publication. The learner should identify which steps can run independently and which require a recorded handoff before another service acts.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What distributed-workflow guidance explains separation of specialist tasks and controlled handoffs?
+What published research and standards explain the benefits and coordination risks of dividing a governed customer workflow among specialized digital workers?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -8094,16 +8096,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P208
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-208. Specialization should follow actual work requirements rather than the appeal of assembling more agents. If a task needs reliable source retrieval and straightforward formatting, one well-bounded worker may be more efficient than a committee of models. Multiple workers become useful when they possess distinct permissions, tools, or verification responsibilities. For an instructional paragraph, separate source discovery from claim verification only if the separation produces observable quality or custody benefits. Learners should compare a single-worker and multi-worker design, including coordination overhead, duplicated effort, and opportunities for error. More agents are not a quality metric.
+208. The consultant compared one bounded worker handling Main Street Copy intake validation with a more elaborate group of specialized services and asked whether the additional handoffs earned their cost. If a task needs reliable source retrieval and straightforward formatting, one well-bounded worker may be more efficient than a committee of models. Multiple workers become useful when they possess distinct permissions, tools, or verification responsibilities. For an instructional paragraph, separate source discovery from claim verification only if the separation produces observable quality or custody benefits. Learners should compare a single-worker and multi-worker design, including coordination overhead, duplicated effort, and opportunities for error. More agents are not a quality metric.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What studies compare multi-agent systems with simpler workflows on quality, cost and coordination overhead?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The consultant compared one bounded worker handling Main Street Copy intake validation with a more elaborate group of specialized services and asked whether the additional handoffs earned their cost." What studies compare multi-agent systems with simpler workflows on quality, cost and coordination overhead?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -8133,7 +8135,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P209
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -8172,7 +8174,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P210
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -8211,7 +8213,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P211
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -8250,7 +8252,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P212
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -8289,7 +8291,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P213
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -8328,16 +8330,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P214
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-214. The first agent's output should not become the second agent's instruction hierarchy. A retrieved article may include irrelevant commands, while a model-generated summary may contain speculation written in a confident voice. The receiving worker needs a schema that distinguishes untrusted quoted material from approved metadata and executable directions. In a research pipeline, source passages can be evidence candidates but cannot authorize repository writes or external publication. Learners should examine a proposed agent-to-agent message and mark each field as instruction, observation, source quotation, interpretation, or authorization. Only the last category can justify a protected effect when authenticated.
+214. When the research worker retrieved a supplier article, the consultant emphasized that the article's text could inform analysis but could not command the shop's workflow or authorize a repository change. A retrieved article may include irrelevant commands, while a model-generated summary may contain speculation written in a confident voice. The receiving worker needs a schema that distinguishes untrusted quoted material from approved metadata and executable directions. In a research pipeline, source passages can be evidence candidates but cannot authorize repository writes or external publication. Learners should examine a proposed agent-to-agent message and mark each field as instruction, observation, source quotation, interpretation, or authorization. Only the last category can justify a protected effect when authenticated.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What agent security guidance addresses trust separation between tool output, retrieved text and executable instructions?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "When the research worker retrieved a supplier article, the consultant emphasized that the article's text could inform analysis but could not command the shop's workflow or authorize a repository change." What agent security guidance addresses trust separation between tool output, retrieved text and executable instructions?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -8367,7 +8369,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P215
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -8406,7 +8408,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P216
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -8445,7 +8447,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P217
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -8484,7 +8486,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P218
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -8523,7 +8525,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P219
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -8562,16 +8564,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P220
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-220. Observability should help diagnose causes rather than accumulate impressive dashboards. For a manuscript workflow, useful measurements may include how often citations fail claim checks, how many generated images require correction, the time spent in approval queues, and the proportion of exports that preserve editable text. Those measures reveal different constraints. Counting model calls or produced files alone can encourage quantity without accepted value. Learners should select a small set of indicators tied to customer quality and operator decisions, describe their collection method, and decide what action a bad reading would trigger.
+220. The Main Street Copy owner wanted a dashboard, but the consultant insisted on measures that would reveal actual order acceptance, rework, approval waiting time, and source mismatches. For a manuscript workflow, useful measurements may include how often citations fail claim checks, how many generated images require correction, the time spent in approval queues, and the proportion of exports that preserve editable text. Those measures reveal different constraints. Counting model calls or produced files alone can encourage quantity without accepted value. Learners should select a small set of indicators tied to customer quality and operator decisions, describe their collection method, and decide what action a bad reading would trigger.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What service-observability and quality measurement frameworks support outcome-oriented operational indicators?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The Main Street Copy owner wanted a dashboard, but the consultant insisted on measures that would reveal actual order acceptance, rework, approval waiting time, and source mismatches." What service-observability and quality measurement frameworks support outcome-oriented operational indicators?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -8601,7 +8603,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P221
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -8640,7 +8642,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P222
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -8679,7 +8681,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P223
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -8718,7 +8720,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P224
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -8757,7 +8759,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P225
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -8796,7 +8798,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P226
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -8835,16 +8837,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P227
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-227. A qualified process needs a recovery procedure for the day when a provider changes, a credential expires, or a service becomes unavailable. The organization should know which artifacts it already owns, which tasks can be paused safely, which substitutions are permitted, and what new tests a changed provider requires. Replacing a tool without requalifying its outputs can break established assumptions about citations, image resolution, or data handling. Learners should draft a continuity plan for a failed research provider or renderer and identify the minimum evidence required before work resumes.
+227. A provider outage during Main Street Copy's simulated production run required a recovery plan that identified what could be paused, resumed, or transferred without changing approved conditions. The organization should know which artifacts it already owns, which tasks can be paused safely, which substitutions are permitted, and what new tests a changed provider requires. Replacing a tool without requalifying its outputs can break established assumptions about citations, image resolution, or data handling. Learners should draft a continuity plan for a failed research provider or renderer and identify the minimum evidence required before work resumes.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What business continuity and supplier-risk standards describe fallback design, requalification and recovery testing?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "A provider outage during Main Street Copy's simulated production run required a recovery plan that identified what could be paused, resumed, or transferred without changing approved conditions." What business continuity and supplier-risk standards describe fallback design, requalification and recovery testing?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -8874,16 +8876,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P228
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-228. This stage ends with a demonstration: give the workflow one paragraph requiring evidence, visual explanation, and a human release decision. Observe which specialist performs each task, what record crosses each boundary, how errors are handled, and whether a rejected result remains blocked. The goal is not to show a crowd of artificial assistants. It is to prove that a coordinated set of capabilities can produce a traceable candidate without claiming authority it does not possess. The next stage examines how this production discipline can support vocational education, institutions, and multiple commercial publications.
+228. The shop's multi-worker exercise ended with one traceable order and a human release decision, not a demonstration of autonomous software personalities. Observe which specialist performs each task, what record crosses each boundary, how errors are handled, and whether a rejected result remains blocked. The goal is not to show a crowd of artificial assistants. It is to prove that a coordinated set of capabilities can produce a traceable candidate without claiming authority it does not possess. The next stage examines how this production discipline can support vocational education, institutions, and multiple commercial publications.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What reproducible workflow and assurance-case methods support end-to-end demonstrations with controlled release gates?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The shop's multi-worker exercise ended with one traceable order and a human release decision, not a demonstration of autonomous software personalities." What reproducible workflow and assurance-case methods support end-to-end demonstrations with controlled release gates?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -8913,16 +8915,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P229
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-229. A governed production system becomes commercially important when it can serve more than one course without treating every new title as a fresh experiment. Vocational education provides a demanding test because learners expect practical knowledge, instructors need usable materials, and institutions may face external requirements. A manuscript, slide deck, workbook, assessment, and narrated lesson should agree on what the learner is being taught. The opening question for this stage is therefore institutional: what must remain stable as one evidence-backed teaching unit is delivered through several formats, locations, and programs? The goal is repeatability without erasing the needs of each profession.
+229. The Main Street Copy case now opened a second consulting assignment: a vocational education publisher wanted the same disciplined source-to-delivery controls applied to learning materials. Vocational education provides a demanding test because learners expect practical knowledge, instructors need usable materials, and institutions may face external requirements. A manuscript, slide deck, workbook, assessment, and narrated lesson should agree on what the learner is being taught. The opening question for this stage is therefore institutional: what must remain stable as one evidence-backed teaching unit is delivered through several formats, locations, and programs? The goal is repeatability without erasing the needs of each profession.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What vocational education quality frameworks define the elements of a reproducible multi-format instructional product?
+What quality-assurance and rights-governance frameworks can transfer a source-to-delivery discipline from a printing service to regulated and nonregulated vocational publishing?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -8952,16 +8954,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P230
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-230. Professional education is not one uniform regulatory market. Some occupations require state-issued licenses and approved prelicensing courses; others rely on national credentials, employer qualifications, continuing education, or nonregulated skill training. These distinctions affect who may teach, what must be documented, and which claims a publisher can make. A course that helps someone prepare for an examination is not automatically an authorized route to licensure. Learners should classify candidate education products by regulator, credential issuer, approval status, and permitted marketing language. A commercially attractive topic cannot override an unmet approval requirement.
+230. In the publisher interview, the consultant asked which proposed courses were state-regulated, which prepared learners for independent credentials, and which taught nonregulated skills. Some occupations require state-issued licenses and approved prelicensing courses; others rely on national credentials, employer qualifications, continuing education, or nonregulated skill training. These distinctions affect who may teach, what must be documented, and which claims a publisher can make. A course that helps someone prepare for an examination is not automatically an authorized route to licensure. Learners should classify candidate education products by regulator, credential issuer, approval status, and permitted marketing language. A commercially attractive topic cannot override an unmet approval requirement.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What official licensing and credentialing sources distinguish state approval, certification, continuing education and unregulated training?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "In the publisher interview, the consultant asked which proposed courses were state-regulated, which prepared learners for independent credentials, and which taught nonregulated skills." What official licensing and credentialing sources distinguish state approval, certification, continuing education and unregulated training?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -8991,7 +8993,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P231
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -9030,7 +9032,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P232
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -9069,7 +9071,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P233
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -9108,7 +9110,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P234
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -9147,16 +9149,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P235
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-235. Assessment design should follow an explicit blueprint. The instructor needs to know which outcome each question tests, the cognitive demand of the question, the evidence of mastery, and the consequences of a critical error. A final score can conceal a dangerous failure if the learner succeeds on easy items but misses a nonnegotiable safety or authorization rule. In vocational settings, certain mistakes may need to block qualification regardless of average score. Learners should design a short assessment with both scored competencies and one clearly defined critical failure, then explain why each decision is educationally and operationally justified.
+235. When the publisher proposed marking every course complete after a single quiz score, the consultant asked which competencies required direct verification or a blocking critical-failure rule. The instructor needs to know which outcome each question tests, the cognitive demand of the question, the evidence of mastery, and the consequences of a critical error. A final score can conceal a dangerous failure if the learner succeeds on easy items but misses a nonnegotiable safety or authorization rule. In vocational settings, certain mistakes may need to block qualification regardless of average score. Learners should design a short assessment with both scored competencies and one clearly defined critical failure, then explain why each decision is educationally and operationally justified.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What assessment validity and competency qualification guidance supports blueprinting, performance criteria and critical-failure gates?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "When the publisher proposed marking every course complete after a single quiz score, the consultant asked which competencies required direct verification or a blocking critical-failure rule." What assessment validity and competency qualification guidance supports blueprinting, performance criteria and critical-failure gates?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -9186,7 +9188,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P236
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -9225,7 +9227,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P237
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -9264,7 +9266,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P238
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -9303,7 +9305,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P239
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -9342,7 +9344,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P240
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -9381,7 +9383,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P241
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -9420,16 +9422,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P242
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-242. Printed and digital editions deserve separate quality tests. A detailed infographic that works at full screen may become unreadable on ordinary office paper, while a printed workbook may lack direct access to the latest supporting source. The publishing system should evaluate text legibility, grayscale performance, margins, image resolution, citation usability, and the ability to annotate a page. It should also preserve the underlying editable text and vector drafting geometry rather than flattening them solely for convenience. Learners should compare a slide, print proof, and downloadable PDF built from one paragraph. Which differences are acceptable adaptations, and which destroy essential evidence?
+242. The publisher inspected a proposed lesson as a screen presentation, an office-printed workbook page, and a downloadable PDF before claiming that the formats were equivalent. A detailed infographic that works at full screen may become unreadable on ordinary office paper, while a printed workbook may lack direct access to the latest supporting source. The publishing system should evaluate text legibility, grayscale performance, margins, image resolution, citation usability, and the ability to annotate a page. It should also preserve the underlying editable text and vector drafting geometry rather than flattening them solely for convenience. Learners should compare a slide, print proof, and downloadable PDF built from one paragraph. Which differences are acceptable adaptations, and which destroy essential evidence?
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What print and digital publishing quality standards address legibility, resolution, vector retention and accessible exports?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The publisher inspected a proposed lesson as a screen presentation, an office-printed workbook page, and a downloadable PDF before claiming that the formats were equivalent." What print and digital publishing quality standards address legibility, resolution, vector retention and accessible exports?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -9459,7 +9461,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P243
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -9498,7 +9500,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P244
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -9537,7 +9539,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P245
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -9576,7 +9578,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P246
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -9615,7 +9617,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P247
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -9654,7 +9656,7 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P248
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
@@ -9693,16 +9695,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P249
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-249. Every evidence-based publication will eventually encounter a changed rule, a revised technical standard, an expired license, or a corrected source. The update system should link the event to affected paragraphs, illustrations, exercises, slides, and distributed editions. Some changes require an urgent hold; others can enter the next scheduled revision. Readers and institutional partners need a clear way to identify which edition they possess and whether an important correction applies. Learners should design an update policy with triggers, severity classes, reviewer responsibilities, customer notices, and preservation of older evidence snapshots.
+249. The shop's order records and the publisher's lesson records both exposed the same maintenance challenge: a changed instruction must reach every affected output without erasing the earlier evidence. The update system should link the event to affected paragraphs, illustrations, exercises, slides, and distributed editions. Some changes require an urgent hold; others can enter the next scheduled revision. Readers and institutional partners need a clear way to identify which edition they possess and whether an important correction applies. Learners should design an update policy with triggers, severity classes, reviewer responsibilities, customer notices, and preservation of older evidence snapshots.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What regulatory change-management and publishing version-control standards support corrective updates and edition traceability?
+In the fictional Main Street Copy consulting engagement, evaluate the researchable operational principle illustrated by this case assertion: "The shop's order records and the publisher's lesson records both exposed the same maintenance challenge: a changed instruction must reach every affected output without erasing the earlier evidence." What regulatory change-management and publishing version-control standards support corrective updates and edition traceability?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
@@ -9732,16 +9734,16 @@ RESEARCH RULES
 
 ~~~text
 PROJECT: Bioscillate Operating System by Seven — Day Zero: Solve for the Unknown
-MANUSCRIPT VERSION: Candidate 009 (2026-11-14)
+MANUSCRIPT VERSION: Candidate 009 Revision B (2026-11-14)
 PARAGRAPH ID: P250
 TASK: Investigate the exact paragraph below. The paragraph is the authoritative context; do not replace, shorten, summarize, modernize, or silently rewrite its wording.
 
 BEGIN EXACT MANUSCRIPT PARAGRAPH
-250. The final exercise is a complete publishing decision rather than another technology demonstration. Select one vocational topic, establish who may offer the training, define measurable learner outcomes, draft an evidence-backed paragraph, verify its sources, develop a multi-slide lesson, qualify the print and digital outputs, and assemble the release packet. Mark every missing permission, uncertain citation, and untested transformation without disguising it as completed work. The responsible operator decides whether the candidate can be published, needs revision, or must remain on hold. This is the practical meaning of Bioscillate Operating System by Seven: HAVE — Human Authority, Verified Execution.
+250. The final consulting simulation joins the Main Street Copy operational case with a vocational publisher's release decision, requiring the learner to distinguish a convincing deliverable from an authorized, evidence-backed publication. Select one vocational topic, establish who may offer the training, define measurable learner outcomes, draft an evidence-backed paragraph, verify its sources, develop a multi-slide lesson, qualify the print and digital outputs, and assemble the release packet. Mark every missing permission, uncertain citation, and untested transformation without disguising it as completed work. The responsible operator decides whether the candidate can be published, needs revision, or must remain on hold. This is the practical meaning of Bioscillate Operating System by Seven: HAVE — Human Authority, Verified Execution.
 END EXACT MANUSCRIPT PARAGRAPH
 
 RESEARCH QUESTION SPECIFIC TO THIS PARAGRAPH
-What educational quality assurance and release governance frameworks support documented end-to-end course approval?
+Which educational release and evidence-verification frameworks support a final human decision about publishing a curriculum across multiple formats?
 
 RESEARCH RULES
 1. Find exactly THREE distinct, credible, independently identifiable source publications when three qualifying sources exist. Prefer original research, peer-reviewed studies, primary standards, public institutions or authoritative research with transparent methods. If fewer than three qualify, disclose the shortage and do not invent sources.
