@@ -1,0 +1,19 @@
+name: BOSS Asset Qualification 001 (synthetic)
+on:
+  pull_request:
+    paths:
+      - 'experiments/boss-asset-qualification-001/**'
+      - '.github/workflows/boss-asset-qualification-001.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  asset-identity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Run fail-closed synthetic asset tests
+        run: python3 -m unittest discover -s experiments/boss-asset-qualification-001 -p 'test_*.py' -v
