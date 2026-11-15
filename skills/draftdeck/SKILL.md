@@ -5,6 +5,10 @@ description: Governed BOSS instructional visual production, from a source-ground
 
 # DraftDeck — rebuilt editorial story and art workflow (review candidate)
 
+## 105-control improvement candidate (not yet ratified)
+
+Before changing source admission, exact-copy custody, ART/STORY visual gates, segmentation, composition, or release workflows, inspect `.agents/skills/boss-105-gate-coordinator/SKILL.md` and `doctrine/boss-105-control-register.md`. They are a review-candidate overlay with synthetic structural checks only, **not** an automatic production authorization or replacement for independent human acceptance. Episode Zero's owner-supplied photorealistic campus references are scoped separately from Episode 01's illustration-only art contract; see `doctrine/boss-105-authority-medium-custody.md`.
+
 ## Source hierarchy
 Read `AGENTS.md`, `design-system/boss-design-contract.json`, `doctrine/production-contract.md`, `doctrine/visual-evidence-gate.md`, and `doctrine/release-qa.md`. Historical skill-update files are evidence, not current design instruction. Approved source facts, exact copy and explicit human visual decisions outrank model-generated compositions.
 
