@@ -1,0 +1,279 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Browser-native editorial labels and typography. Engine-generated SVG is
+   separate technical geometry, never the entire slide.
+   Design source: design-system/boss-design-contract.json. */
+:root {
+  --boss-color-ground: #FFFFFF;
+  --boss-color-ink: #000000;
+  --boss-color-brand-cyan: #00BCEB;
+  --boss-color-brand-magenta: #E30074;
+}
+html, body { background: #FFFFFF; margin: 0; padding: 0; }
+body { font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
+#root { width: 1920px; height: 1080px; }
+@media print {
+  @page { size: 20in 11.25in; margin: 0; }
+  html, body, #root { width: 1920px; height: 1080px; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+
+/* BOSS native React diagram composer — all semantic labels are HTML. */
+.boss-flow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: visible;
+  isolation: isolate;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.boss-flow-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 68px;
+  height: 100%;
+}
+.boss-stage {
+  border: 1px solid #000000;
+  border-top: 5px solid #00BCEB;
+  background: rgba(255,255,255,.95);
+  position: relative;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.boss-stage:nth-child(3){ border-top-color:#E30074; }
+.boss-stage-heading {
+  padding: 15px 17px 14px;
+  border-bottom: 1px solid #000;
+  height: 73px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.boss-stage-id {
+  font-size: 14px;
+  font-family: "Courier New", monospace;
+  letter-spacing: .10em;
+  color: #E30074;
+  font-weight: 700;
+}
+.boss-stage-heading strong {
+  font-size: 18px;
+  line-height: 1.08;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -.026em;
+}
+.boss-stage-contents {
+  flex: 1; min-height: 0;
+  display: flex; flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 9px;
+  padding: 15px 9px 3px;
+}
+.boss-process-node {
+  width: min(100%,258px);
+  min-height: 79px;
+  position: relative;
+  border: 1.6px solid #000;
+  border-left: 6px solid #00BCEB;
+  background: #FFFFFF;
+  display: flex; align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 13px 7px 7px;
+  z-index: 3;
+}
+.boss-process-node--hold {
+  border-color: #E30074;
+  border-left-width: 6px;
+  border-left-color:#E30074;
+}
+.boss-node-index {
+  position: absolute;
+  left: -1px; top: -1px;
+  font: 800 12px "Courier New", monospace;
+  border: 1px solid #000;
+  background: #fff;
+  padding: 3px 6px;
+}
+.boss-process-node--hold .boss-node-index {
+  border-color: #E30074; color: #E30074;
+}
+.boss-node-wording {
+  font-size: 19px;
+  font-weight: 750;
+  letter-spacing: -.032em;
+  line-height: 1.16;
+  overflow-wrap: break-word;
+}
+.boss-process-node--hold .boss-node-wording { color: #E30074; }
+.boss-decision-node {
+  position: relative;
+  flex: none;
+  width: min(100%,265px);
+  height: 108px;
+  display:flex; align-items:center; justify-content:center;
+  z-index: 3;
+}
+.boss-diamond-shape {
+  position:absolute;
+  inset: 0;
+  background:#FFFFFF;
+  clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
+  border:0;
+}
+/* The inner dark diamond creates a precise 1.5px technical outline. */
+.boss-diamond-shape::before {
+  content:"";
+  position:absolute; inset: 0;
+  background:#000000;
+  clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
+}
+.boss-diamond-shape::after {
+  content:"";
+  position:absolute; inset: 2px;
+  background:#FFFFFF;
+  clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
+}
+.boss-diamond-text {
+  position:relative;
+  width: 69%;
+  min-height: 60px;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;
+  z-index:2;
+}
+.boss-diamond-text .boss-node-wording {font-size:17px; line-height:1.11;}
+.boss-node-index--decision { left:-12px; top:-18px; color:#E30074; }
+.boss-stage-branches {
+  width: 100%; display:flex;
+  align-items:stretch; justify-content:space-between;
+  gap: 7px;
+}
+.boss-stage-branches .boss-process-node {
+  min-height: 80px;
+  padding: 8px 3px 3px;
+  width: 50%;
+}
+.boss-stage-branches .boss-node-wording {
+  font-size: 14px;
+  line-height: 1.13;
+}
+.boss-stage-footnote {
+  flex: none;
+  border-top: 1px solid #000;
+  padding: 5px 7px;
+  font: 700 11px "Courier New",monospace;
+  letter-spacing:.018em;
+  background:#FFFFFF;
+}
+.boss-flow-wires {
+  position:absolute;
+  z-index:2;
+  inset:0;
+  width:100%;height:100%;
+  overflow:visible;
+  pointer-events:none;
+}
+.boss-edge-label {
+  position:absolute;
+  z-index:4;
+  padding: 4px 5px;
+  border: 1px solid #00BCEB;
+  background:#FFFFFF;
+  color:#000000;
+  font: 800 12px/1.05 "Courier New", monospace;
+  text-align:center;
+  transform:translate(-50%,-50%);
+  max-width:125px;
+}
+.boss-edge-label--magenta { border-color:#E30074;color:#E30074; }
+/* Sequence diagram uses four fixed HTML actor lanes; only message arrow strokes are SVG. */
+.boss-sequence {
+  width:100%;height:100%;
+  border:1px solid #000;
+  border-top:5px solid #00BCEB;
+  background:rgba(255,255,255,.96);
+  display:flex;flex-direction:column;
+  min-height:0;
+}
+.boss-seq-header {
+  flex:none;
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  border-bottom:1px solid #000;
+  height:60px;
+}
+.boss-actor {
+  display:flex;gap:7px;align-items:center;
+  padding:9px 11px;
+  text-align:left;
+  border-right:1px solid #a7a7a7;
+  min-width:0;
+}
+.boss-actor:last-child{border-right:0}
+.boss-actor-icon {color:#00BCEB;font-size:22px;}
+.boss-actor-label {font-size:17px;font-weight:900;line-height:1.1;letter-spacing:-.015em;}
+.boss-seq-timeline {flex:1;position:relative;min-height:0;display:flex;flex-direction:column;padding:6px 0;}
+.boss-seq-lifelines {
+  position:absolute;inset:0;
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  pointer-events:none;
+}
+.boss-seq-lifeline {height:100%;display:block;border-right:1px dashed #99a4ac;position:relative;}
+.boss-seq-lifeline::before {
+  content:"";height:100%;position:absolute;
+  left:50%;top:0;border-left:2px dashed #989898;
+}
+.boss-seq-message {
+  height:41px;
+  flex:none;
+  position:relative;
+  background:rgba(255,255,255,.12);
+}
+.boss-seq-message--hold {background:rgba(227,0,116,.025);}
+.boss-seq-message-arrow {
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  overflow:visible;
+  pointer-events:none;
+}
+.boss-seq-message-label {
+  position:absolute;z-index:2;top:1px;
+  padding:3px 5px 2px;
+  background:#FFFFFF;
+  font-size:14px;font-weight:800;
+  line-height:1.08;
+  max-height:33px;
+  overflow:visible;
+  overflow-wrap:break-word;
+}
+.boss-seq-message--hold .boss-seq-message-label{color:#E30074;}
+.boss-seq-message-number {
+  display:inline-block;
+  font:800 11px "Courier New",monospace;
+  border:1px solid #00BCEB;
+  padding:2px 4px;margin-right:5px;
+  color:#000;
+}
+.boss-seq-message--hold .boss-seq-message-number{border-color:#E30074;color:#E30074}
+.boss-seq-condition {
+  position:relative;
+  z-index:3;
+  height:26px;flex:none;
+  padding:4px 9px;
+  font:800 13px "Courier New", monospace;
+  letter-spacing:.015em;
+  background:#FFFFFF;
+  border-top:1px dashed #E30074;
+  border-bottom:1px dashed #E30074;
+  color:#E30074;
+}
+.boss-seq-condition--else {color:#00738e;border-color:#00BCEB;}
+.boss-seq-condition--end {height:14px;padding:0px 9px;font-size:10px;color:#555;border-color:#999;}
